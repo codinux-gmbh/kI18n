@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import net.codinux.i18n.model.*
+import net.codinux.i18n.model.UnitDisplayNames
 import java.io.File
 import java.nio.file.Path
 import kotlin.io.path.Path
@@ -100,6 +101,30 @@ open class CldrJsonParser(
                 unities.convertUnits.map { ConvertUnit(it.key, it.value.baseUnit, it.value.factor, it.value.systems, it.value.description, it.value.offset, it.value.special) }
             )
         }
+
+    fun parseUnityNamesForLocale(locale: LanguageTag) =
+        objectMapper.readValue<UnitsLocaleNamesFile>(resolvePathForLocale("cldr-units-full/main/", locale, "units.json")).main.localeSpecificProperties.map { (languageTag, content) ->
+            UnitsDisplayNamesForLocale(
+                map(content.units.long), map(content.units.short), map(content.units.narrow),
+                content.units.durationUnitTypeHm, content.units.durationUnitTypeHms, content.units.durationUnitTypeMs
+            )
+        }
+
+    protected open fun map(displayNames: UnitsLocaleDisplayNamesSerialModel): UnitsLocaleDisplayNames {
+        val units = displayNames.unitPattern.filter { it.value.displayName != null && it.value.south == null }
+
+        val prefixPatterns = displayNames.unitPattern.filter { it.value.unitPrefixPattern != null }
+        val powerPatterns = displayNames.unitPattern.filter { it.value.compoundUnitPattern1 != null }
+        val compoundPatterns = displayNames.unitPattern.filter { it.value.compoundUnitPattern != null }
+
+        return UnitsLocaleDisplayNames(
+            units.map { UnitDisplayNames(it.key, it.value.displayName!!, it.value.unitPatternCountOne, it.value.unitPatternCountOther, it.value.perUnitPattern) },
+            powerPatterns.map { UnitPattern(it.key, it.value.compoundUnitPattern1!!, it.value.compoundUnitPattern1CountOne, it.value.compoundUnitPattern1CountOther) },
+            prefixPatterns.map { UnitPattern(it.key, it.value.unitPrefixPattern!!) },
+            compoundPatterns.map { UnitPattern(it.key, it.value.compoundUnitPattern!!) },
+            displayNames.unitPattern["coordinateUnit"]?.let { CoordinatesDisplayNames(it.west!!, it.north!!, it.east!!, it.south!!) }
+        )
+    }
 
 
     protected open fun resolvePathForLocale(subPath: String, locale: LanguageTag, filename: String): File =

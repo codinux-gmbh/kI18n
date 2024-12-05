@@ -1,9 +1,7 @@
 package net.codinux.i18n.parser
 
 import assertk.assertThat
-import assertk.assertions.hasSize
-import assertk.assertions.isEmpty
-import assertk.assertions.isTrue
+import assertk.assertions.*
 import net.codinux.i18n.model.LanguageTag
 import kotlin.test.Test
 
@@ -117,6 +115,39 @@ class CldrJsonParserTest {
         assertThat(result.unitConstants).hasSize(19)
         assertThat(result.unitQuantities).hasSize(48)
         assertThat(result.convertUnits).hasSize(155)
+    }
+
+    @Test
+    fun parseUnityNamesForLocale() {
+        val result = underTest.parseUnityNamesForLocale(LanguageTag("en"))
+
+        assertThat(result).hasSize(1)
+
+        val unitNames = result.first()
+
+        val long = unitNames.long
+        val short = unitNames.short
+        val narrow = unitNames.narrow
+
+        assertThat(long.units).hasSize(188)
+        assertThat(short.units).hasSize(188)
+        assertThat(narrow.units).hasSize(188)
+
+        assertThat(long.prefixPatterns).hasSize(2)
+        assertThat(short.prefixPatterns).hasSize(2)
+        assertThat(narrow.prefixPatterns).hasSize(2)
+
+        assertThat(long.compoundPatterns).hasSize(2)
+        assertThat(short.compoundPatterns).hasSize(2)
+        assertThat(narrow.compoundPatterns).hasSize(2)
+
+        assertThat(long.powerPatterns).hasSize(32)
+        assertThat(short.powerPatterns).hasSize(32)
+        assertThat(narrow.powerPatterns).hasSize(32)
+
+        assertThat(long.coordinates).isNotNull()
+        assertThat(short.coordinates).isNotNull()
+        assertThat(narrow.coordinates).isNotNull()
     }
 
 }
