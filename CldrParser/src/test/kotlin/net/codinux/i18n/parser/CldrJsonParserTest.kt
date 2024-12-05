@@ -88,4 +88,14 @@ class CldrJsonParserTest {
         assertThat(result).hasSize(258)
     }
 
+    @Test
+    fun parseCountryNamesForLocale() {
+        val result = underTest.parseCountryNamesForLocale(LanguageTag("en"))
+
+        assertThat(result).hasSize(1)
+
+        val territories = result.first()
+        assertThat(territories.territories).hasSize(315)
+    }
+
 }

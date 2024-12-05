@@ -50,7 +50,7 @@ open class CldrJsonParser(
         }
 
     fun parseCurrenciesForLocale(locale: LanguageTag): List<Currency> =
-        objectMapper.readValue<LanguageCurrenciesSerialModel>(resolvePathForLocale("cldr-numbers-full/main", locale).resolve("currencies.json").toFile()).let {
+        objectMapper.readValue<LanguageCurrenciesSerialModel>(resolvePathForLocale("cldr-numbers-full/main", locale, "currencies.json")).let {
             it.main.localeSpecificProperties.flatMap { (languageTag, inner) -> // there should actually always only be one node
                 inner.numbers.currencies.currencies.map { (isoCode, properties) ->
                     Currency(isoCode, properties.displayName, properties.displayNameCountOne, properties.displayNameCountOther, properties.symbol, properties.symbolAltNarrow)
@@ -72,9 +72,22 @@ open class CldrJsonParser(
             }
         }
 
+    fun parseCountryNamesForLocale(locale: LanguageTag): List<TerritoryDisplayNamesForLocale> =
+        objectMapper.readValue<TerritoriesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "territories.json")).let {
+            it.main.localeSpecificProperties.map { (languageTag, content) -> // there should actually always only be one node
+                TerritoryDisplayNamesForLocale(content.localeDisplayNames.territories.mapValues { (territoryIsoCode, displayName) ->
+                    TerritoryDisplayNames(territoryIsoCode, displayName)
+                })
+            }
+        }
+
+
+    protected open fun resolvePathForLocale(subPath: String, locale: LanguageTag, filename: String): File =
+        resolvePathForLocale(subPath, locale).resolve(filename).toFile()
 
     protected open fun resolvePathForLocale(subPath: String, locale: LanguageTag): Path {
-        val fullPath = File(resolvePath(subPath), locale.tag)
+        val baseDirectory = resolvePath(subPath)
+        val fullPath = baseDirectory.resolve(locale.tag)
         if (fullPath.exists()) {
             return fullPath.toPath()
         }
