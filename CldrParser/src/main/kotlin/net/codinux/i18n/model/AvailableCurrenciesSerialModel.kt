@@ -19,12 +19,8 @@ class Currencies {
     var _description: String? = null // we ignore these
     var _alias: String? = null
 
-    val currencyInfos = mutableMapOf<String, CurrencyInformation>()
-
     @JsonAnySetter
-    fun addCurrency(key: String, info: CurrencyInformation) {
-        currencyInfos[key] = info
-    }
+    val currencyInfos = mutableMapOf<String, CurrencyInformation>()
 }
 
 data class CurrencyInformation(

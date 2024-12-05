@@ -8,12 +8,8 @@ class LanguageCurrenciesSerialModel(
 )
 
 class LanguageCurrenciesInnerSerialModel {
-    val inner = mutableMapOf<String, LanguageCurrenciesInnerInnerSerialModel>()
-
     @JsonAnySetter
-    fun add(key: String, value: LanguageCurrenciesInnerInnerSerialModel) {
-        inner[key] = value
-    }
+    val inner = mutableMapOf<String, LanguageCurrenciesInnerInnerSerialModel>()
 }
 
 class LanguageCurrenciesInnerInnerSerialModel(
@@ -27,12 +23,8 @@ class CurrencyNumbersSerialModel(
 }
 
 class CurrenciesSerialModel {
-    val currencies = mutableMapOf<String, CurrencySerialModel>()
-
     @JsonAnySetter
-    fun add(key: String, value: CurrencySerialModel) {
-        currencies[key] = value
-    }
+    val currencies = mutableMapOf<String, CurrencySerialModel>()
 }
 
 class CurrencySerialModel(
@@ -47,10 +39,6 @@ class CurrencySerialModel(
     @JsonProperty("symbol-alt-narrow")
     val symbolAltNarrow: String? = null
 ) {
-    val anyOtherProperties = mutableMapOf<String, Any>()
-
     @JsonAnySetter
-    fun add(key: String, value: Any) {
-        anyOtherProperties[key] = value
-    }
+    val anyOtherProperties = mutableMapOf<String, Any>()
 }
