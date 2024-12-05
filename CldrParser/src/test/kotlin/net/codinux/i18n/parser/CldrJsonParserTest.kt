@@ -3,6 +3,7 @@ package net.codinux.i18n.parser
 import assertk.assertThat
 import assertk.assertions.*
 import net.codinux.i18n.model.LanguageTag
+import net.codinux.i18n.model.UnitsDisplayNamesForLocale
 import kotlin.test.Test
 
 class CldrJsonParserTest {
@@ -121,6 +122,21 @@ class CldrJsonParserTest {
     fun parseUnityNamesForLocale() {
         val result = underTest.parseUnityNamesForLocale(LanguageTag("en"))
 
+        assertUnitDisplayNames(result)
+    }
+
+    @Test
+    fun parseAllUnityNamesForLocale() {
+        val locales = underTest.parseAvailableLocales()
+
+        for (locale in locales) {
+            val result = underTest.parseUnityNamesForLocale(locale)
+
+            assertUnitDisplayNames(result)
+        }
+    }
+
+    private fun assertUnitDisplayNames(result: List<UnitsDisplayNamesForLocale>) {
         assertThat(result).hasSize(1)
 
         val unitNames = result.first()
@@ -129,9 +145,9 @@ class CldrJsonParserTest {
         val short = unitNames.short
         val narrow = unitNames.narrow
 
-        assertThat(long.units).hasSize(188)
-        assertThat(short.units).hasSize(188)
-        assertThat(narrow.units).hasSize(188)
+        assertThat(long.units.size).isGreaterThan(182)
+        assertThat(short.units.size).isGreaterThan(182)
+        assertThat(narrow.units.size).isGreaterThan(182)
 
         assertThat(long.prefixPatterns).hasSize(2)
         assertThat(short.prefixPatterns).hasSize(2)
