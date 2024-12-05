@@ -91,6 +91,17 @@ open class CldrJsonParser(
         }
 
 
+    fun parseUnities(): Unities =
+        objectMapper.readValue<UnitiesFile>(resolvePath("cldr-core/supplemental/units.json")).supplemental.let { unities ->
+            Unities(
+                unities.unitPrefixes.map { UnitPrefix(it.key, it.value.symbol, it.value.power10, it.value.power2) },
+                unities.unitConstants.map { UnitConstant(it.key, it.value.value, it.value.description, it.value.status == "approximate") },
+                unities.unitQuantities.map { UnityQuantity(it.key, it.value.quantity, it.value.status == "simple") },
+                unities.convertUnits.map { ConvertUnit(it.key, it.value.baseUnit, it.value.factor, it.value.systems, it.value.description, it.value.offset, it.value.special) }
+            )
+        }
+
+
     protected open fun resolvePathForLocale(subPath: String, locale: LanguageTag, filename: String): File =
         resolvePathForLocale(subPath, locale).resolve(filename).toFile()
 
