@@ -72,6 +72,15 @@ open class CldrJsonParser(
             }
         }
 
+    fun parseLanguageNamesForLocale(locale: LanguageTag): List<LanguageDisplayNamesForLocale> =
+        objectMapper.readValue<LanguagesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "languages.json")).let {
+            it.main.localeSpecificProperties.map { (languageTag, content) -> // there should actually always only be one node
+                LanguageDisplayNamesForLocale(content.localeDisplayNames.languages.mapValues { (languageIsoCode, displayName) ->
+                    LanguageDisplayNames(languageIsoCode, displayName)
+                })
+            }
+        }
+
     fun parseCountryNamesForLocale(locale: LanguageTag): List<TerritoryDisplayNamesForLocale> =
         objectMapper.readValue<TerritoriesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "territories.json")).let {
             it.main.localeSpecificProperties.map { (languageTag, content) -> // there should actually always only be one node
