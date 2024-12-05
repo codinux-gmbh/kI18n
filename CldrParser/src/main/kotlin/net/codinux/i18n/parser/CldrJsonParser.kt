@@ -3,10 +3,7 @@ package net.codinux.i18n.parser
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import net.codinux.i18n.model.AvailableCurrenciesSerialModel
-import net.codinux.i18n.model.AvailableLocalesSerialModel
-import net.codinux.i18n.model.AvailableCurrency
-import net.codinux.i18n.model.LanguageTag
+import net.codinux.i18n.model.*
 import java.io.File
 import java.nio.file.Path
 import kotlin.io.path.Path
@@ -52,6 +49,25 @@ open class CldrJsonParser(
             }
         }
 
+    fun parseCurrenciesForLocale(locale: LanguageTag) =
+        objectMapper.readValue<LanguageCurrenciesSerialModel>(resolvePathForLocale("cldr-numbers-full/main", locale).resolve("currencies.json").toFile()).let {
+            it.main.inner.flatMap { (languageTag, inner) -> // there should actually always only be one node
+                inner.numbers.currencies.currencies.map { (isoCode, properties) ->
+                    Currency(isoCode, properties.displayName, properties.displayNameCountOne, properties.displayNameCountOther, properties.symbol, properties.symbolAltNarrow)
+                }
+            }
+        }
+
+
+    protected open fun resolvePathForLocale(subPath: String, locale: LanguageTag): Path {
+        val fullPath = File(resolvePath(subPath), locale.tag)
+        if (fullPath.exists()) {
+            return fullPath.toPath()
+        }
+
+        // TODO: resolve parent
+        throw IllegalArgumentException("")
+    }
 
     protected open fun resolvePath(subPath: String): File =
         cldrJsonBaseDir.resolve("cldr-json").resolve(subPath).toFile()
