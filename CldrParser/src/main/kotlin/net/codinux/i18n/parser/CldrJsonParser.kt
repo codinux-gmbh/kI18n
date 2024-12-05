@@ -49,12 +49,26 @@ open class CldrJsonParser(
             }
         }
 
-    fun parseCurrenciesForLocale(locale: LanguageTag) =
+    fun parseCurrenciesForLocale(locale: LanguageTag): List<Currency> =
         objectMapper.readValue<LanguageCurrenciesSerialModel>(resolvePathForLocale("cldr-numbers-full/main", locale).resolve("currencies.json").toFile()).let {
             it.main.inner.flatMap { (languageTag, inner) -> // there should actually always only be one node
                 inner.numbers.currencies.currencies.map { (isoCode, properties) ->
                     Currency(isoCode, properties.displayName, properties.displayNameCountOne, properties.displayNameCountOther, properties.symbol, properties.symbolAltNarrow)
                 }
+            }
+        }
+
+
+    fun parseAvailableCountryIsoCodes(): List<String> =
+        // TODO: is there any other source for available countries?
+        parseTerritoryInfo().map { it.isoCode }
+
+    fun parseTerritoryInfo(): List<TerritoryInfo> =
+        objectMapper.readValue<TerritoriesInfoFile>(resolvePath("cldr-core/supplemental/territoryInfo.json")).let {
+            it.supplemental.territoryInfo.map { (isoCode, info) ->
+                TerritoryInfo(isoCode, info.gdp, info.literacyPercent, info.population, info.languagePopulation.map { (lang, population) ->
+                    LanguagePopulation(lang, population.populationPercent, population.officialStatus, population.writingPercent)
+                })
             }
         }
 

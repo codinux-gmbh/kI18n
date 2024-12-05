@@ -71,4 +71,21 @@ class CldrJsonParserTest {
         assertThat(withoutDisplayName).hasSize(2)
     }
 
+
+    @Test
+    fun parseAvailableCountryIsoCodes() {
+        val result = underTest.parseAvailableCountryIsoCodes()
+
+        assertThat(result).hasSize(258)
+
+        assertThat(result.all { it.length == 2 && it.all { it.isLetter() && it.isUpperCase() } }).isTrue()
+    }
+
+    @Test
+    fun parseTerritoryInfo() {
+        val result = underTest.parseTerritoryInfo()
+
+        assertThat(result).hasSize(258)
+    }
+
 }
