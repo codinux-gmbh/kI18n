@@ -3,24 +3,15 @@ package net.codinux.i18n.model
 import com.fasterxml.jackson.annotation.JsonAnySetter
 import com.fasterxml.jackson.annotation.JsonProperty
 
-class LanguageCurrenciesSerialModel(
-    val main: LanguageCurrenciesInnerSerialModel
-)
+class LanguageCurrenciesSerialModel : LocalSpecificFileHeader<LanguageCurrenciesNumbersSerialModel>()
 
-class LanguageCurrenciesInnerSerialModel {
-    @JsonAnySetter
-    val inner = mutableMapOf<String, LanguageCurrenciesInnerInnerSerialModel>()
-}
-
-class LanguageCurrenciesInnerInnerSerialModel(
+class LanguageCurrenciesNumbersSerialModel(
     val numbers: CurrencyNumbersSerialModel
 )
 
 class CurrencyNumbersSerialModel(
     val currencies: CurrenciesSerialModel
-) {
-
-}
+)
 
 class CurrenciesSerialModel {
     @JsonAnySetter
