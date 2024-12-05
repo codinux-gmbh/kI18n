@@ -1,6 +1,7 @@
 plugins {
-    kotlin("jvm") version "2.0.20"
+    kotlin("jvm")
 }
+
 
 group = "net.codinux.i18n"
 version = "0.5.0-SNAPSHOT"
