@@ -2,7 +2,10 @@ package net.codinux.i18n.parser
 
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
+import net.codinux.i18n.model.AvailableCurrenciesSerialModel
 import net.codinux.i18n.model.AvailableLocales
+import net.codinux.i18n.model.AvailableCurrency
 import java.io.File
 import java.nio.file.Path
 import kotlin.io.path.Path
@@ -35,7 +38,14 @@ open class CldrJsonParser(
 
 
     fun parseAvailableLocales(): AvailableLocales =
-        objectMapper.readValue(resolvePath("cldr-core/availableLocales.json"), AvailableLocales::class.java)
+        objectMapper.readValue<AvailableLocales>(resolvePath("cldr-core/availableLocales.json"))
+
+    fun parseAvailableCurrencies(): List<AvailableCurrency> =
+        objectMapper.readValue<AvailableCurrenciesSerialModel>(resolvePath("cldr-bcp47/bcp47/currency.json")).let {
+            it.keyword.u.cu.currencyInfos.map { (name, properties) ->
+                AvailableCurrency(name, properties.description)
+            }
+        }
 
 
     protected open fun resolvePath(subPath: String): File =

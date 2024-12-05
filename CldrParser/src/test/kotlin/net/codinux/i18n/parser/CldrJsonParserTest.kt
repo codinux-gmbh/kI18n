@@ -23,4 +23,14 @@ class CldrJsonParserTest {
         assertThat(result.availableLocales.full.all { it.length in minLength..maxLength || it == "ca-ES-valencia" }).isTrue()
     }
 
+    @Test
+    fun parseAvailableCurrencies() {
+        val result = underTest.parseAvailableCurrencies()
+
+        assertThat(result).hasSize(307)
+
+        assertThat(result.all { it.isoCode.length == 3 }).isTrue()
+        assertThat(result.all { it.englishName.length >= 4 }).isTrue() // Euro and Gold are the currencies with the shortest names
+    }
+
 }
