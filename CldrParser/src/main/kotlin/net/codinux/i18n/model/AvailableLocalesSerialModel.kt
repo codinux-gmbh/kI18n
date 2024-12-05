@@ -1,6 +1,6 @@
 package net.codinux.i18n.model
 
-data class AvailableLocales(
+data class AvailableLocalesSerialModel(
     val availableLocales: AvailableLocaleNames
 ) {
     override fun toString() = availableLocales.toString()

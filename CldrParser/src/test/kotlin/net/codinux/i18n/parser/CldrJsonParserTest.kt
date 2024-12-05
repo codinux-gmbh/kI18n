@@ -2,7 +2,6 @@ package net.codinux.i18n.parser
 
 import assertk.assertThat
 import assertk.assertions.hasSize
-import assertk.assertions.isEmpty
 import assertk.assertions.isTrue
 import kotlin.test.Test
 
@@ -15,12 +14,11 @@ class CldrJsonParserTest {
     fun parseAvailableLocales() {
         val result = underTest.parseAvailableLocales()
 
-        assertThat(result.availableLocales.modern).isEmpty()
-        assertThat(result.availableLocales.full).hasSize(725)
+        assertThat(result).hasSize(725)
 
         val minLength = 2
         val maxLength = "yue-Hant-CN".length
-        assertThat(result.availableLocales.full.all { it.length in minLength..maxLength || it == "ca-ES-valencia" }).isTrue()
+        assertThat(result.all { it.tag.length in minLength..maxLength || it.tag == "ca-ES-valencia" }).isTrue()
     }
 
     @Test
