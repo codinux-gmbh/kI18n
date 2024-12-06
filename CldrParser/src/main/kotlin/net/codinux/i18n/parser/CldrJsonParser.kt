@@ -9,6 +9,7 @@ import java.io.File
 import java.nio.file.Path
 import kotlin.io.path.Path
 import kotlin.io.path.absolutePathString
+import kotlin.io.path.exists
 
 open class CldrJsonParser(
     protected open val cldrJsonBaseDir: Path = determineDefaultCldrJsonBasePath(),
@@ -26,11 +27,14 @@ open class CldrJsonParser(
                 ?: currentDir.indexOf("/build/").takeIf { it > 0 }
                 ?: currentDir.indexOf("/CldrParser/.").takeIf { it > 0 }?.plus("/CldrParser/".length)
 
-            if (index ==  null) {
-                throw IllegalStateException("Could not find base directory of '<project_root>/cldr-json' submodule, please specify it explicitly")
+            if (index != null) {
+                val cldrJsonPath = Path(currentDir.substring(0, index)).parent.resolve("cldr-json")
+                if (cldrJsonPath.exists()) {
+                    return cldrJsonPath
+                }
             }
 
-            return Path(currentDir.substring(0, index)).parent.resolve("cldr-json")
+            throw IllegalStateException("Could not find base directory of '<project_root>/cldr-json' submodule, please specify it explicitly")
         }
 
     }
