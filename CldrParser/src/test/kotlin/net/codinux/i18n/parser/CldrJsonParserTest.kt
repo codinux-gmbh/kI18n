@@ -72,12 +72,19 @@ class CldrJsonParserTest {
 
 
     @Test
-    fun parseAvailableCountryIsoCodes() {
-        val result = underTest.parseAvailableCountryIsoCodes()
+    fun parseAvailableCountries() {
+        val result = underTest.parseAvailableCountries()
 
-        assertThat(result).hasSize(258)
+        assertThat(result).hasSize(492)
 
-        assertThat(result.all { it.length == 2 && it.all { it.isLetter() && it.isUpperCase() } }).isTrue()
+        val alpha2Codes = result.mapNotNull { it.alpha2Code }
+        assertThat(alpha2Codes.all { it.length == 2 && it.all { it.isLetter() && it.isUpperCase() } }).isTrue()
+
+        val alpha3Codes = result.mapNotNull { it.alpha3Code }
+        assertThat(alpha3Codes.all { it.length == 3 && it.all { it.isLetter() && it.isUpperCase() } }).isTrue()
+
+        val numericCodes = result.mapNotNull { it.numeric }
+        assertThat(numericCodes.all { it in 1..999 }).isTrue()
     }
 
     @Test

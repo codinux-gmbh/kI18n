@@ -64,9 +64,15 @@ open class CldrJsonParser(
         }
 
 
-    fun parseAvailableCountryIsoCodes(): List<String> =
-        // TODO: is there any other source for available countries?
-        parseTerritoryInfo().map { it.isoCode }
+    /**
+     * There's only one alpha2 ISO code in [parseTerritoryInfo] that [parseAvailableCountries] does not return, "CQ" for
+     * "Island of Sark", see [net.codinux.i18n.model.ExceptionalCountryIsoCodes].
+     */
+    fun parseAvailableCountries(): List<Country> =
+        objectMapper.readValue<CodeMappingsFile>(resolvePath("cldr-core/supplemental/codeMappings.json")).supplemental.codeMappings.map { (isoCode, properties) ->
+            val isAlpha2 = isoCode.length == 2
+            Country(if (isAlpha2) isoCode else null, if (isAlpha2) properties.alpha3 else isoCode, properties.numeric)
+        }
 
     fun parseTerritoryInfo(): List<TerritoryInfo> =
         objectMapper.readValue<TerritoriesInfoFile>(resolvePath("cldr-core/supplemental/territoryInfo.json")).let {
