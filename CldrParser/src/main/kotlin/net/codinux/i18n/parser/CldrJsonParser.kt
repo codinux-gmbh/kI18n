@@ -184,7 +184,13 @@ open class CldrJsonParser(
 
         var parentLanguageTag = locale.tag
         while (parentLanguageTag.contains('-')) {
-            parentLanguageTag = parentLanguageTag.substring(0, parentLanguageTag.lastIndexOf('-'))
+            val index = parentLanguageTag.lastIndexOf('-')
+            val removedTag = parentLanguageTag.substring(index + 1)
+            if (removedTag.length == 4 && removedTag[0].isUpperCase() && removedTag.drop(1).all { it.isLowerCase() }) {
+                break // it's a script tag -> don't go on to parent locale as we cannot know locale's default language, may it's different from the script denoted by <removedTag>
+            }
+
+            parentLanguageTag = parentLanguageTag.substring(0, index)
 
             val path = baseDirectory.resolve(parentLanguageTag)
             if (path.exists()) {
@@ -192,7 +198,7 @@ open class CldrJsonParser(
             }
         }
 
-        throw IllegalArgumentException("")
+        throw IllegalArgumentException("Cannot find directory for LanguageTag '${locale.tag} in '${baseDirectory.absolutePath}")
     }
 
     protected open fun resolvePath(subPath: String): File =

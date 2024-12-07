@@ -4,6 +4,7 @@ import assertk.assertThat
 import assertk.assertions.*
 import net.codinux.i18n.model.LanguageTag
 import net.codinux.i18n.model.UnitsDisplayNamesForLocale
+import org.junit.jupiter.api.assertThrows
 import kotlin.test.Test
 
 class CldrJsonParserTest {
@@ -209,6 +210,15 @@ class CldrJsonParserTest {
             assertUnitDisplayNames(result)
         }
     }
+
+
+    @Test
+    fun languageTagContainsScriptTag_CannotFindParentLanguageTag() {
+        assertThrows<IllegalArgumentException> {
+            underTest.parseCurrenciesForLocale(LanguageTag("fr-Latn"))
+        }
+    }
+
 
     private fun assertUnitDisplayNames(unitNames: UnitsDisplayNamesForLocale) {
         val long = unitNames.long
