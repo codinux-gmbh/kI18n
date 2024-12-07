@@ -79,6 +79,17 @@ class CldrJsonParserTest {
         assertThat(result).containsExactlyInAnyOrder(*availableLocales.toTypedArray())
     }
 
+    @Test
+    fun parseAllCurrenciesForLocale() {
+        val locales = underTest.parseAvailableLocales()
+
+        for (locale in locales) {
+            val result = underTest.parseCurrenciesForLocale(locale)
+
+            assertThat(result.size).isGreaterThan(100)
+        }
+    }
+
 
     @Test
     fun parseAvailableCountries() {
@@ -124,6 +135,21 @@ class CldrJsonParserTest {
     }
 
     @Test
+    fun parseAllLanguageNamesForLocale() {
+        val locales = underTest.getLocalesWithLocalizedLanguageNames().map { LanguageTag(it) }
+
+        for (locale in locales) {
+            val result = underTest.parseLanguageNamesForLocale(locale)
+
+            assertThat(result).hasSize(1)
+
+            val territories = result.first()
+//            assertThat(territories.languages).hasSize(685)
+            assertThat(territories.languages).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 685 languages - add sanity check
+        }
+    }
+
+    @Test
     fun parseCountryNamesForLocale() {
         val result = underTest.parseCountryNamesForLocale(LanguageTag("en"))
 
@@ -141,6 +167,21 @@ class CldrJsonParserTest {
         val availableLocalesWithLocalizedCountryNames = availableLocales.filter { it !in LanguageTag.LanguageTagsWithoutLocalizedCountryNames }
         assertThat(result).hasSize(availableLocalesWithLocalizedCountryNames.size)
         assertThat(result).containsExactlyInAnyOrder(*availableLocalesWithLocalizedCountryNames.toTypedArray())
+    }
+
+    @Test
+    fun parseAllCountryNamesForLocale() {
+        val locales = underTest.getLocalesWithLocalizedCountryNames().map { LanguageTag(it) }
+
+        for (locale in locales) {
+            val result = underTest.parseCountryNamesForLocale(locale)
+
+            assertThat(result).hasSize(1)
+
+            val territories = result.first()
+//            assertThat(territories.territories).hasSize(315)
+            assertThat(territories.territories).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 315 countries - add sanity check
+        }
     }
 
 
