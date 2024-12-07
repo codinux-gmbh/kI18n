@@ -2,7 +2,7 @@ package net.codinux.i18n.model
 
 import com.fasterxml.jackson.annotation.JsonAnySetter
 
-open class LocalSpecificFileHeader<T> {
+open class LocaleSpecificFileHeader<T> {
     lateinit var main: LocalSpecificFileMainChild<T>
 }
 

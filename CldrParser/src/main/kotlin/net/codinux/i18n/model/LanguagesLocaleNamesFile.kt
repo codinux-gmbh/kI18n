@@ -1,6 +1,6 @@
 package net.codinux.i18n.model
 
-class LanguagesLocaleNamesFile : LocalSpecificFileHeader<LanguagesLocaleNamesFileContent>()
+class LanguagesLocaleNamesFile : LocaleSpecificFileHeader<LanguagesLocaleNamesFileContent>()
 
 data class LanguagesLocaleNamesFileContent(
     val localeDisplayNames: LanguageLocaleDisplayNames

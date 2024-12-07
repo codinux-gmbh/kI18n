@@ -118,10 +118,7 @@ class CldrJsonParserTest {
     fun parseLanguageNamesForLocale() {
         val result = underTest.parseLanguageNamesForLocale(LanguageTag("en"))
 
-        assertThat(result).hasSize(1)
-
-        val territories = result.first()
-        assertThat(territories.languages).hasSize(685)
+        assertThat(result.languages).hasSize(685)
     }
 
     @Test
@@ -141,11 +138,8 @@ class CldrJsonParserTest {
         for (locale in locales) {
             val result = underTest.parseLanguageNamesForLocale(locale)
 
-            assertThat(result).hasSize(1)
-
-            val territories = result.first()
-//            assertThat(territories.languages).hasSize(685)
-            assertThat(territories.languages).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 685 languages - add sanity check
+//            assertThat(result.languages).hasSize(685)
+            assertThat(result.languages).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 685 languages - add sanity check
         }
     }
 
@@ -153,10 +147,7 @@ class CldrJsonParserTest {
     fun parseCountryNamesForLocale() {
         val result = underTest.parseCountryNamesForLocale(LanguageTag("en"))
 
-        assertThat(result).hasSize(1)
-
-        val territories = result.first()
-        assertThat(territories.territories).hasSize(315)
+        assertThat(result.territories).hasSize(315)
     }
 
     @Test
@@ -176,11 +167,8 @@ class CldrJsonParserTest {
         for (locale in locales) {
             val result = underTest.parseCountryNamesForLocale(locale)
 
-            assertThat(result).hasSize(1)
-
-            val territories = result.first()
 //            assertThat(territories.territories).hasSize(315)
-            assertThat(territories.territories).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 315 countries - add sanity check
+            assertThat(result.territories).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 315 countries - add sanity check
         }
     }
 
@@ -222,11 +210,7 @@ class CldrJsonParserTest {
         }
     }
 
-    private fun assertUnitDisplayNames(result: List<UnitsDisplayNamesForLocale>) {
-        assertThat(result).hasSize(1)
-
-        val unitNames = result.first()
-
+    private fun assertUnitDisplayNames(unitNames: UnitsDisplayNamesForLocale) {
         val long = unitNames.long
         val short = unitNames.short
         val narrow = unitNames.narrow

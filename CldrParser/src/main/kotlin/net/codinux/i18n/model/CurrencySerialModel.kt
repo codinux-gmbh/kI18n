@@ -3,7 +3,7 @@ package net.codinux.i18n.model
 import com.fasterxml.jackson.annotation.JsonAnySetter
 import com.fasterxml.jackson.annotation.JsonProperty
 
-class LanguageCurrenciesSerialModel : LocalSpecificFileHeader<LanguageCurrenciesNumbersSerialModel>()
+class LanguageCurrenciesSerialModel : LocaleSpecificFileHeader<LanguageCurrenciesNumbersSerialModel>()
 
 class LanguageCurrenciesNumbersSerialModel(
     val numbers: CurrencyNumbersSerialModel

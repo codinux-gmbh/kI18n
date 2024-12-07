@@ -59,10 +59,11 @@ open class CldrJsonParser(
 
     fun parseCurrenciesForLocale(locale: LanguageTag): List<Currency> =
         objectMapper.readValue<LanguageCurrenciesSerialModel>(resolvePathForLocale("cldr-numbers-full/main", locale, "currencies.json")).let {
-            it.main.localeSpecificProperties.flatMap { (languageTag, inner) -> // there should actually always only be one node
-                inner.numbers.currencies.currencies.map { (isoCode, properties) ->
-                    Currency(isoCode, properties.displayName, properties.displayNameCountOne, properties.displayNameCountOther, properties.symbol, properties.symbolAltNarrow)
-                }
+            assertLocalSpecificFileStart(it, locale)
+
+            val inner = it.main.localeSpecificProperties.values.first()
+            inner.numbers.currencies.currencies.map { (isoCode, properties) ->
+                Currency(isoCode, properties.displayName, properties.displayNameCountOne, properties.displayNameCountOther, properties.symbol, properties.symbolAltNarrow)
             }
         }
 
@@ -89,25 +90,27 @@ open class CldrJsonParser(
     fun getLocalesWithLocalizedLanguageNames(): List<String> =
         getLocales(resolvePath("cldr-localenames-full/main"), "languages.json")
 
-    fun parseLanguageNamesForLocale(locale: LanguageTag): List<LanguageDisplayNamesForLocale> =
+    fun parseLanguageNamesForLocale(locale: LanguageTag): LanguageDisplayNamesForLocale =
         objectMapper.readValue<LanguagesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "languages.json")).let {
-            it.main.localeSpecificProperties.map { (languageTag, content) -> // there should actually always only be one node
-                LanguageDisplayNamesForLocale(content.localeDisplayNames.languages.mapValues { (languageIsoCode, displayName) ->
-                    LanguageDisplayNames(languageIsoCode, displayName)
-                })
-            }
+            assertLocalSpecificFileStart(it, locale)
+
+            val content = it.main.localeSpecificProperties.values.first()
+            LanguageDisplayNamesForLocale(content.localeDisplayNames.languages.mapValues { (languageIsoCode, displayName) ->
+                LanguageDisplayNames(languageIsoCode, displayName)
+            })
         }
 
     fun getLocalesWithLocalizedCountryNames(): List<String> =
         getLocales(resolvePath("cldr-localenames-full/main"), "territories.json")
 
-    fun parseCountryNamesForLocale(locale: LanguageTag): List<TerritoryDisplayNamesForLocale> =
+    fun parseCountryNamesForLocale(locale: LanguageTag): TerritoryDisplayNamesForLocale =
         objectMapper.readValue<TerritoriesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "territories.json")).let {
-            it.main.localeSpecificProperties.map { (languageTag, content) -> // there should actually always only be one node
-                TerritoryDisplayNamesForLocale(content.localeDisplayNames.territories.mapValues { (territoryIsoCode, displayName) ->
-                    TerritoryDisplayNames(territoryIsoCode, displayName)
-                })
-            }
+            assertLocalSpecificFileStart(it, locale)
+
+            val content = it.main.localeSpecificProperties.values.first()
+            TerritoryDisplayNamesForLocale(content.localeDisplayNames.territories.mapValues { (territoryIsoCode, displayName) ->
+                TerritoryDisplayNames(territoryIsoCode, displayName)
+            })
         }
 
 
@@ -125,7 +128,10 @@ open class CldrJsonParser(
         getLocales(resolvePath("cldr-units-full/main"), "units.json")
 
     fun parseUnityNamesForLocale(locale: LanguageTag) =
-        objectMapper.readValue<UnitsLocaleNamesFile>(resolvePathForLocale("cldr-units-full/main/", locale, "units.json")).main.localeSpecificProperties.map { (languageTag, content) ->
+        objectMapper.readValue<UnitsLocaleNamesFile>(resolvePathForLocale("cldr-units-full/main/", locale, "units.json")).let {
+            assertLocalSpecificFileStart(it, locale)
+
+            val content = it.main.localeSpecificProperties.values.first()
             UnitsDisplayNamesForLocale(
                 map(content.units.long), map(content.units.short), map(content.units.narrow),
                 content.units.durationUnitTypeHm, content.units.durationUnitTypeHms, content.units.durationUnitTypeMs
@@ -146,6 +152,18 @@ open class CldrJsonParser(
             compoundPatterns.map { UnitPattern(it.key, it.value.compoundUnitPattern!!) },
             displayNames.unitPattern["coordinateUnit"]?.let { CoordinatesDisplayNames(it.west!!, it.north!!, it.east!!, it.south!!) }
         )
+    }
+
+
+    protected open fun assertLocalSpecificFileStart(localeSpecificFile: LocaleSpecificFileHeader<*>, languageTag: LanguageTag) {
+        require(localeSpecificFile.main.localeSpecificProperties.size == 1) {
+            "There must be exactly one entry in localeSpecificProperties Map with key '${languageTag.tag}' (or one of its parent LanguageTags)."
+        }
+
+        val key = localeSpecificFile.main.localeSpecificProperties.keys.first()
+        require(languageTag.tag.startsWith(key, true)) {
+            "Key of localeSpecificProperties '${key}' should be contained at start of LanguageTag '${languageTag.tag}'."
+        }
     }
 
 

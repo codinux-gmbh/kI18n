@@ -3,7 +3,7 @@ package net.codinux.i18n.model
 import com.fasterxml.jackson.annotation.JsonAnySetter
 import com.fasterxml.jackson.annotation.JsonProperty
 
-class UnitsLocaleNamesFile : LocalSpecificFileHeader<UnitsLocaleNamesFileContent>()
+class UnitsLocaleNamesFile : LocaleSpecificFileHeader<UnitsLocaleNamesFileContent>()
 
 data class UnitsLocaleNamesFileContent(
     val units: UnitsLocaleNamesCategoriesSerialModel
