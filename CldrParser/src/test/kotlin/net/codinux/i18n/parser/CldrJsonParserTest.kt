@@ -70,6 +70,15 @@ class CldrJsonParserTest {
         assertThat(withoutDisplayName).hasSize(2)
     }
 
+    @Test
+    fun getLocalesWithLocalizedCurrencies() {
+        val result = underTest.getLocalesWithLocalizedCurrencies()
+
+        val availableLocales = underTest.parseAvailableLocales().map { it.tag }
+        assertThat(result).hasSize(availableLocales.size)
+        assertThat(result).containsExactlyInAnyOrder(*availableLocales.toTypedArray())
+    }
+
 
     @Test
     fun parseAvailableCountries() {
@@ -105,6 +114,16 @@ class CldrJsonParserTest {
     }
 
     @Test
+    fun getLocalesWithLocalizedLanguageNames() {
+        val result = underTest.getLocalesWithLocalizedLanguageNames()
+
+        val availableLocales = underTest.parseAvailableLocales().map { it.tag }
+        val availableLocalesWithLocalizedLanguageNames = availableLocales.filter { it !in LanguageTag.LanguageTagsWithoutLocalizedLanguageNames }
+        assertThat(result).hasSize(availableLocalesWithLocalizedLanguageNames.size)
+        assertThat(result).containsExactlyInAnyOrder(*availableLocalesWithLocalizedLanguageNames.toTypedArray())
+    }
+
+    @Test
     fun parseCountryNamesForLocale() {
         val result = underTest.parseCountryNamesForLocale(LanguageTag("en"))
 
@@ -112,6 +131,16 @@ class CldrJsonParserTest {
 
         val territories = result.first()
         assertThat(territories.territories).hasSize(315)
+    }
+
+    @Test
+    fun getLocalesWithLocalizedCountryNames() {
+        val result = underTest.getLocalesWithLocalizedCountryNames()
+
+        val availableLocales = underTest.parseAvailableLocales().map { it.tag }
+        val availableLocalesWithLocalizedCountryNames = availableLocales.filter { it !in LanguageTag.LanguageTagsWithoutLocalizedCountryNames }
+        assertThat(result).hasSize(availableLocalesWithLocalizedCountryNames.size)
+        assertThat(result).containsExactlyInAnyOrder(*availableLocalesWithLocalizedCountryNames.toTypedArray())
     }
 
 
@@ -123,6 +152,15 @@ class CldrJsonParserTest {
         assertThat(result.unitConstants).hasSize(19)
         assertThat(result.unitQuantities).hasSize(48)
         assertThat(result.convertUnits).hasSize(155)
+    }
+
+    @Test
+    fun getLocalesWithLocalizedUnits() {
+        val result = underTest.getLocalesWithLocalizedUnits()
+
+        val availableLocales = underTest.parseAvailableLocales().map { it.tag }
+        assertThat(result).hasSize(availableLocales.size)
+        assertThat(result).containsExactlyInAnyOrder(*availableLocales.toTypedArray())
     }
 
     @Test

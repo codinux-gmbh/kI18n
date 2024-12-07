@@ -54,6 +54,9 @@ open class CldrJsonParser(
             }
         }
 
+    fun getLocalesWithLocalizedCurrencies(): List<String> =
+        getLocales(resolvePath("cldr-numbers-full/main"), "currencies.json")
+
     fun parseCurrenciesForLocale(locale: LanguageTag): List<Currency> =
         objectMapper.readValue<LanguageCurrenciesSerialModel>(resolvePathForLocale("cldr-numbers-full/main", locale, "currencies.json")).let {
             it.main.localeSpecificProperties.flatMap { (languageTag, inner) -> // there should actually always only be one node
@@ -83,6 +86,9 @@ open class CldrJsonParser(
             }
         }
 
+    fun getLocalesWithLocalizedLanguageNames(): List<String> =
+        getLocales(resolvePath("cldr-localenames-full/main"), "languages.json")
+
     fun parseLanguageNamesForLocale(locale: LanguageTag): List<LanguageDisplayNamesForLocale> =
         objectMapper.readValue<LanguagesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "languages.json")).let {
             it.main.localeSpecificProperties.map { (languageTag, content) -> // there should actually always only be one node
@@ -91,6 +97,9 @@ open class CldrJsonParser(
                 })
             }
         }
+
+    fun getLocalesWithLocalizedCountryNames(): List<String> =
+        getLocales(resolvePath("cldr-localenames-full/main"), "territories.json")
 
     fun parseCountryNamesForLocale(locale: LanguageTag): List<TerritoryDisplayNamesForLocale> =
         objectMapper.readValue<TerritoriesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "territories.json")).let {
@@ -111,6 +120,9 @@ open class CldrJsonParser(
                 unities.convertUnits.map { ConvertUnit(it.key, it.value.baseUnit, it.value.factor, it.value.systems, it.value.description, it.value.offset, it.value.special) }
             )
         }
+
+    fun getLocalesWithLocalizedUnits(): List<String> =
+        getLocales(resolvePath("cldr-units-full/main"), "units.json")
 
     fun parseUnityNamesForLocale(locale: LanguageTag) =
         objectMapper.readValue<UnitsLocaleNamesFile>(resolvePathForLocale("cldr-units-full/main/", locale, "units.json")).main.localeSpecificProperties.map { (languageTag, content) ->
@@ -136,6 +148,11 @@ open class CldrJsonParser(
         )
     }
 
+
+    protected open fun getLocales(directoryWithLocalizedFiles: File, hasToContainFile: String? = null): List<String> =
+        directoryWithLocalizedFiles.listFiles().orEmpty().filter { it.isDirectory }
+            .filter { hasToContainFile == null || it.list().orEmpty().contains(hasToContainFile) }
+            .map { it.name } // TODO: add sanity test if it's really a LanguageTag
 
     protected open fun resolvePathForLocale(subPath: String, locale: LanguageTag, filename: String): File =
         resolvePathForLocale(subPath, locale).resolve(filename).toFile()
