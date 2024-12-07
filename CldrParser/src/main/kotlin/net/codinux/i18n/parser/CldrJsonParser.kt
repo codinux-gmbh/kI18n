@@ -182,7 +182,16 @@ open class CldrJsonParser(
             return fullPath.toPath()
         }
 
-        // TODO: resolve parent
+        var parentLanguageTag = locale.tag
+        while (parentLanguageTag.contains('-')) {
+            parentLanguageTag = parentLanguageTag.substring(0, parentLanguageTag.lastIndexOf('-'))
+
+            val path = baseDirectory.resolve(parentLanguageTag)
+            if (path.exists()) {
+                return path.toPath()
+            }
+        }
+
         throw IllegalArgumentException("")
     }
 

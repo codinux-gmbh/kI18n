@@ -44,7 +44,7 @@ class CldrJsonParserTest {
     }
 
     @Test
-    fun `parseCurrenciesForLocale_de-DE - Resolves parent Locale`() { // TODO: not implemented yet
+    fun `parseCurrenciesForLocale_de-DE - Resolves parent Locale`() {
         val result = underTest.parseCurrenciesForLocale(LanguageTag("de-DE"))
 
         assertThat(result).hasSize(304)
