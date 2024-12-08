@@ -7,10 +7,11 @@ pluginManagement {
     }
 
     plugins {
-        kotlin("jvm") version kotlinVersion
+        kotlin("jvm") version kotlinVersion apply false
+        kotlin("multiplatform") version kotlinVersion apply false
 
-        kotlin("plugin.allopen") version kotlinVersion
-        kotlin("plugin.noarg") version kotlinVersion
+        kotlin("plugin.allopen") version kotlinVersion apply false
+        kotlin("plugin.noarg") version kotlinVersion apply false
     }
 }
 
@@ -21,5 +22,7 @@ plugins {
 
 
 rootProject.name = "kI18nProject"
+
+include("k-i18n")
 
 include("CldrParser")
