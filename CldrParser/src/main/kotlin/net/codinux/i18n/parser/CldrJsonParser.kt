@@ -34,6 +34,11 @@ open class CldrJsonParser(
                 }
             }
 
+            val fromBaseDir = Path("").resolve("cldr-json")
+            if (fromBaseDir.exists() && fromBaseDir.resolve("cldr-json").exists()) {
+                return fromBaseDir
+            }
+
             throw IllegalStateException("Could not find base directory of '<project_root>/cldr-json' submodule, please specify it explicitly")
         }
 
