@@ -45,10 +45,10 @@ class CurrencyDisplayNamesClassGenerator(
         // method to find currency display name by LanguageTag and currencyIsoCode
         val getDisplayNameMethod = FunSpec.builder("getDisplayName")
             .addParameter("currencyIsoCode", String::class)
-            .addParameter("language", LanguageTag::class)
+            .addParameter("language", String::class)
             .returns(String::class.asTypeName().copy(nullable = true))
             .apply {
-                beginControlFlow("return when(language.tag) {")
+                beginControlFlow("return when(language) {")
                 uniqueDisplayNamesByLanguageTag.forEach { (languageTag, _) ->
                     addStatement("%S -> %N[currencyIsoCode]", languageTag.tag, languageTag.tag.replace('-', '_'))
                 }
