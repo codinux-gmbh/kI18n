@@ -24,12 +24,9 @@ open class ClassGeneratorUtil {
     fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec>) {
         val file = FileSpec.builder("net.codinux.i18n", className)
             .addType(
-                TypeSpec.classBuilder(className)
-                    .addType(
-                        TypeSpec.companionObjectBuilder()
-                            .addProperties(companionObjectProperties)
-                            .build()
-                    ).build()
+                TypeSpec.objectBuilder(className)
+                    .addProperties(companionObjectProperties)
+                    .build()
             ).build()
 
         val baseDirectory = FileSystemUtil.determineKI18nProjectPath().resolve("src/commonMain/kotlin/")
