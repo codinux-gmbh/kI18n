@@ -48,5 +48,5 @@ data class Country(
      */
     val numeric: Int?
 ) {
-    override fun toString() = "${alpha3Code ?: alpha2Code}${numeric?.let { " ($it)" } ?: ""}"
+    override fun toString() = "${alpha2Code ?: alpha3Code}${numeric?.let { " ($it)" } ?: ""}"
 }
