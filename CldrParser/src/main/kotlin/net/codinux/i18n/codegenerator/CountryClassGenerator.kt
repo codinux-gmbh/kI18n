@@ -11,10 +11,10 @@ class CountryClassGenerator(
     fun generate() {
         val englishCountryNames = cldrJsonParser.parseCountryNamesForLocale(LanguageTag.parse("en"))
 
-        val countryProperties = englishCountryNames.territories
-            .filter { it.key.all { it.isLetter() } } // filter out territories like 'World', 'Europe', ... which can be identified by that they have numeric codes
+        val countryProperties = englishCountryNames
+            .filter { it.territoryCode.all { it.isLetter() } } // filter out territories like 'World', 'Europe', ... which can be identified by that they have numeric codes
             .map { country ->
-                util.createConstant(country.value.displayName, country.key)
+                util.createConstant(country.displayName, country.territoryCode)
             }
 
         util.writeClass("Country", countryProperties)
