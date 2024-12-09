@@ -2,7 +2,7 @@ package net.codinux.i18n.platform
 
 import net.codinux.i18n.LanguageTag
 
-actual object Platform {
+internal actual object Platform {
 
     // available locales may can be read from /usr/share/i18n/SUPPORTED, but that's of course not a robust and universal way to get all locales
     // "locale -a" didn't work on my system

@@ -32,7 +32,7 @@ class AvailableLanguageTagsClassGenerator(
             .build()
 
 
-        util.writeClass("AvailableLanguageTags", availableLanguageTagsProperty)
+        util.writeClass("AvailableLanguageTags", availableLanguageTagsProperty, modifiers = listOf(KModifier.INTERNAL))
     }
 
 }

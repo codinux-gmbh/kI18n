@@ -4,7 +4,7 @@ import kotlin.String
 import net.codinux.collections.ImmutableMap
 import net.codinux.collections.immutableMapOf
 
-object AvailableLanguageTags {
+internal object AvailableLanguageTags {
   val availableLanguageTags: ImmutableMap<String, LanguageTag> = immutableMapOf(
     "aa" to LanguageTag.parse("aa"),
     "aa-DJ" to LanguageTag.parse("aa-DJ"),

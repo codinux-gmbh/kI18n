@@ -4,7 +4,7 @@ import net.codinux.collections.toImmutableList
 import net.codinux.i18n.LanguageTag
 import net.codinux.log.logger
 
-actual object Platform {
+internal actual object Platform {
 
     private val log by logger()
 

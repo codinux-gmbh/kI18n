@@ -18,16 +18,17 @@ open class ClassGeneratorUtil {
             .filter { it.isLetter() } // filter out characters like whitespaces, -, ', (, ), ...
 
 
-    open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList()) =
-        writeClass(className, companionObjectProperties.toList(), companionObjectMethods)
+    open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList()) =
+        writeClass(className, companionObjectProperties.toList(), companionObjectMethods, modifiers)
 
-    open fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec> = emptyList(), companionObjectMethods: Collection<FunSpec> = emptyList()) {
+    open fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec> = emptyList(), companionObjectMethods: Collection<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList()) {
         val file = FileSpec.builder("net.codinux.i18n", className)
             .addType(
-                TypeSpec.objectBuilder(className)
-                    .addFunctions(companionObjectMethods)
-                    .addProperties(companionObjectProperties)
-                    .build()
+                TypeSpec.objectBuilder(className).apply {
+                    addModifiers(*modifiers.toTypedArray())
+                    addFunctions(companionObjectMethods)
+                    addProperties(companionObjectProperties)
+                }.build()
             ).build()
 
         val baseDirectory = FileSystemUtil.determineKI18nProjectPath().resolve("src/commonMain/kotlin/")
