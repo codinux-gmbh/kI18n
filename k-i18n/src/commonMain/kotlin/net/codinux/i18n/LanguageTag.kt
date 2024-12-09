@@ -144,5 +144,19 @@ class LanguageTag(
                 ?: throw IllegalArgumentException("Cannot create a LanguageTag from string '$languageTag'. A valid LanguageTag starts with two- or three lower case characters for the language, see [Language] class for available values. Optionally, all separated by hyphens, a two-letter upper case or three-digit region code and a four-letter script code in title case follow.")
     }
 
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other !is LanguageTag) return false
+
+        if (tag != other.tag) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return tag.hashCode()
+    }
+
     override fun toString() = tag
 }
