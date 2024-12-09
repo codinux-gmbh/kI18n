@@ -39,21 +39,28 @@ class LanguageDisplayNamesClassGenerator(
                     .build()
             }
 
-        // method to find language display name by LanguageTag and languageIsoCode
-        val getDisplayNameMethod = FunSpec.builder("getDisplayName")
-            .addParameter("languageIsoCode", String::class)
+        // method to find all language display names of a LanguageTag
+        val getDisplayNamesForLocaleMethod = FunSpec.builder("getDisplayNamesForLocale")
             .addParameter("language", String::class)
-            .returns(String::class.asTypeName().copy(nullable = true))
+            .returns(parameterizedType.copy(nullable = true))
             .apply {
                 beginControlFlow("return when(language) {")
                 uniqueDisplayNamesByLanguageTag.forEach { (languageTag, _) ->
-                    addStatement("%S -> %N[languageIsoCode]", languageTag.tag, languageTag.tag.replace('-', '_'))
+                    addStatement("%S -> %N", languageTag.tag, languageTag.tag.replace('-', '_'))
                 }
                 addStatement("else -> null")
                 endControlFlow()
             }.build()
 
-        util.writeClass("LanguageDisplayNames", languageDisplayNamesProperties, companionObjectMethods = listOf(getDisplayNameMethod))
+        // method to find language display name by LanguageTag and languageIsoCode
+        val getDisplayNameMethod = FunSpec.builder("getDisplayName")
+            .addParameter("languageIsoCode", String::class)
+            .addParameter("language", String::class)
+            .returns(String::class.asTypeName().copy(nullable = true))
+            .addStatement("return %N(language)?.get(languageIsoCode)", getDisplayNamesForLocaleMethod)
+            .build()
+
+        util.writeClass("LanguageDisplayNames", languageDisplayNamesProperties, companionObjectMethods = listOf(getDisplayNamesForLocaleMethod, getDisplayNameMethod))
     }
 
     private fun removeRedundantValuesFromSubLocales(displayNamesByLanguageTag: Map<LanguageTag, List<LanguageDisplayNames>>): Map<LanguageTag, List<LanguageDisplayNames>> {

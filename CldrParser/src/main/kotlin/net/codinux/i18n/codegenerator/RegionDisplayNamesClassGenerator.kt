@@ -39,21 +39,28 @@ class RegionDisplayNamesClassGenerator(
                     .build()
             }
 
-        // method to find region display name by LanguageTag and regionCode
-        val getDisplayNameMethod = FunSpec.builder("getDisplayName")
-            .addParameter("regionCode", String::class)
+        // method to find all region display names of a LanguageTag
+        val getDisplayNamesForLocaleMethod = FunSpec.builder("getDisplayNamesForLocale")
             .addParameter("language", String::class)
-            .returns(String::class.asTypeName().copy(nullable = true))
+            .returns(parameterizedType.copy(nullable = true))
             .apply {
                 beginControlFlow("return when(language) {")
                 uniqueDisplayNamesByLanguageTag.forEach { (languageTag, _) ->
-                    addStatement("%S -> %N[regionCode]", languageTag.tag, languageTag.tag.replace('-', '_'))
+                    addStatement("%S -> %N", languageTag.tag, languageTag.tag.replace('-', '_'))
                 }
                 addStatement("else -> null")
                 endControlFlow()
             }.build()
 
-        util.writeClass("RegionDisplayNames", regionDisplayNamesProperties, companionObjectMethods = listOf(getDisplayNameMethod))
+        // method to find region display name by LanguageTag and regionCode
+        val getDisplayNameMethod = FunSpec.builder("getDisplayName")
+            .addParameter("regionCode", String::class)
+            .addParameter("language", String::class)
+            .returns(String::class.asTypeName().copy(nullable = true))
+            .addStatement("return %N(language)?.get(regionCode)", getDisplayNamesForLocaleMethod)
+            .build()
+
+        util.writeClass("RegionDisplayNames", regionDisplayNamesProperties, companionObjectMethods = listOf(getDisplayNamesForLocaleMethod, getDisplayNameMethod))
     }
 
     private fun removeRedundantValuesFromSubLocales(displayNamesByLanguageTag: Map<LanguageTag, List<TerritoryDisplayNames>>): Map<LanguageTag, List<TerritoryDisplayNames>> {

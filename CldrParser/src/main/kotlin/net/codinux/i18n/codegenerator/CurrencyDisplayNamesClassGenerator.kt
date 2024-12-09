@@ -42,21 +42,28 @@ class CurrencyDisplayNamesClassGenerator(
                     .build()
             }
 
-        // method to find currency display name by LanguageTag and currencyIsoCode
-        val getDisplayNameMethod = FunSpec.builder("getDisplayName")
-            .addParameter("currencyIsoCode", String::class)
+        // method to find all currency display names of a LanguageTag
+        val getDisplayNamesForLocaleMethod = FunSpec.builder("getDisplayNamesForLocale")
             .addParameter("language", String::class)
-            .returns(String::class.asTypeName().copy(nullable = true))
+            .returns(parameterizedType.copy(nullable = true))
             .apply {
                 beginControlFlow("return when(language) {")
                 uniqueDisplayNamesByLanguageTag.forEach { (languageTag, _) ->
-                    addStatement("%S -> %N[currencyIsoCode]", languageTag.tag, languageTag.tag.replace('-', '_'))
+                    addStatement("%S -> %N", languageTag.tag, languageTag.tag.replace('-', '_'))
                 }
                 addStatement("else -> null")
                 endControlFlow()
             }.build()
 
-        util.writeClass("CurrencyDisplayNames", currencyDisplayNamesProperties, companionObjectMethods = listOf(getDisplayNameMethod))
+        // method to find currency display name by LanguageTag and currencyIsoCode
+        val getDisplayNameMethod = FunSpec.builder("getDisplayName")
+            .addParameter("currencyIsoCode", String::class)
+            .addParameter("language", String::class)
+            .returns(String::class.asTypeName().copy(nullable = true))
+            .addStatement("return %N(language)?.get(currencyIsoCode)", getDisplayNamesForLocaleMethod)
+            .build()
+
+        util.writeClass("CurrencyDisplayNames", currencyDisplayNamesProperties, companionObjectMethods = listOf(getDisplayNamesForLocaleMethod, getDisplayNameMethod))
     }
 
     private fun removeRedundantValuesFromSubLocales(displayNamesByLanguageTag: Map<LanguageTag, List<Currency>>): Map<LanguageTag, List<Currency>> {
