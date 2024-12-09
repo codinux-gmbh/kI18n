@@ -9,7 +9,7 @@ class RegionClassGenerator(
 ) {
 
     fun generate() {
-        val englishCountryNames = cldrJsonParser.parseCountryNamesForLocale(LanguageTag.parse("en"))
+        val englishCountryNames = cldrJsonParser.parseCountryNamesForLocale(LanguageTag.ofAvailable("en"))
 
         val countryProperties = englishCountryNames
             .filter { it.territoryCode.all { it.isDigit() } } // find territories like 'World', 'Europe', ... which can be identified by that they have numeric codes

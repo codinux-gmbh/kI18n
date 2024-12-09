@@ -109,6 +109,20 @@ class LanguageTag(
         fun hasTag(languageTag: String): Boolean = availableLanguageTagsByTag.containsKey(languageTag)
 
 
+        /**
+         * Returns the existing LanguageTag object for this languageTag from [availableLanguageTagsByTag] or null.
+         */
+        fun ofAvailableOrNull(languageTag: String): LanguageTag? =
+            availableLanguageTagsByTag[languageTag]
+
+        /**
+         * Returns the existing LanguageTag object for this languageTag from [availableLanguageTagsByTag] or
+         * throws an exception if no LanguageTag with this languageTag is known.
+         */
+        fun ofAvailable(languageTag: String): LanguageTag =
+            ofAvailableOrNull(languageTag)
+                ?: throw IllegalArgumentException("Cannot create a LanguageTag from string '$languageTag'. A valid LanguageTag starts with two- or three lower case characters for the language, see [Language] class for available values. Optionally, all separated by hyphens, a two-letter upper case or three-digit region code and a four-letter script code in title case follow.")
+
         fun parseOrNull(languageTag: String): LanguageTag? {
             val parts = languageTag.split('-')
             val languageCode = parts[0]
