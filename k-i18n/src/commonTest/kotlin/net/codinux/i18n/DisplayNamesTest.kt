@@ -10,6 +10,21 @@ class DisplayNamesTest {
 
 
     @Test
+    fun getLanguageDisplayName_ar_BH_ResolvesFromParent() {
+        val result = underTest.getLanguageDisplayName("yue", LanguageTag.ofAvailable("ar-BH"))
+
+        assertThat(result).isEqualTo("الكَنْتُونية")
+    }
+
+    @Test
+    fun getLanguageDisplayName_ca_ES_valencia() {
+        val result = underTest.getLanguageDisplayName("crk", LanguageTag.ofAvailable("ca-ES-valencia"))
+
+        assertThat(result).isEqualTo("cree de la plana")
+    }
+
+
+    @Test
     fun getRegionDisplayName_ar_BH_ResolvesFromParent() {
         val result = underTest.getRegionDisplayName("YE", LanguageTag.ofAvailable("ar-BH"))
 
