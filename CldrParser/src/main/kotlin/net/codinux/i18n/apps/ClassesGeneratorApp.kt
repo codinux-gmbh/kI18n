@@ -20,6 +20,8 @@ class ClassesGeneratorApp {
         LanguageDisplayNamesClassGenerator().generate()
 
         RegionDisplayNamesClassGenerator().generate()
+
+        CurrencyDisplayNamesClassGenerator().generate()
     }
 
 }

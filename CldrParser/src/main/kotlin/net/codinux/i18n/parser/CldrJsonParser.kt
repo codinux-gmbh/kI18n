@@ -41,7 +41,9 @@ open class CldrJsonParser(
 
             val inner = it.main.localeSpecificProperties.values.first()
             inner.numbers.currencies.currencies.map { (isoCode, properties) ->
-                Currency(isoCode, properties.displayName, properties.displayNameCountOne, properties.displayNameCountOther, properties.symbol, properties.symbolAltNarrow)
+                Currency(isoCode, properties.displayName, properties.pattern, properties.symbol, properties.narrowSymbol, properties.formalSymbol, properties.symbolVariant,
+                    properties.decimal, properties.group, properties.displayNameCountZero, properties.displayNameCountOne, properties.displayNameCountTwo,
+                    properties.displayNameCountFew, properties.displayNameCountMany, properties.displayNameCountOther)
             }
         }
 

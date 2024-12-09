@@ -21,15 +21,29 @@ class CurrenciesSerialModel {
 class CurrencySerialModel(
     val displayName: String? = null,
 
-    @JsonProperty("displayName-count-one")
-    val displayNameCountOne: String? = null,
-    @JsonProperty("displayName-count-other")
-    val displayNameCountOther: String? = null,
+    val pattern: String? = null,
 
     val symbol: String? = null,
     @JsonProperty("symbol-alt-narrow")
-    val symbolAltNarrow: String? = null
-) {
-    @JsonAnySetter
-    val anyOtherProperties = mutableMapOf<String, Any>()
-}
+    val narrowSymbol: String? = null,
+    @JsonProperty("symbol-alt-formal")
+    val formalSymbol: String? = null,
+    @JsonProperty("symbol-alt-variant")
+    val symbolVariant: String? = null,
+
+    val decimal: String? = null,
+    val group: String? = null,
+
+    @JsonProperty("displayName-count-zero")
+    val displayNameCountZero: String? = null,
+    @JsonProperty("displayName-count-one")
+    val displayNameCountOne: String? = null,
+    @JsonProperty("displayName-count-two")
+    val displayNameCountTwo: String? = null,
+    @JsonProperty("displayName-count-few")
+    val displayNameCountFew: String? = null,
+    @JsonProperty("displayName-count-many")
+    val displayNameCountMany: String? = null,
+    @JsonProperty("displayName-count-other")
+    val displayNameCountOther: String? = null,
+)

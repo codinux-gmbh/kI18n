@@ -38,4 +38,12 @@ class DisplayNamesTest {
         assertThat(result).isEqualTo("República Centreafricana")
     }
 
+
+    @Test
+    fun getCurrencyDisplayName_ms() {
+        val result = underTest.getCurrencyDisplayName("JOD", LanguageTag.ofAvailable("ms"))
+
+        assertThat(result).isEqualTo("Dinar Jordan")
+    }
+
 }

@@ -34,4 +34,19 @@ class DisplayNames {
         }
     }
 
+    fun getCurrencyDisplayName(currencyIsoCode: String, language: LanguageTag = Platform.getSystemLocale()): String? {
+        val displayName = CurrencyDisplayNames.getDisplayName(currencyIsoCode, language)
+
+        return if (displayName != null) {
+            displayName
+        } else {
+            val parent = language.parent()
+            if (parent != null) {
+                getCurrencyDisplayName(currencyIsoCode, parent)
+            } else {
+                null
+            }
+        }
+    }
+
 }
