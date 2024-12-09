@@ -61,6 +61,8 @@ kotlin {
     applyDefaultHierarchyTemplate()
 
 
+    val immutableCollectionsVersion: String by project
+
     val klfVersion: String by project
 
     val assertKVersion: String by project
@@ -68,6 +70,8 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            implementation("net.codinux.collections:immutable-collections:$immutableCollectionsVersion")
+
             implementation("net.codinux.log:klf:$klfVersion")
         }
         commonTest.dependencies {

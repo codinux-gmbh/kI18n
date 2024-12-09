@@ -9,7 +9,11 @@ kotlin {
 
 
 dependencies {
+    val kotlinPoetVersion: String by project
+
     val jacksonVersion: String by project
+
+    val immutableCollectionsVersion: String by project
 
     val klfVersion: String by project
 
@@ -19,8 +23,12 @@ dependencies {
 
     implementation(project(":k-i18n"))
 
+    implementation("com.squareup:kotlinpoet:$kotlinPoetVersion")
+
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
+
+    implementation("net.codinux.collections:immutable-collections:$immutableCollectionsVersion")
 
     implementation("net.codinux.log:klf:$klfVersion")
 

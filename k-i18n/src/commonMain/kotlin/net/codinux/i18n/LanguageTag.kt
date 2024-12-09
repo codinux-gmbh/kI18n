@@ -1,5 +1,8 @@
 package net.codinux.i18n
 
+import net.codinux.collections.ImmutableList
+import net.codinux.collections.toImmutableList
+
 /**
  * A BCP 47 language tag, for example en, en-US or zh-Hans-HK.
  * References:
@@ -97,6 +100,15 @@ class LanguageTag(
 ) {
 
     companion object {
+        val availableLanguageTagsAsString: ImmutableList<String> by lazy { availableLanguageTagsByTag.keys.sorted().toImmutableList() }
+
+        val availableLanguageTags: ImmutableList<LanguageTag> by lazy { availableLanguageTagsByTag.values.sortedBy { it.tag }.toImmutableList() }
+
+        val availableLanguageTagsByTag by lazy { AvailableLanguageTags.availableLanguageTags }
+
+        fun hasTag(languageTag: String): Boolean = availableLanguageTagsByTag.containsKey(languageTag)
+
+
         fun parseOrNull(languageTag: String): LanguageTag? {
             val parts = languageTag.split('-')
             val languageCode = parts[0]
