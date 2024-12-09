@@ -149,6 +149,7 @@ open class CldrJsonParser(
         directoryWithLocalizedFiles.listFiles().orEmpty().filter { it.isDirectory }
             .filter { hasToContainFile == null || it.list().orEmpty().contains(hasToContainFile) }
             .map { it.name } // TODO: add sanity test if it's really a LanguageTag
+            .sorted()
 
     protected open fun resolvePathForLocale(subPath: String, locale: LanguageTag, filename: String): File =
         resolvePathForLocale(subPath, locale).resolve(filename).toFile()
