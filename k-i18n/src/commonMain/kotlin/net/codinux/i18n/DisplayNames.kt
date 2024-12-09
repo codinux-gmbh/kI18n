@@ -1,10 +1,8 @@
 package net.codinux.i18n
 
-import net.codinux.i18n.platform.Platform
-
 class DisplayNames {
 
-    fun getLanguageDisplayName(languageIsoCode: String, language: LanguageTag = Platform.getSystemLocale()): String? {
+    fun getLanguageDisplayName(languageIsoCode: String, language: LanguageTag = LanguageTag.current): String? {
         val displayName = LanguageDisplayNames.getDisplayName(languageIsoCode, language)
 
         return if (displayName != null) {
@@ -19,7 +17,7 @@ class DisplayNames {
         }
     }
 
-    fun getRegionDisplayName(regionCode: String, language: LanguageTag = Platform.getSystemLocale()): String? {
+    fun getRegionDisplayName(regionCode: String, language: LanguageTag = LanguageTag.current): String? {
         val displayName = RegionDisplayNames.getDisplayName(regionCode, language)
 
         return if (displayName != null) {
@@ -34,7 +32,7 @@ class DisplayNames {
         }
     }
 
-    fun getCurrencyDisplayName(currencyIsoCode: String, language: LanguageTag = Platform.getSystemLocale()): String? {
+    fun getCurrencyDisplayName(currencyIsoCode: String, language: LanguageTag = LanguageTag.current): String? {
         val displayName = CurrencyDisplayNames.getDisplayName(currencyIsoCode, language)
 
         return if (displayName != null) {
