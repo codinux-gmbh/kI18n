@@ -3,7 +3,7 @@ package net.codinux.i18n.model
 data class Unities(
     val unitPrefixes: List<UnitPrefix>,
     val unitConstants: List<UnitConstant>,
-    val unitQuantities: List<UnityQuantity>,
+    val unitQuantities: List<UnitQuantity>,
     val convertUnits: List<ConvertUnit>
 )
 
@@ -21,7 +21,7 @@ data class UnitConstant(
     val isApproximate: Boolean = false
 )
 
-data class UnityQuantity(
+data class UnitQuantity(
     val name: String,
     val quantity: String,
     val isSimple: Boolean

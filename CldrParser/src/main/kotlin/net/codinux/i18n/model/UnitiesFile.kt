@@ -10,7 +10,7 @@ class UnitiesFile(
 data class UnitiesFileSupplemental(
     val unitPrefixes: Map<String, UnitPrefixSerialModel>,
     val unitConstants: Map<String, UnitConstantSerialModel>,
-    val unitQuantities: Map<String, UnityQuantitySerialModel>,
+    val unitQuantities: Map<String, UnitQuantitySerialModel>,
     val convertUnits: Map<String, ConvertUnitSerialModel>
 )
 
@@ -32,7 +32,7 @@ data class UnitConstantSerialModel(
     val status: String? = null
 )
 
-data class UnityQuantitySerialModel(
+data class UnitQuantitySerialModel(
     @JsonProperty("_quantity")
     val quantity: String,
     @JsonProperty("_status")

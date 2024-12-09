@@ -101,7 +101,7 @@ open class CldrJsonParser(
             Unities(
                 unities.unitPrefixes.map { UnitPrefix(it.key, it.value.symbol, it.value.power10, it.value.power2) },
                 unities.unitConstants.map { UnitConstant(it.key, it.value.value, it.value.description, it.value.status == "approximate") },
-                unities.unitQuantities.map { UnityQuantity(it.key, it.value.quantity, it.value.status == "simple") },
+                unities.unitQuantities.map { UnitQuantity(it.key, it.value.quantity, it.value.status == "simple") },
                 unities.convertUnits.map { ConvertUnit(it.key, it.value.baseUnit, it.value.factor, it.value.systems, it.value.description, it.value.offset, it.value.special) }
             )
         }
@@ -109,7 +109,7 @@ open class CldrJsonParser(
     fun getLocalesWithLocalizedUnits(): List<String> =
         getLocales(resolvePath("cldr-units-full/main"), "units.json")
 
-    fun parseUnityNamesForLocale(locale: LanguageTag) =
+    fun parseUnitNamesForLocale(locale: LanguageTag) =
         objectMapper.readValue<UnitsLocaleNamesFile>(resolvePathForLocale("cldr-units-full/main/", locale, "units.json")).let {
             assertLocalSpecificFileStart(it, locale)
 

@@ -194,18 +194,18 @@ class CldrJsonParserTest {
     }
 
     @Test
-    fun parseUnityNamesForLocale() {
-        val result = underTest.parseUnityNamesForLocale(LanguageTag.ofAvailable("en"))
+    fun parseUnitNamesForLocale() {
+        val result = underTest.parseUnitNamesForLocale(LanguageTag.ofAvailable("en"))
 
         assertUnitDisplayNames(result)
     }
 
     @Test
-    fun parseAllUnityNamesForLocale() {
+    fun parseAllUnitNamesForLocale() {
         val locales = underTest.parseAvailableLocales()
 
         for (locale in locales) {
-            val result = underTest.parseUnityNamesForLocale(locale)
+            val result = underTest.parseUnitNamesForLocale(locale)
 
             assertUnitDisplayNames(result)
         }
