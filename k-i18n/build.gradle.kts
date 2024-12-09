@@ -96,3 +96,7 @@ kotlin {
         }
     }
 }
+
+
+
+apply(from = "../gradle/scripts/publish-codinux.gradle.kts")

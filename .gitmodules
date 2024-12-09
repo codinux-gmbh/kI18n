@@ -1,3 +1,6 @@
 [submodule "cldr-json"]
 	path = cldr-json
 	url = https://github.com/unicode-org/cldr-json
+[submodule "gradle/scripts"]
+	path = gradle/scripts
+	url = git@github.com:dankito/GradleScripts.git
