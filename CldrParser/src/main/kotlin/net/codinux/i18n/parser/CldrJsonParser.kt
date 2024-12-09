@@ -86,8 +86,10 @@ open class CldrJsonParser(
             assertLocalSpecificFileStart(it, locale)
 
             val territories = it.main.localeSpecificProperties.values.first().localeDisplayNames.territories
-            territories.map { (territoryCode, displayName) ->
-                TerritoryDisplayNames(territoryCode, displayName)
+            val alternativeNames = territories.filter { it.key.contains("-alt-") }
+
+            territories.filterNot { it.key.contains("-alt-") }.map { (territoryCode, displayName) ->
+                TerritoryDisplayNames(territoryCode, displayName, alternativeNames[territoryCode + "-alt-short"], alternativeNames[territoryCode + "-alt-variant"])
             }
         }
 
