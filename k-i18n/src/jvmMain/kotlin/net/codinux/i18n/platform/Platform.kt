@@ -1,8 +1,17 @@
 package net.codinux.i18n.platform
 
+import net.codinux.collections.toImmutableList
 import net.codinux.i18n.LanguageTag
 
 actual object Platform {
+
+    private val AvailableJavaLocales by lazy { java.util.Locale.getAvailableLocales() }
+
+    actual val AvailableLocales: List<LanguageTag> by lazy {
+        AvailableJavaLocales
+            .map { mapLocale(it) }
+            .toImmutableList()
+    }
 
     actual fun getSystemLocale(): LanguageTag {
         val jvmLocale = java.util.Locale.getDefault()

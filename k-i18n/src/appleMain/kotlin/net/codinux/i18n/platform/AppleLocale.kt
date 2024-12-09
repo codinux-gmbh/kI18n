@@ -1,5 +1,6 @@
 package net.codinux.i18n.platform
 
+import net.codinux.collections.toImmutableList
 import net.codinux.i18n.LanguageTag
 import platform.Foundation.*
 
@@ -14,6 +15,7 @@ object AppleLocale {
     val AvailableLocales: List<LanguageTag> by lazy {
         AvailableNSLocales
             .map { mapToUtilLocale(it) }
+            .toImmutableList()
     }
 
     fun getDeviceLocale(): LanguageTag =

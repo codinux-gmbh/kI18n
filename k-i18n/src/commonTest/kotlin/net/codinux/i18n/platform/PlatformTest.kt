@@ -17,4 +17,11 @@ class PlatformTest {
         assertThat(result.tag).startsWith(result.language)
     }
 
+    @Test
+    fun getAvailableLocales() {
+        val result = Platform.AvailableLocales
+
+        assertThat(result).isNotEmpty()
+    }
+
 }
