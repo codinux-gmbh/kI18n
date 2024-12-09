@@ -1,4 +1,4 @@
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 
 plugins {
     kotlin("multiplatform")
@@ -6,6 +6,13 @@ plugins {
 
 
 kotlin {
+    @OptIn(ExperimentalKotlinGradlePluginApi::class)
+    compilerOptions {
+        // suppresses compiler warning: [EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING] 'expect'/'actual' classes (including interfaces, objects, annotations, enums, and 'actual' typealiases) are in Beta.
+        freeCompilerArgs.add("-Xexpect-actual-classes")
+    }
+
+
     jvmToolchain(11)
 
     jvm {
@@ -34,8 +41,7 @@ kotlin {
         }
     }
 
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs()
+    // removed WASM because i don't know how to get system locale in wasmJS
 
 
     linuxX64()
@@ -55,12 +61,34 @@ kotlin {
     applyDefaultHierarchyTemplate()
 
 
+    val klfVersion: String by project
+
+    val assertKVersion: String by project
+    val logbackVersion: String by project
+
     sourceSets {
         commonMain.dependencies {
-
+            implementation("net.codinux.log:klf:$klfVersion")
         }
         commonTest.dependencies {
             implementation(kotlin("test"))
+
+            implementation("com.willowtreeapps.assertk:assertk:$assertKVersion")
+        }
+
+        jvmTest.dependencies {
+            implementation("ch.qos.logback:logback-classic:$logbackVersion")
+        }
+
+
+        val linuxAndMingwMain by creating {
+            dependsOn(nativeMain.get())
+        }
+        linuxMain {
+            dependsOn(linuxAndMingwMain)
+        }
+        mingwMain {
+            dependsOn(linuxAndMingwMain)
         }
     }
 }
