@@ -8,8 +8,8 @@ import kotlin.test.Test
 class LanguageTagTest {
 
     @Test
-    fun fromTag_TwoLetterLanguageCode() {
-        val result = LanguageTag.fromTag("sw")
+    fun parse_TwoLetterLanguageCode() {
+        val result = LanguageTag.parse("sw")
 
         assertThat(result.tag).isEqualTo("sw")
         assertThat(result.language).isEqualTo("sw")
@@ -19,8 +19,8 @@ class LanguageTagTest {
     }
 
     @Test
-    fun fromTag_ThreeLetterLanguageCode() {
-        val result = LanguageTag.fromTag("arn")
+    fun parse_ThreeLetterLanguageCode() {
+        val result = LanguageTag.parse("arn")
 
         assertThat(result.tag).isEqualTo("arn")
         assertThat(result.language).isEqualTo("arn")
@@ -31,8 +31,8 @@ class LanguageTagTest {
 
 
     @Test
-    fun fromTag_LanguageAndRegion() {
-        val result = LanguageTag.fromTag("ar-AE")
+    fun parse_LanguageAndRegion() {
+        val result = LanguageTag.parse("ar-AE")
 
         assertThat(result.tag).isEqualTo("ar-AE")
         assertThat(result.language).isEqualTo("ar")
@@ -43,8 +43,8 @@ class LanguageTagTest {
 
 
     @Test
-    fun fromTag_LanguageAndScript() {
-        val result = LanguageTag.fromTag("ff-Adlm")
+    fun parse_LanguageAndScript() {
+        val result = LanguageTag.parse("ff-Adlm")
 
         assertThat(result.tag).isEqualTo("ff-Adlm")
         assertThat(result.language).isEqualTo("ff")
@@ -54,8 +54,8 @@ class LanguageTagTest {
     }
 
     @Test
-    fun fromTag_LanguageScriptAndRegion() {
-        val result = LanguageTag.fromTag("ha-Arab-SD")
+    fun parse_LanguageScriptAndRegion() {
+        val result = LanguageTag.parse("ha-Arab-SD")
 
         assertThat(result.tag).isEqualTo("ha-Arab-SD")
         assertThat(result.language).isEqualTo("ha")
@@ -66,8 +66,8 @@ class LanguageTagTest {
 
 
     @Test
-    fun fromTag_LanguageAndVariant() {
-        val result = LanguageTag.fromTag("be-tarask")
+    fun parse_LanguageAndVariant() {
+        val result = LanguageTag.parse("be-tarask")
 
         assertThat(result.tag).isEqualTo("be-tarask")
         assertThat(result.language).isEqualTo("be")
@@ -77,8 +77,8 @@ class LanguageTagTest {
     }
 
     @Test
-    fun fromTag_LanguageRegionAndVariant() {
-        val result = LanguageTag.fromTag("ca-ES-valencia")
+    fun parse_LanguageRegionAndVariant() {
+        val result = LanguageTag.parse("ca-ES-valencia")
 
         assertThat(result.tag).isEqualTo("ca-ES-valencia")
         assertThat(result.language).isEqualTo("ca")

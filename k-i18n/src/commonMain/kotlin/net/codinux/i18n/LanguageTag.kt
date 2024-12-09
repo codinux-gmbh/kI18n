@@ -97,7 +97,7 @@ class LanguageTag(
 ) {
 
     companion object {
-        fun fromTagOrNull(languageTag: String): LanguageTag? {
+        fun parseOrNull(languageTag: String): LanguageTag? {
             val parts = languageTag.split('-')
             val languageCode = parts[0]
             if (languageCode.length !in 2..3 || languageCode.any { it.isLetter() && it.isLowerCase() == false }) {
@@ -127,8 +127,8 @@ class LanguageTag(
             return LanguageTag(languageTag, languageCode, regionCode, scriptCode, variant)
         }
 
-        fun fromTag(languageTag: String): LanguageTag =
-            fromTagOrNull(languageTag)
+        fun parse(languageTag: String): LanguageTag =
+            parseOrNull(languageTag)
                 ?: throw IllegalArgumentException("Cannot create a LanguageTag from string '$languageTag'. A valid LanguageTag starts with two- or three lower case characters for the language, see [Language] class for available values. Optionally, all separated by hyphens, a two-letter upper case or three-digit region code and a four-letter script code in title case follow.")
     }
 
