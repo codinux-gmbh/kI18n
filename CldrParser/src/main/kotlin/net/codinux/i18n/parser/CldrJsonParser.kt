@@ -3,6 +3,7 @@ package net.codinux.i18n.parser
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.model.*
 import net.codinux.i18n.model.UnitDisplayNames
 import net.codinux.i18n.service.FileSystemUtil
@@ -20,7 +21,7 @@ open class CldrJsonParser(
     fun parseAvailableLocales(): List<LanguageTag> =
         objectMapper.readValue<AvailableLocalesSerialModel>(resolvePath("cldr-core/availableLocales.json")).let {
             (it.availableLocales.full + it.availableLocales.modern).map {
-                LanguageTag(it)
+                LanguageTag.parse(it)
             }
         }
 

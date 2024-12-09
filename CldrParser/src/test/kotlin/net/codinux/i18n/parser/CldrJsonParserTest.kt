@@ -2,7 +2,7 @@ package net.codinux.i18n.parser
 
 import assertk.assertThat
 import assertk.assertions.*
-import net.codinux.i18n.model.LanguageTag
+import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.model.UnitsDisplayNamesForLocale
 import org.junit.jupiter.api.assertThrows
 import kotlin.test.Test
@@ -36,7 +36,7 @@ class CldrJsonParserTest {
 
     @Test
     fun parseCurrenciesForLocale_en() {
-        val result = underTest.parseCurrenciesForLocale(LanguageTag("en"))
+        val result = underTest.parseCurrenciesForLocale(LanguageTag.parse("en"))
 
         assertThat(result).hasSize(307)
 
@@ -46,7 +46,7 @@ class CldrJsonParserTest {
 
     @Test
     fun `parseCurrenciesForLocale_de-DE - Resolves parent Locale`() {
-        val result = underTest.parseCurrenciesForLocale(LanguageTag("de-DE"))
+        val result = underTest.parseCurrenciesForLocale(LanguageTag.parse("de-DE"))
 
         assertThat(result).hasSize(304)
 
@@ -56,14 +56,14 @@ class CldrJsonParserTest {
 
     @Test
     fun `parseCurrenciesForLocale_az-Arab-TR`() {
-        val result = underTest.parseCurrenciesForLocale(LanguageTag("az-Arab-TR"))
+        val result = underTest.parseCurrenciesForLocale(LanguageTag.parse("az-Arab-TR"))
 
         assertThat(result).hasSize(106)
     }
 
     @Test
     fun `parseCurrenciesForLocale_ca-ES-valencia`() {
-        val result = underTest.parseCurrenciesForLocale(LanguageTag("ca-ES-valencia"))
+        val result = underTest.parseCurrenciesForLocale(LanguageTag.parse("ca-ES-valencia"))
 
         assertThat(result).hasSize(301)
 
@@ -117,7 +117,7 @@ class CldrJsonParserTest {
 
     @Test
     fun parseLanguageNamesForLocale() {
-        val result = underTest.parseLanguageNamesForLocale(LanguageTag("en"))
+        val result = underTest.parseLanguageNamesForLocale(LanguageTag.parse("en"))
 
         assertThat(result.languages).hasSize(685)
     }
@@ -127,14 +127,14 @@ class CldrJsonParserTest {
         val result = underTest.getLocalesWithLocalizedLanguageNames()
 
         val availableLocales = underTest.parseAvailableLocales().map { it.tag }
-        val availableLocalesWithLocalizedLanguageNames = availableLocales.filter { it !in LanguageTag.LanguageTagsWithoutLocalizedLanguageNames }
+        val availableLocalesWithLocalizedLanguageNames = availableLocales.filter { it !in net.codinux.i18n.model.LanguageTag.LanguageTagsWithoutLocalizedLanguageNames }
         assertThat(result).hasSize(availableLocalesWithLocalizedLanguageNames.size)
         assertThat(result).containsExactlyInAnyOrder(*availableLocalesWithLocalizedLanguageNames.toTypedArray())
     }
 
     @Test
     fun parseAllLanguageNamesForLocale() {
-        val locales = underTest.getLocalesWithLocalizedLanguageNames().map { LanguageTag(it) }
+        val locales = underTest.getLocalesWithLocalizedLanguageNames().map { LanguageTag.parse(it) }
 
         for (locale in locales) {
             val result = underTest.parseLanguageNamesForLocale(locale)
@@ -146,7 +146,7 @@ class CldrJsonParserTest {
 
     @Test
     fun parseCountryNamesForLocale() {
-        val result = underTest.parseCountryNamesForLocale(LanguageTag("en"))
+        val result = underTest.parseCountryNamesForLocale(LanguageTag.parse("en"))
 
         assertThat(result.territories).hasSize(315)
     }
@@ -156,14 +156,14 @@ class CldrJsonParserTest {
         val result = underTest.getLocalesWithLocalizedCountryNames()
 
         val availableLocales = underTest.parseAvailableLocales().map { it.tag }
-        val availableLocalesWithLocalizedCountryNames = availableLocales.filter { it !in LanguageTag.LanguageTagsWithoutLocalizedCountryNames }
+        val availableLocalesWithLocalizedCountryNames = availableLocales.filter { it !in net.codinux.i18n.model.LanguageTag.LanguageTagsWithoutLocalizedCountryNames }
         assertThat(result).hasSize(availableLocalesWithLocalizedCountryNames.size)
         assertThat(result).containsExactlyInAnyOrder(*availableLocalesWithLocalizedCountryNames.toTypedArray())
     }
 
     @Test
     fun parseAllCountryNamesForLocale() {
-        val locales = underTest.getLocalesWithLocalizedCountryNames().map { LanguageTag(it) }
+        val locales = underTest.getLocalesWithLocalizedCountryNames().map { LanguageTag.parse(it) }
 
         for (locale in locales) {
             val result = underTest.parseCountryNamesForLocale(locale)
@@ -195,7 +195,7 @@ class CldrJsonParserTest {
 
     @Test
     fun parseUnityNamesForLocale() {
-        val result = underTest.parseUnityNamesForLocale(LanguageTag("en"))
+        val result = underTest.parseUnityNamesForLocale(LanguageTag.parse("en"))
 
         assertUnitDisplayNames(result)
     }
@@ -215,7 +215,7 @@ class CldrJsonParserTest {
     @Test
     fun languageTagContainsScriptTag_CannotFindParentLanguageTag() {
         assertThrows<IllegalArgumentException> {
-            underTest.parseCurrenciesForLocale(LanguageTag("fr-Latn"))
+            underTest.parseCurrenciesForLocale(LanguageTag.parse("fr-Latn"))
         }
     }
 

@@ -1,6 +1,6 @@
 package net.codinux.i18n.codegenerator
 
-import net.codinux.i18n.model.LanguageTag
+import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.parser.CldrJsonParser
 
 class LanguageClassGenerator(
@@ -9,7 +9,7 @@ class LanguageClassGenerator(
 ) {
 
     fun generate() {
-        val englishLanguageNames = cldrJsonParser.parseLanguageNamesForLocale(LanguageTag("en"))
+        val englishLanguageNames = cldrJsonParser.parseLanguageNamesForLocale(LanguageTag.parse("en"))
 
         val languageProperties = englishLanguageNames.languages.map { language ->
             util.createConstant(language.value.displayName, language.key)

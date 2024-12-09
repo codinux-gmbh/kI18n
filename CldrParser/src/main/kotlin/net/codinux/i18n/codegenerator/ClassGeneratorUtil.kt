@@ -1,9 +1,6 @@
 package net.codinux.i18n.codegenerator
 
-import com.squareup.kotlinpoet.FileSpec
-import com.squareup.kotlinpoet.KModifier
-import com.squareup.kotlinpoet.PropertySpec
-import com.squareup.kotlinpoet.TypeSpec
+import com.squareup.kotlinpoet.*
 import net.codinux.i18n.service.FileSystemUtil
 import java.text.Normalizer
 
@@ -16,15 +13,19 @@ open class ClassGeneratorUtil {
             .build()
 
 
-
     open fun getKotlinFriendlyVariableName(displayName: String): String =
         Normalizer.normalize(displayName, Normalizer.Form.NFD) // Normalizer removes accents
             .filter { it.isLetter() } // filter out characters like whitespaces, -, ', (, ), ...
 
-    fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec>) {
+
+    open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList()) =
+        writeClass(className, companionObjectProperties.toList(), companionObjectMethods)
+
+    open fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec> = emptyList(), companionObjectMethods: Collection<FunSpec> = emptyList()) {
         val file = FileSpec.builder("net.codinux.i18n", className)
             .addType(
                 TypeSpec.objectBuilder(className)
+                    .addFunctions(companionObjectMethods)
                     .addProperties(companionObjectProperties)
                     .build()
             ).build()
