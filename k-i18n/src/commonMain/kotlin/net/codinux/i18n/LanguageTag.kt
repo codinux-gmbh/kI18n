@@ -156,7 +156,20 @@ class LanguageTag(
         fun parse(languageTag: String): LanguageTag =
             parseOrNull(languageTag)
                 ?: throw IllegalArgumentException("Cannot create a LanguageTag from string '$languageTag'. A valid LanguageTag starts with two- or three lower case characters for the language, see [Language] class for available values. Optionally, all separated by hyphens, a two-letter upper case or three-digit region code and a four-letter script code in title case follow.")
+
     }
+
+
+    fun parent(): LanguageTag? =
+        if (this.script != null) {
+            null // currently we cannot determine correct parent if script is set
+        } else if (this.variant != null) {
+            LanguageTag.parse(this.tag.replace("-${this.variant}", ""))
+        } else if (this.region != null) {
+            LanguageTag.ofAvailable(this.language)
+        } else {
+            null // we are already at the parent for this language; theoretically we could go up to world etc.
+        }
 
 
     override fun equals(other: Any?): Boolean {
