@@ -161,13 +161,12 @@ class LanguageTag(
 
 
     fun parent(): LanguageTag? =
-        if (this.script != null) {
-            null // currently we cannot determine correct parent if script is set
-        } else if (this.variant != null) {
+         if (this.variant != null) {
             LanguageTag.parse(this.tag.replace("-${this.variant}", ""))
         } else if (this.region != null) {
-            LanguageTag.ofAvailable(this.language)
+             LanguageTag.parse(this.tag.replace("-${this.region}", ""))
         } else {
+             // currently we cannot determine correct parent if script is set
             null // we are already at the parent for this language; theoretically we could go up to world etc.
         }
 

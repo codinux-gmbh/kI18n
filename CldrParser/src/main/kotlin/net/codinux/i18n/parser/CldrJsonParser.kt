@@ -68,14 +68,14 @@ open class CldrJsonParser(
     fun getLocalesWithLocalizedLanguageNames(): List<String> =
         getLocales(resolvePath("cldr-localenames-full/main"), "languages.json")
 
-    fun parseLanguageNamesForLocale(locale: LanguageTag): LanguageDisplayNamesForLocale =
+    fun parseLanguageNamesForLocale(locale: LanguageTag): List<LanguageDisplayNames> =
         objectMapper.readValue<LanguagesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "languages.json")).let {
             assertLocalSpecificFileStart(it, locale)
 
             val content = it.main.localeSpecificProperties.values.first()
-            LanguageDisplayNamesForLocale(content.localeDisplayNames.languages.mapValues { (languageIsoCode, displayName) ->
+            content.localeDisplayNames.languages.map { (languageIsoCode, displayName) ->
                 LanguageDisplayNames(languageIsoCode, displayName)
-            })
+            }
         }
 
     fun getLocalesWithLocalizedCountryNames(): List<String> =

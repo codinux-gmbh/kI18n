@@ -119,7 +119,7 @@ class CldrJsonParserTest {
     fun parseLanguageNamesForLocale() {
         val result = underTest.parseLanguageNamesForLocale(LanguageTag.ofAvailable("en"))
 
-        assertThat(result.languages).hasSize(685)
+        assertThat(result).hasSize(685)
     }
 
     @Test
@@ -140,7 +140,7 @@ class CldrJsonParserTest {
             val result = underTest.parseLanguageNamesForLocale(locale)
 
 //            assertThat(result.languages).hasSize(685)
-            assertThat(result.languages).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 685 languages - add sanity check
+            assertThat(result).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 685 languages - add sanity check
         }
     }
 

@@ -2,6 +2,7 @@ package net.codinux.i18n
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
+import assertk.assertions.isNotNull
 import assertk.assertions.isNull
 import kotlin.test.Test
 
@@ -85,6 +86,72 @@ class LanguageTagTest {
         assertThat(result.region).isEqualTo("ES")
         assertThat(result.script).isNull()
         assertThat(result.variant).isEqualTo("valencia")
+    }
+
+
+    @Test
+    fun parent_OnlyLanguageIsSet() {
+        val languageTag = LanguageTag.ofAvailable("bal")
+
+        val result = languageTag.parent()
+
+        assertThat(result).isNull() // we cannot determine parent LanguageTag then
+    }
+
+    @Test
+    fun parent_LanguageAndRegionAreSet() {
+        val languageTag = LanguageTag.ofAvailable("yrl-CO")
+
+        val result = languageTag.parent()
+
+        assertThat(result).isNotNull()
+        assertThat(result!!.tag).isEqualTo("yrl")
+        assertThat(result.language).isEqualTo("yrl")
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun parent_LanguageScriptAndRegionAreSet() {
+        val languageTag = LanguageTag.ofAvailable("sr-Cyrl-BA")
+
+        val result = languageTag.parent()
+
+        assertThat(result).isNotNull()
+        assertThat(result!!.tag).isEqualTo("sr-Cyrl")
+        assertThat(result.language).isEqualTo("sr")
+        assertThat(result.region).isNull()
+        assertThat(result.script).isEqualTo("Cyrl")
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun parent_LanguageAndVariantAreSet() {
+        val languageTag = LanguageTag.ofAvailable("be-tarask")
+
+        val result = languageTag.parent()
+
+        assertThat(result).isNotNull()
+        assertThat(result!!.tag).isEqualTo("be")
+        assertThat(result.language).isEqualTo("be")
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun parent_LanguageRegionAndVariantAreSet() {
+        val languageTag = LanguageTag.ofAvailable("ca-ES-valencia")
+
+        val result = languageTag.parent()
+
+        assertThat(result).isNotNull()
+        assertThat(result!!.tag).isEqualTo("ca-ES")
+        assertThat(result.language).isEqualTo("ca")
+        assertThat(result.region).isEqualTo("ES")
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
     }
 
 }

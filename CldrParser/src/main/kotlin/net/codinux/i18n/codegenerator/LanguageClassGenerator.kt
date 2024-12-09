@@ -11,8 +11,8 @@ class LanguageClassGenerator(
     fun generate() {
         val englishLanguageNames = cldrJsonParser.parseLanguageNamesForLocale(LanguageTag.ofAvailable("en"))
 
-        val languageProperties = englishLanguageNames.languages.map { language ->
-            util.createConstant(language.value.displayName, language.key)
+        val languageProperties = englishLanguageNames.map { language ->
+            util.createConstant(language.displayName, language.languageIsoCode)
         }
 
         util.writeClass("Language", languageProperties)
