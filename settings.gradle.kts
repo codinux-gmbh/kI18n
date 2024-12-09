@@ -23,6 +23,8 @@ plugins {
 
 rootProject.name = "kI18nProject"
 
+include("k-i18n-data")
+
 include("k-i18n")
 
 include("CldrParser")

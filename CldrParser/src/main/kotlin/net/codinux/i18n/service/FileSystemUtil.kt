@@ -8,20 +8,18 @@ import kotlin.io.path.exists
 
 object FileSystemUtil {
 
-    fun determineCldrJsonBasePath(): Path {
+    fun determineCldrJsonBasePath() = determineProjectPath("cldr-json")
+
+    fun determineKI18nProjectPath() = determineProjectPath("k-i18n")
+
+    fun determineKI18nDataProjectPath() = determineProjectPath("k-i18n-data")
+
+    private fun determineProjectPath(projectName: String): Path {
         determineRootProjectPath()?.let {
-            return it.resolve("cldr-json")
+            return it.resolve(projectName)
         }
 
-        throw IllegalStateException("Could not find base directory of '<project_root>/cldr-json' submodule, please specify it explicitly")
-    }
-
-    fun determineKI18nProjectPath(): Path {
-        determineRootProjectPath()?.let {
-            return it.resolve("k-i18n")
-        }
-
-        throw IllegalStateException("Could not find base directory of '<project_root>/k-i18n' submodule, please specify it explicitly")
+        throw IllegalStateException("Could not find base directory of '<project_root>/$projectName' submodule, please specify it explicitly")
     }
 
     fun determineRootProjectPath(): Path? {

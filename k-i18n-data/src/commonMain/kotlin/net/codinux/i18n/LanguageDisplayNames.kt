@@ -89829,7 +89829,7 @@ object LanguageDisplayNames {
     "zza" to "isi-Zaza",
   ) }
 
-  fun getDisplayName(languageIsoCode: String, language: LanguageTag): String? = when(language.tag) {
+  fun getDisplayName(languageIsoCode: String, language: String): String? = when(language) {
     "ab" -> ab[languageIsoCode]
     "af" -> af[languageIsoCode]
     "af-NA" -> af_NA[languageIsoCode]

@@ -5,6 +5,7 @@ import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
 import net.codinux.collections.ImmutableMap
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.parser.CldrJsonParser
+import net.codinux.i18n.service.FileSystemUtil
 
 class AvailableLanguageTagsClassGenerator(
     private val cldrJsonParser: CldrJsonParser = CldrJsonParser(),
@@ -32,7 +33,7 @@ class AvailableLanguageTagsClassGenerator(
             .build()
 
 
-        util.writeClass("AvailableLanguageTags", availableLanguageTagsProperty, modifiers = listOf(KModifier.INTERNAL))
+        util.writeClass("AvailableLanguageTags", availableLanguageTagsProperty, modifiers = listOf(KModifier.INTERNAL), projectFolder = FileSystemUtil.determineKI18nProjectPath())
     }
 
 }

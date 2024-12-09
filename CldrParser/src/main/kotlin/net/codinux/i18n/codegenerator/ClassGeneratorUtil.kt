@@ -2,6 +2,7 @@ package net.codinux.i18n.codegenerator
 
 import com.squareup.kotlinpoet.*
 import net.codinux.i18n.service.FileSystemUtil
+import java.nio.file.Path
 import java.text.Normalizer
 
 open class ClassGeneratorUtil {
@@ -18,10 +19,10 @@ open class ClassGeneratorUtil {
             .filter { it.isLetter() } // filter out characters like whitespaces, -, ', (, ), ...
 
 
-    open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList()) =
-        writeClass(className, companionObjectProperties.toList(), companionObjectMethods, modifiers)
+    open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
+        writeClass(className, companionObjectProperties.toList(), companionObjectMethods, modifiers, projectFolder)
 
-    open fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec> = emptyList(), companionObjectMethods: Collection<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList()) {
+    open fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec> = emptyList(), companionObjectMethods: Collection<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
         val file = FileSpec.builder("net.codinux.i18n", className)
             .addType(
                 TypeSpec.objectBuilder(className).apply {
@@ -31,7 +32,7 @@ open class ClassGeneratorUtil {
                 }.build()
             ).build()
 
-        val baseDirectory = FileSystemUtil.determineKI18nProjectPath().resolve("src/commonMain/kotlin/")
+        val baseDirectory = projectFolder.resolve("src/commonMain/kotlin/")
 //        file.writeTo(baseDirectory) // writes "public " before each class, method and property
         file.removePublicModifiersAndWriteTo(baseDirectory)
     }

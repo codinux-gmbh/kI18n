@@ -43371,7 +43371,7 @@ object CurrencyDisplayNames {
     "ZMW" to "i-Zambian Kwacha",
   ) }
 
-  fun getDisplayName(currencyIsoCode: String, language: LanguageTag): String? = when(language.tag) {
+  fun getDisplayName(currencyIsoCode: String, language: String): String? = when(language) {
     "aa" -> aa[currencyIsoCode]
     "aa-DJ" -> aa_DJ[currencyIsoCode]
     "aa-ER" -> aa_ER[currencyIsoCode]

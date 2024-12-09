@@ -68698,7 +68698,7 @@ object RegionDisplayNames {
     "ZZ" to "iSifunda esingaziwa",
   ) }
 
-  fun getDisplayName(regionCode: String, language: LanguageTag): String? = when(language.tag) {
+  fun getDisplayName(regionCode: String, language: String): String? = when(language) {
     "af" -> af[regionCode]
     "af-NA" -> af_NA[regionCode]
     "agq" -> agq[regionCode]
