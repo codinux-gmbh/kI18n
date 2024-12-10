@@ -118,6 +118,27 @@ class LanguageTag(
         fun hasTag(languageTag: String): Boolean = availableLanguageTagsByTag.containsKey(languageTag)
 
 
+        // constants for languages, selection similar to that one from java.util.Locale
+
+        val English: LanguageTag by lazy { ofAvailable("en") }
+
+        val French: LanguageTag by lazy { ofAvailable("fr") }
+
+        val German: LanguageTag by lazy { ofAvailable("de") }
+
+        val Italian: LanguageTag by lazy { ofAvailable("it") }
+
+        val Japanese: LanguageTag by lazy { ofAvailable("ja") }
+
+        val Korean: LanguageTag by lazy { ofAvailable("ko") }
+
+        val Chinese: LanguageTag by lazy { ofAvailable("zh") }
+
+        val Arabic: LanguageTag by lazy { ofAvailable("ar") }
+
+        val Russian: LanguageTag by lazy { ofAvailable("ru") }
+
+
         /**
          * Returns the existing LanguageTag object for this languageTag from [availableLanguageTagsByTag] or null.
          *

@@ -154,4 +154,104 @@ class LanguageTagTest {
         assertThat(result.variant).isNull()
     }
 
+
+    @Test
+    fun english() {
+        val result = LanguageTag.English
+
+        assertThat(result.tag).isEqualTo(Language.English)
+        assertThat(result.language).isEqualTo(Language.English)
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun french() {
+        val result = LanguageTag.French
+
+        assertThat(result.tag).isEqualTo(Language.French)
+        assertThat(result.language).isEqualTo(Language.French)
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun german() {
+        val result = LanguageTag.German
+
+        assertThat(result.tag).isEqualTo(Language.German)
+        assertThat(result.language).isEqualTo(Language.German)
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun italian() {
+        val result = LanguageTag.Italian
+
+        assertThat(result.tag).isEqualTo(Language.Italian)
+        assertThat(result.language).isEqualTo(Language.Italian)
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun japanese() {
+        val result = LanguageTag.Japanese
+
+        assertThat(result.tag).isEqualTo(Language.Japanese)
+        assertThat(result.language).isEqualTo(Language.Japanese)
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun korean() {
+        val result = LanguageTag.Korean
+
+        assertThat(result.tag).isEqualTo(Language.Korean)
+        assertThat(result.language).isEqualTo(Language.Korean)
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun chinese() {
+        val result = LanguageTag.Chinese
+
+        assertThat(result.tag).isEqualTo(Language.Chinese)
+        assertThat(result.language).isEqualTo(Language.Chinese)
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun arabic() {
+        val result = LanguageTag.Arabic
+
+        assertThat(result.tag).isEqualTo(Language.Arabic)
+        assertThat(result.language).isEqualTo(Language.Arabic)
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
+    @Test
+    fun russian() {
+        val result = LanguageTag.Russian
+
+        assertThat(result.tag).isEqualTo(Language.Russian)
+        assertThat(result.language).isEqualTo(Language.Russian)
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+        assertThat(result.variant).isNull()
+    }
+
 }
