@@ -49,13 +49,15 @@ open class CldrJsonParser(
 
 
     /**
-     * There's only one alpha2 ISO code in [parseTerritoryInfo] that [parseAvailableCountries] does not return, "CQ" for
-     * "Island of Sark", see [net.codinux.i18n.model.ExceptionalCountryIsoCodes].
+     * There's only one alpha2 ISO code in [parseTerritoryInfo] that [parseAvailableRegions] does not return, "CQ" for
+     * "Island of Sark", see [net.codinux.i18n.model.ExceptionalRegionIsoCodes].
      */
-    fun parseAvailableCountries(): List<Country> =
-        objectMapper.readValue<CodeMappingsFile>(resolvePath("cldr-core/supplemental/codeMappings.json")).supplemental.codeMappings.map { (isoCode, properties) ->
-            val isAlpha2 = isoCode.length == 2
-            Country(if (isAlpha2) isoCode else null, if (isAlpha2) properties.alpha3 else isoCode, properties.numeric)
+    fun parseAvailableRegions(): List<Region> =
+        objectMapper.readValue<CodeMappingsFile>(resolvePath("cldr-core/supplemental/codeMappings.json")).supplemental.codeMappings.let { codeMappings ->
+            codeMappings.map { (isoCode, properties) ->
+                val isAlpha2 = isoCode.length == 2
+                Region(if (isAlpha2) isoCode else null, if (isAlpha2) properties.alpha3 else isoCode, properties.numeric)
+            }
         }
 
     fun parseTerritoryInfo(): List<TerritoryInfo> =
@@ -80,10 +82,10 @@ open class CldrJsonParser(
             }
         }
 
-    fun getLocalesWithLocalizedCountryNames(): List<String> =
+    fun getLocalesWithLocalizedRegionNames(): List<String> =
         getLocales(resolvePath("cldr-localenames-full/main"), "territories.json")
 
-    fun parseCountryNamesForLocale(locale: LanguageTag): List<TerritoryDisplayNames> =
+    fun parseRegionNamesForLocale(locale: LanguageTag): List<TerritoryDisplayNames> =
         objectMapper.readValue<TerritoriesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "territories.json")).let {
             assertLocalSpecificFileStart(it, locale)
 

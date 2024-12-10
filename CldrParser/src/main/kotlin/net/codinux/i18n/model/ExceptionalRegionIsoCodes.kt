@@ -8,9 +8,9 @@ package net.codinux.i18n.model
  *
  * See [https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Exceptional_reservations](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Exceptional_reservations).
  */
-object ExceptionalCountryIsoCodes {
+object ExceptionalRegionIsoCodes {
 
-    val ExceptionalCountryIsoCodes = mapOf(
+    val ExceptionalRegionIsoCodes = mapOf(
         "AC" to "AscensionIsland",
         "CP" to "Clipperton Island",
         "CQ" to "Island of Sark",

@@ -22,7 +22,7 @@ package net.codinux.i18n.model
  * The UN M.49 contains also codes for geographical and political regions like a continent and therefore
  * allow for hierarchical mapping of regions.
  */
-data class Country(
+data class Region(
     /**
      * alpha-2 two-letter country codes are "most prominently for the Internet's country code top-level
      * domains (with a few exceptions). They are also used as country identifiers extending the postal

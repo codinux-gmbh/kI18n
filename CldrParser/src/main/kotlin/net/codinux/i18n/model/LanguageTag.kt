@@ -44,7 +44,7 @@ data class LanguageTag(
             "zh-Latn"
         )
 
-        val LanguageTagsWithoutLocalizedCountryNames = listOf(
+        val LanguageTagsWithoutLocalizedRegionNames = listOf(
             "aa",
             "aa-DJ",
             "aa-ER",

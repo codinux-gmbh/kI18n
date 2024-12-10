@@ -13,9 +13,9 @@ class RegionDisplayNamesClassGenerator(
 ) {
 
     fun generate() {
-        val locales = cldrJsonParser.getLocalesWithLocalizedCountryNames().map { LanguageTag.ofAvailable(it) }
+        val locales = cldrJsonParser.getLocalesWithLocalizedRegionNames().map { LanguageTag.ofAvailable(it) }
 
-        val displayNamesByLanguageTag = locales.associateWith { cldrJsonParser.parseCountryNamesForLocale(it) }
+        val displayNamesByLanguageTag = locales.associateWith { cldrJsonParser.parseRegionNamesForLocale(it) }
         // don't add display names redundantly, if they have the same display name as in parent locale, don't add them to file but look them up in parent locale
         val uniqueDisplayNamesByLanguageTag = removeRedundantValuesFromSubLocales(displayNamesByLanguageTag)
 
@@ -24,12 +24,12 @@ class RegionDisplayNamesClassGenerator(
 
         // all LanguageTags as lazy property returning a Map with all available display names
         val regionDisplayNamesProperties = uniqueDisplayNamesByLanguageTag
-            .map { (languageTag, countryDisplayNames) ->
+            .map { (languageTag, regionDisplayNames) ->
                 PropertySpec.builder(languageTag.tag.replace('-', '_'), parameterizedType)
                     .delegate(CodeBlock.builder().apply {
                         addStatement("lazy { %M(", immutableMapOfReference)
 
-                        countryDisplayNames.forEach { displayName ->
+                        regionDisplayNames.forEach { displayName ->
                             addStatement("  %S to %S,", displayName.territoryCode, displayName.displayName)
                         }
 

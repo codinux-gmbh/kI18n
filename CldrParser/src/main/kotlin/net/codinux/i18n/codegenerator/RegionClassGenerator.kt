@@ -9,7 +9,7 @@ class RegionClassGenerator(
 ) {
 
     fun generate() {
-        val englishRegionNames = cldrJsonParser.parseCountryNamesForLocale(LanguageTag.English)
+        val englishRegionNames = cldrJsonParser.parseRegionNamesForLocale(LanguageTag.English)
 
         val regionProperties = englishRegionNames
             .map { region ->

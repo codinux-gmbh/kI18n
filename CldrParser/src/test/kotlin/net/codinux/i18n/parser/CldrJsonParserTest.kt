@@ -93,8 +93,8 @@ class CldrJsonParserTest {
 
 
     @Test
-    fun parseAvailableCountries() {
-        val result = underTest.parseAvailableCountries()
+    fun parseAvailableRegions() {
+        val result = underTest.parseAvailableRegions()
 
         assertThat(result).hasSize(492)
 
@@ -145,31 +145,31 @@ class CldrJsonParserTest {
     }
 
     @Test
-    fun parseCountryNamesForLocale() {
-        val result = underTest.parseCountryNamesForLocale(LanguageTag.English)
+    fun parseRegionNamesForLocale() {
+        val result = underTest.parseRegionNamesForLocale(LanguageTag.English)
 
         assertThat(result).hasSize(295)
     }
 
     @Test
-    fun getLocalesWithLocalizedCountryNames() {
-        val result = underTest.getLocalesWithLocalizedCountryNames()
+    fun getLocalesWithLocalizedRegionNames() {
+        val result = underTest.getLocalesWithLocalizedRegionNames()
 
         val availableLocales = underTest.parseAvailableLocales().map { it.tag }
-        val availableLocalesWithLocalizedCountryNames = availableLocales.filter { it !in net.codinux.i18n.model.LanguageTag.LanguageTagsWithoutLocalizedCountryNames }
-        assertThat(result).hasSize(availableLocalesWithLocalizedCountryNames.size)
-        assertThat(result).containsExactlyInAnyOrder(*availableLocalesWithLocalizedCountryNames.toTypedArray())
+        val availableLocalesWithLocalizedRegionNames = availableLocales.filter { it !in net.codinux.i18n.model.LanguageTag.LanguageTagsWithoutLocalizedRegionNames }
+        assertThat(result).hasSize(availableLocalesWithLocalizedRegionNames.size)
+        assertThat(result).containsExactlyInAnyOrder(*availableLocalesWithLocalizedRegionNames.toTypedArray())
     }
 
     @Test
-    fun parseAllCountryNamesForLocale() {
-        val locales = underTest.getLocalesWithLocalizedCountryNames().map { LanguageTag.ofAvailable(it) }
+    fun parseAllRegionNamesForLocale() {
+        val locales = underTest.getLocalesWithLocalizedRegionNames().map { LanguageTag.ofAvailable(it) }
 
         for (locale in locales) {
-            val result = underTest.parseCountryNamesForLocale(locale)
+            val result = underTest.parseRegionNamesForLocale(locale)
 
 //            assertThat(territories.territories).hasSize(315)
-            assertThat(result).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 315 countries - add sanity check
+            assertThat(result).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 315 regions - add sanity check
         }
     }
 
