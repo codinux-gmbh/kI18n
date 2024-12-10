@@ -1,7 +1,3 @@
-plugins {
-    kotlin("jvm")
-}
-
 
 allprojects {
     group = "net.codinux.i18n"
