@@ -32,6 +32,8 @@ class RegionEnumGenerator(
             .addParameter("alpha3Code", String::class, true, Alpha3CodeKdoc)
             .addParameter("numericCode", Int::class, true, NumericCodeKdoc)
             .addParameter("numericCodeAsString", String::class, true, "The value of [numericCode] as String, padded with zero to three digits.")
+            .addParameter("englishName", String::class, false, "English name of the country or region.")
+            .addParameter("variantName", String::class, true, "Optional a variant of the English name of the country or region (if available).")
             .build()
 
 
@@ -54,6 +56,8 @@ class RegionEnumGenerator(
             .addNullableSuperclassConstructorParameter(alpha3Code)
             .addNullableSuperclassConstructorParameter(numeric)
             .addNullableSuperclassConstructorParameter(numeric?.toString()?.padStart(3, '0'))
+            .addNullableSuperclassConstructorParameter(regionName.displayName)
+            .addNullableSuperclassConstructorParameter(regionName.shortDisplayName ?: regionName.displayNameVariant)
             .build()
     }
 
