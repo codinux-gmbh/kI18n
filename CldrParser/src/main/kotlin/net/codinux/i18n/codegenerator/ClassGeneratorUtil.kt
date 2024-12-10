@@ -32,14 +32,44 @@ open class ClassGeneratorUtil {
         writeToFile(className, type, projectFolder)
     }
 
-    open fun writeToFile(fileName: String, type: TypeSpec, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
+
+    open fun writeEnumClass(enumName: String, enumConstants: List<String>, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
+        writeEnumClass(enumName, enumConstants.map { Pair(it, TypeSpec.Companion.anonymousClassBuilder().build()) }, null, projectFolder)
+
+    open fun writeEnumClass(enumName: String, enumConstants: List<Pair<String, TypeSpec>>, constructor: FunSpec? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
+        val type = TypeSpec.enumBuilder(enumName).apply {
+            if (constructor != null) {
+                primaryConstructor(constructor)
+            }
+
+            enumConstants.forEach { constant ->
+                addEnumConstant(getKotlinFriendlyVariableName(constant.first), constant.second)
+            }
+        }.build()
+
+        writeToFile(enumName, type, projectFolder) { code ->
+            var result = code
+
+            if (constructor != null) {
+                constructor.parameters.forEach { parameter ->
+                    // don't know why but Kotlin Poet leaves away the 'val' specifier of Enum class constructor parameter, so add it manually
+                    result = result.replace("${parameter.name}: ", "val ${parameter.name}: ")
+                }
+            }
+
+            result
+        }
+    }
+
+
+    open fun writeToFile(fileName: String, type: TypeSpec, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath(), adjustGeneratedCode: ((String) -> String)? = null) {
         val file = FileSpec.builder("net.codinux.i18n", fileName)
             .addType(type)
             .build()
 
         val baseDirectory = projectFolder.resolve("src/commonMain/kotlin/")
 //        file.writeTo(baseDirectory) // writes "public " before each class, method and property
-        file.removePublicModifiersAndWriteTo(baseDirectory)
+        file.removePublicModifiersAndWriteTo(baseDirectory, adjustGeneratedCode)
     }
 
 }

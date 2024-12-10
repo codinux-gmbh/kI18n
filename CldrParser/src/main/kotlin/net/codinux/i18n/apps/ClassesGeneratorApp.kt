@@ -9,7 +9,7 @@ fun main() {
 class ClassesGeneratorApp {
 
     fun generate() {
-        LanguageClassGenerator().generate()
+        LanguageEnumGenerator().generate()
 
         RegionClassGenerator().generate()
 

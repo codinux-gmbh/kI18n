@@ -7,9 +7,8 @@ import java.nio.file.Path
 import kotlin.io.path.createDirectories
 import kotlin.io.path.writeText
 
-
 // partially copied from FileSpec.writeTo(Path)
-internal fun FileSpec.removePublicModifiersAndWriteTo(baseDirectory: Path): Path {
+internal fun FileSpec.removePublicModifiersAndWriteTo(baseDirectory: Path, adjustGeneratedCode: ((String) -> String)? = null): Path {
     val stringBuilder = StringBuilder()
     this.writeTo(stringBuilder)
 
@@ -17,7 +16,12 @@ internal fun FileSpec.removePublicModifiersAndWriteTo(baseDirectory: Path): Path
     outputPath.parent.createDirectories()
 
     val fileContentWithoutPublicModifier = stringBuilder.replace(Regex("public "), "")
-    outputPath.writeText(fileContentWithoutPublicModifier)
+
+    if (adjustGeneratedCode != null) {
+        outputPath.writeText(adjustGeneratedCode(fileContentWithoutPublicModifier))
+    } else {
+        outputPath.writeText(fileContentWithoutPublicModifier)
+    }
 
     return outputPath
 }

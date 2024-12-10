@@ -76,7 +76,7 @@ class LanguageTag(
     val tag: String,
 
     /**
-     * alpha-2 two-letter or alpha-3 three-letter ISO 639 language code. See [Language] for available language codes.
+     * Lowercase alpha-2 two-letter or alpha-3 three-letter ISO 639 language code. See [Language] for available language codes.
      */
     val language: String,
 
