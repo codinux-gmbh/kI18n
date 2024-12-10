@@ -84,7 +84,7 @@ class LanguageTag(
      * Optional region subtag based on a two-letter country code from ISO 3166-1 alpha-2 (usually
      * written in upper case), or a three-digit code from UN M.49 for geographical regions.
      *
-     * See [Country] and [Region] for available region codes.
+     * See [Region] for available region codes.
      */
     val region: String? = null,
 

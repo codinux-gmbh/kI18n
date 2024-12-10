@@ -11,8 +11,6 @@ class ClassesGeneratorApp {
     fun generate() {
         LanguageClassGenerator().generate()
 
-        CountryClassGenerator().generate()
-
         RegionClassGenerator().generate()
 
         AvailableLanguageTagsClassGenerator().generate()

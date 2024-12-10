@@ -9,15 +9,14 @@ class RegionClassGenerator(
 ) {
 
     fun generate() {
-        val englishCountryNames = cldrJsonParser.parseCountryNamesForLocale(LanguageTag.English)
+        val englishRegionNames = cldrJsonParser.parseCountryNamesForLocale(LanguageTag.English)
 
-        val countryProperties = englishCountryNames
-            .filter { it.territoryCode.all { it.isDigit() } } // find territories like 'World', 'Europe', ... which can be identified by that they have numeric codes
-            .map { country ->
-                util.createConstant(country.displayName, country.territoryCode)
+        val regionProperties = englishRegionNames
+            .map { region ->
+                util.createConstant(region.displayName, region.territoryCode)
             }
 
-        util.writeClass("Region", countryProperties)
+        util.writeClass("Region", regionProperties)
     }
 
 }
