@@ -9,4 +9,10 @@ https://www.unicode.org/iso15924/iso15924-text.html
 
 
 IANA-language-subtag-registry.txt has been downloaded from:
+
 https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
+
+
+bcp47.txt has been downloaded from:
+
+https://www.rfc-editor.org/rfc/bcp/bcp47.txt
