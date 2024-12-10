@@ -16,3 +16,7 @@ https://www.iana.org/assignments/language-subtag-registry/language-subtag-regist
 bcp47.txt has been downloaded from:
 
 https://www.rfc-editor.org/rfc/bcp/bcp47.txt
+
+
+CLDR variant validity.xml has been downloaded from:
+https://github.com/unicode-org/cldr/blob/33a95a266905f494cc7a912749024f2dbb989de8/common/validity/variant.xml
