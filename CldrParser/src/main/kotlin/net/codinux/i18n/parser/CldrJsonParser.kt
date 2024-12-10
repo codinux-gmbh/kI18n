@@ -47,6 +47,9 @@ open class CldrJsonParser(
             it.availableLocales.full + it.availableLocales.modern
         }
 
+    fun parseCoverageLevels(): CoverageLevels =
+        objectMapper.readValue<CoverageLevels>(resolvePath("cldr-core/coverageLevels.json"))
+
     fun parseAvailableCurrencies(): List<AvailableCurrency> =
         objectMapper.readValue<AvailableCurrenciesSerialModel>(resolvePath("cldr-bcp47/bcp47/currency.json")).let {
             it.keyword.u.cu.currencyInfos.map { (name, properties) ->
