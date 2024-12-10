@@ -71,8 +71,8 @@ class LanguageTagService {
     fun tryFindParent(languageTag: LanguageTag): LanguageTag? =
         if (languageTag.variant != null) {
             LanguageTag.parse(languageTag.tag.replace("-${languageTag.variant}", ""))
-        } else if (languageTag.region != null) {
-            LanguageTag.parse(languageTag.tag.replace("-${languageTag.region}", ""))
+        } else if (languageTag.regionCode != null) {
+            LanguageTag.parse(languageTag.tag.replace("-${languageTag.regionCode}", ""))
         } else {
             // currently we cannot determine correct parent if script is set
             null // we are already at the parent for this language; theoretically we could go up to world etc.
@@ -85,5 +85,13 @@ class LanguageTagService {
     fun findLanguage(language: String): Language =
         findLanguageOrNull(language)
             ?: throw IllegalArgumentException("Language with ISO code '$language' not found in Language enum. Parameter language must be a two- or three-letter ISO 639 language code. See Language enum for possible values.")
+
+
+    fun findRegionOrNull(regionCode: String): Region? =
+        Region.entries.firstOrNull {
+            regionCode.equals(it.alpha2Code, true) || regionCode.equals(it.alpha3Code, true) ||
+                    // numericCodeAsString is padded with zero, may regionCode is passed without leading zeros -> compare also against numericCode.toString()
+                    regionCode.equals(it.numericCodeAsString, true) || regionCode.equals(it.numericCode?.toString(), true)
+        }
 
 }

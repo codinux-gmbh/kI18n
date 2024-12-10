@@ -86,7 +86,7 @@ class LanguageTag(
      *
      * See [Region] for available region codes.
      */
-    val region: String? = null,
+    val regionCode: String? = null,
 
     /**
      * Optional script subtag, based on a four-letter script code from ISO 15924 (usually written in Title Case).
@@ -100,6 +100,8 @@ class LanguageTag(
     val variant: String? = null,
 
     language: Language? = null,
+
+    region: Region? = null,
 ) {
 
     companion object {
@@ -172,7 +174,12 @@ class LanguageTag(
      * The [languageCode] mapped to [Language], if possible (should almost always be possible
      * except for rare cases like root locale.
      */
-    val language: Language? by lazy { language ?: service.findLanguage(languageCode) }
+    val language: Language? by lazy { language ?: service.findLanguageOrNull(languageCode) }
+
+    /**
+     * The [regionCode] mapped to [Region], if possible.
+     */
+    val region: Region? by lazy { region ?: regionCode?.let { service.findRegionOrNull(it) } }
 
 
     override fun equals(other: Any?): Boolean {

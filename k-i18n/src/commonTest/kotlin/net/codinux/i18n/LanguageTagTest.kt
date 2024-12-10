@@ -12,7 +12,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo("sw")
         assertThat(result.language).isEqualTo(Language.Swahili)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -23,7 +23,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo("arn")
         assertThat(result.language).isEqualTo(Language.Mapuche)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -35,7 +35,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo("ar-AE")
         assertThat(result.language).isEqualTo(Language.Arabic)
-        assertThat(result.region).isEqualTo("AE")
+        assertThat(result.region).isEqualTo(Region.UnitedArabEmirates)
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -47,7 +47,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo("ff-Adlm")
         assertThat(result.language).isEqualTo(Language.Fula)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isEqualTo("Adlm")
         assertThat(result.variant).isNull()
     }
@@ -58,7 +58,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo("ha-Arab-SD")
         assertThat(result.language).isEqualTo(Language.Hausa)
-        assertThat(result.region).isEqualTo("SD")
+        assertThat(result.region).isEqualTo(Region.Sudan)
         assertThat(result.script).isEqualTo("Arab")
         assertThat(result.variant).isNull()
     }
@@ -70,7 +70,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo("be-tarask")
         assertThat(result.language).isEqualTo(Language.Belarusian)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isEqualTo("tarask")
     }
@@ -81,7 +81,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo("ca-ES-valencia")
         assertThat(result.language).isEqualTo(Language.Catalan)
-        assertThat(result.region).isEqualTo("ES")
+        assertThat(result.region).isEqualTo(Region.Spain)
         assertThat(result.script).isNull()
         assertThat(result.variant).isEqualTo("valencia")
     }
@@ -105,7 +105,7 @@ class LanguageTagTest {
         assertThat(result).isNotNull()
         assertThat(result!!.tag).isEqualTo("yrl")
         assertThat(result.language).isEqualTo(Language.Nheengatu)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -119,7 +119,7 @@ class LanguageTagTest {
         assertThat(result).isNotNull()
         assertThat(result!!.tag).isEqualTo("sr-Cyrl")
         assertThat(result.language).isEqualTo(Language.Serbian)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isEqualTo("Cyrl")
         assertThat(result.variant).isNull()
     }
@@ -133,7 +133,7 @@ class LanguageTagTest {
         assertThat(result).isNotNull()
         assertThat(result!!.tag).isEqualTo("be")
         assertThat(result.language).isEqualTo(Language.Belarusian)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -147,7 +147,7 @@ class LanguageTagTest {
         assertThat(result).isNotNull()
         assertThat(result!!.tag).isEqualTo("ca-ES")
         assertThat(result.language).isEqualTo(Language.Catalan)
-        assertThat(result.region).isEqualTo("ES")
+        assertThat(result.region).isEqualTo(Region.Spain)
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -176,7 +176,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo(Language.English.isoCode)
         assertThat(result.language).isEqualTo(Language.English)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -187,7 +187,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo(Language.French.isoCode)
         assertThat(result.language).isEqualTo(Language.French)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -198,7 +198,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo(Language.German.isoCode)
         assertThat(result.language).isEqualTo(Language.German)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -209,7 +209,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo(Language.Italian.isoCode)
         assertThat(result.language).isEqualTo(Language.Italian)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -220,7 +220,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo(Language.Japanese.isoCode)
         assertThat(result.language).isEqualTo(Language.Japanese)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -231,7 +231,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo(Language.Korean.isoCode)
         assertThat(result.language).isEqualTo(Language.Korean)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -242,7 +242,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo(Language.Chinese.isoCode)
         assertThat(result.language).isEqualTo(Language.Chinese)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -253,7 +253,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo(Language.Arabic.isoCode)
         assertThat(result.language).isEqualTo(Language.Arabic)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
@@ -264,7 +264,7 @@ class LanguageTagTest {
 
         assertThat(result.tag).isEqualTo(Language.Russian.isoCode)
         assertThat(result.language).isEqualTo(Language.Russian)
-        assertThat(result.region).isNull()
+        assertThat(result.regionCode).isNull()
         assertThat(result.script).isNull()
         assertThat(result.variant).isNull()
     }
