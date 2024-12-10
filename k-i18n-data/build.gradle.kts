@@ -16,7 +16,7 @@ kotlin {
     }
 
     js {
-        moduleName = "k-i18n"
+        moduleName = "k-i18n-data"
         binaries.executable()
 
         browser {
