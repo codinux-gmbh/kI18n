@@ -18,14 +18,6 @@ class RegionEnumGenerator(
 
         val englishRegionNames = cldrJsonParser.parseRegionNamesForLocale(LanguageTag.English)
 
-        val regionProperties = englishRegionNames
-            .map { region ->
-                util.createConstant(region.displayName, region.territoryCode)
-            }
-
-        util.writeClass("Region", regionProperties)
-
-
         val constructor = FunSpec.constructorBuilder()
             .addParameter("code", String::class, false, "Either alpha-2 tor alpha-3 ISO code or numeric UN M.49 code.")
             .addParameter("alpha2Code", String::class, true, Alpha2CodeKdoc)
