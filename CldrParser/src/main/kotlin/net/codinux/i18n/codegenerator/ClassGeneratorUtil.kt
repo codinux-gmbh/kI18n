@@ -23,14 +23,19 @@ open class ClassGeneratorUtil {
         writeClass(className, companionObjectProperties.toList(), companionObjectMethods, modifiers, projectFolder)
 
     open fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec> = emptyList(), companionObjectMethods: Collection<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
-        val file = FileSpec.builder("net.codinux.i18n", className)
-            .addType(
-                TypeSpec.objectBuilder(className).apply {
-                    addModifiers(*modifiers.toTypedArray())
-                    addFunctions(companionObjectMethods)
-                    addProperties(companionObjectProperties)
-                }.build()
-            ).build()
+        val type = TypeSpec.objectBuilder(className).apply {
+            addModifiers(*modifiers.toTypedArray())
+            addFunctions(companionObjectMethods)
+            addProperties(companionObjectProperties)
+        }.build()
+
+        writeToFile(className, type, projectFolder)
+    }
+
+    open fun writeToFile(fileName: String, type: TypeSpec, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
+        val file = FileSpec.builder("net.codinux.i18n", fileName)
+            .addType(type)
+            .build()
 
         val baseDirectory = projectFolder.resolve("src/commonMain/kotlin/")
 //        file.writeTo(baseDirectory) // writes "public " before each class, method and property
