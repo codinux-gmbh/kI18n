@@ -1,11 +1,10 @@
 package net.codinux.i18n.codegenerator
 
-import com.squareup.kotlinpoet.AnnotationSpec
-import com.squareup.kotlinpoet.ClassName
-import com.squareup.kotlinpoet.FileSpec
+import com.squareup.kotlinpoet.*
 import java.nio.file.Path
 import kotlin.io.path.createDirectories
 import kotlin.io.path.writeText
+import kotlin.reflect.KClass
 
 // partially copied from FileSpec.writeTo(Path)
 internal fun FileSpec.removePublicModifiersAndWriteTo(baseDirectory: Path, adjustGeneratedCode: ((String) -> String)? = null): Path {
@@ -25,6 +24,20 @@ internal fun FileSpec.removePublicModifiersAndWriteTo(baseDirectory: Path, adjus
 
     return outputPath
 }
+
+internal fun FunSpec.Builder.addParameter(parameterName: String, type: KClass<*>, nullable: Boolean = false, kdoc: String? = null) =
+    this.addParameter(
+        ParameterSpec.builder(parameterName, type.asTypeName().copy(nullable = nullable)).apply {
+            if (kdoc != null) {
+                addKdoc(kdoc)
+            }
+        }.build()
+    )
+
+internal fun TypeSpec.Builder.addNullableSuperclassConstructorParameter(value: Any?) =
+    if (value is String) this.addSuperclassConstructorParameter("%S", value)
+    else if (value is Number) this.addSuperclassConstructorParameter("%L", value)
+    else this.addSuperclassConstructorParameter("%L", "null")
 
 // other way: suppress warnings (but i think we can omit that)
 
