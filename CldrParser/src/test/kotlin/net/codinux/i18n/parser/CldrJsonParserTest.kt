@@ -106,6 +106,12 @@ class CldrJsonParserTest {
 
         val numericCodes = result.mapNotNull { it.numeric }
         assertThat(numericCodes.all { it in 1..999 }).isTrue()
+
+        // assert that numeric codes are set for Ascension Island and Tristan da Cunha
+        val ascensionIsland = result.first { it.alpha2Code == "AC" }
+        assertThat(ascensionIsland.numeric).isEqualTo(654)
+        val tristanDaCunha = result.first { it.alpha2Code == "TA" }
+        assertThat(tristanDaCunha.numeric).isEqualTo(654)
     }
 
     @Test

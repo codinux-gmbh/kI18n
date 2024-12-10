@@ -54,9 +54,14 @@ open class CldrJsonParser(
      */
     fun parseAvailableRegions(): List<Region> =
         objectMapper.readValue<CodeMappingsFile>(resolvePath("cldr-core/supplemental/codeMappings.json")).supplemental.codeMappings.let { codeMappings ->
+            val saintHelena = codeMappings["SH"]
+
             codeMappings.map { (isoCode, properties) ->
                 val isAlpha2 = isoCode.length == 2
-                Region(if (isAlpha2) isoCode else null, if (isAlpha2) properties.alpha3 else isoCode, properties.numeric)
+                // Ascension Island (AC) and Tristan da Cunha (TA) have the same region code as Saint Helena (according to Wikipedia: https://en.wikipedia.org/wiki/ISO_3166-1_numeric), but it isn't set in CLDR
+                // other regions without numeric code: Clipperton Island (CP), Diego Garcia (DG), Ceuta & Melilla (EA) and Canary Islands (IC)
+                val numericCode = if (isoCode == "AC" || isoCode == "TA") saintHelena?.numeric else properties.numeric
+                Region(if (isAlpha2) isoCode else null, if (isAlpha2) properties.alpha3 else isoCode, numericCode)
             }
         }
 
