@@ -192,6 +192,22 @@ class CldrJsonParserTest {
 
 
     @Test
+    fun parseAvailableScripts() {
+        val result = underTest.parseAvailableScripts()
+
+        assertThat(result).hasSize(177)
+        assertThat(result).containsAtLeast("Latn", "Arab", "Hans", "Hebr", "Cyrl")
+    }
+
+    @Test
+    fun parseScriptsMetadata() {
+        val result = underTest.parseScriptsMetadata()
+
+        assertThat(result).hasSize(177)
+    }
+
+
+    @Test
     fun parseUnits() {
         val result = underTest.parseUnits()
 

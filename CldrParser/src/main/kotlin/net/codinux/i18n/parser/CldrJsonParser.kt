@@ -138,6 +138,14 @@ open class CldrJsonParser(
             )
         }
 
+
+    fun parseAvailableScripts(): Set<String> =
+        parseScriptsMetadata().keys
+
+    fun parseScriptsMetadata(): Map<String, ScriptMetadata> =
+        objectMapper.readValue<ScriptMetadataFile>(resolvePath("cldr-core/scriptMetadata.json")).scriptMetadata
+
+
     fun getLocalesWithLocalizedUnits(): List<String> =
         getLocales(resolvePath("cldr-units-full/main"), "units.json")
 
