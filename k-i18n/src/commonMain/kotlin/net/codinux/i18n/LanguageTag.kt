@@ -78,7 +78,7 @@ class LanguageTag(
     /**
      * Lowercase alpha-2 two-letter or alpha-3 three-letter ISO 639 language code. See [Language] for available language codes.
      */
-    val language: String,
+    val languageCode: String,
 
     /**
      * Optional region subtag based on a two-letter country code from ISO 3166-1 alpha-2 (usually
@@ -97,7 +97,9 @@ class LanguageTag(
      * Optional variant subtags, separated by hyphens, each composed of five to eight letters, or of
      * four characters starting with a digit.
      */
-    val variant: String? = null
+    val variant: String? = null,
+
+    language: Language? = null,
 ) {
 
     companion object {
@@ -165,6 +167,12 @@ class LanguageTag(
 
 
     val parent: LanguageTag? by lazy { service.tryFindParent(this) }
+
+    /**
+     * The [languageCode] mapped to [Language], if possible (should almost always be possible
+     * except for rare cases like root locale.
+     */
+    val language: Language? by lazy { language ?: service.findLanguage(languageCode) }
 
 
     override fun equals(other: Any?): Boolean {

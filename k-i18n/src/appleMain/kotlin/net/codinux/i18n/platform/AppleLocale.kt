@@ -27,7 +27,7 @@ object AppleLocale {
 
     fun nsLocaleForLocale(locale: LanguageTag): NSLocale? =
         nsLocaleForLanguageTag(locale.tag)
-            ?: nsLocaleForLanguageTag("${locale.language}_${locale.region}")
+            ?: nsLocaleForLanguageTag("${locale.languageCode}_${locale.region}")
 
     fun nsLocaleForLanguageTag(languageTag: String): NSLocale? =
         AvailableNSLocales.firstOrNull { it.localeIdentifier == languageTag }

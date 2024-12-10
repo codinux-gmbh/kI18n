@@ -78,4 +78,12 @@ class LanguageTagService {
             null // we are already at the parent for this language; theoretically we could go up to world etc.
         }
 
+
+    fun findLanguageOrNull(language: String): Language? =
+        Language.entries.firstOrNull { it.isoCode.equals(language, true) }
+
+    fun findLanguage(language: String): Language =
+        findLanguageOrNull(language)
+            ?: throw IllegalArgumentException("Language with ISO code '$language' not found in Language enum. Parameter language must be a two- or three-letter ISO 639 language code. See Language enum for possible values.")
+
 }

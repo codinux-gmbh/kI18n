@@ -14,7 +14,7 @@ class PlatformTest {
 
         assertThat(result.tag).isNotEmpty()
         assertThat(result.tag.length).isGreaterThanOrEqualTo(2)
-        assertThat(result.tag).startsWith(result.language)
+        assertThat(result.tag).startsWith(result.languageCode)
     }
 
     @Test
