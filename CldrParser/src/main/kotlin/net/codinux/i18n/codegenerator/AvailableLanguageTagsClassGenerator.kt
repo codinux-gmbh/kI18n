@@ -13,15 +13,15 @@ class AvailableLanguageTagsClassGenerator(
 ) {
 
     fun generate() {
-        val availableLocales = cldrJsonParser.parseAvailableLocales()
+        val availableLanguageTags = cldrJsonParser.parseAvailableLocalesAsString()
 
         val immutableMapOfReference = MemberName("net.codinux.collections", "immutableMapOf")
 
         val availableLanguageTagsCodeBlock = CodeBlock.builder().apply {
             addStatement("%M(", immutableMapOfReference)
 
-            availableLocales.forEach { locale ->
-                addStatement("  %S to %T.parse(%S),", locale.tag, LanguageTag::class, locale.tag)
+            availableLanguageTags.forEach { languageTag ->
+                addStatement("  %S to %T.parse(%S),", languageTag, LanguageTag::class, languageTag)
             }
 
             add(")")

@@ -13,7 +13,18 @@ class CldrJsonParserTest {
 
 
     @Test
-    fun parseAvailableLocales() {
+    fun parseAvailableLocalesAsString() {
+        val result = underTest.parseAvailableLocalesAsString()
+
+        assertThat(result).hasSize(725)
+
+        val minLength = 2
+        val maxLength = "yue-Hant-CN".length
+        assertThat(result.all { it.length in minLength..maxLength || it == "ca-ES-valencia" }).isTrue()
+    }
+
+    @Test
+    fun parseAvailableLocales() { // a test if all parsed language tags can be mapped to LanguageTag
         val result = underTest.parseAvailableLocales()
 
         assertThat(result).hasSize(725)
@@ -75,7 +86,7 @@ class CldrJsonParserTest {
     fun getLocalesWithLocalizedCurrencies() {
         val result = underTest.getLocalesWithLocalizedCurrencies()
 
-        val availableLocales = underTest.parseAvailableLocales().map { it.tag }
+        val availableLocales = underTest.parseAvailableLocalesAsString()
         assertThat(result).hasSize(availableLocales.size)
         assertThat(result).containsExactlyInAnyOrder(*availableLocales.toTypedArray())
     }
@@ -132,7 +143,7 @@ class CldrJsonParserTest {
     fun getLocalesWithLocalizedLanguageNames() {
         val result = underTest.getLocalesWithLocalizedLanguageNames()
 
-        val availableLocales = underTest.parseAvailableLocales().map { it.tag }
+        val availableLocales = underTest.parseAvailableLocalesAsString()
         val availableLocalesWithLocalizedLanguageNames = availableLocales.filter { it !in net.codinux.i18n.model.LanguageTag.LanguageTagsWithoutLocalizedLanguageNames }
         assertThat(result).hasSize(availableLocalesWithLocalizedLanguageNames.size)
         assertThat(result).containsExactlyInAnyOrder(*availableLocalesWithLocalizedLanguageNames.toTypedArray())
@@ -161,7 +172,7 @@ class CldrJsonParserTest {
     fun getLocalesWithLocalizedRegionNames() {
         val result = underTest.getLocalesWithLocalizedRegionNames()
 
-        val availableLocales = underTest.parseAvailableLocales().map { it.tag }
+        val availableLocales = underTest.parseAvailableLocalesAsString()
         val availableLocalesWithLocalizedRegionNames = availableLocales.filter { it !in net.codinux.i18n.model.LanguageTag.LanguageTagsWithoutLocalizedRegionNames }
         assertThat(result).hasSize(availableLocalesWithLocalizedRegionNames.size)
         assertThat(result).containsExactlyInAnyOrder(*availableLocalesWithLocalizedRegionNames.toTypedArray())
@@ -194,7 +205,7 @@ class CldrJsonParserTest {
     fun getLocalesWithLocalizedUnits() {
         val result = underTest.getLocalesWithLocalizedUnits()
 
-        val availableLocales = underTest.parseAvailableLocales().map { it.tag }
+        val availableLocales = underTest.parseAvailableLocalesAsString()
         assertThat(result).hasSize(availableLocales.size)
         assertThat(result).containsExactlyInAnyOrder(*availableLocales.toTypedArray())
     }

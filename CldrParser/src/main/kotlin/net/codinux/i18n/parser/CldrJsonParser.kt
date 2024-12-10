@@ -40,10 +40,11 @@ open class CldrJsonParser(
 ) {
 
     fun parseAvailableLocales(): List<LanguageTag> =
+        parseAvailableLocalesAsString().map { LanguageTag.parse(it) }
+
+    fun parseAvailableLocalesAsString(): List<String> =
         objectMapper.readValue<AvailableLocalesSerialModel>(resolvePath("cldr-core/availableLocales.json")).let {
-            (it.availableLocales.full + it.availableLocales.modern).map {
-                LanguageTag.parse(it)
-            }
+            it.availableLocales.full + it.availableLocales.modern
         }
 
     fun parseAvailableCurrencies(): List<AvailableCurrency> =
