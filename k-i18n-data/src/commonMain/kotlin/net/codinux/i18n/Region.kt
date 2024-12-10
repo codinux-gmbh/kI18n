@@ -115,7 +115,7 @@ enum class Region(
   CentralAfricanRepublic("CF", "CF", "CAF", 140, "140", "Central African Republic", null),
   Congo("CG", "CG", "COG", 178, "178", "Congo - Brazzaville", "Congo (Republic)"),
   Switzerland("CH", "CH", "CHE", 756, "756", "Switzerland", null),
-  CotedIvoire("CI", "CI", "CIV", 384, "384", "Côte d’Ivoire", "Ivory Coast"),
+  CoteDIvoire("CI", "CI", "CIV", 384, "384", "Côte d’Ivoire", "Ivory Coast"),
   CookIslands("CK", "CK", "COK", 184, "184", "Cook Islands", null),
   Chile("CL", "CL", "CHL", 152, "152", "Chile", null),
   Cameroon("CM", "CM", "CMR", 120, "120", "Cameroon", null),

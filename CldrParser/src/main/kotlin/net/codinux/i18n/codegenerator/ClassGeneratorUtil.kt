@@ -16,7 +16,16 @@ open class ClassGeneratorUtil {
 
     open fun getKotlinFriendlyVariableName(displayName: String): String =
         Normalizer.normalize(displayName, Normalizer.Form.NFD) // Normalizer removes accents
+            .toTitleCase()
             .filter { it.isLetter() && it != 'ʼ' } // filter out characters like whitespaces, -, ', (, ), ...; don't know why 'ʼ' gets treated as letter
+
+    // it's not a real to title case converter but one adjusted for the specific needs of creating Kotlin property names
+    private fun String.toTitleCase(): String =
+        this.split(' ', '-', '_', '.', '(')
+            .joinToString("") { it.replaceFirstChar { char -> char.uppercase() } }
+// actually:
+//    this.split(' ')
+//        .joinToString(" ") { it.lowercase().replaceFirstChar { char -> char.uppercase() } }
 
 
     open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
