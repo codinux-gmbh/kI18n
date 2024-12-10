@@ -38,11 +38,11 @@ class LanguageTagService {
 
 
     // TODO: force constraints on script and variant (4 | 5-8 letters, ...) and ensure case (title case vs. lowercase)
-    fun createTag(language: Language, region: Region?, script: String?, variant: String?): String {
+    fun createTag(language: Language, region: Region?, script: Script?, variant: String?): String {
         val builder = StringBuilder(language.isoCode)
 
         if (script != null) {
-            builder.append("-${script}")
+            builder.append("-${script.code}")
         }
         if (region != null) {
             builder.append("-${region.code}")
@@ -104,12 +104,14 @@ class LanguageTagService {
         findLanguageOrNull(language)
             ?: throw IllegalArgumentException("Language with ISO code '$language' not found in Language enum. Parameter language must be a two- or three-letter ISO 639 language code. See Language enum for possible values.")
 
-
     fun findRegionOrNull(regionCode: String): Region? =
         Region.entries.firstOrNull {
             regionCode.equals(it.alpha2Code, true) || regionCode.equals(it.alpha3Code, true) ||
                     // numericCodeAsString is padded with zero, may regionCode is passed without leading zeros -> compare also against numericCode.toString()
                     regionCode.equals(it.numericCodeAsString, true) || regionCode.equals(it.numericCode?.toString(), true)
         }
+
+    fun findScriptOrNull(scriptCode: String): Script? =
+        Script.entries.firstOrNull { scriptCode.equals(it.code, true) }
 
 }

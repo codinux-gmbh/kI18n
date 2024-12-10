@@ -91,7 +91,7 @@ class LanguageTag(
     /**
      * Optional script subtag, based on a four-letter script code from ISO 15924 (usually written in Title Case).
      */
-    val script: String? = null,
+    val scriptCode: String? = null,
 
     /**
      * Optional variant subtags, separated by hyphens, each composed of five to eight letters, or of
@@ -102,6 +102,8 @@ class LanguageTag(
     language: Language? = null,
 
     region: Region? = null,
+
+    script: Script? = null,
 ) {
 
     companion object {
@@ -143,8 +145,8 @@ class LanguageTag(
         val Russian: LanguageTag by lazy { ofAvailable("ru") }
 
 
-        fun of(language: Language, region: Region? = null, script: String? = null, variant: String? = null): LanguageTag =
-            LanguageTag(service.createTag(language, region, script, variant), language.isoCode, region?.code, script, variant, language, region)
+        fun of(language: Language, region: Region? = null, script: Script? = null, variant: String? = null): LanguageTag =
+            LanguageTag(service.createTag(language, region, script, variant), language.isoCode, region?.code, script?.code, variant, language, region, script)
 
         /**
          * Returns the existing LanguageTag object for this languageTag from [availableLanguageTagsByTag] or null.
@@ -183,6 +185,8 @@ class LanguageTag(
      * The [regionCode] mapped to [Region], if possible.
      */
     val region: Region? by lazy { region ?: regionCode?.let { service.findRegionOrNull(it) } }
+
+    val script: Script? by lazy { script ?: scriptCode?.let { service.findScriptOrNull(it) } }
 
 
     override fun equals(other: Any?): Boolean {
