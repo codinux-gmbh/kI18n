@@ -83,7 +83,7 @@ object PosixLocale {
         }
 
         val languageTag = locale.replace('_', '-').replace('.', '-').replace('@', '-')
-        return LanguageTag(languageTag, languageCode, countryCode, variant = variant)
+        return LanguageTag(languageTag, languageCode, countryCode, variantCode = variant)
     }
 
     internal fun getValueForCategory(category: Int): String? {

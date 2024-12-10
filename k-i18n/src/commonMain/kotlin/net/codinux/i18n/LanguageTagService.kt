@@ -37,8 +37,7 @@ class LanguageTagService {
             ?: throw IllegalArgumentException("Cannot create a LanguageTag from string '$languageTag'. A valid LanguageTag starts with two- or three lower case characters for the language, see [Language] class for available values. Optionally, all separated by hyphens, a two-letter upper case or three-digit region code and a four-letter script code in title case follow.")
 
 
-    // TODO: force constraints on script and variant (4 | 5-8 letters, ...) and ensure case (title case vs. lowercase)
-    fun createTag(language: Language, region: Region?, script: Script?, variant: String?): String {
+    fun createTag(language: Language, region: Region?, script: Script?, variant: Variant?): String {
         val builder = StringBuilder(language.isoCode)
 
         if (script != null) {
@@ -48,7 +47,7 @@ class LanguageTagService {
             builder.append("-${region.code}")
         }
         if (variant != null) {
-            builder.append("-${variant}")
+            builder.append("-${variant.code}")
         }
 
         return builder.toString()
@@ -87,8 +86,8 @@ class LanguageTagService {
      * (https://www.unicode.org/reports/tr35/tr35-73/tr35.html#Locale)
      */
     fun tryFindParent(languageTag: LanguageTag): LanguageTag? =
-        if (languageTag.variant != null) {
-            LanguageTag.parse(languageTag.tag.replace("-${languageTag.variant}", ""))
+        if (languageTag.variantCode != null) {
+            LanguageTag.parse(languageTag.tag.replace("-${languageTag.variantCode}", ""))
         } else if (languageTag.regionCode != null) {
             LanguageTag.parse(languageTag.tag.replace("-${languageTag.regionCode}", ""))
         } else {
@@ -113,5 +112,8 @@ class LanguageTagService {
 
     fun findScriptOrNull(scriptCode: String): Script? =
         Script.entries.firstOrNull { scriptCode.equals(it.code, true) }
+
+    fun findVariantOrNull(variantCode: String): Variant? =
+        Variant.entries.firstOrNull { variantCode.equals(it.code, true) }
 
 }

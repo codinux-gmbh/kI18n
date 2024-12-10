@@ -1,6 +1,5 @@
 package net.codinux.i18n
 
-import net.codinux.collections.ImmutableList
 import net.codinux.collections.toImmutableList
 import net.codinux.i18n.platform.Platform
 
@@ -107,13 +106,15 @@ class LanguageTag(
      * Optional variant subtags, separated by hyphens, each composed of five to eight letters, or of
      * four characters starting with a digit.
      */
-    val variant: String? = null,
+    val variantCode: String? = null,
 
     language: Language? = null,
 
     region: Region? = null,
 
     script: Script? = null,
+
+    variant: Variant? = null,
 ) {
 
     companion object {
@@ -155,8 +156,9 @@ class LanguageTag(
         val Russian: LanguageTag by lazy { ofAvailable("ru") }
 
 
-        fun of(language: Language, region: Region? = null, script: Script? = null, variant: String? = null): LanguageTag =
-            LanguageTag(service.createTag(language, region, script, variant), language.isoCode, region?.code, script?.code, variant, language, region, script)
+        fun of(language: Language, region: Region? = null, script: Script? = null, variant: Variant? = null) = LanguageTag(
+            service.createTag(language, region, script, variant),
+            language.isoCode, region?.code, script?.code, variant?.code, language, region, script, variant)
 
         /**
          * Returns the existing LanguageTag object for this languageTag from [availableLanguageTagsByTag] or null.
@@ -196,7 +198,15 @@ class LanguageTag(
      */
     val region: Region? by lazy { region ?: regionCode?.let { service.findRegionOrNull(it) } }
 
+    /**
+     * The [scriptCode] mapped to [Script], if possible.
+     */
     val script: Script? by lazy { script ?: scriptCode?.let { service.findScriptOrNull(it) } }
+
+    /**
+     * The [variantCode] mapped to [Variant], if possible.
+     */
+    val variant: Variant? by lazy { variant ?: variantCode?.let { service.findVariantOrNull(it) } }
 
 
     override fun equals(other: Any?): Boolean {

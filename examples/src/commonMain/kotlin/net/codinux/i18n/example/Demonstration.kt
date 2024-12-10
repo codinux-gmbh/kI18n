@@ -1,17 +1,17 @@
 package net.codinux.i18n.example
 
-import net.codinux.i18n.Language
-import net.codinux.i18n.LanguageTag
-import net.codinux.i18n.Region
+import net.codinux.i18n.*
 
 class Demonstration {
 
     fun LanguageTagFromConstants() {
         val language = LanguageTag.of(Language.Hindi)
 
-        val languageWithRegion = LanguageTag.of(Language.Arabic, Region.Yemen)
+        val languageAndRegion = LanguageTag.of(Language.Arabic, Region.Yemen)
 
-        val languageWithVariant = LanguageTag.of(Language.Belarusian, variant = "tarask")
+        val languageAndScript = LanguageTag.of(Language.Asu, script = Script.Latin)
+
+        val languageAndVariant = LanguageTag.of(Language.Belarusian, variant = Variant.Tarask)
     }
 
     fun LanguageTagParse() {

@@ -15,9 +15,11 @@ You can either retrieve it using our enum constants:
 ```kotlin
 val language = LanguageTag.of(Language.Hindi)
 
-val languageWithRegion = LanguageTag.of(Language.Arabic, Region.Yemen)
+val languageAndRegion = LanguageTag.of(Language.Arabic, Region.Yemen)
 
-val languageWithVariant = LanguageTag.of(Language.Belarusian, variant = "tarask")
+val languageAndScript = LanguageTag.of(Language.Asu, script = Script.Latin)
+
+val languageAndVariant = LanguageTag.of(Language.Belarusian, variant = Variant.Tarask)
 ```
 
 Alternatively, you can specify the language tag as a string:
