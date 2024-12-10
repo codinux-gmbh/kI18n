@@ -93,7 +93,7 @@ class LanguageTagTest {
     fun parent_OnlyLanguageIsSet() {
         val languageTag = LanguageTag.ofAvailable("bal")
 
-        val result = languageTag.parent()
+        val result = languageTag.parent
 
         assertThat(result).isNull() // we cannot determine parent LanguageTag then
     }
@@ -102,7 +102,7 @@ class LanguageTagTest {
     fun parent_LanguageAndRegionAreSet() {
         val languageTag = LanguageTag.ofAvailable("yrl-CO")
 
-        val result = languageTag.parent()
+        val result = languageTag.parent
 
         assertThat(result).isNotNull()
         assertThat(result!!.tag).isEqualTo("yrl")
@@ -116,7 +116,7 @@ class LanguageTagTest {
     fun parent_LanguageScriptAndRegionAreSet() {
         val languageTag = LanguageTag.ofAvailable("sr-Cyrl-BA")
 
-        val result = languageTag.parent()
+        val result = languageTag.parent
 
         assertThat(result).isNotNull()
         assertThat(result!!.tag).isEqualTo("sr-Cyrl")
@@ -130,7 +130,7 @@ class LanguageTagTest {
     fun parent_LanguageAndVariantAreSet() {
         val languageTag = LanguageTag.ofAvailable("be-tarask")
 
-        val result = languageTag.parent()
+        val result = languageTag.parent
 
         assertThat(result).isNotNull()
         assertThat(result!!.tag).isEqualTo("be")
@@ -144,7 +144,7 @@ class LanguageTagTest {
     fun parent_LanguageRegionAndVariantAreSet() {
         val languageTag = LanguageTag.ofAvailable("ca-ES-valencia")
 
-        val result = languageTag.parent()
+        val result = languageTag.parent
 
         assertThat(result).isNotNull()
         assertThat(result!!.tag).isEqualTo("ca-ES")

@@ -143,7 +143,7 @@ class LanguageTag(
     }
 
 
-    fun parent(): LanguageTag? = service.tryFindParent(this)
+    val parent: LanguageTag? by lazy { service.tryFindParent(this) }
 
 
     override fun equals(other: Any?): Boolean {

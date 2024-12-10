@@ -66,7 +66,7 @@ class LanguageDisplayNamesClassGenerator(
     private fun removeRedundantValuesFromSubLocales(displayNamesByLanguageTag: Map<LanguageTag, List<LanguageDisplayNames>>): Map<LanguageTag, List<LanguageDisplayNames>> {
 
         return displayNamesByLanguageTag.mapValues { (languageTag, displayNames) ->
-            val parent = languageTag.parent()
+            val parent = languageTag.parent
             if (parent != null) {
                 filterRedundantValues(displayNamesByLanguageTag, parent, displayNames)
             } else {

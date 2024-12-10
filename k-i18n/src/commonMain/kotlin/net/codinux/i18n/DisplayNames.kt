@@ -8,7 +8,7 @@ class DisplayNames {
         return if (displayNames.isNullOrEmpty() == false) {
             displayNames
         } else {
-            val parent = language.parent()
+            val parent = language.parent
             if (parent != null) {
                 getAllLanguageDisplayNamesForLanguage(parent)
             } else {
@@ -23,7 +23,7 @@ class DisplayNames {
         return if (displayName != null) {
             displayName
         } else {
-            val parent = language.parent()
+            val parent = language.parent
             if (parent != null) {
                 getLanguageDisplayName(languageIsoCode, parent)
             } else {
@@ -39,7 +39,7 @@ class DisplayNames {
         return if (displayNames.isNullOrEmpty() == false) {
             displayNames
         } else {
-            val parent = language.parent()
+            val parent = language.parent
             if (parent != null) {
                 getAllRegionDisplayNamesForLanguage(parent)
             } else {
@@ -54,7 +54,7 @@ class DisplayNames {
         return if (displayName != null) {
             displayName
         } else {
-            val parent = language.parent()
+            val parent = language.parent
             if (parent != null) {
                 getRegionDisplayName(regionCode, parent)
             } else {
@@ -70,7 +70,7 @@ class DisplayNames {
         return if (displayNames.isNullOrEmpty() == false) {
             displayNames
         } else {
-            val parent = language.parent()
+            val parent = language.parent
             if (parent != null) {
                 getAllCurrencyDisplayNamesForLanguage(parent)
             } else {
@@ -85,7 +85,7 @@ class DisplayNames {
         return if (displayName != null) {
             displayName
         } else {
-            val parent = language.parent()
+            val parent = language.parent
             if (parent != null) {
                 getCurrencyDisplayName(currencyIsoCode, parent)
             } else {

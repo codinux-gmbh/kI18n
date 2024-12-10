@@ -69,7 +69,7 @@ class CurrencyDisplayNamesClassGenerator(
     private fun removeRedundantValuesFromSubLocales(displayNamesByLanguageTag: Map<LanguageTag, List<Currency>>): Map<LanguageTag, List<Currency>> {
 
         return displayNamesByLanguageTag.mapValues { (languageTag, displayNames) ->
-            val parent = languageTag.parent()
+            val parent = languageTag.parent
             if (parent != null) {
                 filterRedundantValues(displayNamesByLanguageTag, parent, displayNames)
             } else {
