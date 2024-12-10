@@ -156,6 +156,14 @@ class LanguageTagTest {
 
 
     @Test
+    fun currentLanguageTag() {
+        val result = LanguageTag.current // simple smoke test if LanguageTag.current doesn't throw an exception
+
+        assertThat(result).isNotNull()
+    }
+
+
+    @Test
     fun english() {
         val result = LanguageTag.English
 
