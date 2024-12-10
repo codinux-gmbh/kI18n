@@ -37,6 +37,24 @@ class LanguageTagService {
             ?: throw IllegalArgumentException("Cannot create a LanguageTag from string '$languageTag'. A valid LanguageTag starts with two- or three lower case characters for the language, see [Language] class for available values. Optionally, all separated by hyphens, a two-letter upper case or three-digit region code and a four-letter script code in title case follow.")
 
 
+    // TODO: force constraints on script and variant (4 | 5-8 letters, ...) and ensure case (title case vs. lowercase)
+    fun createTag(language: Language, region: Region?, script: String?, variant: String?): String {
+        val builder = StringBuilder(language.isoCode)
+
+        if (script != null) {
+            builder.append("-${script}")
+        }
+        if (region != null) {
+            builder.append("-${region.code}")
+        }
+        if (variant != null) {
+            builder.append("-${variant}")
+        }
+
+        return builder.toString()
+    }
+
+
     /**
      *
      * cldr-json/cldr-core/supplemental/parentLocales.json parsen und zu LanguageTag hinzufuegen (oder Lookup dafuer erstellen)?
@@ -93,22 +111,5 @@ class LanguageTagService {
                     // numericCodeAsString is padded with zero, may regionCode is passed without leading zeros -> compare also against numericCode.toString()
                     regionCode.equals(it.numericCodeAsString, true) || regionCode.equals(it.numericCode?.toString(), true)
         }
-
-    // TODO: force constraints on script and variant (4 | 5-8 letters, ...) and ensure case (title case vs. lowercase)
-    fun createTag(language: Language, region: Region?, script: String?, variant: String?): String {
-        val builder = StringBuilder(language.isoCode)
-
-        if (script != null) {
-            builder.append("-${script}")
-        }
-        if (region != null) {
-            builder.append("-${region.code}")
-        }
-        if (variant != null) {
-            builder.append("-${variant}")
-        }
-
-        return builder.toString()
-    }
 
 }
