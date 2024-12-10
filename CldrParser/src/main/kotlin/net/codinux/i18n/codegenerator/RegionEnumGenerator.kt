@@ -48,7 +48,7 @@ class RegionEnumGenerator(
         val alpha3Code = region?.alpha3Code ?: if (code.length == 3 && code.all { it.isLetter() }) code else null
         val numeric = region?.numeric ?: if (code.length == 3 && code.all { it.isDigit() }) code.toInt() else null
 
-        return regionName.displayName to TypeSpec.anonymousClassBuilder()
+        return fixEnumConstantName(regionName) to TypeSpec.anonymousClassBuilder()
             .addSuperclassConstructorParameter("%S", code)
             .addNullableSuperclassConstructorParameter(alpha2Code)
             .addNullableSuperclassConstructorParameter(alpha3Code)
@@ -56,6 +56,23 @@ class RegionEnumGenerator(
             .addNullableSuperclassConstructorParameter(numeric?.toString()?.padStart(3, '0'))
             .build()
     }
+
+    private fun fixEnumConstantName(regionName: TerritoryDisplayNames): String =
+        when (regionName.territoryCode) {
+            "HK", "MO", "PS" -> regionName.shortDisplayName!!
+
+            else -> when (regionName.displayName) {
+                "world" -> "World"
+                "Congo - Kinshasa" -> "Congo_DemocraticRepublic"
+                "Congo - Brazzaville" -> "Congo"
+                // "CotedIvoire" -> "CoteDIvoire"
+                "Isle of Man" -> "IsleOfMan"
+                "Tristan da Cunha" -> "TristanDaCunha"
+                else -> {
+                    regionName.displayName.replace("&", "And").replace("St. ", "Saint")
+                }
+            }
+        }
 
 
     companion object {
