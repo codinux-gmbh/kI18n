@@ -19,6 +19,8 @@ class ClassesGeneratorApp {
 
         RegionDisplayNamesClassGenerator().generate()
 
+        ScriptEnumGenerator().generate()
+
         CurrencyDisplayNamesClassGenerator().generate()
     }
 
