@@ -16,7 +16,7 @@ open class ClassGeneratorUtil {
 
     open fun getKotlinFriendlyVariableName(displayName: String): String =
         Normalizer.normalize(displayName, Normalizer.Form.NFD) // Normalizer removes accents
-            .filter { it.isLetter() } // filter out characters like whitespaces, -, ', (, ), ...
+            .filter { it.isLetter() && it != 'ʼ' } // filter out characters like whitespaces, -, ', (, ), ...; don't know why 'ʼ' gets treated as letter
 
 
     open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =

@@ -459,7 +459,7 @@ object Language {
 
   const val Manx: String = "gv"
 
-  const val Gwichʼin: String = "gwi"
+  const val Gwichin: String = "gwi"
 
   const val Hausa: String = "ha"
 
@@ -663,7 +663,7 @@ object Language {
 
   const val Cornish: String = "kw"
 
-  const val Kwakʼwala: String = "kwk"
+  const val Kwakwala: String = "kwk"
 
   const val Kuvi: String = "kxv"
 
@@ -771,7 +771,7 @@ object Language {
 
   const val MakhuwaMeetto: String = "mgh"
 
-  const val Metaʼ: String = "mgo"
+  const val Meta: String = "mgo"
 
   const val Marshallese: String = "mh"
 
@@ -979,7 +979,7 @@ object Language {
 
   const val Quechua: String = "qu"
 
-  const val Kʼicheʼ: String = "quc"
+  const val Kiche: String = "quc"
 
   const val ChimborazoHighlandQuichua: String = "qug"
 
