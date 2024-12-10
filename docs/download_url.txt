@@ -1,3 +1,8 @@
 ISO 639-2 Language Codes.csv has been downloaded from:
 
 https://www.loc.gov/standards/iso639-2/ascii_8bits.html
+
+
+ISO 15924 Script Codes.csv has been downloaded from:
+
+https://www.unicode.org/iso15924/iso15924-text.html
