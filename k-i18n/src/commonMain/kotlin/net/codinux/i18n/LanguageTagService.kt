@@ -94,4 +94,21 @@ class LanguageTagService {
                     regionCode.equals(it.numericCodeAsString, true) || regionCode.equals(it.numericCode?.toString(), true)
         }
 
+    // TODO: force constraints on script and variant (4 | 5-8 letters, ...) and ensure case (title case vs. lowercase)
+    fun createTag(language: Language, region: Region?, script: String?, variant: String?): String {
+        val builder = StringBuilder(language.isoCode)
+
+        if (script != null) {
+            builder.append("-${script}")
+        }
+        if (region != null) {
+            builder.append("-${region.code}")
+        }
+        if (variant != null) {
+            builder.append("-${variant}")
+        }
+
+        return builder.toString()
+    }
+
 }

@@ -143,6 +143,9 @@ class LanguageTag(
         val Russian: LanguageTag by lazy { ofAvailable("ru") }
 
 
+        fun of(language: Language, region: Region? = null, script: String? = null, variant: String? = null): LanguageTag =
+            LanguageTag(service.createTag(language, region, script, variant), language.isoCode, region?.code, script, variant, language, region)
+
         /**
          * Returns the existing LanguageTag object for this languageTag from [availableLanguageTagsByTag] or null.
          *

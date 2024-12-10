@@ -269,4 +269,14 @@ class LanguageTagTest {
         assertThat(result.variant).isNull()
     }
 
+
+    @Test
+    fun of_Namibia() {
+        val result = LanguageTag.of(Language.Nama, Region.Namibia)
+
+        assertThat(result.tag).isEqualTo("naq-NA")
+        assertThat(result.language).isEqualTo(Language.Nama)
+        assertThat(result.region).isEqualTo(Region.Namibia)
+    }
+
 }
