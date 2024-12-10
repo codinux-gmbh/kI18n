@@ -128,13 +128,13 @@ open class CldrJsonParser(
         }
 
 
-    fun parseUnities(): Unities =
-        objectMapper.readValue<UnitiesFile>(resolvePath("cldr-core/supplemental/units.json")).supplemental.let { unities ->
-            Unities(
-                unities.unitPrefixes.map { UnitPrefix(it.key, it.value.symbol, it.value.power10, it.value.power2) },
-                unities.unitConstants.map { UnitConstant(it.key, it.value.value, it.value.description, it.value.status == "approximate") },
-                unities.unitQuantities.map { UnitQuantity(it.key, it.value.quantity, it.value.status == "simple") },
-                unities.convertUnits.map { ConvertUnit(it.key, it.value.baseUnit, it.value.factor, it.value.systems, it.value.description, it.value.offset, it.value.special) }
+    fun parseUnits(): Units =
+        objectMapper.readValue<UnitsFile>(resolvePath("cldr-core/supplemental/units.json")).supplemental.let { units ->
+            Units(
+                units.unitPrefixes.map { UnitPrefix(it.key, it.value.symbol, it.value.power10, it.value.power2) },
+                units.unitConstants.map { UnitConstant(it.key, it.value.value, it.value.description, it.value.status == "approximate") },
+                units.unitQuantities.map { UnitQuantity(it.key, it.value.quantity, it.value.status == "simple") },
+                units.convertUnits.map { ConvertUnit(it.key, it.value.baseUnit, it.value.factor, it.value.systems, it.value.description, it.value.offset, it.value.special) }
             )
         }
 

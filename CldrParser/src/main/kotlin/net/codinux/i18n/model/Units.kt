@@ -1,6 +1,6 @@
 package net.codinux.i18n.model
 
-data class Unities(
+data class Units(
     val unitPrefixes: List<UnitPrefix>,
     val unitConstants: List<UnitConstant>,
     val unitQuantities: List<UnitQuantity>,

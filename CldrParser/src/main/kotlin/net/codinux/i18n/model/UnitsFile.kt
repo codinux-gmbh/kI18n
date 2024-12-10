@@ -3,11 +3,11 @@ package net.codinux.i18n.model
 import com.fasterxml.jackson.annotation.JsonAnySetter
 import com.fasterxml.jackson.annotation.JsonProperty
 
-class UnitiesFile(
-    val supplemental: UnitiesFileSupplemental
+class UnitsFile(
+    val supplemental: UnitsFileSupplemental
 )
 
-data class UnitiesFileSupplemental(
+data class UnitsFileSupplemental(
     val unitPrefixes: Map<String, UnitPrefixSerialModel>,
     val unitConstants: Map<String, UnitConstantSerialModel>,
     val unitQuantities: Map<String, UnitQuantitySerialModel>,
