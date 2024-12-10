@@ -10,6 +10,27 @@ import net.codinux.i18n.service.FileSystemUtil
 import java.io.File
 import java.nio.file.Path
 
+/**
+ * CLDR types:
+ * - ca: Calendar
+ * - cf: Currency Format style
+ * - co: Collation type
+ * - cu: Currency type
+ * - dx: Dictionary break script exclusions
+ * - em: Emoji presentation style
+ * - fw: First day of week
+ * - hc: Hour cycle
+ * - lb: Line break style
+ * - lw: Line break word handling
+ * - ms: Measurement system
+ * - mu: Measurement unit override
+ * - nu: Numbering system
+ * - rg: Region override
+ * - sd: Regional subdivision
+ * - ss: Sentence break suppressions
+ * - tz: Time zone
+ * - va: Common variant type
+ */
 open class CldrJsonParser(
     protected open val cldrJsonBaseDir: Path = FileSystemUtil.determineCldrJsonBasePath(),
     protected open val objectMapper: ObjectMapper = ObjectMapper().apply {
