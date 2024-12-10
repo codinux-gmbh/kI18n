@@ -7,7 +7,7 @@ data class TerritoryDisplayNames(
     val territoryCode: String,
     val displayName: String,
     val shortDisplayName: String? = null,
-    val displayNameVariant: String? = null
+    val variantDisplayName: String? = null
 ) {
     override fun toString() = "$territoryCode $displayName"
 }

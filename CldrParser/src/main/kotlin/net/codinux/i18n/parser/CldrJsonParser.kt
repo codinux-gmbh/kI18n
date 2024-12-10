@@ -145,6 +145,21 @@ open class CldrJsonParser(
     fun parseScriptsMetadata(): Map<String, ScriptMetadata> =
         objectMapper.readValue<ScriptMetadataFile>(resolvePath("cldr-core/scriptMetadata.json")).scriptMetadata
 
+    fun getLocalesWithLocalizedScriptDisplayNames(): List<String> =
+        getLocales(resolvePath("cldr-localenames-full/main"), "scripts.json")
+
+    fun parseScriptDisplayNamesForLocale(locale: LanguageTag): List<ScriptDisplayName> =
+        objectMapper.readValue<ScriptLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "scripts.json")).let {
+            assertLocalSpecificFileStart(it, locale)
+
+            val scripts = it.main.localeSpecificProperties.values.first().localeDisplayNames.scripts
+            val alternativeNames = scripts.filter { it.key.contains("-alt-") }
+
+            scripts.filterNot { it.key.contains("-alt-") }.map { (scriptCode, displayName) ->
+                ScriptDisplayName(scriptCode, displayName, alternativeNames[scriptCode + "-alt-short"], alternativeNames[scriptCode + "-alt-variant"], alternativeNames[scriptCode + "-alt-stand-alone"])
+            }
+        }
+
 
     fun getLocalesWithLocalizedUnits(): List<String> =
         getLocales(resolvePath("cldr-units-full/main"), "units.json")

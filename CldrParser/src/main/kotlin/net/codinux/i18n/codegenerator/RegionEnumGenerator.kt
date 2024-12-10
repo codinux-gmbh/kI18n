@@ -57,7 +57,7 @@ class RegionEnumGenerator(
             .addNullableSuperclassConstructorParameter(numeric)
             .addNullableSuperclassConstructorParameter(numeric?.toString()?.padStart(3, '0'))
             .addNullableSuperclassConstructorParameter(regionName.displayName)
-            .addNullableSuperclassConstructorParameter(regionName.shortDisplayName ?: regionName.displayNameVariant)
+            .addNullableSuperclassConstructorParameter(regionName.shortDisplayName ?: regionName.variantDisplayName)
             .build()
     }
 

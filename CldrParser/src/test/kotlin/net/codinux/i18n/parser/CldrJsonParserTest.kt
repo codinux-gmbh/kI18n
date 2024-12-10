@@ -206,6 +206,25 @@ class CldrJsonParserTest {
         assertThat(result).hasSize(177)
     }
 
+    @Test
+    fun parseScriptDisplayNamesForLocale() {
+        val result = underTest.parseScriptDisplayNamesForLocale(LanguageTag.English)
+
+        assertThat(result).hasSize(209)
+    }
+
+    @Test
+    fun parseAllScriptDisplayNamesForLocale() {
+        val locales = underTest.getLocalesWithLocalizedScriptDisplayNames().map { LanguageTag.ofAvailable(it) }
+
+        val allScriptDisplayNames = locales.map { it to underTest.parseScriptDisplayNamesForLocale(it) }
+
+        for (displayNames in allScriptDisplayNames) {
+//            assertThat(displayNames).hasSize(177)
+            assertThat(displayNames.second).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 177 scripts - add sanity check
+        }
+    }
+
 
     @Test
     fun parseUnits() {
