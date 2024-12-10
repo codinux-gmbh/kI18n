@@ -7,7 +7,7 @@ import net.codinux.i18n.model.Region
 import net.codinux.i18n.model.TerritoryDisplayNames
 import net.codinux.i18n.parser.CldrJsonParser
 
-class RegionClassGenerator(
+class RegionEnumGenerator(
     private val cldrJsonParser: CldrJsonParser = CldrJsonParser(),
     private val util: ClassGeneratorUtil = ClassGeneratorUtil()
 ) {
