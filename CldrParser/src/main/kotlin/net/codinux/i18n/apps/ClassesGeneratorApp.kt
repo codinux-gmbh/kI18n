@@ -21,6 +21,8 @@ class ClassesGeneratorApp {
 
         ScriptEnumGenerator().generate()
 
+        VariantEnumGenerator().generate()
+
         CurrencyDisplayNamesClassGenerator().generate()
     }
 

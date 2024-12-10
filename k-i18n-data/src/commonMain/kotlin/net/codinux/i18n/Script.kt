@@ -7,21 +7,21 @@ import kotlin.String
  *
  * @param code Four-letter ISO 15924 code in title case.
  *
- *  The codes 900–999 are special codes, aliases or for private use.
+ * The codes 900–999 are special codes, aliases or for private use.
  *
- *  Special codes:
- *  - Qaaa–Qabx (900–949): 50 Codes reserved for private use (for example, Qaag is used to mark Burmese text encoded for the Zawgyi font)
- *  - Zsye 993: Emoji
- *  - Zinh 994: Code for inherited script
- *  - Zmth 995: Mathematical notation
- *  - Zsym 996: Symbols
- *  - Zxxx 997: Code for unwritten documents
- *  - Zyyy 998: Code for undetermined script
- *  - Zzzz 999: Code for uncoded script
+ * Special codes:
+ * - Qaaa–Qabx (900–949): 50 Codes reserved for private use (for example, Qaag is used to mark Burmese text encoded for the Zawgyi font)
+ * - Zsye 993: Emoji
+ * - Zinh 994: Code for inherited script
+ * - Zmth 995: Mathematical notation
+ * - Zsym 996: Symbols
+ * - Zxxx 997: Code for unwritten documents
+ * - Zyyy 998: Code for undetermined script
+ * - Zzzz 999: Code for uncoded script
  *
- *  Two four-letter codes are reserved at the request of the Common Locale Data Repository (CLDR) project:
- *  - Root: Reserved for the language-neutral base of the CLDR locale tree
- *  - True: Reserved for the Boolean value "true")
+ * Two four-letter codes are reserved at the request of the Common Locale Data Repository (CLDR) project:
+ * - Root: Reserved for the language-neutral base of the CLDR locale tree
+ * - True: Reserved for the Boolean value "true")
  * @param englishName English name of the script.
  * @param variantName Optional a variant of the English name of the script (if available).
  * @param originCountry The origin region of the script, if available.

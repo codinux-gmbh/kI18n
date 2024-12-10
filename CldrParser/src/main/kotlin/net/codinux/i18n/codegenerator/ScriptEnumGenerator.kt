@@ -49,7 +49,7 @@ class ScriptEnumGenerator(
     companion object {
 
         private val IsoCodeKdoc = """
-            Four-letter ISO 15924 code in title case.
+             Four-letter ISO 15924 code in title case.
             
              The codes 900–999 are special codes, aliases or for private use.
             

@@ -17,7 +17,11 @@ open class ClassGeneratorUtil {
     open fun getKotlinFriendlyVariableName(displayName: String): String =
         Normalizer.normalize(displayName, Normalizer.Form.NFD) // Normalizer removes accents
             .toTitleCase()
-            .filter { it.isLetter() && it != 'ʼ' } // filter out characters like whitespaces, -, ', (, ), ...; don't know why 'ʼ' gets treated as letter
+            .filter { it.isLetterOrDigit() && it != 'ʼ' } // filter out characters like whitespaces, -, ', (, ), ...; don't know why 'ʼ' gets treated as letter
+            .let {
+                if (it[0].isDigit()) "_$it" // variable names may not start with a digit
+                else it
+            }
 
     // it's not a real to title case converter but one adjusted for the specific needs of creating Kotlin property names
     private fun String.toTitleCase(): String =
