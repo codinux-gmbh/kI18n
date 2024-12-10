@@ -1,6 +1,7 @@
 package net.codinux.i18n.codegenerator
 
 import com.squareup.kotlinpoet.*
+import net.codinux.i18n.Region
 import java.nio.file.Path
 import kotlin.io.path.createDirectories
 import kotlin.io.path.writeText
@@ -37,6 +38,7 @@ internal fun FunSpec.Builder.addParameter(parameterName: String, type: KClass<*>
 internal fun TypeSpec.Builder.addNullableSuperclassConstructorParameter(value: Any?) =
     if (value is String) this.addSuperclassConstructorParameter("%S", value)
     else if (value is Number) this.addSuperclassConstructorParameter("%L", value)
+    else if (value is Region) this.addSuperclassConstructorParameter("Region.%L", value)
     else this.addSuperclassConstructorParameter("%L", "null")
 
 // other way: suppress warnings (but i think we can omit that)

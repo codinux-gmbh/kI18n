@@ -3,7 +3,9 @@ package net.codinux.i18n.codegenerator
 import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.TypeSpec
 import net.codinux.i18n.LanguageTag
+import net.codinux.i18n.Region
 import net.codinux.i18n.model.ScriptDisplayName
+import net.codinux.i18n.model.ScriptMetadata
 import net.codinux.i18n.parser.CldrJsonParser
 
 class ScriptEnumGenerator(
@@ -14,27 +16,32 @@ class ScriptEnumGenerator(
     fun generate() {
         val englishScriptNames = cldrJsonParser.parseScriptDisplayNamesForLocale(LanguageTag.English)
 
+        val scriptMetadata = cldrJsonParser.parseScriptsMetadata()
+
         val constructor = FunSpec.constructorBuilder()
             .addParameter("code", String::class, false, IsoCodeKdoc)
             .addParameter("englishName", String::class, false, "English name of the script.")
             .addParameter("variantName", String::class, true, "Optional a variant of the English name of the script (if available).")
+            .addParameter("originCountry", Region::class, true, "The origin region of the script, if available.")
             .build()
 
 
         val enumConstants = englishScriptNames.map { scriptName ->
-            createEnumConstant(scriptName)
+            createEnumConstant(scriptName, scriptMetadata[scriptName.code])
         }
 
-        util.writeEnumClass("Script", enumConstants, constructor)
+        util.writeEnumClass("Script", enumConstants, constructor, "Defines all Scripts (writing systems) known to CLDR.")
     }
 
-    private fun createEnumConstant(scriptName: ScriptDisplayName): Pair<String, TypeSpec> {
+    private fun createEnumConstant(scriptName: ScriptDisplayName, scriptMetadata: ScriptMetadata?): Pair<String, TypeSpec> {
         val code = scriptName.code
 
         return scriptName.displayName to TypeSpec.anonymousClassBuilder()
             .addSuperclassConstructorParameter("%S", code)
             .addNullableSuperclassConstructorParameter(scriptName.displayName)
             .addNullableSuperclassConstructorParameter(scriptName.shortDisplayName ?: scriptName.variantDisplayName)
+            .addNullableSuperclassConstructorParameter(scriptMetadata?.originCountry)
+            // TODO: may also add numeric ISO code from ISO 15924.csv
             .build()
     }
 

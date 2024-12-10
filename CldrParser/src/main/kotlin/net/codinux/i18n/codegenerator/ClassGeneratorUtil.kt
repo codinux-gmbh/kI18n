@@ -33,11 +33,15 @@ open class ClassGeneratorUtil {
     }
 
 
-    open fun writeEnumClass(enumName: String, enumConstants: List<String>, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
-        writeEnumClass(enumName, enumConstants.map { Pair(it, TypeSpec.Companion.anonymousClassBuilder().build()) }, null, projectFolder)
+    open fun writeEnumClass(enumName: String, enumConstants: List<String>, kdoc: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
+        writeEnumClass(enumName, enumConstants.map { Pair(it, TypeSpec.Companion.anonymousClassBuilder().build()) }, null, kdoc, projectFolder)
 
-    open fun writeEnumClass(enumName: String, enumConstants: List<Pair<String, TypeSpec>>, constructor: FunSpec? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
+    open fun writeEnumClass(enumName: String, enumConstants: List<Pair<String, TypeSpec>>, constructor: FunSpec? = null, kdoc: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
         val type = TypeSpec.enumBuilder(enumName).apply {
+            if (kdoc != null) {
+                addKdoc(kdoc)
+            }
+
             if (constructor != null) {
                 primaryConstructor(constructor)
             }
