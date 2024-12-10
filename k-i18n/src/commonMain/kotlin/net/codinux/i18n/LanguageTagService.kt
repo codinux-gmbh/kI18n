@@ -37,6 +37,37 @@ class LanguageTagService {
             ?: throw IllegalArgumentException("Cannot create a LanguageTag from string '$languageTag'. A valid LanguageTag starts with two- or three lower case characters for the language, see [Language] class for available values. Optionally, all separated by hyphens, a two-letter upper case or three-digit region code and a four-letter script code in title case follow.")
 
 
+    /**
+     *
+     * cldr-json/cldr-core/supplemental/parentLocales.json parsen und zu LanguageTag hinzufuegen (oder Lookup dafuer erstellen)?
+     * Ebenso cldr-json/cldr-core/supplemental/likelySubtags.json ?
+     *
+     *
+     * Thus there are two cases where the truncation inheritance needs to be overridden:
+     *
+     *     1. When the parent locale would have a different script, and text would be mixed.
+     *     2. In certain exceptional circumstances where the 'truncation' parent needs to be adjusted.
+     *
+     * The parentLocale element is used to override the normal inheritance when accessing CLDR data.
+     *
+     * For case 1, there is a special attribute and value, localeRules="nonlikelyScript", which specifies all locales of the form lang_script, wherever the script is not the likely script for lang. For migration, the previous short list of locales (a subset of the nonlikelyScript locales) is retained, but those locales are slated for removal in the future. For example, ru_Latn is not included in the short list but is included (programmatically) in the rule.
+     *
+     * <parentLocale parent="root" localeRules="nonlikelyScript" locales="az_Arab az_Cyrl bal_Latn … yue_Hans zh_Hant"/>/>
+     *
+     * The localeRules is used for the main component, for example. It is not used to components where text is not mixed, such as the collations component or the plurals component.
+     *
+     * For case 2, the children and parent share the same primary language, but the region is changed. For example:
+     *
+     * <parentLocale parent="es_419" locales="es_AR es_BO … es_UY es_VE"/>
+     *
+     * There are certain invariants that must always be true:
+     *
+     *     3. The parent must either be the root locale or have the same script as the child. This rule applies to component=main.
+     *     4. There must never be cycles, such as: X parent of Y ... parent of X.
+     *     5. Following the inheritance path, using parentLocale where available and otherwise truncating the locale, must always lead eventually to the root locale.
+     *
+     * (https://www.unicode.org/reports/tr35/tr35-73/tr35.html#Locale)
+     */
     fun tryFindParent(languageTag: LanguageTag): LanguageTag? =
         if (languageTag.variant != null) {
             LanguageTag.parse(languageTag.tag.replace("-${languageTag.variant}", ""))
