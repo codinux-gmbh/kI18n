@@ -115,11 +115,11 @@ class LanguageTag(
          */
         val current: LanguageTag by lazy { Platform.getSystemLocale() }
 
-        val availableLanguageTagsAsString: ImmutableList<String> by lazy { availableLanguageTagsByTag.keys.sorted().toImmutableList() }
+        val availableLanguageTagsAsString: List<String> by lazy { availableLanguageTagsByTag.keys.sorted().toImmutableList() }
 
-        val availableLanguageTags: ImmutableList<LanguageTag> by lazy { availableLanguageTagsByTag.values.sortedBy { it.tag }.toImmutableList() }
+        val availableLanguageTags: List<LanguageTag> by lazy { availableLanguageTagsByTag.values.sortedBy { it.tag }.toImmutableList() }
 
-        val availableLanguageTagsByTag by lazy { AvailableLanguageTags.availableLanguageTags }
+        val availableLanguageTagsByTag: Map<String, LanguageTag> by lazy { AvailableLanguageTags.availableLanguageTags }
 
         fun hasTag(languageTag: String): Boolean = availableLanguageTagsByTag.containsKey(languageTag)
 
