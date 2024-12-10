@@ -20,6 +20,7 @@ enum class Language(
   Afrihili("afh"),
   Aghem("agq"),
   Ainu("ain"),
+  SouthernLevantineArabic("ajp"),
   Akan("ak"),
   Akkadian("akk"),
   Alabama("akz"),

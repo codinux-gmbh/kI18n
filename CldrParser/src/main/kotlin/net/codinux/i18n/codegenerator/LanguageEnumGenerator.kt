@@ -36,12 +36,14 @@ class LanguageEnumGenerator(
 
         val englishLanguageNamesCodes = englishLanguageNames.map { it.languageIsoCode }.toSet()
         val notInLanguageNames = allLanguages.toMutableSet().also { it.removeAll(englishLanguageNamesCodes) }
+        notInLanguageNames.add("ajp") // is only contained in Dutch language files but it is there
 
         return notInLanguageNames.map { LanguageDisplayNames(it, getEnglishDisplayNameForLanguageCode(it)) }
     }
 
     private fun getEnglishDisplayNameForLanguageCode(languageCode: String): String = when (languageCode) {
         "apc" -> "Levantine Arabic"
+        "ajp" -> "Southern Levantine Arabic"
         "lld" -> "Ladin"
         "mhn" -> "Mòcheno"
         "skr" -> "Saraiki"
