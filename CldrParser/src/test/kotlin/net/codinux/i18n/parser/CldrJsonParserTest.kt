@@ -227,6 +227,26 @@ class CldrJsonParserTest {
 
 
     @Test
+    fun parseVariantDisplayNamesForLocale() {
+        val result = underTest.parseVariantDisplayNamesForLocale(LanguageTag.English)
+
+        assertThat(result).hasSize(55)
+    }
+
+    @Test
+    fun parseAllVariantDisplayNamesForLocale() {
+        val locales = underTest.getLocalesWithLocalizedVariantDisplayNames().map { LanguageTag.ofAvailable(it) }
+
+        val allVariantDisplayNames = locales.map { it to underTest.parseVariantDisplayNamesForLocale(it) }
+
+        for (displayNames in allVariantDisplayNames) {
+//            assertThat(displayNames).hasSize(55)
+            assertThat(displayNames.second).isNotEmpty() // TODO: there are a lot of locales that don't have translations for all 55 variants - add sanity check
+        }
+    }
+
+
+    @Test
     fun parseUnits() {
         val result = underTest.parseUnits()
 

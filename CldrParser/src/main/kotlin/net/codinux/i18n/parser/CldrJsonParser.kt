@@ -161,6 +161,21 @@ open class CldrJsonParser(
         }
 
 
+    fun getLocalesWithLocalizedVariantDisplayNames(): List<String> =
+        getLocales(resolvePath("cldr-localenames-full/main"), "variants.json")
+
+    fun parseVariantDisplayNamesForLocale(locale: LanguageTag): List<VariantDisplayName> =
+        objectMapper.readValue<VariantLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "variants.json")).let {
+            assertLocalSpecificFileStart(it, locale)
+
+            val variants = it.main.localeSpecificProperties.values.first().localeDisplayNames.variants
+
+            variants.map { (scriptCode, displayName) ->
+                VariantDisplayName(scriptCode, displayName)
+            }
+        }
+
+
     fun getLocalesWithLocalizedUnits(): List<String> =
         getLocales(resolvePath("cldr-units-full/main"), "units.json")
 
