@@ -24,6 +24,8 @@ class ClassesGeneratorApp {
         VariantEnumGenerator().generate()
 
         CurrencyDisplayNamesClassGenerator().generate()
+
+        CurrencyEnumGenerator().generate()
     }
 
 }

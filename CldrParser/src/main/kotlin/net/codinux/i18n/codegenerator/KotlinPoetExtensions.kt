@@ -39,6 +39,7 @@ internal fun TypeSpec.Builder.addNullableSuperclassConstructorParameter(value: A
     if (value is String) this.addSuperclassConstructorParameter("%S", value)
     else if (value is Number) this.addSuperclassConstructorParameter("%L", value)
     else if (value is Region) this.addSuperclassConstructorParameter("Region.%L", value)
+    else if (value is List<*>) this.addSuperclassConstructorParameter("%L", "listOf(${value.joinToString(", ") { "\"$it\"" } })")
     else this.addSuperclassConstructorParameter("%L", "null")
 
 // other way: suppress warnings (but i think we can omit that)

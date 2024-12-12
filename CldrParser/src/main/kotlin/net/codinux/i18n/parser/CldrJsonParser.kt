@@ -53,7 +53,7 @@ open class CldrJsonParser(
     fun parseAvailableCurrencies(): List<AvailableCurrency> =
         objectMapper.readValue<AvailableCurrenciesSerialModel>(resolvePath("cldr-bcp47/bcp47/currency.json")).let {
             it.keyword.u.cu.currencyInfos.map { (name, properties) ->
-                AvailableCurrency(name, properties.description)
+                AvailableCurrency(name.uppercase(), properties.description) // here the ISO alpha3 code is in lowercase -> make uppercase to make conform with standard
             }
         }
 

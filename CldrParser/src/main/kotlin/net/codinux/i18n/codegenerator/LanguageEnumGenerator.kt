@@ -12,7 +12,7 @@ class LanguageEnumGenerator(
 ) {
 
     fun generate() {
-        val englishLanguageNames = cldrJsonParser.parseLanguageNamesForLocale(LanguageTag.parse("en")).toMutableList()
+        val englishLanguageNames = cldrJsonParser.parseLanguageNamesForLocale(LanguageTag.English).toMutableList()
 
         // there are some languages for that no English name has been specified, also add these:
         englishLanguageNames.addAll(getLanguageCodesForWhichNoEnglishNameHasBeenSet(englishLanguageNames))
