@@ -52,12 +52,13 @@ class CurrencyEnumGenerator(
     private fun createEnumConstant(alpha3Code: String, currencyEntries: List<Iso4217CurrencyEntry>, englishNames: Map<String, Currency>): Pair<String, TypeSpec> {
         val currency = currencyEntries.first()
         val englishName = englishNames[alpha3Code]
+        val symbolVariant = englishName?.symbolVariant ?: englishName?.narrowSymbol ?: englishName?.formalSymbol
 
         return (currency.currencyName) to TypeSpec.anonymousClassBuilder()
             .addSuperclassConstructorParameter("%S", alpha3Code)
             .addNullableSuperclassConstructorParameter(currency.currencyNumericCode)
-            .addNullableSuperclassConstructorParameter(englishName?.symbol)
-            .addNullableSuperclassConstructorParameter(englishName?.symbolVariant ?: englishName?.narrowSymbol ?: englishName?.formalSymbol)
+            .addSuperclassConstructorParameter("%L", englishName?.symbol?.let { "\"$it\"" } ?: "null") // %S would write "$" as "${'$'}"
+            .addSuperclassConstructorParameter("%L", symbolVariant?.let { "\"$it\"" } ?: "null") // %S would write "$" as "${'$'}"
             .addSuperclassConstructorParameter("%S", currency.currencyName)
             .addSuperclassConstructorParameter("%L", currency.isCurrentCurrency)
             .addNullableSuperclassConstructorParameter(currency.minorUnit)
