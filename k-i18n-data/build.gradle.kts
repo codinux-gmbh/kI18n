@@ -37,7 +37,9 @@ kotlin {
         }
     }
 
-    wasmJs()
+    wasmJs {
+        browser()
+    }
 
 
     linuxX64()
