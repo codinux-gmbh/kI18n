@@ -26,6 +26,15 @@ class CurrencyEnumGenerator(
         val historicDenominations = currencyFileParser.parse(Path("").absolute().resolve("docs/Currencies/ISO 4217 03 Historic Denominations (Currencies and Funds).xls"), false)
         val currenciesFromIsoLists = (currentCurrencies + historicDenominations).groupBy { it.currencyAlpha3Code } // there may are multiple entries per denomination e.g. for Euro one per country
 
+        // currenciesFromIsoLists contains currencies with the same name like "Mexican Peso", leading to that only the last variant, mostly the withdrawn variant, gets written to Enum class -> fix it
+        val currenciesWithSameNames = currenciesFromIsoLists.values.groupBy { it.first().currencyName }.filter { it.value.size > 1 }
+        currenciesWithSameNames.values.flatten().flatten().forEach { currency ->
+            if (currency.withdrawalDate != null) {
+                val withdrawalDate = if (currency.withdrawalDate.contains(" to ")) currency.withdrawalDate.replace(" to ", "_to_") else "till ${currency.withdrawalDate}"
+                currency.nameToUseForEnum = "${currency.currencyName}_${withdrawalDate.replace('-', '_')}"
+            }
+        }
+
         val englishCurrencyNames = cldrJsonParser.parseCurrenciesForLocale(LanguageTag.English) // for English for all currencies displayName is set
         val englishCurrencyNamesByCode = englishCurrencyNames.associateBy { it.isoCode }
 
@@ -54,7 +63,7 @@ class CurrencyEnumGenerator(
         val englishName = englishNames[alpha3Code]
         val symbolVariant = englishName?.symbolVariant ?: englishName?.narrowSymbol ?: englishName?.formalSymbol
 
-        return (currency.currencyName) to TypeSpec.anonymousClassBuilder()
+        return (currency.nameToUseForEnum) to TypeSpec.anonymousClassBuilder()
             .addSuperclassConstructorParameter("%S", alpha3Code)
             .addNullableSuperclassConstructorParameter(currency.currencyNumericCode)
             .addSuperclassConstructorParameter("%L", englishName?.symbol?.let { "\"$it\"" } ?: "null") // %S would write "$" as "${'$'}"
