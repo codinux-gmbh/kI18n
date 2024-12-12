@@ -8,21 +8,21 @@ import platform.posix.LC_ALL
 @OptIn(ExperimentalForeignApi::class)
 object PosixLocale {
 
-    // see header <locale.h> or <bits/locale.h> respectively (e.g. /user/include/locale.h)
+    // see header <locale.h> or <bits/locale.h> respectively (e.g. /usr/include/locale.h)
 
-    const val LC_MESSAGES = 5
-
+    const val LC_CTYPE = 1
+    const val LC_NUMERIC = 2
+    const val LC_TIME = 3
+    const val LC_COLLATE = 4
+    const val LC_MONETARY = 5
+    const val LC_MESSAGES = 6
     const val LC_PAPER = 7
-
     const val LC_NAME = 8
-
     const val LC_ADDRESS = 9
-
     const val LC_TELEPHONE = 10
-
     const val LC_MEASUREMENT = 11
-
     const val LC_IDENTIFICATION = 12
+    const val LC_ALL = 0
 
 
     fun getSystemLocale(): LanguageTag {
