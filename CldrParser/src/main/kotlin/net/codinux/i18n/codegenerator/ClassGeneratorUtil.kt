@@ -7,7 +7,6 @@ import java.text.Normalizer
 
 open class ClassGeneratorUtil {
 
-
     open fun createConstant(constantName: String, value: String) =
         PropertySpec.builder(getKotlinFriendlyVariableName(constantName), String::class, KModifier.CONST)
             .initializer("%S", value)
@@ -17,7 +16,7 @@ open class ClassGeneratorUtil {
     open fun getKotlinFriendlyVariableName(displayName: String): String =
         Normalizer.normalize(displayName, Normalizer.Form.NFD) // Normalizer removes accents
             .toTitleCase()
-            .filter { it.isLetterOrDigit() && it != 'ʼ' } // filter out characters like whitespaces, -, ', (, ), ...; don't know why 'ʼ' gets treated as letter
+            .filter { (it.isLetterOrDigit() && it != 'ʼ') || it == '_' } // filter out characters like whitespaces, -, ', (, ), ...; don't know why 'ʼ' gets treated as letter
             .let {
                 if (it[0].isDigit()) "_$it" // variable names may not start with a digit
                 else it
@@ -25,7 +24,7 @@ open class ClassGeneratorUtil {
 
     // it's not a real to title case converter but one adjusted for the specific needs of creating Kotlin property names
     private fun String.toTitleCase(): String =
-        this.split(' ', '-', '_', '.', '(')
+        this.split(' ', '-', '.', '(')
             .joinToString("") { it.replaceFirstChar { char -> char.uppercase() } }
 // actually:
 //    this.split(' ')

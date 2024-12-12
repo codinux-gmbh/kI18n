@@ -111,7 +111,7 @@ enum class Region(
   Belize("BZ", "BZ", "BLZ", 84, "084", "Belize", null),
   Canada("CA", "CA", "CAN", 124, "124", "Canada", null),
   CocosKeelingIslands("CC", "CC", "CCK", 166, "166", "Cocos (Keeling) Islands", null),
-  CongoDemocraticRepublic("CD", "CD", "COD", 180, "180", "Congo - Kinshasa", "Congo (DRC)"),
+  Congo_DemocraticRepublic("CD", "CD", "COD", 180, "180", "Congo - Kinshasa", "Congo (DRC)"),
   CentralAfricanRepublic("CF", "CF", "CAF", 140, "140", "Central African Republic", null),
   Congo("CG", "CG", "COG", 178, "178", "Congo - Brazzaville", "Congo (Republic)"),
   Switzerland("CH", "CH", "CHE", 756, "756", "Switzerland", null),

@@ -11,10 +11,6 @@ import net.codinux.i18n.parser.Iso4217CurrencyFileParser
 import kotlin.io.path.Path
 import kotlin.io.path.absolute
 
-fun main() {
-    CurrencyEnumGenerator().generate()
-}
-
 class CurrencyEnumGenerator(
     private val cldrJsonParser: CldrJsonParser = CldrJsonParser(),
     private val currencyFileParser: Iso4217CurrencyFileParser = Iso4217CurrencyFileParser(),
@@ -30,7 +26,7 @@ class CurrencyEnumGenerator(
         val currenciesWithSameNames = currenciesFromIsoLists.values.groupBy { it.first().currencyName }.filter { it.value.size > 1 }
         currenciesWithSameNames.values.flatten().flatten().forEach { currency ->
             if (currency.withdrawalDate != null) {
-                val withdrawalDate = if (currency.withdrawalDate.contains(" to ")) currency.withdrawalDate.replace(" to ", "_to_") else "till ${currency.withdrawalDate}"
+                val withdrawalDate = if (currency.withdrawalDate.contains(" to ")) currency.withdrawalDate.replace(" to ", "_to_") else "Till_${currency.withdrawalDate}"
                 currency.nameToUseForEnum = "${currency.currencyName}_${withdrawalDate.replace('-', '_')}"
             }
         }
