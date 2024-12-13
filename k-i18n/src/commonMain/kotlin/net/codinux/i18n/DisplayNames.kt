@@ -1,7 +1,10 @@
 package net.codinux.i18n
 
+import kotlin.jvm.JvmOverloads
+
 class DisplayNames {
 
+    @JvmOverloads
     fun getAllLanguageDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? {
         val displayNames = LanguageDisplayNames.getDisplayNamesForLocale(language)
 
@@ -17,6 +20,7 @@ class DisplayNames {
         }
     }
 
+    @JvmOverloads
     fun getLanguageDisplayName(languageIsoCode: String, language: LanguageTag = LanguageTag.current): String? {
         val displayName = LanguageDisplayNames.getDisplayName(languageIsoCode, language)
 
@@ -33,6 +37,7 @@ class DisplayNames {
     }
 
 
+    @JvmOverloads
     fun getAllRegionDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? {
         val displayNames = RegionDisplayNames.getDisplayNamesForLocale(language)
 
@@ -48,6 +53,7 @@ class DisplayNames {
         }
     }
 
+    @JvmOverloads
     fun getRegionDisplayName(regionCode: String, language: LanguageTag = LanguageTag.current): String? {
         val displayName = RegionDisplayNames.getDisplayName(regionCode, language)
 
@@ -64,6 +70,7 @@ class DisplayNames {
     }
 
 
+    @JvmOverloads
     fun getAllCurrencyDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? {
         val displayNames = CurrencyDisplayNames.getDisplayNamesForLocale(language)
 
@@ -79,6 +86,7 @@ class DisplayNames {
         }
     }
 
+    @JvmOverloads
     fun getCurrencyDisplayName(currencyIsoCode: String, language: LanguageTag = LanguageTag.current): String? {
         val displayName = CurrencyDisplayNames.getDisplayName(currencyIsoCode, language)
 
