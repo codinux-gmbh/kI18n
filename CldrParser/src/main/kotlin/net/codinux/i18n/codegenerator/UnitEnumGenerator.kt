@@ -14,20 +14,29 @@ class UnitEnumGenerator(
 ) {
 
     fun generate() {
+        // ok, we cannot use all values, the enum then hits JVM's max method size limit of 64 KB:
+        // org.jetbrains.org.objectweb.asm.MethodTooLargeException: Method too large: net/codinux/i18n/UnitAll.<clinit> ()V
+        // -> filter out deprecated and deleted units and reduce properties size
+
         val recommendation20Units = unitFileParser.parseRecommendation20UnitCodesList()
 
         val recommendation21Units = unitFileParser.parseRecommendation21UnitCodesList()
 
-        val grouped = (recommendation20Units + recommendation21Units).groupBy { it.code }
+        val all = recommendation20Units + recommendation21Units
 
+        val unitsToUse = all.filter { it.status != UnEceUnitCodesRecommendationStatus.Deprecated && it.status != UnEceUnitCodesRecommendationStatus.MarkedAsDeleted }
+
+        val grouped = unitsToUse.groupBy { it.code }
+
+        // had to reduce the column size as otherwise enum hits JVM's max 64 KB per method limit
         val constructor = FunSpec.constructorBuilder()
             .addParameter("code", String::class, false, "The UN/ECE code of this unit from UN/ECE Recommendation Nº20 and Nº21 [https://unece.org/trade/uncefact/cl-recommendations](https://unece.org/trade/uncefact/cl-recommendations).")
             .addParameter("englishName", String::class, false, "English name of this unit.")
             .addParameter("symbol", String::class, true, "The symbol used to represent the unit of measure as in ISO 31 / 80000.")
-            .addParameter("conversionFactor", String::class, true, "The value used to convert units to the equivalent SI unit when applicable.")
+//            .addParameter("conversionFactor", String::class, true, "The value used to convert units to the equivalent SI unit when applicable.")
             .addParameter("groupOrCategory", String::class, true)
-            .addParameter("status", String::class, true, "Status of this unit, e.g. 'Deprecated' or 'MarkedAsDeleted' (in most cases null otherwise).")
-            .addParameter("description", String::class, true, "English description of this unit.")
+//            .addParameter("status", String::class, true, "Status of this unit, e.g. 'Deprecated' or 'MarkedAsDeleted' (in most cases null otherwise).")
+//            .addParameter("description", String::class, true, "English description of this unit.")
             .build()
 
 
@@ -47,10 +56,10 @@ class UnitEnumGenerator(
             .addSuperclassConstructorParameter("%S", unit.code)
             .addSuperclassConstructorParameter("%S", unit.name)
             .addNullableSuperclassConstructorParameter(unit.symbol)
-            .addNullableSuperclassConstructorParameter(unit.conversionFactor)
+//            .addNullableSuperclassConstructorParameter(unit.conversionFactor)
             .addNullableSuperclassConstructorParameter(unit.groupNumber ?: unit.levelOrCategory ?: unit.quantity ?: unit.sector)
-            .addNullableSuperclassConstructorParameter(unit.status)
-            .addNullableSuperclassConstructorParameter(unit.description)
+//            .addNullableSuperclassConstructorParameter(unit.status)
+//            .addNullableSuperclassConstructorParame./ter(unit.description)
             .build()
     }
 
