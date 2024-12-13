@@ -14,6 +14,9 @@ class UnEceUnitCodesRecommendation(
     val groupNumber: String? = null,
     val groupId: Int? = null,
     val sector: String? = null,
+
+    // only for Annex V and VI
+    val cargoOrPackageNumericCode: String? = null
 ) {
     override fun toString() = "$code $name $symbol"
 }
