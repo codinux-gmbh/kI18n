@@ -26,6 +26,8 @@ class ClassesGeneratorApp {
         CurrencyDisplayNamesClassGenerator().generate()
 
         CurrencyEnumGenerator().generate()
+
+        UnitEnumGenerator().generate()
     }
 
 }

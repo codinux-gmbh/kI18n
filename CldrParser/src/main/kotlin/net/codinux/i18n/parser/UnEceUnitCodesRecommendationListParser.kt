@@ -107,7 +107,7 @@ class UnEceUnitCodesRecommendationListParser {
 
         return when (cell.cellType) {
             CellType.NUMERIC -> cell.numericCellValue.toInt().toString()
-            else -> cell.stringCellValue
+            else -> cell.stringCellValue.trim()
         }
     }
 
