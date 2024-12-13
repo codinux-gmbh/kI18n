@@ -21,6 +21,10 @@ class DisplayNames {
     }
 
     @JvmOverloads
+    fun getLanguageDisplayName(language: Language, displayLanguage: LanguageTag = LanguageTag.current): String? =
+        getLanguageDisplayName(language.isoCode, displayLanguage)
+
+    @JvmOverloads
     fun getLanguageDisplayName(languageIsoCode: String, language: LanguageTag = LanguageTag.current): String? {
         val displayName = LanguageDisplayNames.getDisplayName(languageIsoCode, language)
 
@@ -54,6 +58,10 @@ class DisplayNames {
     }
 
     @JvmOverloads
+    fun getRegionDisplayName(region: Region, language: LanguageTag = LanguageTag.current): String? =
+        getRegionDisplayName(region.code, language)
+
+    @JvmOverloads
     fun getRegionDisplayName(regionCode: String, language: LanguageTag = LanguageTag.current): String? {
         val displayName = RegionDisplayNames.getDisplayName(regionCode, language)
 
@@ -85,6 +93,10 @@ class DisplayNames {
             }
         }
     }
+
+    @JvmOverloads
+    fun getCurrencyDisplayName(currency: Currency, language: LanguageTag = LanguageTag.current): String? =
+        getCurrencyDisplayName(currency, language)
 
     @JvmOverloads
     fun getCurrencyDisplayName(currencyIsoCode: String, language: LanguageTag = LanguageTag.current): String? {
