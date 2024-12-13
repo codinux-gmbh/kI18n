@@ -27,8 +27,11 @@ internal fun FileSpec.removePublicModifiersAndWriteTo(baseDirectory: Path, adjus
 }
 
 internal fun FunSpec.Builder.addParameter(parameterName: String, type: KClass<*>, nullable: Boolean = false, kdoc: String? = null) =
+    this.addParameter(parameterName, type.asTypeName(), nullable, kdoc)
+
+internal fun FunSpec.Builder.addParameter(parameterName: String, type: TypeName, nullable: Boolean = false, kdoc: String? = null) =
     this.addParameter(
-        ParameterSpec.builder(parameterName, type.asTypeName().copy(nullable = nullable)).apply {
+        ParameterSpec.builder(parameterName, type.copy(nullable = nullable)).apply {
             if (kdoc != null) {
                 addKdoc(kdoc)
             }

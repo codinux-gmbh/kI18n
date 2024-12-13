@@ -1,6 +1,7 @@
 package net.codinux.i18n.codegenerator
 
 import com.squareup.kotlinpoet.FunSpec
+import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
 import com.squareup.kotlinpoet.TypeSpec
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.model.Region
@@ -16,6 +17,9 @@ class RegionEnumGenerator(
         val allRegions = cldrJsonParser.parseAvailableRegions()
         val allRegionsByCode = allRegions.associateBy { it.alpha2Code ?: it.alpha3Code ?: it.numeric }
 
+        val territorialContainment = cldrJsonParser.parseTerritoryContainment()
+        val territorialContainmentByCode = territorialContainment.mapValues { it.value.contains }
+
         val englishRegionNames = cldrJsonParser.parseRegionNamesForLocale(LanguageTag.English)
 
         val constructor = FunSpec.constructorBuilder()
@@ -26,21 +30,25 @@ class RegionEnumGenerator(
             .addParameter("numericCodeAsString", String::class, true, "The value of [numericCode] as String, padded with zero to three digits.")
             .addParameter("englishName", String::class, false, "English name of the country or region.")
             .addParameter("variantName", String::class, true, "Optional a variant of the English name of the country or region (if available).")
+            .addParameter("isContainedIn", List::class.parameterizedBy(String::class), false, "A list of regions this region is contained in.")
+            .addParameter("contains", List::class.parameterizedBy(String::class), false, "A list of region this region contains.")
             .build()
 
 
         val enumConstants = englishRegionNames.map { regionName ->
-            createEnumConstant(regionName, allRegionsByCode[regionName.territoryCode])
+            createEnumConstant(regionName, allRegionsByCode[regionName.territoryCode], territorialContainmentByCode)
         }
 
         util.writeEnumClass("Region", enumConstants, constructor)
     }
 
-    private fun createEnumConstant(regionName: TerritoryDisplayNames, region: Region?): Pair<String, TypeSpec> {
+    private fun createEnumConstant(regionName: TerritoryDisplayNames, region: Region?, territorialContainment: Map<String, List<String>>): Pair<String, TypeSpec> {
         val code = regionName.territoryCode
         val alpha2Code = region?.alpha2Code ?: if (code.length == 2) code else null
         val alpha3Code = region?.alpha3Code ?: if (code.length == 3 && code.all { it.isLetter() }) code else null
         val numeric = region?.numeric ?: if (code.length == 3 && code.all { it.isDigit() }) code.toInt() else null
+
+        val isContainedIn = territorialContainment.filter { it.value.contains(code) }.map { it.key }.sorted()
 
         return fixEnumConstantName(regionName) to TypeSpec.anonymousClassBuilder()
             .addSuperclassConstructorParameter("%S", code)
@@ -50,6 +58,8 @@ class RegionEnumGenerator(
             .addNullableSuperclassConstructorParameter(numeric?.toString()?.padStart(3, '0'))
             .addNullableSuperclassConstructorParameter(regionName.displayName)
             .addNullableSuperclassConstructorParameter(regionName.shortDisplayName ?: regionName.variantDisplayName)
+            .addNullableSuperclassConstructorParameter(isContainedIn)
+            .addNullableSuperclassConstructorParameter(territorialContainment[code] ?: emptyList<String>())
             .build()
     }
 
