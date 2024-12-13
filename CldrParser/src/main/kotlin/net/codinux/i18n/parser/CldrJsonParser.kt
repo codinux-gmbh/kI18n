@@ -99,6 +99,11 @@ open class CldrJsonParser(
             }
         }
 
+    fun parseTerritoryContainment(): Map<String, TerritoryContainment> =
+        objectMapper.readValue<TerritoryContainmentFile>(resolvePath("cldr-core/supplemental/territoryContainment.json")).let {
+            it.supplemental.territoryContainment
+        }
+
     fun getLocalesWithLocalizedLanguageNames(): List<String> =
         getLocales(resolvePath("cldr-localenames-full/main"), "languages.json")
 

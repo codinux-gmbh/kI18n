@@ -3,6 +3,7 @@ package net.codinux.i18n.parser
 import assertk.assertThat
 import assertk.assertions.*
 import net.codinux.i18n.LanguageTag
+import net.codinux.i18n.Region
 import net.codinux.i18n.model.UnitsDisplayNamesForLocale
 import org.junit.jupiter.api.assertThrows
 import kotlin.test.Test
@@ -130,6 +131,23 @@ class CldrJsonParserTest {
         val result = underTest.parseTerritoryInfo()
 
         assertThat(result).hasSize(258)
+    }
+
+    @Test
+    fun parseTerritoryContainment() {
+        val result = underTest.parseTerritoryContainment()
+
+        assertThat(result).hasSize(46)
+
+        val un = result[Region.UnitedNations.code]
+        assertThat(un).isNotNull()
+        assertThat(un!!.contains).hasSize(193)
+        assertThat(un.grouping).isTrue()
+
+        val eu = result[Region.EuropeanUnion.code]
+        assertThat(eu).isNotNull()
+        assertThat(eu!!.contains).hasSize(27)
+        assertThat(eu.grouping).isTrue()
     }
 
     @Test
