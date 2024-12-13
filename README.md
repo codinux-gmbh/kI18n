@@ -6,6 +6,12 @@ It supports localizing Languages, Countries, Currencies, Units and Dates and has
 
 ## Usage
 
+### Gradle
+
+```
+implementation("net.codinux.i18n:k-i18n:0.5.1")
+```
+
 ### LanguageTag
 
 To receive language, region, script (writing system), ... specific data a language tag is used. You know it from throughout the internet, like `en-US` for US-American English or `es-AR` for Spanish as spoken in Argentina.
