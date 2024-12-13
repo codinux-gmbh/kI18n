@@ -30,7 +30,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
 
-    implementation("org.apache.poi:poi:$apachePoiVersion")
+    implementation("org.apache.poi:poi-ooxml:$apachePoiVersion")
 
     implementation("net.codinux.collections:immutable-collections:$immutableCollectionsVersion")
 
