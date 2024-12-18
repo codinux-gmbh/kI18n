@@ -20,6 +20,7 @@ class LanguageEnumGenerator(
         val constructor = FunSpec.constructorBuilder()
             .addParameter("isoCode", String::class, false, "Lowercase alpha-2 two-letter or alpha-3 three-letter ISO 639 language code.")
             .addParameter("englishName", String::class, false, "English name of the language.")
+            .addParameter("localName", String::class, true, "The endonym as speakers of this language refer themselves to their language.")
             .build()
 
 
@@ -27,6 +28,7 @@ class LanguageEnumGenerator(
             language.displayName to TypeSpec.anonymousClassBuilder()
                 .addSuperclassConstructorParameter("%S", language.languageIsoCode)
                 .addSuperclassConstructorParameter("%S", language.displayName)
+                .addNullableSuperclassConstructorParameter(getEndonym(language))
                 .build()
         }
 
@@ -52,5 +54,14 @@ class LanguageEnumGenerator(
         "skr" -> "Saraiki"
         else -> languageCode
     }
+
+    private fun getEndonym(language: LanguageDisplayNames): String? =
+        try {
+            cldrJsonParser.parseLanguageNamesForLocale(LanguageTag.parse(language.languageIsoCode))
+                .firstOrNull { it.languageIsoCode == language.languageIsoCode }
+                ?.displayName
+        } catch (e: Throwable) {
+            null
+        }
 
 }
