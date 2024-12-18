@@ -90,6 +90,10 @@ class LanguageTagService {
             LanguageTag.parse(languageTag.tag.replace("-${languageTag.variantCode}", ""))
         } else if (languageTag.regionCode != null) {
             LanguageTag.parse(languageTag.tag.replace("-${languageTag.regionCode}", ""))
+        }
+        // script is this language's default script, so we can safely remove the script code
+        else if (languageTag.scriptCode != null && languageTag.scriptCode == languageTag.language?.defaultScript?.code) {
+            LanguageTag.parse(languageTag.tag.replace("-${languageTag.scriptCode}", ""))
         } else {
             // currently we cannot determine correct parent if script is set
             null // we are already at the parent for this language; theoretically we could go up to world etc.
