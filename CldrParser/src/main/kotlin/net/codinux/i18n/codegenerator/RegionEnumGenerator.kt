@@ -3,10 +3,13 @@ package net.codinux.i18n.codegenerator
 import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
 import com.squareup.kotlinpoet.TypeSpec
+import net.codinux.i18n.Language
 import net.codinux.i18n.LanguageTag
+import net.codinux.i18n.Script
 import net.codinux.i18n.model.Region
 import net.codinux.i18n.model.TerritoryDisplayNames
 import net.codinux.i18n.parser.CldrJsonParser
+import net.codinux.i18n.service.LikelySubtagsCategorizer
 
 class RegionEnumGenerator(
     private val cldrJsonParser: CldrJsonParser = CldrJsonParser(),
@@ -22,6 +25,9 @@ class RegionEnumGenerator(
 
         val englishRegionNames = cldrJsonParser.parseRegionNamesForLocale(LanguageTag.English)
 
+        val defaultLanguagesAndScripts = LikelySubtagsCategorizer(cldrJsonParser).getDefaultLanguageAndScriptForAllRegions()
+            .mapKeys { it.key.code }
+
         val constructor = FunSpec.constructorBuilder()
             .addParameter("code", String::class, false, "Either alpha-2 tor alpha-3 ISO code or numeric UN M.49 code.")
             .addParameter("alpha2Code", String::class, true, Alpha2CodeKdoc)
@@ -30,19 +36,22 @@ class RegionEnumGenerator(
             .addParameter("numericCodeAsString", String::class, true, "The value of [numericCode] as String, padded with zero to three digits.")
             .addParameter("englishName", String::class, false, "English name of the country or region.")
             .addParameter("variantName", String::class, true, "Optional a variant of the English name of the country or region (if available).")
+            .addParameter("defaultLanguage", Language::class, true, "Region's default language.")
+            .addParameter("defaultScript", Script::class, true, "Region's default script (writing system).")
             .addParameter("isContainedIn", List::class.parameterizedBy(String::class), false, "A list of regions this region is contained in.")
             .addParameter("contains", List::class.parameterizedBy(String::class), false, "A list of region this region contains.")
             .build()
 
 
         val enumConstants = englishRegionNames.map { regionName ->
-            createEnumConstant(regionName, allRegionsByCode[regionName.territoryCode], territorialContainmentByCode)
+            createEnumConstant(regionName, allRegionsByCode[regionName.territoryCode], territorialContainmentByCode, defaultLanguagesAndScripts[regionName.territoryCode])
         }
 
         util.writeEnumClass("Region", enumConstants, constructor, EnumKdoc)
     }
 
-    private fun createEnumConstant(regionName: TerritoryDisplayNames, region: Region?, territorialContainment: Map<String, List<String>>): Pair<String, TypeSpec> {
+    private fun createEnumConstant(regionName: TerritoryDisplayNames, region: Region?, territorialContainment: Map<String, List<String>>,
+                                   defaultLanguageAndScript: Pair<Language, Script>?): Pair<String, TypeSpec> {
         val code = regionName.territoryCode
         val alpha2Code = region?.alpha2Code ?: if (code.length == 2) code else null
         val alpha3Code = region?.alpha3Code ?: if (code.length == 3 && code.all { it.isLetter() }) code else null
@@ -58,6 +67,8 @@ class RegionEnumGenerator(
             .addNullableSuperclassConstructorParameter(numeric?.toString()?.padStart(3, '0'))
             .addNullableSuperclassConstructorParameter(regionName.displayName)
             .addNullableSuperclassConstructorParameter(regionName.shortDisplayName ?: regionName.variantDisplayName)
+            .addNullableSuperclassConstructorParameter(defaultLanguageAndScript?.first)
+            .addNullableSuperclassConstructorParameter(defaultLanguageAndScript?.second)
             .addNullableSuperclassConstructorParameter(isContainedIn)
             .addNullableSuperclassConstructorParameter(territorialContainment[code] ?: emptyList<String>())
             .build()
