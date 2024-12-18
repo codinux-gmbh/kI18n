@@ -10,7 +10,7 @@ class AvailableLanguageTagsTest {
     fun getAvailableLocales() {
         val result = AvailableLanguageTags.availableLanguageTags
 
-        assertThat(result).hasSize(725) // tests asserts that all language tags are parsed correctly by LangaugeTag.fromTag
+        assertThat(result).hasSize(725) // tests asserts that all language tags are parsed correctly by LangaugeTag.parse()
     }
 
 }

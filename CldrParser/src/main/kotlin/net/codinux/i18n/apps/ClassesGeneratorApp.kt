@@ -15,6 +15,8 @@ class ClassesGeneratorApp {
 
         AvailableLanguageTagsClassGenerator().generate()
 
+        ParentLocalesClassGenerator().generate()
+
         LanguageDisplayNamesClassGenerator().generate()
 
         RegionDisplayNamesClassGenerator().generate()
