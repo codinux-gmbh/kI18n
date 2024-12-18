@@ -66,29 +66,6 @@ open class CldrJsonParser(
         objectMapper.readValue<CoverageLevels>(resolvePath("cldr-core/coverageLevels.json"))
 
 
-    fun parseAvailableCurrencies(): List<AvailableCurrency> =
-        objectMapper.readValue<AvailableCurrenciesSerialModel>(resolvePath("cldr-bcp47/bcp47/currency.json")).let {
-            it.keyword.u.cu.currencyInfos.map { (name, properties) ->
-                AvailableCurrency(name.uppercase(), properties.description) // here the ISO alpha3 code is in lowercase -> make uppercase to make conform with standard
-            }
-        }
-
-    fun getLocalesWithLocalizedCurrencies(): List<String> =
-        getLocales(resolvePath("cldr-numbers-full/main"), "currencies.json")
-
-    fun parseCurrenciesForLocale(locale: LanguageTag): List<Currency> =
-        objectMapper.readValue<LanguageCurrenciesSerialModel>(resolvePathForLocale("cldr-numbers-full/main", locale, "currencies.json")).let {
-            assertLocalSpecificFileStart(it, locale)
-
-            val inner = it.main.localeSpecificProperties.values.first()
-            inner.numbers.currencies.currencies.map { (isoCode, properties) ->
-                Currency(isoCode, properties.displayName, properties.pattern, properties.symbol, properties.narrowSymbol, properties.formalSymbol, properties.symbolVariant,
-                    properties.decimal, properties.group, properties.displayNameCountZero, properties.displayNameCountOne, properties.displayNameCountTwo,
-                    properties.displayNameCountFew, properties.displayNameCountMany, properties.displayNameCountOther)
-            }
-        }
-
-
     /**
      * There's only one alpha2 ISO code in [parseTerritoryInfo] that [parseAvailableRegions] does not return, "CQ" for
      * "Island of Sark", see [net.codinux.i18n.model.ExceptionalRegionIsoCodes].
@@ -145,6 +122,29 @@ open class CldrJsonParser(
 
             territories.filterNot { it.key.contains("-alt-") }.map { (territoryCode, displayName) ->
                 TerritoryDisplayNames(territoryCode, displayName, alternativeNames[territoryCode + "-alt-short"], alternativeNames[territoryCode + "-alt-variant"])
+            }
+        }
+
+
+    fun parseAvailableCurrencies(): List<AvailableCurrency> =
+        objectMapper.readValue<AvailableCurrenciesSerialModel>(resolvePath("cldr-bcp47/bcp47/currency.json")).let {
+            it.keyword.u.cu.currencyInfos.map { (name, properties) ->
+                AvailableCurrency(name.uppercase(), properties.description) // here the ISO alpha3 code is in lowercase -> make uppercase to make conform with standard
+            }
+        }
+
+    fun getLocalesWithLocalizedCurrencies(): List<String> =
+        getLocales(resolvePath("cldr-numbers-full/main"), "currencies.json")
+
+    fun parseCurrenciesForLocale(locale: LanguageTag): List<Currency> =
+        objectMapper.readValue<LanguageCurrenciesSerialModel>(resolvePathForLocale("cldr-numbers-full/main", locale, "currencies.json")).let {
+            assertLocalSpecificFileStart(it, locale)
+
+            val inner = it.main.localeSpecificProperties.values.first()
+            inner.numbers.currencies.currencies.map { (isoCode, properties) ->
+                Currency(isoCode, properties.displayName, properties.pattern, properties.symbol, properties.narrowSymbol, properties.formalSymbol, properties.symbolVariant,
+                    properties.decimal, properties.group, properties.displayNameCountZero, properties.displayNameCountOne, properties.displayNameCountTwo,
+                    properties.displayNameCountFew, properties.displayNameCountMany, properties.displayNameCountOther)
             }
         }
 
