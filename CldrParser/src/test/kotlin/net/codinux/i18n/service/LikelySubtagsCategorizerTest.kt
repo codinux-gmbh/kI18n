@@ -31,4 +31,27 @@ class LikelySubtagsCategorizerTest {
         assertThat(result).hasSize(172)
     }
 
+
+    @Test
+    fun getDefaultRegionForAllLanguagesAndScripts() {
+        val result = underTest.getDefaultRegionForAllLanguagesAndScripts()
+
+        assertThat(result).hasSize(28) // actually 31, but for 3 languageCodes we don't have a Language enum value
+    }
+
+    @Test
+    fun getDefaultRegionForAllLanguagesAndRegions() {
+        val result = underTest.getDefaultRegionForAllLanguagesAndRegions()
+
+        assertThat(result).hasSize(42) // actually 43, but for 1 languageCode we don't have a Language enum value
+    }
+
+
+    @Test
+    fun getDefaultLanguageForAllRegionsAndScripts() {
+        val result = underTest.getDefaultLanguageForAllRegionsAndScripts()
+
+        assertThat(result).hasSize(102)
+    }
+
 }
