@@ -54,8 +54,12 @@ open class CldrJsonParser(
      * - es-419 (Spanish-South America)
      */
     fun parseParentLocales(): Map<String, String> =
-        objectMapper.readValue<ParentLocalesFile>(resolvePath("cldr-core//supplemental/parentLocales.json")).let {
-            it.supplemental.parentLocales.parentLocale
+        objectMapper.readValue<ParentLocalesFile>(resolvePath("cldr-core//supplemental/parentLocales.json"))
+            .supplemental.parentLocales.parentLocale
+
+    fun parseLikelySubtags(): Map<String, String> =
+        objectMapper.readValue<LikelySubtagsFile>(resolvePath("cldr-core//supplemental/likelySubtags.json")).let {
+            it.supplemental.likelySubtags
         }
 
     fun parseCoverageLevels(): CoverageLevels =

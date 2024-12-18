@@ -42,6 +42,13 @@ class CldrJsonParserTest {
         assertThat(result).hasSize(182)
     }
 
+    @Test
+    fun parseLikelySubtags() {
+        val result = underTest.parseLikelySubtags()
+
+        assertThat(result).hasSize(7738)
+    }
+
 
     @Test
     fun parseAvailableCurrencies() {
