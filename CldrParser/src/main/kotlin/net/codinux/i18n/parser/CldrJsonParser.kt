@@ -47,8 +47,20 @@ open class CldrJsonParser(
             it.availableLocales.full + it.availableLocales.modern
         }
 
+    /**
+     * There are three locales that end with a region code for a geographical region:
+     * - en-001 (English-World)
+     * - en-150 (English-Europe)
+     * - es-419 (Spanish-South America)
+     */
+    fun parseParentLocales(): Map<String, String> =
+        objectMapper.readValue<ParentLocalesFile>(resolvePath("cldr-core//supplemental/parentLocales.json")).let {
+            it.supplemental.parentLocales.parentLocale
+        }
+
     fun parseCoverageLevels(): CoverageLevels =
         objectMapper.readValue<CoverageLevels>(resolvePath("cldr-core/coverageLevels.json"))
+
 
     fun parseAvailableCurrencies(): List<AvailableCurrency> =
         objectMapper.readValue<AvailableCurrenciesSerialModel>(resolvePath("cldr-bcp47/bcp47/currency.json")).let {

@@ -36,6 +36,14 @@ class CldrJsonParserTest {
     }
 
     @Test
+    fun parseParentLocales() {
+        val result = underTest.parseParentLocales()
+
+        assertThat(result).hasSize(182)
+    }
+
+
+    @Test
     fun parseAvailableCurrencies() {
         val result = underTest.parseAvailableCurrencies()
 
@@ -44,7 +52,6 @@ class CldrJsonParserTest {
         assertThat(result.all { it.isoCode.length == 3 }).isTrue()
         assertThat(result.all { it.englishName.length >= 4 }).isTrue() // Euro and Gold are the currencies with the shortest names
     }
-
 
     @Test
     fun parseCurrenciesForLocale_en() {
