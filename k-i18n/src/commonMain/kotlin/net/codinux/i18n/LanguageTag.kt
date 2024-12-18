@@ -137,6 +137,8 @@ class LanguageTag(
 
         // constants for languages, selection similar to that one from java.util.Locale
 
+        val Root: LanguageTag by lazy { LanguageTag.parse("und") }
+
         val English: LanguageTag by lazy { ofAvailable("en") }
 
         val French: LanguageTag by lazy { ofAvailable("fr") }

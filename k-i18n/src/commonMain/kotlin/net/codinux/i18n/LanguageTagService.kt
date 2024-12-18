@@ -85,8 +85,17 @@ class LanguageTagService {
      *
      * (https://www.unicode.org/reports/tr35/tr35-73/tr35.html#Locale)
      */
-    fun tryFindParent(languageTag: LanguageTag): LanguageTag? =
-        if (languageTag.variantCode != null) {
+    fun tryFindParent(languageTag: LanguageTag): LanguageTag? {
+        val fromParentLocales = ParentLocales.parentLocales[languageTag.tag]
+        if (fromParentLocales != null) {
+            return if (fromParentLocales == LanguageTag.Root) {
+                null
+            } else {
+                fromParentLocales
+            }
+        }
+
+        return if (languageTag.variantCode != null) {
             LanguageTag.parse(languageTag.tag.replace("-${languageTag.variantCode}", ""))
         } else if (languageTag.regionCode != null) {
             LanguageTag.parse(languageTag.tag.replace("-${languageTag.regionCode}", ""))
@@ -98,6 +107,7 @@ class LanguageTagService {
             // currently we cannot determine correct parent if script is set
             null // we are already at the parent for this language; theoretically we could go up to world etc.
         }
+    }
 
 
     fun findLanguageOrNull(language: String): Language? =
