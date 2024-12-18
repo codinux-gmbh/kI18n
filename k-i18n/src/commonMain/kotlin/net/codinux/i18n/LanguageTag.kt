@@ -208,6 +208,8 @@ class LanguageTag(
      */
     val variant: Variant? by lazy { variant ?: variantCode?.let { service.findVariantOrNull(it) } }
 
+    val hasOnlyLanguageCode: Boolean = regionCode == null && scriptCode == null && variantCode == null
+
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
