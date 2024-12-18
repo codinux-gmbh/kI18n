@@ -66,6 +66,20 @@ open class CldrJsonParser(
         objectMapper.readValue<CoverageLevels>(resolvePath("cldr-core/coverageLevels.json"))
 
 
+    fun getLocalesWithLocalizedLanguageNames(): List<String> =
+        getLocales(resolvePath("cldr-localenames-full/main"), "languages.json")
+
+    fun parseLanguageNamesForLocale(locale: LanguageTag): List<LanguageDisplayNames> =
+        objectMapper.readValue<LanguagesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "languages.json")).let {
+            assertLocalSpecificFileStart(it, locale)
+
+            val content = it.main.localeSpecificProperties.values.first()
+            content.localeDisplayNames.languages.map { (languageIsoCode, displayName) ->
+                LanguageDisplayNames(languageIsoCode, displayName)
+            }
+        }
+
+
     /**
      * There's only one alpha2 ISO code in [parseTerritoryInfo] that [parseAvailableRegions] does not return, "CQ" for
      * "Island of Sark", see [net.codinux.i18n.model.ExceptionalRegionIsoCodes].
@@ -97,19 +111,6 @@ open class CldrJsonParser(
             it.supplemental.territoryContainment
         }
 
-    fun getLocalesWithLocalizedLanguageNames(): List<String> =
-        getLocales(resolvePath("cldr-localenames-full/main"), "languages.json")
-
-    fun parseLanguageNamesForLocale(locale: LanguageTag): List<LanguageDisplayNames> =
-        objectMapper.readValue<LanguagesLocaleNamesFile>(resolvePathForLocale("cldr-localenames-full/main", locale, "languages.json")).let {
-            assertLocalSpecificFileStart(it, locale)
-
-            val content = it.main.localeSpecificProperties.values.first()
-            content.localeDisplayNames.languages.map { (languageIsoCode, displayName) ->
-                LanguageDisplayNames(languageIsoCode, displayName)
-            }
-        }
-
     fun getLocalesWithLocalizedRegionNames(): List<String> =
         getLocales(resolvePath("cldr-localenames-full/main"), "territories.json")
 
@@ -123,40 +124,6 @@ open class CldrJsonParser(
             territories.filterNot { it.key.contains("-alt-") }.map { (territoryCode, displayName) ->
                 TerritoryDisplayNames(territoryCode, displayName, alternativeNames[territoryCode + "-alt-short"], alternativeNames[territoryCode + "-alt-variant"])
             }
-        }
-
-
-    fun parseAvailableCurrencies(): List<AvailableCurrency> =
-        objectMapper.readValue<AvailableCurrenciesSerialModel>(resolvePath("cldr-bcp47/bcp47/currency.json")).let {
-            it.keyword.u.cu.currencyInfos.map { (name, properties) ->
-                AvailableCurrency(name.uppercase(), properties.description) // here the ISO alpha3 code is in lowercase -> make uppercase to make conform with standard
-            }
-        }
-
-    fun getLocalesWithLocalizedCurrencies(): List<String> =
-        getLocales(resolvePath("cldr-numbers-full/main"), "currencies.json")
-
-    fun parseCurrenciesForLocale(locale: LanguageTag): List<Currency> =
-        objectMapper.readValue<LanguageCurrenciesSerialModel>(resolvePathForLocale("cldr-numbers-full/main", locale, "currencies.json")).let {
-            assertLocalSpecificFileStart(it, locale)
-
-            val inner = it.main.localeSpecificProperties.values.first()
-            inner.numbers.currencies.currencies.map { (isoCode, properties) ->
-                Currency(isoCode, properties.displayName, properties.pattern, properties.symbol, properties.narrowSymbol, properties.formalSymbol, properties.symbolVariant,
-                    properties.decimal, properties.group, properties.displayNameCountZero, properties.displayNameCountOne, properties.displayNameCountTwo,
-                    properties.displayNameCountFew, properties.displayNameCountMany, properties.displayNameCountOther)
-            }
-        }
-
-
-    fun parseUnits(): Units =
-        objectMapper.readValue<UnitsFile>(resolvePath("cldr-core/supplemental/units.json")).supplemental.let { units ->
-            Units(
-                units.unitPrefixes.map { UnitPrefix(it.key, it.value.symbol, it.value.power10, it.value.power2) },
-                units.unitConstants.map { UnitConstant(it.key, it.value.value, it.value.description, it.value.status == "approximate") },
-                units.unitQuantities.map { UnitQuantity(it.key, it.value.quantity, it.value.status == "simple") },
-                units.convertUnits.map { ConvertUnit(it.key, it.value.baseUnit, it.value.factor, it.value.systems, it.value.description, it.value.offset, it.value.special) }
-            )
         }
 
 
@@ -196,6 +163,39 @@ open class CldrJsonParser(
             }
         }
 
+
+    fun parseAvailableCurrencies(): List<AvailableCurrency> =
+        objectMapper.readValue<AvailableCurrenciesSerialModel>(resolvePath("cldr-bcp47/bcp47/currency.json")).let {
+            it.keyword.u.cu.currencyInfos.map { (name, properties) ->
+                AvailableCurrency(name.uppercase(), properties.description) // here the ISO alpha3 code is in lowercase -> make uppercase to make conform with standard
+            }
+        }
+
+    fun getLocalesWithLocalizedCurrencies(): List<String> =
+        getLocales(resolvePath("cldr-numbers-full/main"), "currencies.json")
+
+    fun parseCurrenciesForLocale(locale: LanguageTag): List<Currency> =
+        objectMapper.readValue<LanguageCurrenciesSerialModel>(resolvePathForLocale("cldr-numbers-full/main", locale, "currencies.json")).let {
+            assertLocalSpecificFileStart(it, locale)
+
+            val inner = it.main.localeSpecificProperties.values.first()
+            inner.numbers.currencies.currencies.map { (isoCode, properties) ->
+                Currency(isoCode, properties.displayName, properties.pattern, properties.symbol, properties.narrowSymbol, properties.formalSymbol, properties.symbolVariant,
+                    properties.decimal, properties.group, properties.displayNameCountZero, properties.displayNameCountOne, properties.displayNameCountTwo,
+                    properties.displayNameCountFew, properties.displayNameCountMany, properties.displayNameCountOther)
+            }
+        }
+
+
+    fun parseUnits(): Units =
+        objectMapper.readValue<UnitsFile>(resolvePath("cldr-core/supplemental/units.json")).supplemental.let { units ->
+            Units(
+                units.unitPrefixes.map { UnitPrefix(it.key, it.value.symbol, it.value.power10, it.value.power2) },
+                units.unitConstants.map { UnitConstant(it.key, it.value.value, it.value.description, it.value.status == "approximate") },
+                units.unitQuantities.map { UnitQuantity(it.key, it.value.quantity, it.value.status == "simple") },
+                units.convertUnits.map { ConvertUnit(it.key, it.value.baseUnit, it.value.factor, it.value.systems, it.value.description, it.value.offset, it.value.special) }
+            )
+        }
 
     fun getLocalesWithLocalizedUnits(): List<String> =
         getLocales(resolvePath("cldr-units-full/main"), "units.json")
