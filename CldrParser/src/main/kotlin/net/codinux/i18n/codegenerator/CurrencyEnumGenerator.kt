@@ -41,7 +41,7 @@ class CurrencyEnumGenerator(
             .addParameter("symbolVariant", String::class, true, "Variant of currency symbol, if available.")
             .addParameter("englishName", String::class, false, "English name of the currency.")
             .addParameter("isCurrentCurrency", Boolean::class, false, "If the currency is a current or historic denomination.")
-            .addParameter("minorUnit", Int::class, true, "Currency's minor unit (e.g. for Euro and Dollar '2' for 100 Cent, for Yen 0 as there is no minor unit).")
+            .addParameter("defaultFractionDigits", Int::class, true, "Number of fraction digits for currency's minor unit (e.g. for Euro and Dollar '2' for 100 Cent, for Yen 0 as there is no minor unit).")
             .addParameter("withdrawalDate", String::class, true, "For historic denominations the date of withdrawal.")
             .addParameter("countries", List::class.parameterizedBy(String::class))
             .build()

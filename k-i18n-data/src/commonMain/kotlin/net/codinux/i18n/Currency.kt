@@ -12,7 +12,7 @@ import kotlin.collections.List
  * @param symbolVariant Variant of currency symbol, if available.
  * @param englishName English name of the currency.
  * @param isCurrentCurrency If the currency is a current or historic denomination.
- * @param minorUnit Currency's minor unit (e.g. for Euro and Dollar '2' for 100 Cent, for Yen 0 as there is no minor unit).
+ * @param defaultFractionDigits Number of fraction digits for currency's minor unit (e.g. for Euro and Dollar '2' for 100 Cent, for Yen 0 as there is no minor unit).
  * @param withdrawalDate For historic denominations the date of withdrawal.
  */
 enum class Currency(
@@ -22,7 +22,7 @@ enum class Currency(
   val symbolVariant: String?,
   val englishName: String,
   val isCurrentCurrency: Boolean,
-  val minorUnit: Int?,
+  val defaultFractionDigits: Int?,
   val withdrawalDate: String?,
   val countries: List<String>,
 ) {
