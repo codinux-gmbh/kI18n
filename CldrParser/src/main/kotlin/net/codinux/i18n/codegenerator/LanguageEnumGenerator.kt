@@ -19,12 +19,15 @@ class LanguageEnumGenerator(
 
         val constructor = FunSpec.constructorBuilder()
             .addParameter("isoCode", String::class, false, "Lowercase alpha-2 two-letter or alpha-3 three-letter ISO 639 language code.")
+            .addParameter("englishName", String::class, false, "English name of the language.")
             .build()
 
 
         val enumConstants = englishLanguageNames.sortedBy { it.languageIsoCode }.map { language ->
             language.displayName to TypeSpec.anonymousClassBuilder()
-                    .addSuperclassConstructorParameter("%S", language.languageIsoCode).build()
+                .addSuperclassConstructorParameter("%S", language.languageIsoCode)
+                .addSuperclassConstructorParameter("%S", language.displayName)
+                .build()
         }
 
         util.writeEnumClass("Language", enumConstants, constructor)
