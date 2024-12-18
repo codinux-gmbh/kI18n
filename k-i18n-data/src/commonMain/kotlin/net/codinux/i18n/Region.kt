@@ -5,6 +5,11 @@ import kotlin.String
 import kotlin.collections.List
 
 /**
+ * Please note, the list includes not only countries but also:
+ * - Geographical regions such as [World], [EasternAfrica] or [Antarctica],
+ * - Supranational unions (alliances) such as the [UnitedNations], [EuropeanUnion] or [Eurozone],
+ * - Sub-national territories of countries such as [SaintHelena] or [SouthGeorgiaAndSouthSandwichIslands].
+ *
  * @param code Either alpha-2 tor alpha-3 ISO code or numeric UN M.49 code.
  * @param alpha2Code alpha-2 two-letter country codes are "most prominently for the Internet's country code top-level
  * domains (with a few exceptions). They are also used as country identifiers extending the postal

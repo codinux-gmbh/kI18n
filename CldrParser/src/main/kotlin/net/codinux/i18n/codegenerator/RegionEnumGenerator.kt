@@ -39,7 +39,7 @@ class RegionEnumGenerator(
             createEnumConstant(regionName, allRegionsByCode[regionName.territoryCode], territorialContainmentByCode)
         }
 
-        util.writeEnumClass("Region", enumConstants, constructor)
+        util.writeEnumClass("Region", enumConstants, constructor, EnumKdoc)
     }
 
     private fun createEnumConstant(regionName: TerritoryDisplayNames, region: Region?, territorialContainment: Map<String, List<String>>): Pair<String, TypeSpec> {
@@ -82,6 +82,13 @@ class RegionEnumGenerator(
 
 
     companion object {
+        
+        private val EnumKdoc = """
+             Please note, the list includes not only countries but also:
+             - Geographical regions such as [World], [EasternAfrica] or [Antarctica],
+             - Supranational unions (alliances) such as the [UnitedNations], [EuropeanUnion] or [Eurozone],
+             - Sub-national territories of countries such as [SaintHelena] or [SouthGeorgiaAndSouthSandwichIslands].
+        """.trimIndent()
 
         private val Alpha2CodeKdoc = """
             alpha-2 two-letter country codes are "most prominently for the Internet's country code top-level
