@@ -55,6 +55,13 @@ class CldrJsonParserTest {
 
 
     @Test
+    fun parseNumberingSystems() {
+        val result = underTest.parseNumberingSystems()
+
+        assertThat(result).hasSize(96)
+    }
+
+    @Test
     fun getLocalesWithLocalizedNumberFormats() {
         val result = underTest.getLocalesWithLocalizedNumberFormats()
 

@@ -2,6 +2,7 @@ package net.codinux.i18n.codegenerator
 
 import com.squareup.kotlinpoet.*
 import net.codinux.i18n.Language
+import net.codinux.i18n.NumberingSystemType
 import net.codinux.i18n.Region
 import net.codinux.i18n.Script
 import java.nio.file.Path
@@ -46,6 +47,7 @@ internal fun TypeSpec.Builder.addNullableSuperclassConstructorParameter(value: A
     else if (value is Language) this.addSuperclassConstructorParameter("Language.%L", value)
     else if (value is Region) this.addSuperclassConstructorParameter("Region.%L", value)
     else if (value is Script) this.addSuperclassConstructorParameter("Script.%L", value)
+    else if (value is NumberingSystemType) this.addSuperclassConstructorParameter("NumberingSystemType.%L", value)
     else if (value is List<*>) this.addSuperclassConstructorParameter("%L", "listOf(${value.joinToString(", ") { "\"$it\"" } })")
     else this.addSuperclassConstructorParameter("%L", "null")
 

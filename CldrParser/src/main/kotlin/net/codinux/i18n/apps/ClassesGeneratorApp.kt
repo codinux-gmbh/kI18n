@@ -26,6 +26,8 @@ class ClassesGeneratorApp {
 
         UnitEnumGenerator().generate()
 
+        NumberingSystemEnumGenerator().generate()
+
 
         LanguageDisplayNamesClassGenerator().generate()
 

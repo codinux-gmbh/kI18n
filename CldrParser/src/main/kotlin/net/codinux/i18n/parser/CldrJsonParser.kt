@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.fasterxml.jackson.module.kotlin.treeToValue
 import net.codinux.i18n.LanguageTag
+import net.codinux.i18n.NumberingSystemType
 import net.codinux.i18n.model.*
 import net.codinux.i18n.model.UnitDisplayNames
 import net.codinux.i18n.service.FileSystemUtil
@@ -163,6 +164,14 @@ open class CldrJsonParser(
                 VariantDisplayName(scriptCode, displayName)
             }
         }
+
+
+    fun parseNumberingSystems(): List<NumberingSystem> =
+        objectMapper.readValue<NumberingSystemsFile>(resolvePath("cldr-core/supplemental/numberingSystems.json"))
+            .supplemental.numberingSystems.map { (code, numberingSystem) ->
+                val type = NumberingSystemType.valueOf(numberingSystem.type.replaceFirstChar { it.uppercase() })
+                NumberingSystem(code, type, numberingSystem.digits, numberingSystem.rules)
+            }
 
 
     fun getLocalesWithLocalizedNumberFormats(): List<String> =
