@@ -36,6 +36,7 @@ class CompareNumberFormatterWithJvmNumberFormatterTest {
         }
     }
 
+
     @Test
     fun double() {
         val numberFormat = NumberFormats.Germany
@@ -57,6 +58,31 @@ class CompareNumberFormatterWithJvmNumberFormatterTest {
             val number = Random.nextDouble(-10_000_000.9999, 0.0)
 
             assertThat(underTest.formatNumber(number, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
+        }
+    }
+
+
+    @Test
+    fun percent() {
+        val numberFormat = NumberFormats.Germany
+        val jvmNumberFormat = DecimalFormat.getPercentInstance(Locale.GERMANY)
+
+        repeat((0..1_000_000).count()) {
+            val number = Random.nextDouble(0.9999)
+
+            assertThat(underTest.formatPercent(number, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
+        }
+    }
+
+    @Test
+    fun negativePercent() {
+        val numberFormat = NumberFormats.Germany
+        val jvmNumberFormat = DecimalFormat.getPercentInstance(Locale.GERMANY)
+
+        repeat((0..1_000_000).count()) {
+            val number = Random.nextDouble(0.0, 0.9999)
+
+            assertThat(underTest.formatPercent(number, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
         }
     }
 

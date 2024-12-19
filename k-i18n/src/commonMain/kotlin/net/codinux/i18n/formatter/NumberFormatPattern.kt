@@ -5,5 +5,10 @@ data class NumberFormatPattern(
     val minimumIntegerDigits: Int = 0,
     val minimumFractionDigits: Int = 0,
     val maximumFractionDigits: Int = Int.MAX_VALUE,
-    val groupSize: Int = 0
+    val groupSize: Int = 0,
+
+    val stringBeforeIntegerPart: String = "",
+    val stringAfterIntegerPart: String = "",
+    val stringBeforeFractionPart: String = "",
+    val stringAfterFractionPart: String = "",
 )
