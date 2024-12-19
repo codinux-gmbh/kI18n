@@ -2,6 +2,7 @@ package net.codinux.i18n.model
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import net.codinux.i18n.NumberingSystem
+import net.codinux.i18n.formatter.CurrencySpacing
 
 data class NumberFormats(
     val defaultNumberingSystem: String,
@@ -86,17 +87,6 @@ data class CurrencyFormat(
     val unitPatternCountMany: String? = null,
     @JsonProperty("unitPattern-count-other")
     val unitPatternCountOther: String? = null
-)
-
-data class CurrencySpacing(
-    val beforeCurrency: CurrencySpacingValues? = null,
-    val afterCurrency: CurrencySpacingValues? = null
-)
-
-data class CurrencySpacingValues(
-    val currencyMatch: String,
-    val surroundingMatch: String,
-    val insertBetween: String
 )
 
 data class MinimalPairs(
