@@ -9,27 +9,29 @@ fun main() {
 class ClassesGeneratorApp {
 
     fun generate() {
-        LanguageEnumGenerator().generate()
-
-        RegionEnumGenerator().generate()
-
         AvailableLanguageTagsClassGenerator().generate()
 
         ParentLocalesClassGenerator().generate()
 
-        LanguageDisplayNamesClassGenerator().generate()
 
-        RegionDisplayNamesClassGenerator().generate()
+        LanguageEnumGenerator().generate()
+
+        RegionEnumGenerator().generate()
 
         ScriptEnumGenerator().generate()
 
         VariantEnumGenerator().generate()
 
-        CurrencyDisplayNamesClassGenerator().generate()
-
         CurrencyEnumGenerator().generate()
 
         UnitEnumGenerator().generate()
+
+
+        LanguageDisplayNamesClassGenerator().generate()
+
+        RegionDisplayNamesClassGenerator().generate()
+
+        CurrencyDisplayNamesClassGenerator().generate()
     }
 
 }
