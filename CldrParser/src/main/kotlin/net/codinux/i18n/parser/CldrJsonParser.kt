@@ -81,6 +81,23 @@ open class CldrJsonParser(
             }
         }
 
+    fun getLocalesWithLocalizedLocaleDisplayNamesNames(): List<String> =
+        getLocales(resolvePath("cldr-localenames-full/main"), "localeDisplayNames.json")
+
+
+    fun parseLocaleDisplayNamesForLocale(languageTag: LanguageTag): LocaleDisplayNames =
+        objectMapper.readValue<LocaleDisplayNamesFile>(resolvePathForLocale("cldr-localenames-full/main", languageTag, "localeDisplayNames.json")).let {
+            require(it.main.size == 1) {
+                "There must be exactly one entry in main Map with key '${languageTag.tag}' (or one of its parent LanguageTags)."
+            }
+
+            val displayNames = it.main.values.first().localeDisplayNames
+
+            LocaleDisplayNames(displayNames.types.numbers, displayNames.types.currencyFormatStyle, displayNames.types.calendar,
+                displayNames.localeDisplayPattern, displayNames.subdivisions, displayNames.keys, displayNames.codePatterns,
+                displayNames.types.measurementSystem, displayNames.types.measurementUnitOverride)
+        }
+
 
     /**
      * There's only one alpha2 ISO code in [parseTerritoryInfo] that [parseAvailableRegions] does not return, "CQ" for

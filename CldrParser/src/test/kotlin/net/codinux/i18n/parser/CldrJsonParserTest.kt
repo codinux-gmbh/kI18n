@@ -55,6 +55,32 @@ class CldrJsonParserTest {
 
 
     @Test
+    fun getLocalesWithLocalizedLocaleDisplayNamesNames() {
+        val result = underTest.getLocalesWithLocalizedLocaleDisplayNamesNames()
+
+        assertThat(result).hasSize(CountAvailableLocales)
+    }
+
+    @Test
+    fun parseLocaleDisplayNamesForLocale() {
+        val result = underTest.parseLocaleDisplayNamesForLocale(LanguageTag.English)
+
+        assertThat(result.numberingSystems).hasSize(100)
+    }
+
+    @Test
+    fun parseAllLocaleDisplayNamesForLocale() {
+        val locales = underTest.getLocalesWithLocalizedLocaleDisplayNamesNames().map { LanguageTag.ofAvailable(it) }
+
+        val localeDisplayNamesByLocale = locales.associateWith {
+            underTest.parseLocaleDisplayNamesForLocale(it)
+        }
+
+        // all values seem to be optional, so i cannot check if any value is set on all LocaleDisplayNames
+    }
+
+
+    @Test
     fun parseNumberingSystems() {
         val result = underTest.parseNumberingSystems()
 
