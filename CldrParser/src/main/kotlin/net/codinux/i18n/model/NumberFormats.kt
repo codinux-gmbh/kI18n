@@ -1,6 +1,7 @@
 package net.codinux.i18n.model
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import net.codinux.i18n.NumberingSystem
 
 data class NumberFormats(
     val defaultNumberingSystem: String,
@@ -9,14 +10,14 @@ data class NumberFormats(
 
     val minimumGroupingDigits: Int,
 
-    val symbols: Map<String, Symbols>,
+    val symbols: Map<NumberingSystem, Symbols>,
 
-    val decimalFormats: Map<String, DecimalFormats>,
-    val scientificFormats: Map<String, DecimalFormats>,
-    val percentFormats: Map<String, DecimalFormats>,
-    val currencyFormats: Map<String, DecimalFormats>,
+    val decimalFormats: Map<NumberingSystem, DecimalFormats>,
+    val scientificFormats: Map<NumberingSystem, DecimalFormats>,
+    val percentFormats: Map<NumberingSystem, DecimalFormats>,
+    val currencyFormats: Map<NumberingSystem, DecimalFormats>,
 
-    val miscPatterns: Map<String, MiscPatterns>,
+    val miscPatterns: Map<NumberingSystem, MiscPatterns>,
     val minimalPairs: MinimalPairs,
 )
 

@@ -218,10 +218,10 @@ open class CldrJsonParser(
             miscPatterns, numbers.minimalPairs)
     }
 
-    private inline fun <reified T> mapNumbersFormatMap(numbers: NumberFormatsFileNumbers, name: String): Map<String, T> =
+    private inline fun <reified T> mapNumbersFormatMap(numbers: NumberFormatsFileNumbers, name: String): Map<net.codinux.i18n.NumberingSystem, T> =
         numbers.otherProperties.filter { it.key.startsWith("$name-") }.map { (key, node) ->
-            val scriptCode = key.substringAfter("$name-numberSystem-")
-            scriptCode to objectMapper.treeToValue<T>(node)
+            val numberingSystemCode = key.substringAfter("$name-numberSystem-")
+            net.codinux.i18n.NumberingSystem.forCode(numberingSystemCode) to objectMapper.treeToValue<T>(node)
         }.toMap()
 
 

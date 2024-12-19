@@ -45,10 +45,10 @@ open class ClassGeneratorUtil {
     }
 
 
-    open fun writeEnumClass(enumName: String, enumConstants: List<String>, kdoc: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
-        writeEnumClass(enumName, enumConstants.map { Pair(it, TypeSpec.Companion.anonymousClassBuilder().build()) }, null, kdoc, projectFolder)
+    open fun writeEnumClass(enumName: String, enumConstants: List<String>, kdoc: String? = null, companionObjectMethods: Collection<FunSpec> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
+        writeEnumClass(enumName, enumConstants.map { Pair(it, TypeSpec.Companion.anonymousClassBuilder().build()) }, null, kdoc, companionObjectMethods, projectFolder)
 
-    open fun writeEnumClass(enumName: String, enumConstants: List<Pair<String, TypeSpec>>, constructor: FunSpec? = null, kdoc: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
+    open fun writeEnumClass(enumName: String, enumConstants: List<Pair<String, TypeSpec>>, constructor: FunSpec? = null, kdoc: String? = null, companionObjectMethods: Collection<FunSpec> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
         val type = TypeSpec.enumBuilder(enumName).apply {
             if (kdoc != null) {
                 addKdoc(kdoc)
@@ -61,6 +61,10 @@ open class ClassGeneratorUtil {
             enumConstants.forEach { constant ->
                 addEnumConstant(getKotlinFriendlyVariableName(constant.first), constant.second)
             }
+
+            if (companionObjectMethods.isNotEmpty()) {
+                addType(TypeSpec.companionObjectBuilder().addFunctions(companionObjectMethods).build())
+            }
         }.build()
 
         writeToFile(enumName, type, projectFolder) { code ->
@@ -69,7 +73,8 @@ open class ClassGeneratorUtil {
             if (constructor != null) {
                 constructor.parameters.forEach { parameter ->
                     // don't know why but Kotlin Poet leaves away the 'val' specifier of Enum class constructor parameter, so add it manually
-                    result = result.replace("${parameter.name}: ", "val ${parameter.name}: ")
+                    // only replace first appearance to not also add 'val' to fun forCode(code: String)
+                    result = result.replaceFirst("${parameter.name}: ", "val ${parameter.name}: ")
                 }
             }
 

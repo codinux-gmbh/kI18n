@@ -112,4 +112,9 @@ enum class NumberingSystem(
   WanchoDigits("wcho", NumberingSystemType.Numeric, "𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹", null, "Wancho Digits"),
   WarangCitiDigits("wara", NumberingSystemType.Numeric, "𑣠𑣡𑣢𑣣𑣤𑣥𑣦𑣧𑣨𑣩", null, "Warang Citi Digits"),
   WesternDigits("latn", NumberingSystemType.Numeric, "0123456789", null, "Western Digits"),
+  ;
+
+  companion object {
+    fun forCode(code: String): NumberingSystem = NumberingSystem.entries.first { it.code == code }
+  }
 }
