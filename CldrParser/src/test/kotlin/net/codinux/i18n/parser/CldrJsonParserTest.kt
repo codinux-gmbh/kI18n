@@ -10,6 +10,10 @@ import kotlin.test.Test
 
 class CldrJsonParserTest {
 
+    companion object {
+        const val CountAvailableLocales = 725
+    }
+
     private val underTest = CldrJsonParser()
 
 
@@ -17,7 +21,7 @@ class CldrJsonParserTest {
     fun parseAvailableLocalesAsString() {
         val result = underTest.parseAvailableLocalesAsString()
 
-        assertThat(result).hasSize(725)
+        assertThat(result).hasSize(CountAvailableLocales)
 
         val minLength = 2
         val maxLength = "yue-Hant-CN".length
@@ -28,7 +32,7 @@ class CldrJsonParserTest {
     fun parseAvailableLocales() { // a test if all parsed language tags can be mapped to LanguageTag
         val result = underTest.parseAvailableLocales()
 
-        assertThat(result).hasSize(725)
+        assertThat(result).hasSize(CountAvailableLocales)
 
         val minLength = 2
         val maxLength = "yue-Hant-CN".length
@@ -47,6 +51,34 @@ class CldrJsonParserTest {
         val result = underTest.parseLikelySubtags()
 
         assertThat(result).hasSize(7738)
+    }
+
+
+    @Test
+    fun getLocalesWithLocalizedNumberFormats() {
+        val result = underTest.getLocalesWithLocalizedNumberFormats()
+
+        assertThat(result).hasSize(CountAvailableLocales)
+    }
+
+    @Test
+    fun parseNumberFormatsForLocale() {
+        val result = underTest.parseNumberFormatsForLocale(LanguageTag.German)
+
+        assertThat(result.decimalFormats).isNotEmpty()
+    }
+
+    @Test
+    fun parseAllNumberFormats() {
+        val locales = underTest.getLocalesWithLocalizedNumberFormats().map { LanguageTag.ofAvailable(it) }
+
+        val numberFormatsByLocale = locales.associateWith {
+            underTest.parseNumberFormatsForLocale(it)
+        }
+
+        numberFormatsByLocale.forEach { (locale, numbers) ->
+            assertThat(numbers.otherNumberingSystems).isNotEmpty()
+        }
     }
 
 

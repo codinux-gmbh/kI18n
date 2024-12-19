@@ -3,6 +3,7 @@ package net.codinux.i18n.parser
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import com.fasterxml.jackson.module.kotlin.treeToValue
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.model.*
 import net.codinux.i18n.model.UnitDisplayNames
@@ -162,6 +163,40 @@ open class CldrJsonParser(
                 VariantDisplayName(scriptCode, displayName)
             }
         }
+
+
+    fun getLocalesWithLocalizedNumberFormats(): List<String> =
+        getLocales(resolvePath("cldr-numbers-full/main"), "numbers.json")
+
+    fun parseNumberFormatsForLocale(languageTag: LanguageTag): NumberFormats =
+        objectMapper.readValue<NumberFormatsFile>(resolvePathForLocale("cldr-numbers-full/main", languageTag, "numbers.json")).let {
+            require(it.main.size == 1) {
+                "There must be exactly one entry in main Map with key '${languageTag.tag}' (or one of its parent LanguageTags)."
+            }
+
+            mapNumberFormats(it.main.values.first().numbers)
+        }
+
+    private fun mapNumberFormats(numbers: NumberFormatsFileNumbers): NumberFormats {
+        val symbols = mapNumbersFormatMap<Symbols>(numbers, "symbols")
+
+        val decimalFormats = mapNumbersFormatMap<DecimalFormats>(numbers, "decimalFormats")
+        val scientificFormats = mapNumbersFormatMap<DecimalFormats>(numbers, "scientificFormats")
+        val percentFormats = mapNumbersFormatMap<DecimalFormats>(numbers, "percentFormats")
+        val currencyFormats = mapNumbersFormatMap<DecimalFormats>(numbers, "currencyFormats")
+
+        val miscPatterns = mapNumbersFormatMap<MiscPatterns>(numbers, "miscPatterns")
+
+        return NumberFormats(numbers.defaultNumberingSystem, numbers.defaultNumberingSystemAltLatn, numbers.otherNumberingSystems, numbers.minimumGroupingDigits,
+            symbols, decimalFormats, scientificFormats, percentFormats, currencyFormats,
+            miscPatterns, numbers.minimalPairs)
+    }
+
+    private inline fun <reified T> mapNumbersFormatMap(numbers: NumberFormatsFileNumbers, name: String): Map<String, T> =
+        numbers.otherProperties.filter { it.key.startsWith("$name-") }.map { (key, node) ->
+            val scriptCode = key.substringAfter("$name-numberSystem-")
+            scriptCode to objectMapper.treeToValue<T>(node)
+        }.toMap()
 
 
     fun parseAvailableCurrencies(): List<AvailableCurrency> =
