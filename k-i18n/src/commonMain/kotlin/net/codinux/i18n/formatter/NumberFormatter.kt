@@ -1,5 +1,6 @@
 package net.codinux.i18n.formatter
 
+import net.codinux.i18n.Currency
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.lastIndexOfOrNull
 import kotlin.math.abs
@@ -41,6 +42,7 @@ open class NumberFormatter {
     open fun formatNumber(number: Number, format: DecimalFormat, symbols: Symbols): String =
         format(number, format.standard, symbols)
 
+
     open fun formatPercent(number: Number, locale: LanguageTag = LanguageTag.current) =
         formatPercent(number, getNumberFormat(locale))
 
@@ -48,7 +50,50 @@ open class NumberFormatter {
         formatPercent(number, format.percentFormats[format.defaultNumberingSystem]!!, format.symbols[format.defaultNumberingSystem]!!)
 
     open fun formatPercent(number: Number, format: DecimalFormat, symbols: Symbols): String =
-        format(number, format.standard, symbols, 100)
+        format(number, format.standard, symbols, null, 100)
+
+
+    open fun formatCurrency(number: Number, currency: Currency, locale: LanguageTag = LanguageTag.current) =
+        formatCurrency(number, currency, getNumberFormat(locale))
+
+    open fun formatCurrency(number: Number, currency: Currency, format: NumberFormat) =
+        formatCurrency(number, currency, format.currencyFormats[format.defaultNumberingSystem]!!, format.symbols[format.defaultNumberingSystem]!!)
+
+    open fun formatCurrency(number: Number, currency: Currency, format: CurrencyFormat, symbols: Symbols): String {
+        // The following additional elements were intended to allow proper placement of the currency symbol relative to the numeric quantity. These are specified in the root locale and typically not overridden in any other locale. However, as of CLDR 42, the preferred approach to controlling placement of the currency symbol is use of the alt="alphaNextToNumber" variant for currencyFormat patterns. See below and - Currencies for additional information on the use of these options.
+
+        // The alt="alphaNextToNumber" pattern, if available, should be used instead of the standard pattern when the currency symbol character closest to the numeric value has Unicode General Category L (letter). The alt="alphaNextToNumber" pattern is typically provided when the standard currency pattern does not have a space between currency symbol and numeric value; the alphaNextToNumber variant adds a non-breaking space if appropriate for the locale.
+        //
+        // The alt="noCurrency" pattern can be used when a currency-style format is desired but without the currency symbol. This sort of display may be used when formatting a large column of values all in the same currency, for example. For compact currency formats (<currencyFormatLength type="short">), the compact decimal format (<decimalFormatLength type="short">) should be used if no alt="noCurrency" pattern is present (so the alt="noCurrency" pattern is typically not needed for compact currency formats).
+        //
+        // The currencyPatternAppendISO element provides a pattern that can be used to combine currency format that uses a currency symbol (¤ or ¤¤¤¤¤) with the ISO 4217 3-letter code for the same currency (¤¤), to produce a result such as “$1,432.00 USD”. Using such a format is only recommended to resolve ambiguity when:
+        //
+        // - The currency symbol being used is the narrow symbol (¤¤¤¤¤) or has the same value as the narrow symbol, and
+        // - The currency symbol does not have the same value as the ISO 4217 3-letter code. Most locales will not need to override the pattern provided in root, shown in the xml sample above.
+
+        // In currency formats, the number of digits after the decimal also does not matter, since the information in the supplemental data (see Supplemental Currency Data) is used to override the number of decimal places — and the rounding — according to the currency that is being formatted.
+        val formattedNumber = format(number, format.standard, symbols, currency.defaultFractionDigits) // TODO: or use format.accounting ?
+
+        // No.	Replacement / Example
+        // ¤	Standard currency symbol
+        // C$12.00
+        // ¤¤	ISO currency symbol (constant)
+        // CAD 12.00
+        // ¤¤¤	Appropriate currency display name for the currency, based on the plural rules in effect for the locale
+        // 5.00 Canadian dollars
+        // ¤¤¤¤¤	Narrow currency symbol. The same symbols may be used for multiple currencies. Thus the symbol may be ambiguous, and should only be where the context is clear.
+        // $12.00
+        // others	Invalid in current CLDR. Reserved for future specification
+        return if (formattedNumber.contains("¤¤¤¤¤") && currency.symbolVariant != null) {
+            formattedNumber.replace("¤¤¤¤¤", currency.symbolVariant!!)
+        }
+        // TODO: ¤¤¤	Appropriate currency display name for the currency, based on the plural rules in effect for the locale
+        else if (formattedNumber.contains("¤¤")) {
+            formattedNumber.replace("¤¤", currency.alpha3Code)
+        } else {
+            formattedNumber.replaceFirst("¤", currency.symbol ?: "").replace("¤", "")
+        }
+    }
 
 
     /**
@@ -57,7 +102,7 @@ open class NumberFormatter {
      * ‰: "Multiply by 1000 and show as per mille (aka “basis points”)"
      */
     // @VisibleForTesting
-    internal open fun format(number: Number, formatPattern: String, symbols: Symbols, multiplyNumberWith: Int? = null): String {
+    internal open fun format(number: Number, formatPattern: String, symbols: Symbols, countFractionalDigits: Int? = null, multiplyNumberWith: Int? = null): String {
         if (number is Double) {
             if (number.isNaN()) return symbols.nan
             if (number.isInfinite()) {
@@ -72,7 +117,7 @@ open class NumberFormatter {
             }
         }
 
-        val pattern = parsePattern(formatPattern)
+        val pattern = parsePattern(formatPattern, countFractionalDigits)
 
         val numberAsString = roundAndConvertToString(number, pattern, multiplyNumberWith)
 
@@ -144,7 +189,7 @@ open class NumberFormatter {
             abs(number.toLong() * (multiplyNumberWith ?: 1)).toString()
         }
 
-    protected open fun parsePattern(formatPattern: String): NumberFormatPattern {
+    protected open fun parsePattern(formatPattern: String, countFractionalDigits: Int?): NumberFormatPattern {
         val patternIntegerPart = formatPattern.substringBefore('.')
         val minimumIntegerDigits = patternIntegerPart.count { it == '0' }
         val integerNumbersStartIndex = patternIntegerPart.indexOfAny(charArrayOf('0', '#'))
@@ -153,8 +198,8 @@ open class NumberFormatter {
         val stringAfterIntegerPart = patternIntegerPart.substring(integerNumberEndIndex + 1)
 
         val patternFractionPart = formatPattern.substringAfter('.', "")
-        val minimumFractionDigits = patternFractionPart.count { it == '0' }
-        val maximumFractionDigits = patternFractionPart.count { it == '0' || it == '#' }
+        val minimumFractionDigits = countFractionalDigits ?: patternFractionPart.count { it == '0' }
+        val maximumFractionDigits = countFractionalDigits ?: patternFractionPart.count { it == '0' || it == '#' }
 
         val fractionNumbersStartIndex = patternFractionPart.indexOfAny(charArrayOf('0', '#'))
         val fractionNumberEndIndex = patternFractionPart.lastIndexOfAny(charArrayOf('0', '#'))

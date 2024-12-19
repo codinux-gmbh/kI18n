@@ -2,6 +2,7 @@ package net.codinux.i18n.formatter
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
+import net.codinux.i18n.Currency
 import java.text.DecimalFormat
 import java.util.Locale
 import kotlin.random.Random
@@ -83,6 +84,31 @@ class CompareNumberFormatterWithJvmNumberFormatterTest {
             val number = Random.nextDouble(0.0, 0.9999)
 
             assertThat(underTest.formatPercent(number, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
+        }
+    }
+
+
+    @Test
+    fun currency() {
+        val numberFormat = NumberFormats.Germany
+        val jvmNumberFormat = DecimalFormat.getCurrencyInstance(Locale.GERMANY)
+
+        repeat((0..1_000_000).count()) {
+            val number = Random.nextDouble(0.9999)
+
+            assertThat(underTest.formatCurrency(number, Currency.Euro, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
+        }
+    }
+
+    @Test
+    fun negativeCurrency() {
+        val numberFormat = NumberFormats.Germany
+        val jvmNumberFormat = DecimalFormat.getCurrencyInstance(Locale.GERMANY)
+
+        repeat((0..1_000_000).count()) {
+            val number = Random.nextDouble(0.9999)
+
+            assertThat(underTest.formatCurrency(number, Currency.Euro, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
         }
     }
 
