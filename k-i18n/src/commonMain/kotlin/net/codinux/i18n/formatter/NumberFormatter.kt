@@ -2,6 +2,7 @@ package net.codinux.i18n.formatter
 
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.lastIndexOfOrNull
+import kotlin.math.abs
 import kotlin.math.pow
 import kotlin.math.round
 
@@ -60,7 +61,7 @@ open class NumberFormatter {
 
         val numberAsString = roundAndConvertToString(number, pattern)
 
-        val integerPart = formatIntegerPart(numberAsString, pattern, symbols)
+        val integerPart = formatIntegerPart(number, numberAsString, pattern, symbols)
         val fractionPart = formatFractionPart(numberAsString, pattern, symbols)
 
         return if (fractionPart.isBlank()) {
@@ -70,7 +71,7 @@ open class NumberFormatter {
         }
     }
 
-    protected open fun formatIntegerPart(numberAsString: String, pattern: NumberFormatPattern, symbols: Symbols): String {
+    protected open fun formatIntegerPart(number: Number, numberAsString: String, pattern: NumberFormatPattern, symbols: Symbols): String {
         var integerPart = numberAsString.substringBefore('.')
 
         if (pattern.minimumIntegerDigits > 0) {
@@ -80,6 +81,11 @@ open class NumberFormatter {
         if (pattern.groupSize > 0) {
             // TODO: this is not very efficient
             integerPart = integerPart.reversed().chunked(pattern.groupSize).reversed().joinToString(symbols.group) { it.reversed() }
+        }
+
+        // TODO: this is not fully correct, there may be a negative pattern in pattern.pattern
+        if (number.toLong() < 0) {
+            integerPart = "-$integerPart"
         }
 
         return integerPart
@@ -111,9 +117,9 @@ open class NumberFormatter {
             val factor = 10.0.pow(pattern.maximumFractionDigits)
             // seems to be a bug in Java, e.g. 3608856.7365 does not get rounded correctly to 3608856.737, but 3608856.73651 does
             val rounded = round(number.toDouble() * factor) / factor
-            rounded.toString()
+            abs(rounded).toString()
         } else {
-            number.toString()
+            abs(number.toLong()).toString()
         }
 
     protected open fun parsePattern(formatPattern: String): NumberFormatPattern {
