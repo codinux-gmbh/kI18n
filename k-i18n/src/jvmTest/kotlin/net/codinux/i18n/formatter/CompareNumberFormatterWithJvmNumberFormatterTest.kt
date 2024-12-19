@@ -36,4 +36,26 @@ class CompareNumberFormatterWithJvmNumberFormatterTest {
         }
     }
 
+
+    @Test
+    fun notANumber() {
+        val jvmNumberFormat = DecimalFormat.getNumberInstance(Locale.ROOT)
+
+        assertThat(underTest.formatNumber(Double.NaN)).isEqualTo(jvmNumberFormat.format(Double.NaN))
+    }
+
+    @Test
+    fun infinity() {
+        val jvmNumberFormat = DecimalFormat.getNumberInstance(Locale.ROOT)
+
+        assertThat(underTest.formatNumber(Double.POSITIVE_INFINITY)).isEqualTo(jvmNumberFormat.format(Double.POSITIVE_INFINITY))
+    }
+
+    @Test
+    fun negativeInfinity() {
+        val jvmNumberFormat = DecimalFormat.getNumberInstance(Locale.ROOT)
+
+        assertThat(underTest.formatNumber(Double.NEGATIVE_INFINITY)).isEqualTo(jvmNumberFormat.format(Double.NEGATIVE_INFINITY))
+    }
+
 }

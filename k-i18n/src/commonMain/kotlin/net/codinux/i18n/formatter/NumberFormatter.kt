@@ -42,6 +42,20 @@ open class NumberFormatter {
 
     // @VisibleForTesting
     internal open fun formatNumber(number: Number, formatPattern: String, symbols: Symbols): String {
+        if (number is Double) {
+            if (number.isNaN()) return symbols.nan
+            if (number.isInfinite()) {
+                return if (number > 0) return symbols.infinity
+                        else "${symbols.minusSign}${symbols.infinity}"
+            }
+        } else if (number is Float) {
+            if (number.isNaN()) return symbols.nan
+            if (number.isInfinite()) {
+                return if (number > 0) return symbols.infinity
+                else "${symbols.minusSign}${symbols.infinity}"
+            }
+        }
+
         val pattern = parsePattern(formatPattern)
 
         val numberAsString = roundAndConvertToString(number, pattern)
