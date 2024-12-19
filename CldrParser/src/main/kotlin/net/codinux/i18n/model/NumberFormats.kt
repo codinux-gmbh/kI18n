@@ -12,10 +12,10 @@ data class NumberFormats(
 
     val symbols: Map<NumberingSystem, Symbols>,
 
-    val decimalFormats: Map<NumberingSystem, DecimalFormats>,
-    val scientificFormats: Map<NumberingSystem, DecimalFormats>,
-    val percentFormats: Map<NumberingSystem, DecimalFormats>,
-    val currencyFormats: Map<NumberingSystem, DecimalFormats>,
+    val decimalFormats: Map<NumberingSystem, DecimalFormat>,
+    val scientificFormats: Map<NumberingSystem, DecimalFormat>,
+    val percentFormats: Map<NumberingSystem, DecimalFormat>,
+    val currencyFormats: Map<NumberingSystem, CurrencyFormat>,
 
     val miscPatterns: Map<NumberingSystem, MiscPatterns>,
     val minimalPairs: MinimalPairs,
@@ -48,10 +48,16 @@ data class Symbols(
     val groupAltUs: String? = null
 )
 
-data class DecimalFormats(
+data class DecimalFormat(
     val standard: String,
 
-    // TODO: there are also long and short formats
+    // TODO: for decimalFormat - but not for scientific- and percentFormat - there are also long and short formats
+)
+
+data class CurrencyFormat(
+    val standard: String,
+
+    // TODO: there are also short formats
 
     @JsonProperty("standard-noCurrency")
     val standardNoCurrency: String? = null,

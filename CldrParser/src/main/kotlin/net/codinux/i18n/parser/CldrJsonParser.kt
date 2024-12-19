@@ -206,10 +206,10 @@ open class CldrJsonParser(
     private fun mapNumberFormats(numbers: NumberFormatsFileNumbers): NumberFormats {
         val symbols = mapNumbersFormatMap<Symbols>(numbers, "symbols")
 
-        val decimalFormats = mapNumbersFormatMap<DecimalFormats>(numbers, "decimalFormats")
-        val scientificFormats = mapNumbersFormatMap<DecimalFormats>(numbers, "scientificFormats")
-        val percentFormats = mapNumbersFormatMap<DecimalFormats>(numbers, "percentFormats")
-        val currencyFormats = mapNumbersFormatMap<DecimalFormats>(numbers, "currencyFormats")
+        val decimalFormats = mapNumbersFormatMap<DecimalFormat>(numbers, "decimalFormats")
+        val scientificFormats = mapNumbersFormatMap<DecimalFormat>(numbers, "scientificFormats")
+        val percentFormats = mapNumbersFormatMap<DecimalFormat>(numbers, "percentFormats")
+        val currencyFormats = mapNumbersFormatMap<CurrencyFormat>(numbers, "currencyFormats")
 
         val miscPatterns = mapNumbersFormatMap<MiscPatterns>(numbers, "miscPatterns")
 
