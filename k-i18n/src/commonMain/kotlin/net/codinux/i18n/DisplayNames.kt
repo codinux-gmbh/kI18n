@@ -51,7 +51,7 @@ open class DisplayNames {
         } else {
             val parent = language.parent
             if (parent != null) {
-                getForTag(parent)
+                getDisplayNameHierarchically(parent, getForTag)
             } else {
                 null
             }
