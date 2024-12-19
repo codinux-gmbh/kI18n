@@ -19,6 +19,13 @@ class DisplayNamesTest {
     }
 
     @Test
+    fun getLanguageDisplayName_az_Latn_HasLanguagesDefaultScript_ParentCanBeResolvedByLeavingAwayScript() {
+        val result = underTest.getLanguageDisplayName("aa", LanguageTag.ofAvailable("az-Latn"))
+
+        assertThat(result).isEqualTo("afar")
+    }
+
+    @Test
     fun getLanguageDisplayName_ca_ES_valencia() {
         val result = underTest.getLanguageDisplayName("crk", LanguageTag.ofAvailable("ca-ES-valencia"))
 
@@ -55,6 +62,13 @@ class DisplayNamesTest {
         val result = underTest.getRegionDisplayName("YE", LanguageTag.ofAvailable("ar-BH"))
 
         assertThat(result).isEqualTo("اليمن")
+    }
+
+    @Test
+    fun getRegionDisplayName_bs_Latn_HasLanguagesDefaultScript_ParentCanBeResolvedByLeavingAwayScript() {
+        val result = underTest.getRegionDisplayName("002", LanguageTag.ofAvailable("bs-Latn"))
+
+        assertThat(result).isEqualTo("Afrika")
     }
 
     @Test
