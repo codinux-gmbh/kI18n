@@ -403,6 +403,17 @@ class CldrJsonParserTest {
         assertThat(result).hasSize(274)
     }
 
+    @Test
+    fun parseWeekData() {
+        val result = underTest.parseWeekData()
+
+        assertThat(result.minDays).hasSize(49)
+        assertThat(result.firstDay).hasSize(150)
+        assertThat(result.weekendStart).hasSize(19)
+        assertThat(result.weekendEnd).hasSize(17)
+        assertThat(result.weekOfPreference).hasSize(74)
+    }
+
 
     private fun assertUnitDisplayNames(unitNames: UnitsDisplayNamesForLocale) {
         val long = unitNames.long

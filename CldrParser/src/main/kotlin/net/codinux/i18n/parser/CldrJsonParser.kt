@@ -7,6 +7,7 @@ import com.fasterxml.jackson.module.kotlin.treeToValue
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.NumberingSystemType
 import net.codinux.i18n.datetime.HourStyle
+import net.codinux.i18n.datetime.PreferredWeekData
 import net.codinux.i18n.model.*
 import net.codinux.i18n.model.UnitDisplayNames
 import net.codinux.i18n.service.FileSystemUtil
@@ -359,6 +360,28 @@ open class CldrJsonParser(
                 PreferredHourStyle(LanguageTag.parse(locale), preferred, allowed)
             }
         }
+
+    open fun parseWeekData(): PreferredWeekData =
+        objectMapper.readValue<WeekDataFile>(resolveSupplementalPath("weekData.json")).supplemental.weekData.let {
+            PreferredWeekData(mapKeyToRegion(it.minDays), mapKeyToRegion(it.firstDay),
+                mapKeyToRegion(it.weekendStart), mapKeyToRegion(it.weekendEnd),
+                it.weekOfPreference.mapKeys { LanguageTag.parse(it.key) }
+            )
+        }
+
+    private fun <T> mapKeyToRegion(map: Map<String, T>): Map<net.codinux.i18n.Region, T> =
+        map.filter { it.key.contains("-alt-") == false }.mapKeys { regionFor(it.key) }
+
+    private fun <T> mapKeyToLanguage(map: Map<String, T>): Map<net.codinux.i18n.Language, T> =
+        map.filter { it.key.contains("-alt-") == false }.mapKeys { languageFor(it.key) }
+
+    private fun languageFor(languageCode: String): net.codinux.i18n.Language =
+        net.codinux.i18n.Language.entries.firstOrNull { it.isoCode == languageCode }
+            ?: throw IllegalArgumentException("No Language found with ISO code '$languageCode'")
+
+    private fun regionFor(regionCode: String): net.codinux.i18n.Region =
+        net.codinux.i18n.Region.entries.firstOrNull { it.code == regionCode || it.numericCodeAsString == regionCode }
+            ?: throw IllegalArgumentException("No Region found with code '$regionCode'")
 
 
     protected open fun assertLocalSpecificFileStart(localeSpecificFile: LocaleSpecificFileHeader<*>, languageTag: LanguageTag) {
