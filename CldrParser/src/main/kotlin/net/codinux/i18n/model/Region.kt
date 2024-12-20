@@ -63,5 +63,7 @@ data class Region(
      */
     val numeric: Int?
 ) {
+    val code = alpha2Code ?: alpha3Code ?: numeric!!.toString().padStart(3, '0')
+
     override fun toString() = "${alpha2Code ?: alpha3Code}${numeric?.let { " ($it)" } ?: ""}"
 }

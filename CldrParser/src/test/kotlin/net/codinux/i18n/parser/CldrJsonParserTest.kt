@@ -206,6 +206,13 @@ class CldrJsonParserTest {
     }
 
     @Test
+    fun parseAvailableRegions() {
+        val result = underTest.parseAvailableRegions()
+
+        assertThat(result).hasSize(343) // 309 in CodeMappings, additional 34 from TerritoryContainment
+    }
+
+    @Test
     fun parseTerritoryInfo() {
         val result = underTest.parseTerritoryInfo()
 

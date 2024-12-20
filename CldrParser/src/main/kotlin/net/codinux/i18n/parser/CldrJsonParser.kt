@@ -140,6 +140,30 @@ open class CldrJsonParser(
             }
         }
 
+    fun parseAvailableRegions(): List<Region> {
+        val codeMappings = parseRegionCodeMappings()
+        val regionCodesInCodeMappings = codeMappings.map { it.code }
+
+        val territoryContainment = parseTerritoryContainment()
+        val regionCodesInTerritoryContainment = territoryContainment.entries
+            .flatMap { it.value.contains + it.key }.toSet()
+            .filter { it.contains("-status-") == false }
+
+        // the problem is neither regionCodeMappings nor territoryContainment contain all region codes.
+        // regionCodeMappings misses regions with only numeric codes like "World", "WesternAfrica", ...;
+        // territoryContainment not the user assigned codes AA, QM to QZ, XA to XZ, and ZZ, which CLDR uses anyway and
+        // would result in an error in some cases if not available
+        val codesNotInCodeMappings = regionCodesInTerritoryContainment.filter { it !in regionCodesInCodeMappings }
+        val regionsNotInCodeMappings = codesNotInCodeMappings.map { code ->
+            val alpha2Code = code.takeIf { it.length == 2 }
+            val alpha3Code = code.takeIf { it.length == 3 && it.all { it.isUpperCase() } }
+            val numericCode = code.takeIf { it.length == 3 && it.all { it.isDigit() } }
+            Region(alpha2Code, alpha3Code, numericCode?.toInt())
+        }
+
+        return regionsNotInCodeMappings + codeMappings
+    }
+
     fun parseTerritoryInfo(): List<TerritoryInfo> =
         objectMapper.readValue<TerritoriesInfoFile>(resolveSupplementalPath("territoryInfo.json")).let {
             it.supplemental.territoryInfo.map { (isoCode, info) ->

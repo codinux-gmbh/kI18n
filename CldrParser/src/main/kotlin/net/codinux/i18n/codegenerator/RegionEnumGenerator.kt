@@ -17,13 +17,14 @@ class RegionEnumGenerator(
 ) {
 
     fun generate() {
-        val regionCodeMappings = cldrJsonParser.parseRegionCodeMappings()
-        val allRegionsByCode = regionCodeMappings.associateBy { it.code }
+        val allRegions = cldrJsonParser.parseAvailableRegions()
+        val allRegionsByCode = allRegions.associateBy { it.code }
 
         val territorialContainment = cldrJsonParser.parseTerritoryContainment()
         val territorialContainmentByCode = territorialContainment.mapValues { it.value.contains }
 
         val englishRegionNames = cldrJsonParser.parseRegionNamesForLocale(LanguageTag.English)
+        val englishNamesByCode = englishRegionNames.associateBy { it.territoryCode }
 
         val defaultLanguagesAndScripts = LikelySubtagsCategorizer(cldrJsonParser).getDefaultLanguageAndScriptForAllRegions()
             .mapKeys { it.key.code }
@@ -34,7 +35,7 @@ class RegionEnumGenerator(
             .addParameter("alpha3Code", String::class, true, Alpha3CodeKdoc)
             .addParameter("numericCode", Int::class, true, NumericCodeKdoc)
             .addParameter("numericCodeAsString", String::class, true, "The value of [numericCode] as String, padded with zero to three digits.")
-            .addParameter("englishName", String::class, false, "English name of the country or region.")
+            .addParameter("englishName", String::class, true, "English name of the country or region.")
             .addParameter("variantName", String::class, true, "Optional a variant of the English name of the country or region (if available).")
             .addParameter("defaultLanguage", Language::class, true, "Region's default language.")
             .addParameter("defaultScript", Script::class, true, "Region's default script (writing system).")
@@ -43,30 +44,30 @@ class RegionEnumGenerator(
             .build()
 
 
-        val enumConstants = englishRegionNames.map { regionName ->
-            createEnumConstant(regionName, allRegionsByCode[regionName.territoryCode], territorialContainmentByCode, defaultLanguagesAndScripts[regionName.territoryCode])
+        val enumConstants = allRegionsByCode.map { (regionCode, region) ->
+            createEnumConstant(region, englishNamesByCode[regionCode], territorialContainmentByCode, defaultLanguagesAndScripts[regionCode])
         }
 
         util.writeEnumClass("Region", enumConstants, constructor, EnumKdoc)
     }
 
-    private fun createEnumConstant(regionName: TerritoryDisplayNames, region: Region?, territorialContainment: Map<String, List<String>>,
+    private fun createEnumConstant(region: Region, regionName: TerritoryDisplayNames?, territorialContainment: Map<String, List<String>>,
                                    defaultLanguageAndScript: Pair<Language, Script>?): Pair<String, TypeSpec> {
-        val code = regionName.territoryCode
-        val alpha2Code = region?.alpha2Code ?: if (code.length == 2) code else null
-        val alpha3Code = region?.alpha3Code ?: if (code.length == 3 && code.all { it.isLetter() }) code else null
-        val numeric = region?.numeric ?: if (code.length == 3 && code.all { it.isDigit() }) code.toInt() else null
+        val code = region.code
+        val alpha2Code = region.alpha2Code ?: if (code.length == 2) code else null
+        val alpha3Code = region.alpha3Code ?: if (code.length == 3 && code.all { it.isLetter() }) code else null
+        val numeric = region.numeric ?: if (code.length == 3 && code.all { it.isDigit() }) code.toInt() else null
 
         val isContainedIn = territorialContainment.filter { it.value.contains(code) }.map { it.key }.sorted()
 
-        return fixEnumConstantName(regionName) to TypeSpec.anonymousClassBuilder()
+        return fixEnumConstantName(code, regionName) to TypeSpec.anonymousClassBuilder()
             .addSuperclassConstructorParameter("%S", code)
             .addNullableSuperclassConstructorParameter(alpha2Code)
             .addNullableSuperclassConstructorParameter(alpha3Code)
             .addNullableSuperclassConstructorParameter(numeric)
             .addNullableSuperclassConstructorParameter(numeric?.toString()?.padStart(3, '0'))
-            .addNullableSuperclassConstructorParameter(regionName.displayName)
-            .addNullableSuperclassConstructorParameter(regionName.shortDisplayName ?: regionName.variantDisplayName)
+            .addNullableSuperclassConstructorParameter(regionName?.displayName)
+            .addNullableSuperclassConstructorParameter(regionName?.shortDisplayName ?: regionName?.variantDisplayName)
             .addNullableSuperclassConstructorParameter(defaultLanguageAndScript?.first)
             .addNullableSuperclassConstructorParameter(defaultLanguageAndScript?.second)
             .addNullableSuperclassConstructorParameter(isContainedIn)
@@ -74,11 +75,11 @@ class RegionEnumGenerator(
             .build()
     }
 
-    private fun fixEnumConstantName(regionName: TerritoryDisplayNames): String =
-        when (regionName.territoryCode) {
-            "HK", "MO", "PS" -> regionName.shortDisplayName!!
+    private fun fixEnumConstantName(regionCode: String, regionName: TerritoryDisplayNames?): String =
+        when (regionName?.territoryCode ?: regionCode) {
+            "HK", "MO", "PS" -> regionName?.shortDisplayName!!
 
-            else -> when (regionName.displayName) {
+            else -> when (regionName?.displayName) {
                 "world" -> "World"
                 "Congo - Kinshasa" -> "Congo_DemocraticRepublic"
                 "Congo - Brazzaville" -> "Congo"
@@ -86,7 +87,8 @@ class RegionEnumGenerator(
                 "Isle of Man" -> "IsleOfMan"
                 "Tristan da Cunha" -> "TristanDaCunha"
                 else -> {
-                    regionName.displayName.replace("&", "And").replace("St. ", "Saint")
+                    regionName?.displayName?.replace("&", "And")?.replace("St. ", "Saint")
+                        ?: regionCode
                 }
             }
         }
