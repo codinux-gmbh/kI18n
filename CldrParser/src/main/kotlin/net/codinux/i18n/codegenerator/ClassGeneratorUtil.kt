@@ -31,17 +31,17 @@ open class ClassGeneratorUtil {
 //        .joinToString(" ") { it.lowercase().replaceFirstChar { char -> char.uppercase() } }
 
 
-    open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
-        writeClass(className, companionObjectProperties.toList(), companionObjectMethods, modifiers, projectFolder)
+    open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), subPackage: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
+        writeClass(className, companionObjectProperties.toList(), companionObjectMethods, modifiers, subPackage, projectFolder)
 
-    open fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec> = emptyList(), companionObjectMethods: Collection<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
+    open fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec> = emptyList(), companionObjectMethods: Collection<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), subPackage: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
         val type = TypeSpec.objectBuilder(className).apply {
             addModifiers(*modifiers.toTypedArray())
             addFunctions(companionObjectMethods)
             addProperties(companionObjectProperties)
         }.build()
 
-        writeToFile(className, type, projectFolder)
+        writeToFile(className, type, projectFolder, subPackage)
     }
 
 
@@ -83,8 +83,8 @@ open class ClassGeneratorUtil {
     }
 
 
-    open fun writeToFile(fileName: String, type: TypeSpec, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath(), adjustGeneratedCode: ((String) -> String)? = null) {
-        val file = FileSpec.builder("net.codinux.i18n", fileName)
+    open fun writeToFile(fileName: String, type: TypeSpec, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath(), subPackage: String? = null, adjustGeneratedCode: ((String) -> String)? = null) {
+        val file = FileSpec.builder("net.codinux.i18n${subPackage?.let { ".$it" } ?: ""}", fileName)
             .addType(type)
             .build()
 

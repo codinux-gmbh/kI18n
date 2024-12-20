@@ -34,6 +34,9 @@ class ClassesGeneratorApp {
         RegionDisplayNamesClassGenerator().generate()
 
         CurrencyDisplayNamesClassGenerator().generate()
+
+
+        AllLocalizedDateTimeFormatsClassGenerator().generate()
     }
 
 }

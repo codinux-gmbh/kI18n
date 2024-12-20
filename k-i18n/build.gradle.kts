@@ -63,6 +63,8 @@ kotlin {
     applyDefaultHierarchyTemplate()
 
 
+    val kcsvVersion: String by project
+
     val immutableCollectionsVersion: String by project
 
     val klfVersion: String by project
@@ -73,6 +75,8 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             api(project(":k-i18n-data"))
+
+            implementation("net.codinux.csv:kcsv:$kcsvVersion")
 
             implementation("net.codinux.collections:immutable-collections:$immutableCollectionsVersion")
 

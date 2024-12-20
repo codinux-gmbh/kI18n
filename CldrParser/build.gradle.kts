@@ -15,6 +15,8 @@ dependencies {
 
     val apachePoiVersion: String by project
 
+    val kcsvVersion: String by project
+
     val immutableCollectionsVersion: String by project
 
     val klfVersion: String by project
@@ -31,6 +33,8 @@ dependencies {
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
 
     implementation("org.apache.poi:poi-ooxml:$apachePoiVersion")
+
+    implementation("net.codinux.csv:kcsv:$kcsvVersion")
 
     implementation("net.codinux.collections:immutable-collections:$immutableCollectionsVersion")
 

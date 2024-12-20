@@ -156,11 +156,11 @@ data class DateTimeFormatsAtTime(
     val standard: DateOrTimeFormats
 )
 
-data class DateOrTimeFormats(
-    val full: String,
-    val long: String,
-    val medium: String,
-    val short: String,
+class DateOrTimeFormats(
+    full: String,
+    long: String,
+    medium: String,
+    short: String,
 
     /**
      * For day periods, ASCII variants for AM/PM such as “am”, “a.m.”, “am.” (and their case variants) should be
@@ -175,20 +175,20 @@ data class DateOrTimeFormats(
     val longVariant: String? = null,
     val mediumVariant: String? = null,
     val shortVariant: String? = null
-)
+) : net.codinux.i18n.datetime.DateOrTimeFormats(full, long, medium, short)
 
-data class DateTimeFormats(
-    val full: String,
-    val long: String,
-    val medium: String,
-    val short: String,
+class DateTimeFormats(
+    full: String,
+    long: String,
+    medium: String,
+    short: String,
 
     val availableFormats: Map<String, String> = emptyMap(),
 
     val appendItems: Map<String, String> = emptyMap(),
 
     val intervalFormats: IntervalFormats
-)
+) : net.codinux.i18n.datetime.DateOrTimeFormats(full, long, medium, short)
 
 data class IntervalFormats(
     val intervalFormatFallback: String,
