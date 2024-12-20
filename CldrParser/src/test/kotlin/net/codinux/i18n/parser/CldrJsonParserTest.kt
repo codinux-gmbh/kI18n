@@ -184,10 +184,10 @@ class CldrJsonParserTest {
 
 
     @Test
-    fun parseAvailableRegions() {
-        val result = underTest.parseAvailableRegions()
+    fun parseRegionCodeMappings() {
+        val result = underTest.parseRegionCodeMappings()
 
-        assertThat(result).hasSize(492)
+        assertThat(result).hasSize(309)
 
         val alpha2Codes = result.mapNotNull { it.alpha2Code }
         assertThat(alpha2Codes.all { it.length == 2 && it.all { it.isLetter() && it.isUpperCase() } }).isTrue()

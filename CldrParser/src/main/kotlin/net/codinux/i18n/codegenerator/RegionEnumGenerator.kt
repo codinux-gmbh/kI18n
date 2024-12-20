@@ -17,8 +17,8 @@ class RegionEnumGenerator(
 ) {
 
     fun generate() {
-        val allRegions = cldrJsonParser.parseAvailableRegions()
-        val allRegionsByCode = allRegions.associateBy { it.alpha2Code ?: it.alpha3Code ?: it.numeric }
+        val regionCodeMappings = cldrJsonParser.parseRegionCodeMappings()
+        val allRegionsByCode = regionCodeMappings.associateBy { it.code }
 
         val territorialContainment = cldrJsonParser.parseTerritoryContainment()
         val territorialContainmentByCode = territorialContainment.mapValues { it.value.contains }

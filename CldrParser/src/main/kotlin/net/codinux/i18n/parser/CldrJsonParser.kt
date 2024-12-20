@@ -101,19 +101,42 @@ open class CldrJsonParser(
 
 
     /**
-     * There's only one alpha2 ISO code in [parseTerritoryInfo] that [parseAvailableRegions] does not return, "CQ" for
+     * Be aware, CodeMappings contains mappings for Regions AND for Currencies on the same level (who came to that idea?).
+     * The user therefore has to filter the keys if the are two-letter Region- or three letter Currency codes.
+     *
+     * "The code mapping information provides mappings between the subtags used in the CLDR locale IDs (from BCP 47) and
+     * other coding systems or related information. The language codes are only provided for those codes that have two
+     * letters in BCP 47 to their ISO three-letter equivalents. The territory codes provide mappings to numeric (UN M.49
+     * [UNM49] codes, equivalent to ISO numeric codes), ISO three-letter codes, FIPS 10 codes, and the internet top-level
+     * domain codes.
+     *
+     * Where there is no corresponding code, sometimes private use codes are used, such as the numeric code for XK.
+     *
+     * The currencyCodes are mappings from three letter currency codes to numeric values (ISO 4217, see Current currency
+     * & funds code list). The mapping currently covers only current codes and does not include historic currencies."
+     *
+     * The languageCodes information seems to be out of date, i haven't found any language code in current version.
+     * But yes, three-letter codes are for currencies
+     */
+    fun parseCodeMappings(): Map<String, CodeMappingSerialModel> =
+        objectMapper.readValue<CodeMappingsFile>(resolveSupplementalPath("codeMappings.json")).supplemental.codeMappings
+
+    /**
+     * There's only one alpha2 ISO code in [parseTerritoryInfo] that [parseRegionCodeMappings] does not return, "CQ" for
      * "Island of Sark", see [net.codinux.i18n.model.ExceptionalRegionIsoCodes].
      */
-    fun parseAvailableRegions(): List<Region> =
-        objectMapper.readValue<CodeMappingsFile>(resolveSupplementalPath("codeMappings.json")).supplemental.codeMappings.let { codeMappings ->
+    fun parseRegionCodeMappings(): List<Region> =
+        parseCodeMappings().let { codeMappings ->
+            // two letter codes are for regions, three letter codes for currencies
+            val twoLetterRegionCodes = codeMappings.filter { it.key.length == 2 }
+
             val saintHelena = codeMappings["SH"]
 
-            codeMappings.map { (isoCode, properties) ->
-                val isAlpha2 = isoCode.length == 2
+            twoLetterRegionCodes.map { (isoCode, properties) ->
                 // Ascension Island (AC) and Tristan da Cunha (TA) have the same region code as Saint Helena (according to Wikipedia: https://en.wikipedia.org/wiki/ISO_3166-1_numeric), but it isn't set in CLDR
                 // other regions without numeric code: Clipperton Island (CP), Diego Garcia (DG), Ceuta & Melilla (EA) and Canary Islands (IC)
                 val numericCode = if (isoCode == "AC" || isoCode == "TA") saintHelena?.numeric else properties.numeric
-                Region(if (isAlpha2) isoCode else null, if (isAlpha2) properties.alpha3 else isoCode, numericCode)
+                Region(isoCode, properties.alpha3, numericCode)
             }
         }
 
@@ -231,6 +254,14 @@ open class CldrJsonParser(
             it.keyword.u.cu.currencyInfos.map { (name, properties) ->
                 AvailableCurrency(name.uppercase(), properties.description) // here the ISO alpha3 code is in lowercase -> make uppercase to make conform with standard
             }
+        }
+
+    fun parseCurrencyNumericCodes(): Map<String, Int> =
+        parseCodeMappings().let { codeMappings ->
+            // two-letter codes are for regions, three-letter codes for currencies
+            val threeLetterCurrencyCodes = codeMappings.filter { it.key.length == 3 }
+
+            threeLetterCurrencyCodes.mapValues { it.value.numeric!! } // numeric code is a mandatory field for currency codes
         }
 
     fun getLocalesWithLocalizedCurrencies(): List<String> =
