@@ -45,6 +45,54 @@ class DateTimeFormatter {
         return formatted
     }
 
+
+    fun formatTime(time: LocalTime, locale: LanguageTag = LanguageTag.current): String {
+        // TODO: get DateTimeFormat from locale
+        throw NotImplementedError("Retrieved DateTimeFormat from locale is not implemented yet.")
+    }
+
+    fun formatTime(time: LocalTime, format: DateTimeFormat) =
+        formatTime(time, format.dateFormat)
+
+    fun formatTime(time: LocalTime, formatPattern: String): String {
+        val pattern = parsePattern(formatPattern)
+
+        var formatted = pattern.pattern
+
+        if (pattern.hourStyle != null) {
+            val (hour, hourPattern) = when (pattern.hourStyle) {
+                HourStyle.TwelveHoursOneBased -> (if (time.hour == 0 || time.hour == 12) 12 else time.hour % 12).toString() to "h"
+                HourStyle.TwentyFourHoursZeroBased -> time.hour.toString() to "H"
+                HourStyle.TwelveHoursZeroBased -> (time.hour % 12).toString() to "K"
+                HourStyle.TwentyFourHoursOneBased -> (if (time.hour == 0) 24 else time.hour).toString() to "k"
+            }
+
+            formatted = formatted.replace(hourPattern.repeat(pattern.hourMinLength), hour.padStart(pattern.hourMinLength, '0'))
+        }
+
+        if (pattern.minuteMinLength != null) {
+            val minute = time.minute.toString().padStart(pattern.minuteMinLength, '0')
+
+            formatted = formatted.replace("m".repeat(pattern.minuteMinLength), minute)
+        }
+
+        if (pattern.secondMinLength != null) {
+            val second = time.second.toString().padStart(pattern.secondMinLength, '0')
+
+            formatted = formatted.replace("s".repeat(pattern.secondMinLength), second)
+        }
+
+        if (pattern.fractionalSecondLength != null) {
+            val fractionalSecond = time.nanosecondOfSecond.toString().padStart(pattern.fractionalSecondLength, '0')
+                .substring(0, pattern.fractionalSecondLength)
+
+            formatted = formatted.replace("S".repeat(pattern.fractionalSecondLength), fractionalSecond)
+        }
+
+        return formatted
+    }
+
+
     /**
      * All date time format fields are documented here:
      * [https://www.unicode.org/reports/tr35/tr35-73/tr35-dates.html#date-format-patterns](https://www.unicode.org/reports/tr35/tr35-73/tr35-dates.html#date-format-patterns)
@@ -72,13 +120,41 @@ class DateTimeFormatter {
 
         // TODO: also handle D, F and g
         val dayLength = formatPattern.count { it == 'd' }
-        val minDayLength = dayLength.takeIf { it in 1..2 }
+        val dayMinLength = dayLength.takeIf { it in 1..2 }
 
-        // TODO: also handle quarter (Q, q) and week (w, W), and week day (E, e, c
+        // TODO: also handle quarter (Q, q) and week (w, W), and week day (E, e, c)
+
+        // TODO: also handle period (a, b, B)
+
+        // TODO: are j, J and C ever used?
+        val twelveHoursOneBasedLength = formatPattern.count { it == 'h' }
+        val twentyFourHoursZeroBasedLength = formatPattern.count { it == 'H' }
+        val twelveHoursZeroBasedLength = formatPattern.count { it == 'K' }
+        val twentyFourHoursOneBasedLength = formatPattern.count { it == 'k' }
+        val (hourStyle, hourMinLength) = when {
+            twelveHoursOneBasedLength != 0 -> HourStyle.TwelveHoursOneBased to twelveHoursOneBasedLength
+            twentyFourHoursZeroBasedLength != 0 -> HourStyle.TwentyFourHoursZeroBased to twentyFourHoursZeroBasedLength
+            twelveHoursZeroBasedLength != 0 -> HourStyle.TwelveHoursZeroBased to twelveHoursZeroBasedLength
+            twentyFourHoursOneBasedLength != 0 -> HourStyle.TwentyFourHoursOneBased to twentyFourHoursOneBasedLength
+            else -> null to 0
+        }
+
+        val minuteLength = formatPattern.count { it == 'm' }
+        val minuteMinLength = minuteLength.takeIf { it in 1..2 }
+
+        val secondLength = formatPattern.count { it == 's' }
+        val secondMinLength = secondLength.takeIf { it in 1..2 }
+
+        val fractionalSecondLength = formatPattern.count { it == 'S' }.takeUnless { it == 0 }
+
+        // TODO: there's also A (millisconds in a day), but don't know if i ever will support that
+
+        // TODO: also parse zone (z, Z, O, v, V, X)
 
         return DateTimeFormatPattern(
             formatPattern,
-            yearMinLength, yearMaxLength, monthStyle, minDayLength
+            yearMinLength, yearMaxLength, monthStyle, dayMinLength,
+            hourStyle, hourMinLength, minuteMinLength, secondMinLength, fractionalSecondLength
         )
     }
 
