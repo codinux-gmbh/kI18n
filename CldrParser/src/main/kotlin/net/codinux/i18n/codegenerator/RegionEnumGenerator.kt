@@ -18,7 +18,6 @@ class RegionEnumGenerator(
 
     fun generate() {
         val allRegions = cldrJsonParser.parseAvailableRegions()
-        val allRegionsByCode = allRegions.associateBy { it.code }
 
         val territorialContainment = cldrJsonParser.parseTerritoryContainment()
         val territorialContainmentByCode = territorialContainment.mapValues { it.value.contains }
@@ -44,8 +43,13 @@ class RegionEnumGenerator(
             .build()
 
 
-        val enumConstants = allRegionsByCode.map { (regionCode, region) ->
-            createEnumConstant(region, englishNamesByCode[regionCode], territorialContainmentByCode, defaultLanguagesAndScripts[regionCode])
+        val allRegionsSorted = allRegions.sortedBy {
+            // sort regions without alpha code like World, Westernafrika, ... first, then sort by enum name
+            if (it.code.all { it.isDigit() }) it.code else fixEnumConstantName(it.code, englishNamesByCode[it.code])
+        }
+
+        val enumConstants = allRegionsSorted.map { region ->
+            createEnumConstant(region, englishNamesByCode[region.code], territorialContainmentByCode, defaultLanguagesAndScripts[region.code])
         }
 
         util.writeEnumClass("Region", enumConstants, constructor, EnumKdoc)
