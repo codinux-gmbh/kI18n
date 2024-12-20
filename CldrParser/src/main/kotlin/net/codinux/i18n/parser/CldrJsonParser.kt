@@ -1,6 +1,7 @@
 package net.codinux.i18n.parser
 
 import com.fasterxml.jackson.databind.DeserializationFeature
+import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.fasterxml.jackson.module.kotlin.treeToValue
@@ -346,6 +347,40 @@ open class CldrJsonParser(
         )
     }
 
+    fun getLocalesWithLocalizedDateTimeFormats(): List<String> =
+        getLocales(resolvePath("cldr-dates-full/main"), "ca-gregorian.json")
+
+    fun parseDateTimeFormatsForLocale(language: LanguageTag): DateAndTimeFormats =
+        objectMapper.readValue<DateFormatsFile>(resolvePathForLocale("cldr-dates-full/main", language, "ca-gregorian.json")).let {
+            require(it.main.size == 1) {
+                "There must be exactly one entry in ca-gregorian.json main Map with key '${language.tag}' (or one of its parent LanguageTags)."
+            }
+
+            val calendars = it.main.values.first().dates.calendars
+            require(calendars.size == 1) {
+                "There must be exactly one entry calendar entry in ca-gregorian.json main Map with key '${language.tag}' (or one of its parent LanguageTags)."
+            }
+
+            val formats = calendars.values.first()
+
+            DateAndTimeFormats(map(formats.dateFormats), map(formats.dateSkeletons), map(formats.timeFormats), map(formats.timeSkeletons), formats.dateTimeFormats)
+        }
+
+    private fun map(formats: DateOrTimeFormatsSerialModel) = DateOrTimeFormats(
+        formats.full, formats.long, formats.medium, mapShort(formats.short),
+        formats.fullAscii, formats.longAscii, formats.mediumAscii, formats.shortAscii,
+        formats.fullVariant, formats.longVariant, formats.mediumVariant, formats.shortVariant
+    )
+
+    private fun mapShort(short: JsonNode): String =
+        if (short.isTextual) {
+            short.textValue()
+        } else {
+            // hilarious, there's one ca-gregorian.json file (locale: haw), that does not set short to a string but to an object:
+            // { "_value":"", "_number":"" }
+            // i decided to ignore the different numbers
+            short.get("_value").textValue()
+        }
 
     open fun parseTimeData(): List<PreferredHourStyle> =
         objectMapper.readValue<TimeDataFile>(resolveSupplementalPath("timeData.json")).supplemental.timeData.let {

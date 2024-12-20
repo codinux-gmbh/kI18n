@@ -4,6 +4,7 @@ import assertk.assertThat
 import assertk.assertions.*
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.Region
+import net.codinux.i18n.model.DateAndTimeFormats
 import net.codinux.i18n.model.UnitsDisplayNamesForLocale
 import org.junit.jupiter.api.assertThrows
 import kotlin.test.Test
@@ -414,6 +415,31 @@ class CldrJsonParserTest {
         assertThat(result.weekOfPreference).hasSize(74)
     }
 
+    @Test
+    fun getLocalesWithLocalizedDateTimeFormats() {
+        val result = underTest.getLocalesWithLocalizedDateTimeFormats()
+
+        assertThat(result).hasSize(CountAvailableLocales)
+    }
+
+    @Test
+    fun parseDateTimeFormatsForLocale() {
+        val result = underTest.parseDateTimeFormatsForLocale(LanguageTag.English)
+
+        assertDateAndTimeFormats(result)
+    }
+
+    @Test
+    fun parseAllDateTimeFormats() {
+        val locales = underTest.getLocalesWithLocalizedDateTimeFormats().map { LanguageTag.ofAvailable(it) }
+
+        val allDateTimeFormats = locales.associateWith { underTest.parseDateTimeFormatsForLocale(it) }
+
+        for (format in allDateTimeFormats) {
+            assertDateAndTimeFormats(format.value)
+        }
+    }
+
 
     private fun assertUnitDisplayNames(unitNames: UnitsDisplayNamesForLocale) {
         val long = unitNames.long
@@ -439,6 +465,12 @@ class CldrJsonParserTest {
         assertThat(long.coordinates).isNotNull()
         assertThat(short.coordinates).isNotNull()
         assertThat(narrow.coordinates).isNotNull()
+    }
+
+    private fun assertDateAndTimeFormats(formats: DateAndTimeFormats) {
+        assertThat(formats.dateTimeFormats.appendItems).isNotEmpty()
+        assertThat(formats.dateTimeFormats.availableFormats).isNotEmpty()
+        assertThat(formats.dateTimeFormats.intervalFormats.formats).isNotEmpty()
     }
 
 }
