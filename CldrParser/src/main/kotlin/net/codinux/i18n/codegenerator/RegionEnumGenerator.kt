@@ -58,7 +58,8 @@ class RegionEnumGenerator(
         val alpha3Code = region.alpha3Code ?: if (code.length == 3 && code.all { it.isLetter() }) code else null
         val numeric = region.numeric ?: if (code.length == 3 && code.all { it.isDigit() }) code.toInt() else null
 
-        val isContainedIn = territorialContainment.filter { it.value.contains(code) }.map { it.key }.sorted()
+        val isContainedIn = territorialContainment.filter { it.value.contains(code) }.map { it.key }
+            .filter { it.contains("-status-") == false }.sorted()
 
         return fixEnumConstantName(code, regionName) to TypeSpec.anonymousClassBuilder()
             .addSuperclassConstructorParameter("%S", code)
