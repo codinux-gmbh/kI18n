@@ -16,11 +16,20 @@ data class DateFormatsDates(
 )
 
 data class DateFormatsForCalendar(
+    val months: AllDisplayNames<MonthDisplayNames>,
+    val days: AllDisplayNames<DayDisplayNames>,
+    val quarters: AllDisplayNames<QuarterDisplayNames>,
+    val dayPeriods: AllDisplayNames<DayPeriodDisplayNames>,
+    // remark: has nothing to do with Taylor Swift tour
+    val eras: AllEraDisplayNames,
+
     val dateFormats: DateOrTimeFormatsSerialModel,
     val dateSkeletons: DateOrTimeFormatsSerialModel,
     val timeFormats: DateOrTimeFormatsSerialModel,
     val timeSkeletons: DateOrTimeFormatsSerialModel,
-    val dateTimeFormats: DateTimeFormats
+    val dateTimeFormats: DateTimeFormats,
+    @JsonProperty("dateTimeFormats-atTime")
+    val dateTimeFormatsAtTime: DateTimeFormatsAtTime
 )
 
 data class DateOrTimeFormatsSerialModel(

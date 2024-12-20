@@ -7,6 +7,7 @@ import net.codinux.i18n.Region
 import net.codinux.i18n.model.DateAndTimeFormats
 import net.codinux.i18n.model.UnitsDisplayNamesForLocale
 import org.junit.jupiter.api.assertThrows
+import kotlin.test.Ignore
 import kotlin.test.Test
 
 class CldrJsonParserTest {
@@ -440,6 +441,29 @@ class CldrJsonParserTest {
         }
     }
 
+    @Ignore // not a test, just to take a look at all available formats in debugger
+    @Test
+    fun evaluateDateTimeFormats() {
+        val locales = underTest.getLocalesWithLocalizedDateTimeFormats().map { LanguageTag.ofAvailable(it) }
+
+        val parsedFormats = locales.associateWith { underTest.parseDateTimeFormatsForLocale(it) }
+
+        val allDateFormats = parsedFormats.values.map { it.dateFormats }.flatMap { setOf(it.full, it.long, it.medium, it.short, it.fullAscii, it.longAscii, it.mediumAscii, it.shortAscii) }.toSet()
+        val allDateSkeletons = parsedFormats.values.map { it.dateSkeletons }.flatMap { setOf(it.full, it.long, it.medium, it.short, it.fullAscii, it.longAscii, it.mediumAscii, it.shortAscii) }.toSet()
+        val allTimeFormats = parsedFormats.values.map { it.timeFormats }.flatMap { setOf(it.full, it.long, it.medium, it.short, it.fullAscii, it.longAscii, it.mediumAscii, it.shortAscii) }.toSet()
+        val allTimeSkeletons = parsedFormats.values.map { it.timeSkeletons }.flatMap { setOf(it.full, it.long, it.medium, it.short, it.fullAscii, it.longAscii, it.mediumAscii, it.shortAscii) }.toSet()
+        val allDateTimeFormats = parsedFormats.values.map { it.dateTimeFormats }.flatMap { setOf(it.full, it.long, it.medium, it.short) }.toSet()
+        val allDates = (allDateFormats + allDateSkeletons + allDateTimeFormats).toSet().filterNotNull()
+        val allTimes = (allTimeFormats + allTimeSkeletons + allDateTimeFormats).toSet().filterNotNull()
+        val all = (allDates + allTimes).toSet()
+
+        val availableFormats = parsedFormats.values.map { it.dateTimeFormats }.flatMap { it.availableFormats.values }.toSet()
+        val intervalFormats = parsedFormats.values.map { it.dateTimeFormats }.flatMap { it.intervalFormats.formats.values.flatMap { it.values } }.toSet()
+        val allIncludingAvailableFormats = (all + availableFormats + intervalFormats).toSet()
+
+        if (allIncludingAvailableFormats.isNotEmpty()) { } // to be able to set breakpoint here
+    }
+
 
     private fun assertUnitDisplayNames(unitNames: UnitsDisplayNamesForLocale) {
         val long = unitNames.long
@@ -468,6 +492,9 @@ class CldrJsonParserTest {
     }
 
     private fun assertDateAndTimeFormats(formats: DateAndTimeFormats) {
+        assertThat(formats.days.format.short).isNotNull()
+        assertThat(formats.days.standAlone.short).isNotNull()
+
         assertThat(formats.dateTimeFormats.appendItems).isNotEmpty()
         assertThat(formats.dateTimeFormats.availableFormats).isNotEmpty()
         assertThat(formats.dateTimeFormats.intervalFormats.formats).isNotEmpty()

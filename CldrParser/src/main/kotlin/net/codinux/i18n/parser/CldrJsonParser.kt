@@ -350,6 +350,8 @@ open class CldrJsonParser(
     fun getLocalesWithLocalizedDateTimeFormats(): List<String> =
         getLocales(resolvePath("cldr-dates-full/main"), "ca-gregorian.json")
 
+    // TODO: may also parse dateFields.json, it contains translations like for day, week, month, year, quarter, week day, yesterday, hour, minute, second, time zone, ..
+
     fun parseDateTimeFormatsForLocale(language: LanguageTag): DateAndTimeFormats =
         objectMapper.readValue<DateFormatsFile>(resolvePathForLocale("cldr-dates-full/main", language, "ca-gregorian.json")).let {
             require(it.main.size == 1) {
@@ -363,7 +365,10 @@ open class CldrJsonParser(
 
             val formats = calendars.values.first()
 
-            DateAndTimeFormats(map(formats.dateFormats), map(formats.dateSkeletons), map(formats.timeFormats), map(formats.timeSkeletons), formats.dateTimeFormats)
+            DateAndTimeFormats(formats.months, formats.days, formats.quarters, formats.dayPeriods, formats.eras,
+                map(formats.dateFormats), map(formats.dateSkeletons), map(formats.timeFormats), map(formats.timeSkeletons),
+                formats.dateTimeFormats, formats.dateTimeFormatsAtTime
+            )
         }
 
     private fun map(formats: DateOrTimeFormatsSerialModel) = DateOrTimeFormats(
