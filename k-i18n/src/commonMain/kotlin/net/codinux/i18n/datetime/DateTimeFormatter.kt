@@ -61,10 +61,12 @@ class DateTimeFormatter {
 
         if (pattern.hourStyle != null) {
             val (hour, hourPattern) = when (pattern.hourStyle) {
-                HourStyle.TwelveHoursOneBased -> (if (time.hour == 0 || time.hour == 12) 12 else time.hour % 12).toString() to "h"
-                HourStyle.TwentyFourHoursZeroBased -> time.hour.toString() to "H"
-                HourStyle.TwelveHoursZeroBased -> (time.hour % 12).toString() to "K"
-                HourStyle.TwentyFourHoursOneBased -> (if (time.hour == 0) 24 else time.hour).toString() to "k"
+                // TODO: append am, pm
+                HourStyle.TwelveHourStart1, HourStyle.TwelveHourStart1_NoonAndMidght, HourStyle.TwelveHourStart1_FlexibleDayPeriods
+                    -> (if (time.hour == 0 || time.hour == 12) 12 else time.hour % 12).toString() to "h"
+                HourStyle.TwentyFourHourStart0 -> time.hour.toString() to "H"
+                HourStyle.TwelveHourStart0 -> (time.hour % 12).toString() to "K"
+                HourStyle.TwentyFourHourStart1 -> (if (time.hour == 0) 24 else time.hour).toString() to "k"
             }
 
             formatted = formatted.replace(hourPattern.repeat(pattern.hourMinLength), hour.padStart(pattern.hourMinLength, '0'))
@@ -132,10 +134,10 @@ class DateTimeFormatter {
         val twelveHoursZeroBasedLength = formatPattern.count { it == 'K' }
         val twentyFourHoursOneBasedLength = formatPattern.count { it == 'k' }
         val (hourStyle, hourMinLength) = when {
-            twelveHoursOneBasedLength != 0 -> HourStyle.TwelveHoursOneBased to twelveHoursOneBasedLength
-            twentyFourHoursZeroBasedLength != 0 -> HourStyle.TwentyFourHoursZeroBased to twentyFourHoursZeroBasedLength
-            twelveHoursZeroBasedLength != 0 -> HourStyle.TwelveHoursZeroBased to twelveHoursZeroBasedLength
-            twentyFourHoursOneBasedLength != 0 -> HourStyle.TwentyFourHoursOneBased to twentyFourHoursOneBasedLength
+            twelveHoursOneBasedLength != 0 -> HourStyle.TwelveHourStart1 to twelveHoursOneBasedLength
+            twentyFourHoursZeroBasedLength != 0 -> HourStyle.TwentyFourHourStart0 to twentyFourHoursZeroBasedLength
+            twelveHoursZeroBasedLength != 0 -> HourStyle.TwelveHourStart0 to twelveHoursZeroBasedLength
+            twentyFourHoursOneBasedLength != 0 -> HourStyle.TwentyFourHourStart1 to twentyFourHoursOneBasedLength
             else -> null to 0
         }
 

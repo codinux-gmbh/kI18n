@@ -389,6 +389,14 @@ class CldrJsonParserTest {
     }
 
 
+    @Test
+    fun parseTimeData() {
+        val result = underTest.parseTimeData()
+
+        assertThat(result).hasSize(274)
+    }
+
+
     private fun assertUnitDisplayNames(unitNames: UnitsDisplayNamesForLocale) {
         val long = unitNames.long
         val short = unitNames.short

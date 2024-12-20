@@ -6,6 +6,7 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import com.fasterxml.jackson.module.kotlin.treeToValue
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.NumberingSystemType
+import net.codinux.i18n.datetime.HourStyle
 import net.codinux.i18n.model.*
 import net.codinux.i18n.model.UnitDisplayNames
 import net.codinux.i18n.service.FileSystemUtil
@@ -104,7 +105,7 @@ open class CldrJsonParser(
      * "Island of Sark", see [net.codinux.i18n.model.ExceptionalRegionIsoCodes].
      */
     fun parseAvailableRegions(): List<Region> =
-        objectMapper.readValue<CodeMappingsFile>(resolvePath("cldr-core/supplemental/codeMappings.json")).supplemental.codeMappings.let { codeMappings ->
+        objectMapper.readValue<CodeMappingsFile>(resolveSupplementalPath("codeMappings.json")).supplemental.codeMappings.let { codeMappings ->
             val saintHelena = codeMappings["SH"]
 
             codeMappings.map { (isoCode, properties) ->
@@ -117,7 +118,7 @@ open class CldrJsonParser(
         }
 
     fun parseTerritoryInfo(): List<TerritoryInfo> =
-        objectMapper.readValue<TerritoriesInfoFile>(resolvePath("cldr-core/supplemental/territoryInfo.json")).let {
+        objectMapper.readValue<TerritoriesInfoFile>(resolveSupplementalPath("territoryInfo.json")).let {
             it.supplemental.territoryInfo.map { (isoCode, info) ->
                 TerritoryInfo(isoCode, info.gdp, info.literacyPercent, info.population, info.languagePopulation.map { (lang, population) ->
                     LanguagePopulation(lang, population.populationPercent, population.officialStatus, population.writingPercent)
@@ -126,7 +127,7 @@ open class CldrJsonParser(
         }
 
     fun parseTerritoryContainment(): Map<String, TerritoryContainment> =
-        objectMapper.readValue<TerritoryContainmentFile>(resolvePath("cldr-core/supplemental/territoryContainment.json")).let {
+        objectMapper.readValue<TerritoryContainmentFile>(resolveSupplementalPath("territoryContainment.json")).let {
             it.supplemental.territoryContainment
         }
 
@@ -184,7 +185,7 @@ open class CldrJsonParser(
 
 
     fun parseNumberingSystems(): List<NumberingSystem> =
-        objectMapper.readValue<NumberingSystemsFile>(resolvePath("cldr-core/supplemental/numberingSystems.json"))
+        objectMapper.readValue<NumberingSystemsFile>(resolveSupplementalPath("numberingSystems.json"))
             .supplemental.numberingSystems.map { (code, numberingSystem) ->
                 val type = NumberingSystemType.valueOf(numberingSystem.type.replaceFirstChar { it.uppercase() })
                 NumberingSystem(code, type, numberingSystem.digits, numberingSystem.rules)
@@ -249,7 +250,7 @@ open class CldrJsonParser(
 
 
     fun parseUnits(): Units =
-        objectMapper.readValue<UnitsFile>(resolvePath("cldr-core/supplemental/units.json")).supplemental.let { units ->
+        objectMapper.readValue<UnitsFile>(resolveSupplementalPath("units.json")).supplemental.let { units ->
             Units(
                 units.unitPrefixes.map { UnitPrefix(it.key, it.value.symbol, it.value.power10, it.value.power2) },
                 units.unitConstants.map { UnitConstant(it.key, it.value.value, it.value.description, it.value.status == "approximate") },
@@ -287,6 +288,22 @@ open class CldrJsonParser(
             displayNames.unitPattern["coordinateUnit"]?.let { CoordinatesDisplayNames(it.west!!, it.north!!, it.east!!, it.south!!) }
         )
     }
+
+
+    open fun parseTimeData(): List<PreferredHourStyle> =
+        objectMapper.readValue<TimeDataFile>(resolveSupplementalPath("timeData.json")).supplemental.timeData.let {
+            it.map { (regionCode, timeData) ->
+                // Also note that the regions allows either region codes (001, JP) or locale IDs (gu_IN).
+                val isRegion = regionCode.substring(0, 2).all { it.isUpperCase() } || regionCode.substring(0, 2).all { it.isDigit() }
+                val locale = if (isRegion) "und-$regionCode" else regionCode
+
+                // encountered values: h, H, hB, hb, K
+                val preferred = HourStyle.entries.first { it.fieldSymbol == timeData.preferred }
+                val allowed = timeData.allowed.split(' ').map { hourStyle -> HourStyle.entries.first { it.fieldSymbol == hourStyle } }
+
+                PreferredHourStyle(LanguageTag.parse(locale), preferred, allowed)
+            }
+        }
 
 
     protected open fun assertLocalSpecificFileStart(localeSpecificFile: LocaleSpecificFileHeader<*>, languageTag: LanguageTag) {
@@ -335,6 +352,9 @@ open class CldrJsonParser(
 
         throw IllegalArgumentException("Cannot find directory for LanguageTag '${locale.tag} in '${baseDirectory.absolutePath}")
     }
+
+    protected open fun resolveSupplementalPath(filename: String): File =
+        resolvePath("cldr-core/supplemental/$filename")
 
     protected open fun resolvePath(subPath: String): File =
         cldrJsonBaseDir.resolve("cldr-json").resolve(subPath).toFile()
