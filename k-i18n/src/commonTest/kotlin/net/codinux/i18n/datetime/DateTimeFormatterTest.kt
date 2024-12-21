@@ -2,6 +2,7 @@ package net.codinux.i18n.datetime
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
+import assertk.assertions.isEqualToWithGivenProperties
 import net.codinux.i18n.LanguageTag
 import kotlin.test.Test
 
@@ -12,6 +13,7 @@ class DateTimeFormatterTest {
 
         private val Date1DigitMonthAndDay = LocalDate(2017, 8, 6)
 
+        private val Time = LocalTime(9, 5)
         private val StartOfDay = LocalTime.StartOfDay
         private val Noon = LocalTime.Noon
         private val EndOfDay = LocalTime.EndOfDay
@@ -29,10 +31,24 @@ class DateTimeFormatterTest {
     }
 
     @Test
+    fun date_LongEnglishDate() {
+        val result = underTest.formatDate(Date1DigitMonthAndDay, FormatStyle.Long, LanguageTag.English)
+
+        assertThat(result).isEqualTo("August 6, 2017")
+    }
+
+    @Test
     fun date_MediumGermanDate() {
-        val result = underTest.formatDate(Date1DigitMonthAndDay, "dd.MM.yyyy")
+        val result = underTest.formatDate(Date1DigitMonthAndDay, FormatStyle.Medium, LanguageTag.German)
 
         assertThat(result).isEqualTo("06.08.2017")
+    }
+
+    @Test
+    fun date_ShortEnglishDate() {
+        val result = underTest.formatDate(Date1DigitMonthAndDay, FormatStyle.Short, LanguageTag.English)
+
+        assertThat(result).isEqualTo("8/6/17")
     }
 
     @Test
@@ -62,6 +78,28 @@ class DateTimeFormatterTest {
         val result = underTest.formatDate(Date, "MMMMM")
 
         assertThat(result).isEqualTo("O")
+    }
+
+
+    @Test
+    fun time_isoLocalTime() {
+        val result = underTest.formatTime(EndOfDay, DateTimeFormat.IsoLocalTimePattern)
+
+        assertThat(result).isEqualTo("23:59:59.999999999")
+    }
+
+    @Test
+    fun time_MediumGermanTime() {
+        val result = underTest.formatTime(Time, FormatStyle.Medium, LanguageTag.German)
+
+        assertThat(result).isEqualTo("09:05:00")
+    }
+
+    @Test
+    fun time_ShortEnglishTime() {
+        val result = underTest.formatTime(Time, FormatStyle.Short, LanguageTag.English)
+
+        assertThat(result).isEqualToWithGivenProperties("9:05 AM")
     }
 
 
@@ -232,14 +270,6 @@ class DateTimeFormatterTest {
         val result = underTest.formatTime(Noon, "hh:mm aaaaa", LanguageTag.English)
 
         assertThat(result).isEqualTo("12:00 p")
-    }
-
-
-    @Test
-    fun time_isoLocalTime() {
-        val result = underTest.formatTime(EndOfDay, DateTimeFormat.IsoLocalTimePattern)
-
-        assertThat(result).isEqualTo("23:59:59.999999999")
     }
 
 }

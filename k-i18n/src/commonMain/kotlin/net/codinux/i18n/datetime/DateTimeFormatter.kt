@@ -2,13 +2,40 @@ package net.codinux.i18n.datetime
 
 import net.codinux.i18n.LanguageTag
 
+/**
+ * An evaluation of all gregorian default date time formats in CLDR (not regarding dateTimeFormats.availableFormats and .intervalFormats):
+ * - Only a few contain G, none, GG, GGG, GGGG or GGGGG (era)
+ * - None contained u (Extended year (numeric))
+ * - None contained U (cyclic year name)
+ * - None contained r (Related Gregorian year (numeric))
+ * - None contained Q+ (Quarter)
+ * - None contained q+ (Quarter Stand-alone)
+ * - None contained MMMMM (month narrow)
+ * - None contained L+ (month Stand-alone)
+ * - None contained w (Week of year)
+ * - None contained W (Week of month)
+ * - None contained D+ (day of year)
+ * - None contained F (day of week in month)
+ * - None contained g+ (Modified Julian day (numeric))
+ * - None contained EEEEE+ (Day of week name narrow and short)
+ * - None contained e (local day of week)
+ * - Only three contained cccc, none c, cc, ccc, ccccc or cccccc (local day of week Stand-alone)
+ * - None contained aa+, only a (AM, PM)
+ * - None contained b (am, pm, noon, midnight)
+ * - 8 contained B, none BB+ (flexible day periods; but it's up to application if these are supported or not)
+ * - None contained k, K, j, J, C (obvious by definition / regarded formats)
+ * - None contained A (Milliseconds in a day (numeric))
+ * - None contained Z, O, v, V, X, x (zone information)
+ */
 class DateTimeFormatter(
+    private val formatsResolver: LocalizedDateTimeFormatsResolver = LocalizedDateTimeFormatsResolver(),
     private val displayNamesResolver: DateTimeDisplayNamesResolver = DateTimeDisplayNamesResolver()
 ) {
 
-    fun formatDate(date: LocalDate, locale: LanguageTag = LanguageTag.current): String {
-        // TODO: get DateTimeFormat from locale
-        throw NotImplementedError("Retrieved DateTimeFormat from locale is not implemented yet.")
+    fun formatDate(date: LocalDate, style: FormatStyle, locale: LanguageTag = LanguageTag.current): String {
+        val formats = formatsResolver.getDateTimeFormatsForLocale(locale)
+
+        return formatDate(date, selectFormat(formats.dateFormats, style), locale)
     }
 
     /**
@@ -68,9 +95,10 @@ class DateTimeFormatter(
     }
 
 
-    fun formatTime(time: LocalTime, locale: LanguageTag = LanguageTag.current): String {
-        // TODO: get DateTimeFormat from locale
-        throw NotImplementedError("Retrieved DateTimeFormat from locale is not implemented yet.")
+    fun formatTime(time: LocalTime, style: FormatStyle, locale: LanguageTag = LanguageTag.current): String {
+        val formats = formatsResolver.getDateTimeFormatsForLocale(locale)
+
+        return formatTime(time, selectFormat(formats.timeFormats, style), locale)
     }
 
     /**
@@ -240,6 +268,14 @@ class DateTimeFormatter(
             dayPeriodStyle, dayPeriodLength, alsoFormatNoonAndMidnight,
             hourStyle, hourMinLength, minuteMinLength, secondMinLength, fractionalSecondLength
         )
+    }
+
+
+    private fun selectFormat(formats: DateOrTimeFormats, style: FormatStyle): String = when (style) {
+        FormatStyle.Full -> formats.full
+        FormatStyle.Long -> formats.long
+        FormatStyle.Medium -> formats.medium
+        FormatStyle.Short -> formats.short
     }
 
 }
