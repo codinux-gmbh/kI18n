@@ -1,6 +1,7 @@
 package net.codinux.i18n.datetime
 
 import assertk.assertThat
+import assertk.assertions.isEqualTo
 import assertk.assertions.isNotEmpty
 import assertk.assertions.isNotNull
 import net.codinux.i18n.LanguageTag
@@ -9,6 +10,15 @@ import kotlin.test.Test
 class DateTimeDisplayNamesResolverTest {
 
     private val underTest = DateTimeDisplayNamesResolver()
+
+
+    @Test
+    fun ast_Standalone_Months() {
+        val result = underTest.getLocalizedStandaloneDisplayNames(LanguageTag.ofAvailable("ast"))
+
+        assertThat(result).isNotNull()
+        assertThat(result!!.months.wide.january).isEqualTo("xineru")
+    }
 
 
     @Test

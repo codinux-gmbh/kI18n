@@ -25,13 +25,13 @@ data class MonthDisplayNames(
 
 data class DayDisplayNames(
     // this name mappings are only valid for gregorian calendar. Other calendars may also have more or less days
-    val sunday: String,
     val monday: String,
     val tuesday: String,
     val wednesday: String,
     val thursday: String,
     val friday: String,
-    val saturday: String
+    val saturday: String,
+    val sunday: String,
 )
 
 data class QuarterDisplayNames(

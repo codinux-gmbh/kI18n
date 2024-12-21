@@ -10,7 +10,7 @@ class DateTimeDisplayNamesResolver {
         const val CsvFormatsSeparator = '|'
     }
 
-    private val csvReader = CsvReader(CsvFormatsSeparator, reuseRowInstance = true)
+    private val csvReader = CsvReader(CsvFormatsSeparator)
 
 
     fun getLocalizedFormatDisplayNames(locale: LanguageTag): DateTimeDisplayNames? =
@@ -20,7 +20,7 @@ class DateTimeDisplayNamesResolver {
 
     fun getLocalizedStandaloneDisplayNames(locale: LanguageTag): DateTimeDisplayNames? =
         resolve(locale) {
-            AvailableDateTimeDisplayNames.getLocalizedFormatDisplayNames(it.tag)
+            AvailableDateTimeDisplayNames.getLocalizedStandaloneDisplayNames(it.tag)
         }
 
     private fun resolve(locale: LanguageTag, getDisplayNames: (LanguageTag) -> DateTimeDisplayNamesLookup): DateTimeDisplayNames? {

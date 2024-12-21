@@ -9,7 +9,7 @@ class LocalizedDateTimeFormatsResolver {
         const val CsvFormatsSeparator = '|'
     }
 
-    private val csvReader = CsvReader(CsvFormatsSeparator, reuseRowInstance = true)
+    private val csvReader = CsvReader(CsvFormatsSeparator)
 
 
     fun getDateTimeFormatsForLocale(locale: LanguageTag): LocalizedDateTimeFormats? {

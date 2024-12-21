@@ -71,7 +71,7 @@ object AvailableDateTimeDisplayNames {
       "Januarie|Februarie|Maart|April|Mei|Junie|Julie|Augustus|September|Oktober|November|Desember\r\nJan.|Feb.|Mrt.|Apr.|Mei|Jun.|Jul.|Aug.|Sep.|Okt.|Nov.|Des.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val af_Format_Days: String =
-      "Maandag|Dinsdag|Woensdag|Donderdag|Vrydag|Saterdag|Sondag\r\nMa.|Di.|Wo.|Do.|Vr.|Sa.|So.\r\nM|D|W|D|V|S|S\r"
+      "Maandag|Dinsdag|Woensdag|Donderdag|Vrydag|Saterdag|Sondag\r\nMa.|Di.|Wo.|Do.|Vr.|Sa.|So.\r\nM|D|W|D|V|S|S\r\nMa.|Di.|Wo.|Do.|Vr.|Sa.|So.\r"
 
   private const val af_Format_Quarters: String =
       "1ste kwartaal|2de kwartaal|3de kwartaal|4de kwartaal\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -83,7 +83,7 @@ object AvailableDateTimeDisplayNames {
       "Januarie|Februarie|Maart|April|Mei|Junie|Julie|Augustus|September|Oktober|November|Desember\r\nJan.|Feb.|Mrt.|Apr.|Mei|Jun.|Jul.|Aug.|Sep.|Okt.|Nov.|Des.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val af_Standalone_Days: String =
-      "Maandag|Dinsdag|Woensdag|Donderdag|Vrydag|Saterdag|Sondag\r\nMa.|Di.|Wo.|Do.|Vr.|Sa.|So.\r\nM|D|W|D|V|S|S\r"
+      "Maandag|Dinsdag|Woensdag|Donderdag|Vrydag|Saterdag|Sondag\r\nMa.|Di.|Wo.|Do.|Vr.|Sa.|So.\r\nM|D|W|D|V|S|S\r\nMa.|Di.|Wo.|Do.|Vr.|Sa.|So.\r"
 
   private const val af_Standalone_Quarters: String =
       "1ste kwartaal|2de kwartaal|3de kwartaal|4de kwartaal\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -111,7 +111,7 @@ object AvailableDateTimeDisplayNames {
       "ndzɔ̀ŋɔ̀nùm|ndzɔ̀ŋɔ̀kƗ̀zùʔ|ndzɔ̀ŋɔ̀tƗ̀dʉ̀ghà|ndzɔ̀ŋɔ̀tǎafʉ̄ghā|ndzɔ̀ŋèsèe|ndzɔ̀ŋɔ̀nzùghò|ndzɔ̀ŋɔ̀dùmlo|ndzɔ̀ŋɔ̀kwîfɔ̀e|ndzɔ̀ŋɔ̀tƗ̀fʉ̀ghàdzughù|ndzɔ̀ŋɔ̀ghǔuwelɔ̀m|ndzɔ̀ŋɔ̀chwaʔàkaa wo|ndzɔ̀ŋèfwòo\r\nnùm|kɨz|tɨd|taa|see|nzu|dum|fɔe|dzu|lɔm|kaa|fwo\r\nn|k|t|t|s|z|k|f|d|l|c|f\r"
 
   private const val agq_Format_Days: String =
-      "tsuʔukpà|tsuʔughɔe|tsuʔutɔ̀mlò|tsuʔumè|tsuʔughɨ̂m|tsuʔndzɨkɔʔɔ|tsuʔntsɨ\r\nkpa|ghɔ|tɔm|ume|ghɨ|dzk|nts\r\nk|g|t|u|g|d|n\r"
+      "tsuʔukpà|tsuʔughɔe|tsuʔutɔ̀mlò|tsuʔumè|tsuʔughɨ̂m|tsuʔndzɨkɔʔɔ|tsuʔntsɨ\r\nkpa|ghɔ|tɔm|ume|ghɨ|dzk|nts\r\nk|g|t|u|g|d|n\r\nkpa|ghɔ|tɔm|ume|ghɨ|dzk|nts\r"
 
   private const val agq_Format_Quarters: String =
       "kɨbâ kɨ 1|ugbâ u 2|ugbâ u 3|ugbâ u 4\r\nkɨbâ kɨ 1|ugbâ u 2|ugbâ u 3|ugbâ u 4\r\n1|2|3|4\r"
@@ -122,7 +122,7 @@ object AvailableDateTimeDisplayNames {
       "ndzɔ̀ŋɔ̀nùm|ndzɔ̀ŋɔ̀kƗ̀zùʔ|ndzɔ̀ŋɔ̀tƗ̀dʉ̀ghà|ndzɔ̀ŋɔ̀tǎafʉ̄ghā|ndzɔ̀ŋèsèe|ndzɔ̀ŋɔ̀nzùghò|ndzɔ̀ŋɔ̀dùmlo|ndzɔ̀ŋɔ̀kwîfɔ̀e|ndzɔ̀ŋɔ̀tƗ̀fʉ̀ghàdzughù|ndzɔ̀ŋɔ̀ghǔuwelɔ̀m|ndzɔ̀ŋɔ̀chwaʔàkaa wo|ndzɔ̀ŋèfwòo\r\nnùm|kɨz|tɨd|taa|see|nzu|dum|fɔe|dzu|lɔm|kaa|fwo\r\nn|k|t|t|s|z|k|f|d|l|c|f\r"
 
   private const val agq_Standalone_Days: String =
-      "tsuʔukpà|tsuʔughɔe|tsuʔutɔ̀mlò|tsuʔumè|tsuʔughɨ̂m|tsuʔndzɨkɔʔɔ|tsuʔntsɨ\r\nkpa|ghɔ|tɔm|ume|ghɨ|dzk|nts\r\nk|g|t|u|g|d|n\r"
+      "tsuʔukpà|tsuʔughɔe|tsuʔutɔ̀mlò|tsuʔumè|tsuʔughɨ̂m|tsuʔndzɨkɔʔɔ|tsuʔntsɨ\r\nkpa|ghɔ|tɔm|ume|ghɨ|dzk|nts\r\nk|g|t|u|g|d|n\r\nkpa|ghɔ|tɔm|ume|ghɨ|dzk|nts\r"
 
   private const val agq_Standalone_Quarters: String =
       "kɨbâ kɨ 1|ugbâ u 2|ugbâ u 3|ugbâ u 4\r\nkɨbâ kɨ 1|ugbâ u 2|ugbâ u 3|ugbâ u 4\r\n1|2|3|4\r"
@@ -133,7 +133,7 @@ object AvailableDateTimeDisplayNames {
       "Ɔpɛpɔn|Ɔgyefoɔ|Ɔbɛnem|Oforisuo|Kɔtɔnimma|Ayɛwohomumu|Kutawonsa|Ɔsanaa|Ɛbɔ|Ahinime|Obubuo|Ɔpɛnimma\r\nƆpɛpɔn|Ɔgyefoɔ|Ɔbɛnem|Oforisuo|Kɔtɔnimma|Ayɛwohomumu|Kutawonsa|Ɔsanaa|Ɛbɔ|Ahinime|Obubuo|Ɔpɛnimma\r\nƆ|Ɔ|Ɔ|O|K|A|K|Ɔ|Ɛ|A|O|Ɔ\r"
 
   private const val ak_Format_Days: String =
-      "Dwoada|Benada|Wukuada|Yawoada|Fiada|Memeneda|Kwasiada\r\nDwo|Ben|Wuk|Yaw|Fia|Mem|Kwe\r\nD|B|W|Y|F|M|K\r"
+      "Dwoada|Benada|Wukuada|Yawoada|Fiada|Memeneda|Kwasiada\r\nDwo|Ben|Wuk|Yaw|Fia|Mem|Kwe\r\nD|B|W|Y|F|M|K\r\nDwo|Ben|Wuk|Yaw|Fia|Mem|Kwe\r"
 
   private const val ak_Format_Quarters: String =
       "Kɔta a ɛdi kan|kɔta a ɛtɔ so mmienu|Kɔta a ɛtɔ so mmiɛnsa|Kɔta a ɛtɔ so nnan\r\nKɔta1|Kɔta2|Kɔta3|Kɔta4\r\n1|2|3|4\r"
@@ -144,7 +144,7 @@ object AvailableDateTimeDisplayNames {
       "Ɔpɛpɔn|Ɔgyefoɔ|Ɔbɛnem|Oforisuo|Kɔtɔnimma|Ayɛwohomumu|Kutawonsa|Ɔsanaa|Ɛbɔ|Ahinime|Obubuo|Ɔpɛnimma\r\nƆpɛpɔn|Ɔgyefoɔ|Ɔbɛnem|Oforisuo|Kɔtɔnimma|Ayɛwohomumu|Kutawonsa|Ɔsanaa|Ɛbɔ|Ahinime|Obubuo|Ɔpɛnimma\r\nƆ|Ɔ|Ɔ|O|K|A|K|Ɔ|Ɛ|A|O|Ɔ\r"
 
   private const val ak_Standalone_Days: String =
-      "Dwoada|Benada|Wukuada|Yawoada|Fiada|Memeneda|Kwasiada\r\nDwo|Ben|Wuk|Yaw|Fia|Mem|Kwe\r\nD|B|W|Y|F|M|K\r"
+      "Dwoada|Benada|Wukuada|Yawoada|Fiada|Memeneda|Kwasiada\r\nDwo|Ben|Wuk|Yaw|Fia|Mem|Kwe\r\nD|B|W|Y|F|M|K\r\nDwo|Ben|Wuk|Yaw|Fia|Mem|Kwe\r"
 
   private const val ak_Standalone_Quarters: String =
       "Kɔta a ɛdi kan|kɔta a ɛtɔ so mmienu|Kɔta a ɛtɔ so mmiɛnsa|Kɔta a ɛtɔ so nnan\r\nKɔta1|Kɔta2|Kɔta3|Kɔta4\r\n1|2|3|4\r"
@@ -155,7 +155,7 @@ object AvailableDateTimeDisplayNames {
       "ጃንዋሪ|ፌብሩዋሪ|ማርች|ኤፕሪል|ሜይ|ጁን|ጁላይ|ኦገስት|ሴፕቴምበር|ኦክቶበር|ኖቬምበር|ዲሴምበር\r\nጃን|ፌብ|ማርች|ኤፕሪ|ሜይ|ጁን|ጁላይ|ኦገስ|ሴፕቴ|ኦክቶ|ኖቬም|ዲሴም\r\nጃ|ፌ|ማ|ኤ|ሜ|ጁ|ጁ|ኦ|ሴ|ኦ|ኖ|ዲ\r"
 
   private const val am_Format_Days: String =
-      "ሰኞ|ማክሰኞ|ረቡዕ|ሐሙስ|ዓርብ|ቅዳሜ|እሑድ\r\nሰኞ|ማክሰ|ረቡዕ|ሐሙስ|ዓርብ|ቅዳሜ|እሑድ\r\nሰ|ማ|ረ|ሐ|ዓ|ቅ|እ\r"
+      "ሰኞ|ማክሰኞ|ረቡዕ|ሐሙስ|ዓርብ|ቅዳሜ|እሑድ\r\nሰኞ|ማክሰ|ረቡዕ|ሐሙስ|ዓርብ|ቅዳሜ|እሑድ\r\nሰ|ማ|ረ|ሐ|ዓ|ቅ|እ\r\nሰ|ማ|ረ|ሐ|ዓ|ቅ|እ\r"
 
   private const val am_Format_Quarters: String =
       "1ኛው ሩብ|2ኛው ሩብ|3ኛው ሩብ|4ኛው ሩብ\r\nሩብ1|ሩብ2|ሩብ3|ሩብ4\r\n1|2|3|4\r"
@@ -167,7 +167,7 @@ object AvailableDateTimeDisplayNames {
       "ጃንዋሪ|ፌብሩዋሪ|ማርች|ኤፕሪል|ሜይ|ጁን|ጁላይ|ኦገስት|ሴፕቴምበር|ኦክቶበር|ኖቬምበር|ዲሴምበር\r\nጃን|ፌብ|ማርች|ኤፕሪ|ሜይ|ጁን|ጁላይ|ኦገስ|ሴፕቴ|ኦክቶ|ኖቬም|ዲሴም\r\nጃ|ፌ|ማ|ኤ|ሜ|ጁ|ጁ|ኦ|ሴ|ኦ|ኖ|ዲ\r"
 
   private const val am_Standalone_Days: String =
-      "ሰኞ|ማክሰኞ|ረቡዕ|ሐሙስ|ዓርብ|ቅዳሜ|እሑድ\r\nሰኞ|ማክሰ|ረቡዕ|ሐሙስ|ዓርብ|ቅዳሜ|እሑድ\r\nሰ|ማ|ረ|ሐ|ዓ|ቅ|እ\r"
+      "ሰኞ|ማክሰኞ|ረቡዕ|ሐሙስ|ዓርብ|ቅዳሜ|እሑድ\r\nሰኞ|ማክሰ|ረቡዕ|ሐሙስ|ዓርብ|ቅዳሜ|እሑድ\r\nሰ|ማ|ረ|ሐ|ዓ|ቅ|እ\r\nሰ|ማ|ረ|ሐ|ዓ|ቅ|እ\r"
 
   private const val am_Standalone_Quarters: String =
       "1ኛው ሩብ|2ኛው ሩብ|3ኛው ሩብ|4ኛው ሩብ\r\nሩብ1|ሩብ2|ሩብ3|ሩብ4\r\n1|2|3|4\r"
@@ -227,7 +227,7 @@ object AvailableDateTimeDisplayNames {
       "يناير|فبراير|مارس|أبريل|مايو|يونيو|يوليو|أغسطس|سبتمبر|أكتوبر|نوفمبر|ديسمبر\r\nيناير|فبراير|مارس|أبريل|مايو|يونيو|يوليو|أغسطس|سبتمبر|أكتوبر|نوفمبر|ديسمبر\r\nي|ف|م|أ|و|ن|ل|غ|س|ك|ب|د\r"
 
   private const val ar_Format_Days: String =
-      "الاثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت|الأحد\r\nالاثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت|الأحد\r\nن|ث|ر|خ|ج|س|ح\r"
+      "الاثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت|الأحد\r\nالاثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت|الأحد\r\nن|ث|ر|خ|ج|س|ح\r\nإثنين|ثلاثاء|أربعاء|خميس|جمعة|سبت|أحد\r"
 
   private const val ar_Format_Quarters: String =
       "الربع الأول|الربع الثاني|الربع الثالث|الربع الرابع\r\nالربع الأول|الربع الثاني|الربع الثالث|الربع الرابع\r\n١|٢|٣|٤\r"
@@ -238,7 +238,7 @@ object AvailableDateTimeDisplayNames {
       "يناير|فبراير|مارس|أبريل|مايو|يونيو|يوليو|أغسطس|سبتمبر|أكتوبر|نوفمبر|ديسمبر\r\nيناير|فبراير|مارس|أبريل|مايو|يونيو|يوليو|أغسطس|سبتمبر|أكتوبر|نوفمبر|ديسمبر\r\nي|ف|م|أ|و|ن|ل|غ|س|ك|ب|د\r"
 
   private const val ar_Standalone_Days: String =
-      "الاثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت|الأحد\r\nالاثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت|الأحد\r\nن|ث|ر|خ|ج|س|ح\r"
+      "الاثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت|الأحد\r\nالاثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت|الأحد\r\nن|ث|ر|خ|ج|س|ح\r\nإثنين|ثلاثاء|أربعاء|خميس|جمعة|سبت|أحد\r"
 
   private const val ar_Standalone_Quarters: String =
       "الربع الأول|الربع الثاني|الربع الثالث|الربع الرابع\r\nالربع الأول|الربع الثاني|الربع الثالث|الربع الرابع\r\n١|٢|٣|٤\r"
@@ -715,7 +715,7 @@ object AvailableDateTimeDisplayNames {
       "জানুৱাৰী|ফেব্ৰুৱাৰী|মাৰ্চ|এপ্ৰিল|মে’|জুন|জুলাই|আগষ্ট|ছেপ্তেম্বৰ|অক্টোবৰ|নৱেম্বৰ|ডিচেম্বৰ\r\nজানু|ফেব্ৰু|মাৰ্চ|এপ্ৰিল|মে’|জুন|জুলাই|আগ|ছেপ্তে|অক্টো|নৱে|ডিচে\r\nজ|ফ|ম|এ|ম|জ|জ|আ|ছ|অ|ন|ড\r"
 
   private const val as_Format_Days: String =
-      "সোমবাৰ|মঙ্গলবাৰ|বুধবাৰ|বৃহস্পতিবাৰ|শুক্ৰবাৰ|শনিবাৰ|দেওবাৰ\r\nসোম|মঙ্গল|বুধ|বৃহ|শুক্ৰ|শনি|দেও\r\nস|ম|ব|ব|শ|শ|দ\r"
+      "সোমবাৰ|মঙ্গলবাৰ|বুধবাৰ|বৃহস্পতিবাৰ|শুক্ৰবাৰ|শনিবাৰ|দেওবাৰ\r\nসোম|মঙ্গল|বুধ|বৃহ|শুক্ৰ|শনি|দেও\r\nস|ম|ব|ব|শ|শ|দ\r\nসোম|মঙ্গল|বুধ|বৃহ|শুক্ৰ|শনি|দেও\r"
 
   private const val as_Format_Quarters: String =
       "প্ৰথম তিনিমাহ|দ্বিতীয় তিনিমাহ|তৃতীয় তিনিমাহ|চতুৰ্থ তিনিমাহ\r\n১মঃ তিঃ|২য়ঃ তিঃ|৩য়ঃ তিঃ|৪ৰ্থঃ তিঃ\r\n১|২|৩|৪\r"
@@ -726,7 +726,7 @@ object AvailableDateTimeDisplayNames {
       "জানুৱাৰী|ফেব্ৰুৱাৰী|মাৰ্চ|এপ্ৰিল|মে’|জুন|জুলাই|আগষ্ট|ছেপ্তেম্বৰ|অক্টোবৰ|নৱেম্বৰ|ডিচেম্বৰ\r\nজানু|ফেব্ৰু|মাৰ্চ|এপ্ৰিল|মে’|জুন|জুলাই|আগ|ছেপ্তে|অক্টো|নৱে|ডিচে\r\nজ|ফ|ম|এ|ম|জ|জ|আ|ছ|অ|ন|ড\r"
 
   private const val as_Standalone_Days: String =
-      "সোমবাৰ|মঙ্গলবাৰ|বুধবাৰ|বৃহস্পতিবাৰ|শুক্ৰবাৰ|শনিবাৰ|দেওবাৰ\r\nসোম|মঙ্গল|বুধ|বৃহ|শুক্ৰ|শনি|দেও\r\nস|ম|ব|ব|শ|শ|দ\r"
+      "সোমবাৰ|মঙ্গলবাৰ|বুধবাৰ|বৃহস্পতিবাৰ|শুক্ৰবাৰ|শনিবাৰ|দেওবাৰ\r\nসোম|মঙ্গল|বুধ|বৃহ|শুক্ৰ|শনি|দেও\r\nস|ম|ব|ব|শ|শ|দ\r\nসোম|মঙ্গল|বুধ|বৃহ|শুক্ৰ|শনি|দেও\r"
 
   private const val as_Standalone_Quarters: String =
       "প্ৰথম তিনিমাহ|দ্বিতীয় তিনিমাহ|তৃতীয় তিনিমাহ|চতুৰ্থ তিনিমাহ\r\n১মঃ তিঃ|২য়ঃ তিঃ|৩য়ঃ তিঃ|৪ৰ্থঃ তিঃ\r\n১|২|৩|৪\r"
@@ -737,7 +737,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprili|Mei|Juni|Julai|Agosti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val asa_Format_Days: String =
-      "Jumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nJtt|Jnn|Jtn|Alh|Ijm|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r"
+      "Jumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nJtt|Jnn|Jtn|Alh|Ijm|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r\nJtt|Jnn|Jtn|Alh|Ijm|Jmo|Jpi\r"
 
   private const val asa_Format_Quarters: String =
       "Robo 1|Robo 2|Robo 3|Robo 4\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -749,7 +749,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprili|Mei|Juni|Julai|Agosti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val asa_Standalone_Days: String =
-      "Jumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nJtt|Jnn|Jtn|Alh|Ijm|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r"
+      "Jumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nJtt|Jnn|Jtn|Alh|Ijm|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r\nJtt|Jnn|Jtn|Alh|Ijm|Jmo|Jpi\r"
 
   private const val asa_Standalone_Quarters: String =
       "Robo 1|Robo 2|Robo 3|Robo 4\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -761,7 +761,7 @@ object AvailableDateTimeDisplayNames {
       "de xineru|de febreru|de marzu|d’abril|de mayu|de xunu|de xunetu|d’agostu|de setiembre|d’ochobre|de payares|d’avientu\r\nxin|feb|mar|abr|may|xun|xnt|ago|set|och|pay|avi\r\nX|F|M|A|M|X|X|A|S|O|P|A\r"
 
   private const val ast_Format_Days: String =
-      "llunes|martes|miércoles|xueves|vienres|sábadu|domingu\r\nllu|mar|mié|xue|vie|sáb|dom\r\nL|M|M|X|V|S|D\r"
+      "llunes|martes|miércoles|xueves|vienres|sábadu|domingu\r\nllu|mar|mié|xue|vie|sáb|dom\r\nL|M|M|X|V|S|D\r\nll|ma|mi|xu|vi|sá|do\r"
 
   private const val ast_Format_Quarters: String =
       "1er trimestre|2u trimestre|3er trimestre|4u trimestre\r\n1T|2T|3T|4T\r\n1|2|3|4\r"
@@ -773,7 +773,7 @@ object AvailableDateTimeDisplayNames {
       "xineru|febreru|marzu|abril|mayu|xunu|xunetu|agostu|setiembre|ochobre|payares|avientu\r\nXin|Feb|Mar|Abr|May|Xun|Xnt|Ago|Set|Och|Pay|Avi\r\nX|F|M|A|M|X|X|A|S|O|P|A\r"
 
   private const val ast_Standalone_Days: String =
-      "llunes|martes|miércoles|xueves|vienres|sábadu|domingu\r\nllu|mar|mié|xue|vie|sáb|dom\r\nL|M|M|X|V|S|D\r"
+      "llunes|martes|miércoles|xueves|vienres|sábadu|domingu\r\nllu|mar|mié|xue|vie|sáb|dom\r\nL|M|M|X|V|S|D\r\nll|ma|mi|xu|vi|sá|do\r"
 
   private const val ast_Standalone_Quarters: String =
       "1er trimestre|2u trimestre|3er trimestre|4u trimestre\r\n1T|2T|3T|4T\r\n1|2|3|4\r"
@@ -784,7 +784,7 @@ object AvailableDateTimeDisplayNames {
       "yanvar|fevral|mart|aprel|may|iyun|iyul|avqust|sentyabr|oktyabr|noyabr|dekabr\r\nyan|fev|mar|apr|may|iyn|iyl|avq|sen|okt|noy|dek\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val az_Format_Days: String =
-      "bazar ertəsi|çərşənbə axşamı|çərşənbə|cümə axşamı|cümə|şənbə|bazar\r\nB.e.|Ç.a.|Ç.|C.a.|C.|Ş.|B.\r\n1|2|3|4|5|6|7\r"
+      "bazar ertəsi|çərşənbə axşamı|çərşənbə|cümə axşamı|cümə|şənbə|bazar\r\nB.e.|Ç.a.|Ç.|C.a.|C.|Ş.|B.\r\n1|2|3|4|5|6|7\r\nB.E.|Ç.A.|Ç.|C.A.|C.|Ş.|B.\r"
 
   private const val az_Format_Quarters: String =
       "1-ci kvartal|2-ci kvartal|3-cü kvartal|4-cü kvartal\r\n1-ci kv.|2-ci kv.|3-cü kv.|4-cü kv.\r\n1|2|3|4\r"
@@ -796,7 +796,7 @@ object AvailableDateTimeDisplayNames {
       "yanvar|fevral|mart|aprel|may|iyun|iyul|avqust|sentyabr|oktyabr|noyabr|dekabr\r\nyan|fev|mar|apr|may|iyn|iyl|avq|sen|okt|noy|dek\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val az_Standalone_Days: String =
-      "bazar ertəsi|çərşənbə axşamı|çərşənbə|cümə axşamı|cümə|şənbə|bazar\r\nB.E.|Ç.A.|Ç.|C.A.|C.|Ş.|B.\r\n1|2|3|4|5|6|7\r"
+      "bazar ertəsi|çərşənbə axşamı|çərşənbə|cümə axşamı|cümə|şənbə|bazar\r\nB.E.|Ç.A.|Ç.|C.A.|C.|Ş.|B.\r\n1|2|3|4|5|6|7\r\nB.E.|Ç.A.|Ç.|C.A.|C.|Ş.|B.\r"
 
   private const val az_Standalone_Quarters: String =
       "1-ci kvartal|2-ci kvartal|3-cü kvartal|4-cü kvartal\r\n1-ci kv.|2-ci kv.|3-cü kv.|4-cü kv.\r\n1|2|3|4\r"
@@ -856,7 +856,7 @@ object AvailableDateTimeDisplayNames {
       "јанвар|феврал|март|апрел|май|ијун|ијул|август|сентјабр|октјабр|нојабр|декабр\r\nјан|фев|мар|апр|май|ијн|ијл|авг|сен|окт|ној|дек\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val az_Cyrl_Format_Days: String =
-      "базар ертәси|чәршәнбә ахшамы|чәршәнбә|ҹүмә ахшамы|ҹүмә|шәнбә|базар\r\nБ.Е.|Ч.А.|Ч.|Ҹ.А.|Ҹ.|Ш.|Б.\r\n1|2|3|4|5|6|7\r"
+      "базар ертәси|чәршәнбә ахшамы|чәршәнбә|ҹүмә ахшамы|ҹүмә|шәнбә|базар\r\nБ.Е.|Ч.А.|Ч.|Ҹ.А.|Ҹ.|Ш.|Б.\r\n1|2|3|4|5|6|7\r\nБ.Е.|Ч.А.|Ч.|Ҹ.А.|Ҹ.|Ш.|Б.\r"
 
   private const val az_Cyrl_Format_Quarters: String =
       "1-ҹи квартал|2-ҹи квартал|3-ҹү квартал|4-ҹү квартал\r\n1-ҹи кв.|2-ҹи кв.|3-ҹү кв.|4-ҹү кв.\r\n1|2|3|4\r"
@@ -868,7 +868,7 @@ object AvailableDateTimeDisplayNames {
       "Јанвар|Феврал|Март|Апрел|Май|Ијун|Ијул|Август|Сентјабр|Октјабр|Нојабр|Декабр\r\nјан|фев|мар|апр|май|ијн|ијл|авг|сен|окт|ној|дек\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val az_Cyrl_Standalone_Days: String =
-      "базар ертәси|чәршәнбә ахшамы|чәршәнбә|ҹүмә ахшамы|ҹүмә|шәнбә|базар\r\nБ.Е.|Ч.А.|Ч.|Ҹ.А.|Ҹ.|Ш.|Б.\r\n1|2|3|4|5|6|7\r"
+      "базар ертәси|чәршәнбә ахшамы|чәршәнбә|ҹүмә ахшамы|ҹүмә|шәнбә|базар\r\nБ.Е.|Ч.А.|Ч.|Ҹ.А.|Ҹ.|Ш.|Б.\r\n1|2|3|4|5|6|7\r\nБ.Е.|Ч.А.|Ч.|Ҹ.А.|Ҹ.|Ш.|Б.\r"
 
   private const val az_Cyrl_Standalone_Quarters: String =
       "1-ҹи квартал|2-ҹи квартал|3-ҹү квартал|4-ҹү квартал\r\n1-ҹи кв.|2-ҹи кв.|3-ҹү кв.|4-ҹү кв.\r\n1|2|3|4\r"
@@ -944,7 +944,7 @@ object AvailableDateTimeDisplayNames {
       "Janwari|Parwari|Márch|Aprél|Mai|Jun|Jólái|Agast|Satambar|Aktubar|Nawambar|Dasambar\r\nJan|Par|Már|Apr|Mai|Jun|Jól|Aga|Sat|Akt|Naw|Das\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val bal_Latn_Format_Days: String =
-      "Doshambeh|Sayshambeh|Chárshambeh|Panchshambeh|Jomah|Shambeh|Yakshambeh\r\nDo|Say|Chá|Pan|Jom|Sha|Yak\r\nD|S|Ch|P|J|Sh|Y\r"
+      "Doshambeh|Sayshambeh|Chárshambeh|Panchshambeh|Jomah|Shambeh|Yakshambeh\r\nDo|Say|Chá|Pan|Jom|Sha|Yak\r\nD|S|Ch|P|J|Sh|Y\r\nDo|Say|Chá|Pan|Jom|Sha|Yak\r"
 
   private const val bal_Latn_Format_Quarters: String =
       "awali chárek|domi chárek|sayomi chárek|cháromi chárek\r\n1/4|2/4|3/4|4/4\r\n1|2|3|4\r"
@@ -955,7 +955,7 @@ object AvailableDateTimeDisplayNames {
       "Janwari|Parwari|Márch|Aprél|Mai|Jun|Jólái|Agast|Satambar|Aktubar|Nawambar|Dasambar\r\nJan|Par|Már|Apr|Mai|Jun|Jól|Aga|Sat|Akt|Naw|Das\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val bal_Latn_Standalone_Days: String =
-      "Doshambeh|Sayshambeh|Chárshambeh|Panchshambeh|Jomah|Shambeh|Yakshambeh\r\nDo|Say|Chá|Pan|Jom|Sha|Yak\r\nD|S|Ch|P|J|Sh|Y\r"
+      "Doshambeh|Sayshambeh|Chárshambeh|Panchshambeh|Jomah|Shambeh|Yakshambeh\r\nDo|Say|Chá|Pan|Jom|Sha|Yak\r\nD|S|Ch|P|J|Sh|Y\r\nDo|Say|Chá|Pan|Jom|Sha|Yak\r"
 
   private const val bal_Latn_Standalone_Quarters: String =
       "awali chárek|domi chárek|sayomi chárek|cháromi chárek\r\n1/4|2/4|3/4|4/4\r\n1|2|3|4\r"
@@ -966,7 +966,7 @@ object AvailableDateTimeDisplayNames {
       "Kɔndɔŋ|Màcɛ̂l|Màtùmb|Màtop|M̀puyɛ|Hìlòndɛ̀|Njèbà|Hìkaŋ|Dìpɔ̀s|Bìòôm|Màyɛsèp|Lìbuy li ńyèe\r\nkɔn|mac|mat|mto|mpu|hil|nje|hik|dip|bio|may|liɓ\r\nk|m|m|m|m|h|n|h|d|b|m|l\r"
 
   private const val bas_Format_Days: String =
-      "ŋgwà njaŋgumba|ŋgwà ûm|ŋgwà ŋgê|ŋgwà mbɔk|ŋgwà kɔɔ|ŋgwà jôn|ŋgwà nɔ̂y\r\nnja|uum|ŋge|mbɔ|kɔɔ|jon|nɔy\r\nn|u|ŋ|m|k|j|n\r"
+      "ŋgwà njaŋgumba|ŋgwà ûm|ŋgwà ŋgê|ŋgwà mbɔk|ŋgwà kɔɔ|ŋgwà jôn|ŋgwà nɔ̂y\r\nnja|uum|ŋge|mbɔ|kɔɔ|jon|nɔy\r\nn|u|ŋ|m|k|j|n\r\nnja|uum|ŋge|mbɔ|kɔɔ|jon|nɔy\r"
 
   private const val bas_Format_Quarters: String =
       "Kèk bisu i soŋ iaâ|Kèk i ńyonos biɓaà i soŋ iaâ|Kèk i ńyonos biaâ i soŋ iaâ|Kèk i ńyonos binâ i soŋ iaâ\r\nK1s3|K2s3|K3s3|K4s3\r\n1|2|3|4\r"
@@ -978,7 +978,7 @@ object AvailableDateTimeDisplayNames {
       "Kɔndɔŋ|Màcɛ̂l|Màtùmb|Màtop|M̀puyɛ|Hìlòndɛ̀|Njèbà|Hìkaŋ|Dìpɔ̀s|Bìòôm|Màyɛsèp|Lìbuy li ńyèe\r\nkɔn|mac|mat|mto|mpu|hil|nje|hik|dip|bio|may|liɓ\r\nk|m|m|m|m|h|n|h|d|b|m|l\r"
 
   private const val bas_Standalone_Days: String =
-      "ŋgwà njaŋgumba|ŋgwà ûm|ŋgwà ŋgê|ŋgwà mbɔk|ŋgwà kɔɔ|ŋgwà jôn|ŋgwà nɔ̂y\r\nnja|uum|ŋge|mbɔ|kɔɔ|jon|nɔy\r\nn|u|ŋ|m|k|j|n\r"
+      "ŋgwà njaŋgumba|ŋgwà ûm|ŋgwà ŋgê|ŋgwà mbɔk|ŋgwà kɔɔ|ŋgwà jôn|ŋgwà nɔ̂y\r\nnja|uum|ŋge|mbɔ|kɔɔ|jon|nɔy\r\nn|u|ŋ|m|k|j|n\r\nnja|uum|ŋge|mbɔ|kɔɔ|jon|nɔy\r"
 
   private const val bas_Standalone_Quarters: String =
       "Kèk bisu i soŋ iaâ|Kèk i ńyonos biɓaà i soŋ iaâ|Kèk i ńyonos biaâ i soŋ iaâ|Kèk i ńyonos binâ i soŋ iaâ\r\nK1s3|K2s3|K3s3|K4s3\r\n1|2|3|4\r"
@@ -990,7 +990,7 @@ object AvailableDateTimeDisplayNames {
       "студзеня|лютага|сакавіка|красавіка|мая|чэрвеня|ліпеня|жніўня|верасня|кастрычніка|лістапада|снежня\r\nсту|лют|сак|кра|мая|чэр|ліп|жні|вер|кас|ліс|сне\r\nс|л|с|к|м|ч|л|ж|в|к|л|с\r"
 
   private const val be_Format_Days: String =
-      "панядзелак|аўторак|серада|чацвер|пятніца|субота|нядзеля\r\nпн|аў|ср|чц|пт|сб|нд\r\nп|а|с|ч|п|с|н\r"
+      "панядзелак|аўторак|серада|чацвер|пятніца|субота|нядзеля\r\nпн|аў|ср|чц|пт|сб|нд\r\nп|а|с|ч|п|с|н\r\nпн|аў|ср|чц|пт|сб|нд\r"
 
   private const val be_Format_Quarters: String =
       "1-шы квартал|2-гі квартал|3-ці квартал|4-ты квартал\r\n1-шы кв.|2-гі кв.|3-ці кв.|4-ты кв.\r\n1|2|3|4\r"
@@ -1001,7 +1001,7 @@ object AvailableDateTimeDisplayNames {
       "студзень|люты|сакавік|красавік|май|чэрвень|ліпень|жнівень|верасень|кастрычнік|лістапад|снежань\r\nсту|лют|сак|кра|май|чэр|ліп|жні|вер|кас|ліс|сне\r\nс|л|с|к|м|ч|л|ж|в|к|л|с\r"
 
   private const val be_Standalone_Days: String =
-      "панядзелак|аўторак|серада|чацвер|пятніца|субота|нядзеля\r\nпн|аў|ср|чц|пт|сб|нд\r\nп|а|с|ч|п|с|н\r"
+      "панядзелак|аўторак|серада|чацвер|пятніца|субота|нядзеля\r\nпн|аў|ср|чц|пт|сб|нд\r\nп|а|с|ч|п|с|н\r\nпн|аў|ср|чц|пт|сб|нд\r"
 
   private const val be_Standalone_Quarters: String =
       "1-шы квартал|2-гі квартал|3-ці квартал|4-ты квартал\r\n1-шы кв.|2-гі кв.|3-ці кв.|4-ты кв.\r\n1|2|3|4\r"
@@ -1028,7 +1028,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Epreo|Mei|Juni|Julai|Ogasti|Septemba|Oktoba|Novemba|Disemba\r\nJan|Feb|Mac|Epr|Mei|Jun|Jul|Oga|Sep|Okt|Nov|Dis\r\nJ|F|M|E|M|J|J|O|S|O|N|D\r"
 
   private const val bem_Format_Days: String =
-      "Palichimo|Palichibuli|Palichitatu|Palichine|Palichisano|Pachibelushi|Pa Mulungu\r\nPalichimo|Palichibuli|Palichitatu|Palichine|Palichisano|Pachibelushi|Pa Mulungu\r\nM|T|W|T|F|S|S\r"
+      "Palichimo|Palichibuli|Palichitatu|Palichine|Palichisano|Pachibelushi|Pa Mulungu\r\nPalichimo|Palichibuli|Palichitatu|Palichine|Palichisano|Pachibelushi|Pa Mulungu\r\nM|T|W|T|F|S|S\r\nPalichimo|Palichibuli|Palichitatu|Palichine|Palichisano|Pachibelushi|Pa Mulungu\r"
 
   private val bem_Format_Quarters: String? = null
 
@@ -1039,7 +1039,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Epreo|Mei|Juni|Julai|Ogasti|Septemba|Oktoba|Novemba|Disemba\r\nJan|Feb|Mac|Epr|Mei|Jun|Jul|Oga|Sep|Okt|Nov|Dis\r\nJ|F|M|E|M|J|J|O|S|O|N|D\r"
 
   private const val bem_Standalone_Days: String =
-      "Palichimo|Palichibuli|Palichitatu|Palichine|Palichisano|Pachibelushi|Pa Mulungu\r\nPalichimo|Palichibuli|Palichitatu|Palichine|Palichisano|Pachibelushi|Pa Mulungu\r\nM|T|W|T|F|S|S\r"
+      "Palichimo|Palichibuli|Palichitatu|Palichine|Palichisano|Pachibelushi|Pa Mulungu\r\nPalichimo|Palichibuli|Palichitatu|Palichine|Palichisano|Pachibelushi|Pa Mulungu\r\nM|T|W|T|F|S|S\r\nPalichimo|Palichibuli|Palichitatu|Palichine|Palichisano|Pachibelushi|Pa Mulungu\r"
 
   private val bem_Standalone_Quarters: String? = null
 
@@ -1066,7 +1066,7 @@ object AvailableDateTimeDisplayNames {
       "pa mwedzi gwa hutala|pa mwedzi gwa wuvili|pa mwedzi gwa wudatu|pa mwedzi gwa wutai|pa mwedzi gwa wuhanu|pa mwedzi gwa sita|pa mwedzi gwa saba|pa mwedzi gwa nane|pa mwedzi gwa tisa|pa mwedzi gwa kumi|pa mwedzi gwa kumi na moja|pa mwedzi gwa kumi na mbili\r\nHut|Vil|Dat|Tai|Han|Sit|Sab|Nan|Tis|Kum|Kmj|Kmb\r\nH|V|D|T|H|S|S|N|T|K|K|K\r"
 
   private const val bez_Format_Days: String =
-      "pa shahuviluha|pa hivili|pa hidatu|pa hitayi|pa hihanu|pa shahulembela|pa mulungu\r\nVil|Hiv|Hid|Hit|Hih|Lem|Mul\r\nJ|H|H|H|W|J|M\r"
+      "pa shahuviluha|pa hivili|pa hidatu|pa hitayi|pa hihanu|pa shahulembela|pa mulungu\r\nVil|Hiv|Hid|Hit|Hih|Lem|Mul\r\nJ|H|H|H|W|J|M\r\nVil|Hiv|Hid|Hit|Hih|Lem|Mul\r"
 
   private const val bez_Format_Quarters: String =
       "Lobo 1|Lobo 2|Lobo 3|Lobo 4\r\nL1|L2|L3|L4\r\n1|2|3|4\r"
@@ -1078,7 +1078,7 @@ object AvailableDateTimeDisplayNames {
       "pa mwedzi gwa hutala|pa mwedzi gwa wuvili|pa mwedzi gwa wudatu|pa mwedzi gwa wutai|pa mwedzi gwa wuhanu|pa mwedzi gwa sita|pa mwedzi gwa saba|pa mwedzi gwa nane|pa mwedzi gwa tisa|pa mwedzi gwa kumi|pa mwedzi gwa kumi na moja|pa mwedzi gwa kumi na mbili\r\nHut|Vil|Dat|Tai|Han|Sit|Sab|Nan|Tis|Kum|Kmj|Kmb\r\nH|V|D|T|H|S|S|N|T|K|K|K\r"
 
   private const val bez_Standalone_Days: String =
-      "pa shahuviluha|pa hivili|pa hidatu|pa hitayi|pa hihanu|pa shahulembela|pa mulungu\r\nVil|Hiv|Hid|Hit|Hih|Lem|Mul\r\nJ|H|H|H|W|J|M\r"
+      "pa shahuviluha|pa hivili|pa hidatu|pa hitayi|pa hihanu|pa shahulembela|pa mulungu\r\nVil|Hiv|Hid|Hit|Hih|Lem|Mul\r\nJ|H|H|H|W|J|M\r\nVil|Hiv|Hid|Hit|Hih|Lem|Mul\r"
 
   private const val bez_Standalone_Quarters: String =
       "Lobo 1|Lobo 2|Lobo 3|Lobo 4\r\nL1|L2|L3|L4\r\n1|2|3|4\r"
@@ -1090,7 +1090,7 @@ object AvailableDateTimeDisplayNames {
       "януари|февруари|март|април|май|юни|юли|август|септември|октомври|ноември|декември\r\nяну|фев|март|апр|май|юни|юли|авг|сеп|окт|ное|дек\r\nя|ф|м|а|м|ю|ю|а|с|о|н|д\r"
 
   private const val bg_Format_Days: String =
-      "понеделник|вторник|сряда|четвъртък|петък|събота|неделя\r\nпн|вт|ср|чт|пт|сб|нд\r\nп|в|с|ч|п|с|н\r"
+      "понеделник|вторник|сряда|четвъртък|петък|събота|неделя\r\nпн|вт|ср|чт|пт|сб|нд\r\nп|в|с|ч|п|с|н\r\nпн|вт|ср|чт|пт|сб|нд\r"
 
   private const val bg_Format_Quarters: String =
       "1. тримесечие|2. тримесечие|3. тримесечие|4. тримесечие\r\n1. трим.|2. трим.|3. трим.|4. трим.\r\n1|2|3|4\r"
@@ -1102,7 +1102,7 @@ object AvailableDateTimeDisplayNames {
       "януари|февруари|март|април|май|юни|юли|август|септември|октомври|ноември|декември\r\nяну|фев|март|апр|май|юни|юли|авг|сеп|окт|ное|дек\r\nя|ф|м|а|м|ю|ю|а|с|о|н|д\r"
 
   private const val bg_Standalone_Days: String =
-      "понеделник|вторник|сряда|четвъртък|петък|събота|неделя\r\nпн|вт|ср|чт|пт|сб|нд\r\nп|в|с|ч|п|с|н\r"
+      "понеделник|вторник|сряда|четвъртък|петък|събота|неделя\r\nпн|вт|ср|чт|пт|сб|нд\r\nп|в|с|ч|п|с|н\r\nпн|вт|ср|чт|пт|сб|нд\r"
 
   private const val bg_Standalone_Quarters: String =
       "1. тримесечие|2. тримесечие|3. тримесечие|4. тримесечие\r\n1. трим.|2. трим.|3. трим.|4. трим.\r\n1|2|3|4\r"
@@ -1114,7 +1114,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवम्बर|दिसंबर\r\nजनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवम्बर|दिसंबर\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val bgc_Format_Days: String =
-      "सोमवार|मंगलवार|बुधवार|बृहस्पतवार|शुक्रवार|शनिवार|ऐतवार\r\nसोमवार|मंगलवार|बुधवार|बृहस्पतवार|शुक्रवार|शनिवार|ऐतवार\r\nM|T|W|T|F|S|S\r"
+      "सोमवार|मंगलवार|बुधवार|बृहस्पतवार|शुक्रवार|शनिवार|ऐतवार\r\nसोमवार|मंगलवार|बुधवार|बृहस्पतवार|शुक्रवार|शनिवार|ऐतवार\r\nM|T|W|T|F|S|S\r\nसोमवार|मंगलवार|बुधवार|बृहस्पतवार|शुक्रवार|शनिवार|ऐतवार\r"
 
   private val bgc_Format_Quarters: String? = null
 
@@ -1124,7 +1124,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवम्बर|दिसंबर\r\nजनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवम्बर|दिसंबर\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val bgc_Standalone_Days: String =
-      "सोमवार|मंगलवार|बुधवार|बृहस्पतवार|शुक्रवार|शनिवार|ऐतवार\r\nसोमवार|मंगलवार|बुधवार|बृहस्पतवार|शुक्रवार|शनिवार|ऐतवार\r\nM|T|W|T|F|S|S\r"
+      "सोमवार|मंगलवार|बुधवार|बृहस्पतवार|शुक्रवार|शनिवार|ऐतवार\r\nसोमवार|मंगलवार|बुधवार|बृहस्पतवार|शुक्रवार|शनिवार|ऐतवार\r\nM|T|W|T|F|S|S\r\nसोमवार|मंगलवार|बुधवार|बृहस्पतवार|शुक्रवार|शनिवार|ऐतवार\r"
 
   private val bgc_Standalone_Quarters: String? = null
 
@@ -1214,7 +1214,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवंबर|दिसंबर\r\nजनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवंबर|दिसंबर\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val bho_Format_Days: String =
-      "सोमबार|मंगलबार|बुधबार|बृहस्पतिबार|शुक्रबार|सनीचर|रबीबार\r\nसोमबार|मंगलबार|बुधबार|बृहस्पतिबार|शुक्रबार|सनीचर|रबीबार\r\nM|T|W|T|F|S|S\r"
+      "सोमबार|मंगलबार|बुधबार|बृहस्पतिबार|शुक्रबार|सनीचर|रबीबार\r\nसोमबार|मंगलबार|बुधबार|बृहस्पतिबार|शुक्रबार|सनीचर|रबीबार\r\nM|T|W|T|F|S|S\r\nसोमबार|मंगलबार|बुधबार|बृहस्पतिबार|शुक्रबार|सनीचर|रबीबार\r"
 
   private val bho_Format_Quarters: String? = null
 
@@ -1224,7 +1224,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवंबर|दिसंबर\r\nजनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवंबर|दिसंबर\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val bho_Standalone_Days: String =
-      "सोमबार|मंगलबार|बुधबार|बृहस्पतिबार|शुक्रबार|सनीचर|रबीबार\r\nसोमबार|मंगलबार|बुधबार|बृहस्पतिबार|शुक्रबार|सनीचर|रबीबार\r\nM|T|W|T|F|S|S\r"
+      "सोमबार|मंगलबार|बुधबार|बृहस्पतिबार|शुक्रबार|सनीचर|रबीबार\r\nसोमबार|मंगलबार|बुधबार|बृहस्पतिबार|शुक्रबार|सनीचर|रबीबार\r\nM|T|W|T|F|S|S\r\nसोमबार|मंगलबार|बुधबार|बृहस्पतिबार|शुक्रबार|सनीचर|रबीबार\r"
 
   private val bho_Standalone_Quarters: String? = null
 
@@ -1234,7 +1234,7 @@ object AvailableDateTimeDisplayNames {
       "ɩjikawǝrka kaŋɔrɔ|ɩjikpaka kaŋɔrɔ|arɛ́cika kaŋɔrɔ|njɩbɔ nɖʊka kaŋɔrɔ|acafʊnɖuka kaŋɔrɔ|anɔɔɖuka kaŋɔrɔ|alàlaka kaŋɔrɔ|ɩjikǝuka kaŋɔrɔ|abofʊmka kaŋɔrɔ|ɩjicimka kaŋɔrɔ|acapomka kaŋɔrɔ|anɔɔbʊnka kaŋɔrɔ\r\nkaw|kpa|ci|ɖʊ|ɖu5|ɖu6|la|kǝu|fʊm|cim|pom|bʊn\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val blo_Format_Days: String =
-      "aɖɩtɛnɛɛ|atalaata|alaarba|alaamɩshɩ|arɩsǝma|asiibi|alahaɖɩ\r\naɖɩt|atal|alar|alam|arɩs|asib|alah\r\nɖt|tl|lr|lm|rs|sb|lh\r"
+      "aɖɩtɛnɛɛ|atalaata|alaarba|alaamɩshɩ|arɩsǝma|asiibi|alahaɖɩ\r\naɖɩt|atal|alar|alam|arɩs|asib|alah\r\nɖt|tl|lr|lm|rs|sb|lh\r\naɖt|atl|alr|alm|ars|asb|alh\r"
 
   private const val blo_Format_Quarters: String =
       "ɩŋɔrɩriu ɩsǝbaka|ɩŋɔrɩriu ɩnyɩʊtaja|ɩŋɔrɩriu ɩriutaja|ɩŋɔrɩriu ɩnantaja\r\nɩ1|ɩ2|ɩ3|ɩ4\r\n1|2|3|4\r"
@@ -1246,7 +1246,7 @@ object AvailableDateTimeDisplayNames {
       "ɩjikawǝrka kaŋɔrɔ|ɩjikpaka kaŋɔrɔ|arɛ́cika kaŋɔrɔ|njɩbɔ nɖʊka kaŋɔrɔ|acafʊnɖuka kaŋɔrɔ|anɔɔɖuka kaŋɔrɔ|alàlaka kaŋɔrɔ|ɩjikǝuka kaŋɔrɔ|abofʊmka kaŋɔrɔ|ɩjicimka kaŋɔrɔ|acapomka kaŋɔrɔ|anɔɔbʊnka kaŋɔrɔ\r\nkaw|kpa|ci|ɖʊ|ɖu5|ɖu6|la|kǝu|fʊm|cim|pom|bʊn\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val blo_Standalone_Days: String =
-      "aɖɩtɛnɛɛ|atalaata|alaarba|alaamɩshɩ|arɩsǝma|asiibi|alahaɖɩ\r\naɖɩt|atal|alar|alam|arɩs|asib|alah\r\nɖt|tl|lr|lm|rs|sb|lh\r"
+      "aɖɩtɛnɛɛ|atalaata|alaarba|alaamɩshɩ|arɩsǝma|asiibi|alahaɖɩ\r\naɖɩt|atal|alar|alam|arɩs|asib|alah\r\nɖt|tl|lr|lm|rs|sb|lh\r\naɖt|atl|alr|alm|ars|asb|alh\r"
 
   private const val blo_Standalone_Quarters: String =
       "ɩŋɔrɩriu 1ka|ɩŋɔrɩriu 2ja|ɩŋɔrɩriu 3ja|ɩŋɔrɩriu 4ja\r\nɩ1|ɩ2|ɩ3|ɩ4\r\n1|2|3|4\r"
@@ -1273,7 +1273,7 @@ object AvailableDateTimeDisplayNames {
       "zanwuye|feburuye|marisi|awirili|mɛ|zuwɛn|zuluye|uti|sɛtanburu|ɔkutɔburu|nowanburu|desanburu\r\nzan|feb|mar|awi|mɛ|zuw|zul|uti|sɛt|ɔku|now|des\r\nZ|F|M|A|M|Z|Z|U|S|Ɔ|N|D\r"
 
   private const val bm_Format_Days: String =
-      "ntɛnɛ|tarata|araba|alamisa|juma|sibiri|kari\r\nntɛ|tar|ara|ala|jum|sib|kar\r\nN|T|A|A|J|S|K\r"
+      "ntɛnɛ|tarata|araba|alamisa|juma|sibiri|kari\r\nntɛ|tar|ara|ala|jum|sib|kar\r\nN|T|A|A|J|S|K\r\nntɛ|tar|ara|ala|jum|sib|kar\r"
 
   private const val bm_Format_Quarters: String =
       "kalo saba fɔlɔ|kalo saba filanan|kalo saba sabanan|kalo saba naaninan\r\nKS1|KS2|KS3|KS4\r\n1|2|3|4\r"
@@ -1284,7 +1284,7 @@ object AvailableDateTimeDisplayNames {
       "zanwuye|feburuye|marisi|awirili|mɛ|zuwɛn|zuluye|uti|sɛtanburu|ɔkutɔburu|nowanburu|desanburu\r\nzan|feb|mar|awi|mɛ|zuw|zul|uti|sɛt|ɔku|now|des\r\nZ|F|M|A|M|Z|Z|U|S|Ɔ|N|D\r"
 
   private const val bm_Standalone_Days: String =
-      "ntɛnɛ|tarata|araba|alamisa|juma|sibiri|kari\r\nntɛ|tar|ara|ala|jum|sib|kar\r\nN|T|A|A|J|S|K\r"
+      "ntɛnɛ|tarata|araba|alamisa|juma|sibiri|kari\r\nntɛ|tar|ara|ala|jum|sib|kar\r\nN|T|A|A|J|S|K\r\nntɛ|tar|ara|ala|jum|sib|kar\r"
 
   private const val bm_Standalone_Quarters: String =
       "kalo saba fɔlɔ|kalo saba filanan|kalo saba sabanan|kalo saba naaninan\r\nKS1|KS2|KS3|KS4\r\n1|2|3|4\r"
@@ -1311,7 +1311,7 @@ object AvailableDateTimeDisplayNames {
       "জানুয়ারী|ফেব্রুয়ারী|মার্চ|এপ্রিল|মে|জুন|জুলাই|আগস্ট|সেপ্টেম্বর|অক্টোবর|নভেম্বর|ডিসেম্বর\r\nজানু|ফেব|মার্চ|এপ্রি|মে|জুন|জুল|আগ|সেপ|অক্টো|নভে|ডিসে\r\nজা|ফে|মা|এ|মে|জুন|জু|আ|সে|অ|ন|ডি\r"
 
   private const val bn_Format_Days: String =
-      "সোমবার|মঙ্গলবার|বুধবার|বৃহস্পতিবার|শুক্রবার|শনিবার|রবিবার\r\nসোম|মঙ্গল|বুধ|বৃহস্পতি|শুক্র|শনি|রবি\r\nসো|ম|বু|বৃ|শু|শ|র\r"
+      "সোমবার|মঙ্গলবার|বুধবার|বৃহস্পতিবার|শুক্রবার|শনিবার|রবিবার\r\nসোম|মঙ্গল|বুধ|বৃহস্পতি|শুক্র|শনি|রবি\r\nসো|ম|বু|বৃ|শু|শ|র\r\nসোঃ|মঃ|বুঃ|বৃঃ|শুঃ|শনি|রঃ\r"
 
   private const val bn_Format_Quarters: String =
       "ত্রৈমাসিক|দ্বিতীয় ত্রৈমাসিক|তৃতীয় ত্রৈমাসিক|চতুর্থ ত্রৈমাসিক\r\nত্রৈমাসিক|দ্বিতীয় ত্রৈমাসিক|তৃতীয় ত্রৈমাসিক|চতুর্থ ত্রৈমাসিক\r\n১|২|৩|৪\r"
@@ -1322,7 +1322,7 @@ object AvailableDateTimeDisplayNames {
       "জানুয়ারী|ফেব্রুয়ারী|মার্চ|এপ্রিল|মে|জুন|জুলাই|আগস্ট|সেপ্টেম্বর|অক্টোবর|নভেম্বর|ডিসেম্বর\r\nজানু|ফেব|মার্চ|এপ্রিল|মে|জুন|জুলাই|আগস্ট|সেপ্টেম্বর|অক্টোবর|নভেম্বর|ডিসেম্বর\r\nজা|ফে|মা|এ|মে|জুন|জু|আ|সে|অ|ন|ডি\r"
 
   private const val bn_Standalone_Days: String =
-      "সোমবার|মঙ্গলবার|বুধবার|বৃহস্পতিবার|শুক্রবার|শনিবার|রবিবার\r\nসোম|মঙ্গল|বুধ|বৃহস্পতি|শুক্র|শনি|রবি\r\nসো|ম|বু|বৃ|শু|শ|র\r"
+      "সোমবার|মঙ্গলবার|বুধবার|বৃহস্পতিবার|শুক্রবার|শনিবার|রবিবার\r\nসোম|মঙ্গল|বুধ|বৃহস্পতি|শুক্র|শনি|রবি\r\nসো|ম|বু|বৃ|শু|শ|র\r\nসোঃ|মঃ|বুঃ|বৃঃ|শুঃ|শনি|রঃ\r"
 
   private const val bn_Standalone_Quarters: String =
       "ত্রৈমাসিক|দ্বিতীয় ত্রৈমাসিক|তৃতীয় ত্রৈমাসিক|চতুর্থ ত্রৈমাসিক\r\nQ1|Q2|Q3|Q4\r\n১|২|৩|৪\r"
@@ -1333,7 +1333,7 @@ object AvailableDateTimeDisplayNames {
       "জানুয়ারী|ফেব্রুয়ারী|মার্চ|এপ্রিল|মে|জুন|জুলাই|আগস্ট|সেপ্টেম্বর|অক্টোবর|নভেম্বর|ডিসেম্বর\r\nজানু|ফেব|মার্চ|এপ্রি|মে|জুন|জুল|আগ|সেপ্টেঃ|অক্টোঃ|নভেঃ|ডিসেঃ\r\nজা|ফে|মা|এ|মে|জুন|জুল|আ|সে|অ|ন|ডি\r"
 
   private const val bn_IN_Format_Days: String =
-      "সোমবার|মঙ্গলবার|বুধবার|বৃহস্পতিবার|শুক্রবার|শনিবার|রবিবার\r\nসোম|মঙ্গল|বুধ|বৃহস্পতি|শুক্র|শনি|রবি\r\nসো|ম|বু|বৃ|শু|শ|র\r"
+      "সোমবার|মঙ্গলবার|বুধবার|বৃহস্পতিবার|শুক্রবার|শনিবার|রবিবার\r\nসোম|মঙ্গল|বুধ|বৃহস্পতি|শুক্র|শনি|রবি\r\nসো|ম|বু|বৃ|শু|শ|র\r\nসোঃ|মঃ|বুঃ|বৃঃ|শুঃ|শঃ|রঃ\r"
 
   private val bn_IN_Format_Quarters: String? = null
 
@@ -1343,7 +1343,7 @@ object AvailableDateTimeDisplayNames {
       "জানুয়ারী|ফেব্রুয়ারী|মার্চ|এপ্রিল|মে|জুন|জুলাই|আগস্ট|সেপ্টেম্বর|অক্টোবর|নভেম্বর|ডিসেম্বর\r\nজানু|ফেব|মার্চ|এপ্রিল|মে|জুন|জুলাই|আগস্ট|সেপ্টেঃ|অক্টোঃ|নভেঃ|ডিসেঃ\r\nজা|ফে|মা|এ|মে|জুন|জুল|আ|সে|অ|ন|ডি\r"
 
   private const val bn_IN_Standalone_Days: String =
-      "সোমবার|মঙ্গলবার|বুধবার|বৃহস্পতিবার|শুক্রবার|শনিবার|রবিবার\r\nসোম|মঙ্গল|বুধ|বৃহস্পতি|শুক্র|শনি|রবি\r\nসো|ম|বু|বৃ|শু|শ|র\r"
+      "সোমবার|মঙ্গলবার|বুধবার|বৃহস্পতিবার|শুক্রবার|শনিবার|রবিবার\r\nসোম|মঙ্গল|বুধ|বৃহস্পতি|শুক্র|শনি|রবি\r\nসো|ম|বু|বৃ|শু|শ|র\r\nসোঃ|মঃ|বুঃ|বৃঃ|শুঃ|শঃ|রঃ\r"
 
   private val bn_IN_Standalone_Quarters: String? = null
 
@@ -1353,7 +1353,7 @@ object AvailableDateTimeDisplayNames {
       "ཟླ་བ་དང་པོ|ཟླ་བ་གཉིས་པ|ཟླ་བ་གསུམ་པ|ཟླ་བ་བཞི་པ|ཟླ་བ་ལྔ་པ|ཟླ་བ་དྲུག་པ|ཟླ་བ་བདུན་པ|ཟླ་བ་བརྒྱད་པ|ཟླ་བ་དགུ་པ|ཟླ་བ་བཅུ་པ|ཟླ་བ་བཅུ་གཅིག་པ|ཟླ་བ་བཅུ་གཉིས་པ\r\nཟླ་༡|ཟླ་༢|ཟླ་༣|ཟླ་༤|ཟླ་༥|ཟླ་༦|ཟླ་༧|ཟླ་༨|ཟླ་༩|ཟླ་༡༠|ཟླ་༡༡|ཟླ་༡༢\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val bo_Format_Days: String =
-      "གཟའ་ཟླ་བ་|གཟའ་མིག་དམར་|གཟའ་ལྷག་པ་|གཟའ་ཕུར་བུ་|གཟའ་པ་སངས་|གཟའ་སྤེན་པ་|གཟའ་ཉི་མ་\r\nཟླ་བ་|མིག་དམར་|ལྷག་པ་|ཕུར་བུ་|པ་སངས་|སྤེན་པ་|ཉི་མ་\r\nཟླ|མིག|ལྷག|ཕུར|སངས|སྤེན|ཉི\r"
+      "གཟའ་ཟླ་བ་|གཟའ་མིག་དམར་|གཟའ་ལྷག་པ་|གཟའ་ཕུར་བུ་|གཟའ་པ་སངས་|གཟའ་སྤེན་པ་|གཟའ་ཉི་མ་\r\nཟླ་བ་|མིག་དམར་|ལྷག་པ་|ཕུར་བུ་|པ་སངས་|སྤེན་པ་|ཉི་མ་\r\nཟླ|མིག|ལྷག|ཕུར|སངས|སྤེན|ཉི\r\nཟླ་བ་|མིག་དམར་|ལྷག་པ་|ཕུར་བུ་|པ་སངས་|སྤེན་པ་|ཉི་མ་\r"
 
   private const val bo_Format_Quarters: String =
       "དུས་ཚིགས་དང་པོ།|དུས་ཚིགས་གཉིས་པ།|དུས་ཚིགས་གསུམ་པ།|དུས་ཚིགས་བཞི་པ།\r\nདུས་ཚིགས་དང་པོ།|དུས་ཚིགས་གཉིས་པ།|དུས་ཚིགས་གསུམ་པ།|དུས་ཚིགས་བཞི་པ།\r\n1|2|3|4\r"
@@ -1365,7 +1365,7 @@ object AvailableDateTimeDisplayNames {
       "ཟླ་བ་དང་པོ་|ཟླ་བ་གཉིས་པ་|ཟླ་བ་གསུམ་པ་|ཟླ་བ་བཞི་པ་|ཟླ་བ་ལྔ་པ་|ཟླ་བ་དྲུག་པ་|ཟླ་བ་བདུན་པ་|ཟླ་བ་བརྒྱད་པ་|ཟླ་བ་དགུ་པ་|ཟླ་བ་བཅུ་པ་|ཟླ་བ་བཅུ་གཅིག་པ་|ཟླ་བ་བཅུ་གཉིས་པ་\r\nཟླ་༡|ཟླ་༢|ཟླ་༣|ཟླ་༤|ཟླ་༥|ཟླ་༦|ཟླ་༧|ཟླ་༨|ཟླ་༩|ཟླ་༡༠|ཟླ་༡༡|ཟླ་༡༢\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val bo_Standalone_Days: String =
-      "གཟའ་ཟླ་བ་|གཟའ་མིག་དམར་|གཟའ་ལྷག་པ་|གཟའ་ཕུར་བུ་|གཟའ་པ་སངས་|གཟའ་སྤེན་པ་|གཟའ་ཉི་མ་\r\nཟླ་བ་|མིག་དམར་|ལྷག་པ་|ཕུར་བུ་|པ་སངས་|སྤེན་པ་|ཉི་མ་\r\nཟླ|མིག|ལྷག|ཕུར|སངས|སྤེན|ཉི\r"
+      "གཟའ་ཟླ་བ་|གཟའ་མིག་དམར་|གཟའ་ལྷག་པ་|གཟའ་ཕུར་བུ་|གཟའ་པ་སངས་|གཟའ་སྤེན་པ་|གཟའ་ཉི་མ་\r\nཟླ་བ་|མིག་དམར་|ལྷག་པ་|ཕུར་བུ་|པ་སངས་|སྤེན་པ་|ཉི་མ་\r\nཟླ|མིག|ལྷག|ཕུར|སངས|སྤེན|ཉི\r\nཟླ་བ་|མིག་དམར་|ལྷག་པ་|ཕུར་བུ་|པ་སངས་|སྤེན་པ་|ཉི་མ་\r"
 
   private const val bo_Standalone_Quarters: String =
       "དུས་ཚིགས་དང་པོ།|དུས་ཚིགས་གཉིས་པ།|དུས་ཚིགས་གསུམ་པ།|དུས་ཚིགས་བཞི་པ།\r\nདུས་ཚིགས་དང་པོ།|དུས་ཚིགས་གཉིས་པ།|དུས་ཚིགས་གསུམ་པ།|དུས་ཚིགས་བཞི་པ།\r\n1|2|3|4\r"
@@ -1393,7 +1393,7 @@ object AvailableDateTimeDisplayNames {
       "Genver|Cʼhwevrer|Meurzh|Ebrel|Mae|Mezheven|Gouere|Eost|Gwengolo|Here|Du|Kerzu\r\nGen.|Cʼhwe.|Meur.|Ebr.|Mae|Mezh.|Goue.|Eost|Gwen.|Here|Du|Kzu.\r\n01|02|03|04|05|06|07|08|09|10|11|12\r"
 
   private const val br_Format_Days: String =
-      "Lun|Meurzh|Mercʼher|Yaou|Gwener|Sadorn|Sul\r\nLun|Meu.|Mer.|Yaou|Gwe.|Sad.|Sul\r\nL|Mz|Mc|Y|G|Sa|Su\r"
+      "Lun|Meurzh|Mercʼher|Yaou|Gwener|Sadorn|Sul\r\nLun|Meu.|Mer.|Yaou|Gwe.|Sad.|Sul\r\nL|Mz|Mc|Y|G|Sa|Su\r\nLun|Meu.|Mer.|Yaou|Gwe.|Sad.|Sul\r"
 
   private const val br_Format_Quarters: String =
       "1añ trimiziad|2l trimiziad|3e trimiziad|4e trimiziad\r\n1añ trim.|2l trim.|3e trim.|4e trim.\r\n1|2|3|4\r"
@@ -1404,7 +1404,7 @@ object AvailableDateTimeDisplayNames {
       "Genver|Cʼhwevrer|Meurzh|Ebrel|Mae|Mezheven|Gouere|Eost|Gwengolo|Here|Du|Kerzu\r\nGen.|Cʼhwe.|Meur.|Ebr.|Mae|Mezh.|Goue.|Eost|Gwen.|Here|Du|Kzu.\r\n01|02|03|04|05|06|07|08|09|10|11|12\r"
 
   private const val br_Standalone_Days: String =
-      "Lun|Meurzh|Mercʼher|Yaou|Gwener|Sadorn|Sul\r\nLun|Meu.|Mer.|Yaou|Gwe.|Sad.|Sul\r\nL|Mz|Mc|Y|G|Sa|Su\r"
+      "Lun|Meurzh|Mercʼher|Yaou|Gwener|Sadorn|Sul\r\nLun|Meu.|Mer.|Yaou|Gwe.|Sad.|Sul\r\nL|Mz|Mc|Y|G|Sa|Su\r\nLun|Meu.|Mer.|Yaou|Gwe.|Sad.|Sul\r"
 
   private const val br_Standalone_Quarters: String =
       "1añ trimiziad|2l trimiziad|3e trimiziad|4e trimiziad\r\n1añ trim.|2l trim.|3e trim.|4e trim.\r\n1|2|3|4\r"
@@ -1415,7 +1415,7 @@ object AvailableDateTimeDisplayNames {
       "जानुवारी|फेब्रूवारी|मार्च|एप्रिल|मे|जुन|जुलाई|आगष्ट|सेप्थेम्बर|अक्ट’बर|नवेम्बर|डिसेम्बर\r\nजान|फेब|मार्च|एप्रि|मे|जुन|जुल|आग|सेप|अक्ट’|नवे|डिसे\r\nज|फ|म|ए|म|ज|ज|आ|स|अ|न|ड\r"
 
   private const val brx_Format_Days: String =
-      "समबार|मंगलबार|बुधबार|बिस्थिबार|सुखुरबार|सनिबार|रबिबार\r\nसम|मंगल|बुध|बिस्थि|सुखुर|सनि|रबि\r\nस|मं|बु|बि|सु|स|र\r"
+      "समबार|मंगलबार|बुधबार|बिस्थिबार|सुखुरबार|सनिबार|रबिबार\r\nसम|मंगल|बुध|बिस्थि|सुखुर|सनि|रबि\r\nस|मं|बु|बि|सु|स|र\r\nसम|मंगल|बुध|बिस्थि|सुखुर|सनि|रबि\r"
 
   private const val brx_Format_Quarters: String =
       "ब्रै बाहागोनि सेथि खोन्दो|ब्रै बाहागोनि नैथि खोन्दो|ब्रै बाहागोनि थामथि खोन्दो|ब्रै बाहागोनि ब्रैथि खोन्दो\r\nकिउ 1|किउ 2|किउ 3|किउ 4\r\n1|2|3|4\r"
@@ -1426,7 +1426,7 @@ object AvailableDateTimeDisplayNames {
       "जानुवारी|फेब्रूवारी|मार्च|एप्रिल|मे|जुन|जुलाई|आगष्ट|सेप्थेम्बर|अक्ट’बर|नवेम्बर|डिसेम्बर\r\nजान|फेब|मार्च|एप्रि|मे|जुन|जुल|आग|सेप|अक्ट’|नवे|डिसे\r\nज|फ|म|ए|म|ज|ज|आ|स|अ|न|ड\r"
 
   private const val brx_Standalone_Days: String =
-      "समबार|मंगलबार|बुधबार|बिस्थिबार|सुुखुरबार|सनिबार|रबिबार\r\nसम|मंगल|बुध|बिस्थि|सुखुर|सनि|रबि\r\nस|मं|बु|बि|सु|स|र\r"
+      "समबार|मंगलबार|बुधबार|बिस्थिबार|सुुखुरबार|सनिबार|रबिबार\r\nसम|मंगल|बुध|बिस्थि|सुखुर|सनि|रबि\r\nस|मं|बु|बि|सु|स|र\r\nसम|मंगल|बुध|बिस्थि|सुखुर|सनि|रबि\r"
 
   private const val brx_Standalone_Quarters: String =
       "ब्रै बाहागोनि सेथि खोन्दो|ब्रै बाहागोनि नैथि खोन्दो|ब्रै बाहागोनि थामथि खोन्दो|ब्रै बाहागोनि ब्रैथि खोन्दो\r\nकिउ 1|किउ 2|किउ 3|किउ 4\r\n1|2|3|4\r"
@@ -1438,7 +1438,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|mart|april|maj|juni|juli|august|septembar|oktobar|novembar|decembar\r\njan|feb|mar|apr|maj|jun|jul|aug|sep|okt|nov|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val bs_Format_Days: String =
-      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\nP|U|S|Č|P|S|N\r"
+      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\nP|U|S|Č|P|S|N\r\npon|uto|sri|čet|pet|sub|ned\r"
 
   private const val bs_Format_Quarters: String =
       "Prvi kvartal|Drugi kvartal|Treći kvartal|Četvrti kvartal\r\nKV1|KV2|KV3|KV4\r\n1.|2.|3.|4.\r"
@@ -1450,7 +1450,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|mart|april|maj|juni|juli|august|septembar|oktobar|novembar|decembar\r\njan|feb|mar|apr|maj|jun|jul|aug|sep|okt|nov|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val bs_Standalone_Days: String =
-      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r"
+      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r\npon|uto|sri|čet|pet|sub|ned\r"
 
   private const val bs_Standalone_Quarters: String =
       "Prvi kvartal|Drugi kvartal|Treći kvartal|Četvrti kvartal\r\nKV1|KV2|KV3|KV4\r\n1.|2.|3.|4.\r"
@@ -1462,7 +1462,7 @@ object AvailableDateTimeDisplayNames {
       "јануар|фебруар|март|април|мај|јуни|јули|аугуст|септембар|октобар|новембар|децембар\r\nјан|феб|мар|апр|мај|јун|јул|ауг|сеп|окт|нов|дец\r\nј|ф|м|а|м|ј|ј|а|с|о|н|д\r"
 
   private const val bs_Cyrl_Format_Days: String =
-      "понедјељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сри|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r"
+      "понедјељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сри|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r\nпон|уто|сри|чет|пет|суб|нед\r"
 
   private const val bs_Cyrl_Format_Quarters: String =
       "Прво тромесечје|Друго тромесечје|Треће тромесечје|Четврто тромесечје\r\nК1|К2|К3|К4\r\n1.|2.|3.|4.\r"
@@ -1474,7 +1474,7 @@ object AvailableDateTimeDisplayNames {
       "јануар|фебруар|март|април|мај|јуни|јули|аугуст|септембар|октобар|новембар|децембар\r\nјан|феб|мар|апр|мај|јун|јул|ауг|сеп|окт|нов|дец\r\nј|ф|м|а|м|ј|ј|а|с|о|н|д\r"
 
   private const val bs_Cyrl_Standalone_Days: String =
-      "понедјељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сри|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r"
+      "понедјељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сри|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r\nпон|уто|сри|чет|пет|суб|нед\r"
 
   private const val bs_Cyrl_Standalone_Quarters: String =
       "Прво тромесечје|Друго тромесечје|Треће тромесечје|Четврто тромесечје\r\nК1|К2|К3|К4\r\n1.|2.|3.|4.\r"
@@ -1534,7 +1534,7 @@ object AvailableDateTimeDisplayNames {
       "de gener|de febrer|de març|d’abril|de maig|de juny|de juliol|d’agost|de setembre|d’octubre|de novembre|de desembre\r\nde gen.|de febr.|de març|d’abr.|de maig|de juny|de jul.|d’ag.|de set.|d’oct.|de nov.|de des.\r\nGN|FB|MÇ|AB|MG|JN|JL|AG|ST|OC|NV|DS\r"
 
   private const val ca_Format_Days: String =
-      "dilluns|dimarts|dimecres|dijous|divendres|dissabte|diumenge\r\ndl.|dt.|dc.|dj.|dv.|ds.|dg.\r\ndl.|dt.|dc.|dj.|dv.|ds.|dg.\r"
+      "dilluns|dimarts|dimecres|dijous|divendres|dissabte|diumenge\r\ndl.|dt.|dc.|dj.|dv.|ds.|dg.\r\ndl.|dt.|dc.|dj.|dv.|ds.|dg.\r\ndl.|dt.|dc.|dj.|dv.|ds.|dg.\r"
 
   private const val ca_Format_Quarters: String =
       "1r trimestre|2n trimestre|3r trimestre|4t trimestre\r\n1T|2T|3T|4T\r\n1|2|3|4\r"
@@ -1546,7 +1546,7 @@ object AvailableDateTimeDisplayNames {
       "gener|febrer|març|abril|maig|juny|juliol|agost|setembre|octubre|novembre|desembre\r\ngen.|febr.|març|abr.|maig|juny|jul.|ag.|set.|oct.|nov.|des.\r\nGN|FB|MÇ|AB|MG|JN|JL|AG|ST|OC|NV|DS\r"
 
   private const val ca_Standalone_Days: String =
-      "dilluns|dimarts|dimecres|dijous|divendres|dissabte|diumenge\r\ndl.|dt.|dc.|dj.|dv.|ds.|dg.\r\ndl.|dt.|dc.|dj.|dv.|ds.|dg.\r"
+      "dilluns|dimarts|dimecres|dijous|divendres|dissabte|diumenge\r\ndl.|dt.|dc.|dj.|dv.|ds.|dg.\r\ndl.|dt.|dc.|dj.|dv.|ds.|dg.\r\ndl.|dt.|dc.|dj.|dv.|ds.|dg.\r"
 
   private const val ca_Standalone_Quarters: String =
       "1r trimestre|2n trimestre|3r trimestre|4t trimestre\r\n1T|2T|3T|4T\r\n1|2|3|4\r"
@@ -1622,7 +1622,7 @@ object AvailableDateTimeDisplayNames {
       "Cháykáhday Haˀimay|Tsahkápbiˀ|Wánit|Háshnihtiˀtiˀ|Háshnih Haˀimay|Háshnihtsiˀ|Násˀahˀatsus|Dahósikah nish|Híisikah nish|Nípbaatiˀtiˀ|Nípbaa Haˀimay|Cháykáhdaytiˀtiˀ\r\nCháykáhday Haˀimay|Tsahkápbiˀ|Wánit|Háshnihtiˀtiˀ|Háshnih Haˀimay|Háshnihtsiˀ|Násˀahˀatsus|Dahósikah nish|Híisikah nish|Nípbaatiˀtiˀ|Nípbaa Haˀimay|Cháykáhdaytiˀtiˀ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val cad_Format_Days: String =
-      "Wísts’i hayashuh|Bít hayashuh|Dahó hayashuh|Hiwí hayashuh|Dissik’an hayashuh|Inikuˀtiˀtiˀ|Inikuˀ\r\nWísts’i hayashuh|Bít hayashuh|Dahó hayashuh|Hiwí hayashuh|Dissik’an hayashuh|Inikuˀtiˀtiˀ|Inikuˀ\r\nM|T|W|T|F|S|S\r"
+      "Wísts’i hayashuh|Bít hayashuh|Dahó hayashuh|Hiwí hayashuh|Dissik’an hayashuh|Inikuˀtiˀtiˀ|Inikuˀ\r\nWísts’i hayashuh|Bít hayashuh|Dahó hayashuh|Hiwí hayashuh|Dissik’an hayashuh|Inikuˀtiˀtiˀ|Inikuˀ\r\nM|T|W|T|F|S|S\r\nWísts’i hayashuh|Bít hayashuh|Dahó hayashuh|Hiwí hayashuh|Dissik’an hayashuh|Inikuˀtiˀtiˀ|Inikuˀ\r"
 
   private val cad_Format_Quarters: String? = null
 
@@ -1632,7 +1632,7 @@ object AvailableDateTimeDisplayNames {
       "Cháykáhday Haˀimay|Tsahkápbiˀ|Wánit|Háshnihtiˀtiˀ|Háshnih Haˀimay|Háshnihtsiˀ|Násˀahˀatsus|Dahósikah nish|Híisikah nish|Nípbaatiˀtiˀ|Nípbaa Haˀimay|Cháykáhdaytiˀtiˀ\r\nCháykáhday Haˀimay|Tsahkápbiˀ|Wánit|Háshnihtiˀtiˀ|Háshnih Haˀimay|Háshnihtsiˀ|Násˀahˀatsus|Dahósikah nish|Híisikah nish|Nípbaatiˀtiˀ|Nípbaa Haˀimay|Cháykáhdaytiˀtiˀ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val cad_Standalone_Days: String =
-      "Wísts’i hayashuh|Bít hayashuh|Dahó hayashuh|Hiwí hayashuh|Dissik’an hayashuh|Inikuˀtiˀtiˀ|Inikuˀ\r\nWísts’i hayashuh|Bít hayashuh|Dahó hayashuh|Hiwí hayashuh|Dissik’an hayashuh|Inikuˀtiˀtiˀ|Inikuˀ\r\nM|T|W|T|F|S|S\r"
+      "Wísts’i hayashuh|Bít hayashuh|Dahó hayashuh|Hiwí hayashuh|Dissik’an hayashuh|Inikuˀtiˀtiˀ|Inikuˀ\r\nWísts’i hayashuh|Bít hayashuh|Dahó hayashuh|Hiwí hayashuh|Dissik’an hayashuh|Inikuˀtiˀtiˀ|Inikuˀ\r\nM|T|W|T|F|S|S\r\nWísts’i hayashuh|Bít hayashuh|Dahó hayashuh|Hiwí hayashuh|Dissik’an hayashuh|Inikuˀtiˀtiˀ|Inikuˀ\r"
 
   private val cad_Standalone_Quarters: String? = null
 
@@ -1658,7 +1658,7 @@ object AvailableDateTimeDisplayNames {
       "𑄎𑄚𑄪𑄠𑄢𑄨|𑄜𑄬𑄛𑄴𑄝𑄳𑄢𑄪𑄠𑄢𑄨|𑄟𑄢𑄴𑄌𑄧|𑄃𑄬𑄛𑄳𑄢𑄨𑄣𑄴|𑄟𑄬|𑄎𑄪𑄚𑄴|𑄎𑄪𑄣𑄭|𑄃𑄉𑄧𑄌𑄴𑄑𑄴|𑄥𑄬𑄛𑄴𑄑𑄬𑄟𑄴𑄝𑄧𑄢𑄴|𑄃𑄧𑄇𑄴𑄑𑄬𑄝𑄧𑄢𑄴|𑄚𑄧𑄞𑄬𑄟𑄴𑄝𑄧𑄢𑄴|𑄓𑄨𑄥𑄬𑄟𑄴𑄝𑄧𑄢𑄴\r\n𑄎𑄚𑄪|𑄜𑄬𑄛𑄴|𑄟𑄢𑄴𑄌𑄧|𑄃𑄬𑄛𑄳𑄢𑄨𑄣𑄴|𑄟𑄬|𑄎𑄪𑄚𑄴|𑄎𑄪𑄣𑄭|𑄃𑄉𑄧𑄌𑄴𑄑𑄴|𑄥𑄬𑄛𑄴𑄑𑄬𑄟𑄴𑄝𑄧𑄢𑄴|𑄃𑄧𑄇𑄴𑄑𑄮𑄝𑄧𑄢𑄴|𑄚𑄧𑄞𑄬𑄟𑄴𑄝𑄧𑄢𑄴|𑄓𑄨𑄥𑄬𑄟𑄴𑄝𑄢𑄴\r\n𑄎|𑄜𑄬|𑄟|𑄃𑄬|𑄟𑄬|𑄎𑄪𑄚𑄴|𑄎𑄪|𑄃|𑄥𑄬|𑄃𑄧|𑄚𑄧|𑄓𑄨\r"
 
   private const val ccp_Format_Days: String =
-      "𑄥𑄧𑄟𑄴𑄝𑄢𑄴|𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴|𑄝𑄪𑄖𑄴𑄝𑄢𑄴|𑄝𑄳𑄢𑄨𑄥𑄪𑄛𑄴𑄝𑄢𑄴|𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴|𑄥𑄧𑄚𑄨𑄝𑄢𑄴|𑄢𑄧𑄝𑄨𑄝𑄢𑄴\r\n𑄥𑄧𑄟𑄴|𑄟𑄧𑄁𑄉𑄧𑄣𑄴|𑄝𑄪𑄖𑄴|𑄝𑄳𑄢𑄨𑄥𑄪𑄛𑄴|𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴|𑄥𑄧𑄚𑄨|𑄢𑄧𑄝𑄨\r\n𑄥𑄧|𑄟𑄧|𑄝𑄪|𑄝𑄳𑄢𑄨|𑄥𑄪|𑄥𑄧|𑄢𑄧\r"
+      "𑄥𑄧𑄟𑄴𑄝𑄢𑄴|𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴|𑄝𑄪𑄖𑄴𑄝𑄢𑄴|𑄝𑄳𑄢𑄨𑄥𑄪𑄛𑄴𑄝𑄢𑄴|𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴|𑄥𑄧𑄚𑄨𑄝𑄢𑄴|𑄢𑄧𑄝𑄨𑄝𑄢𑄴\r\n𑄥𑄧𑄟𑄴|𑄟𑄧𑄁𑄉𑄧𑄣𑄴|𑄝𑄪𑄖𑄴|𑄝𑄳𑄢𑄨𑄥𑄪𑄛𑄴|𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴|𑄥𑄧𑄚𑄨|𑄢𑄧𑄝𑄨\r\n𑄥𑄧|𑄟𑄧|𑄝𑄪|𑄝𑄳𑄢𑄨|𑄥𑄪|𑄥𑄧|𑄢𑄧\r\n𑄥𑄧𑄟𑄴|𑄟𑄧𑄁𑄉𑄧𑄣𑄴|𑄝𑄪𑄖𑄴|𑄝𑄳𑄢𑄨𑄥𑄪𑄛𑄴|𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴|𑄥𑄧𑄚𑄨|𑄢𑄧𑄝𑄨\r"
 
   private const val ccp_Format_Quarters: String =
       "𑄖𑄨𑄚𑄴𑄟𑄎𑄧𑄢𑄴|𑄘𑄨 𑄛𑄳𑄆𑄘𑄳𑄠𑄬 𑄖𑄨𑄚𑄴𑄟𑄎𑄧𑄢𑄴|𑄖𑄨𑄚𑄴 𑄛𑄳𑄆𑄘𑄳𑄠𑄬 𑄖𑄨𑄚𑄴𑄟𑄎𑄧𑄢𑄴|𑄌𑄳𑄆𑄬𑄢𑄴 𑄛𑄳𑄆𑄘𑄳𑄠𑄬 𑄖𑄨𑄚𑄴𑄟𑄎𑄧𑄢𑄴\r\nQ1|Q2|Q3|Q4\r\n𑄷|𑄸|𑄹|𑄺\r"
@@ -1669,7 +1669,7 @@ object AvailableDateTimeDisplayNames {
       "𑄎𑄚𑄪𑄠𑄢𑄨|𑄜𑄬𑄛𑄴𑄝𑄳𑄢𑄪𑄠𑄢𑄨|𑄟𑄢𑄴𑄌𑄧|𑄃𑄬𑄛𑄳𑄢𑄨𑄣𑄴|𑄟𑄬|𑄎𑄪𑄚𑄴|𑄎𑄪𑄣𑄭|𑄃𑄉𑄧𑄌𑄴𑄑𑄴|𑄥𑄬𑄛𑄴𑄑𑄬𑄟𑄴𑄝𑄧𑄢𑄴|𑄃𑄧𑄇𑄴𑄑𑄮𑄝𑄧𑄢𑄴|𑄚𑄧𑄞𑄬𑄟𑄴𑄝𑄧𑄢𑄴|𑄓𑄨𑄥𑄬𑄟𑄴𑄝𑄧𑄢𑄴\r\n𑄎𑄚𑄪𑄠𑄢𑄨|𑄜𑄬𑄛𑄴𑄝𑄳𑄢𑄪𑄠𑄢𑄨|𑄟𑄢𑄴𑄌𑄧|𑄃𑄬𑄛𑄳𑄢𑄨𑄣𑄴|𑄟𑄬|𑄎𑄪𑄚𑄴|𑄎𑄪𑄣𑄭|𑄃𑄉𑄧𑄌𑄴𑄑𑄴|𑄥𑄬𑄛𑄴𑄑𑄬𑄟𑄴𑄝𑄧𑄢𑄴|𑄃𑄧𑄇𑄴𑄑𑄮𑄝𑄧𑄢𑄴|𑄚𑄧𑄞𑄬𑄟𑄴𑄝𑄧𑄢𑄴|𑄓𑄨𑄥𑄬𑄟𑄴𑄝𑄧𑄢𑄴\r\n𑄎|𑄜𑄬|𑄟|𑄃𑄬|𑄟𑄬|𑄎𑄪𑄚𑄴|𑄎𑄪|𑄃|𑄥𑄬|𑄃𑄧|𑄚𑄧|𑄓𑄨\r"
 
   private const val ccp_Standalone_Days: String =
-      "𑄥𑄧𑄟𑄴𑄝𑄢𑄴|𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴|𑄝𑄪𑄖𑄴𑄝𑄢𑄴|𑄝𑄳𑄢𑄨𑄥𑄪𑄛𑄴𑄝𑄢𑄴|𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴|𑄥𑄧𑄚𑄨𑄝𑄢𑄴|𑄢𑄧𑄝𑄨𑄝𑄢𑄴\r\n𑄥𑄧𑄟𑄴|𑄟𑄧𑄁𑄉𑄧𑄣𑄴|𑄝𑄪𑄖𑄴|𑄝𑄳𑄢𑄨𑄥𑄪𑄛𑄴|𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴|𑄥𑄧𑄚𑄨|𑄢𑄧𑄝𑄨\r\n𑄥𑄧|𑄟𑄧|𑄝𑄪|𑄝𑄳𑄢𑄨|𑄥𑄪|𑄥𑄧|𑄢𑄧\r"
+      "𑄥𑄧𑄟𑄴𑄝𑄢𑄴|𑄟𑄧𑄁𑄉𑄧𑄣𑄴𑄝𑄢𑄴|𑄝𑄪𑄖𑄴𑄝𑄢𑄴|𑄝𑄳𑄢𑄨𑄥𑄪𑄛𑄴𑄝𑄢𑄴|𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴𑄝𑄢𑄴|𑄥𑄧𑄚𑄨𑄝𑄢𑄴|𑄢𑄧𑄝𑄨𑄝𑄢𑄴\r\n𑄥𑄧𑄟𑄴|𑄟𑄧𑄁𑄉𑄧𑄣𑄴|𑄝𑄪𑄖𑄴|𑄝𑄳𑄢𑄨𑄥𑄪𑄛𑄴|𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴|𑄥𑄧𑄚𑄨|𑄢𑄧𑄝𑄨\r\n𑄥𑄧|𑄟𑄧|𑄝𑄪|𑄝𑄳𑄢𑄨|𑄥𑄪|𑄥𑄧|𑄢𑄧\r\n𑄥𑄧𑄟𑄴|𑄟𑄧𑄁𑄉𑄧𑄣𑄴|𑄝𑄪𑄖𑄴|𑄝𑄳𑄢𑄨𑄥𑄪𑄛𑄴|𑄥𑄪𑄇𑄴𑄇𑄮𑄢𑄴|𑄥𑄧𑄚𑄨|𑄢𑄧𑄝𑄨\r"
 
   private const val ccp_Standalone_Quarters: String =
       "𑄖𑄨𑄚𑄴𑄟𑄎𑄧𑄢𑄴|𑄘𑄨 𑄛𑄳𑄆𑄘𑄳𑄠𑄬 𑄖𑄨𑄚𑄴𑄟𑄎𑄧𑄢𑄴|𑄖𑄨𑄚𑄴 𑄛𑄳𑄆𑄘𑄳𑄠𑄬 𑄖𑄨𑄚𑄴𑄟𑄎𑄧𑄢𑄴|𑄌𑄳𑄆𑄬𑄢𑄴 𑄛𑄳𑄆𑄘𑄳𑄠𑄬 𑄖𑄨𑄚𑄴𑄟𑄎𑄧𑄢𑄴\r\nQ1|Q2|Q3|Q4\r\n𑄷|𑄸|𑄹|𑄺\r"
@@ -1696,7 +1696,7 @@ object AvailableDateTimeDisplayNames {
       "январь|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь\r\nянв|фев|мар|апр|май|июн|июл|авг|сен|окт|ноя|дек\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val ce_Format_Days: String =
-      "оршот|шинара|кхаара|еара|пӀераска|шуот|кӀира\r\nор|ши|кха|еа|пӀе|шуо|кӀи\r\nор|ши|кха|еа|пӀе|шуо|кӀи\r"
+      "оршот|шинара|кхаара|еара|пӀераска|шуот|кӀира\r\nор|ши|кха|еа|пӀе|шуо|кӀи\r\nор|ши|кха|еа|пӀе|шуо|кӀи\r\nор|ши|кха|еа|пӀе|шуо|кӀи\r"
 
   private const val ce_Format_Quarters: String =
       "1-гӀа квартал|2-гӀа квартал|3-гӀа квартал|4-гӀа квартал\r\n1-гӀа кв.|2-гӀа кв.|3-гӀа кв.|4-гӀа кв.\r\n1|2|3|4\r"
@@ -1707,7 +1707,7 @@ object AvailableDateTimeDisplayNames {
       "январь|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь\r\nянв|фев|мар|апр|май|июн|июл|авг|сен|окт|ноя|дек\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val ce_Standalone_Days: String =
-      "оршот|шинара|кхаара|еара|пӀераска|шуот|кӀира\r\nор|ши|кха|еа|пӀе|шуо|кӀи\r\nо|ш|кх|е|пӀ|ш|кӀ\r"
+      "оршот|шинара|кхаара|еара|пӀераска|шуот|кӀира\r\nор|ши|кха|еа|пӀе|шуо|кӀи\r\nо|ш|кх|е|пӀ|ш|кӀ\r\nор|ши|кха|еа|пӀе|шуо|кӀи\r"
 
   private const val ce_Standalone_Quarters: String =
       "1-гӀа квартал|2-гӀа квартал|3-гӀа квартал|4-гӀа квартал\r\n1-гӀа кв.|2-гӀа кв.|3-гӀа кв.|4-гӀа кв.\r\n1|2|3|4\r"
@@ -1718,7 +1718,7 @@ object AvailableDateTimeDisplayNames {
       "Enero|Pebrero|Marso|Abril|Mayo|Hunyo|Hulyo|Agosto|Septyembre|Oktubre|Nobyembre|Disyembre\r\nEne|Peb|Mar|Abr|May|Hun|Hul|Ago|Sep|Okt|Nob|Dis\r\nE|P|M|A|M|H|H|A|S|O|N|D\r"
 
   private const val ceb_Format_Days: String =
-      "Lunes|Martes|Miyerkules|Huwebes|Biyernes|Sabado|Domingo\r\nLun|Mar|Miy|Huw|Biy|Sab|Dom\r\nL|M|M|H|B|S|D\r"
+      "Lunes|Martes|Miyerkules|Huwebes|Biyernes|Sabado|Domingo\r\nLun|Mar|Miy|Huw|Biy|Sab|Dom\r\nL|M|M|H|B|S|D\r\nLun|Mar|Miy|Huw|Biy|Sab|Dom\r"
 
   private const val ceb_Format_Quarters: String =
       "unang quarter|ika-2 nga quarter|ika-3 nga quarter|ika-4 nga quarter\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -1729,7 +1729,7 @@ object AvailableDateTimeDisplayNames {
       "Enero|Pebrero|Marso|Abril|Mayo|Hunyo|Hulyo|Agosto|Septyembre|Oktubre|Nobyembre|Disyembre\r\nEne|Peb|Mar|Abr|May|Hun|Hul|Ago|Sep|Okt|Nob|Dis\r\nE|P|M|A|M|H|H|A|S|O|N|D\r"
 
   private const val ceb_Standalone_Days: String =
-      "Lunes|Martes|Miyerkules|Huwebes|Biyernes|Sabado|Domingo\r\nLun|Mar|Miy|Huw|Biy|Sab|Dom\r\nL|M|M|H|B|S|D\r"
+      "Lunes|Martes|Miyerkules|Huwebes|Biyernes|Sabado|Domingo\r\nLun|Mar|Miy|Huw|Biy|Sab|Dom\r\nL|M|M|H|B|S|D\r\nLun|Mar|Miy|Huw|Biy|Sab|Dom\r"
 
   private const val ceb_Standalone_Quarters: String =
       "unang quarter|ika-2 nga quarter|ika-3 nga quarter|ika-4 nga quarter\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -1740,7 +1740,7 @@ object AvailableDateTimeDisplayNames {
       "Okwokubanza|Okwakabiri|Okwakashatu|Okwakana|Okwakataana|Okwamukaaga|Okwamushanju|Okwamunaana|Okwamwenda|Okwaikumi|Okwaikumi na kumwe|Okwaikumi na ibiri\r\nKBZ|KBR|KST|KKN|KTN|KMK|KMS|KMN|KMW|KKM|KNK|KNB\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val cgg_Format_Days: String =
-      "Orwokubanza|Orwakabiri|Orwakashatu|Orwakana|Orwakataano|Orwamukaaga|Sande\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r\nK|R|S|N|T|M|S\r"
+      "Orwokubanza|Orwakabiri|Orwakashatu|Orwakana|Orwakataano|Orwamukaaga|Sande\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r\nK|R|S|N|T|M|S\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r"
 
   private const val cgg_Format_Quarters: String =
       "KWOTA 1|KWOTA 2|KWOTA 3|KWOTA 4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -1751,7 +1751,7 @@ object AvailableDateTimeDisplayNames {
       "Okwokubanza|Okwakabiri|Okwakashatu|Okwakana|Okwakataana|Okwamukaaga|Okwamushanju|Okwamunaana|Okwamwenda|Okwaikumi|Okwaikumi na kumwe|Okwaikumi na ibiri\r\nKBZ|KBR|KST|KKN|KTN|KMK|KMS|KMN|KMW|KKM|KNK|KNB\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val cgg_Standalone_Days: String =
-      "Orwokubanza|Orwakabiri|Orwakashatu|Orwakana|Orwakataano|Orwamukaaga|Sande\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r\nK|R|S|N|T|M|S\r"
+      "Orwokubanza|Orwakabiri|Orwakashatu|Orwakana|Orwakataano|Orwamukaaga|Sande\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r\nK|R|S|N|T|M|S\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r"
 
   private const val cgg_Standalone_Quarters: String =
       "KWOTA 1|KWOTA 2|KWOTA 3|KWOTA 4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -1778,7 +1778,7 @@ object AvailableDateTimeDisplayNames {
       "ᎤᏃᎸᏔᏅ|ᎧᎦᎵ|ᎠᏅᏱ|ᎧᏬᏂ|ᎠᏂᏍᎬᏘ|ᏕᎭᎷᏱ|ᎫᏰᏉᏂ|ᎦᎶᏂ|ᏚᎵᏍᏗ|ᏚᏂᏅᏗ|ᏅᏓᏕᏆ|ᎥᏍᎩᏱ\r\nᎤᏃ|ᎧᎦ|ᎠᏅ|ᎧᏬ|ᎠᏂ|ᏕᎭ|ᎫᏰ|ᎦᎶ|ᏚᎵ|ᏚᏂ|ᏅᏓ|ᎥᏍ\r\nᎤ|Ꭷ|Ꭰ|Ꭷ|Ꭰ|Ꮥ|Ꭻ|Ꭶ|Ꮪ|Ꮪ|Ꮕ|Ꭵ\r"
 
   private const val chr_Format_Days: String =
-      "ᎤᎾᏙᏓᏉᏅᎯ|ᏔᎵᏁᎢᎦ|ᏦᎢᏁᎢᎦ|ᏅᎩᏁᎢᎦ|ᏧᎾᎩᎶᏍᏗ|ᎤᎾᏙᏓᏈᏕᎾ|ᎤᎾᏙᏓᏆᏍᎬ\r\nᏉᏅᎯ|ᏔᎵᏁ|ᏦᎢᏁ|ᏅᎩᏁ|ᏧᎾᎩ|ᏈᏕᎾ|ᏆᏍᎬ\r\nᏉ|Ꮤ|Ꮶ|Ꮕ|Ꮷ|Ꭴ|Ꮖ\r"
+      "ᎤᎾᏙᏓᏉᏅᎯ|ᏔᎵᏁᎢᎦ|ᏦᎢᏁᎢᎦ|ᏅᎩᏁᎢᎦ|ᏧᎾᎩᎶᏍᏗ|ᎤᎾᏙᏓᏈᏕᎾ|ᎤᎾᏙᏓᏆᏍᎬ\r\nᏉᏅᎯ|ᏔᎵᏁ|ᏦᎢᏁ|ᏅᎩᏁ|ᏧᎾᎩ|ᏈᏕᎾ|ᏆᏍᎬ\r\nᏉ|Ꮤ|Ꮶ|Ꮕ|Ꮷ|Ꭴ|Ꮖ\r\nᏅᎯ|ᏔᎵ|ᏦᎢ|ᏅᎩ|ᏧᎾ|ᏕᎾ|ᏍᎬ\r"
 
   private const val chr_Format_Quarters: String =
       "1st ᎩᏄᏙᏗ|2nd ᎩᏄᏙᏗ|3rd ᎩᏄᏙᏗ|4th ᎩᏄᏙᏗ\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -1789,7 +1789,7 @@ object AvailableDateTimeDisplayNames {
       "ᎤᏃᎸᏔᏅ|ᎧᎦᎵ|ᎠᏅᏱ|ᎧᏬᏂ|ᎠᏂᏍᎬᏘ|ᏕᎭᎷᏱ|ᎫᏰᏉᏂ|ᎦᎶᏂ|ᏚᎵᏍᏗ|ᏚᏂᏅᏗ|ᏅᏓᏕᏆ|ᎥᏍᎩᏱ\r\nᎤᏃ|ᎧᎦ|ᎠᏅ|ᎧᏬ|ᎠᏂ|ᏕᎭ|ᎫᏰ|ᎦᎶ|ᏚᎵ|ᏚᏂ|ᏅᏓ|ᎥᏍ\r\nᎤ|Ꭷ|Ꭰ|Ꭷ|Ꭰ|Ꮥ|Ꭻ|Ꭶ|Ꮪ|Ꮪ|Ꮕ|Ꭵ\r"
 
   private const val chr_Standalone_Days: String =
-      "ᎤᎾᏙᏓᏉᏅᎯ|ᏔᎵᏁᎢᎦ|ᏦᎢᏁᎢᎦ|ᏅᎩᏁᎢᎦ|ᏧᎾᎩᎶᏍᏗ|ᎤᎾᏙᏓᏈᏕᎾ|ᎤᎾᏙᏓᏆᏍᎬ\r\nᏉᏅᎯ|ᏔᎵᏁ|ᏦᎢᏁ|ᏅᎩᏁ|ᏧᎾᎩ|ᏈᏕᎾ|ᏆᏍᎬ\r\nᏉ|Ꮤ|Ꮶ|Ꮕ|Ꮷ|Ꭴ|Ꮖ\r"
+      "ᎤᎾᏙᏓᏉᏅᎯ|ᏔᎵᏁᎢᎦ|ᏦᎢᏁᎢᎦ|ᏅᎩᏁᎢᎦ|ᏧᎾᎩᎶᏍᏗ|ᎤᎾᏙᏓᏈᏕᎾ|ᎤᎾᏙᏓᏆᏍᎬ\r\nᏉᏅᎯ|ᏔᎵᏁ|ᏦᎢᏁ|ᏅᎩᏁ|ᏧᎾᎩ|ᏈᏕᎾ|ᏆᏍᎬ\r\nᏉ|Ꮤ|Ꮶ|Ꮕ|Ꮷ|Ꭴ|Ꮖ\r\nᏅᎯ|ᏔᎵ|ᏦᎢ|ᏅᎩ|ᏧᎾ|ᏕᎾ|ᏍᎬ\r"
 
   private const val chr_Standalone_Quarters: String =
       "1st ᎩᏄᏙᏗ|2nd ᎩᏄᏙᏗ|3rd ᎩᏄᏙᏗ|4th ᎩᏄᏙᏗ\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -1801,7 +1801,7 @@ object AvailableDateTimeDisplayNames {
       "Hashiʼ Ammoʼnaʼ|Hashiʼ Atokloʼ|Hashiʼ Atochchíʼnaʼ|Iiplal|Mih|Choon|Choola|Akaas|Siptimpaʼ|Aaktopaʼ|Nofimpaʼ|Tiisimpaʼ\r\nHashiʼ Ammoʼnaʼ|Hashiʼ Atokloʼ|Hashiʼ Atochchíʼnaʼ|Iiplal|Mih|Choon|Choola|Akaas|Siptimpaʼ|Aaktopaʼ|Nofimpaʼ|Tiisimpaʼ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val cic_Format_Days: String =
-      "Mantiʼ|Chostiʼ|Winstiʼ|Soistiʼ|Nannalhchifaʼ Nittak|Nittak Holloʼ Nakfish|Nittak Holloʼ\r\nMantiʼ|Chostiʼ|Winstiʼ|Soistiʼ|Nannalhchifaʼ Nittak|Nittak Holloʼ Nakfish|Nittak Holloʼ\r\nM|T|W|T|F|S|S\r"
+      "Mantiʼ|Chostiʼ|Winstiʼ|Soistiʼ|Nannalhchifaʼ Nittak|Nittak Holloʼ Nakfish|Nittak Holloʼ\r\nMantiʼ|Chostiʼ|Winstiʼ|Soistiʼ|Nannalhchifaʼ Nittak|Nittak Holloʼ Nakfish|Nittak Holloʼ\r\nM|T|W|T|F|S|S\r\nMantiʼ|Chostiʼ|Winstiʼ|Soistiʼ|Nannalhchifaʼ Nittak|Nittak Holloʼ Nakfish|Nittak Holloʼ\r"
 
   private val cic_Format_Quarters: String? = null
 
@@ -1811,7 +1811,7 @@ object AvailableDateTimeDisplayNames {
       "Hashiʼ Ammoʼnaʼ|Hashiʼ Atokloʼ|Hashiʼ Atochchíʼnaʼ|Iiplal|Mih|Choon|Choola|Akaas|Siptimpaʼ|Aaktopaʼ|Nofimpaʼ|Tiisimpaʼ\r\nHashiʼ Ammoʼnaʼ|Hashiʼ Atokloʼ|Hashiʼ Atochchíʼnaʼ|Iiplal|Mih|Choon|Choola|Akaas|Siptimpaʼ|Aaktopaʼ|Nofimpaʼ|Tiisimpaʼ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val cic_Standalone_Days: String =
-      "Mantiʼ|Chostiʼ|Winstiʼ|Soistiʼ|Nannalhchifaʼ Nittak|Nittak Holloʼ Nakfish|Nittak Holloʼ\r\nMantiʼ|Chostiʼ|Winstiʼ|Soistiʼ|Nannalhchifaʼ Nittak|Nittak Holloʼ Nakfish|Nittak Holloʼ\r\nM|T|W|T|F|S|S\r"
+      "Mantiʼ|Chostiʼ|Winstiʼ|Soistiʼ|Nannalhchifaʼ Nittak|Nittak Holloʼ Nakfish|Nittak Holloʼ\r\nMantiʼ|Chostiʼ|Winstiʼ|Soistiʼ|Nannalhchifaʼ Nittak|Nittak Holloʼ Nakfish|Nittak Holloʼ\r\nM|T|W|T|F|S|S\r\nMantiʼ|Chostiʼ|Winstiʼ|Soistiʼ|Nannalhchifaʼ Nittak|Nittak Holloʼ Nakfish|Nittak Holloʼ\r"
 
   private val cic_Standalone_Quarters: String? = null
 
@@ -1821,7 +1821,7 @@ object AvailableDateTimeDisplayNames {
       "کانوونی دووەم|شوبات|ئازار|نیسان|ئایار|حوزەیران|تەمووز|ئاب|ئەیلوول|تشرینی یەکەم|تشرینی دووەم|کانونی یەکەم\r\nکانوونی دووەم|شوبات|ئازار|نیسان|ئایار|حوزەیران|تەمووز|ئاب|ئەیلوول|تشرینی یەکەم|تشرینی دووەم|کانونی یەکەم\r\nک|ش|ئ|ن|ئ|ح|ت|ئ|ئ|ت|ت|ک\r"
 
   private const val ckb_Format_Days: String =
-      "دووشەممە|سێشەممە|چوارشەممە|پێنجشەممە|ھەینی|شەممە|یەکشەممە\r\nدووشەممە|سێشەممە|چوارشەممە|پێنجشەممە|ھەینی|شەممە|یەکشەممە\r\nد|س|چ|پ|ھ|ش|ی\r"
+      "دووشەممە|سێشەممە|چوارشەممە|پێنجشەممە|ھەینی|شەممە|یەکشەممە\r\nدووشەممە|سێشەممە|چوارشەممە|پێنجشەممە|ھەینی|شەممە|یەکشەممە\r\nد|س|چ|پ|ھ|ش|ی\r\n٢ش|٣ش|٤ش|٥ش|ھ|ش|١ش\r"
 
   private const val ckb_Format_Quarters: String =
       "چارەکی یەکەم|چارەکی دووەم|چارەکی سێەم|چارەکی چوارەم\r\nچ١|چ٢|چ٣|چ٤\r\n١|٢|٣|٤\r"
@@ -1832,7 +1832,7 @@ object AvailableDateTimeDisplayNames {
       "کانوونی دووەم|شوبات|ئازار|نیسان|ئایار|حوزەیران|تەمووز|ئاب|ئەیلوول|تشرینی یەکەم|تشرینی دووەم|کانونی یەکەم\r\nکانوونی دووەم|شوبات|ئازار|نیسان|ئایار|حوزەیران|تەمووز|ئاب|ئەیلوول|تشرینی یەکەم|تشرینی دووەم|کانونی یەکەم\r\nک|ش|ئ|ن|ئ|ح|ت|ئ|ئ|ت|ت|ک\r"
 
   private const val ckb_Standalone_Days: String =
-      "دووشەممە|سێشەممە|چوارشەممە|پێنجشەممە|ھەینی|شەممە|یەکشەممە\r\nدووشەممە|سێشەممە|چوارشەممە|پێنجشەممە|ھەینی|شەممە|یەکشەممە\r\nد|س|چ|پ|ھ|ش|ی\r"
+      "دووشەممە|سێشەممە|چوارشەممە|پێنجشەممە|ھەینی|شەممە|یەکشەممە\r\nدووشەممە|سێشەممە|چوارشەممە|پێنجشەممە|ھەینی|شەممە|یەکشەممە\r\nد|س|چ|پ|ھ|ش|ی\r\n٢ش|٣ش|٤ش|٥ش|ھ|ش|١ش\r"
 
   private const val ckb_Standalone_Quarters: String =
       "چارەکی یەکەم|چارەکی دووەم|چارەکی سێەم|چارەکی چوارەم\r\nچ١|چ٢|چ٣|چ٤\r\n١|٢|٣|٤\r"
@@ -1875,7 +1875,7 @@ object AvailableDateTimeDisplayNames {
       "ledna|února|března|dubna|května|června|července|srpna|září|října|listopadu|prosince\r\nled|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val cs_Format_Days: String =
-      "pondělí|úterý|středa|čtvrtek|pátek|sobota|neděle\r\npo|út|st|čt|pá|so|ne\r\nP|Ú|S|Č|P|S|N\r"
+      "pondělí|úterý|středa|čtvrtek|pátek|sobota|neděle\r\npo|út|st|čt|pá|so|ne\r\nP|Ú|S|Č|P|S|N\r\npo|út|st|čt|pá|so|ne\r"
 
   private const val cs_Format_Quarters: String =
       "1. čtvrtletí|2. čtvrtletí|3. čtvrtletí|4. čtvrtletí\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -1887,7 +1887,7 @@ object AvailableDateTimeDisplayNames {
       "leden|únor|březen|duben|květen|červen|červenec|srpen|září|říjen|listopad|prosinec\r\nled|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val cs_Standalone_Days: String =
-      "pondělí|úterý|středa|čtvrtek|pátek|sobota|neděle\r\npo|út|st|čt|pá|so|ne\r\nP|Ú|S|Č|P|S|N\r"
+      "pondělí|úterý|středa|čtvrtek|pátek|sobota|neděle\r\npo|út|st|čt|pá|so|ne\r\nP|Ú|S|Č|P|S|N\r\npo|út|st|čt|pá|so|ne\r"
 
   private const val cs_Standalone_Quarters: String =
       "1. čtvrtletí|2. čtvrtletí|3. čtvrtletí|4. čtvrtletí\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -1899,7 +1899,7 @@ object AvailableDateTimeDisplayNames {
       "ᐅᒉᒥᑮᓯᑳᐏᐲᓯᒼ|ᐸᐚᐦᒐᑭᓇᓰᐢ|ᒥᑭᓯᐏᐲᓯᒼ|ᓂᐢᑭᐲᓯᒼ|ᐊᓃᑭᐲᓯᒼ|ᐚᐏᐲᓯᒼ|ᐹᐢᑲᐦᐋᐏᐲᓯᒼ|ᐅᐸᐦᐅᐏᐲᓯᒼ|ᓄᒌᑐᐏᐲᓯᒼ|ᐱᓈᐢᑯᐏᐲᓯᒼ|ᐋᕽᐘᑎᓄᐏᐲᓯᒼ|ᒪᑯᓭᑮᓭᑳᐏᐲᓯᒼ\r\nᐅᒉᒥᑮᓯᑳᐏᐲᓯᒼ|ᐸᐚᐦᒐᑭᓇᓰᐢ|ᒥᑭᓯᐏᐲᓯᒼ|ᓂᐢᑭᐲᓯᒼ|ᐊᓃᑭᐲᓯᒼ|ᐚᐏᐲᓯᒼ|ᐹᐢᑲᐦᐋᐏᐲᓯᒼ|ᐅᐸᐦᐅᐏᐲᓯᒼ|ᓄᒌᑐᐏᐲᓯᒼ|ᐱᓈᐢᑯᐏᐲᓯᒼ|ᐋᕽᐘᑎᓄᐏᐲᓯᒼ|ᒪᑯᓭᑮᓭᑳᐏᐲᓯᒼ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val csw_Format_Days: String =
-      "ᐴᓂ ᐊᔭᒥᐦᐁᑮᓯᑳᐤ|ᓃᓱᑮᓯᑳᐤ|ᐋᐱᐦᑕᐘᐣ|ᐴᓂᐋᐱᐦᑕᐘᐣ|ᑫᑳᐨ ᒫᑎᓇᐍᑮᓯᑳᐤ|ᒫᑎᓇᐍᑮᓯᑳᐤ|ᐊᔭᒥᐦᐁᑮᓯᑳᐤ\r\nᐴᓂ ᐊᔭᒥᐦᐁᑮᓯᑳᐤ|ᓃᓱᑮᓯᑳᐤ|ᐋᐱᐦᑕᐘᐣ|ᐴᓂᐋᐱᐦᑕᐘᐣ|ᑫᑳᐨ ᒫᑎᓇᐍᑮᓯᑳᐤ|ᒫᑎᓇᐍᑮᓯᑳᐤ|ᐊᔭᒥᐦᐁᑮᓯᑳᐤ\r\nᐴ|ᓃ|ᐋ|ᐴ|ᑫ|ᒫ|ᐊ\r"
+      "ᐴᓂ ᐊᔭᒥᐦᐁᑮᓯᑳᐤ|ᓃᓱᑮᓯᑳᐤ|ᐋᐱᐦᑕᐘᐣ|ᐴᓂᐋᐱᐦᑕᐘᐣ|ᑫᑳᐨ ᒫᑎᓇᐍᑮᓯᑳᐤ|ᒫᑎᓇᐍᑮᓯᑳᐤ|ᐊᔭᒥᐦᐁᑮᓯᑳᐤ\r\nᐴᓂ ᐊᔭᒥᐦᐁᑮᓯᑳᐤ|ᓃᓱᑮᓯᑳᐤ|ᐋᐱᐦᑕᐘᐣ|ᐴᓂᐋᐱᐦᑕᐘᐣ|ᑫᑳᐨ ᒫᑎᓇᐍᑮᓯᑳᐤ|ᒫᑎᓇᐍᑮᓯᑳᐤ|ᐊᔭᒥᐦᐁᑮᓯᑳᐤ\r\nᐴ|ᓃ|ᐋ|ᐴ|ᑫ|ᒫ|ᐊ\r\nᐴᓂ ᐊᔭᒥᐦᐁᑮᓯᑳᐤ|ᓃᓱᑮᓯᑳᐤ|ᐋᐱᐦᑕᐘᐣ|ᐴᓂᐋᐱᐦᑕᐘᐣ|ᑫᑳᐨ ᒫᑎᓇᐍᑮᓯᑳᐤ|ᒫᑎᓇᐍᑮᓯᑳᐤ|ᐊᔭᒥᐦᐁᑮᓯᑳᐤ\r"
 
   private val csw_Format_Quarters: String? = null
 
@@ -1909,7 +1909,7 @@ object AvailableDateTimeDisplayNames {
       "ᐅᒉᒥᑮᓯᑳᐏᐲᓯᒼ|ᐸᐚᐦᒐᑭᓇᓰᐢ|ᒥᑭᓯᐏᐲᓯᒼ|ᓂᐢᑭᐲᓯᒼ|ᐊᓃᑭᐲᓯᒼ|ᐚᐏᐲᓯᒼ|ᐹᐢᑲᐦᐋᐏᐲᓯᒼ|ᐅᐸᐦᐅᐏᐲᓯᒼ|ᓄᒌᑐᐏᐲᓯᒼ|ᐱᓈᐢᑯᐏᐲᓯᒼ|ᐋᕽᐘᑎᓄᐏᐲᓯᒼ|ᒪᑯᓭᑮᓭᑳᐏᐲᓯᒼ\r\nᐅᒉᒥᑮᓯᑳᐏᐲᓯᒼ|ᐸᐚᐦᒐᑭᓇᓰᐢ|ᒥᑭᓯᐏᐲᓯᒼ|ᓂᐢᑭᐲᓯᒼ|ᐊᓃᑭᐲᓯᒼ|ᐚᐏᐲᓯᒼ|ᐹᐢᑲᐦᐋᐏᐲᓯᒼ|ᐅᐸᐦᐅᐏᐲᓯᒼ|ᓄᒌᑐᐏᐲᓯᒼ|ᐱᓈᐢᑯᐏᐲᓯᒼ|ᐋᕽᐘᑎᓄᐏᐲᓯᒼ|ᒪᑯᓭᑮᓭᑳᐏᐲᓯᒼ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val csw_Standalone_Days: String =
-      "ᐴᓂ ᐊᔭᒥᐦᐁᑮᓯᑳᐤ|ᓃᓱᑮᓯᑳᐤ|ᐋᐱᐦᑕᐘᐣ|ᐴᓂᐋᐱᐦᑕᐘᐣ|ᑫᑳᐨ ᒫᑎᓇᐍᑮᓯᑳᐤ|ᒫᑎᓇᐍᑮᓯᑳᐤ|ᐊᔭᒥᐦᐁᑮᓯᑳᐤ\r\nᐴᓂ ᐊᔭᒥᐦᐁᑮᓯᑳᐤ|ᓃᓱᑮᓯᑳᐤ|ᐋᐱᐦᑕᐘᐣ|ᐴᓂᐋᐱᐦᑕᐘᐣ|ᑫᑳᐨ ᒫᑎᓇᐍᑮᓯᑳᐤ|ᒫᑎᓇᐍᑮᓯᑳᐤ|ᐊᔭᒥᐦᐁᑮᓯᑳᐤ\r\nᐴ|ᓃ|ᐋ|ᐴ|ᑫ|ᒫ|ᐊ\r"
+      "ᐴᓂ ᐊᔭᒥᐦᐁᑮᓯᑳᐤ|ᓃᓱᑮᓯᑳᐤ|ᐋᐱᐦᑕᐘᐣ|ᐴᓂᐋᐱᐦᑕᐘᐣ|ᑫᑳᐨ ᒫᑎᓇᐍᑮᓯᑳᐤ|ᒫᑎᓇᐍᑮᓯᑳᐤ|ᐊᔭᒥᐦᐁᑮᓯᑳᐤ\r\nᐴᓂ ᐊᔭᒥᐦᐁᑮᓯᑳᐤ|ᓃᓱᑮᓯᑳᐤ|ᐋᐱᐦᑕᐘᐣ|ᐴᓂᐋᐱᐦᑕᐘᐣ|ᑫᑳᐨ ᒫᑎᓇᐍᑮᓯᑳᐤ|ᒫᑎᓇᐍᑮᓯᑳᐤ|ᐊᔭᒥᐦᐁᑮᓯᑳᐤ\r\nᐴ|ᓃ|ᐋ|ᐴ|ᑫ|ᒫ|ᐊ\r\nᐴᓂ ᐊᔭᒥᐦᐁᑮᓯᑳᐤ|ᓃᓱᑮᓯᑳᐤ|ᐋᐱᐦᑕᐘᐣ|ᐴᓂᐋᐱᐦᑕᐘᐣ|ᑫᑳᐨ ᒫᑎᓇᐍᑮᓯᑳᐤ|ᒫᑎᓇᐍᑮᓯᑳᐤ|ᐊᔭᒥᐦᐁᑮᓯᑳᐤ\r"
 
   private val csw_Standalone_Quarters: String? = null
 
@@ -1935,7 +1935,7 @@ object AvailableDateTimeDisplayNames {
       "кӑрлач|нарӑс|пуш|ака|ҫу|ҫӗртме|утӑ|ҫурла|авӑн|юпа|чӳк|раштав\r\nкӑр.|нар.|пуш|ака|ҫу|ҫӗр.|утӑ|ҫур.|авӑн|юпа|чӳк|раш.\r\nК|Н|П|А|Ҫ|Ҫ|У|Ҫ|А|Ю|Ч|Р\r"
 
   private const val cv_Format_Days: String =
-      "тунтикун|ытларикун|юнкун|кӗҫнерникун|эрнекун|шӑматкун|вырсарникун\r\nтун.|ытл.|юн.|кӗҫ.|эр.|шӑм.|выр.\r\nТ|Ы|Ю|К|Э|Ш|В\r"
+      "тунтикун|ытларикун|юнкун|кӗҫнерникун|эрнекун|шӑматкун|вырсарникун\r\nтун.|ытл.|юн.|кӗҫ.|эр.|шӑм.|выр.\r\nТ|Ы|Ю|К|Э|Ш|В\r\nтун.|ытл.|юн.|кӗҫ.|эр.|шӑм.|выр.\r"
 
   private const val cv_Format_Quarters: String =
       "1-мӗш квартал|2-мӗш квартал|3-мӗш квартал|4-мӗш квартал\r\n1-мӗш кв.|2-мӗш кв.|3-мӗш кв.|4-мӗш кв.\r\n1|2|3|4\r"
@@ -1946,7 +1946,7 @@ object AvailableDateTimeDisplayNames {
       "кӑрлач|нарӑс|пуш|ака|ҫу|ҫӗртме|утӑ|ҫурла|авӑн|юпа|чӳк|раштав\r\nкӑр.|нар.|пуш|ака|ҫу|ҫӗр.|утӑ|ҫур.|авӑн|юпа|чӳк|раш.\r\nК|Н|П|А|Ҫ|Ҫ|У|Ҫ|А|Ю|Ч|Р\r"
 
   private const val cv_Standalone_Days: String =
-      "тунтикун|ытларикун|юнкун|кӗҫнерникун|эрнекун|шӑматкун|вырсарникун\r\nтун.|ытл.|юн.|кӗҫ.|эр.|шӑм.|выр.\r\nТ|Ы|Ю|К|Э|Ш|В\r"
+      "тунтикун|ытларикун|юнкун|кӗҫнерникун|эрнекун|шӑматкун|вырсарникун\r\nтун.|ытл.|юн.|кӗҫ.|эр.|шӑм.|выр.\r\nТ|Ы|Ю|К|Э|Ш|В\r\nтун.|ытл.|юн.|кӗҫ.|эр.|шӑм.|выр.\r"
 
   private const val cv_Standalone_Quarters: String =
       "1-мӗш квартал|2-мӗш квартал|3-мӗш квартал|4-мӗш квартал\r\n1-мӗш кв.|2-мӗш кв.|3-мӗш кв.|4-мӗш кв.\r\n1|2|3|4\r"
@@ -1957,7 +1957,7 @@ object AvailableDateTimeDisplayNames {
       "Ionawr|Chwefror|Mawrth|Ebrill|Mai|Mehefin|Gorffennaf|Awst|Medi|Hydref|Tachwedd|Rhagfyr\r\nIon|Chwef|Maw|Ebr|Mai|Meh|Gorff|Awst|Medi|Hyd|Tach|Rhag\r\nI|Ch|M|E|M|M|G|A|M|H|T|Rh\r"
 
   private const val cy_Format_Days: String =
-      "Dydd Llun|Dydd Mawrth|Dydd Mercher|Dydd Iau|Dydd Gwener|Dydd Sadwrn|Dydd Sul\r\nLlun|Maw|Mer|Iau|Gwen|Sad|Sul\r\nLl|M|M|I|G|S|S\r"
+      "Dydd Llun|Dydd Mawrth|Dydd Mercher|Dydd Iau|Dydd Gwener|Dydd Sadwrn|Dydd Sul\r\nLlun|Maw|Mer|Iau|Gwen|Sad|Sul\r\nLl|M|M|I|G|S|S\r\nLl|Ma|Me|Ia|Gw|Sa|Su\r"
 
   private const val cy_Format_Quarters: String =
       "chwarter 1af|2il chwarter|3ydd chwarter|4ydd chwarter\r\nCh1|Ch2|Ch3|Ch4\r\n1|2|3|4\r"
@@ -1969,7 +1969,7 @@ object AvailableDateTimeDisplayNames {
       "Ionawr|Chwefror|Mawrth|Ebrill|Mai|Mehefin|Gorffennaf|Awst|Medi|Hydref|Tachwedd|Rhagfyr\r\nIon|Chw|Maw|Ebr|Mai|Meh|Gor|Awst|Medi|Hyd|Tach|Rhag\r\nI|Ch|M|E|M|M|G|A|M|H|T|Rh\r"
 
   private const val cy_Standalone_Days: String =
-      "Dydd Llun|Dydd Mawrth|Dydd Mercher|Dydd Iau|Dydd Gwener|Dydd Sadwrn|Dydd Sul\r\nLlun|Maw|Mer|Iau|Gwe|Sad|Sul\r\nLl|M|M|I|G|S|S\r"
+      "Dydd Llun|Dydd Mawrth|Dydd Mercher|Dydd Iau|Dydd Gwener|Dydd Sadwrn|Dydd Sul\r\nLlun|Maw|Mer|Iau|Gwe|Sad|Sul\r\nLl|M|M|I|G|S|S\r\nLl|Ma|Me|Ia|Gw|Sa|Su\r"
 
   private const val cy_Standalone_Quarters: String =
       "chwarter 1af|2il chwarter|3ydd chwarter|4ydd chwarter\r\nCh1|Ch2|Ch3|Ch4\r\n1|2|3|4\r"
@@ -1981,7 +1981,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december\r\njan.|feb.|mar.|apr.|maj|jun.|jul.|aug.|sep.|okt.|nov.|dec.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val da_Format_Days: String =
-      "mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag\r\nman.|tirs.|ons.|tors.|fre.|lør.|søn.\r\nM|T|O|T|F|L|S\r"
+      "mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag\r\nman.|tirs.|ons.|tors.|fre.|lør.|søn.\r\nM|T|O|T|F|L|S\r\nma.|ti.|on.|to.|fr.|lø.|sø.\r"
 
   private const val da_Format_Quarters: String =
       "1. kvartal|2. kvartal|3. kvartal|4. kvartal\r\n1. kvt.|2. kvt.|3. kvt.|4. kvt.\r\n1|2|3|4\r"
@@ -1992,7 +1992,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december\r\njan.|feb.|mar.|apr.|maj|jun.|jul.|aug.|sep.|okt.|nov.|dec.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val da_Standalone_Days: String =
-      "mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag\r\nman.|tirs.|ons.|tors.|fre.|lør.|søn.\r\nM|T|O|T|F|L|S\r"
+      "mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag\r\nman.|tirs.|ons.|tors.|fre.|lør.|søn.\r\nM|T|O|T|F|L|S\r\nma.|ti.|on.|to.|fr.|lø.|sø.\r"
 
   private const val da_Standalone_Quarters: String =
       "1. kvartal|2. kvartal|3. kvartal|4. kvartal\r\n1. kvt.|2. kvt.|3. kvt.|4. kvt.\r\n1|2|3|4\r"
@@ -2020,7 +2020,7 @@ object AvailableDateTimeDisplayNames {
       "Mori ghwa imbiri|Mori ghwa kawi|Mori ghwa kadadu|Mori ghwa kana|Mori ghwa kasanu|Mori ghwa karandadu|Mori ghwa mfungade|Mori ghwa wunyanya|Mori ghwa ikenda|Mori ghwa ikumi|Mori ghwa ikumi na imweri|Mori ghwa ikumi na iwi\r\nImb|Kaw|Kad|Kan|Kas|Kar|Mfu|Wun|Ike|Iku|Imw|Iwi\r\nI|K|K|K|K|K|M|W|I|I|I|I\r"
 
   private const val dav_Format_Days: String =
-      "Kuramuka jimweri|Kuramuka kawi|Kuramuka kadadu|Kuramuka kana|Kuramuka kasanu|Kifula nguwo|Ituku ja jumwa\r\nJim|Kaw|Kad|Kan|Kas|Ngu|Jum\r\nJ|K|K|K|K|N|J\r"
+      "Kuramuka jimweri|Kuramuka kawi|Kuramuka kadadu|Kuramuka kana|Kuramuka kasanu|Kifula nguwo|Ituku ja jumwa\r\nJim|Kaw|Kad|Kan|Kas|Ngu|Jum\r\nJ|K|K|K|K|N|J\r\nJim|Kaw|Kad|Kan|Kas|Ngu|Jum\r"
 
   private const val dav_Format_Quarters: String =
       "Kimu cha imbiri|Kimu cha kawi|Kimu cha kadadu|Kimu cha kana\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -2032,7 +2032,7 @@ object AvailableDateTimeDisplayNames {
       "Mori ghwa imbiri|Mori ghwa kawi|Mori ghwa kadadu|Mori ghwa kana|Mori ghwa kasanu|Mori ghwa karandadu|Mori ghwa mfungade|Mori ghwa wunyanya|Mori ghwa ikenda|Mori ghwa ikumi|Mori ghwa ikumi na imweri|Mori ghwa ikumi na iwi\r\nImb|Kaw|Kad|Kan|Kas|Kar|Mfu|Wun|Ike|Iku|Imw|Iwi\r\nI|K|K|K|K|K|M|W|I|I|I|I\r"
 
   private const val dav_Standalone_Days: String =
-      "Kuramuka jimweri|Kuramuka kawi|Kuramuka kadadu|Kuramuka kana|Kuramuka kasanu|Kifula nguwo|Ituku ja jumwa\r\nJim|Kaw|Kad|Kan|Kas|Ngu|Jum\r\nJ|K|K|K|K|N|J\r"
+      "Kuramuka jimweri|Kuramuka kawi|Kuramuka kadadu|Kuramuka kana|Kuramuka kasanu|Kifula nguwo|Ituku ja jumwa\r\nJim|Kaw|Kad|Kan|Kas|Ngu|Jum\r\nJ|K|K|K|K|N|J\r\nJim|Kaw|Kad|Kan|Kas|Ngu|Jum\r"
 
   private const val dav_Standalone_Quarters: String =
       "Kimu cha imbiri|Kimu cha kawi|Kimu cha kadadu|Kimu cha kana\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -2044,7 +2044,7 @@ object AvailableDateTimeDisplayNames {
       "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember\r\nJan.|Feb.|März|Apr.|Mai|Juni|Juli|Aug.|Sept.|Okt.|Nov.|Dez.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val de_Format_Days: String =
-      "Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag\r\nMo.|Di.|Mi.|Do.|Fr.|Sa.|So.\r\nM|D|M|D|F|S|S\r"
+      "Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag\r\nMo.|Di.|Mi.|Do.|Fr.|Sa.|So.\r\nM|D|M|D|F|S|S\r\nMo.|Di.|Mi.|Do.|Fr.|Sa.|So.\r"
 
   private const val de_Format_Quarters: String =
       "1. Quartal|2. Quartal|3. Quartal|4. Quartal\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -2056,7 +2056,7 @@ object AvailableDateTimeDisplayNames {
       "Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember\r\nJan|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val de_Standalone_Days: String =
-      "Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag\r\nMo|Di|Mi|Do|Fr|Sa|So\r\nM|D|M|D|F|S|S\r"
+      "Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag\r\nMo|Di|Mi|Do|Fr|Sa|So\r\nM|D|M|D|F|S|S\r\nMo.|Di.|Mi.|Do.|Fr.|Sa.|So.\r"
 
   private const val de_Standalone_Quarters: String =
       "1. Quartal|2. Quartal|3. Quartal|4. Quartal\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -2102,7 +2102,7 @@ object AvailableDateTimeDisplayNames {
   private val de_CH_Format_Months: String? = null
 
   private const val de_CH_Format_Days: String =
-      "Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag\r\nMo.|Di.|Mi.|Do.|Fr.|Sa.|So.\r\nM|D|M|D|F|S|S\r"
+      "Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag\r\nMo.|Di.|Mi.|Do.|Fr.|Sa.|So.\r\nM|D|M|D|F|S|S\r\nMo|Di|Mi|Do|Fr|Sa|So\r"
 
   private val de_CH_Format_Quarters: String? = null
 
@@ -2111,7 +2111,7 @@ object AvailableDateTimeDisplayNames {
   private val de_CH_Standalone_Months: String? = null
 
   private const val de_CH_Standalone_Days: String =
-      "Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag\r\nMo|Di|Mi|Do|Fr|Sa|So\r\nM|D|M|D|F|S|S\r"
+      "Montag|Dienstag|Mittwoch|Donnerstag|Freitag|Samstag|Sonntag\r\nMo|Di|Mi|Do|Fr|Sa|So\r\nM|D|M|D|F|S|S\r\nMo|Di|Mi|Do|Fr|Sa|So\r"
 
   private val de_CH_Standalone_Quarters: String? = null
 
@@ -2173,7 +2173,7 @@ object AvailableDateTimeDisplayNames {
       "Žanwiye|Feewiriye|Marsi|Awiril|Me|Žuweŋ|Žuyye|Ut|Sektanbur|Oktoobur|Noowanbur|Deesanbur\r\nŽan|Fee|Mar|Awi|Me|Žuw|Žuy|Ut|Sek|Okt|Noo|Dee\r\nŽ|F|M|A|M|Ž|Ž|U|S|O|N|D\r"
 
   private const val dje_Format_Days: String =
-      "Atinni|Atalaata|Alarba|Alhamisi|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|M|Z|S|H\r"
+      "Atinni|Atalaata|Alarba|Alhamisi|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|M|Z|S|H\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r"
 
   private const val dje_Format_Quarters: String =
       "Arrubu 1|Arrubu 2|Arrubu 3|Arrubu 4\r\nA1|A2|A3|A4\r\n1|2|3|4\r"
@@ -2185,7 +2185,7 @@ object AvailableDateTimeDisplayNames {
       "Žanwiye|Feewiriye|Marsi|Awiril|Me|Žuweŋ|Žuyye|Ut|Sektanbur|Oktoobur|Noowanbur|Deesanbur\r\nŽan|Fee|Mar|Awi|Me|Žuw|Žuy|Ut|Sek|Okt|Noo|Dee\r\nŽ|F|M|A|M|Ž|Ž|U|S|O|N|D\r"
 
   private const val dje_Standalone_Days: String =
-      "Atinni|Atalaata|Alarba|Alhamisi|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|M|Z|S|H\r"
+      "Atinni|Atalaata|Alarba|Alhamisi|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|M|Z|S|H\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r"
 
   private const val dje_Standalone_Quarters: String =
       "Arrubu 1|Arrubu 2|Arrubu 3|Arrubu 4\r\nA1|A2|A3|A4\r\n1|2|3|4\r"
@@ -2197,7 +2197,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फरवरी|मार्च|अप्रैल|मेई|जून|जुलाई|अगस्त|सितंबर|अक्तूबर|नवंबर|दिसंबर\r\nजन.|फर.|मार्च|अप्रैल|मेई|जून|जुलाई|अग.|सित.|अक्तू.|नव.|दिस.\r\nज|फ|मा|अ|मे|जू|जु|अ|सि|अ|न|दि\r"
 
   private const val doi_Format_Days: String =
-      "सोमबार|मंगलबार|बुधबार|बीरबार|शुक्रबार|शनिबार|ऐतबार\r\nसोम|मंगल|बुध|बीर|शुक्र|शनि|ऐत\r\nसो.|म.|बु.|बी.|शु.|श.|ऐ.\r"
+      "सोमबार|मंगलबार|बुधबार|बीरबार|शुक्रबार|शनिबार|ऐतबार\r\nसोम|मंगल|बुध|बीर|शुक्र|शनि|ऐत\r\nसो.|म.|बु.|बी.|शु.|श.|ऐ.\r\nसोम|मंगल|बुध|बीर|शुक्र|शनि|ऐत\r"
 
   private const val doi_Format_Quarters: String =
       "पैहली त्रमाही|दूई त्रमाही|त्री त्रमाही|चौथी त्रमाही\r\nत्र.1|त्र.2|त्र.3|त्र.4\r\n1|2|3|4\r"
@@ -2208,7 +2208,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फरवरी|मार्च|अप्रैल|मेई|जून|जुलाई|अगस्त|सितंबर|अक्तूबर|नवंबर|दिसंबर\r\nजन.|फर.|मार्च|अप्रैल|मेई|जून|जुलाई|अग.|सित.|अक्तू.|नव.|दिस.\r\nज|फ|मा|अ|मे|जू|जु|अ|सि|अ|न|दि\r"
 
   private const val doi_Standalone_Days: String =
-      "सोमबार|मंगलबार|बुधबार|बीरबार|शुक्रबार|शनिबार|ऐतबार\r\nसोम|मंगल|बुध|बीर|शुक्र|शनि|ऐत\r\nसो|म.|बु.|बी.|शु.|श.|ऐ\r"
+      "सोमबार|मंगलबार|बुधबार|बीरबार|शुक्रबार|शनिबार|ऐतबार\r\nसोम|मंगल|बुध|बीर|शुक्र|शनि|ऐत\r\nसो|म.|बु.|बी.|शु.|श.|ऐ\r\nसोम|मंगल|बुध|बीर|शुक्र|शनि|ऐत\r"
 
   private const val doi_Standalone_Quarters: String =
       "पैहली त्रमाही|दूई त्रमाही|त्री त्रमाही|चौथी त्रमाही\r\nत्र.1|त्र.2|त्र.3|त्र.4\r\n1|2|3|4\r"
@@ -2219,7 +2219,7 @@ object AvailableDateTimeDisplayNames {
       "januara|februara|měrca|apryla|maja|junija|julija|awgusta|septembra|oktobra|nowembra|decembra\r\njan.|feb.|měr.|apr.|maj.|jun.|jul.|awg.|sep.|okt.|now.|dec.\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val dsb_Format_Days: String =
-      "pónjeźele|wałtora|srjoda|stwórtk|pětk|sobota|njeźela\r\npón|wał|srj|stw|pět|sob|nje\r\np|w|s|s|p|s|n\r"
+      "pónjeźele|wałtora|srjoda|stwórtk|pětk|sobota|njeźela\r\npón|wał|srj|stw|pět|sob|nje\r\np|w|s|s|p|s|n\r\npó|wa|sr|st|pě|so|nj\r"
 
   private const val dsb_Format_Quarters: String =
       "1. kwartal|2. kwartal|3. kwartal|4. kwartal\r\nkw1|kw2|kw3|kw4\r\n1|2|3|4\r"
@@ -2231,7 +2231,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|měrc|apryl|maj|junij|julij|awgust|september|oktober|nowember|december\r\njan|feb|měr|apr|maj|jun|jul|awg|sep|okt|now|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val dsb_Standalone_Days: String =
-      "pónjeźele|wałtora|srjoda|stwórtk|pětk|sobota|njeźela\r\npón|wał|srj|stw|pět|sob|nje\r\np|w|s|s|p|s|n\r"
+      "pónjeźele|wałtora|srjoda|stwórtk|pětk|sobota|njeźela\r\npón|wał|srj|stw|pět|sob|nje\r\np|w|s|s|p|s|n\r\npó|wa|sr|st|pě|so|nj\r"
 
   private const val dsb_Standalone_Quarters: String =
       "1. kwartal|2. kwartal|3. kwartal|4. kwartal\r\nkw1|kw2|kw3|kw4\r\n1|2|3|4\r"
@@ -2243,7 +2243,7 @@ object AvailableDateTimeDisplayNames {
       "dimɔ́di|ŋgɔndɛ|sɔŋɛ|diɓáɓá|emiasele|esɔpɛsɔpɛ|madiɓɛ́díɓɛ́|diŋgindi|nyɛtɛki|mayésɛ́|tiníní|eláŋgɛ́\r\ndi|ŋgɔn|sɔŋ|diɓ|emi|esɔ|mad|diŋ|nyɛt|may|tin|elá\r\nd|ŋ|s|d|e|e|m|d|n|m|t|e\r"
 
   private const val dua_Format_Days: String =
-      "mɔ́sú|kwasú|mukɔ́sú|ŋgisú|ɗónɛsú|esaɓasú|éti\r\nmɔ́s|kwa|muk|ŋgi|ɗón|esa|ét\r\nm|k|m|ŋ|ɗ|e|e\r"
+      "mɔ́sú|kwasú|mukɔ́sú|ŋgisú|ɗónɛsú|esaɓasú|éti\r\nmɔ́s|kwa|muk|ŋgi|ɗón|esa|ét\r\nm|k|m|ŋ|ɗ|e|e\r\nmɔ́s|kwa|muk|ŋgi|ɗón|esa|ét\r"
 
   private const val dua_Format_Quarters: String =
       "ndúmbū nyá ɓosó|ndúmbū ní lóndɛ́ íɓaá|ndúmbū ní lóndɛ́ ílálo|ndúmbū ní lóndɛ́ ínɛ́y\r\nndu1|ndu2|ndu3|ndu4\r\n1|2|3|4\r"
@@ -2255,7 +2255,7 @@ object AvailableDateTimeDisplayNames {
       "dimɔ́di|ŋgɔndɛ|sɔŋɛ|diɓáɓá|emiasele|esɔpɛsɔpɛ|madiɓɛ́díɓɛ́|diŋgindi|nyɛtɛki|mayésɛ́|tiníní|eláŋgɛ́\r\ndi|ŋgɔn|sɔŋ|diɓ|emi|esɔ|mad|diŋ|nyɛt|may|tin|elá\r\nd|ŋ|s|d|e|e|m|d|n|m|t|e\r"
 
   private const val dua_Standalone_Days: String =
-      "mɔ́sú|kwasú|mukɔ́sú|ŋgisú|ɗónɛsú|esaɓasú|éti\r\nmɔ́s|kwa|muk|ŋgi|ɗón|esa|ét\r\nm|k|m|ŋ|ɗ|e|e\r"
+      "mɔ́sú|kwasú|mukɔ́sú|ŋgisú|ɗónɛsú|esaɓasú|éti\r\nmɔ́s|kwa|muk|ŋgi|ɗón|esa|ét\r\nm|k|m|ŋ|ɗ|e|e\r\nmɔ́s|kwa|muk|ŋgi|ɗón|esa|ét\r"
 
   private const val dua_Standalone_Quarters: String =
       "ndúmbū nyá ɓosó|ndúmbū ní lóndɛ́ íɓaá|ndúmbū ní lóndɛ́ ílálo|ndúmbū ní lóndɛ́ ínɛ́y\r\nndu1|ndu2|ndu3|ndu4\r\n1|2|3|4\r"
@@ -2283,7 +2283,7 @@ object AvailableDateTimeDisplayNames {
       "Sanvie|Fébirie|Mars|Aburil|Mee|Sueŋ|Súuyee|Ut|Settembar|Oktobar|Novembar|Disambar\r\nSa|Fe|Ma|Ab|Me|Su|Sú|Ut|Se|Ok|No|De\r\nS|F|M|A|M|S|S|U|S|O|N|D\r"
 
   private const val dyo_Format_Days: String =
-      "Teneŋ|Talata|Alarbay|Aramisay|Arjuma|Sibiti|Dimas\r\nTen|Tal|Ala|Ara|Arj|Sib|Dim\r\nT|T|A|A|A|S|D\r"
+      "Teneŋ|Talata|Alarbay|Aramisay|Arjuma|Sibiti|Dimas\r\nTen|Tal|Ala|Ara|Arj|Sib|Dim\r\nT|T|A|A|A|S|D\r\nTen|Tal|Ala|Ara|Arj|Sib|Dim\r"
 
   private val dyo_Format_Quarters: String? = null
 
@@ -2293,7 +2293,7 @@ object AvailableDateTimeDisplayNames {
       "Sanvie|Fébirie|Mars|Aburil|Mee|Sueŋ|Súuyee|Ut|Settembar|Oktobar|Novembar|Disambar\r\nSa|Fe|Ma|Ab|Me|Su|Sú|Ut|Se|Ok|No|De\r\nS|F|M|A|M|S|S|U|S|O|N|D\r"
 
   private const val dyo_Standalone_Days: String =
-      "Teneŋ|Talata|Alarbay|Aramisay|Arjuma|Sibiti|Dimas\r\nTen|Tal|Ala|Ara|Arj|Sib|Dim\r\nT|T|A|A|A|S|D\r"
+      "Teneŋ|Talata|Alarbay|Aramisay|Arjuma|Sibiti|Dimas\r\nTen|Tal|Ala|Ara|Arj|Sib|Dim\r\nT|T|A|A|A|S|D\r\nTen|Tal|Ala|Ara|Arj|Sib|Dim\r"
 
   private val dyo_Standalone_Quarters: String? = null
 
@@ -2303,7 +2303,7 @@ object AvailableDateTimeDisplayNames {
       "ཟླ་དངཔ་|ཟླ་གཉིས་པ་|ཟླ་གསུམ་པ་|ཟླ་བཞི་པ་|ཟླ་ལྔ་པ་|ཟླ་དྲུག་པ|ཟླ་བདུན་པ་|ཟླ་བརྒྱད་པ་|ཟླ་དགུ་པ་|ཟླ་བཅུ་པ་|ཟླ་བཅུ་གཅིག་པ་|ཟླ་བཅུ་གཉིས་པ་\r\n༡|༢|༣|༤|༥|༦|༧|༨|༩|༡༠|༡༡|12\r\n༡|༢|༣|4|༥|༦|༧|༨|9|༡༠|༡༡|༡༢\r"
 
   private const val dz_Format_Days: String =
-      "གཟའ་མིག་དམར་|གཟའ་ལྷག་པ་|གཟའ་ཕུར་བུ་|གཟའ་པ་སངས་|གཟའ་སྤེན་པ་|གཟའ་ཉི་མ་|གཟའ་ཟླ་བ་\r\nམིར་|ལྷག་|ཕུར་|སངས་|སྤེན་|ཉི་|ཟླ་\r\nམིར|ལྷག|ཕུར|སངྶ|སྤེན|ཉི|ཟླ\r"
+      "གཟའ་མིག་དམར་|གཟའ་ལྷག་པ་|གཟའ་ཕུར་བུ་|གཟའ་པ་སངས་|གཟའ་སྤེན་པ་|གཟའ་ཉི་མ་|གཟའ་ཟླ་བ་\r\nམིར་|ལྷག་|ཕུར་|སངས་|སྤེན་|ཉི་|ཟླ་\r\nམིར|ལྷག|ཕུར|སངྶ|སྤེན|ཉི|ཟླ\r\nམིར་|ལྷག་|ཕུར་|སངས་|སྤེན་|ཉི་|ཟླ་\r"
 
   private const val dz_Format_Quarters: String =
       "བཞི་དཔྱ་དང་པ་|བཞི་དཔྱ་གཉིས་པ་|བཞི་དཔྱ་གསུམ་པ་|བཞི་དཔྱ་བཞི་པ་\r\nབཞི་དཔྱ་༡|བཞི་དཔྱ་༢|བཞི་དཔྱ་༣|བཞི་དཔྱ་༤\r\n༡|༢|༣|༤\r"
@@ -2315,7 +2315,7 @@ object AvailableDateTimeDisplayNames {
       "སྤྱི་ཟླ་དངཔ་|སྤྱི་ཟླ་གཉིས་པ་|སྤྱི་ཟླ་གསུམ་པ་|སྤྱི་ཟླ་བཞི་པ|སྤྱི་ཟླ་ལྔ་པ་|སྤྱི་ཟླ་དྲུག་པ|སྤྱི་ཟླ་བདུན་པ་|སྤྱི་ཟླ་བརྒྱད་པ་|སྤྱི་ཟླ་དགུ་པ་|སྤྱི་ཟླ་བཅུ་པ་|སྤྱི་ཟླ་བཅུ་གཅིག་པ་|སྤྱི་ཟླ་བཅུ་གཉིས་པ་\r\nཟླ་༡|ཟླ་༢|ཟླ་༣|ཟླ་༤|ཟླ་༥|ཟླ་༦|ཟླ་༧|ཟླ་༨|ཟླ་༩|ཟླ་༡༠|ཟླ་༡༡|ཟླ་༡༢\r\n༡|༢|༣|༤|༥|༦|༧|༨|༩|༡༠|༡༡|༡༢\r"
 
   private const val dz_Standalone_Days: String =
-      "གཟའ་མིག་དམར་|གཟའ་ལྷག་པ་|གཟའ་ཕུར་བུ་|གཟའ་པ་སངས་|གཟའ་སྤེན་པ་|གཟའ་ཉི་མ་|གཟའ་ཟླ་བ་\r\nམིར་|ལྷག་|ཕུར་|སངས་|སྤེན་|ཉི་|ཟླ་\r\nམིར|ལྷག|ཕུར|སངྶ|སྤེན|ཉི|ཟླ\r"
+      "གཟའ་མིག་དམར་|གཟའ་ལྷག་པ་|གཟའ་ཕུར་བུ་|གཟའ་པ་སངས་|གཟའ་སྤེན་པ་|གཟའ་ཉི་མ་|གཟའ་ཟླ་བ་\r\nམིར་|ལྷག་|ཕུར་|སངས་|སྤེན་|ཉི་|ཟླ་\r\nམིར|ལྷག|ཕུར|སངྶ|སྤེན|ཉི|ཟླ\r\nམིར་|ལྷག་|ཕུར་|སངས་|སྤེན་|ཉི་|ཟླ་\r"
 
   private const val dz_Standalone_Quarters: String =
       "བཞི་དཔྱ་དང་པ་|བཞི་དཔྱ་གཉིས་པ་|བཞི་དཔྱ་གསུམ་པ་|བཞི་དཔྱ་བཞི་པ་\r\nབཞི་དཔྱ་༡|བཞི་དཔྱ་༢|བཞི་དཔྱ་༣|བཞི་དཔྱ་༤\r\n༡|༢|༣|༤\r"
@@ -2327,7 +2327,7 @@ object AvailableDateTimeDisplayNames {
       "Mweri wa mbere|Mweri wa kaĩri|Mweri wa kathatũ|Mweri wa kana|Mweri wa gatano|Mweri wa gatantatũ|Mweri wa mũgwanja|Mweri wa kanana|Mweri wa kenda|Mweri wa ikũmi|Mweri wa ikũmi na ũmwe|Mweri wa ikũmi na Kaĩrĩ\r\nMbe|Kai|Kat|Kan|Gat|Gan|Mug|Knn|Ken|Iku|Imw|Igi\r\nM|K|K|K|G|G|M|K|K|I|I|I\r"
 
   private const val ebu_Format_Days: String =
-      "Njumatatu|Njumaine|Njumatano|Aramithi|Njumaa|NJumamothii|Kiumia\r\nTat|Ine|Tan|Arm|Maa|NMM|Kma\r\nN|N|N|A|M|N|K\r"
+      "Njumatatu|Njumaine|Njumatano|Aramithi|Njumaa|NJumamothii|Kiumia\r\nTat|Ine|Tan|Arm|Maa|NMM|Kma\r\nN|N|N|A|M|N|K\r\nTat|Ine|Tan|Arm|Maa|NMM|Kma\r"
 
   private const val ebu_Format_Quarters: String =
       "Kuota ya mbere|Kuota ya Kaĩrĩ|Kuota ya kathatu|Kuota ya kana\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -2338,7 +2338,7 @@ object AvailableDateTimeDisplayNames {
       "Mweri wa mbere|Mweri wa kaĩri|Mweri wa kathatũ|Mweri wa kana|Mweri wa gatano|Mweri wa gatantatũ|Mweri wa mũgwanja|Mweri wa kanana|Mweri wa kenda|Mweri wa ikũmi|Mweri wa ikũmi na ũmwe|Mweri wa ikũmi na Kaĩrĩ\r\nMbe|Kai|Kat|Kan|Gat|Gan|Mug|Knn|Ken|Iku|Imw|Igi\r\nM|K|K|K|G|G|M|K|K|I|I|I\r"
 
   private const val ebu_Standalone_Days: String =
-      "Njumatatu|Njumaine|Njumatano|Aramithi|Njumaa|NJumamothii|Kiumia\r\nTat|Ine|Tan|Arm|Maa|NMM|Kma\r\nN|N|N|A|M|N|K\r"
+      "Njumatatu|Njumaine|Njumatano|Aramithi|Njumaa|NJumamothii|Kiumia\r\nTat|Ine|Tan|Arm|Maa|NMM|Kma\r\nN|N|N|A|M|N|K\r\nTat|Ine|Tan|Arm|Maa|NMM|Kma\r"
 
   private const val ebu_Standalone_Quarters: String =
       "Kuota ya mbere|Kuota ya Kaĩrĩ|Kuota ya kathatu|Kuota ya kana\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -2349,7 +2349,7 @@ object AvailableDateTimeDisplayNames {
       "dzove|dzodze|tedoxe|afɔfĩe|dame|masa|siamlɔm|deasiamime|anyɔnyɔ|kele|adeɛmekpɔxe|dzome\r\ndzv|dzd|ted|afɔ|dam|mas|sia|dea|any|kel|ade|dzm\r\nd|d|t|a|d|m|s|d|a|k|a|d\r"
 
   private const val ee_Format_Days: String =
-      "dzoɖa|blaɖa|kuɖa|yawoɖa|fiɖa|memleɖa|kɔsiɖa\r\ndzo|bla|kuɖ|yaw|fiɖ|mem|kɔs\r\nd|b|k|y|f|m|k\r"
+      "dzoɖa|blaɖa|kuɖa|yawoɖa|fiɖa|memleɖa|kɔsiɖa\r\ndzo|bla|kuɖ|yaw|fiɖ|mem|kɔs\r\nd|b|k|y|f|m|k\r\ndzo|bla|kuɖ|yaw|fiɖ|mem|kɔs\r"
 
   private const val ee_Format_Quarters: String =
       "kɔta gbãtɔ|kɔta evelia|kɔta etɔ̃lia|kɔta enelia\r\nk1|k2|k3|k4\r\n1|2|3|4\r"
@@ -2360,7 +2360,7 @@ object AvailableDateTimeDisplayNames {
       "dzove|dzodze|tedoxe|afɔfĩe|dame|masa|siamlɔm|deasiamime|anyɔnyɔ|kele|adeɛmekpɔxe|dzome\r\ndzv|dzd|ted|afɔ|dam|mas|sia|dea|any|kel|ade|dzm\r\nd|d|t|a|d|m|s|d|a|k|a|d\r"
 
   private const val ee_Standalone_Days: String =
-      "dzoɖa|blaɖa|kuɖa|yawoɖa|fiɖa|memleɖa|kɔsiɖa\r\ndzo|bla|kuɖ|yaw|fiɖ|mem|kɔs\r\nd|b|k|y|f|m|k\r"
+      "dzoɖa|blaɖa|kuɖa|yawoɖa|fiɖa|memleɖa|kɔsiɖa\r\ndzo|bla|kuɖ|yaw|fiɖ|mem|kɔs\r\nd|b|k|y|f|m|k\r\ndzo|bla|kuɖ|yaw|fiɖ|mem|kɔs\r"
 
   private const val ee_Standalone_Quarters: String =
       "kɔta gbãtɔ|kɔta evelia|kɔta etɔ̃lia|kɔta enelia\r\nk1|k2|k3|k4\r\n1|2|3|4\r"
@@ -2387,7 +2387,7 @@ object AvailableDateTimeDisplayNames {
       "Ιανουαρίου|Φεβρουαρίου|Μαρτίου|Απριλίου|Μαΐου|Ιουνίου|Ιουλίου|Αυγούστου|Σεπτεμβρίου|Οκτωβρίου|Νοεμβρίου|Δεκεμβρίου\r\nΙαν|Φεβ|Μαρ|Απρ|Μαΐ|Ιουν|Ιουλ|Αυγ|Σεπ|Οκτ|Νοε|Δεκ\r\nΙ|Φ|Μ|Α|Μ|Ι|Ι|Α|Σ|Ο|Ν|Δ\r"
 
   private const val el_Format_Days: String =
-      "Δευτέρα|Τρίτη|Τετάρτη|Πέμπτη|Παρασκευή|Σάββατο|Κυριακή\r\nΔευ|Τρί|Τετ|Πέμ|Παρ|Σάβ|Κυρ\r\nΔ|Τ|Τ|Π|Π|Σ|Κ\r"
+      "Δευτέρα|Τρίτη|Τετάρτη|Πέμπτη|Παρασκευή|Σάββατο|Κυριακή\r\nΔευ|Τρί|Τετ|Πέμ|Παρ|Σάβ|Κυρ\r\nΔ|Τ|Τ|Π|Π|Σ|Κ\r\nΔε|Τρ|Τε|Πέ|Πα|Σά|Κυ\r"
 
   private const val el_Format_Quarters: String =
       "1ο τρίμηνο|2ο τρίμηνο|3ο τρίμηνο|4ο τρίμηνο\r\nΤ1|Τ2|Τ3|Τ4\r\n1|2|3|4\r"
@@ -2398,7 +2398,7 @@ object AvailableDateTimeDisplayNames {
       "Ιανουάριος|Φεβρουάριος|Μάρτιος|Απρίλιος|Μάιος|Ιούνιος|Ιούλιος|Αύγουστος|Σεπτέμβριος|Οκτώβριος|Νοέμβριος|Δεκέμβριος\r\nΙαν|Φεβ|Μάρ|Απρ|Μάι|Ιούν|Ιούλ|Αύγ|Σεπ|Οκτ|Νοέ|Δεκ\r\nΙ|Φ|Μ|Α|Μ|Ι|Ι|Α|Σ|Ο|Ν|Δ\r"
 
   private const val el_Standalone_Days: String =
-      "Δευτέρα|Τρίτη|Τετάρτη|Πέμπτη|Παρασκευή|Σάββατο|Κυριακή\r\nΔευ|Τρί|Τετ|Πέμ|Παρ|Σάβ|Κυρ\r\nΔ|Τ|Τ|Π|Π|Σ|Κ\r"
+      "Δευτέρα|Τρίτη|Τετάρτη|Πέμπτη|Παρασκευή|Σάββατο|Κυριακή\r\nΔευ|Τρί|Τετ|Πέμ|Παρ|Σάβ|Κυρ\r\nΔ|Τ|Τ|Π|Π|Σ|Κ\r\nΔε|Τρ|Τε|Πέ|Πα|Σά|Κυ\r"
 
   private const val el_Standalone_Quarters: String =
       "1ο τρίμηνο|2ο τρίμηνο|3ο τρίμηνο|4ο τρίμηνο\r\nΤ1|Τ2|Τ3|Τ4\r\n1|2|3|4\r"
@@ -2443,7 +2443,7 @@ object AvailableDateTimeDisplayNames {
       "January|February|March|April|May|June|July|August|September|October|November|December\r\nJan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val en_Format_Days: String =
-      "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM|T|W|T|F|S|S\r"
+      "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM|T|W|T|F|S|S\r\nMo|Tu|We|Th|Fr|Sa|Su\r"
 
   private const val en_Format_Quarters: String =
       "1st quarter|2nd quarter|3rd quarter|4th quarter\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -2455,7 +2455,7 @@ object AvailableDateTimeDisplayNames {
       "January|February|March|April|May|June|July|August|September|October|November|December\r\nJan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val en_Standalone_Days: String =
-      "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM|T|W|T|F|S|S\r"
+      "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM|T|W|T|F|S|S\r\nMo|Tu|We|Th|Fr|Sa|Su\r"
 
   private const val en_Standalone_Quarters: String =
       "1st quarter|2nd quarter|3rd quarter|4th quarter\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -2583,7 +2583,7 @@ object AvailableDateTimeDisplayNames {
       "January|February|March|April|May|June|July|August|September|October|November|December\r\nJan|Feb|Mar|Apr|May|June|July|Aug|Sept|Oct|Nov|Dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val en_AU_Format_Days: String =
-      "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM.|Tu.|W.|Th.|F.|Sa.|Su.\r"
+      "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM.|Tu.|W.|Th.|F.|Sa.|Su.\r\nMo|Tu|We|Th|Fr|Sa|Su\r"
 
   private val en_AU_Format_Quarters: String? = null
 
@@ -2894,7 +2894,7 @@ object AvailableDateTimeDisplayNames {
       "𐐖𐐰𐑌𐐷𐐭𐐯𐑉𐐨|𐐙𐐯𐐺𐑉𐐭𐐯𐑉𐐨|𐐣𐐪𐑉𐐽|𐐁𐐹𐑉𐐮𐑊|𐐣𐐩|𐐖𐐭𐑌|𐐖𐐭𐑊𐐴|𐐂𐑀𐐲𐑅𐐻|𐐝𐐯𐐹𐐻𐐯𐑋𐐺𐐲𐑉|𐐉𐐿𐐻𐐬𐐺𐐲𐑉|𐐤𐐬𐑂𐐯𐑋𐐺𐐲𐑉|𐐔𐐨𐑅𐐯𐑋𐐺𐐲𐑉\r\n𐐖𐐰𐑌|𐐙𐐯𐐺|𐐣𐐪𐑉|𐐁𐐹𐑉|𐐣𐐩|𐐖𐐭𐑌|𐐖𐐭𐑊|𐐂𐑀|𐐝𐐯𐐹|𐐉𐐿𐐻|𐐤𐐬𐑂|𐐔𐐨𐑅\r\n𐐖|𐐙|𐐣|𐐁|𐐣|𐐖|𐐖|𐐂|𐐝|𐐉|𐐤|𐐔\r"
 
   private const val en_Dsrt_Format_Days: String =
-      "𐐣𐐲𐑌𐐼𐐩|𐐓𐐭𐑆𐐼𐐩|𐐎𐐯𐑌𐑆𐐼𐐩|𐐛𐐲𐑉𐑆𐐼𐐩|𐐙𐑉𐐴𐐼𐐩|𐐝𐐰𐐻𐐲𐑉𐐼𐐩|𐐝𐐲𐑌𐐼𐐩\r\n𐐣𐐲𐑌|𐐓𐐭𐑆|𐐎𐐯𐑌|𐐛𐐲𐑉|𐐙𐑉𐐴|𐐝𐐰𐐻|𐐝𐐲𐑌\r\n𐐣|𐐓|𐐎|𐐛|𐐙|𐐝|𐐝\r"
+      "𐐣𐐲𐑌𐐼𐐩|𐐓𐐭𐑆𐐼𐐩|𐐎𐐯𐑌𐑆𐐼𐐩|𐐛𐐲𐑉𐑆𐐼𐐩|𐐙𐑉𐐴𐐼𐐩|𐐝𐐰𐐻𐐲𐑉𐐼𐐩|𐐝𐐲𐑌𐐼𐐩\r\n𐐣𐐲𐑌|𐐓𐐭𐑆|𐐎𐐯𐑌|𐐛𐐲𐑉|𐐙𐑉𐐴|𐐝𐐰𐐻|𐐝𐐲𐑌\r\n𐐣|𐐓|𐐎|𐐛|𐐙|𐐝|𐐝\r\n𐐣𐐲𐑌|𐐓𐐭𐑆|𐐎𐐯𐑌|𐐛𐐲𐑉|𐐙𐑉𐐴|𐐝𐐰𐐻|𐐝𐐲𐑌\r"
 
   private const val en_Dsrt_Format_Quarters: String =
       "1𐑅𐐻 𐐿𐐶𐐪𐑉𐐻𐐲𐑉|2𐑌𐐼 𐐿𐐶𐐪𐑉𐐻𐐲𐑉|3𐑉𐐼 𐐿𐐶𐐪𐑉𐐻𐐲𐑉|4𐑉𐑃 𐐿𐐶𐐪𐑉𐐻𐐲𐑉\r\n𐐗1|𐐗2|𐐗3|𐐗4\r\n1|2|3|4\r"
@@ -2906,7 +2906,7 @@ object AvailableDateTimeDisplayNames {
       "𐐖𐐰𐑌𐐷𐐭𐐯𐑉𐐨|𐐙𐐯𐐺𐑉𐐭𐐯𐑉𐐨|𐐣𐐪𐑉𐐽|𐐁𐐹𐑉𐐮𐑊|𐐣𐐩|𐐖𐐭𐑌|𐐖𐐭𐑊𐐴|𐐂𐑀𐐲𐑅𐐻|𐐝𐐯𐐹𐐻𐐯𐑋𐐺𐐲𐑉|𐐉𐐿𐐻𐐬𐐺𐐲𐑉|𐐤𐐬𐑂𐐯𐑋𐐺𐐲𐑉|𐐔𐐨𐑅𐐯𐑋𐐺𐐲𐑉\r\n𐐖𐐰𐑌|𐐙𐐯𐐺|𐐣𐐪𐑉|𐐁𐐹𐑉|𐐣𐐩|𐐖𐐭𐑌|𐐖𐐭𐑊|𐐂𐑀|𐐝𐐯𐐹|𐐉𐐿𐐻|𐐤𐐬𐑂|𐐔𐐨𐑅\r\n𐐖|𐐙|𐐣|𐐁|𐐣|𐐖|𐐖|𐐂|𐐝|𐐉|𐐤|𐐔\r"
 
   private const val en_Dsrt_Standalone_Days: String =
-      "𐐣𐐲𐑌𐐼𐐩|𐐓𐐭𐑆𐐼𐐩|𐐎𐐯𐑌𐑆𐐼𐐩|𐐛𐐲𐑉𐑆𐐼𐐩|𐐙𐑉𐐴𐐼𐐩|𐐝𐐰𐐻𐐲𐑉𐐼𐐩|𐐝𐐲𐑌𐐼𐐩\r\n𐐣𐐲𐑌|𐐓𐐭𐑆|𐐎𐐯𐑌|𐐛𐐲𐑉|𐐙𐑉𐐴|𐐝𐐰𐐻|𐐝𐐲𐑌\r\n𐐣|𐐓|𐐎|𐐛|𐐙|𐐝|𐐝\r"
+      "𐐣𐐲𐑌𐐼𐐩|𐐓𐐭𐑆𐐼𐐩|𐐎𐐯𐑌𐑆𐐼𐐩|𐐛𐐲𐑉𐑆𐐼𐐩|𐐙𐑉𐐴𐐼𐐩|𐐝𐐰𐐻𐐲𐑉𐐼𐐩|𐐝𐐲𐑌𐐼𐐩\r\n𐐣𐐲𐑌|𐐓𐐭𐑆|𐐎𐐯𐑌|𐐛𐐲𐑉|𐐙𐑉𐐴|𐐝𐐰𐐻|𐐝𐐲𐑌\r\n𐐣|𐐓|𐐎|𐐛|𐐙|𐐝|𐐝\r\n𐐣𐐲𐑌|𐐓𐐭𐑆|𐐎𐐯𐑌|𐐛𐐲𐑉|𐐙𐑉𐐴|𐐝𐐰𐐻|𐐝𐐲𐑌\r"
 
   private const val en_Dsrt_Standalone_Quarters: String =
       "1𐑅𐐻 𐐿𐐶𐐪𐑉𐐻𐐲𐑉|2𐑌𐐼 𐐿𐐶𐐪𐑉𐐻𐐲𐑉|3𐑉𐐼 𐐿𐐶𐐪𐑉𐐻𐐲𐑉|4𐑉𐑃 𐐿𐐶𐐪𐑉𐐻𐐲𐑉\r\n𐐗1|𐐗2|𐐗3|𐐗4\r\n1|2|3|4\r"
@@ -3943,7 +3943,7 @@ object AvailableDateTimeDisplayNames {
       "·𐑡𐑨𐑙𐑘𐑭𐑢𐑺𐑰|·𐑓𐑧𐑚𐑘𐑵𐑢𐑺𐑰|·𐑥𐑸𐑗|·𐑱𐑐𐑮𐑭𐑤|·𐑥𐑱|·𐑡𐑵𐑯|·𐑡𐑫𐑤𐑲|·𐑪𐑜𐑭𐑕𐑑|·𐑕𐑧𐑐𐑑𐑧𐑥𐑚𐑸|·𐑷𐑒𐑑𐑴𐑚𐑸|·𐑯𐑴𐑝𐑧𐑥𐑚𐑸|·𐑛𐑭𐑕𐑧𐑥𐑚𐑸\r\n·𐑡𐑨|·𐑓𐑧|·𐑥𐑸|·𐑱𐑐|·𐑥𐑱|·𐑡𐑵|·𐑡𐑫|·𐑪𐑜|·𐑕𐑧|·𐑷𐑒|·𐑯𐑴|·𐑛𐑭\r\n𐑡|𐑓|𐑥|𐑱|𐑥|𐑡|𐑡|𐑪|𐑕|𐑷|𐑯|𐑛\r"
 
   private const val en_Shaw_Format_Days: String =
-      "·𐑥𐑭𐑙𐑛𐑱|·𐑑𐑵𐑟𐑛𐑱|·𐑢𐑧𐑙𐑟𐑛𐑱|·𐑔𐑻𐑟𐑛𐑱|·𐑓𐑮𐑲𐑛𐑱|·𐑕𐑨𐑛𐑻𐑛𐑱|·𐑕𐑭𐑙𐑛𐑱\r\n·𐑥𐑭|·𐑑𐑵|·𐑢𐑧|·𐑔𐑻|·𐑓𐑮|·𐑕𐑨|·𐑕𐑭\r\n𐑥|𐑑|𐑢|𐑔|𐑓|𐑕|𐑕\r"
+      "·𐑥𐑭𐑙𐑛𐑱|·𐑑𐑵𐑟𐑛𐑱|·𐑢𐑧𐑙𐑟𐑛𐑱|·𐑔𐑻𐑟𐑛𐑱|·𐑓𐑮𐑲𐑛𐑱|·𐑕𐑨𐑛𐑻𐑛𐑱|·𐑕𐑭𐑙𐑛𐑱\r\n·𐑥𐑭|·𐑑𐑵|·𐑢𐑧|·𐑔𐑻|·𐑓𐑮|·𐑕𐑨|·𐑕𐑭\r\n𐑥|𐑑|𐑢|𐑔|𐑓|𐑕|𐑕\r\n·𐑥𐑭|·𐑑𐑵|·𐑢𐑧|·𐑔𐑻|·𐑓𐑮|·𐑕𐑨|·𐑕𐑭\r"
 
   private const val en_Shaw_Format_Quarters: String =
       "1𐑕𐑑 𐑒𐑢𐑸𐑛𐑸|2𐑯𐑛 𐑒𐑢𐑸𐑛𐑸|3𐑻𐑛 𐑒𐑢𐑸𐑛𐑸|4𐑹𐑔 𐑒𐑢𐑸𐑛𐑸\r\n𐑒1|𐑒2|𐑒3|𐑒4\r\n1|2|3|4\r"
@@ -3955,7 +3955,7 @@ object AvailableDateTimeDisplayNames {
       "·𐑡𐑨𐑙𐑘𐑭𐑢𐑺𐑰|·𐑓𐑧𐑚𐑘𐑵𐑢𐑺𐑰|·𐑥𐑸𐑗|·𐑱𐑐𐑮𐑭𐑤|·𐑥𐑱|·𐑡𐑵𐑯|·𐑡𐑫𐑤𐑲|·𐑪𐑜𐑭𐑕𐑑|·𐑕𐑧𐑐𐑑𐑧𐑥𐑚𐑸|·𐑷𐑒𐑑𐑴𐑚𐑸|·𐑯𐑴𐑝𐑧𐑥𐑚𐑸|·𐑛𐑭𐑕𐑧𐑥𐑚𐑸\r\n·𐑡𐑨|·𐑓𐑧|·𐑥𐑸|·𐑱𐑐|·𐑥𐑱|·𐑡𐑵|·𐑡𐑫|·𐑪𐑜|·𐑕𐑧|·𐑷𐑒|·𐑯𐑴|·𐑛𐑭\r\n𐑡|𐑓|𐑥|𐑱|𐑥|𐑡|𐑡|𐑪|𐑕|𐑷|𐑯|𐑛\r"
 
   private const val en_Shaw_Standalone_Days: String =
-      "·𐑥𐑭𐑙𐑛𐑱|·𐑑𐑵𐑟𐑛𐑱|·𐑢𐑧𐑙𐑟𐑛𐑱|·𐑔𐑻𐑟𐑛𐑱|·𐑓𐑮𐑲𐑛𐑱|·𐑕𐑨𐑛𐑻𐑛𐑱|·𐑕𐑭𐑙𐑛𐑱\r\n·𐑥𐑭|·𐑑𐑵|·𐑢𐑧|·𐑔𐑻|·𐑓𐑮|·𐑕𐑨|·𐑕𐑭\r\n𐑥|𐑑|𐑢|𐑔|𐑓|𐑕|𐑕\r"
+      "·𐑥𐑭𐑙𐑛𐑱|·𐑑𐑵𐑟𐑛𐑱|·𐑢𐑧𐑙𐑟𐑛𐑱|·𐑔𐑻𐑟𐑛𐑱|·𐑓𐑮𐑲𐑛𐑱|·𐑕𐑨𐑛𐑻𐑛𐑱|·𐑕𐑭𐑙𐑛𐑱\r\n·𐑥𐑭|·𐑑𐑵|·𐑢𐑧|·𐑔𐑻|·𐑓𐑮|·𐑕𐑨|·𐑕𐑭\r\n𐑥|𐑑|𐑢|𐑔|𐑓|𐑕|𐑕\r\n·𐑥𐑭|·𐑑𐑵|·𐑢𐑧|·𐑔𐑻|·𐑓𐑮|·𐑕𐑨|·𐑕𐑭\r"
 
   private const val en_Shaw_Standalone_Quarters: String =
       "1𐑕𐑑 𐑒𐑢𐑸𐑛𐑸|2𐑯𐑛 𐑒𐑢𐑸𐑛𐑸|3𐑻𐑛 𐑒𐑢𐑸𐑛𐑸|4𐑹𐑔 𐑒𐑢𐑸𐑛𐑸\r\n𐑒1|𐑒2|𐑒3|𐑒4\r\n1|2|3|4\r"
@@ -4223,7 +4223,7 @@ object AvailableDateTimeDisplayNames {
       "Januaro|Februaro|Marto|Aprilo|Majo|Junio|Julio|Aŭgusto|Septembro|Oktobro|Novembro|Decembro\r\nJan|Feb|Mar|Apr|Maj|Jun|Jul|Aŭg|Sep|Okt|Nov|Dec\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val eo_Format_Days: String =
-      "lundo|mardo|merkredo|ĵaŭdo|vendredo|sabato|dimanĉo\r\nlu|ma|me|ĵa|ve|sa|di\r\nM|T|W|T|F|S|S\r"
+      "lundo|mardo|merkredo|ĵaŭdo|vendredo|sabato|dimanĉo\r\nlu|ma|me|ĵa|ve|sa|di\r\nM|T|W|T|F|S|S\r\nlu|ma|me|ĵa|ve|sa|di\r"
 
   private val eo_Format_Quarters: String? = null
 
@@ -4233,7 +4233,7 @@ object AvailableDateTimeDisplayNames {
       "Januaro|Februaro|Marto|Aprilo|Majo|Junio|Julio|Aŭgusto|Septembro|Oktobro|Novembro|Decembro\r\nJan|Feb|Mar|Apr|Maj|Jun|Jul|Aŭg|Sep|Okt|Nov|Dec\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val eo_Standalone_Days: String =
-      "lundo|mardo|merkredo|ĵaŭdo|vendredo|sabato|dimanĉo\r\nlu|ma|me|ĵa|ve|sa|di\r\nM|T|W|T|F|S|S\r"
+      "lundo|mardo|merkredo|ĵaŭdo|vendredo|sabato|dimanĉo\r\nlu|ma|me|ĵa|ve|sa|di\r\nM|T|W|T|F|S|S\r\nlu|ma|me|ĵa|ve|sa|di\r"
 
   private val eo_Standalone_Quarters: String? = null
 
@@ -4243,7 +4243,7 @@ object AvailableDateTimeDisplayNames {
       "enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre\r\nene|feb|mar|abr|may|jun|jul|ago|sept|oct|nov|dic\r\nE|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val es_Format_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|X|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|X|J|V|S|D\r\nLU|MA|MI|JU|VI|SA|DO\r"
 
   private const val es_Format_Quarters: String =
       "1.er trimestre|2.º trimestre|3.er trimestre|4.º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -4255,7 +4255,7 @@ object AvailableDateTimeDisplayNames {
       "enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre\r\nene|feb|mar|abr|may|jun|jul|ago|sept|oct|nov|dic\r\nE|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val es_Standalone_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|X|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|X|J|V|S|D\r\nLU|MA|MI|JU|VI|SA|DO\r"
 
   private const val es_Standalone_Quarters: String =
       "1.er trimestre|2.º trimestre|3.er trimestre|4.º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -4266,7 +4266,7 @@ object AvailableDateTimeDisplayNames {
   private val es_419_Format_Months: String? = null
 
   private const val es_419_Format_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r\nLU|MA|MI|JU|VI|SA|DO\r"
 
   private const val es_419_Format_Quarters: String =
       "1.º trimestre|2.º trimestre|3.º trimestre|4.º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -4277,7 +4277,7 @@ object AvailableDateTimeDisplayNames {
   private val es_419_Standalone_Months: String? = null
 
   private const val es_419_Standalone_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r\nLU|MA|MI|JU|VI|SA|DO\r"
 
   private const val es_419_Standalone_Quarters: String =
       "1.º trimestre|2.º trimestre|3.º trimestre|4.º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -4358,7 +4358,7 @@ object AvailableDateTimeDisplayNames {
   private val es_CL_Format_Months: String? = null
 
   private const val es_CL_Format_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r\nlu|ma|mi|ju|vi|sá|do\r"
 
   private val es_CL_Format_Quarters: String? = null
 
@@ -4369,7 +4369,7 @@ object AvailableDateTimeDisplayNames {
       "enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre\r\nene.|feb.|mar.|abr.|may.|jun.|jul.|ago.|sept.|oct.|nov.|dic.\r\nE|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val es_CL_Standalone_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r\nlu|ma|mi|ju|vi|sá|do\r"
 
   private const val es_CL_Standalone_Quarters: String =
       "1.° trimestre|2.° trimestre|3.° trimestre|4.º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -4380,7 +4380,7 @@ object AvailableDateTimeDisplayNames {
   private val es_CO_Format_Months: String? = null
 
   private const val es_CO_Format_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|m|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|m|J|V|S|D\r\nLU|MA|MI|JU|VI|SA|DO\r"
 
   private val es_CO_Format_Quarters: String? = null
 
@@ -4391,7 +4391,7 @@ object AvailableDateTimeDisplayNames {
       "enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre\r\nene.|feb.|mar.|abr.|may.|jun.|jul.|ago.|sept.|oct.|nov.|dic.\r\nE|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val es_CO_Standalone_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nl|m|m|j|v|s|d\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nl|m|m|j|v|s|d\r\nLU|MA|MI|JU|VI|SA|DO\r"
 
   private val es_CO_Standalone_Quarters: String? = null
 
@@ -4670,7 +4670,7 @@ object AvailableDateTimeDisplayNames {
       "enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre\r\nene.|feb.|mar.|abr.|may.|jun.|jul.|ago.|sept.|oct.|nov.|dic.\r\nE|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val es_PY_Format_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r\nlu|ma|mi|ju|vi|sa|do\r"
 
   private val es_PY_Format_Quarters: String? = null
 
@@ -4681,7 +4681,7 @@ object AvailableDateTimeDisplayNames {
       "enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre\r\nene.|feb.|mar.|abr.|may.|jun.|jul.|ago.|sept.|oct.|nov.|dic.\r\nE|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val es_PY_Standalone_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r\nLu|Ma|Mi|Ju|Vi|Sa|Do\r"
 
   private val es_PY_Standalone_Quarters: String? = null
 
@@ -4749,7 +4749,7 @@ object AvailableDateTimeDisplayNames {
       "enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre\r\nene.|feb.|mar.|abr.|may.|jun.|jul.|ago.|sept.|oct.|nov.|dic.\r\nE|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val es_VE_Format_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r\nLu|Ma|Mi|Ju|Vi|Sa|Do\r"
 
   private const val es_VE_Format_Quarters: String =
       "1er trimestre|2do trimestre|3er trimestre|4to trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -4761,7 +4761,7 @@ object AvailableDateTimeDisplayNames {
       "enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre\r\nene.|feb.|mar.|abr.|may.|jun.|jul.|ago.|sept.|oct.|nov.|dic.\r\nE|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val es_VE_Standalone_Days: String =
-      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r"
+      "lunes|martes|miércoles|jueves|viernes|sábado|domingo\r\nlun|mar|mié|jue|vie|sáb|dom\r\nL|M|M|J|V|S|D\r\nLu|Ma|Mi|Ju|Vi|Sa|Do\r"
 
   private const val es_VE_Standalone_Quarters: String =
       "1er trimestre|2do trimestre|3er trimestre|4to trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -4773,7 +4773,7 @@ object AvailableDateTimeDisplayNames {
       "jaanuar|veebruar|märts|aprill|mai|juuni|juuli|august|september|oktoober|november|detsember\r\njaan|veebr|märts|apr|mai|juuni|juuli|aug|sept|okt|nov|dets\r\nJ|V|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val et_Format_Days: String =
-      "esmaspäev|teisipäev|kolmapäev|neljapäev|reede|laupäev|pühapäev\r\nE|T|K|N|R|L|P\r\nE|T|K|N|R|L|P\r"
+      "esmaspäev|teisipäev|kolmapäev|neljapäev|reede|laupäev|pühapäev\r\nE|T|K|N|R|L|P\r\nE|T|K|N|R|L|P\r\nE|T|K|N|R|L|P\r"
 
   private const val et_Format_Quarters: String =
       "1. kvartal|2. kvartal|3. kvartal|4. kvartal\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -4785,7 +4785,7 @@ object AvailableDateTimeDisplayNames {
       "jaanuar|veebruar|märts|aprill|mai|juuni|juuli|august|september|oktoober|november|detsember\r\njaan|veebr|märts|apr|mai|juuni|juuli|aug|sept|okt|nov|dets\r\nJ|V|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val et_Standalone_Days: String =
-      "esmaspäev|teisipäev|kolmapäev|neljapäev|reede|laupäev|pühapäev\r\nE|T|K|N|R|L|P\r\nE|T|K|N|R|L|P\r"
+      "esmaspäev|teisipäev|kolmapäev|neljapäev|reede|laupäev|pühapäev\r\nE|T|K|N|R|L|P\r\nE|T|K|N|R|L|P\r\nE|T|K|N|R|L|P\r"
 
   private const val et_Standalone_Quarters: String =
       "1. kvartal|2. kvartal|3. kvartal|4. kvartal\r\nK1|K2|K3|K4\r\n1.|2.|3.|4.\r"
@@ -4797,7 +4797,7 @@ object AvailableDateTimeDisplayNames {
       "urtarrila|otsaila|martxoa|apirila|maiatza|ekaina|uztaila|abuztua|iraila|urria|azaroa|abendua\r\nurt.|ots.|mar.|api.|mai.|eka.|uzt.|abu.|ira.|urr.|aza.|abe.\r\nU|O|M|A|M|E|U|A|I|U|A|A\r"
 
   private const val eu_Format_Days: String =
-      "astelehena|asteartea|asteazkena|osteguna|ostirala|larunbata|igandea\r\nal.|ar.|az.|og.|or.|lr.|ig.\r\nA|A|A|O|O|L|I\r"
+      "astelehena|asteartea|asteazkena|osteguna|ostirala|larunbata|igandea\r\nal.|ar.|az.|og.|or.|lr.|ig.\r\nA|A|A|O|O|L|I\r\nal.|ar.|az.|og.|or.|lr.|ig.\r"
 
   private const val eu_Format_Quarters: String =
       "1. hiruhilekoa|2. hiruhilekoa|3. hiruhilekoa|4. hiruhilekoa\r\n1Hh|2Hh|3Hh|4Hh\r\n1|2|3|4\r"
@@ -4809,7 +4809,7 @@ object AvailableDateTimeDisplayNames {
       "urtarrila|otsaila|martxoa|apirila|maiatza|ekaina|uztaila|abuztua|iraila|urria|azaroa|abendua\r\nurt.|ots.|mar.|api.|mai.|eka.|uzt.|abu.|ira.|urr.|aza.|abe.\r\nU|O|M|A|M|E|U|A|I|U|A|A\r"
 
   private const val eu_Standalone_Days: String =
-      "astelehena|asteartea|asteazkena|osteguna|ostirala|larunbata|igandea\r\nal.|ar.|az.|og.|or.|lr.|ig.\r\nA|A|A|O|O|L|I\r"
+      "astelehena|asteartea|asteazkena|osteguna|ostirala|larunbata|igandea\r\nal.|ar.|az.|og.|or.|lr.|ig.\r\nA|A|A|O|O|L|I\r\nal.|ar.|az.|og.|or.|lr.|ig.\r"
 
   private const val eu_Standalone_Quarters: String =
       "1. hiruhilekoa|2. hiruhilekoa|3. hiruhilekoa|4. hiruhilekoa\r\n1Hh|2Hh|3Hh|4Hh\r\n1|2|3|4\r"
@@ -4821,7 +4821,7 @@ object AvailableDateTimeDisplayNames {
       "ngɔn osú|ngɔn bɛ̌|ngɔn lála|ngɔn nyina|ngɔn tána|ngɔn saməna|ngɔn zamgbála|ngɔn mwom|ngɔn ebulú|ngɔn awóm|ngɔn awóm ai dziá|ngɔn awóm ai bɛ̌\r\nngo|ngb|ngl|ngn|ngt|ngs|ngz|ngm|nge|nga|ngad|ngab\r\no|b|l|n|t|s|z|m|e|a|d|b\r"
 
   private const val ewo_Format_Days: String =
-      "mɔ́ndi|sɔ́ndɔ məlú mə́bɛ̌|sɔ́ndɔ məlú mə́lɛ́|sɔ́ndɔ məlú mə́nyi|fúladé|séradé|sɔ́ndɔ\r\nmɔ́n|smb|sml|smn|fúl|sér|sɔ́n\r\nm|s|s|s|f|s|s\r"
+      "mɔ́ndi|sɔ́ndɔ məlú mə́bɛ̌|sɔ́ndɔ məlú mə́lɛ́|sɔ́ndɔ məlú mə́nyi|fúladé|séradé|sɔ́ndɔ\r\nmɔ́n|smb|sml|smn|fúl|sér|sɔ́n\r\nm|s|s|s|f|s|s\r\nmɔ́n|smb|sml|smn|fúl|sér|sɔ́n\r"
 
   private const val ewo_Format_Quarters: String =
       "nsámbá ngɔn asú|nsámbá ngɔn bɛ̌|nsámbá ngɔn lála|nsámbá ngɔn nyina\r\nnno|nnb|nnl|nnny\r\n1|2|3|4\r"
@@ -4833,7 +4833,7 @@ object AvailableDateTimeDisplayNames {
       "ngɔn osú|ngɔn bɛ̌|ngɔn lála|ngɔn nyina|ngɔn tána|ngɔn saməna|ngɔn zamgbála|ngɔn mwom|ngɔn ebulú|ngɔn awóm|ngɔn awóm ai dziá|ngɔn awóm ai bɛ̌\r\nngo|ngb|ngl|ngn|ngt|ngs|ngz|ngm|nge|nga|ngad|ngab\r\no|b|l|n|t|s|z|m|e|a|d|b\r"
 
   private const val ewo_Standalone_Days: String =
-      "mɔ́ndi|sɔ́ndɔ məlú mə́bɛ̌|sɔ́ndɔ məlú mə́lɛ́|sɔ́ndɔ məlú mə́nyi|fúladé|séradé|sɔ́ndɔ\r\nmɔ́n|smb|sml|smn|fúl|sér|sɔ́n\r\nm|s|s|s|f|s|s\r"
+      "mɔ́ndi|sɔ́ndɔ məlú mə́bɛ̌|sɔ́ndɔ məlú mə́lɛ́|sɔ́ndɔ məlú mə́nyi|fúladé|séradé|sɔ́ndɔ\r\nmɔ́n|smb|sml|smn|fúl|sér|sɔ́n\r\nm|s|s|s|f|s|s\r\nmɔ́n|smb|sml|smn|fúl|sér|sɔ́n\r"
 
   private const val ewo_Standalone_Quarters: String =
       "nsámbá ngɔn asú|nsámbá ngɔn bɛ̌|nsámbá ngɔn lála|nsámbá ngɔn nyina\r\nnno|nnb|nnl|nnny\r\n1|2|3|4\r"
@@ -4845,7 +4845,7 @@ object AvailableDateTimeDisplayNames {
       "ژانویهٔ|فوریهٔ|مارس|آوریل|مهٔ|ژوئن|ژوئیهٔ|اوت|سپتامبر|اکتبر|نوامبر|دسامبر\r\nژانویه|فوریه|مارس|آوریل|مه|ژوئن|ژوئیه|اوت|سپتامبر|اکتبر|نوامبر|دسامبر\r\nژ|ف|م|آ|م|ژ|ژ|ا|س|ا|ن|د\r"
 
   private const val fa_Format_Days: String =
-      "دوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nدوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nد|س|چ|پ|ج|ش|ی\r"
+      "دوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nدوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nد|س|چ|پ|ج|ش|ی\r\n۲ش|۳ش|۴ش|۵ش|ج|ش|۱ش\r"
 
   private const val fa_Format_Quarters: String =
       "سه‌ماههٔ اول|سه‌ماههٔ دوم|سه‌ماههٔ سوم|سه‌ماههٔ چهارم\r\nس‌م۱|س‌م۲|س‌م۳|س‌م۴\r\n۱|۲|۳|۴\r"
@@ -4856,7 +4856,7 @@ object AvailableDateTimeDisplayNames {
       "ژانویه|فوریه|مارس|آوریل|مه|ژوئن|ژوئیه|اوت|سپتامبر|اکتبر|نوامبر|دسامبر\r\nژانویه|فوریه|مارس|آوریل|مه|ژوئن|ژوئیه|اوت|سپتامبر|اکتبر|نوامبر|دسامبر\r\nژ|ف|م|آ|م|ژ|ژ|ا|س|ا|ن|د\r"
 
   private const val fa_Standalone_Days: String =
-      "دوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nدوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nد|س|چ|پ|ج|ش|ی\r"
+      "دوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nدوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nد|س|چ|پ|ج|ش|ی\r\n۲ش|۳ش|۴ش|۵ش|ج|ش|۱ش\r"
 
   private const val fa_Standalone_Quarters: String =
       "سه‌ماههٔ اول|سه‌ماههٔ دوم|سه‌ماههٔ سوم|سه‌ماههٔ چهارم\r\nس‌م۱|س‌م۲|س‌م۳|س‌م۴\r\n۱|۲|۳|۴\r"
@@ -4888,7 +4888,7 @@ object AvailableDateTimeDisplayNames {
       "siilo|colte|mbooy|seeɗto|duujal|korse|morso|juko|siilto|yarkomaa|jolal|bowte\r\nsii|col|mbo|see|duu|kor|mor|juk|slt|yar|jol|bow\r\ns|c|m|s|d|k|m|j|s|y|j|b\r"
 
   private const val ff_Format_Days: String =
-      "aaɓnde|mawbaare|njeslaare|naasaande|mawnde|hoore-biir|dewo\r\naaɓ|maw|nje|naa|mwd|hbi|dew\r\na|m|n|n|m|h|d\r"
+      "aaɓnde|mawbaare|njeslaare|naasaande|mawnde|hoore-biir|dewo\r\naaɓ|maw|nje|naa|mwd|hbi|dew\r\na|m|n|n|m|h|d\r\naaɓ|maw|nje|naa|mwd|hbi|dew\r"
 
   private const val ff_Format_Quarters: String =
       "Termes 1|Termes 2|Termes 3|Termes 4\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -4900,7 +4900,7 @@ object AvailableDateTimeDisplayNames {
       "siilo|colte|mbooy|seeɗto|duujal|korse|morso|juko|siilto|yarkomaa|jolal|bowte\r\nsii|col|mbo|see|duu|kor|mor|juk|slt|yar|jol|bow\r\ns|c|m|s|d|k|m|j|s|y|j|b\r"
 
   private const val ff_Standalone_Days: String =
-      "aaɓnde|mawbaare|njeslaare|naasaande|mawnde|hoore-biir|dewo\r\naaɓ|maw|nje|naa|mwd|hbi|dew\r\na|m|n|n|m|h|d\r"
+      "aaɓnde|mawbaare|njeslaare|naasaande|mawnde|hoore-biir|dewo\r\naaɓ|maw|nje|naa|mwd|hbi|dew\r\na|m|n|n|m|h|d\r\naaɓ|maw|nje|naa|mwd|hbi|dew\r"
 
   private const val ff_Standalone_Quarters: String =
       "Termes 1|Termes 2|Termes 3|Termes 4\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -4912,7 +4912,7 @@ object AvailableDateTimeDisplayNames {
       "𞤅𞤭𞥅𞤤𞤮|𞤕𞤮𞤤𞤼𞤮|𞤐𞤦𞤮𞥅𞤴𞤮|𞤅𞤫𞥅𞤼𞤮|𞤁𞤵𞥅𞤶𞤮|𞤑𞤮𞤪𞤧𞤮|𞤃𞤮𞤪𞤧𞤮|𞤔𞤵𞤳𞤮|𞤅𞤭𞤤𞤼𞤮|𞤒𞤢𞤪𞤳𞤮|𞤔𞤮𞤤𞤮|𞤄𞤮𞤱𞤼𞤮\r\n𞤅𞤭𞥅𞤤𞤮|𞤕𞤮𞤤𞤼𞤮|𞤐𞤦𞤮𞥅𞤴𞤮|𞤅𞤫𞥅𞤼𞤮|𞤁𞤵𞥅𞤶𞤮|𞤑𞤮𞤪𞤧𞤮|𞤃𞤮𞤪𞤧𞤮|𞤔𞤵𞤳𞤮|𞤅𞤭𞤤𞤼𞤮|𞤒𞤢𞤪𞤳𞤮|𞤔𞤮𞤤𞤮|𞤄𞤮𞤱𞤼𞤮\r\n𞤅|𞤕|𞤄|𞤅|𞤁|𞤑|𞤃|𞤔|𞤅|𞤒|𞤔|𞤄\r"
 
   private const val ff_Adlm_Format_Days: String =
-      "𞤀𞥄𞤩𞤵𞤲𞥋𞤣𞤫|𞤃𞤢𞤱𞤦𞤢𞥄𞤪𞤫|𞤐𞤶𞤫𞤧𞤤𞤢𞥄𞤪𞤫|𞤐𞤢𞥄𞤧𞤢𞥄𞤲𞤣𞤫|𞤃𞤢𞤱𞤲𞤣𞤫|𞤖𞤮𞤪𞤦𞤭𞤪𞥆𞤫|𞤈𞤫𞤬𞤦𞤭𞤪𞥆𞤫\r\n𞤀𞥄𞤩𞤵|𞤃𞤢𞤦|𞤔𞤫𞤧|𞤐𞤢𞥄𞤧|𞤃𞤢𞤣|𞤖𞤮𞤪|𞤈𞤫𞤬\r\n𞤀𞥄|𞤃|𞤔|𞤐|𞤃|𞤖|𞤈\r"
+      "𞤀𞥄𞤩𞤵𞤲𞥋𞤣𞤫|𞤃𞤢𞤱𞤦𞤢𞥄𞤪𞤫|𞤐𞤶𞤫𞤧𞤤𞤢𞥄𞤪𞤫|𞤐𞤢𞥄𞤧𞤢𞥄𞤲𞤣𞤫|𞤃𞤢𞤱𞤲𞤣𞤫|𞤖𞤮𞤪𞤦𞤭𞤪𞥆𞤫|𞤈𞤫𞤬𞤦𞤭𞤪𞥆𞤫\r\n𞤀𞥄𞤩𞤵|𞤃𞤢𞤦|𞤔𞤫𞤧|𞤐𞤢𞥄𞤧|𞤃𞤢𞤣|𞤖𞤮𞤪|𞤈𞤫𞤬\r\n𞤀𞥄|𞤃|𞤔|𞤐|𞤃|𞤖|𞤈\r\n𞤀𞥄𞤩𞤵|𞤃𞤢𞤦|𞤔𞤫𞤧|𞤐𞤢𞥄𞤧|𞤃𞤢𞤣|𞤖𞤮𞤪|𞤈𞤫𞤬\r"
 
   private const val ff_Adlm_Format_Quarters: String =
       "𞤐𞥑|𞤐𞥒|𞤐𞥓|𞤐𞥔\r\n𞤐𞥑|𞤐𞥒|𞤐𞥓|𞤐𞥔\r\n𞥑|𞥒|𞥓|𞥔\r"
@@ -4923,7 +4923,7 @@ object AvailableDateTimeDisplayNames {
       "𞤅𞤭𞥅𞤤𞤮|𞤕𞤮𞤤𞤼𞤮|𞤐𞤦𞤮𞥅𞤴𞤮|𞤅𞤫𞥅𞤼𞤮|𞤁𞤵𞥅𞤶𞤮|𞤑𞤮𞤪𞤧𞤮|𞤃𞤮𞤪𞤧𞤮|𞤔𞤵𞤳𞤮|𞤅𞤭𞤤𞤼𞤮|𞤒𞤢𞤪𞤳𞤮|𞤔𞤮𞤤𞤮|𞤄𞤮𞤱𞤼𞤮\r\n𞤅𞤭𞥅𞤤|𞤕𞤮𞤤|𞤐𞤦𞤮𞥅𞤴|𞤅𞤫𞥅𞤼|𞤁𞤵𞥅𞤶|𞤑𞤮𞤪|𞤃𞤮𞤪|𞤔𞤵𞤳|𞤅𞤭𞤤|𞤒𞤢𞤪|𞤔𞤮𞤤|𞤄𞤮𞤱\r\n𞤅|𞤕|𞤄|𞤅|𞤁|𞤑|𞤃|𞤔|𞤅|𞤒|𞤔|𞤄\r"
 
   private const val ff_Adlm_Standalone_Days: String =
-      "𞤀𞥄𞤩𞤵𞤲𞥋𞤣𞤫|𞤃𞤢𞤱𞤦𞤢𞥄𞤪𞤫|𞤐𞤶𞤫𞤧𞤤𞤢𞥄𞤪𞤫|𞤐𞤢𞥄𞤧𞤢𞥄𞤲𞤣𞤫|𞤃𞤢𞤱𞤲𞤣𞤫|𞤖𞤮𞤪𞤦𞤭𞤪𞥆𞤫|𞤈𞤫𞤬𞤦𞤭𞤪𞥆𞤫\r\n𞤀𞥄𞤩𞤵|𞤃𞤢𞤦|𞤔𞤫𞤧|𞤐𞤢𞥄𞤧|𞤃𞤢𞤣|𞤖𞤮𞤪|𞤈𞤫𞤬\r\n𞤀𞥄|𞤃|𞤔|𞤐|𞤃|𞤖|𞤈\r"
+      "𞤀𞥄𞤩𞤵𞤲𞥋𞤣𞤫|𞤃𞤢𞤱𞤦𞤢𞥄𞤪𞤫|𞤐𞤶𞤫𞤧𞤤𞤢𞥄𞤪𞤫|𞤐𞤢𞥄𞤧𞤢𞥄𞤲𞤣𞤫|𞤃𞤢𞤱𞤲𞤣𞤫|𞤖𞤮𞤪𞤦𞤭𞤪𞥆𞤫|𞤈𞤫𞤬𞤦𞤭𞤪𞥆𞤫\r\n𞤀𞥄𞤩𞤵|𞤃𞤢𞤦|𞤔𞤫𞤧|𞤐𞤢𞥄𞤧|𞤃𞤢𞤣|𞤖𞤮𞤪|𞤈𞤫𞤬\r\n𞤀𞥄|𞤃|𞤔|𞤐|𞤃|𞤖|𞤈\r\n𞤀𞥄𞤩𞤵|𞤃𞤢𞤦|𞤔𞤫𞤧|𞤐𞤢𞥄𞤧|𞤃𞤢𞤣|𞤖𞤮𞤪|𞤈𞤫𞤬\r"
 
   private const val ff_Adlm_Standalone_Quarters: String =
       "𞤐𞤢𞤴𞤩𞤭𞥅𞤪𞤫 𞥑𞤪𞤫|𞤐𞤢𞤴𞤩𞤭𞥅𞤪𞤫 𞥒𞤪𞤫|𞤐𞤢𞤴𞤩𞤭𞥅𞤪𞤫 𞥓𞤪𞤫|𞤐𞤢𞤴𞤩𞤭𞥅𞤪𞤫 𞥔𞤪𞤫\r\n𞤐𞥑|𞤐𞥒|𞤐𞥓|𞤐𞥔\r\n𞥑|𞥒|𞥓|𞥔\r"
@@ -5303,7 +5303,7 @@ object AvailableDateTimeDisplayNames {
       "tammikuuta|helmikuuta|maaliskuuta|huhtikuuta|toukokuuta|kesäkuuta|heinäkuuta|elokuuta|syyskuuta|lokakuuta|marraskuuta|joulukuuta\r\ntammi|helmi|maalis|huhti|touko|kesä|heinä|elo|syys|loka|marras|joulu\r\nT|H|M|H|T|K|H|E|S|L|M|J\r"
 
   private const val fi_Format_Days: String =
-      "maanantaina|tiistaina|keskiviikkona|torstaina|perjantaina|lauantaina|sunnuntai\r\nma|ti|ke|to|pe|la|su\r\nM|T|K|T|P|L|S\r"
+      "maanantaina|tiistaina|keskiviikkona|torstaina|perjantaina|lauantaina|sunnuntai\r\nma|ti|ke|to|pe|la|su\r\nM|T|K|T|P|L|S\r\nma|ti|ke|to|pe|la|su\r"
 
   private const val fi_Format_Quarters: String =
       "1. neljännes|2. neljännes|3. neljännes|4. neljännes\r\n1. nelj.|2. nelj.|3. nelj.|4. nelj.\r\n1|2|3|4\r"
@@ -5315,7 +5315,7 @@ object AvailableDateTimeDisplayNames {
       "tammikuu|helmikuu|maaliskuu|huhtikuu|toukokuu|kesäkuu|heinäkuu|elokuu|syyskuu|lokakuu|marraskuu|joulukuu\r\ntammi|helmi|maalis|huhti|touko|kesä|heinä|elo|syys|loka|marras|joulu\r\nT|H|M|H|T|K|H|E|S|L|M|J\r"
 
   private const val fi_Standalone_Days: String =
-      "maanantai|tiistai|keskiviikko|torstai|perjantai|lauantai|sunnuntai\r\nma|ti|ke|to|pe|la|su\r\nM|T|K|T|P|L|S\r"
+      "maanantai|tiistai|keskiviikko|torstai|perjantai|lauantai|sunnuntai\r\nma|ti|ke|to|pe|la|su\r\nM|T|K|T|P|L|S\r\nma|ti|ke|to|pe|la|su\r"
 
   private const val fi_Standalone_Quarters: String =
       "1. neljännes|2. neljännes|3. neljännes|4. neljännes\r\n1. nelj.|2. nelj.|3. nelj.|4. nelj.\r\n1|2|3|4\r"
@@ -5327,7 +5327,7 @@ object AvailableDateTimeDisplayNames {
       "Enero|Pebrero|Marso|Abril|Mayo|Hunyo|Hulyo|Agosto|Setyembre|Oktubre|Nobyembre|Disyembre\r\nEne|Peb|Mar|Abr|May|Hun|Hul|Ago|Set|Okt|Nob|Dis\r\nEne|Peb|Mar|Abr|May|Hun|Hul|Ago|Set|Okt|Nob|Dis\r"
 
   private const val fil_Format_Days: String =
-      "Lunes|Martes|Miyerkules|Huwebes|Biyernes|Sabado|Linggo\r\nLun|Mar|Miy|Huw|Biy|Sab|Lin\r\nLun|Mar|Miy|Huw|Biy|Sab|Lin\r"
+      "Lunes|Martes|Miyerkules|Huwebes|Biyernes|Sabado|Linggo\r\nLun|Mar|Miy|Huw|Biy|Sab|Lin\r\nLun|Mar|Miy|Huw|Biy|Sab|Lin\r\nLun|Mar|Miy|Huw|Biy|Sab|Lin\r"
 
   private const val fil_Format_Quarters: String =
       "ika-1 quarter|ika-2 quarter|ika-3 quarter|ika-4 na quarter\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -5339,7 +5339,7 @@ object AvailableDateTimeDisplayNames {
       "Enero|Pebrero|Marso|Abril|Mayo|Hunyo|Hulyo|Agosto|Setyembre|Oktubre|Nobyembre|Disyembre\r\nEne|Peb|Mar|Abr|May|Hun|Hul|Ago|Set|Okt|Nob|Dis\r\nE|P|M|A|M|Hun|Hul|Ago|Set|Okt|Nob|Dis\r"
 
   private const val fil_Standalone_Days: String =
-      "Lunes|Martes|Miyerkules|Huwebes|Biyernes|Sabado|Linggo\r\nLun|Mar|Miy|Huw|Biy|Sab|Lin\r\nLun|Mar|Miy|Huw|Biy|Sab|Lin\r"
+      "Lunes|Martes|Miyerkules|Huwebes|Biyernes|Sabado|Linggo\r\nLun|Mar|Miy|Huw|Biy|Sab|Lin\r\nLun|Mar|Miy|Huw|Biy|Sab|Lin\r\nLun|Mar|Miy|Huw|Biy|Sab|Lin\r"
 
   private const val fil_Standalone_Quarters: String =
       "ika-1 quarter|ika-2 quarter|ika-3 quarter|ika-4 na quarter\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -5351,7 +5351,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|mars|apríl|mai|juni|juli|august|september|oktober|november|desember\r\njan.|feb.|mar.|apr.|mai|jun.|jul.|aug.|sep.|okt.|nov.|des.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val fo_Format_Days: String =
-      "mánadagur|týsdagur|mikudagur|hósdagur|fríggjadagur|leygardagur|sunnudagur\r\nmán.|týs.|mik.|hós.|frí.|ley.|sun.\r\nM|T|M|H|F|L|S\r"
+      "mánadagur|týsdagur|mikudagur|hósdagur|fríggjadagur|leygardagur|sunnudagur\r\nmán.|týs.|mik.|hós.|frí.|ley.|sun.\r\nM|T|M|H|F|L|S\r\nmá.|tý.|mi.|hó.|fr.|le.|su.\r"
 
   private const val fo_Format_Quarters: String =
       "1. ársfjórðingur|2. ársfjórðingur|3. ársfjórðingur|4. ársfjórðingur\r\n1. ársfj.|2. ársfj.|3. ársfj.|4. ársfj.\r\n1|2|3|4\r"
@@ -5362,7 +5362,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|mars|apríl|mai|juni|juli|august|september|oktober|november|desember\r\njan|feb|mar|apr|mai|jun|jul|aug|sep|okt|nov|des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val fo_Standalone_Days: String =
-      "mánadagur|týsdagur|mikudagur|hósdagur|fríggjadagur|leygardagur|sunnudagur\r\nmán|týs|mik|hós|frí|ley|sun\r\nM|T|M|H|F|L|S\r"
+      "mánadagur|týsdagur|mikudagur|hósdagur|fríggjadagur|leygardagur|sunnudagur\r\nmán|týs|mik|hós|frí|ley|sun\r\nM|T|M|H|F|L|S\r\nmá|tý|mi|hó|fr|le|su\r"
 
   private const val fo_Standalone_Quarters: String =
       "1. ársfjórðingur|2. ársfjórðingur|3. ársfjórðingur|4. ársfjórðingur\r\n1. ársfj.|2. ársfj.|3. ársfj.|4. ársfj.\r\n1|2|3|4\r"
@@ -5389,7 +5389,7 @@ object AvailableDateTimeDisplayNames {
       "janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre\r\njanv.|févr.|mars|avr.|mai|juin|juil.|août|sept.|oct.|nov.|déc.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val fr_Format_Days: String =
-      "lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche\r\nlun.|mar.|mer.|jeu.|ven.|sam.|dim.\r\nL|M|M|J|V|S|D\r"
+      "lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche\r\nlun.|mar.|mer.|jeu.|ven.|sam.|dim.\r\nL|M|M|J|V|S|D\r\nlu|ma|me|je|ve|sa|di\r"
 
   private const val fr_Format_Quarters: String =
       "1er trimestre|2e trimestre|3e trimestre|4e trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -5401,7 +5401,7 @@ object AvailableDateTimeDisplayNames {
       "janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre\r\njanv.|févr.|mars|avr.|mai|juin|juil.|août|sept.|oct.|nov.|déc.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val fr_Standalone_Days: String =
-      "lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche\r\nlun.|mar.|mer.|jeu.|ven.|sam.|dim.\r\nL|M|M|J|V|S|D\r"
+      "lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche\r\nlun.|mar.|mer.|jeu.|ven.|sam.|dim.\r\nL|M|M|J|V|S|D\r\nlu|ma|me|je|ve|sa|di\r"
 
   private const val fr_Standalone_Quarters: String =
       "1er trimestre|2e trimestre|3e trimestre|4e trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -6168,7 +6168,7 @@ object AvailableDateTimeDisplayNames {
       "Zenâr|Fevrâr|Març|Avrîl|Mai|Jugn|Lui|Avost|Setembar|Otubar|Novembar|Dicembar\r\nZen|Fev|Mar|Avr|Mai|Jug|Lui|Avo|Set|Otu|Nov|Dic\r\nZ|F|M|A|M|J|L|A|S|O|N|D\r"
 
   private const val fur_Format_Days: String =
-      "lunis|martars|miercus|joibe|vinars|sabide|domenie\r\nlun|mar|mie|joi|vin|sab|dom\r\nL|M|M|J|V|S|D\r"
+      "lunis|martars|miercus|joibe|vinars|sabide|domenie\r\nlun|mar|mie|joi|vin|sab|dom\r\nL|M|M|J|V|S|D\r\nlun|mar|mie|joi|vin|sab|dom\r"
 
   private const val fur_Format_Quarters: String =
       "Prin trimestri|Secont trimestri|Tierç trimestri|Cuart trimestri\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -6179,7 +6179,7 @@ object AvailableDateTimeDisplayNames {
       "Zenâr|Fevrâr|Març|Avrîl|Mai|Jugn|Lui|Avost|Setembar|Otubar|Novembar|Dicembar\r\nZen|Fev|Mar|Avr|Mai|Jug|Lui|Avo|Set|Otu|Nov|Dic\r\nZ|F|M|A|M|J|L|A|S|O|N|D\r"
 
   private const val fur_Standalone_Days: String =
-      "lunis|martars|miercus|joibe|vinars|sabide|domenie\r\nlun|mar|mie|joi|vin|sab|dom\r\nL|M|M|J|V|S|D\r"
+      "lunis|martars|miercus|joibe|vinars|sabide|domenie\r\nlun|mar|mie|joi|vin|sab|dom\r\nL|M|M|J|V|S|D\r\nlun|mar|mie|joi|vin|sab|dom\r"
 
   private const val fur_Standalone_Quarters: String =
       "Prin trimestri|Secont trimestri|Tierç trimestri|Cuart trimestri\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -6190,7 +6190,7 @@ object AvailableDateTimeDisplayNames {
       "Jannewaris|Febrewaris|Maart|April|Maaie|Juny|July|Augustus|Septimber|Oktober|Novimber|Desimber\r\nJan|Feb|Mrt|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val fy_Format_Days: String =
-      "moandei|tiisdei|woansdei|tongersdei|freed|sneon|snein\r\nmo|ti|wo|to|fr|so|si\r\nM|T|W|T|F|S|S\r"
+      "moandei|tiisdei|woansdei|tongersdei|freed|sneon|snein\r\nmo|ti|wo|to|fr|so|si\r\nM|T|W|T|F|S|S\r\nmo|ti|wo|to|fr|so|si\r"
 
   private const val fy_Format_Quarters: String =
       "1e fearnsjier|2e fearnsjier|3e fearnsjier|4e fearnsjier\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -6201,7 +6201,7 @@ object AvailableDateTimeDisplayNames {
       "Jannewaris|Febrewaris|Maart|April|Maaie|Juny|July|Augustus|Septimber|Oktober|Novimber|Desimber\r\nJan|Feb|Mrt|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val fy_Standalone_Days: String =
-      "moandei|tiisdei|woansdei|tongersdei|freed|sneon|snein\r\nmo|ti|wo|to|fr|so|si\r\nM|T|W|T|F|S|S\r"
+      "moandei|tiisdei|woansdei|tongersdei|freed|sneon|snein\r\nmo|ti|wo|to|fr|so|si\r\nM|T|W|T|F|S|S\r\nmo|ti|wo|to|fr|so|si\r"
 
   private const val fy_Standalone_Quarters: String =
       "1e fearnsjier|2e fearnsjier|3e fearnsjier|4e fearnsjier\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -6212,7 +6212,7 @@ object AvailableDateTimeDisplayNames {
       "Eanáir|Feabhra|Márta|Aibreán|Bealtaine|Meitheamh|Iúil|Lúnasa|Meán Fómhair|Deireadh Fómhair|Samhain|Nollaig\r\nEan|Feabh|Márta|Aib|Beal|Meith|Iúil|Lún|MFómh|DFómh|Samh|Noll\r\nE|F|M|A|B|M|I|L|M|D|S|N\r"
 
   private const val ga_Format_Days: String =
-      "Dé Luain|Dé Máirt|Dé Céadaoin|Déardaoin|Dé hAoine|Dé Sathairn|Dé Domhnaigh\r\nLuan|Máirt|Céad|Déar|Aoine|Sath|Domh\r\nL|M|C|D|A|S|D\r"
+      "Dé Luain|Dé Máirt|Dé Céadaoin|Déardaoin|Dé hAoine|Dé Sathairn|Dé Domhnaigh\r\nLuan|Máirt|Céad|Déar|Aoine|Sath|Domh\r\nL|M|C|D|A|S|D\r\nLu|Má|Cé|Dé|Ao|Sa|Do\r"
 
   private const val ga_Format_Quarters: String =
       "1ú ráithe|2ú ráithe|3ú ráithe|4ú ráithe\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -6223,7 +6223,7 @@ object AvailableDateTimeDisplayNames {
       "Eanáir|Feabhra|Márta|Aibreán|Bealtaine|Meitheamh|Iúil|Lúnasa|Meán Fómhair|Deireadh Fómhair|Samhain|Nollaig\r\nEan|Feabh|Márta|Aib|Beal|Meith|Iúil|Lún|MFómh|DFómh|Samh|Noll\r\nE|F|M|A|B|M|I|L|M|D|S|N\r"
 
   private const val ga_Standalone_Days: String =
-      "Dé Luain|Dé Máirt|Dé Céadaoin|Déardaoin|Dé hAoine|Dé Sathairn|Dé Domhnaigh\r\nLuan|Máirt|Céad|Déar|Aoine|Sath|Domh\r\nL|M|C|D|A|S|D\r"
+      "Dé Luain|Dé Máirt|Dé Céadaoin|Déardaoin|Dé hAoine|Dé Sathairn|Dé Domhnaigh\r\nLuan|Máirt|Céad|Déar|Aoine|Sath|Domh\r\nL|M|C|D|A|S|D\r\nLu|Má|Cé|Dé|Ao|Sa|Do\r"
 
   private const val ga_Standalone_Quarters: String =
       "1ú ráithe|2ú ráithe|3ú ráithe|4ú ráithe\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -6250,7 +6250,7 @@ object AvailableDateTimeDisplayNames {
       "Aharabata|Oflɔ|Otsokrikri|Abɛibe|Agbiɛnaa|Otukwajaŋ|Maawɛ|Manyawale|Gbo|Antɔŋ|Alemle|Afuabe\r\nAharabata|Oflɔ|Otsokrikri|Abɛibe|Agbiɛnaa|Otukwajaŋ|Maawɛ|Manyawale|Gbo|Antɔŋ|Alemle|Afuabe\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val gaa_Format_Days: String =
-      "Ju|Jufɔ|Shɔ|Soo|Sohaa|Hɔɔ|Hɔgbaa\r\nJu|Jufɔ|Shɔ|Soo|Sohaa|Hɔɔ|Hɔgbaa\r\nM|T|W|T|F|S|S\r"
+      "Ju|Jufɔ|Shɔ|Soo|Sohaa|Hɔɔ|Hɔgbaa\r\nJu|Jufɔ|Shɔ|Soo|Sohaa|Hɔɔ|Hɔgbaa\r\nM|T|W|T|F|S|S\r\nJu|Jufɔ|Shɔ|Soo|Sohaa|Hɔɔ|Hɔgbaa\r"
 
   private val gaa_Format_Quarters: String? = null
 
@@ -6260,7 +6260,7 @@ object AvailableDateTimeDisplayNames {
       "Aharabata|Oflɔ|Otsokrikri|Abɛibe|Agbiɛnaa|Otukwajaŋ|Maawɛ|Manyawale|Gbo|Antɔŋ|Alemle|Afuabe\r\nAharabata|Oflɔ|Otsokrikri|Abɛibe|Agbiɛnaa|Otukwajaŋ|Maawɛ|Manyawale|Gbo|Antɔŋ|Alemle|Afuabe\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val gaa_Standalone_Days: String =
-      "Ju|Jufɔ|Shɔ|Soo|Sohaa|Hɔɔ|Hɔgbaa\r\nJu|Jufɔ|Shɔ|Soo|Sohaa|Hɔɔ|Hɔgbaa\r\nM|T|W|T|F|S|S\r"
+      "Ju|Jufɔ|Shɔ|Soo|Sohaa|Hɔɔ|Hɔgbaa\r\nJu|Jufɔ|Shɔ|Soo|Sohaa|Hɔɔ|Hɔgbaa\r\nM|T|W|T|F|S|S\r\nJu|Jufɔ|Shɔ|Soo|Sohaa|Hɔɔ|Hɔgbaa\r"
 
   private val gaa_Standalone_Quarters: String? = null
 
@@ -6270,7 +6270,7 @@ object AvailableDateTimeDisplayNames {
       "dhen Fhaoilleach|dhen Ghearran|dhen Mhàrt|dhen Ghiblean|dhen Chèitean|dhen Ògmhios|dhen Iuchar|dhen Lùnastal|dhen t-Sultain|dhen Dàmhair|dhen t-Samhain|dhen Dùbhlachd\r\nFaoi|Gearr|Màrt|Gibl|Cèit|Ògmh|Iuch|Lùna|Sult|Dàmh|Samh|Dùbh\r\nF|G|M|G|C|Ò|I|L|S|D|S|D\r"
 
   private const val gd_Format_Days: String =
-      "DiLuain|DiMàirt|DiCiadain|DiarDaoin|DihAoine|DiSathairne|DiDòmhnaich\r\nDiL|DiM|DiC|Dia|Dih|DiS|DiD\r\nL|M|C|A|H|S|D\r"
+      "DiLuain|DiMàirt|DiCiadain|DiarDaoin|DihAoine|DiSathairne|DiDòmhnaich\r\nDiL|DiM|DiC|Dia|Dih|DiS|DiD\r\nL|M|C|A|H|S|D\r\nLu|Mà|Ci|Da|hA|Sa|Dò\r"
 
   private const val gd_Format_Quarters: String =
       "1d chairteal|2na cairteal|3s cairteal|4mh cairteal\r\nC1|C2|C3|C4\r\n1|2|3|4\r"
@@ -6281,7 +6281,7 @@ object AvailableDateTimeDisplayNames {
       "Am Faoilleach|An Gearran|Am Màrt|An Giblean|An Cèitean|An t-Ògmhios|An t-Iuchar|An Lùnastal|An t-Sultain|An Dàmhair|An t-Samhain|An Dùbhlachd\r\nFaoi|Gearr|Màrt|Gibl|Cèit|Ògmh|Iuch|Lùna|Sult|Dàmh|Samh|Dùbh\r\nF|G|M|G|C|Ò|I|L|S|D|S|D\r"
 
   private const val gd_Standalone_Days: String =
-      "DiLuain|DiMàirt|DiCiadain|DiarDaoin|DihAoine|DiSathairne|DiDòmhnaich\r\nDiL|DiM|DiC|Dia|Dih|DiS|DiD\r\nL|M|C|A|H|S|D\r"
+      "DiLuain|DiMàirt|DiCiadain|DiarDaoin|DihAoine|DiSathairne|DiDòmhnaich\r\nDiL|DiM|DiC|Dia|Dih|DiS|DiD\r\nL|M|C|A|H|S|D\r\nLu|Mà|Ci|Da|hA|Sa|Dò\r"
 
   private const val gd_Standalone_Quarters: String =
       "1d chairteal|2na cairteal|3s cairteal|4mh cairteal\r\nC1|C2|C3|C4\r\n1|2|3|4\r"
@@ -6324,7 +6324,7 @@ object AvailableDateTimeDisplayNames {
       "xaneiro|febreiro|marzo|abril|maio|xuño|xullo|agosto|setembro|outubro|novembro|decembro\r\nxan.|feb.|mar.|abr.|maio|xuño|xul.|ago.|set.|out.|nov.|dec.\r\nx.|f.|m.|a.|m.|x.|x.|a.|s.|o.|n.|d.\r"
 
   private const val gl_Format_Days: String =
-      "luns|martes|mércores|xoves|venres|sábado|domingo\r\nluns|mar.|mér.|xov.|ven.|sáb.|dom.\r\nl.|m.|m.|x.|v.|s.|d.\r"
+      "luns|martes|mércores|xoves|venres|sábado|domingo\r\nluns|mar.|mér.|xov.|ven.|sáb.|dom.\r\nl.|m.|m.|x.|v.|s.|d.\r\nlu.|ma.|mé.|xo.|ve.|sá.|do.\r"
 
   private const val gl_Format_Quarters: String =
       "1.º trimestre|2.º trimestre|3.º trimestre|4.º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -6336,7 +6336,7 @@ object AvailableDateTimeDisplayNames {
       "xaneiro|febreiro|marzo|abril|maio|xuño|xullo|agosto|setembro|outubro|novembro|decembro\r\nxan.|feb.|mar.|abr.|maio|xuño|xul.|ago.|set.|out.|nov.|dec.\r\nX|F|M|A|M|X|X|A|S|O|N|D\r"
 
   private const val gl_Standalone_Days: String =
-      "luns|martes|mércores|xoves|venres|sábado|domingo\r\nluns|mar.|mér.|xov.|ven.|sáb.|dom.\r\nL|M|M|X|V|S|D\r"
+      "luns|martes|mércores|xoves|venres|sábado|domingo\r\nluns|mar.|mér.|xov.|ven.|sáb.|dom.\r\nL|M|M|X|V|S|D\r\nlu.|ma.|mé.|xo.|ve.|sá.|do.\r"
 
   private const val gl_Standalone_Quarters: String =
       "1.º trimestre|2.º trimestre|3.º trimestre|4.º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -6348,7 +6348,7 @@ object AvailableDateTimeDisplayNames {
       "Jasyteĩ|Jasykõi|Jasyapy|Jasyrundy|Jasypo|Jasypoteĩ|Jasypokõi|Jasypoapy|Jasyporundy|Jasypa|Jasypateĩ|Jasypakõi\r\nJasyteĩ|Jasykõi|Jasyapy|Jasyrundy|Jasypo|Jasypoteĩ|Jasypokõi|Jasypoapy|Jasyporundy|Jasypa|Jasypateĩ|Jasypakõi\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val gn_Format_Days: String =
-      "Arakõi|Araapy|Ararundy|Arapo|Arapoteĩ|Arapokõi|Arateĩ\r\nArakõi|Araapy|Ararundy|Arapo|Arapoteĩ|Arapokõi|Arateĩ\r\nM|T|W|T|F|S|S\r"
+      "Arakõi|Araapy|Ararundy|Arapo|Arapoteĩ|Arapokõi|Arateĩ\r\nArakõi|Araapy|Ararundy|Arapo|Arapoteĩ|Arapokõi|Arateĩ\r\nM|T|W|T|F|S|S\r\nArakõi|Araapy|Ararundy|Arapo|Arapoteĩ|Arapokõi|Arateĩ\r"
 
   private val gn_Format_Quarters: String? = null
 
@@ -6358,7 +6358,7 @@ object AvailableDateTimeDisplayNames {
       "Jasyteĩ|Jasykõi|Jasyapy|Jasyrundy|Jasypo|Jasypoteĩ|Jasypokõi|Jasypoapy|Jasyporundy|Jasypa|Jasypateĩ|Jasypakõi\r\nJasyteĩ|Jasykõi|Jasyapy|Jasyrundy|Jasypo|Jasypoteĩ|Jasypokõi|Jasypoapy|Jasyporundy|Jasypa|Jasypateĩ|Jasypakõi\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val gn_Standalone_Days: String =
-      "Arakõi|Araapy|Ararundy|Arapo|Arapoteĩ|Arapokõi|Arateĩ\r\nArakõi|Araapy|Ararundy|Arapo|Arapoteĩ|Arapokõi|Arateĩ\r\nM|T|W|T|F|S|S\r"
+      "Arakõi|Araapy|Ararundy|Arapo|Arapoteĩ|Arapokõi|Arateĩ\r\nArakõi|Araapy|Ararundy|Arapo|Arapoteĩ|Arapokõi|Arateĩ\r\nM|T|W|T|F|S|S\r\nArakõi|Araapy|Ararundy|Arapo|Arapoteĩ|Arapokõi|Arateĩ\r"
 
   private val gn_Standalone_Quarters: String? = null
 
@@ -6368,7 +6368,7 @@ object AvailableDateTimeDisplayNames {
       "Januar|Februar|März|April|Mai|Juni|Juli|Auguscht|Septämber|Oktoober|Novämber|Dezämber\r\nJan|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val gsw_Format_Days: String =
-      "Määntig|Ziischtig|Mittwuch|Dunschtig|Friitig|Samschtig|Sunntig\r\nMä.|Zi.|Mi.|Du.|Fr.|Sa.|Su.\r\nM|D|M|D|F|S|S\r"
+      "Määntig|Ziischtig|Mittwuch|Dunschtig|Friitig|Samschtig|Sunntig\r\nMä.|Zi.|Mi.|Du.|Fr.|Sa.|Su.\r\nM|D|M|D|F|S|S\r\nMä.|Zi.|Mi.|Du.|Fr.|Sa.|Su.\r"
 
   private const val gsw_Format_Quarters: String =
       "1. Quartal|2. Quartal|3. Quartal|4. Quartal\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -6380,7 +6380,7 @@ object AvailableDateTimeDisplayNames {
       "Januar|Februar|März|April|Mai|Juni|Juli|Auguscht|Septämber|Oktoober|Novämber|Dezämber\r\nJan|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val gsw_Standalone_Days: String =
-      "Määntig|Ziischtig|Mittwuch|Dunschtig|Friitig|Samschtig|Sunntig\r\nMä.|Zi.|Mi.|Du.|Fr.|Sa.|Su.\r\nM|D|M|D|F|S|S\r"
+      "Määntig|Ziischtig|Mittwuch|Dunschtig|Friitig|Samschtig|Sunntig\r\nMä.|Zi.|Mi.|Du.|Fr.|Sa.|Su.\r\nM|D|M|D|F|S|S\r\nMä.|Zi.|Mi.|Du.|Fr.|Sa.|Su.\r"
 
   private const val gsw_Standalone_Quarters: String =
       "1. Quartal|2. Quartal|3. Quartal|4. Quartal\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -6424,7 +6424,7 @@ object AvailableDateTimeDisplayNames {
       "જાન્યુઆરી|ફેબ્રુઆરી|માર્ચ|એપ્રિલ|મે|જૂન|જુલાઈ|ઑગસ્ટ|સપ્ટેમ્બર|ઑક્ટોબર|નવેમ્બર|ડિસેમ્બર\r\nજાન્યુ|ફેબ્રુ|માર્ચ|એપ્રિલ|મે|જૂન|જુલાઈ|ઑગસ્ટ|સપ્ટે|ઑક્ટો|નવે|ડિસે\r\nજા|ફે|મા|એ|મે|જૂ|જુ|ઑ|સ|ઑ|ન|ડિ\r"
 
   private const val gu_Format_Days: String =
-      "સોમવાર|મંગળવાર|બુધવાર|ગુરુવાર|શુક્રવાર|શનિવાર|રવિવાર\r\nસોમ|મંગળ|બુધ|ગુરુ|શુક્ર|શનિ|રવિ\r\nસો|મં|બુ|ગુ|શુ|શ|ર\r"
+      "સોમવાર|મંગળવાર|બુધવાર|ગુરુવાર|શુક્રવાર|શનિવાર|રવિવાર\r\nસોમ|મંગળ|બુધ|ગુરુ|શુક્ર|શનિ|રવિ\r\nસો|મં|બુ|ગુ|શુ|શ|ર\r\nસો|મં|બુ|ગુ|શુ|શ|ર\r"
 
   private const val gu_Format_Quarters: String =
       "1લો ત્રિમાસ|2જો ત્રિમાસ|3જો ત્રિમાસ|4થો ત્રિમાસ\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -6436,7 +6436,7 @@ object AvailableDateTimeDisplayNames {
       "જાન્યુઆરી|ફેબ્રુઆરી|માર્ચ|એપ્રિલ|મે|જૂન|જુલાઈ|ઑગસ્ટ|સપ્ટેમ્બર|ઑક્ટોબર|નવેમ્બર|ડિસેમ્બર\r\nજાન્યુ|ફેબ્રુ|માર્ચ|એપ્રિલ|મે|જૂન|જુલાઈ|ઑગસ્ટ|સપ્ટે|ઑક્ટો|નવે|ડિસે\r\nજા|ફે|મા|એ|મે|જૂ|જુ|ઑ|સ|ઑ|ન|ડિ\r"
 
   private const val gu_Standalone_Days: String =
-      "સોમવાર|મંગળવાર|બુધવાર|ગુરુવાર|શુક્રવાર|શનિવાર|રવિવાર\r\nસોમ|મંગળ|બુધ|ગુરુ|શુક્ર|શનિ|રવિ\r\nસો|મં|બુ|ગુ|શુ|શ|ર\r"
+      "સોમવાર|મંગળવાર|બુધવાર|ગુરુવાર|શુક્રવાર|શનિવાર|રવિવાર\r\nસોમ|મંગળ|બુધ|ગુરુ|શુક્ર|શનિ|રવિ\r\nસો|મં|બુ|ગુ|શુ|શ|ર\r\nસો|મં|બુ|ગુ|શુ|શ|ર\r"
 
   private const val gu_Standalone_Quarters: String =
       "1લો ત્રિમાસ|2જો ત્રિમાસ|3જો ત્રિમાસ|4થો ત્રિમાસ\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -6448,7 +6448,7 @@ object AvailableDateTimeDisplayNames {
       "Chanuari|Feburari|Machi|Apiriri|Mei|Juni|Chulai|Agosti|Septemba|Okitoba|Nobemba|Disemba\r\nCan|Feb|Mac|Apr|Mei|Jun|Cul|Agt|Sep|Okt|Nob|Dis\r\nC|F|M|A|M|J|C|A|S|O|N|D\r"
 
   private const val guz_Format_Days: String =
-      "Chumatato|Chumaine|Chumatano|Aramisi|Ichuma|Esabato|Chumapiri\r\nCtt|Cmn|Cmt|Ars|Icm|Est|Cpr\r\nC|C|C|A|I|E|C\r"
+      "Chumatato|Chumaine|Chumatano|Aramisi|Ichuma|Esabato|Chumapiri\r\nCtt|Cmn|Cmt|Ars|Icm|Est|Cpr\r\nC|C|C|A|I|E|C\r\nCtt|Cmn|Cmt|Ars|Icm|Est|Cpr\r"
 
   private const val guz_Format_Quarters: String =
       "Erobo entang’ani|Erobo yakabere|Erobo yagatato|Erobo yakane\r\nE1|E2|E3|E4\r\n1|2|3|4\r"
@@ -6459,7 +6459,7 @@ object AvailableDateTimeDisplayNames {
       "Chanuari|Feburari|Machi|Apiriri|Mei|Juni|Chulai|Agosti|Septemba|Okitoba|Nobemba|Disemba\r\nCan|Feb|Mac|Apr|Mei|Jun|Cul|Agt|Sep|Okt|Nob|Dis\r\nC|F|M|A|M|J|C|A|S|O|N|D\r"
 
   private const val guz_Standalone_Days: String =
-      "Chumatato|Chumaine|Chumatano|Aramisi|Ichuma|Esabato|Chumapiri\r\nCtt|Cmn|Cmt|Ars|Icm|Est|Cpr\r\nC|C|C|A|I|E|C\r"
+      "Chumatato|Chumaine|Chumatano|Aramisi|Ichuma|Esabato|Chumapiri\r\nCtt|Cmn|Cmt|Ars|Icm|Est|Cpr\r\nC|C|C|A|I|E|C\r\nCtt|Cmn|Cmt|Ars|Icm|Est|Cpr\r"
 
   private const val guz_Standalone_Quarters: String =
       "Erobo entang’ani|Erobo yakabere|Erobo yagatato|Erobo yakane\r\nE1|E2|E3|E4\r\n1|2|3|4\r"
@@ -6470,7 +6470,7 @@ object AvailableDateTimeDisplayNames {
       "Jerrey-geuree|Toshiaght-arree|Mayrnt|Averil|Boaldyn|Mean-souree|Jerrey-souree|Luanistyn|Mean-fouyir|Jerrey-fouyir|Mee Houney|Mee ny Nollick\r\nJ-guer|T-arree|Mayrnt|Avrril|Boaldyn|M-souree|J-souree|Luanistyn|M-fouyir|J-fouyir|M-Houney|M-Nollick\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val gv_Format_Days: String =
-      "Jelhein|Jemayrt|Jercean|Jerdein|Jeheiney|Jesarn|Jedoonee\r\nJel|Jem|Jerc|Jerd|Jeh|Jes|Jed\r\nM|T|W|T|F|S|S\r"
+      "Jelhein|Jemayrt|Jercean|Jerdein|Jeheiney|Jesarn|Jedoonee\r\nJel|Jem|Jerc|Jerd|Jeh|Jes|Jed\r\nM|T|W|T|F|S|S\r\nJel|Jem|Jerc|Jerd|Jeh|Jes|Jed\r"
 
   private val gv_Format_Quarters: String? = null
 
@@ -6480,7 +6480,7 @@ object AvailableDateTimeDisplayNames {
       "Jerrey-geuree|Toshiaght-arree|Mayrnt|Averil|Boaldyn|Mean-souree|Jerrey-souree|Luanistyn|Mean-fouyir|Jerrey-fouyir|Mee Houney|Mee ny Nollick\r\nJ-guer|T-arree|Mayrnt|Avrril|Boaldyn|M-souree|J-souree|Luanistyn|M-fouyir|J-fouyir|M-Houney|M-Nollick\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val gv_Standalone_Days: String =
-      "Jelhein|Jemayrt|Jercean|Jerdein|Jeheiney|Jesarn|Jedoonee\r\nJel|Jem|Jerc|Jerd|Jeh|Jes|Jed\r\nM|T|W|T|F|S|S\r"
+      "Jelhein|Jemayrt|Jercean|Jerdein|Jeheiney|Jesarn|Jedoonee\r\nJel|Jem|Jerc|Jerd|Jeh|Jes|Jed\r\nM|T|W|T|F|S|S\r\nJel|Jem|Jerc|Jerd|Jeh|Jes|Jed\r"
 
   private val gv_Standalone_Quarters: String? = null
 
@@ -6490,7 +6490,7 @@ object AvailableDateTimeDisplayNames {
       "Janairu|Faburairu|Maris|Afirilu|Mayu|Yuni|Yuli|Agusta|Satumba|Oktoba|Nuwamba|Disamba\r\nJan|Fab|Mar|Afi|May|Yun|Yul|Agu|Sat|Okt|Nuw|Dis\r\nJ|F|M|A|M|Y|Y|A|S|O|N|D\r"
 
   private const val ha_Format_Days: String =
-      "Litinin|Talata|Laraba|Alhamis|Jummaʼa|Asabar|Lahadi\r\nLit|Tal|Lar|Alh|Jum|Asa|Lah\r\nL|T|L|A|J|A|L\r"
+      "Litinin|Talata|Laraba|Alhamis|Jummaʼa|Asabar|Lahadi\r\nLit|Tal|Lar|Alh|Jum|Asa|Lah\r\nL|T|L|A|J|A|L\r\nLi|Ta|Lr|Al|Ju|As|Lh\r"
 
   private const val ha_Format_Quarters: String =
       "Kwata na ɗaya|Kwata na biyu|Kwata na uku|Kwata na huɗu\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -6501,7 +6501,7 @@ object AvailableDateTimeDisplayNames {
       "Janairu|Faburairu|Maris|Afirilu|Mayu|Yuni|Yuli|Agusta|Satumba|Oktoba|Nuwamba|Disamba\r\nJan|Fab|Mar|Afi|May|Yun|Yul|Agu|Sat|Okt|Nuw|Dis\r\nJ|F|M|A|M|Y|Y|A|S|O|N|D\r"
 
   private const val ha_Standalone_Days: String =
-      "Litinin|Talata|Laraba|Alhamis|Jummaʼa|Asabar|Lahadi\r\nLit|Tal|Lar|Alh|Jum|Asa|Lah\r\nL|T|L|A|J|A|L\r"
+      "Litinin|Talata|Laraba|Alhamis|Jummaʼa|Asabar|Lahadi\r\nLit|Tal|Lar|Alh|Jum|Asa|Lah\r\nL|T|L|A|J|A|L\r\nLi|Ta|Lr|Al|Ju|As|Lh\r"
 
   private const val ha_Standalone_Quarters: String =
       "Kwata na ɗaya|Kwata na biyu|Kwata na uku|Kwata na huɗu\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -6576,7 +6576,7 @@ object AvailableDateTimeDisplayNames {
       "Ianuali|Pepeluali|Malaki|ʻApelila|Mei|Iune|Iulai|ʻAukake|Kepakemapa|ʻOkakopa|Nowemapa|Kekemapa\r\nIan.|Pep.|Mal.|ʻAp.|Mei|Iun.|Iul.|ʻAu.|Kep.|ʻOk.|Now.|Kek.\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val haw_Format_Days: String =
-      "Poʻakahi|Poʻalua|Poʻakolu|Poʻahā|Poʻalima|Poʻaono|Lāpule\r\nP1|P2|P3|P4|P5|P6|LP\r\nM|T|W|T|F|S|S\r"
+      "Poʻakahi|Poʻalua|Poʻakolu|Poʻahā|Poʻalima|Poʻaono|Lāpule\r\nP1|P2|P3|P4|P5|P6|LP\r\nM|T|W|T|F|S|S\r\nP1|P2|P3|P4|P5|P6|LP\r"
 
   private val haw_Format_Quarters: String? = null
 
@@ -6586,7 +6586,7 @@ object AvailableDateTimeDisplayNames {
       "Ianuali|Pepeluali|Malaki|ʻApelila|Mei|Iune|Iulai|ʻAukake|Kepakemapa|ʻOkakopa|Nowemapa|Kekemapa\r\nIan.|Pep.|Mal.|ʻAp.|Mei|Iun.|Iul.|ʻAu.|Kep.|ʻOk.|Now.|Kek.\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val haw_Standalone_Days: String =
-      "Poʻakahi|Poʻalua|Poʻakolu|Poʻahā|Poʻalima|Poʻaono|Lāpule\r\nP1|P2|P3|P4|P5|P6|LP\r\nM|T|W|T|F|S|S\r"
+      "Poʻakahi|Poʻalua|Poʻakolu|Poʻahā|Poʻalima|Poʻaono|Lāpule\r\nP1|P2|P3|P4|P5|P6|LP\r\nM|T|W|T|F|S|S\r\nP1|P2|P3|P4|P5|P6|LP\r"
 
   private val haw_Standalone_Quarters: String? = null
 
@@ -6596,7 +6596,7 @@ object AvailableDateTimeDisplayNames {
       "ינואר|פברואר|מרץ|אפריל|מאי|יוני|יולי|אוגוסט|ספטמבר|אוקטובר|נובמבר|דצמבר\r\nינו׳|פבר׳|מרץ|אפר׳|מאי|יוני|יולי|אוג׳|ספט׳|אוק׳|נוב׳|דצמ׳\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val he_Format_Days: String =
-      "יום שני|יום שלישי|יום רביעי|יום חמישי|יום שישי|יום שבת|יום ראשון\r\nיום ב׳|יום ג׳|יום ד׳|יום ה׳|יום ו׳|שבת|יום א׳\r\nב׳|ג׳|ד׳|ה׳|ו׳|ש׳|א׳\r"
+      "יום שני|יום שלישי|יום רביעי|יום חמישי|יום שישי|יום שבת|יום ראשון\r\nיום ב׳|יום ג׳|יום ד׳|יום ה׳|יום ו׳|שבת|יום א׳\r\nב׳|ג׳|ד׳|ה׳|ו׳|ש׳|א׳\r\nב׳|ג׳|ד׳|ה׳|ו׳|ש׳|א׳\r"
 
   private const val he_Format_Quarters: String =
       "רבעון 1|רבעון 2|רבעון 3|רבעון 4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -6607,7 +6607,7 @@ object AvailableDateTimeDisplayNames {
       "ינואר|פברואר|מרץ|אפריל|מאי|יוני|יולי|אוגוסט|ספטמבר|אוקטובר|נובמבר|דצמבר\r\nינו׳|פבר׳|מרץ|אפר׳|מאי|יוני|יולי|אוג׳|ספט׳|אוק׳|נוב׳|דצמ׳\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val he_Standalone_Days: String =
-      "יום שני|יום שלישי|יום רביעי|יום חמישי|יום שישי|יום שבת|יום ראשון\r\nיום ב׳|יום ג׳|יום ד׳|יום ה׳|יום ו׳|שבת|יום א׳\r\nב׳|ג׳|ד׳|ה׳|ו׳|ש׳|א׳\r"
+      "יום שני|יום שלישי|יום רביעי|יום חמישי|יום שישי|יום שבת|יום ראשון\r\nיום ב׳|יום ג׳|יום ד׳|יום ה׳|יום ו׳|שבת|יום א׳\r\nב׳|ג׳|ד׳|ה׳|ו׳|ש׳|א׳\r\nב׳|ג׳|ד׳|ה׳|ו׳|ש׳|א׳\r"
 
   private const val he_Standalone_Quarters: String =
       "רבעון 1|רבעון 2|רבעון 3|רבעון 4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -6619,7 +6619,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्तूबर|नवंबर|दिसंबर\r\nजन॰|फ़र॰|मार्च|अप्रैल|मई|जून|जुल॰|अग॰|सित॰|अक्तू॰|नव॰|दिस॰\r\nज|फ़|मा|अ|म|जू|जु|अ|सि|अ|न|दि\r"
 
   private const val hi_Format_Days: String =
-      "सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r"
+      "सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r\nसो|मं|बु|गु|शु|श|र\r"
 
   private const val hi_Format_Quarters: String =
       "पहली तिमाही|दूसरी तिमाही|तीसरी तिमाही|चौथी तिमाही\r\nति1|ति2|ति3|ति4\r\n1|2|3|4\r"
@@ -6631,7 +6631,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्तूबर|नवंबर|दिसंबर\r\nजन॰|फ़र॰|मार्च|अप्रैल|मई|जून|जुल॰|अग॰|सित॰|अक्तू॰|नव॰|दिस॰\r\nज|फ़|मा|अ|म|जू|जु|अ|सि|अ|न|दि\r"
 
   private const val hi_Standalone_Days: String =
-      "सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r"
+      "सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r\nसो|मं|बु|गु|शु|श|र\r"
 
   private const val hi_Standalone_Quarters: String =
       "पहली तिमाही|दूसरी तिमाही|तीसरी तिमाही|चौथी तिमाही\r\nति1|ति2|ति3|ति4\r\n1|2|3|4\r"
@@ -6643,7 +6643,7 @@ object AvailableDateTimeDisplayNames {
       "January|February|March|April|May|June|July|August|September|October|November|December\r\nJan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val hi_Latn_Format_Days: String =
-      "Somwaar|Mangalwaar|Budhwaar|Guruwaar|Shukrawaar|Shaniwaar|Raviwaar\r\nSom|Mangal|Budh|Guru|Shukra|Shani|Ravi\r\nSo|Ma|Bu|Gu|Sh|Sha|Ra\r"
+      "Somwaar|Mangalwaar|Budhwaar|Guruwaar|Shukrawaar|Shaniwaar|Raviwaar\r\nSom|Mangal|Budh|Guru|Shukra|Shani|Ravi\r\nSo|Ma|Bu|Gu|Sh|Sha|Ra\r\nSo|Ma|Bu|Gu|Shu|Sha|Ra\r"
 
   private val hi_Latn_Format_Quarters: String? = null
 
@@ -6653,7 +6653,7 @@ object AvailableDateTimeDisplayNames {
   private val hi_Latn_Standalone_Months: String? = null
 
   private const val hi_Latn_Standalone_Days: String =
-      "Somwaar|Mangalwaar|Budhwaar|Guruwaar|Shukrawaar|Shaniwaar|Raviwaar\r\nSom|Mangal|Budh|Guru|Shukra|Shani|Ravi\r\nSo|Ma|Bu|Gu|Sh|Sha|Ra\r"
+      "Somwaar|Mangalwaar|Budhwaar|Guruwaar|Shukrawaar|Shaniwaar|Raviwaar\r\nSom|Mangal|Budh|Guru|Shukra|Shani|Ravi\r\nSo|Ma|Bu|Gu|Sh|Sha|Ra\r\nSo|Ma|Bu|Gu|Shu|Sha|Ra\r"
 
   private val hi_Latn_Standalone_Quarters: String? = null
 
@@ -6673,7 +6673,7 @@ object AvailableDateTimeDisplayNames {
       "𞄆𞄬|𞄛𞄨𞄱𞄄𞄤𞄲𞄨|𞄒𞄫𞄰𞄒𞄪𞄱|𞄤𞄨𞄱|𞄀𞄪𞄴|𞄛𞄤𞄱𞄞𞄤𞄦|𞄔𞄩𞄴𞄆𞄨𞄰|𞄕𞄩𞄲𞄔𞄄𞄰𞄤|𞄛𞄤𞄱𞄒𞄤𞄰|𞄪𞄱𞄀𞄤𞄴|𞄚𞄦𞄲𞄤𞄚𞄄𞄰𞄫|𞄒𞄩𞄱𞄔𞄬𞄴\r\n𞄆𞄬|𞄛𞄨𞄱𞄄𞄤𞄲𞄨|𞄒𞄫𞄰𞄒𞄪𞄱|𞄤𞄨𞄱|𞄀𞄪𞄴|𞄛𞄤𞄱𞄞𞄤𞄦|𞄔𞄩𞄴𞄆𞄨𞄰|𞄕𞄩𞄲𞄔𞄄𞄰𞄤|𞄛𞄤𞄱𞄒𞄤𞄰|𞄪𞄱𞄀𞄤𞄴|𞄚𞄦𞄲𞄤𞄚𞄄𞄰𞄫|𞄒𞄩𞄱𞄔𞄬𞄴\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val hnj_Standalone_Days: String =
-      "𞄈𞄦|𞄆𞄨𞄰|𞄗𞄄𞄤𞄰𞄦|𞄙𞄤𞄱𞄨|𞄑𞄤𞄱𞄨|𞄊𞄧𞄳|𞄎𞄤𞄲\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM|T|W|T|F|S|S\r"
+      "𞄈𞄦|𞄆𞄨𞄰|𞄗𞄄𞄤𞄰𞄦|𞄙𞄤𞄱𞄨|𞄑𞄤𞄱𞄨|𞄊𞄧𞄳|𞄎𞄤𞄲\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM|T|W|T|F|S|S\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r"
 
   private const val hnj_Standalone_Quarters: String = "Q1|Q2|Q3|Q4\r\nQ1|Q2|Q3|Q4\r\n𞅁|𞅂|𞅃|𞅄\r"
 
@@ -6699,7 +6699,7 @@ object AvailableDateTimeDisplayNames {
       "siječnja|veljače|ožujka|travnja|svibnja|lipnja|srpnja|kolovoza|rujna|listopada|studenoga|prosinca\r\nsij|velj|ožu|tra|svi|lip|srp|kol|ruj|lis|stu|pro\r\n1.|2.|3.|4.|5.|6.|7.|8.|9.|10.|11.|12.\r"
 
   private const val hr_Format_Days: String =
-      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\nP|U|S|Č|P|S|N\r"
+      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\nP|U|S|Č|P|S|N\r\npon|uto|sri|čet|pet|sub|ned\r"
 
   private const val hr_Format_Quarters: String =
       "1. kvartal|2. kvartal|3. kvartal|4. kvartal\r\n1kv|2kv|3kv|4kv\r\n1.|2.|3.|4.\r"
@@ -6711,7 +6711,7 @@ object AvailableDateTimeDisplayNames {
       "siječanj|veljača|ožujak|travanj|svibanj|lipanj|srpanj|kolovoz|rujan|listopad|studeni|prosinac\r\nsij|velj|ožu|tra|svi|lip|srp|kol|ruj|lis|stu|pro\r\n1.|2.|3.|4.|5.|6.|7.|8.|9.|10.|11.|12.\r"
 
   private const val hr_Standalone_Days: String =
-      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r"
+      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r\npon|uto|sri|čet|pet|sub|ned\r"
 
   private const val hr_Standalone_Quarters: String =
       "1. kvartal|2. kvartal|3. kvartal|4. kvartal\r\n1. kv.|2. kv.|3. kv.|4. kv.\r\n1.|2.|3.|4.\r"
@@ -6731,7 +6731,7 @@ object AvailableDateTimeDisplayNames {
   private val hr_BA_Standalone_Months: String? = null
 
   private const val hr_BA_Standalone_Days: String =
-      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\nP|U|S|Č|P|S|N\r"
+      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\nP|U|S|Č|P|S|N\r\npon|uto|sri|čet|pet|sub|ned\r"
 
   private val hr_BA_Standalone_Quarters: String? = null
 
@@ -6741,7 +6741,7 @@ object AvailableDateTimeDisplayNames {
       "januara|februara|měrca|apryla|meje|junija|julija|awgusta|septembra|oktobra|nowembra|decembra\r\njan.|feb.|měr.|apr.|mej.|jun.|jul.|awg.|sep.|okt.|now.|dec.\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val hsb_Format_Days: String =
-      "póndźela|wutora|srjeda|štwórtk|pjatk|sobota|njedźela\r\npón|wut|srj|štw|pja|sob|nje\r\np|w|s|š|p|s|n\r"
+      "póndźela|wutora|srjeda|štwórtk|pjatk|sobota|njedźela\r\npón|wut|srj|štw|pja|sob|nje\r\np|w|s|š|p|s|n\r\npó|wu|sr|št|pj|so|nj\r"
 
   private const val hsb_Format_Quarters: String =
       "1. kwartal|2. kwartal|3. kwartal|4. kwartal\r\nkw1|kw2|kw3|kw4\r\n1|2|3|4\r"
@@ -6753,7 +6753,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|měrc|apryl|meja|junij|julij|awgust|september|oktober|nowember|december\r\njan|feb|měr|apr|mej|jun|jul|awg|sep|okt|now|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val hsb_Standalone_Days: String =
-      "póndźela|wutora|srjeda|štwórtk|pjatk|sobota|njedźela\r\npón|wut|srj|štw|pja|sob|nje\r\np|w|s|š|p|s|n\r"
+      "póndźela|wutora|srjeda|štwórtk|pjatk|sobota|njedźela\r\npón|wut|srj|štw|pja|sob|nje\r\np|w|s|š|p|s|n\r\npó|wu|sr|št|pj|so|nj\r"
 
   private const val hsb_Standalone_Quarters: String =
       "1. kwartal|2. kwartal|3. kwartal|4. kwartal\r\nkw1|kw2|kw3|kw4\r\n1|2|3|4\r"
@@ -6765,7 +6765,7 @@ object AvailableDateTimeDisplayNames {
       "január|február|március|április|május|június|július|augusztus|szeptember|október|november|december\r\njan.|febr.|márc.|ápr.|máj.|jún.|júl.|aug.|szept.|okt.|nov.|dec.\r\nJ|F|M|Á|M|J|J|A|Sz|O|N|D\r"
 
   private const val hu_Format_Days: String =
-      "hétfő|kedd|szerda|csütörtök|péntek|szombat|vasárnap\r\nH|K|Sze|Cs|P|Szo|V\r\nH|K|Sz|Cs|P|Sz|V\r"
+      "hétfő|kedd|szerda|csütörtök|péntek|szombat|vasárnap\r\nH|K|Sze|Cs|P|Szo|V\r\nH|K|Sz|Cs|P|Sz|V\r\nH|K|Sze|Cs|P|Szo|V\r"
 
   private const val hu_Format_Quarters: String =
       "I. negyedév|II. negyedév|III. negyedév|IV. negyedév\r\nI. n.év|II. n.év|III. n.év|IV. n.év\r\nI.|II.|III.|IV.\r"
@@ -6777,7 +6777,7 @@ object AvailableDateTimeDisplayNames {
       "január|február|március|április|május|június|július|augusztus|szeptember|október|november|december\r\njan.|febr.|márc.|ápr.|máj.|jún.|júl.|aug.|szept.|okt.|nov.|dec.\r\nJ|F|M|Á|M|J|J|A|Sz|O|N|D\r"
 
   private const val hu_Standalone_Days: String =
-      "hétfő|kedd|szerda|csütörtök|péntek|szombat|vasárnap\r\nH|K|Sze|Cs|P|Szo|V\r\nH|K|Sz|Cs|P|Sz|V\r"
+      "hétfő|kedd|szerda|csütörtök|péntek|szombat|vasárnap\r\nH|K|Sze|Cs|P|Szo|V\r\nH|K|Sz|Cs|P|Sz|V\r\nH|K|Sze|Cs|P|Szo|V\r"
 
   private const val hu_Standalone_Quarters: String =
       "1. negyedév|2. negyedév|3. negyedév|4. negyedév\r\n1. n.év|2. n.év|3. n.év|4. n.év\r\n1.|2.|3.|4.\r"
@@ -6789,7 +6789,7 @@ object AvailableDateTimeDisplayNames {
       "հունվարի|փետրվարի|մարտի|ապրիլի|մայիսի|հունիսի|հուլիսի|օգոստոսի|սեպտեմբերի|հոկտեմբերի|նոյեմբերի|դեկտեմբերի\r\nհնվ|փտվ|մրտ|ապր|մյս|հնս|հլս|օգս|սեպ|հոկ|նոյ|դեկ\r\nՀ|Փ|Մ|Ա|Մ|Հ|Հ|Օ|Ս|Հ|Ն|Դ\r"
 
   private const val hy_Format_Days: String =
-      "երկուշաբթի|երեքշաբթի|չորեքշաբթի|հինգշաբթի|ուրբաթ|շաբաթ|կիրակի\r\nերկ|երք|չրք|հնգ|ուր|շբթ|կիր\r\nԵ|Ե|Չ|Հ|Ո|Շ|Կ\r"
+      "երկուշաբթի|երեքշաբթի|չորեքշաբթի|հինգշաբթի|ուրբաթ|շաբաթ|կիրակի\r\nերկ|երք|չրք|հնգ|ուր|շբթ|կիր\r\nԵ|Ե|Չ|Հ|Ո|Շ|Կ\r\nեկ|եք|չք|հգ|ու|շբ|կր\r"
 
   private const val hy_Format_Quarters: String =
       "1-ին եռամսյակ|2-րդ եռամսյակ|3-րդ եռամսյակ|4-րդ եռամսյակ\r\n1-ին եռմս.|2-րդ եռմս.|3-րդ եռմս.|4-րդ եռմս.\r\n1|2|3|4\r"
@@ -6801,7 +6801,7 @@ object AvailableDateTimeDisplayNames {
       "հունվար|փետրվար|մարտ|ապրիլ|մայիս|հունիս|հուլիս|օգոստոս|սեպտեմբեր|հոկտեմբեր|նոյեմբեր|դեկտեմբեր\r\nհնվ|փտվ|մրտ|ապր|մյս|հնս|հլս|օգս|սեպ|հոկ|նոյ|դեկ\r\nՀ|Փ|Մ|Ա|Մ|Հ|Հ|Օ|Ս|Հ|Ն|Դ\r"
 
   private const val hy_Standalone_Days: String =
-      "երկուշաբթի|երեքշաբթի|չորեքշաբթի|հինգշաբթի|ուրբաթ|շաբաթ|կիրակի\r\nերկ|երք|չրք|հնգ|ուր|շբթ|կիր\r\nԵ|Ե|Չ|Հ|Ո|Շ|Կ\r"
+      "երկուշաբթի|երեքշաբթի|չորեքշաբթի|հինգշաբթի|ուրբաթ|շաբաթ|կիրակի\r\nերկ|երք|չրք|հնգ|ուր|շբթ|կիր\r\nԵ|Ե|Չ|Հ|Ո|Շ|Կ\r\nեկ|եք|չք|հգ|ու|շբ|կր\r"
 
   private const val hy_Standalone_Quarters: String =
       "1-ին եռամսյակ|2-րդ եռամսյակ|3-րդ եռամսյակ|4-րդ եռամսյակ\r\n1-ին եռմս.|2-րդ եռմս.|3-րդ եռմս.|4-րդ եռմս.\r\n1|2|3|4\r"
@@ -6813,7 +6813,7 @@ object AvailableDateTimeDisplayNames {
       "januario|februario|martio|april|maio|junio|julio|augusto|septembre|octobre|novembre|decembre\r\njan|feb|mar|apr|mai|jun|jul|aug|sep|oct|nov|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val ia_Format_Days: String =
-      "lunedi|martedi|mercuridi|jovedi|venerdi|sabbato|dominica\r\nlun|mar|mer|jov|ven|sab|dom\r\nl|m|m|j|v|s|d\r"
+      "lunedi|martedi|mercuridi|jovedi|venerdi|sabbato|dominica\r\nlun|mar|mer|jov|ven|sab|dom\r\nl|m|m|j|v|s|d\r\nlu|ma|me|jo|ve|sa|do\r"
 
   private const val ia_Format_Quarters: String =
       "1me trimestre|2nde trimestre|3tie trimestre|4te trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -6824,7 +6824,7 @@ object AvailableDateTimeDisplayNames {
       "januario|februario|martio|april|maio|junio|julio|augusto|septembre|octobre|novembre|decembre\r\njan|feb|mar|apr|mai|jun|jul|aug|sep|oct|nov|dec\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ia_Standalone_Days: String =
-      "lunedi|martedi|mercuridi|jovedi|venerdi|sabbato|dominica\r\nlun|mar|mer|jov|ven|sab|dom\r\nl|m|m|j|v|s|d\r"
+      "lunedi|martedi|mercuridi|jovedi|venerdi|sabbato|dominica\r\nlun|mar|mer|jov|ven|sab|dom\r\nl|m|m|j|v|s|d\r\nlu|ma|me|jo|ve|sa|do\r"
 
   private const val ia_Standalone_Quarters: String =
       "1me trimestre|2nde trimestre|3tie trimestre|4te trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -6835,7 +6835,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Maret|April|Mei|Juni|Juli|Agustus|September|Oktober|November|Desember\r\nJan|Feb|Mar|Apr|Mei|Jun|Jul|Agu|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val id_Format_Days: String =
-      "Senin|Selasa|Rabu|Kamis|Jumat|Sabtu|Minggu\r\nSen|Sel|Rab|Kam|Jum|Sab|Min\r\nS|S|R|K|J|S|M\r"
+      "Senin|Selasa|Rabu|Kamis|Jumat|Sabtu|Minggu\r\nSen|Sel|Rab|Kam|Jum|Sab|Min\r\nS|S|R|K|J|S|M\r\nSen|Sel|Rab|Kam|Jum|Sab|Min\r"
 
   private const val id_Format_Quarters: String =
       "Kuartal ke-1|Kuartal ke-2|Kuartal ke-3|Kuartal ke-4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -6847,7 +6847,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Maret|April|Mei|Juni|Juli|Agustus|September|Oktober|November|Desember\r\nJan|Feb|Mar|Apr|Mei|Jun|Jul|Agu|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val id_Standalone_Days: String =
-      "Senin|Selasa|Rabu|Kamis|Jumat|Sabtu|Minggu\r\nSen|Sel|Rab|Kam|Jum|Sab|Min\r\nS|S|R|K|J|S|M\r"
+      "Senin|Selasa|Rabu|Kamis|Jumat|Sabtu|Minggu\r\nSen|Sel|Rab|Kam|Jum|Sab|Min\r\nS|S|R|K|J|S|M\r\nSen|Sel|Rab|Kam|Jum|Sab|Min\r"
 
   private const val id_Standalone_Quarters: String =
       "Kuartal ke-1|Kuartal ke-2|Kuartal ke-3|Kuartal ke-4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -6859,7 +6859,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|marte|april|may|junio|julí|august|septembre|octobre|novembre|decembre\r\njan.|febr.|mar.|apr.|may|jun.|julí|aug.|sept.|oct.|nov.|dec.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val ie_Format_Days: String =
-      "lunedí|mardí|mercurdí|jovedí|venerdí|saturdí|soledí\r\nlun.|mar.|mer.|jov.|ven.|sat.|sol.\r\nL|M|M|J|V|S|S\r"
+      "lunedí|mardí|mercurdí|jovedí|venerdí|saturdí|soledí\r\nlun.|mar.|mer.|jov.|ven.|sat.|sol.\r\nL|M|M|J|V|S|S\r\nLu|Ma|Me|Jo|Ve|Sa|So\r"
 
   private val ie_Format_Quarters: String? = null
 
@@ -6870,7 +6870,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|marte|april|may|junio|julí|august|septembre|octobre|novembre|decembre\r\njan.|febr.|mar.|apr.|may|jun.|julí|aug.|sept.|oct.|nov.|dec.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val ie_Standalone_Days: String =
-      "lunedí|mardí|mercurdí|jovedí|venerdí|saturdí|soledí\r\nlun.|mar.|mer.|jov.|ven.|sat.|sol.\r\nL|M|M|J|V|S|S\r"
+      "lunedí|mardí|mercurdí|jovedí|venerdí|saturdí|soledí\r\nlun.|mar.|mer.|jov.|ven.|sat.|sol.\r\nL|M|M|J|V|S|S\r\nLu|Ma|Me|Jo|Ve|Sa|So\r"
 
   private val ie_Standalone_Quarters: String? = null
 
@@ -6881,7 +6881,7 @@ object AvailableDateTimeDisplayNames {
       "Jenụwarị|Febrụwarị|Maachị|Epreel|Mee|Jun|Julaị|Ọgọọst|Septemba|Ọktoba|Novemba|Disemba\r\nJen|Feb|Maa|Epr|Mee|Juu|Jul|Ọgọ|Sep|Ọkt|Nov|Dis\r\nJ|F|M|E|M|J|J|Ọ|S|Ọ|N|D\r"
 
   private const val ig_Format_Days: String =
-      "Mọnde|Tiuzdee|Wenezdee|Tọọzdee|Fraịdee|Satọdee|Sọndee\r\nMọn|Tiu|Wen|Tọọ|Fraị|Sat|Sọn\r\nM|T|W|T|F|S|S\r"
+      "Mọnde|Tiuzdee|Wenezdee|Tọọzdee|Fraịdee|Satọdee|Sọndee\r\nMọn|Tiu|Wen|Tọọ|Fraị|Sat|Sọn\r\nM|T|W|T|F|S|S\r\nMọn|Tiu|Wen|Tọọ|Fraị|Sat|Sọn\r"
 
   private const val ig_Format_Quarters: String =
       "Ọkara 1|Ọkara 2|Ọkara 3|Ọkara 4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -6893,7 +6893,7 @@ object AvailableDateTimeDisplayNames {
       "Jenụwarị|Febrụwarị|Maachị|Epreel|Mee|Jun|Julaị|Ọgọọst|Septemba|Ọktoba|Novemba|Disemba\r\nJen|Feb|Maa|Epr|Mee|Juu|Jul|Ọgọ|Sep|Ọkt|Nov|Dis\r\nJ|F|M|E|M|J|J|Ọ|S|Ọ|N|D\r"
 
   private const val ig_Standalone_Days: String =
-      "Mọnde|Tiuzdee|Wenezdee|Tọọzdee|Fraịdee|Satọdee|Sọndee\r\nMọn|Tiu|Wen|Tọọ|Fraị|Sat|Sọn\r\nM|T|W|T|F|S|S\r"
+      "Mọnde|Tiuzdee|Wenezdee|Tọọzdee|Fraịdee|Satọdee|Sọndee\r\nMọn|Tiu|Wen|Tọọ|Fraị|Sat|Sọn\r\nM|T|W|T|F|S|S\r\nMọn|Tiu|Wen|Tọọ|Fraị|Sat|Sọn\r"
 
   private const val ig_Standalone_Quarters: String =
       "Ọkara 1|Ọkara 2|Ọkara 3|Ọkara 4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -6905,7 +6905,7 @@ object AvailableDateTimeDisplayNames {
       "ꋍꆪ|ꑍꆪ|ꌕꆪ|ꇖꆪ|ꉬꆪ|ꃘꆪ|ꏃꆪ|ꉆꆪ|ꈬꆪ|ꊰꆪ|ꊯꊪꆪ|ꊰꑋꆪ\r\nꋍꆪ|ꑍꆪ|ꌕꆪ|ꇖꆪ|ꉬꆪ|ꃘꆪ|ꏃꆪ|ꉆꆪ|ꈬꆪ|ꊰꆪ|ꊯꊪꆪ|ꊰꑋꆪ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ii_Format_Days: String =
-      "ꆏꊂꋍ|ꆏꊂꑍ|ꆏꊂꌕ|ꆏꊂꇖ|ꆏꊂꉬ|ꆏꊂꃘ|ꑬꆏꑍ\r\nꆏꋍ|ꆏꑍ|ꆏꌕ|ꆏꇖ|ꆏꉬ|ꆏꃘ|ꑬꆏ\r\nꋍ|ꑍ|ꌕ|ꇖ|ꉬ|ꃘ|ꆏ\r"
+      "ꆏꊂꋍ|ꆏꊂꑍ|ꆏꊂꌕ|ꆏꊂꇖ|ꆏꊂꉬ|ꆏꊂꃘ|ꑬꆏꑍ\r\nꆏꋍ|ꆏꑍ|ꆏꌕ|ꆏꇖ|ꆏꉬ|ꆏꃘ|ꑬꆏ\r\nꋍ|ꑍ|ꌕ|ꇖ|ꉬ|ꃘ|ꆏ\r\nꆏꋍ|ꆏꑍ|ꆏꌕ|ꆏꇖ|ꆏꉬ|ꆏꃘ|ꑬꆏ\r"
 
   private const val ii_Format_Quarters: String =
       "ꄮꐰꋍꂷꂶꌠ|ꄮꐰꑍꂷꂶꌠ|ꄮꐰꌕꂷꂶꌠ|ꄮꐰꇖꂷꂶꌠ\r\n1ꄮꐰ|2ꄮꐰ|3ꄮꐰ|4ꄮꐰ\r\n1|2|3|4\r"
@@ -6916,7 +6916,7 @@ object AvailableDateTimeDisplayNames {
       "ꋍꆪ|ꑍꆪ|ꌕꆪ|ꇖꆪ|ꉬꆪ|ꃘꆪ|ꏃꆪ|ꉆꆪ|ꈬꆪ|ꊰꆪ|ꊯꊪꆪ|ꊰꑋꆪ\r\nꋍꆪ|ꑍꆪ|ꌕꆪ|ꇖꆪ|ꉬꆪ|ꃘꆪ|ꏃꆪ|ꉆꆪ|ꈬꆪ|ꊰꆪ|ꊯꊪꆪ|ꊰꑋꆪ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ii_Standalone_Days: String =
-      "ꆏꊂꋍ|ꆏꊂꑍ|ꆏꊂꌕ|ꆏꊂꇖ|ꆏꊂꉬ|ꆏꊂꃘ|ꑬꆏꑍ\r\nꆏꋍ|ꆏꑍ|ꆏꌕ|ꆏꇖ|ꆏꉬ|ꆏꃘ|ꑬꆏ\r\nꋍ|ꑍ|ꌕ|ꇖ|ꉬ|ꃘ|ꆏ\r"
+      "ꆏꊂꋍ|ꆏꊂꑍ|ꆏꊂꌕ|ꆏꊂꇖ|ꆏꊂꉬ|ꆏꊂꃘ|ꑬꆏꑍ\r\nꆏꋍ|ꆏꑍ|ꆏꌕ|ꆏꇖ|ꆏꉬ|ꆏꃘ|ꑬꆏ\r\nꋍ|ꑍ|ꌕ|ꇖ|ꉬ|ꃘ|ꆏ\r\nꆏꋍ|ꆏꑍ|ꆏꌕ|ꆏꇖ|ꆏꉬ|ꆏꃘ|ꑬꆏ\r"
 
   private const val ii_Standalone_Quarters: String =
       "ꄮꐰꋍꂷꂶꌠ|ꄮꐰꑍꂷꂶꌠ|ꄮꐰꌕꂷꂶꌠ|ꄮꐰꇖꂷꂶꌠ\r\n1|2|3|4\r\n1|2|3|4\r"
@@ -6943,7 +6943,7 @@ object AvailableDateTimeDisplayNames {
       "janúar|febrúar|mars|apríl|maí|júní|júlí|ágúst|september|október|nóvember|desember\r\njan.|feb.|mar.|apr.|maí|jún.|júl.|ágú.|sep.|okt.|nóv.|des.\r\nJ|F|M|A|M|J|J|Á|S|O|N|D\r"
 
   private const val is_Format_Days: String =
-      "mánudagur|þriðjudagur|miðvikudagur|fimmtudagur|föstudagur|laugardagur|sunnudagur\r\nmán.|þri.|mið.|fim.|fös.|lau.|sun.\r\nM|Þ|M|F|F|L|S\r"
+      "mánudagur|þriðjudagur|miðvikudagur|fimmtudagur|föstudagur|laugardagur|sunnudagur\r\nmán.|þri.|mið.|fim.|fös.|lau.|sun.\r\nM|Þ|M|F|F|L|S\r\nmá.|þr.|mi.|fi.|fö.|la.|su.\r"
 
   private const val is_Format_Quarters: String =
       "1. fjórðungur|2. fjórðungur|3. fjórðungur|4. fjórðungur\r\nF1|F2|F3|F4\r\n1|2|3|4\r"
@@ -6955,7 +6955,7 @@ object AvailableDateTimeDisplayNames {
       "janúar|febrúar|mars|apríl|maí|júní|júlí|ágúst|september|október|nóvember|desember\r\njan.|feb.|mar.|apr.|maí|jún.|júl.|ágú.|sep.|okt.|nóv.|des.\r\nJ|F|M|A|M|J|J|Á|S|O|N|D\r"
 
   private const val is_Standalone_Days: String =
-      "mánudagur|þriðjudagur|miðvikudagur|fimmtudagur|föstudagur|laugardagur|sunnudagur\r\nmán.|þri.|mið.|fim.|fös.|lau.|sun.\r\nM|Þ|M|F|F|L|S\r"
+      "mánudagur|þriðjudagur|miðvikudagur|fimmtudagur|föstudagur|laugardagur|sunnudagur\r\nmán.|þri.|mið.|fim.|fös.|lau.|sun.\r\nM|Þ|M|F|F|L|S\r\nmá.|þr.|mi.|fi.|fö.|la.|su.\r"
 
   private const val is_Standalone_Quarters: String =
       "1. fjórðungur|2. fjórðungur|3. fjórðungur|4. fjórðungur\r\nF1|F2|F3|F4\r\n1|2|3|4\r"
@@ -6967,7 +6967,7 @@ object AvailableDateTimeDisplayNames {
       "gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre\r\ngen|feb|mar|apr|mag|giu|lug|ago|set|ott|nov|dic\r\nG|F|M|A|M|G|L|A|S|O|N|D\r"
 
   private const val it_Format_Days: String =
-      "lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica\r\nlun|mar|mer|gio|ven|sab|dom\r\nL|M|M|G|V|S|D\r"
+      "lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica\r\nlun|mar|mer|gio|ven|sab|dom\r\nL|M|M|G|V|S|D\r\nlun|mar|mer|gio|ven|sab|dom\r"
 
   private const val it_Format_Quarters: String =
       "1º trimestre|2º trimestre|3º trimestre|4º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -6979,7 +6979,7 @@ object AvailableDateTimeDisplayNames {
       "gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre\r\ngen|feb|mar|apr|mag|giu|lug|ago|set|ott|nov|dic\r\nG|F|M|A|M|G|L|A|S|O|N|D\r"
 
   private const val it_Standalone_Days: String =
-      "lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica\r\nlun|mar|mer|gio|ven|sab|dom\r\nL|M|M|G|V|S|D\r"
+      "lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica\r\nlun|mar|mer|gio|ven|sab|dom\r\nL|M|M|G|V|S|D\r\nlun|mar|mer|gio|ven|sab|dom\r"
 
   private const val it_Standalone_Quarters: String =
       "1º trimestre|2º trimestre|3º trimestre|4º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -7071,7 +7071,7 @@ object AvailableDateTimeDisplayNames {
       "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ja_Format_Days: String =
-      "月曜日|火曜日|水曜日|木曜日|金曜日|土曜日|日曜日\r\n月|火|水|木|金|土|日\r\n月|火|水|木|金|土|日\r"
+      "月曜日|火曜日|水曜日|木曜日|金曜日|土曜日|日曜日\r\n月|火|水|木|金|土|日\r\n月|火|水|木|金|土|日\r\n月|火|水|木|金|土|日\r"
 
   private const val ja_Format_Quarters: String =
       "第1四半期|第2四半期|第3四半期|第4四半期\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -7082,7 +7082,7 @@ object AvailableDateTimeDisplayNames {
       "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ja_Standalone_Days: String =
-      "月曜日|火曜日|水曜日|木曜日|金曜日|土曜日|日曜日\r\n月|火|水|木|金|土|日\r\n月|火|水|木|金|土|日\r"
+      "月曜日|火曜日|水曜日|木曜日|金曜日|土曜日|日曜日\r\n月|火|水|木|金|土|日\r\n月|火|水|木|金|土|日\r\n月|火|水|木|金|土|日\r"
 
   private const val ja_Standalone_Quarters: String =
       "第1四半期|第2四半期|第3四半期|第4四半期\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -7110,7 +7110,7 @@ object AvailableDateTimeDisplayNames {
       "Nduŋmbi Saŋ|Pɛsaŋ Pɛ́pá|Pɛsaŋ Pɛ́tát|Pɛsaŋ Pɛ́nɛ́kwa|Pɛsaŋ Pataa|Pɛsaŋ Pɛ́nɛ́ntúkú|Pɛsaŋ Saambá|Pɛsaŋ Pɛ́nɛ́fɔm|Pɛsaŋ Pɛ́nɛ́pfúꞋú|Pɛsaŋ Nɛgɛ́m|Pɛsaŋ Ntsɔ̌pmɔ́|Pɛsaŋ Ntsɔ̌ppá\r\nNduŋmbi Saŋ|Pɛsaŋ Pɛ́pá|Pɛsaŋ Pɛ́tát|Pɛsaŋ Pɛ́nɛ́kwa|Pɛsaŋ Pataa|Pɛsaŋ Pɛ́nɛ́ntúkú|Pɛsaŋ Saambá|Pɛsaŋ Pɛ́nɛ́fɔm|Pɛsaŋ Pɛ́nɛ́pfúꞋú|Pɛsaŋ Nɛgɛ́m|Pɛsaŋ Ntsɔ̌pmɔ́|Pɛsaŋ Ntsɔ̌ppá\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val jgo_Format_Days: String =
-      "Mɔ́ndi|Ápta Mɔ́ndi|Wɛ́nɛsɛdɛ|Tɔ́sɛdɛ|Fɛlâyɛdɛ|Sásidɛ|Sɔ́ndi\r\nMɔ́ndi|Ápta Mɔ́ndi|Wɛ́nɛsɛdɛ|Tɔ́sɛdɛ|Fɛlâyɛdɛ|Sásidɛ|Sɔ́ndi\r\nMɔ́|ÁM|Wɛ́|Tɔ́|Fɛ|Sá|Sɔ́\r"
+      "Mɔ́ndi|Ápta Mɔ́ndi|Wɛ́nɛsɛdɛ|Tɔ́sɛdɛ|Fɛlâyɛdɛ|Sásidɛ|Sɔ́ndi\r\nMɔ́ndi|Ápta Mɔ́ndi|Wɛ́nɛsɛdɛ|Tɔ́sɛdɛ|Fɛlâyɛdɛ|Sásidɛ|Sɔ́ndi\r\nMɔ́|ÁM|Wɛ́|Tɔ́|Fɛ|Sá|Sɔ́\r\nMɔ́ndi|Ápta Mɔ́ndi|Wɛ́nɛsɛdɛ|Tɔ́sɛdɛ|Fɛlâyɛdɛ|Sásidɛ|Sɔ́ndi\r"
 
   private val jgo_Format_Quarters: String? = null
 
@@ -7121,7 +7121,7 @@ object AvailableDateTimeDisplayNames {
       "Nduŋmbi Saŋ|Pɛsaŋ Pɛ́pá|Pɛsaŋ Pɛ́tát|Pɛsaŋ Pɛ́nɛ́kwa|Pɛsaŋ Pataa|Pɛsaŋ Pɛ́nɛ́ntúkú|Pɛsaŋ Saambá|Pɛsaŋ Pɛ́nɛ́fɔm|Pɛsaŋ Pɛ́nɛ́pfúꞋú|Pɛsaŋ Nɛgɛ́m|Pɛsaŋ Ntsɔ̌pmɔ́|Pɛsaŋ Ntsɔ̌ppá\r\nNduŋmbi Saŋ|Pɛsaŋ Pɛ́pá|Pɛsaŋ Pɛ́tát|Pɛsaŋ Pɛ́nɛ́kwa|Pɛsaŋ Pataa|Pɛsaŋ Pɛ́nɛ́ntúkú|Pɛsaŋ Saambá|Pɛsaŋ Pɛ́nɛ́fɔm|Pɛsaŋ Pɛ́nɛ́pfúꞋú|Pɛsaŋ Nɛgɛ́m|Pɛsaŋ Ntsɔ̌pmɔ́|Pɛsaŋ Ntsɔ̌ppá\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val jgo_Standalone_Days: String =
-      "Mɔ́ndi|Ápta Mɔ́ndi|Wɛ́nɛsɛdɛ|Tɔ́sɛdɛ|Fɛlâyɛdɛ|Sásidɛ|Sɔ́ndi\r\nMɔ́ndi|Ápta Mɔ́ndi|Wɛ́nɛsɛdɛ|Tɔ́sɛdɛ|Fɛlâyɛdɛ|Sásidɛ|Sɔ́ndi\r\nMɔ́|ÁM|Wɛ́|Tɔ́|Fɛ|Sá|Sɔ́\r"
+      "Mɔ́ndi|Ápta Mɔ́ndi|Wɛ́nɛsɛdɛ|Tɔ́sɛdɛ|Fɛlâyɛdɛ|Sásidɛ|Sɔ́ndi\r\nMɔ́ndi|Ápta Mɔ́ndi|Wɛ́nɛsɛdɛ|Tɔ́sɛdɛ|Fɛlâyɛdɛ|Sásidɛ|Sɔ́ndi\r\nMɔ́|ÁM|Wɛ́|Tɔ́|Fɛ|Sá|Sɔ́\r\nMɔ́ndi|Ápta Mɔ́ndi|Wɛ́nɛsɛdɛ|Tɔ́sɛdɛ|Fɛlâyɛdɛ|Sásidɛ|Sɔ́ndi\r"
 
   private val jgo_Standalone_Quarters: String? = null
 
@@ -7132,7 +7132,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprilyi|Mei|Junyi|Julyai|Agusti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val jmc_Format_Days: String =
-      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r"
+      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r"
 
   private const val jmc_Format_Quarters: String =
       "Robo 1|Robo 2|Robo 3|Robo 4\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -7144,7 +7144,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprilyi|Mei|Junyi|Julyai|Agusti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val jmc_Standalone_Days: String =
-      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r"
+      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r"
 
   private const val jmc_Standalone_Quarters: String =
       "Robo 1|Robo 2|Robo 3|Robo 4\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -7156,7 +7156,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Maret|April|Mei|Juni|Juli|Agustus|September|Oktober|November|Desember\r\nJan|Feb|Mar|Apr|Mei|Jun|Jul|Agt|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val jv_Format_Days: String =
-      "Senin|Selasa|Rabu|Kamis|Jumat|Sabtu|Ahad\r\nSen|Sel|Rab|Kam|Jum|Sab|Ahad\r\nS|S|R|K|J|S|A\r"
+      "Senin|Selasa|Rabu|Kamis|Jumat|Sabtu|Ahad\r\nSen|Sel|Rab|Kam|Jum|Sab|Ahad\r\nS|S|R|K|J|S|A\r\nSen|Sel|Rab|Kam|Jum|Sab|Ahad\r"
 
   private const val jv_Format_Quarters: String =
       "triwulan kaping pisan|triwulan kaping loro|triwulan kaping telu|triwulan kaping papat\r\nTW1|TW2|TW3|TW4\r\n1|2|3|4\r"
@@ -7167,7 +7167,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Maret|April|Mei|Juni|Juli|Agustus|September|Oktober|November|Desember\r\nJan|Feb|Mar|Apr|Mei|Jun|Jul|Agt|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val jv_Standalone_Days: String =
-      "Senin|Selasa|Rabu|Kamis|Jumat|Sabtu|Ahad\r\nSen|Sel|Rab|Kam|Jum|Sab|Ahad\r\nS|S|R|K|J|S|A\r"
+      "Senin|Selasa|Rabu|Kamis|Jumat|Sabtu|Ahad\r\nSen|Sel|Rab|Kam|Jum|Sab|Ahad\r\nS|S|R|K|J|S|A\r\nSen|Sel|Rab|Kam|Jum|Sab|Ahad\r"
 
   private const val jv_Standalone_Quarters: String =
       "triwulan kaping pisan|triwulan kaping loro|triwulan kaping telu|triwulan kaping papat\r\nTW1|TW2|TW3|TW4\r\n1|2|3|4\r"
@@ -7179,7 +7179,7 @@ object AvailableDateTimeDisplayNames {
       "იანვარი|თებერვალი|მარტი|აპრილი|მაისი|ივნისი|ივლისი|აგვისტო|სექტემბერი|ოქტომბერი|ნოემბერი|დეკემბერი\r\nიან|თებ|მარ|აპრ|მაი|ივნ|ივლ|აგვ|სექ|ოქტ|ნოე|დეკ\r\nი|თ|მ|ა|მ|ი|ი|ა|ს|ო|ნ|დ\r"
 
   private const val ka_Format_Days: String =
-      "ორშაბათი|სამშაბათი|ოთხშაბათი|ხუთშაბათი|პარასკევი|შაბათი|კვირა\r\nორშ|სამ|ოთხ|ხუთ|პარ|შაბ|კვი\r\nო|ს|ო|ხ|პ|შ|კ\r"
+      "ორშაბათი|სამშაბათი|ოთხშაბათი|ხუთშაბათი|პარასკევი|შაბათი|კვირა\r\nორშ|სამ|ოთხ|ხუთ|პარ|შაბ|კვი\r\nო|ს|ო|ხ|პ|შ|კ\r\nორ|სმ|ოთ|ხთ|პრ|შბ|კვ\r"
 
   private const val ka_Format_Quarters: String =
       "I კვარტალი|II კვარტალი|III კვარტალი|IV კვარტალი\r\nI კვ.|II კვ.|III კვ.|IV კვ.\r\n1|2|3|4\r"
@@ -7191,7 +7191,7 @@ object AvailableDateTimeDisplayNames {
       "იანვარი|თებერვალი|მარტი|აპრილი|მაისი|ივნისი|ივლისი|აგვისტო|სექტემბერი|ოქტომბერი|ნოემბერი|დეკემბერი\r\nიან|თებ|მარ|აპრ|მაი|ივნ|ივლ|აგვ|სექ|ოქტ|ნოე|დეკ\r\nი|თ|მ|ა|მ|ი|ი|ა|ს|ო|ნ|დ\r"
 
   private const val ka_Standalone_Days: String =
-      "ორშაბათი|სამშაბათი|ოთხშაბათი|ხუთშაბათი|პარასკევი|შაბათი|კვირა\r\nორშ|სამ|ოთხ|ხუთ|პარ|შაბ|კვი\r\nო|ს|ო|ხ|პ|შ|კ\r"
+      "ორშაბათი|სამშაბათი|ოთხშაბათი|ხუთშაბათი|პარასკევი|შაბათი|კვირა\r\nორშ|სამ|ოთხ|ხუთ|პარ|შაბ|კვი\r\nო|ს|ო|ხ|პ|შ|კ\r\nორ|სმ|ოთ|ხთ|პრ|შბ|კვ\r"
 
   private const val ka_Standalone_Quarters: String =
       "I კვარტალი|II კვარტალი|III კვარტალი|IV კვარტალი\r\nI კვ.|II კვ.|III კვ.|IV კვ.\r\n1|2|3|4\r"
@@ -7203,7 +7203,7 @@ object AvailableDateTimeDisplayNames {
       "январь|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь\r\nянв|фев|мар|апр|май|июн|июл|авг|сен|окт|ноя|дек\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val kaa_Format_Days: String =
-      "дүйшемби|сийшемби|сәршемби|пийшемби|жума|шемби|екшемби\r\nДүй|Сий|Сәр|Пий|Жум|Шем|Екш\r\nД|С|С|П|Ж|Ш|Е\r"
+      "дүйшемби|сийшемби|сәршемби|пийшемби|жума|шемби|екшемби\r\nДүй|Сий|Сәр|Пий|Жум|Шем|Екш\r\nД|С|С|П|Ж|Ш|Е\r\nДү|Си|Сә|Пи|Жу|Ше|Ек\r"
 
   private const val kaa_Format_Quarters: String =
       "I шерек|II шерек|III шерек|IV шерек\r\nI ш.|II ш.|III ш.|IV ш.\r\nI|II|III|IV\r"
@@ -7214,7 +7214,7 @@ object AvailableDateTimeDisplayNames {
       "Январь|Февраль|Март|Апрель|Май|Июнь|Июль|Август|Сентябрь|Октябрь|Ноябрь|Декабрь\r\nЯнв|Фев|Мар|Апр|Май|Июн|Июл|Авг|Сен|Окт|Ноя|Дек\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val kaa_Standalone_Days: String =
-      "дүйшемби|сийшемби|сәршемби|пийшемби|жума|шемби|екшемби\r\nДүй|Сий|Сәр|Пий|Жум|Шем|Екш\r\nД|С|С|П|Ж|Ш|Е\r"
+      "дүйшемби|сийшемби|сәршемби|пийшемби|жума|шемби|екшемби\r\nДүй|Сий|Сәр|Пий|Жум|Шем|Екш\r\nД|С|С|П|Ж|Ш|Е\r\nДү|Си|Сә|Пи|Жу|Ше|Ек\r"
 
   private const val kaa_Standalone_Quarters: String =
       "I шерек|II шерек|III шерек|IV шерек\r\nI ш.|II ш.|III ш.|IV ш.\r\nI|II|III|IV\r"
@@ -7257,7 +7257,7 @@ object AvailableDateTimeDisplayNames {
       "Yennayer|Fuṛar|Meɣres|Yebrir|Mayyu|Yunyu|Yulyu|Ɣuct|Ctembeṛ|Tubeṛ|Nunembeṛ|Duǧembeṛ\r\nYen|Fur|Meɣ|Yeb|May|Yun|Yul|Ɣuc|Cte|Tub|Nun|Duǧ\r\nY|F|M|Y|M|Y|Y|Ɣ|C|T|N|D\r"
 
   private const val kab_Format_Days: String =
-      "Sanass|Kraḍass|Kuẓass|Samass|Sḍisass|Sayass|Yanass\r\nSan|Kraḍ|Kuẓ|Sam|Sḍis|Say|Yan\r\nS|K|K|S|S|S|Y\r"
+      "Sanass|Kraḍass|Kuẓass|Samass|Sḍisass|Sayass|Yanass\r\nSan|Kraḍ|Kuẓ|Sam|Sḍis|Say|Yan\r\nS|K|K|S|S|S|Y\r\nSan|Kraḍ|Kuẓ|Sam|Sḍis|Say|Yan\r"
 
   private const val kab_Format_Quarters: String =
       "akraḍaggur amenzu|akraḍaggur wis-sin|akraḍaggur wis-kraḍ|akraḍaggur wis-kuẓ\r\nKḍg1|Kḍg2|Kḍg3|Kḍg4\r\n1|2|3|4\r"
@@ -7269,7 +7269,7 @@ object AvailableDateTimeDisplayNames {
       "Yennayer|Fuṛar|Meɣres|Yebrir|Mayyu|Yunyu|Yulyu|Ɣuct|Ctembeṛ|Tubeṛ|Nunembeṛ|Duǧembeṛ\r\nYen|Fur|Meɣ|Yeb|May|Yun|Yul|Ɣuc|Cte|Tub|Nun|Duǧ\r\nY|F|M|Y|M|Y|Y|Ɣ|C|T|N|D\r"
 
   private const val kab_Standalone_Days: String =
-      "Sanass|Kraḍass|Kuẓass|Samass|Sḍisass|Sayass|Yanass\r\nSan|Kraḍ|Kuẓ|Sam|Sḍis|Say|Yan\r\nS|K|K|S|S|S|Y\r"
+      "Sanass|Kraḍass|Kuẓass|Samass|Sḍisass|Sayass|Yanass\r\nSan|Kraḍ|Kuẓ|Sam|Sḍis|Say|Yan\r\nS|K|K|S|S|S|Y\r\nSan|Kraḍ|Kuẓ|Sam|Sḍis|Say|Yan\r"
 
   private const val kab_Standalone_Quarters: String =
       "akraḍaggur amenzu|akraḍaggur wis-sin|akraḍaggur wis-kraḍ|akraḍaggur wis-kuẓ\r\nKḍg1|Kḍg2|Kḍg3|Kḍg4\r\n1|2|3|4\r"
@@ -7297,7 +7297,7 @@ object AvailableDateTimeDisplayNames {
       "Mwai wa mbee|Mwai wa kelĩ|Mwai wa katatũ|Mwai wa kana|Mwai wa katano|Mwai wa thanthatũ|Mwai wa muonza|Mwai wa nyaanya|Mwai wa kenda|Mwai wa ĩkumi|Mwai wa ĩkumi na ĩmwe|Mwai wa ĩkumi na ilĩ\r\nMbe|Kel|Ktũ|Kan|Ktn|Tha|Moo|Nya|Knd|Ĩku|Ĩkm|Ĩkl\r\nM|K|K|K|K|T|M|N|K|Ĩ|Ĩ|Ĩ\r"
 
   private const val kam_Format_Days: String =
-      "Wa kwambĩlĩlya|Wa kelĩ|Wa katatũ|Wa kana|Wa katano|Wa thanthatũ|Wa kyumwa\r\nWkw|Wkl|Wtũ|Wkn|Wtn|Wth|Wky\r\nW|E|A|A|A|A|Y\r"
+      "Wa kwambĩlĩlya|Wa kelĩ|Wa katatũ|Wa kana|Wa katano|Wa thanthatũ|Wa kyumwa\r\nWkw|Wkl|Wtũ|Wkn|Wtn|Wth|Wky\r\nW|E|A|A|A|A|Y\r\nWkw|Wkl|Wtũ|Wkn|Wtn|Wth|Wky\r"
 
   private const val kam_Format_Quarters: String =
       "Lovo ya mbee|Lovo ya kelĩ|Lovo ya katatũ|Lovo ya kana\r\nL1|L2|L3|L4\r\n1|2|3|4\r"
@@ -7309,7 +7309,7 @@ object AvailableDateTimeDisplayNames {
       "Mwai wa mbee|Mwai wa kelĩ|Mwai wa katatũ|Mwai wa kana|Mwai wa katano|Mwai wa thanthatũ|Mwai wa muonza|Mwai wa nyaanya|Mwai wa kenda|Mwai wa ĩkumi|Mwai wa ĩkumi na ĩmwe|Mwai wa ĩkumi na ilĩ\r\nMbe|Kel|Ktũ|Kan|Ktn|Tha|Moo|Nya|Knd|Ĩku|Ĩkm|Ĩkl\r\nM|K|K|K|K|T|M|N|K|Ĩ|Ĩ|Ĩ\r"
 
   private const val kam_Standalone_Days: String =
-      "Wa kwambĩlĩlya|Wa kelĩ|Wa katatũ|Wa kana|Wa katano|Wa thanthatũ|Wa kyumwa\r\nWkw|Wkl|Wtũ|Wkn|Wtn|Wth|Wky\r\nW|E|A|A|A|A|Y\r"
+      "Wa kwambĩlĩlya|Wa kelĩ|Wa katatũ|Wa kana|Wa katano|Wa thanthatũ|Wa kyumwa\r\nWkw|Wkl|Wtũ|Wkn|Wtn|Wth|Wky\r\nW|E|A|A|A|A|Y\r\nWkw|Wkl|Wtũ|Wkn|Wtn|Wth|Wky\r"
 
   private const val kam_Standalone_Quarters: String =
       "Lovo ya mbee|Lovo ya kelĩ|Lovo ya katatũ|Lovo ya kana\r\nL1|L2|L3|L4\r\n1|2|3|4\r"
@@ -7337,7 +7337,7 @@ object AvailableDateTimeDisplayNames {
       "Mwedi Ntandi|Mwedi wa Pili|Mwedi wa Tatu|Mwedi wa Nchechi|Mwedi wa Nnyano|Mwedi wa Nnyano na Umo|Mwedi wa Nnyano na Mivili|Mwedi wa Nnyano na Mitatu|Mwedi wa Nnyano na Nchechi|Mwedi wa Nnyano na Nnyano|Mwedi wa Nnyano na Nnyano na U|Mwedi wa Nnyano na Nnyano na M\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val kde_Format_Days: String =
-      "Liduva lyatatu|Liduva lyanchechi|Liduva lyannyano|Liduva lyannyano na linji|Liduva lyannyano na mavili|Liduva litandi|Liduva lyapili\r\nLl3|Ll4|Ll5|Ll6|Ll7|Ll1|Ll2\r\n3|4|5|6|7|1|2\r"
+      "Liduva lyatatu|Liduva lyanchechi|Liduva lyannyano|Liduva lyannyano na linji|Liduva lyannyano na mavili|Liduva litandi|Liduva lyapili\r\nLl3|Ll4|Ll5|Ll6|Ll7|Ll1|Ll2\r\n3|4|5|6|7|1|2\r\nLl3|Ll4|Ll5|Ll6|Ll7|Ll1|Ll2\r"
 
   private const val kde_Format_Quarters: String =
       "Lobo 1|Lobo 2|Lobo 3|Lobo 4\r\nL1|L2|L3|L4\r\n1|2|3|4\r"
@@ -7348,7 +7348,7 @@ object AvailableDateTimeDisplayNames {
       "Mwedi Ntandi|Mwedi wa Pili|Mwedi wa Tatu|Mwedi wa Nchechi|Mwedi wa Nnyano|Mwedi wa Nnyano na Umo|Mwedi wa Nnyano na Mivili|Mwedi wa Nnyano na Mitatu|Mwedi wa Nnyano na Nchechi|Mwedi wa Nnyano na Nnyano|Mwedi wa Nnyano na Nnyano na U|Mwedi wa Nnyano na Nnyano na M\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val kde_Standalone_Days: String =
-      "Liduva lyatatu|Liduva lyanchechi|Liduva lyannyano|Liduva lyannyano na linji|Liduva lyannyano na mavili|Liduva litandi|Liduva lyapili\r\nLl3|Ll4|Ll5|Ll6|Ll7|Ll1|Ll2\r\n3|4|5|6|7|1|2\r"
+      "Liduva lyatatu|Liduva lyanchechi|Liduva lyannyano|Liduva lyannyano na linji|Liduva lyannyano na mavili|Liduva litandi|Liduva lyapili\r\nLl3|Ll4|Ll5|Ll6|Ll7|Ll1|Ll2\r\n3|4|5|6|7|1|2\r\nLl3|Ll4|Ll5|Ll6|Ll7|Ll1|Ll2\r"
 
   private const val kde_Standalone_Quarters: String =
       "Lobo 1|Lobo 2|Lobo 3|Lobo 4\r\nL1|L2|L3|L4\r\n1|2|3|4\r"
@@ -7360,7 +7360,7 @@ object AvailableDateTimeDisplayNames {
       "Janeru|Febreru|Marsu|Abril|Maiu|Junhu|Julhu|Agostu|Setenbru|Otubru|Nuvenbru|Dizenbru\r\nJan|Feb|Mar|Abr|Mai|Jun|Jul|Ago|Set|Otu|Nuv|Diz\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val kea_Format_Days: String =
-      "sigunda-fera|tersa-fera|kuarta-fera|kinta-fera|sesta-fera|sábadu|dumingu\r\nsig|ter|kua|kin|ses|sab|dum\r\nS|T|K|K|S|S|D\r"
+      "sigunda-fera|tersa-fera|kuarta-fera|kinta-fera|sesta-fera|sábadu|dumingu\r\nsig|ter|kua|kin|ses|sab|dum\r\nS|T|K|K|S|S|D\r\nsi|te|ku|ki|se|sa|du\r"
 
   private const val kea_Format_Quarters: String =
       "1º trimestri|2º trimestri|3º trimestri|4º trimestri\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -7371,7 +7371,7 @@ object AvailableDateTimeDisplayNames {
       "Janeru|Febreru|Marsu|Abril|Maiu|Junhu|Julhu|Agostu|Setenbru|Otubru|Nuvenbru|Dizenbru\r\nJan|Feb|Mar|Abr|Mai|Jun|Jul|Ago|Set|Otu|Nuv|Diz\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val kea_Standalone_Days: String =
-      "sigunda-fera|tersa-fera|kuarta-fera|kinta-fera|sesta-fera|sábadu|dumingu\r\nsig|ter|kua|kin|ses|sab|dum\r\nS|T|K|K|S|S|D\r"
+      "sigunda-fera|tersa-fera|kuarta-fera|kinta-fera|sesta-fera|sábadu|dumingu\r\nsig|ter|kua|kin|ses|sab|dum\r\nS|T|K|K|S|S|D\r\nsi|te|ku|ki|se|sa|du\r"
 
   private const val kea_Standalone_Quarters: String =
       "1º trimestri|2º trimestri|3º trimestri|4º trimestri\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -7398,7 +7398,7 @@ object AvailableDateTimeDisplayNames {
       "1-Kysã|2-Kysã|3-Kysã|4-Kysã|5-Kysã|6-Kysã|7-Kysã|8-Kysã|9-Kysã|10-Kysã|11-Kysã|12-Kysã\r\n1Ky.|2Ky.|3Ky.|4Ky.|5Ky.|6Ky.|7Ky.|8Ky.|9Ky.|10Ky.|11Ky.|12Ky.\r\n1K|2K|3K|4K|5K|6K|7K|8K|9K|10K|11K|12K\r"
 
   private const val kgp_Format_Days: String =
-      "pir-kurã-há|régre-kurã-há|tẽgtũ-kurã-há|vẽnhkãgra-kurã-há|pénkar-kurã-há|savnu|numĩggu\r\npir.|rég.|tẽg.|vẽn.|pén.|sav.|num.\r\nP.|R.|T.|V.|P.|S.|N.\r"
+      "pir-kurã-há|régre-kurã-há|tẽgtũ-kurã-há|vẽnhkãgra-kurã-há|pénkar-kurã-há|savnu|numĩggu\r\npir.|rég.|tẽg.|vẽn.|pén.|sav.|num.\r\nP.|R.|T.|V.|P.|S.|N.\r\n1kh.|2kh.|3kh.|4kh.|5kh.|S.|N.\r"
 
   private const val kgp_Format_Quarters: String =
       "1ⁿ kysã-tẽgtũ|2ᵍᵉ kysã-tẽgtũ|3ⁿʰ kysã-tẽgtũ|4ⁿ kysã-tẽgtũ\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -7410,7 +7410,7 @@ object AvailableDateTimeDisplayNames {
       "1-Kysã|2-Kysã|3-Kysã|4-Kysã|5-Kysã|6-Kysã|7-Kysã|8-Kysã|9-Kysã|10-Kysã|11-Kysã|12-Kysã\r\n1Ky.|2Ky.|3Ky.|4Ky.|5Ky.|6Ky.|7Ky.|8Ky.|9Ky.|10Ky.|11Ky.|12Ky.\r\n1K|2K|3K|4K|5K|6K|7K|8K|9K|10K|11K|12K\r"
 
   private const val kgp_Standalone_Days: String =
-      "pir-kurã-há|régre-kurã-há|tẽgtũ-kurã-há|vẽnhkãgra-kurã-há|pénkar-kurã-há|savnu|numĩggu\r\npir.|rég.|tẽg.|vẽn.|pén.|sav.|num.\r\nP.|R.|T.|V.|P.|S.|N.\r"
+      "pir-kurã-há|régre-kurã-há|tẽgtũ-kurã-há|vẽnhkãgra-kurã-há|pénkar-kurã-há|savnu|numĩggu\r\npir.|rég.|tẽg.|vẽn.|pén.|sav.|num.\r\nP.|R.|T.|V.|P.|S.|N.\r\n1kh.|2kh.|3kh.|4kh.|5kh.|S.|N.\r"
 
   private const val kgp_Standalone_Quarters: String =
       "1ⁿ kysã-tẽgtũ|2ᵍᵉ kysã-tẽgtũ|3ⁿʰ kysã-tẽgtũ|4ⁿ kysã-tẽgtũ\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -7422,7 +7422,7 @@ object AvailableDateTimeDisplayNames {
       "Žanwiye|Feewiriye|Marsi|Awiril|Me|Žuweŋ|Žuyye|Ut|Sektanbur|Oktoobur|Noowanbur|Deesanbur\r\nŽan|Fee|Mar|Awi|Me|Žuw|Žuy|Ut|Sek|Okt|Noo|Dee\r\nŽ|F|M|A|M|Ž|Ž|U|S|O|N|D\r"
 
   private const val khq_Format_Days: String =
-      "Atini|Atalata|Alarba|Alhamiisa|Aljuma|Assabdu|Alhadi\r\nAti|Ata|Ala|Alm|Alj|Ass|Alh\r\nT|T|L|L|L|S|H\r"
+      "Atini|Atalata|Alarba|Alhamiisa|Aljuma|Assabdu|Alhadi\r\nAti|Ata|Ala|Alm|Alj|Ass|Alh\r\nT|T|L|L|L|S|H\r\nAti|Ata|Ala|Alm|Alj|Ass|Alh\r"
 
   private const val khq_Format_Quarters: String =
       "Arrubu 1|Arrubu 2|Arrubu 3|Arrubu 4\r\nA1|A2|A3|A4\r\n1|2|3|4\r"
@@ -7434,7 +7434,7 @@ object AvailableDateTimeDisplayNames {
       "Žanwiye|Feewiriye|Marsi|Awiril|Me|Žuweŋ|Žuyye|Ut|Sektanbur|Oktoobur|Noowanbur|Deesanbur\r\nŽan|Fee|Mar|Awi|Me|Žuw|Žuy|Ut|Sek|Okt|Noo|Dee\r\nŽ|F|M|A|M|Ž|Ž|U|S|O|N|D\r"
 
   private const val khq_Standalone_Days: String =
-      "Atini|Atalata|Alarba|Alhamiisa|Aljuma|Assabdu|Alhadi\r\nAti|Ata|Ala|Alm|Alj|Ass|Alh\r\nT|T|L|L|L|S|H\r"
+      "Atini|Atalata|Alarba|Alhamiisa|Aljuma|Assabdu|Alhadi\r\nAti|Ata|Ala|Alm|Alj|Ass|Alh\r\nT|T|L|L|L|S|H\r\nAti|Ata|Ala|Alm|Alj|Ass|Alh\r"
 
   private const val khq_Standalone_Quarters: String =
       "Arrubu 1|Arrubu 2|Arrubu 3|Arrubu 4\r\nA1|A2|A3|A4\r\n1|2|3|4\r"
@@ -7446,7 +7446,7 @@ object AvailableDateTimeDisplayNames {
       "Njenuarĩ|Mwere wa kerĩ|Mwere wa gatatũ|Mwere wa kana|Mwere wa gatano|Mwere wa gatandatũ|Mwere wa mũgwanja|Mwere wa kanana|Mwere wa kenda|Mwere wa ikũmi|Mwere wa ikũmi na ũmwe|Ndithemba\r\nJEN|WKR|WGT|WKN|WTN|WTD|WMJ|WNN|WKD|WIK|WMW|DIT\r\nJ|K|G|K|G|G|M|K|K|I|I|D\r"
 
   private const val ki_Format_Days: String =
-      "Njumatatũ|Njumaine|Njumatana|Aramithi|Njumaa|Njumamothi|Kiumia\r\nNTT|NMN|NMT|ART|NMA|NMM|KMA\r\nN|N|N|A|N|N|K\r"
+      "Njumatatũ|Njumaine|Njumatana|Aramithi|Njumaa|Njumamothi|Kiumia\r\nNTT|NMN|NMT|ART|NMA|NMM|KMA\r\nN|N|N|A|N|N|K\r\nNTT|NMN|NMT|ART|NMA|NMM|KMA\r"
 
   private const val ki_Format_Quarters: String =
       "Robo ya mbere|Robo ya kerĩ|Robo ya gatatũ|Robo ya kana\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -7458,7 +7458,7 @@ object AvailableDateTimeDisplayNames {
       "Njenuarĩ|Mwere wa kerĩ|Mwere wa gatatũ|Mwere wa kana|Mwere wa gatano|Mwere wa gatandatũ|Mwere wa mũgwanja|Mwere wa kanana|Mwere wa kenda|Mwere wa ikũmi|Mwere wa ikũmi na ũmwe|Ndithemba\r\nJEN|WKR|WGT|WKN|WTN|WTD|WMJ|WNN|WKD|WIK|WMW|DIT\r\nJ|K|G|K|G|G|M|K|K|I|I|D\r"
 
   private const val ki_Standalone_Days: String =
-      "Njumatatũ|Njumaine|Njumatana|Aramithi|Njumaa|Njumamothi|Kiumia\r\nNTT|NMN|NMT|ART|NMA|NMM|KMA\r\nN|N|N|A|N|N|K\r"
+      "Njumatatũ|Njumaine|Njumatana|Aramithi|Njumaa|Njumamothi|Kiumia\r\nNTT|NMN|NMT|ART|NMA|NMM|KMA\r\nN|N|N|A|N|N|K\r\nNTT|NMN|NMT|ART|NMA|NMM|KMA\r"
 
   private const val ki_Standalone_Quarters: String =
       "Robo ya mbere|Robo ya kerĩ|Robo ya gatatũ|Robo ya kana\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -7470,7 +7470,7 @@ object AvailableDateTimeDisplayNames {
       "қаңтар|ақпан|наурыз|сәуір|мамыр|маусым|шілде|тамыз|қыркүйек|қазан|қараша|желтоқсан\r\nқаң.|ақп.|нау.|сәу.|мам.|мау.|шіл.|там.|қыр.|қаз.|қар.|жел.\r\nҚ|А|Н|С|М|М|Ш|Т|Қ|Қ|Қ|Ж\r"
 
   private const val kk_Format_Days: String =
-      "дүйсенбі|сейсенбі|сәрсенбі|бейсенбі|жұма|сенбі|жексенбі\r\nдс|сс|ср|бс|жм|сб|жс\r\nД|С|С|Б|Ж|С|Ж\r"
+      "дүйсенбі|сейсенбі|сәрсенбі|бейсенбі|жұма|сенбі|жексенбі\r\nдс|сс|ср|бс|жм|сб|жс\r\nД|С|С|Б|Ж|С|Ж\r\nдс|сс|ср|бс|жм|сб|жс\r"
 
   private const val kk_Format_Quarters: String =
       "І тоқсан|ІІ тоқсан|ІІІ тоқсан|IV тоқсан\r\nІ тқс.|ІІ тқс.|ІІІ тқс.|IV тқс.\r\nI|II|III|IV\r"
@@ -7482,7 +7482,7 @@ object AvailableDateTimeDisplayNames {
       "Қаңтар|Ақпан|Наурыз|Сәуір|Мамыр|Маусым|Шілде|Тамыз|Қыркүйек|Қазан|Қараша|Желтоқсан\r\nқаң.|ақп.|нау.|сәу.|мам.|мау.|шіл.|там.|қыр.|қаз.|қар.|жел.\r\nҚ|А|Н|С|М|М|Ш|Т|Қ|Қ|Қ|Ж\r"
 
   private const val kk_Standalone_Days: String =
-      "дүйсенбі|сейсенбі|сәрсенбі|бейсенбі|жұма|сенбі|жексенбі\r\nдс|сс|ср|бс|жм|сб|жс\r\nД|С|С|Б|Ж|С|Ж\r"
+      "дүйсенбі|сейсенбі|сәрсенбі|бейсенбі|жұма|сенбі|жексенбі\r\nдс|сс|ср|бс|жм|сб|жс\r\nД|С|С|Б|Ж|С|Ж\r\nдс|сс|ср|бс|жм|сб|жс\r"
 
   private const val kk_Standalone_Quarters: String =
       "І тоқсан|ІІ тоқсан|ІІІ тоқсан|IV тоқсан\r\nІ тқс.|ІІ тқс.|ІІІ тқс.|IV тқс.\r\nI|II|III|IV\r"
@@ -7542,7 +7542,7 @@ object AvailableDateTimeDisplayNames {
       "pamba|wanja|mbiyɔ mɛndoŋgɔ|Nyɔlɔmbɔŋgɔ|Mɔnɔ ŋgbanja|Nyaŋgwɛ ŋgbanja|kuŋgwɛ|fɛ|njapi|nyukul|M11|ɓulɓusɛ\r\npamba|wanja|mbiyɔ mɛndoŋgɔ|Nyɔlɔmbɔŋgɔ|Mɔnɔ ŋgbanja|Nyaŋgwɛ ŋgbanja|kuŋgwɛ|fɛ|njapi|nyukul|M11|ɓulɓusɛ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val kkj_Format_Days: String =
-      "lundi|mardi|mɛrkɛrɛdi|yedi|vaŋdɛrɛdi|mɔnɔ sɔndi|sɔndi\r\nlundi|mardi|mɛrkɛrɛdi|yedi|vaŋdɛrɛdi|mɔnɔ sɔndi|sɔndi\r\nlu|ma|mɛ|ye|va|ms|so\r"
+      "lundi|mardi|mɛrkɛrɛdi|yedi|vaŋdɛrɛdi|mɔnɔ sɔndi|sɔndi\r\nlundi|mardi|mɛrkɛrɛdi|yedi|vaŋdɛrɛdi|mɔnɔ sɔndi|sɔndi\r\nlu|ma|mɛ|ye|va|ms|so\r\nlundi|mardi|mɛrkɛrɛdi|yedi|vaŋdɛrɛdi|mɔnɔ sɔndi|sɔndi\r"
 
   private val kkj_Format_Quarters: String? = null
 
@@ -7552,7 +7552,7 @@ object AvailableDateTimeDisplayNames {
       "pamba|wanja|mbiyɔ mɛndoŋgɔ|Nyɔlɔmbɔŋgɔ|Mɔnɔ ŋgbanja|Nyaŋgwɛ ŋgbanja|kuŋgwɛ|fɛ|njapi|nyukul|M11|ɓulɓusɛ\r\npamba|wanja|mbiyɔ mɛndoŋgɔ|Nyɔlɔmbɔŋgɔ|Mɔnɔ ŋgbanja|Nyaŋgwɛ ŋgbanja|kuŋgwɛ|fɛ|njapi|nyukul|M11|ɓulɓusɛ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val kkj_Standalone_Days: String =
-      "lundi|mardi|mɛrkɛrɛdi|yedi|vaŋdɛrɛdi|mɔnɔ sɔndi|sɔndi\r\nlundi|mardi|mɛrkɛrɛdi|yedi|vaŋdɛrɛdi|mɔnɔ sɔndi|sɔndi\r\nlu|ma|mɛ|ye|va|ms|so\r"
+      "lundi|mardi|mɛrkɛrɛdi|yedi|vaŋdɛrɛdi|mɔnɔ sɔndi|sɔndi\r\nlundi|mardi|mɛrkɛrɛdi|yedi|vaŋdɛrɛdi|mɔnɔ sɔndi|sɔndi\r\nlu|ma|mɛ|ye|va|ms|so\r\nlu|ma|mɛ|ye|va|ms|so\r"
 
   private val kkj_Standalone_Quarters: String? = null
 
@@ -7562,7 +7562,7 @@ object AvailableDateTimeDisplayNames {
       "januaarip|februaarip|marsip|apriilip|maajip|juunip|juulip|aggustip|septembarip|oktobarip|novembarip|decembarip\r\njan|febr|mar|apr|maj|jun|jul|aug|sept|okt|nov|dec\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val kl_Format_Days: String =
-      "ataasinngorneq|marlunngorneq|pingasunngorneq|sisamanngorneq|tallimanngorneq|arfininngorneq|sapaat\r\nata|mar|pin|sis|tal|arf|sap\r\nM|T|W|T|F|S|S\r"
+      "ataasinngorneq|marlunngorneq|pingasunngorneq|sisamanngorneq|tallimanngorneq|arfininngorneq|sapaat\r\nata|mar|pin|sis|tal|arf|sap\r\nM|T|W|T|F|S|S\r\nata|mar|pin|sis|tal|arf|sap\r"
 
   private val kl_Format_Quarters: String? = null
 
@@ -7572,7 +7572,7 @@ object AvailableDateTimeDisplayNames {
       "januaari|februaari|marsi|apriili|maaji|juuni|juuli|aggusti|septembari|oktobari|novembari|decembari\r\njan|febr|mar|apr|maj|jun|jul|aug|sept|okt|nov|dec\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val kl_Standalone_Days: String =
-      "ataasinngorneq|marlunngorneq|pingasunngorneq|sisamanngorneq|tallimanngorneq|arfininngorneq|sapaat\r\nata|mar|pin|sis|tal|arf|sap\r\nM|T|W|T|F|S|S\r"
+      "ataasinngorneq|marlunngorneq|pingasunngorneq|sisamanngorneq|tallimanngorneq|arfininngorneq|sapaat\r\nata|mar|pin|sis|tal|arf|sap\r\nM|T|W|T|F|S|S\r\nata|mar|pin|sis|tal|arf|sap\r"
 
   private val kl_Standalone_Quarters: String? = null
 
@@ -7582,7 +7582,7 @@ object AvailableDateTimeDisplayNames {
       "Mulgul|Ng’atyaato|Kiptaamo|Iwootkuut|Mamuut|Paagi|Ng’eiyeet|Rooptui|Bureet|Epeeso|Kipsuunde ne taai|Kipsuunde nebo aeng’\r\nMul|Ngat|Taa|Iwo|Mam|Paa|Nge|Roo|Bur|Epe|Kpt|Kpa\r\nM|N|T|I|M|P|N|R|B|E|K|K\r"
 
   private const val kln_Format_Days: String =
-      "Kotaai|Koaeng’|Kosomok|Koang’wan|Komuut|Kolo|Kotisap\r\nKot|Koo|Kos|Koa|Kom|Kol|Kts\r\nT|O|S|A|M|L|T\r"
+      "Kotaai|Koaeng’|Kosomok|Koang’wan|Komuut|Kolo|Kotisap\r\nKot|Koo|Kos|Koa|Kom|Kol|Kts\r\nT|O|S|A|M|L|T\r\nKot|Koo|Kos|Koa|Kom|Kol|Kts\r"
 
   private const val kln_Format_Quarters: String =
       "Robo netai|Robo nebo aeng’|Robo nebo somok|Robo nebo ang’wan\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -7594,7 +7594,7 @@ object AvailableDateTimeDisplayNames {
       "Mulgul|Ng’atyaato|Kiptaamo|Iwootkuut|Mamuut|Paagi|Ng’eiyeet|Rooptui|Bureet|Epeeso|Kipsuunde ne taai|Kipsuunde nebo aeng’\r\nMul|Ngat|Taa|Iwo|Mam|Paa|Nge|Roo|Bur|Epe|Kpt|Kpa\r\nM|N|T|I|M|P|N|R|B|E|K|K\r"
 
   private const val kln_Standalone_Days: String =
-      "Kotaai|Koaeng’|Kosomok|Koang’wan|Komuut|Kolo|Kotisap\r\nKot|Koo|Kos|Koa|Kom|Kol|Kts\r\nT|O|S|A|M|L|T\r"
+      "Kotaai|Koaeng’|Kosomok|Koang’wan|Komuut|Kolo|Kotisap\r\nKot|Koo|Kos|Koa|Kom|Kol|Kts\r\nT|O|S|A|M|L|T\r\nKot|Koo|Kos|Koa|Kom|Kol|Kts\r"
 
   private const val kln_Standalone_Quarters: String =
       "Robo netai|Robo nebo aeng’|Robo nebo somok|Robo nebo ang’wan\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -7606,7 +7606,7 @@ object AvailableDateTimeDisplayNames {
       "មករា|កុម្ភៈ|មីនា|មេសា|ឧសភា|មិថុនា|កក្កដា|សីហា|កញ្ញា|តុលា|វិច្ឆិកា|ធ្នូ\r\nមករា|កុម្ភៈ|មីនា|មេសា|ឧសភា|មិថុនា|កក្កដា|សីហា|កញ្ញា|តុលា|វិច្ឆិកា|ធ្នូ\r\nម|ក|ម|ម|ឧ|ម|ក|ស|ក|ត|វ|ធ\r"
 
   private const val km_Format_Days: String =
-      "ច័ន្ទ|អង្គារ|ពុធ|ព្រហស្បតិ៍|សុក្រ|សៅរ៍|អាទិត្យ\r\nចន្ទ|អង្គារ|ពុធ|ព្រហ|សុក្រ|សៅរ៍|អាទិត្យ\r\nច|អ|ព|ព|ស|ស|អ\r"
+      "ច័ន្ទ|អង្គារ|ពុធ|ព្រហស្បតិ៍|សុក្រ|សៅរ៍|អាទិត្យ\r\nចន្ទ|អង្គារ|ពុធ|ព្រហ|សុក្រ|សៅរ៍|អាទិត្យ\r\nច|អ|ព|ព|ស|ស|អ\r\nច|អ|ពុ|ព្រ|សុ|ស|អា\r"
 
   private const val km_Format_Quarters: String =
       "ត្រីមាសទី 1|ត្រីមាសទី 2|ត្រីមាសទី 3|ត្រីមាសទី 4\r\nត្រីមាសទី 1|ត្រីមាសទី 2|ត្រីមាសទី 3|ត្រីមាសទី 4\r\n1|2|3|4\r"
@@ -7618,7 +7618,7 @@ object AvailableDateTimeDisplayNames {
       "មករា|កុម្ភៈ|មីនា|មេសា|ឧសភា|មិថុនា|កក្កដា|សីហា|កញ្ញា|តុលា|វិច្ឆិកា|ធ្នូ\r\nមករា|កុម្ភៈ|មីនា|មេសា|ឧសភា|មិថុនា|កក្កដា|សីហា|កញ្ញា|តុលា|វិច្ឆិកា|ធ្នូ\r\nម|ក|ម|ម|ឧ|ម|ក|ស|ក|ត|វ|ធ\r"
 
   private const val km_Standalone_Days: String =
-      "ចន្ទ|អង្គារ|ពុធ|ព្រហស្បតិ៍|សុក្រ|សៅរ៍|អាទិត្យ\r\nចន្ទ|អង្គារ|ពុធ|ព្រហ|សុក្រ|សៅរ៍|អាទិត្យ\r\nច|អ|ព|ព|ស|ស|អ\r"
+      "ចន្ទ|អង្គារ|ពុធ|ព្រហស្បតិ៍|សុក្រ|សៅរ៍|អាទិត្យ\r\nចន្ទ|អង្គារ|ពុធ|ព្រហ|សុក្រ|សៅរ៍|អាទិត្យ\r\nច|អ|ព|ព|ស|ស|អ\r\nច|អ|ពុ|ព្រ|សុ|ស|អា\r"
 
   private const val km_Standalone_Quarters: String =
       "ត្រីមាសទី 1|ត្រីមាសទី 2|ត្រីមាសទី 3|ត្រីមាសទី 4\r\nត្រីមាសទី 1|ត្រីមាសទី 2|ត្រីមាសទី 3|ត្រីមាសទី 4\r\n1|2|3|4\r"
@@ -7630,7 +7630,7 @@ object AvailableDateTimeDisplayNames {
       "ಜನವರಿ|ಫೆಬ್ರವರಿ|ಮಾರ್ಚ್|ಏಪ್ರಿಲ್|ಮೇ|ಜೂನ್|ಜುಲೈ|ಆಗಸ್ಟ್|ಸೆಪ್ಟೆಂಬರ್|ಅಕ್ಟೋಬರ್|ನವೆಂಬರ್|ಡಿಸೆಂಬರ್\r\nಜನ|ಫೆಬ್ರ|ಮಾರ್ಚ್|ಏಪ್ರಿ|ಮೇ|ಜೂನ್|ಜುಲೈ|ಆಗ|ಸೆಪ್ಟೆಂ|ಅಕ್ಟೋ|ನವೆಂ|ಡಿಸೆಂ\r\nಜ|ಫೆ|ಮಾ|ಏ|ಮೇ|ಜೂ|ಜು|ಆ|ಸೆ|ಅ|ನ|ಡಿ\r"
 
   private const val kn_Format_Days: String =
-      "ಸೋಮವಾರ|ಮಂಗಳವಾರ|ಬುಧವಾರ|ಗುರುವಾರ|ಶುಕ್ರವಾರ|ಶನಿವಾರ|ಭಾನುವಾರ\r\nಸೋಮ|ಮಂಗಳ|ಬುಧ|ಗುರು|ಶುಕ್ರ|ಶನಿ|ಭಾನು\r\nಸೋ|ಮಂ|ಬು|ಗು|ಶು|ಶ|ಭಾ\r"
+      "ಸೋಮವಾರ|ಮಂಗಳವಾರ|ಬುಧವಾರ|ಗುರುವಾರ|ಶುಕ್ರವಾರ|ಶನಿವಾರ|ಭಾನುವಾರ\r\nಸೋಮ|ಮಂಗಳ|ಬುಧ|ಗುರು|ಶುಕ್ರ|ಶನಿ|ಭಾನು\r\nಸೋ|ಮಂ|ಬು|ಗು|ಶು|ಶ|ಭಾ\r\nಸೋಮ|ಮಂಗಳ|ಬುಧ|ಗುರು|ಶುಕ್ರ|ಶನಿ|ಭಾನು\r"
 
   private const val kn_Format_Quarters: String =
       "1ನೇ ತ್ರೈಮಾಸಿಕ|2ನೇ ತ್ರೈಮಾಸಿಕ|3ನೇ ತ್ರೈಮಾಸಿಕ|4ನೇ ತ್ರೈಮಾಸಿಕ\r\nತ್ರೈ 1|ತ್ರೈ 2|ತ್ರೈ 3|ತ್ರೈ 4\r\n1|2|3|4\r"
@@ -7642,7 +7642,7 @@ object AvailableDateTimeDisplayNames {
       "ಜನವರಿ|ಫೆಬ್ರವರಿ|ಮಾರ್ಚ್|ಏಪ್ರಿಲ್|ಮೇ|ಜೂನ್|ಜುಲೈ|ಆಗಸ್ಟ್|ಸೆಪ್ಟೆಂಬರ್|ಅಕ್ಟೋಬರ್|ನವೆಂಬರ್|ಡಿಸೆಂಬರ್\r\nಜನ|ಫೆಬ್ರ|ಮಾರ್ಚ್|ಏಪ್ರಿ|ಮೇ|ಜೂನ್|ಜುಲೈ|ಆಗ|ಸೆಪ್ಟೆಂ|ಅಕ್ಟೋ|ನವೆಂ|ಡಿಸೆಂ\r\nಜ|ಫೆ|ಮಾ|ಏ|ಮೇ|ಜೂ|ಜು|ಆ|ಸೆ|ಅ|ನ|ಡಿ\r"
 
   private const val kn_Standalone_Days: String =
-      "ಸೋಮವಾರ|ಮಂಗಳವಾರ|ಬುಧವಾರ|ಗುರುವಾರ|ಶುಕ್ರವಾರ|ಶನಿವಾರ|ಭಾನುವಾರ\r\nಸೋಮ|ಮಂಗಳ|ಬುಧ|ಗುರು|ಶುಕ್ರ|ಶನಿ|ಭಾನು\r\nಸೋ|ಮಂ|ಬು|ಗು|ಶು|ಶ|ಭಾ\r"
+      "ಸೋಮವಾರ|ಮಂಗಳವಾರ|ಬುಧವಾರ|ಗುರುವಾರ|ಶುಕ್ರವಾರ|ಶನಿವಾರ|ಭಾನುವಾರ\r\nಸೋಮ|ಮಂಗಳ|ಬುಧ|ಗುರು|ಶುಕ್ರ|ಶನಿ|ಭಾನು\r\nಸೋ|ಮಂ|ಬು|ಗು|ಶು|ಶ|ಭಾ\r\nಸೋಮ|ಮಂಗಳ|ಬುಧ|ಗುರು|ಶುಕ್ರ|ಶನಿ|ಭಾನು\r"
 
   private const val kn_Standalone_Quarters: String =
       "1ನೇ ತ್ರೈಮಾಸಿಕ|2ನೇ ತ್ರೈಮಾಸಿಕ|3ನೇ ತ್ರೈಮಾಸಿಕ|4ನೇ ತ್ರೈಮಾಸಿಕ\r\nತ್ರೈ 1|ತ್ರೈ 2|ತ್ರೈ 3|ತ್ರೈ 4\r\n1|2|3|4\r"
@@ -7654,7 +7654,7 @@ object AvailableDateTimeDisplayNames {
       "1월|2월|3월|4월|5월|6월|7월|8월|9월|10월|11월|12월\r\n1월|2월|3월|4월|5월|6월|7월|8월|9월|10월|11월|12월\r\n1월|2월|3월|4월|5월|6월|7월|8월|9월|10월|11월|12월\r"
 
   private const val ko_Format_Days: String =
-      "월요일|화요일|수요일|목요일|금요일|토요일|일요일\r\n월|화|수|목|금|토|일\r\n월|화|수|목|금|토|일\r"
+      "월요일|화요일|수요일|목요일|금요일|토요일|일요일\r\n월|화|수|목|금|토|일\r\n월|화|수|목|금|토|일\r\n월|화|수|목|금|토|일\r"
 
   private const val ko_Format_Quarters: String =
       "제 1/4분기|제 2/4분기|제 3/4분기|제 4/4분기\r\n1분기|2분기|3분기|4분기\r\n1|2|3|4\r"
@@ -7665,7 +7665,7 @@ object AvailableDateTimeDisplayNames {
       "1월|2월|3월|4월|5월|6월|7월|8월|9월|10월|11월|12월\r\n1월|2월|3월|4월|5월|6월|7월|8월|9월|10월|11월|12월\r\n1월|2월|3월|4월|5월|6월|7월|8월|9월|10월|11월|12월\r"
 
   private const val ko_Standalone_Days: String =
-      "월요일|화요일|수요일|목요일|금요일|토요일|일요일\r\n월|화|수|목|금|토|일\r\n월|화|수|목|금|토|일\r"
+      "월요일|화요일|수요일|목요일|금요일|토요일|일요일\r\n월|화|수|목|금|토|일\r\n월|화|수|목|금|토|일\r\n월|화|수|목|금|토|일\r"
 
   private const val ko_Standalone_Quarters: String =
       "제 1/4분기|제 2/4분기|제 3/4분기|제 4/4분기\r\n1분기|2분기|3분기|4분기\r\n1|2|3|4\r"
@@ -7708,7 +7708,7 @@ object AvailableDateTimeDisplayNames {
       "जानेवारी|फेब्रुवारी|मार्च|एप्रील|मे|जून|जुलय|ऑगस्ट|सप्टेंबर|ऑक्टोबर|नोव्हेंबर|डिसेंबर\r\nजानेवारी|फेब्रुवारी|मार्च|एप्रील|मे|जून|जुलय|ऑगस्ट|सप्टेंबर|ऑक्टोबर|नोव्हेंबर|डिसेंबर\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val kok_Format_Days: String =
-      "सोमार|मंगळार|बुधवार|बिरेस्तार|शुक्रार|शेनवार|आयतार\r\nसोमार|मंगळार|बुधवार|बिरेस्तार|शुक्रार|शेनवार|आयतार\r\nसो|मं|बु|बि|शु|शे|आ\r"
+      "सोमार|मंगळार|बुधवार|बिरेस्तार|शुक्रार|शेनवार|आयतार\r\nसोमार|मंगळार|बुधवार|बिरेस्तार|शुक्रार|शेनवार|आयतार\r\nसो|मं|बु|बि|शु|शे|आ\r\nसोम|मंगळ|बुध|बिरे|शुक्र|शेन|आय\r"
 
   private const val kok_Format_Quarters: String =
       "1लें त्रैमासीक|2रें त्रैमासीक|3रें त्रैमासीक|4थें त्रैमासीक\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -7719,7 +7719,7 @@ object AvailableDateTimeDisplayNames {
       "जानेवारी|फेब्रुवारी|मार्च|एप्रील|मे|जून|जुलय|ऑगस्ट|सप्टेंबर|ऑक्टोबर|नोव्हेंबर|डिसेंबर\r\nजाने|फेब्रु|मार्च|एप्री|मे|जून|जुल|ऑग|सप्टें|ऑक्टो|नो|डिसे\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val kok_Standalone_Days: String =
-      "सोमार|मंगळार|बुधवार|बिरेस्तार|शुक्रार|शेनवार|आयतार\r\nसोमार|मंगळार|बुधवार|बिरेस्तार|शुक्रार|शेनवार|आयतार\r\nसो|मं|बु|ब|शु|शे|आ\r"
+      "सोमार|मंगळार|बुधवार|बिरेस्तार|शुक्रार|शेनवार|आयतार\r\nसोमार|मंगळार|बुधवार|बिरेस्तार|शुक्रार|शेनवार|आयतार\r\nसो|मं|बु|ब|शु|शे|आ\r\nसोम|मंगळ|बुध|बिरे|शुक्र|शेन|आय\r"
 
   private const val kok_Standalone_Quarters: String =
       "1लें त्रैमासीक|2रें त्रैमासीक|3रें त्रैमासीक|4थें त्रैमासीक\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -7746,7 +7746,7 @@ object AvailableDateTimeDisplayNames {
       "Janer|Febrer|Mars|Abril|Mai|Jun|Julai|Agost|Setembr|Otubr|Novembr|Dezembr\r\nJan|Feb|Mar|Abr|Mai|Jun|Jul|Ago|Set|Otu|Nov|Dez\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val kok_Latn_Format_Days: String =
-      "Somar|Mongllar|Budhvar|Birestar|Sukrar|Sonvar|Aitar\r\nSom|Mon|Bud|Bre|Suk|Son|Ait\r\nS|M|B|B|S|S|A\r"
+      "Somar|Mongllar|Budhvar|Birestar|Sukrar|Sonvar|Aitar\r\nSom|Mon|Bud|Bre|Suk|Son|Ait\r\nS|M|B|B|S|S|A\r\nSm|Mg|Bu|Br|Su|Sn|Ai\r"
 
   private const val kok_Latn_Format_Quarters: String =
       "1lem timhoinallem|2rem timhoinallem|3rem timhoinallem|4tem timhoinallem\r\nTimh1|Timh2|Timh3|Timh4\r\n1|2|3|4\r"
@@ -7757,7 +7757,7 @@ object AvailableDateTimeDisplayNames {
       "Janer|Febrer|Mars|Abril|Mai|Jun|Julai|Agost|Setembr|Otubr|Novembr|Dezembr\r\nJan|Feb|Mar|Abr|Mai|Jun|Jul|Ago|Set|Otu|Nov|Dez\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val kok_Latn_Standalone_Days: String =
-      "Somar|Mongllar|Budhvar|Birestar|Sukrar|Sonvar|Aitar\r\nSom|Mon|Bud|Bre|Suk|Son|Ait\r\nS|M|B|B|S|S|A\r"
+      "Somar|Mongllar|Budhvar|Birestar|Sukrar|Sonvar|Aitar\r\nSom|Mon|Bud|Bre|Suk|Son|Ait\r\nS|M|B|B|S|S|A\r\nSm|Mg|Bu|Br|Su|Sn|Ai\r"
 
   private const val kok_Latn_Standalone_Quarters: String =
       "1lem timhoinallem|2rem timhoinallem|3rem timhoinallem|4tem timhoinallem\r\nTimh1|Timh2|Timh3|Timh4\r\n1|2|3|4\r"
@@ -7801,7 +7801,7 @@ object AvailableDateTimeDisplayNames {
       "جنؤری|فرؤری|مارٕچ|اپریل|مئی|جوٗن|جُلَے|اگست|ستمبر|اکتوٗبر|نومبر|دَسَمبَر\r\nجنؤری|فرؤری|مارٕچ|اپریل|مئی|جوٗن|جُلَے|اگست|ستمبر|اکتوٗبر|نومبر|دسمبر\r\nج|ف|م|ا|م|ج|ج|ا|س|س|ا|ن\r"
 
   private const val ks_Format_Days: String =
-      "ژٔندرٕروار|بۆموار|بودوار|برؠسوار|جُمہ|بٹوار|اَتھوار\r\nژٔندٕروار|بۆموار|بودوار|برؠسوار|جُمہ|بٹوار|آتھوار\r\nژ|ب|ب|ب|ج|ب|ا\r"
+      "ژٔندرٕروار|بۆموار|بودوار|برؠسوار|جُمہ|بٹوار|اَتھوار\r\nژٔندٕروار|بۆموار|بودوار|برؠسوار|جُمہ|بٹوار|آتھوار\r\nژ|ب|ب|ب|ج|ب|ا\r\nژٔندٕروار|بۆموار|بودوار|برؠسوار|جُمہ|بٹوار|آتھوار\r"
 
   private const val ks_Format_Quarters: String =
       "گۄڑنیُک ژۄباگ|دۆیِم ژۄباگ|تریِم ژۄباگ|ژوٗرِم ژۄباگ\r\nکیو 1|کیو 2|کیو 3|کیو 4\r\n1|2|3|4\r"
@@ -7812,7 +7812,7 @@ object AvailableDateTimeDisplayNames {
       "جنؤری|فرؤری|مارٕچ|اپریل|مئی|جوٗن|جوٗلایی|اگست|ستمبر|اکتوٗبر|نومبر|دسمبر\r\nجنؤری|فرؤری|مارٕچ|اپریل|مئی|جوٗن|جوٗلایی|اگست|ستمبر|اکتوٗبر|نومبر|دسمبر\r\nج|ف|م|ا|م|ج|ج|ا|س|س|ا|ن\r"
 
   private const val ks_Standalone_Days: String =
-      "ژٔندرٕروار|بۆموار|بودوار|برؠسوار|جُمہ|بٹوار|اَتھوار\r\nژٔندٕروار|بۆموار|بودوار|برؠسوار|جُمہ|بٹوار|آتھوار\r\nژ|ب|ب|ب|ج|ب|ا\r"
+      "ژٔندرٕروار|بۆموار|بودوار|برؠسوار|جُمہ|بٹوار|اَتھوار\r\nژٔندٕروار|بۆموار|بودوار|برؠسوار|جُمہ|بٹوار|آتھوار\r\nژ|ب|ب|ب|ج|ب|ا\r\nژٔندٕروار|بۆموار|بودوار|برؠسوار|جُمہ|بٹوار|آتھوار\r"
 
   private const val ks_Standalone_Quarters: String =
       "گۄڑنیُک ژۄباگ|دۆیِم ژۄباگ|تریِم ژۄباگ|ژوٗرِم ژۄباگ\r\nکیو 1|کیو 2|کیو 3|کیو 4\r\n1|2|3|4\r"
@@ -7839,7 +7839,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सतमबर|अक्तूबर|नवमबर|दसमबर\r\nजनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सतुंबर|अक्तूबर|नवूमबर|दसमबर\r\nज|फ़|म|अ|म|ज|ज|अ|स|ओ|न|द\r"
 
   private const val ks_Deva_Format_Days: String =
-      "च़ंदिरवार|बोमवार|बोदवार|ब्रेसवार|जुमा|बटवार|आथवार\r\nचंदिरवार|बुवार|बोदवार|ब्रेसवार|जुमा|बटवार|आथवार\r\nच|ब|ब|ब|ज|ब|अ\r"
+      "च़ंदिरवार|बोमवार|बोदवार|ब्रेसवार|जुमा|बटवार|आथवार\r\nचंदिरवार|बुवार|बोदवार|ब्रेसवार|जुमा|बटवार|आथवार\r\nच|ब|ब|ब|ज|ब|अ\r\nचंदिरवार|बुवार|बोदवार|ब्रेसवार|जुमा|बटवार|आथवार\r"
 
   private const val ks_Deva_Format_Quarters: String =
       "1st सह माह|2nd सह माह|3rd सह माह|4th सह माह\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -7850,7 +7850,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सतुंबर|अकतुम्बर|नवूमबर|दसूमबर\r\nजनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सतुंबर|अकतुम्बर|नवूमबर|दसमबर\r\nज|फ़|म|अ|म|ज|ज|अ|स|ओ|न|द\r"
 
   private const val ks_Deva_Standalone_Days: String =
-      "चंदिरवार|बुवार|बोदवार|ब्रेसवार|जुम्मा|बटवार|आथवार\r\nचंदिरवार|बुवार|बोदवार|ब्रेसवार|जुम्मा|बटवार|आथवार\r\nच|ब|ब|ब|ज|ब|अ\r"
+      "चंदिरवार|बुवार|बोदवार|ब्रेसवार|जुम्मा|बटवार|आथवार\r\nचंदिरवार|बुवार|बोदवार|ब्रेसवार|जुम्मा|बटवार|आथवार\r\nच|ब|ब|ब|ज|ब|अ\r\nचंदिरवार|बुवार|बोदवार|ब्रेसवार|जुमा|बटवार|आथवार\r"
 
   private const val ks_Deva_Standalone_Quarters: String =
       "1st सह माह|2nd सह माह|3rd सह माह|4th सह माह\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -7862,7 +7862,7 @@ object AvailableDateTimeDisplayNames {
       "Januali|Febluali|Machi|Aplili|Mei|Juni|Julai|Agosti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val ksb_Format_Days: String =
-      "Jumaatatu|Jumaane|Jumaatano|Alhamisi|Ijumaa|Jumaamosi|Jumaapii\r\nJtt|Jmn|Jtn|Alh|Iju|Jmo|Jpi\r\n3|4|5|A|I|1|2\r"
+      "Jumaatatu|Jumaane|Jumaatano|Alhamisi|Ijumaa|Jumaamosi|Jumaapii\r\nJtt|Jmn|Jtn|Alh|Iju|Jmo|Jpi\r\n3|4|5|A|I|1|2\r\nJtt|Jmn|Jtn|Alh|Iju|Jmo|Jpi\r"
 
   private const val ksb_Format_Quarters: String =
       "Lobo ya bosi|Lobo ya mbii|Lobo ya nnd’atu|Lobo ya nne\r\nL1|L2|L3|L4\r\n1|2|3|4\r"
@@ -7874,7 +7874,7 @@ object AvailableDateTimeDisplayNames {
       "Januali|Febluali|Machi|Aplili|Mei|Juni|Julai|Agosti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val ksb_Standalone_Days: String =
-      "Jumaatatu|Jumaane|Jumaatano|Alhamisi|Ijumaa|Jumaamosi|Jumaapii\r\nJtt|Jmn|Jtn|Alh|Iju|Jmo|Jpi\r\n3|4|5|A|I|1|2\r"
+      "Jumaatatu|Jumaane|Jumaatano|Alhamisi|Ijumaa|Jumaamosi|Jumaapii\r\nJtt|Jmn|Jtn|Alh|Iju|Jmo|Jpi\r\n3|4|5|A|I|1|2\r\nJtt|Jmn|Jtn|Alh|Iju|Jmo|Jpi\r"
 
   private const val ksb_Standalone_Quarters: String =
       "Lobo ya bosi|Lobo ya mbii|Lobo ya nnd’atu|Lobo ya nne\r\nL1|L2|L3|L4\r\n1|2|3|4\r"
@@ -7886,7 +7886,7 @@ object AvailableDateTimeDisplayNames {
       "ŋwíí a ntɔ́ntɔ|ŋwíí akǝ bɛ́ɛ|ŋwíí akǝ ráá|ŋwíí akǝ nin|ŋwíí akǝ táan|ŋwíí akǝ táafɔk|ŋwíí akǝ táabɛɛ|ŋwíí akǝ táaraa|ŋwíí akǝ táanin|ŋwíí akǝ ntɛk|ŋwíí akǝ ntɛk di bɔ́k|ŋwíí akǝ ntɛk di bɛ́ɛ\r\nŋ1|ŋ2|ŋ3|ŋ4|ŋ5|ŋ6|ŋ7|ŋ8|ŋ9|ŋ10|ŋ11|ŋ12\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ksf_Format_Days: String =
-      "lǝndí|maadí|mɛkrɛdí|jǝǝdí|júmbá|samdí|sɔ́ndǝ\r\nlǝn|maa|mɛk|jǝǝ|júm|sam|sɔ́n\r\nl|m|m|j|j|s|s\r"
+      "lǝndí|maadí|mɛkrɛdí|jǝǝdí|júmbá|samdí|sɔ́ndǝ\r\nlǝn|maa|mɛk|jǝǝ|júm|sam|sɔ́n\r\nl|m|m|j|j|s|s\r\nlǝn|maa|mɛk|jǝǝ|júm|sam|sɔ́n\r"
 
   private const val ksf_Format_Quarters: String =
       "id́ɛ́n kǝbǝk kǝ ntɔ́ntɔ́|idɛ́n kǝbǝk kǝ kǝbɛ́ɛ|idɛ́n kǝbǝk kǝ kǝráá|idɛ́n kǝbǝk kǝ kǝnin\r\ni1|i2|i3|i4\r\n1|2|3|4\r"
@@ -7898,7 +7898,7 @@ object AvailableDateTimeDisplayNames {
       "ŋwíí a ntɔ́ntɔ|ŋwíí akǝ bɛ́ɛ|ŋwíí akǝ ráá|ŋwíí akǝ nin|ŋwíí akǝ táan|ŋwíí akǝ táafɔk|ŋwíí akǝ táabɛɛ|ŋwíí akǝ táaraa|ŋwíí akǝ táanin|ŋwíí akǝ ntɛk|ŋwíí akǝ ntɛk di bɔ́k|ŋwíí akǝ ntɛk di bɛ́ɛ\r\nŋ1|ŋ2|ŋ3|ŋ4|ŋ5|ŋ6|ŋ7|ŋ8|ŋ9|ŋ10|ŋ11|ŋ12\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ksf_Standalone_Days: String =
-      "lǝndí|maadí|mɛkrɛdí|jǝǝdí|júmbá|samdí|sɔ́ndǝ\r\nlǝn|maa|mɛk|jǝǝ|júm|sam|sɔ́n\r\nl|m|m|j|j|s|s\r"
+      "lǝndí|maadí|mɛkrɛdí|jǝǝdí|júmbá|samdí|sɔ́ndǝ\r\nlǝn|maa|mɛk|jǝǝ|júm|sam|sɔ́n\r\nl|m|m|j|j|s|s\r\nlǝn|maa|mɛk|jǝǝ|júm|sam|sɔ́n\r"
 
   private const val ksf_Standalone_Quarters: String =
       "id́ɛ́n kǝbǝk kǝ ntɔ́ntɔ́|idɛ́n kǝbǝk kǝ kǝbɛ́ɛ|idɛ́n kǝbǝk kǝ kǝráá|idɛ́n kǝbǝk kǝ kǝnin\r\ni1|i2|i3|i4\r\n1|2|3|4\r"
@@ -7910,7 +7910,7 @@ object AvailableDateTimeDisplayNames {
       "Jannewa|Fäbrowa|Määz|Aprell|Mai|Juuni|Juuli|Oujoß|Septämber|Oktohber|Novämber|Dezämber\r\nJan|Fäb|Mäz|Apr|Mai|Jun|Jul|Ouj|Säp|Okt|Nov|Dez\r\nJ|F|M|A|M|J|J|O|S|O|N|D\r"
 
   private const val ksh_Format_Days: String =
-      "Mohndaach|Dinnsdaach|Metwoch|Dunnersdaach|Friidaach|Samsdaach|Sunndaach\r\nMo.|Di.|Me.|Du.|Fr.|Sa.|Su.\r\nM|D|M|D|F|S|S\r"
+      "Mohndaach|Dinnsdaach|Metwoch|Dunnersdaach|Friidaach|Samsdaach|Sunndaach\r\nMo.|Di.|Me.|Du.|Fr.|Sa.|Su.\r\nM|D|M|D|F|S|S\r\nMo|Di|Me|Du|Fr|Sa|Su\r"
 
   private const val ksh_Format_Quarters: String =
       "1. Quattahl|2. Quattahl|3. Quattahl|4. Quattahl\r\n1.Q.|2.Q.|3.Q.|4.Q.\r\n1|2|3|4\r"
@@ -7922,7 +7922,7 @@ object AvailableDateTimeDisplayNames {
       "Jannewa|Fäbrowa|Määz|Aprell|Mai|Juuni|Juuli|Oujoß|Septämber|Oktohber|Novämber|Dezämber\r\nJan.|Fäb.|Mäz.|Apr.|Mai|Jun.|Jul.|Ouj.|Säp.|Okt.|Nov.|Dez.\r\nJ|F|M|A|M|J|J|O|S|O|N|D\r"
 
   private const val ksh_Standalone_Days: String =
-      "Mohndaach|Dinnsdaach|Metwoch|Dunnersdaach|Friidaach|Samsdaach|Sunndaach\r\nMo.|Di.|Me.|Du.|Fr.|Sa.|Su.\r\nM|D|M|D|F|S|S\r"
+      "Mohndaach|Dinnsdaach|Metwoch|Dunnersdaach|Friidaach|Samsdaach|Sunndaach\r\nMo.|Di.|Me.|Du.|Fr.|Sa.|Su.\r\nM|D|M|D|F|S|S\r\nMo|Di|Me|Du|Fr|Sa|Su\r"
 
   private const val ksh_Standalone_Quarters: String =
       "1. Quattahl|2. Quattahl|3. Quattahl|4. Quattahl\r\n1.Q.|2.Q.|3.Q.|4.Q.\r\n1Q|2Q|3Q|4Q\r"
@@ -7934,7 +7934,7 @@ object AvailableDateTimeDisplayNames {
       "rêbendan|sibat|adar|nîsan|gulan|hezîran|tîrmeh|tebax|îlon|cotmeh|mijdar|berfanbar\r\nrbn|sbt|adr|nsn|gln|hzr|trm|tbx|îln|cot|mjd|brf\r\nR|S|A|N|G|H|T|T|Î|C|M|B\r"
 
   private const val ku_Format_Days: String =
-      "duşem|sêşem|çarşem|pêncşem|înî|şemî|yekşem\r\ndşm|sşm|çşm|pşm|înî|şem|yşm\r\nD|S|Ç|P|Î|Ş|Y\r"
+      "duşem|sêşem|çarşem|pêncşem|înî|şemî|yekşem\r\ndşm|sşm|çşm|pşm|înî|şem|yşm\r\nD|S|Ç|P|Î|Ş|Y\r\ndş|sş|çş|pş|în|şm|yş\r"
 
   private const val ku_Format_Quarters: String =
       "çaryeka 1em|çaryeka 2yem|çaryeka 3yem|çaryeka 4em\r\nÇ1|Ç2|Ç3|Ç4\r\n1|2|3|4\r"
@@ -7945,7 +7945,7 @@ object AvailableDateTimeDisplayNames {
       "rêbendan|sibat|adar|nîsan|gulan|hezîran|tîrmeh|tebax|îlon|cotmeh|mijdar|berfanbar\r\nrbn|sbt|adr|nsn|gln|hzr|trm|tbx|îln|cot|mjd|brf\r\nR|S|A|N|G|H|T|T|Î|C|M|B\r"
 
   private const val ku_Standalone_Days: String =
-      "duşem|sêşem|çarşem|pêncşem|înî|şemî|yekşem\r\ndşm|sşm|çşm|pşm|înî|şem|yşm\r\nD|S|Ç|P|Î|Ş|Y\r"
+      "duşem|sêşem|çarşem|pêncşem|înî|şemî|yekşem\r\ndşm|sşm|çşm|pşm|înî|şem|yşm\r\nD|S|Ç|P|Î|Ş|Y\r\ndş|sş|çş|pş|în|şm|yş\r"
 
   private const val ku_Standalone_Quarters: String =
       "çaryeka 1em|çaryeka 2yem|çaryeka 3yem|çaryeka 4em\r\nÇ1|Ç2|Ç3|Ç4\r\n1|2|3|4\r"
@@ -7956,7 +7956,7 @@ object AvailableDateTimeDisplayNames {
       "mis Genver|mis Hwevrer|mis Meurth|mis Ebrel|mis Me|mis Metheven|mis Gortheren|mis Est|mis Gwynngala|mis Hedra|mis Du|mis Kevardhu\r\nGen|Hwe|Meu|Ebr|Me|Met|Gor|Est|Gwn|Hed|Du|Kev\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val kw_Format_Days: String =
-      "dy Lun|dy Meurth|dy Merher|dy Yow|dy Gwener|dy Sadorn|dy Sul\r\nLun|Mth|Mhr|Yow|Gwe|Sad|Sul\r\nM|T|W|T|F|S|S\r"
+      "dy Lun|dy Meurth|dy Merher|dy Yow|dy Gwener|dy Sadorn|dy Sul\r\nLun|Mth|Mhr|Yow|Gwe|Sad|Sul\r\nM|T|W|T|F|S|S\r\nLun|Mth|Mhr|Yow|Gwe|Sad|Sul\r"
 
   private val kw_Format_Quarters: String? = null
 
@@ -7966,7 +7966,7 @@ object AvailableDateTimeDisplayNames {
       "mis Genver|mis Hwevrer|mis Meurth|mis Ebrel|mis Me|mis Metheven|mis Gortheren|mis Est|mis Gwynngala|mis Hedra|mis Du|mis Kevardhu\r\nGen|Hwe|Meu|Ebr|Me|Met|Gor|Est|Gwn|Hed|Du|Kev\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val kw_Standalone_Days: String =
-      "dy Lun|dy Meurth|dy Merher|dy Yow|dy Gwener|dy Sadorn|dy Sul\r\nLun|Mth|Mhr|Yow|Gwe|Sad|Sul\r\nM|T|W|T|F|S|S\r"
+      "dy Lun|dy Meurth|dy Merher|dy Yow|dy Gwener|dy Sadorn|dy Sul\r\nLun|Mth|Mhr|Yow|Gwe|Sad|Sul\r\nM|T|W|T|F|S|S\r\nLun|Mth|Mhr|Yow|Gwe|Sad|Sul\r"
 
   private val kw_Standalone_Quarters: String? = null
 
@@ -7976,7 +7976,7 @@ object AvailableDateTimeDisplayNames {
       "pusu lenju|maha lenju|pagu lenju|hire lenju|bese lenju|jaṭṭa lenju|aasaḍi lenju|srabĩ lenju|bado lenju|dasara lenju|divi lenju|pande lenju\r\npusu|maha|pagu|hire|bese|jaṭṭa|aasaḍi|srabĩ|bado|dasara|divi|pande\r\npu|ma|pa|hi|be|ja|aa|sra|b|da|di|pa\r"
 
   private const val kxv_Format_Days: String =
-      "smbara|mangaḍa|pudara|laki vara|sukru vara|sani vara|aadi vara\r\nsmba|manga|puda|laki|sukru|sani|aadi\r\ns|ma|pu|la|su|sa|aa\r"
+      "smbara|mangaḍa|pudara|laki vara|sukru vara|sani vara|aadi vara\r\nsmba|manga|puda|laki|sukru|sani|aadi\r\ns|ma|pu|la|su|sa|aa\r\ns|ma|pu|laki|su|sa|aa\r"
 
   private const val kxv_Format_Quarters: String =
       "1sṭ kuarṭr|2nḍ kuarṭr|3rḍ kuarṭr|4th kuarṭr\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -7987,7 +7987,7 @@ object AvailableDateTimeDisplayNames {
       "pusu lenju|maha lenju|pagu lenju|hire lenju|bese lenju|jaṭṭa lenju|aasaḍi lenju|srabĩ lenju|bado lenju|dasara lenju|divi lenju|pande lenju\r\npusu|maha|pagu|hire|bese|jaṭṭa|aasaḍi|srabĩ|bado|dasara|divi|pande\r\npu|ma|pa|hi|be|ja|aa|sra|b|da|di|pa\r"
 
   private const val kxv_Standalone_Days: String =
-      "smbara|mangaḍa|pudara|laki vara|sukru vara|sani vara|aadi vara\r\nsmba|manga|puda|laki|sukru|sani|aadi\r\ns|ma|pu|la|su|sa|aa\r"
+      "smbara|mangaḍa|pudara|laki vara|sukru vara|sani vara|aadi vara\r\nsmba|manga|puda|laki|sukru|sani|aadi\r\ns|ma|pu|la|su|sa|aa\r\ns|ma|pu|laki|su|sa|aa\r"
 
   private const val kxv_Standalone_Quarters: String =
       "1sṭ kuarṭr|2nḍ kuarṭr|3rḍ kuarṭr|4th kuarṭr\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -7998,7 +7998,7 @@ object AvailableDateTimeDisplayNames {
       "पुसु लेञ्जु|माहाका लेञ्जु|पागुणी लेञ्जु|हिरे लेञ्जु|बेसे लेञ्जु|जाटा लेञ्जु|आसाड़ी लेञ्जु|स्राबाँ लेञ्जु|बोदो लेञ्जु|दसारा लेञ्जु|दिवी लेञ्जु|पान्डे लेञ्जु\r\nपुसु|माहा|पागु|हिर्रे|बेसे|जाट्टा|आसाड़ी|स्राबाँ|बाॅदो|दासारा|दिवी|पान्डे\r\nपु|मा|पा|हि|बे|जा|आ|स्रा|बाॅ|दा|दि|पा\r"
 
   private const val kxv_Deva_Format_Days: String =
-      "साॅम्वारा|मंगाड़ा|पुद्दारा|लाक्कि वारा|सुकुरु वारा|सान्नि वारा|आदि वारा\r\nसाॅम्मा|मान्गा|पूदा|लाक्की|सुकुरु|सान्नि|आदि\r\nसाॅ|मा|पू|ला|सु|सा|आ\r"
+      "साॅम्वारा|मंगाड़ा|पुद्दारा|लाक्कि वारा|सुकुरु वारा|सान्नि वारा|आदि वारा\r\nसाॅम्मा|मान्गा|पूदा|लाक्की|सुकुरु|सान्नि|आदि\r\nसाॅ|मा|पू|ला|सु|सा|आ\r\nसाॅ|मा|पू|ला|सु|सा|आ\r"
 
   private const val kxv_Deva_Format_Quarters: String =
       "१स्ट क्वाटर|२ क्वाटर|३र्ड क्वाटर|४थ क्वाटर\r\nक १|क २|क ३|क ४\r\n1|2|3|4\r"
@@ -8010,7 +8010,7 @@ object AvailableDateTimeDisplayNames {
       "पुसु लेञ्जु|माहाका लेञ्जु|पागुणी लेञ्जु|हिरे लेञ्जु|बेसे लेञ्जु|जाटा लेञ्जु|आसाड़ी लेञ्जु|स्राबाँ लेञ्जु|बोदो लेञ्जु|दसारा लेञ्जु|दिवी लेञ्जु|पान्डे लेञ्जु\r\nपुसु|माहा|पागु|हिर्रे|बेसे|जाट्टा|आसाड़ी|स्राबाँ|बाॅदो|दासारा|दिवी|पान्डे\r\nपु|मा|पा|हि|बे|जा|आ|स्रा|बाॅ|दा|दि|पा\r"
 
   private const val kxv_Deva_Standalone_Days: String =
-      "साॅम्वारा|मंगाड़ा|पुद्दारा|लाक्कि वारा|सुकुरु वारा|सान्नि वारा|आदि वारा\r\nसाॅम्मा|मान्गा|पूदा|लाक्की|सुकुरु|सान्नि|आदि\r\nसाॅ|मा|पू|ला|सु|सा|आ\r"
+      "साॅम्वारा|मंगाड़ा|पुद्दारा|लाक्कि वारा|सुकुरु वारा|सान्नि वारा|आदि वारा\r\nसाॅम्मा|मान्गा|पूदा|लाक्की|सुकुरु|सान्नि|आदि\r\nसाॅ|मा|पू|ला|सु|सा|आ\r\nसाॅ|मा|पू|ला|सु|सा|आ\r"
 
   private const val kxv_Deva_Standalone_Quarters: String =
       "१स्ट क्वाटर|२ क्वाटर|३र्ड क्वाटर|४थ क्वाटर\r\nक १|क २|क ३|क ४\r\n1|2|3|4\r"
@@ -8038,7 +8038,7 @@ object AvailableDateTimeDisplayNames {
       "ପୁସୁ ଲେଞ୍ଜୁ|ମାହାକା ଲେଞ୍ଜୁ|ପାଗୁଣି ଲେଞ୍ଜୁ|ହିରେ ଲେଞ୍ଜୁ|ବେସେ ଲେଞ୍ଜୁ|ଜାଟା ଲେଞ୍ଜୁ|ଆସାଡ଼ି ଲେଞ୍ଜୁ|ସ୍ରାବାଁ ଲେଞ୍ଜୁ|ବଦ ଲେଞ୍ଜୁ|ଦାସାରା ଲେଞ୍ଜୁ|ଦିୱିଡ଼ି ଲେଞ୍ଜୁ|ପାଣ୍ଡେ ଲେଞ୍ଜୁ\r\nପୁସୁ|ମାହା|ପାଗୁ|ହିରେ|ବେସେ|ଜାଟା|ଆସାଡ଼ି|ସ୍ରାବାଁ|ବଦ|ଦାସାରା|ଦିୱି|ପାଣ୍ଡେ\r\nପୁ|ମା|ପା|ହି|ବେ|ଜା|ଆ|ସ୍ରା|ବ|ଦା|ଦି|ପା\r"
 
   private const val kxv_Orya_Format_Days: String =
-      "ସମ୍ବାରା|ମାଙ୍ଗାଡ଼ା|ପୁଦାରା|ଲାକି ୱାରା|ସୁକ୍ରୁ ୱାରା|ସାନି ୱାରା|ଆଦି ୱାରା\r\nସମ୍ବା|ମାଙ୍ଗା|ପୁଦା|ଲାକି|ସୁକ୍ରୁ|ସାନି|ଆଦି\r\nସ|ମା|ପୁ|ଲା|ସୁ|ସା|ଆ\r"
+      "ସମ୍ବାରା|ମାଙ୍ଗାଡ଼ା|ପୁଦାରା|ଲାକି ୱାରା|ସୁକ୍ରୁ ୱାରା|ସାନି ୱାରା|ଆଦି ୱାରା\r\nସମ୍ବା|ମାଙ୍ଗା|ପୁଦା|ଲାକି|ସୁକ୍ରୁ|ସାନି|ଆଦି\r\nସ|ମା|ପୁ|ଲା|ସୁ|ସା|ଆ\r\nସ|ମା|ପୁ|ଲା|ସୁ|ସାନି|ଆ\r"
 
   private const val kxv_Orya_Format_Quarters: String =
       "୧ମ କ୍ୱାଟର|୨ୟ କ୍ୱାଟର|୩ୟ କ୍ୱାଟର|୪ର୍ଥ କ୍ୱାଟର\r\nକ ୧|କ ୨|କ ୩|କ ୪\r\n1|2|3|4\r"
@@ -8049,7 +8049,7 @@ object AvailableDateTimeDisplayNames {
       "ପୁସୁ ଲେଞ୍ଜୁ|ମାହାକା ଲେଞ୍ଜୁ|ପାଗୁଣି ଲେଞ୍ଜୁ|ହିରେ ଲେଞ୍ଜୁ|ବେସେ ଲେଞ୍ଜୁ|ଜାଟା ଲେଞ୍ଜୁ|ଆସାଡ଼ି ଲେଞ୍ଜୁ|ସ୍ରାବାଁ ଲେଞ୍ଜୁ|ବଦ ଲେଞ୍ଜୁ|ଦାସାରା ଲେଞ୍ଜୁ|ଦିୱିଡ଼ି ଲେଞ୍ଜୁ|ପାଣ୍ଡେ ଲେଞ୍ଜୁ\r\nପୁସୁ|ମାହା|ପାଗୁ|ହିରେ|ବେସେ|ଜାଟା|ଆସାଡ଼ି|ସ୍ରାବାଁ|ବଦ|ଦାସାରା|ଦିୱି|ପାଣ୍ଡେ\r\nପୁ|ମା|ପା|ହି|ବେ|ଜା|ଆ|ସ୍ରା|ବ|ଦା|ଦି|ପା\r"
 
   private const val kxv_Orya_Standalone_Days: String =
-      "ସମ୍ବାରା|ମାଙ୍ଗାଡ଼ା|ପୁଦାରା|ଲାକି ୱାରା|ସୁକ୍ରୁ ୱାରା|ସାନି ୱାରା|ଆଦି ୱାରା\r\nସମ୍ବା|ମାଙ୍ଗା|ପୁଦା|ଲାକି|ସୁକ୍ରୁ|ସାନି|ଆଦି\r\nସ|ମା|ପୁ|ଲା|ସୁ|ସା|ଆ\r"
+      "ସମ୍ବାରା|ମାଙ୍ଗାଡ଼ା|ପୁଦାରା|ଲାକି ୱାରା|ସୁକ୍ରୁ ୱାରା|ସାନି ୱାରା|ଆଦି ୱାରା\r\nସମ୍ବା|ମାଙ୍ଗା|ପୁଦା|ଲାକି|ସୁକ୍ରୁ|ସାନି|ଆଦି\r\nସ|ମା|ପୁ|ଲା|ସୁ|ସା|ଆ\r\nସ|ମା|ପୁ|ଲା|ସୁ|ସାନି|ଆ\r"
 
   private const val kxv_Orya_Standalone_Quarters: String =
       "୧ମ କ୍ୱାଟର|୨ୟ କ୍ୱାଟର|୩ୟ କ୍ୱାଟର|୪ର୍ଥ କ୍ୱାଟର\r\nକ ୧|କ ୨|କ ୩|କ ୪\r\n1|2|3|4\r"
@@ -8061,7 +8061,7 @@ object AvailableDateTimeDisplayNames {
       "మాగ|గుండు|హిరెఇ|బెసెకి|లండి|రాత|బాన్దపాణా|బార్సి|అస్ర|దివెడి|పాండు|పుసు\r\nమాగ|గుండు|హిరెఇ|బెసెకి|లండి|రాత|బాన్దపాణా|బార్సి|అస్ర|దివెడి|పాండు|పుసు\r\nమా|గు|హి|బె|ల|రా|బా|బా|అ|ది|పా|పు\r"
 
   private const val kxv_Telu_Format_Days: String =
-      "నమారా|మాంగాడా|వుదారా|లాకివరా|నుక్ వరా|సానివరా|వారమి\r\nనమారా|మాంగాడా|వుదారా|లాకివరా|నుక్ వరా|సానివరా|వారమి\r\nన|మా|వు|ల|ను|సా|వా\r"
+      "నమారా|మాంగాడా|వుదారా|లాకివరా|నుక్ వరా|సానివరా|వారమి\r\nనమారా|మాంగాడా|వుదారా|లాకివరా|నుక్ వరా|సానివరా|వారమి\r\nన|మా|వు|ల|ను|సా|వా\r\nనమారా|మాంగాడా|వుదారా|లాకివరా|నుక్ వరా|సానివరా|వారమి\r"
 
   private const val kxv_Telu_Format_Quarters: String =
       "౧వ త్రైమాసికం|౨వ త్రైమాసికర|౩వ త్రైమాసికర|౪వ త్రైమాసికర\r\nత్రై౧|త్రై౨|త్రై౩|త్రై౪\r\n1|2|3|4\r"
@@ -8073,7 +8073,7 @@ object AvailableDateTimeDisplayNames {
       "మాగ|గుండు|హిరెఇ|బెసెకి|లండి|రాత|బాన్దపాణా|బార్సి|అస్ర|దివెడి|పాండు|పుసు\r\nమాగ|గుండు|హిరెఇ|బెసెకి|లండి|రాత|బాన్దపాణా|బార్సి|అస్ర|దివెడి|పాండు|పుసు\r\nమా|గు|హి|బె|ల|రా|బా|బా|అ|ది|పా|పు\r"
 
   private const val kxv_Telu_Standalone_Days: String =
-      "నమారా|మాంగాడా|వుదారా|లాకివరా|నుక్ వరా|సానివరా|వారమి\r\nనమారా|మాంగాడా|వుదారా|లాకివరా|నుక్ వరా|సానివరా|వారమి\r\nన|మా|వు|ల|ను|సా|వా\r"
+      "నమారా|మాంగాడా|వుదారా|లాకివరా|నుక్ వరా|సానివరా|వారమి\r\nనమారా|మాంగాడా|వుదారా|లాకివరా|నుక్ వరా|సానివరా|వారమి\r\nన|మా|వు|ల|ను|సా|వా\r\nనమారా|మాంగాడా|వుదారా|లాకివరా|నుక్ వరా|సానివరా|వారమి\r"
 
   private const val kxv_Telu_Standalone_Quarters: String =
       "౧వ త్రైమాసికం|౨వ త్రైమాసికర|౩వ త్రైమాసికర|౪వ త్రైమాసికర\r\nత్రై౧|త్రై౨|త్రై౩|త్రై౪\r\n1|2|3|4\r"
@@ -8085,7 +8085,7 @@ object AvailableDateTimeDisplayNames {
       "январь|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь\r\nянв.|фев.|мар.|апр.|май|июн.|июл.|авг.|сен.|окт.|ноя.|дек.\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val ky_Format_Days: String =
-      "дүйшөмбү|шейшемби|шаршемби|бейшемби|жума|ишемби|жекшемби\r\nдүй.|шейш.|шарш.|бейш.|жума|ишм.|жек.\r\nД|Ш|Ш|Б|Ж|И|Ж\r"
+      "дүйшөмбү|шейшемби|шаршемби|бейшемби|жума|ишемби|жекшемби\r\nдүй.|шейш.|шарш.|бейш.|жума|ишм.|жек.\r\nД|Ш|Ш|Б|Ж|И|Ж\r\nдш.|шш.|шр.|бш.|жм.|иш.|жш.\r"
 
   private const val ky_Format_Quarters: String =
       "1-чейрек|2-чейрек|3-чейрек|4-чейрек\r\n1-чей.|2-чей.|3-чей.|4-чей.\r\n1|2|3|4\r"
@@ -8097,7 +8097,7 @@ object AvailableDateTimeDisplayNames {
       "Январь|Февраль|Март|Апрель|Май|Июнь|Июль|Август|Сентябрь|Октябрь|Ноябрь|Декабрь\r\nЯнв|Фев|Мар|Апр|Май|Июн|Июл|Авг|Сен|Окт|Ноя|Дек\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val ky_Standalone_Days: String =
-      "дүйшөмбү|шейшемби|шаршемби|бейшемби|жума|ишемби|жекшемби\r\nдүй.|шейш.|шарш.|бейш.|жума|ишм.|жек.\r\nД|Ш|Ш|Б|Ж|И|Ж\r"
+      "дүйшөмбү|шейшемби|шаршемби|бейшемби|жума|ишемби|жекшемби\r\nдүй.|шейш.|шарш.|бейш.|жума|ишм.|жек.\r\nД|Ш|Ш|Б|Ж|И|Ж\r\nдш.|шш.|шр.|бш.|жм.|иш.|жш.\r"
 
   private const val ky_Standalone_Quarters: String =
       "1-чейрек|2-чейрек|3-чейрек|4-чейрек\r\n1-ч.|2-ч.|3-ч.|4-ч.\r\n1|2|3|4\r"
@@ -8125,7 +8125,7 @@ object AvailableDateTimeDisplayNames {
       "Kʉfúngatɨ|Kʉnaanɨ|Kʉkeenda|Kwiikumi|Kwiinyambála|Kwiidwaata|Kʉmʉʉnchɨ|Kʉvɨɨrɨ|Kʉsaatʉ|Kwiinyi|Kʉsaano|Kʉsasatʉ\r\nFúngatɨ|Naanɨ|Keenda|Ikúmi|Inyambala|Idwaata|Mʉʉnchɨ|Vɨɨrɨ|Saatʉ|Inyi|Saano|Sasatʉ\r\nF|N|K|I|I|I|M|V|S|I|S|S\r"
 
   private const val lag_Format_Days: String =
-      "Jumatátu|Jumaíne|Jumatáano|Alamíisi|Ijumáa|Jumamóosi|Jumapíiri\r\nTáatu|Íne|Táano|Alh|Ijm|Móosi|Píili\r\nT|E|O|A|I|M|P\r"
+      "Jumatátu|Jumaíne|Jumatáano|Alamíisi|Ijumáa|Jumamóosi|Jumapíiri\r\nTáatu|Íne|Táano|Alh|Ijm|Móosi|Píili\r\nT|E|O|A|I|M|P\r\nTáatu|Íne|Táano|Alh|Ijm|Móosi|Píili\r"
 
   private const val lag_Format_Quarters: String =
       "Ncholo ya 1|Ncholo ya 2|Ncholo ya 3|Ncholo ya 4\r\nNcho 1|Ncho 2|Ncho 3|Ncho 4\r\n1|2|3|4\r"
@@ -8136,7 +8136,7 @@ object AvailableDateTimeDisplayNames {
       "Kʉfúngatɨ|Kʉnaanɨ|Kʉkeenda|Kwiikumi|Kwiinyambála|Kwiidwaata|Kʉmʉʉnchɨ|Kʉvɨɨrɨ|Kʉsaatʉ|Kwiinyi|Kʉsaano|Kʉsasatʉ\r\nFúngatɨ|Naanɨ|Keenda|Ikúmi|Inyambala|Idwaata|Mʉʉnchɨ|Vɨɨrɨ|Saatʉ|Inyi|Saano|Sasatʉ\r\nF|N|K|I|I|I|M|V|S|I|S|S\r"
 
   private const val lag_Standalone_Days: String =
-      "Jumatátu|Jumaíne|Jumatáano|Alamíisi|Ijumáa|Jumamóosi|Jumapíiri\r\nTáatu|Íne|Táano|Alh|Ijm|Móosi|Píili\r\nT|E|O|A|I|M|P\r"
+      "Jumatátu|Jumaíne|Jumatáano|Alamíisi|Ijumáa|Jumamóosi|Jumapíiri\r\nTáatu|Íne|Táano|Alh|Ijm|Móosi|Píili\r\nT|E|O|A|I|M|P\r\nTáatu|Íne|Táano|Alh|Ijm|Móosi|Píili\r"
 
   private const val lag_Standalone_Quarters: String =
       "Ncholo ya 1|Ncholo ya 2|Ncholo ya 3|Ncholo ya 4\r\nNcho 1|Ncho 2|Ncho 3|Ncho 4\r\n1|2|3|4\r"
@@ -8147,7 +8147,7 @@ object AvailableDateTimeDisplayNames {
       "Januar|Februar|Mäerz|Abrëll|Mee|Juni|Juli|August|September|Oktober|November|Dezember\r\nJan.|Feb.|Mäe.|Abr.|Mee|Juni|Juli|Aug.|Sep.|Okt.|Nov.|Dez.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val lb_Format_Days: String =
-      "Méindeg|Dënschdeg|Mëttwoch|Donneschdeg|Freideg|Samschdeg|Sonndeg\r\nMéi.|Dën.|Mët.|Don.|Fre.|Sam.|Son.\r\nM|D|M|D|F|S|S\r"
+      "Méindeg|Dënschdeg|Mëttwoch|Donneschdeg|Freideg|Samschdeg|Sonndeg\r\nMéi.|Dën.|Mët.|Don.|Fre.|Sam.|Son.\r\nM|D|M|D|F|S|S\r\nMé.|Dë.|Më.|Do.|Fr.|Sa.|So.\r"
 
   private const val lb_Format_Quarters: String =
       "1. Quartal|2. Quartal|3. Quartal|4. Quartal\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -8159,7 +8159,7 @@ object AvailableDateTimeDisplayNames {
       "Januar|Februar|Mäerz|Abrëll|Mee|Juni|Juli|August|September|Oktober|November|Dezember\r\nJan|Feb|Mäe|Abr|Mee|Jun|Jul|Aug|Sep|Okt|Nov|Dez\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val lb_Standalone_Days: String =
-      "Méindeg|Dënschdeg|Mëttwoch|Donneschdeg|Freideg|Samschdeg|Sonndeg\r\nMéi|Dën|Mët|Don|Fre|Sam|Son\r\nM|D|M|D|F|S|S\r"
+      "Méindeg|Dënschdeg|Mëttwoch|Donneschdeg|Freideg|Samschdeg|Sonndeg\r\nMéi|Dën|Mët|Don|Fre|Sam|Son\r\nM|D|M|D|F|S|S\r\nMé.|Dë.|Më.|Do.|Fr.|Sa.|So.\r"
 
   private const val lb_Standalone_Quarters: String =
       "1. Quartal|2. Quartal|3. Quartal|4. Quartal\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -8171,7 +8171,7 @@ object AvailableDateTimeDisplayNames {
       "Janwaliyo|Febwaliyo|Marisi|Apuli|Maayi|Juuni|Julaayi|Agusito|Sebuttemba|Okitobba|Novemba|Desemba\r\nJan|Feb|Mar|Apu|Maa|Juu|Jul|Agu|Seb|Oki|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val lg_Format_Days: String =
-      "Balaza|Lwakubiri|Lwakusatu|Lwakuna|Lwakutaano|Lwamukaaga|Sabbiiti\r\nBal|Lw2|Lw3|Lw4|Lw5|Lw6|Sab\r\nB|L|L|L|L|L|S\r"
+      "Balaza|Lwakubiri|Lwakusatu|Lwakuna|Lwakutaano|Lwamukaaga|Sabbiiti\r\nBal|Lw2|Lw3|Lw4|Lw5|Lw6|Sab\r\nB|L|L|L|L|L|S\r\nBal|Lw2|Lw3|Lw4|Lw5|Lw6|Sab\r"
 
   private const val lg_Format_Quarters: String =
       "Kyakuna 1|Kyakuna 2|Kyakuna 3|Kyakuna 4\r\nKya1|Kya2|Kya3|Kya4\r\n1|2|3|4\r"
@@ -8182,7 +8182,7 @@ object AvailableDateTimeDisplayNames {
       "Janwaliyo|Febwaliyo|Marisi|Apuli|Maayi|Juuni|Julaayi|Agusito|Sebuttemba|Okitobba|Novemba|Desemba\r\nJan|Feb|Mar|Apu|Maa|Juu|Jul|Agu|Seb|Oki|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val lg_Standalone_Days: String =
-      "Balaza|Lwakubiri|Lwakusatu|Lwakuna|Lwakutaano|Lwamukaaga|Sabbiiti\r\nBal|Lw2|Lw3|Lw4|Lw5|Lw6|Sab\r\nB|L|L|L|L|L|S\r"
+      "Balaza|Lwakubiri|Lwakusatu|Lwakuna|Lwakutaano|Lwamukaaga|Sabbiiti\r\nBal|Lw2|Lw3|Lw4|Lw5|Lw6|Sab\r\nB|L|L|L|L|L|S\r\nBal|Lw2|Lw3|Lw4|Lw5|Lw6|Sab\r"
 
   private const val lg_Standalone_Quarters: String =
       "Kyakuna 1|Kyakuna 2|Kyakuna 3|Kyakuna 4\r\nKya1|Kya2|Kya3|Kya4\r\n1|2|3|4\r"
@@ -8193,7 +8193,7 @@ object AvailableDateTimeDisplayNames {
       "de zenâ|de frevâ|de marso|d’arvî|de mazzo|de zugno|de luggio|d’agosto|de settembre|d’ottobre|de novembre|de dexembre\r\nde zenâ|de frevâ|de marso|d’arvî|de mazzo|de zugno|de luggio|d’agosto|de settembre|d’ottobre|de novembre|de dexembre\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val lij_Format_Days: String =
-      "lunesdì|mätesdì|mäcordì|zeuggia|venardì|sabbo|domenega\r\nlunesdì|mätesdì|mäcordì|zeuggia|venardì|sabbo|domenega\r\nM|T|W|T|F|S|S\r"
+      "lunesdì|mätesdì|mäcordì|zeuggia|venardì|sabbo|domenega\r\nlunesdì|mätesdì|mäcordì|zeuggia|venardì|sabbo|domenega\r\nM|T|W|T|F|S|S\r\nlunesdì|mätesdì|mäcordì|zeuggia|venardì|sabbo|domenega\r"
 
   private val lij_Format_Quarters: String? = null
 
@@ -8203,7 +8203,7 @@ object AvailableDateTimeDisplayNames {
       "de zenâ|de frevâ|de marso|d’arvî|de mazzo|de zugno|de luggio|d’agosto|de settembre|d’ottobre|de novembre|de dexembre\r\nde zenâ|de frevâ|de marso|d’arvî|de mazzo|de zugno|de luggio|d’agosto|de settembre|d’ottobre|de novembre|de dexembre\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val lij_Standalone_Days: String =
-      "lunesdì|mätesdì|mäcordì|zeuggia|venardì|sabbo|domenega\r\nlunesdì|mätesdì|mäcordì|zeuggia|venardì|sabbo|domenega\r\nM|T|W|T|F|S|S\r"
+      "lunesdì|mätesdì|mäcordì|zeuggia|venardì|sabbo|domenega\r\nlunesdì|mätesdì|mäcordì|zeuggia|venardì|sabbo|domenega\r\nM|T|W|T|F|S|S\r\nlunesdì|mätesdì|mäcordì|zeuggia|venardì|sabbo|domenega\r"
 
   private val lij_Standalone_Quarters: String? = null
 
@@ -8213,7 +8213,7 @@ object AvailableDateTimeDisplayNames {
       "Wiótheȟika Wí|Thiyóȟeyuŋka Wí|Ištáwičhayazaŋ Wí|Pȟežítȟo Wí|Čhaŋwápetȟo Wí|Wípazukȟa-wašté Wí|Čhaŋpȟásapa Wí|Wasútȟuŋ Wí|Čhaŋwápeǧi Wí|Čhaŋwápe-kasná Wí|Waníyetu Wí|Tȟahékapšuŋ Wí\r\nWiótheȟika Wí|Thiyóȟeyuŋka Wí|Ištáwičhayazaŋ Wí|Pȟežítȟo Wí|Čhaŋwápetȟo Wí|Wípazukȟa-wašté Wí|Čhaŋpȟásapa Wí|Wasútȟuŋ Wí|Čhaŋwápeǧi Wí|Čhaŋwápe-kasná Wí|Waníyetu Wí|Tȟahékapšuŋ Wí\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val lkt_Format_Days: String =
-      "Aŋpétuwaŋži|Aŋpétunuŋpa|Aŋpétuyamni|Aŋpétutopa|Aŋpétuzaptaŋ|Owáŋgyužažapi|Aŋpétuwakȟaŋ\r\nAŋpétuwaŋži|Aŋpétunuŋpa|Aŋpétuyamni|Aŋpétutopa|Aŋpétuzaptaŋ|Owáŋgyužažapi|Aŋpétuwakȟaŋ\r\nW|N|Y|T|Z|O|A\r"
+      "Aŋpétuwaŋži|Aŋpétunuŋpa|Aŋpétuyamni|Aŋpétutopa|Aŋpétuzaptaŋ|Owáŋgyužažapi|Aŋpétuwakȟaŋ\r\nAŋpétuwaŋži|Aŋpétunuŋpa|Aŋpétuyamni|Aŋpétutopa|Aŋpétuzaptaŋ|Owáŋgyužažapi|Aŋpétuwakȟaŋ\r\nW|N|Y|T|Z|O|A\r\nAŋpétuwaŋži|Aŋpétunuŋpa|Aŋpétuyamni|Aŋpétutopa|Aŋpétuzaptaŋ|Owáŋgyužažapi|Aŋpétuwakȟaŋ\r"
 
   private val lkt_Format_Quarters: String? = null
 
@@ -8223,7 +8223,7 @@ object AvailableDateTimeDisplayNames {
       "Wiótheȟika Wí|Thiyóȟeyuŋka Wí|Ištáwičhayazaŋ Wí|Pȟežítȟo Wí|Čhaŋwápetȟo Wí|Wípazukȟa-wašté Wí|Čhaŋpȟásapa Wí|Wasútȟuŋ Wí|Čhaŋwápeǧi Wí|Čhaŋwápe-kasná Wí|Waníyetu Wí|Tȟahékapšuŋ Wí\r\nWiótheȟika Wí|Thiyóȟeyuŋka Wí|Ištáwičhayazaŋ Wí|Pȟežítȟo Wí|Čhaŋwápetȟo Wí|Wípazukȟa-wašté Wí|Čhaŋpȟásapa Wí|Wasútȟuŋ Wí|Čhaŋwápeǧi Wí|Čhaŋwápe-kasná Wí|Waníyetu Wí|Tȟahékapšuŋ Wí\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val lkt_Standalone_Days: String =
-      "Aŋpétuwaŋži|Aŋpétunuŋpa|Aŋpétuyamni|Aŋpétutopa|Aŋpétuzaptaŋ|Owáŋgyužažapi|Aŋpétuwakȟaŋ\r\nAŋpétuwaŋži|Aŋpétunuŋpa|Aŋpétuyamni|Aŋpétutopa|Aŋpétuzaptaŋ|Owáŋgyužažapi|Aŋpétuwakȟaŋ\r\nM|T|W|T|F|S|S\r"
+      "Aŋpétuwaŋži|Aŋpétunuŋpa|Aŋpétuyamni|Aŋpétutopa|Aŋpétuzaptaŋ|Owáŋgyužažapi|Aŋpétuwakȟaŋ\r\nAŋpétuwaŋži|Aŋpétunuŋpa|Aŋpétuyamni|Aŋpétutopa|Aŋpétuzaptaŋ|Owáŋgyužažapi|Aŋpétuwakȟaŋ\r\nM|T|W|T|F|S|S\r\nAŋpétuwaŋži|Aŋpétunuŋpa|Aŋpétuyamni|Aŋpétutopa|Aŋpétuzaptaŋ|Owáŋgyužažapi|Aŋpétuwakȟaŋ\r"
 
   private val lkt_Standalone_Quarters: String? = null
 
@@ -8233,7 +8233,7 @@ object AvailableDateTimeDisplayNames {
       "de jená|de forá|de merz|d’aurí|de ma|de jügn|de messé|d’aost|de setëmber|d’otober|de novëmber|de dezëmber\r\nde jená|de forá|de merz|d’aurí|de ma|de jügn|de messé|d’aost|de set|d’oto|de nov|de dez\r\nJ|F|M|A|M|J|M|A|S|O|N|D\r"
 
   private const val lld_Format_Days: String =
-      "lönesc|mertesc|mercui|jöbia|vëndres|sabeda|domënia\r\nlön|mert|merc|jöb|vën|sab|dom\r\nL|M|M|J|V|S|D\r"
+      "lönesc|mertesc|mercui|jöbia|vëndres|sabeda|domënia\r\nlön|mert|merc|jöb|vën|sab|dom\r\nL|M|M|J|V|S|D\r\nlön|mert|merc|jöb|vën|sab|dom\r"
 
   private const val lld_Format_Quarters: String =
       "pröm trimester|secundo trimester|terzo trimester|cuarto trimester\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -8244,7 +8244,7 @@ object AvailableDateTimeDisplayNames {
       "jená|forá|merz|aurí|ma|jügn|messé|aost|setëmber|otober|novëmber|dezëmber\r\njená|forá|merz|aurí|ma|jügn|messé|aost|set|oto|nov|dez\r\nJ|F|M|A|M|J|M|A|S|O|N|D\r"
 
   private const val lld_Standalone_Days: String =
-      "lönesc|mertesc|mercui|jöbia|vëndres|sabeda|domënia\r\nlön|mert|merc|jöb|vën|sab|dom\r\nL|M|M|J|V|S|D\r"
+      "lönesc|mertesc|mercui|jöbia|vëndres|sabeda|domënia\r\nlön|mert|merc|jöb|vën|sab|dom\r\nL|M|M|J|V|S|D\r\nlön|mert|merc|jöb|vën|sab|dom\r"
 
   private const val lld_Standalone_Quarters: String =
       "pröm trimester|secundo trimester|terzo trimester|cuarto trimester\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -8255,7 +8255,7 @@ object AvailableDateTimeDisplayNames {
       "sginer|fevrer|marz|avril|masg|sgiugn|luj|avost|setember|otover|november|dicember\r\nsginer|fevrer|marz|avril|masg|sgiugn|luj|avost|setember|otover|november|dicember\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val lmo_Format_Days: String =
-      "lundì|mardì|mercoldì|sgiovedì|venerdì|sabet|domenega\r\nlundì|mardì|mercoldì|sgiovedì|venerdì|sabet|domenega\r\nM|T|W|T|F|S|S\r"
+      "lundì|mardì|mercoldì|sgiovedì|venerdì|sabet|domenega\r\nlundì|mardì|mercoldì|sgiovedì|venerdì|sabet|domenega\r\nM|T|W|T|F|S|S\r\nlundì|mardì|mercoldì|sgiovedì|venerdì|sabet|domenega\r"
 
   private val lmo_Format_Quarters: String? = null
 
@@ -8265,7 +8265,7 @@ object AvailableDateTimeDisplayNames {
       "sginer|fevrer|marz|avril|masg|sgiugn|luj|avost|setember|otover|november|dicember\r\nsginer|fevrer|marz|avril|masg|sgiugn|luj|avost|setember|otover|november|dicember\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val lmo_Standalone_Days: String =
-      "lundì|mardì|mercoldì|sgiovedì|venerdì|sabet|domenega\r\nlundì|mardì|mercoldì|sgiovedì|venerdì|sabet|domenega\r\nM|T|W|T|F|S|S\r"
+      "lundì|mardì|mercoldì|sgiovedì|venerdì|sabet|domenega\r\nlundì|mardì|mercoldì|sgiovedì|venerdì|sabet|domenega\r\nM|T|W|T|F|S|S\r\nlundì|mardì|mercoldì|sgiovedì|venerdì|sabet|domenega\r"
 
   private val lmo_Standalone_Quarters: String? = null
 
@@ -8275,7 +8275,7 @@ object AvailableDateTimeDisplayNames {
       "sánzá ya yambo|sánzá ya míbalé|sánzá ya mísáto|sánzá ya mínei|sánzá ya mítáno|sánzá ya motóbá|sánzá ya nsambo|sánzá ya mwambe|sánzá ya libwa|sánzá ya zómi|sánzá ya zómi na mɔ̌kɔ́|sánzá ya zómi na míbalé\r\nyan|fbl|msi|apl|mai|yun|yul|agt|stb|ɔtb|nvb|dsb\r\ny|f|m|a|m|y|y|a|s|ɔ|n|d\r"
 
   private const val ln_Format_Days: String =
-      "mokɔlɔ mwa yambo|mokɔlɔ mwa míbalé|mokɔlɔ mwa mísáto|mokɔlɔ ya mínéi|mokɔlɔ ya mítáno|mpɔ́sɔ|eyenga\r\nybo|mbl|mst|min|mtn|mps|eye\r\ny|m|m|m|m|p|e\r"
+      "mokɔlɔ mwa yambo|mokɔlɔ mwa míbalé|mokɔlɔ mwa mísáto|mokɔlɔ ya mínéi|mokɔlɔ ya mítáno|mpɔ́sɔ|eyenga\r\nybo|mbl|mst|min|mtn|mps|eye\r\ny|m|m|m|m|p|e\r\nybo|mbl|mst|min|mtn|mps|eye\r"
 
   private const val ln_Format_Quarters: String =
       "sánzá mísáto ya yambo|sánzá mísáto ya míbalé|sánzá mísáto ya mísáto|sánzá mísáto ya mínei\r\nSM1|SM2|SM3|SM4\r\n1|2|3|4\r"
@@ -8287,7 +8287,7 @@ object AvailableDateTimeDisplayNames {
       "sánzá ya yambo|sánzá ya míbalé|sánzá ya mísáto|sánzá ya mínei|sánzá ya mítáno|sánzá ya motóbá|sánzá ya nsambo|sánzá ya mwambe|sánzá ya libwa|sánzá ya zómi|sánzá ya zómi na mɔ̌kɔ́|sánzá ya zómi na míbalé\r\nyan|fbl|msi|apl|mai|yun|yul|agt|stb|ɔtb|nvb|dsb\r\ny|f|m|a|m|y|y|a|s|ɔ|n|d\r"
 
   private const val ln_Standalone_Days: String =
-      "mokɔlɔ mwa yambo|mokɔlɔ mwa míbalé|mokɔlɔ mwa mísáto|mokɔlɔ ya mínéi|mokɔlɔ ya mítáno|mpɔ́sɔ|eyenga\r\nybo|mbl|mst|min|mtn|mps|eye\r\ny|m|m|m|m|p|e\r"
+      "mokɔlɔ mwa yambo|mokɔlɔ mwa míbalé|mokɔlɔ mwa mísáto|mokɔlɔ ya mínéi|mokɔlɔ ya mítáno|mpɔ́sɔ|eyenga\r\nybo|mbl|mst|min|mtn|mps|eye\r\ny|m|m|m|m|p|e\r\nybo|mbl|mst|min|mtn|mps|eye\r"
 
   private const val ln_Standalone_Quarters: String =
       "sánzá mísáto ya yambo|sánzá mísáto ya míbalé|sánzá mísáto ya mísáto|sánzá mísáto ya mínei\r\nSM1|SM2|SM3|SM4\r\n1|2|3|4\r"
@@ -8347,7 +8347,7 @@ object AvailableDateTimeDisplayNames {
       "ມັງກອນ|ກຸມພາ|ມີນາ|ເມສາ|ພຶດສະພາ|ມິຖຸນາ|ກໍລະກົດ|ສິງຫາ|ກັນຍາ|ຕຸລາ|ພະຈິກ|ທັນວາ\r\nມ.ກ.|ກ.ພ.|ມ.ນ.|ມ.ສ.|ພ.ພ.|ມິ.ຖ.|ກ.ລ.|ສ.ຫ.|ກ.ຍ.|ຕ.ລ.|ພ.ຈ.|ທ.ວ.\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val lo_Format_Days: String =
-      "ວັນຈັນ|ວັນອັງຄານ|ວັນພຸດ|ວັນພະຫັດ|ວັນສຸກ|ວັນເສົາ|ວັນອາທິດ\r\nຈັນ|ອັງຄານ|ພຸດ|ພະຫັດ|ສຸກ|ເສົາ|ອາທິດ\r\nຈ|ອ|ພ|ພຫ|ສຸ|ສ|ອາ\r"
+      "ວັນຈັນ|ວັນອັງຄານ|ວັນພຸດ|ວັນພະຫັດ|ວັນສຸກ|ວັນເສົາ|ວັນອາທິດ\r\nຈັນ|ອັງຄານ|ພຸດ|ພະຫັດ|ສຸກ|ເສົາ|ອາທິດ\r\nຈ|ອ|ພ|ພຫ|ສຸ|ສ|ອາ\r\nຈ.|ອ.|ພ.|ພຫ.|ສຸ.|ສ.|ອາ.\r"
 
   private const val lo_Format_Quarters: String =
       "ໄຕຣມາດ 1|ໄຕຣມາດ 2|ໄຕຣມາດ 3|ໄຕຣມາດ 4\r\nຕມ1|ຕມ2|ຕມ3|ຕມ4\r\n1|2|3|4\r"
@@ -8359,7 +8359,7 @@ object AvailableDateTimeDisplayNames {
       "ມັງກອນ|ກຸມພາ|ມີນາ|ເມສາ|ພຶດສະພາ|ມິຖຸນາ|ກໍລະກົດ|ສິງຫາ|ກັນຍາ|ຕຸລາ|ພະຈິກ|ທັນວາ\r\nມ.ກ.|ກ.ພ.|ມ.ນ.|ມ.ສ.|ພ.ພ.|ມິ.ຖ.|ກ.ລ.|ສ.ຫ.|ກ.ຍ.|ຕ.ລ.|ພ.ຈ.|ທ.ວ.\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val lo_Standalone_Days: String =
-      "ວັນຈັນ|ວັນອັງຄານ|ວັນພຸດ|ວັນພະຫັດ|ວັນສຸກ|ວັນເສົາ|ວັນອາທິດ\r\nຈັນ|ອັງຄານ|ພຸດ|ພະຫັດ|ສຸກ|ເສົາ|ອາທິດ\r\nຈ|ອ|ພ|ພຫ|ສຸ|ສ|ອາ\r"
+      "ວັນຈັນ|ວັນອັງຄານ|ວັນພຸດ|ວັນພະຫັດ|ວັນສຸກ|ວັນເສົາ|ວັນອາທິດ\r\nຈັນ|ອັງຄານ|ພຸດ|ພະຫັດ|ສຸກ|ເສົາ|ອາທິດ\r\nຈ|ອ|ພ|ພຫ|ສຸ|ສ|ອາ\r\nຈ.|ອ.|ພ.|ພຫ.|ສຸ.|ສ.|ອາ.\r"
 
   private const val lo_Standalone_Quarters: String =
       "ໄຕຣມາດ 1|ໄຕຣມາດ 2|ໄຕຣມາດ 3|ໄຕຣມາດ 4\r\nຕ1|ຕ2|ຕ3|ຕ4\r\n1|2|3|4\r"
@@ -8406,7 +8406,7 @@ object AvailableDateTimeDisplayNames {
       "sausio|vasario|kovo|balandžio|gegužės|birželio|liepos|rugpjūčio|rugsėjo|spalio|lapkričio|gruodžio\r\nsaus.|vas.|kov.|bal.|geg.|birž.|liep.|rugp.|rugs.|spal.|lapkr.|gruod.\r\nS|V|K|B|G|B|L|R|R|S|L|G\r"
 
   private const val lt_Format_Days: String =
-      "pirmadienis|antradienis|trečiadienis|ketvirtadienis|penktadienis|šeštadienis|sekmadienis\r\npr|an|tr|kt|pn|št|sk\r\nP|A|T|K|P|Š|S\r"
+      "pirmadienis|antradienis|trečiadienis|ketvirtadienis|penktadienis|šeštadienis|sekmadienis\r\npr|an|tr|kt|pn|št|sk\r\nP|A|T|K|P|Š|S\r\nPr|An|Tr|Kt|Pn|Št|Sk\r"
 
   private const val lt_Format_Quarters: String =
       "I ketvirtis|II ketvirtis|III ketvirtis|IV ketvirtis\r\nI k.|II k.|III k.|IV k.\r\n1|2|3|4\r"
@@ -8418,7 +8418,7 @@ object AvailableDateTimeDisplayNames {
       "sausis|vasaris|kovas|balandis|gegužė|birželis|liepa|rugpjūtis|rugsėjis|spalis|lapkritis|gruodis\r\nsaus.|vas.|kov.|bal.|geg.|birž.|liep.|rugp.|rugs.|spal.|lapkr.|gruod.\r\nS|V|K|B|G|B|L|R|R|S|L|G\r"
 
   private const val lt_Standalone_Days: String =
-      "pirmadienis|antradienis|trečiadienis|ketvirtadienis|penktadienis|šeštadienis|sekmadienis\r\npr|an|tr|kt|pn|št|sk\r\nP|A|T|K|P|Š|S\r"
+      "pirmadienis|antradienis|trečiadienis|ketvirtadienis|penktadienis|šeštadienis|sekmadienis\r\npr|an|tr|kt|pn|št|sk\r\nP|A|T|K|P|Š|S\r\nPr|An|Tr|Kt|Pn|Št|Sk\r"
 
   private const val lt_Standalone_Quarters: String =
       "I ketvirtis|II ketvirtis|III ketvirtis|IV ketvirtis\r\nI ketv.|II ketv.|III ketv.|IV ketv.\r\n1|2|3|4\r"
@@ -8446,7 +8446,7 @@ object AvailableDateTimeDisplayNames {
       "Ciongo|Lùishi|Lusòlo|Mùuyà|Lumùngùlù|Lufuimi|Kabàlàshìpù|Lùshìkà|Lutongolo|Lungùdi|Kaswèkèsè|Ciswà\r\nCio|Lui|Lus|Muu|Lum|Luf|Kab|Lush|Lut|Lun|Kas|Cis\r\nC|L|L|M|L|L|K|L|L|L|K|C\r"
 
   private const val lu_Format_Days: String =
-      "Nkodya|Ndàayà|Ndangù|Njòwa|Ngòvya|Lubingu|Lumingu\r\nNko|Ndy|Ndg|Njw|Ngv|Lub|Lum\r\nN|N|N|N|N|L|L\r"
+      "Nkodya|Ndàayà|Ndangù|Njòwa|Ngòvya|Lubingu|Lumingu\r\nNko|Ndy|Ndg|Njw|Ngv|Lub|Lum\r\nN|N|N|N|N|L|L\r\nNko|Ndy|Ndg|Njw|Ngv|Lub|Lum\r"
 
   private const val lu_Format_Quarters: String =
       "Mueji 1|Mueji 2|Mueji 3|Mueji 4\r\nM1|M2|M3|M4\r\n1|2|3|4\r"
@@ -8458,7 +8458,7 @@ object AvailableDateTimeDisplayNames {
       "Ciongo|Lùishi|Lusòlo|Mùuyà|Lumùngùlù|Lufuimi|Kabàlàshìpù|Lùshìkà|Lutongolo|Lungùdi|Kaswèkèsè|Ciswà\r\nCio|Lui|Lus|Muu|Lum|Luf|Kab|Lush|Lut|Lun|Kas|Cis\r\nC|L|L|M|L|L|K|L|L|L|K|C\r"
 
   private const val lu_Standalone_Days: String =
-      "Nkodya|Ndàayà|Ndangù|Njòwa|Ngòvya|Lubingu|Lumingu\r\nNko|Ndy|Ndg|Njw|Ngv|Lub|Lum\r\nN|N|N|N|N|L|L\r"
+      "Nkodya|Ndàayà|Ndangù|Njòwa|Ngòvya|Lubingu|Lumingu\r\nNko|Ndy|Ndg|Njw|Ngv|Lub|Lum\r\nN|N|N|N|N|L|L\r\nNko|Ndy|Ndg|Njw|Ngv|Lub|Lum\r"
 
   private const val lu_Standalone_Quarters: String =
       "Mueji 1|Mueji 2|Mueji 3|Mueji 4\r\nM1|M2|M3|M4\r\n1|2|3|4\r"
@@ -8470,7 +8470,7 @@ object AvailableDateTimeDisplayNames {
       "Dwe mar Achiel|Dwe mar Ariyo|Dwe mar Adek|Dwe mar Ang’wen|Dwe mar Abich|Dwe mar Auchiel|Dwe mar Abiriyo|Dwe mar Aboro|Dwe mar Ochiko|Dwe mar Apar|Dwe mar gi achiel|Dwe mar Apar gi ariyo\r\nDAC|DAR|DAD|DAN|DAH|DAU|DAO|DAB|DOC|DAP|DGI|DAG\r\nC|R|D|N|B|U|B|B|C|P|C|P\r"
 
   private const val luo_Format_Days: String =
-      "Wuok Tich|Tich Ariyo|Tich Adek|Tich Ang’wen|Tich Abich|Ngeso|Jumapil\r\nWUT|TAR|TAD|TAN|TAB|NGS|JMP\r\nW|T|T|T|T|N|J\r"
+      "Wuok Tich|Tich Ariyo|Tich Adek|Tich Ang’wen|Tich Abich|Ngeso|Jumapil\r\nWUT|TAR|TAD|TAN|TAB|NGS|JMP\r\nW|T|T|T|T|N|J\r\nWUT|TAR|TAD|TAN|TAB|NGS|JMP\r"
 
   private const val luo_Format_Quarters: String =
       "nus mar nus 1|nus mar nus 2|nus mar nus 3|nus mar nus 4\r\nNMN1|NMN2|NMN3|NMN4\r\n1|2|3|4\r"
@@ -8481,7 +8481,7 @@ object AvailableDateTimeDisplayNames {
       "Dwe mar Achiel|Dwe mar Ariyo|Dwe mar Adek|Dwe mar Ang’wen|Dwe mar Abich|Dwe mar Auchiel|Dwe mar Abiriyo|Dwe mar Aboro|Dwe mar Ochiko|Dwe mar Apar|Dwe mar gi achiel|Dwe mar Apar gi ariyo\r\nDAC|DAR|DAD|DAN|DAH|DAU|DAO|DAB|DOC|DAP|DGI|DAG\r\nC|R|D|N|B|U|B|B|C|P|C|P\r"
 
   private const val luo_Standalone_Days: String =
-      "Wuok Tich|Tich Ariyo|Tich Adek|Tich Ang’wen|Tich Abich|Ngeso|Jumapil\r\nWUT|TAR|TAD|TAN|TAB|NGS|JMP\r\nW|T|T|T|T|N|J\r"
+      "Wuok Tich|Tich Ariyo|Tich Adek|Tich Ang’wen|Tich Abich|Ngeso|Jumapil\r\nWUT|TAR|TAD|TAN|TAB|NGS|JMP\r\nW|T|T|T|T|N|J\r\nWUT|TAR|TAD|TAN|TAB|NGS|JMP\r"
 
   private const val luo_Standalone_Quarters: String =
       "nus mar nus 1|nus mar nus 2|nus mar nus 3|nus mar nus 4\r\nNMN1|NMN2|NMN3|NMN4\r\n1|2|3|4\r"
@@ -8492,7 +8492,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprili|Mei|Juni|Julai|Agosti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mar|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val luy_Format_Days: String =
-      "Jumatatu|Jumanne|Jumatano|Murwa wa Kanne|Murwa wa Katano|Jumamosi|Jumapiri\r\nJ3|J4|J5|Al|Ij|J1|J2\r\nM|T|W|T|F|S|S\r"
+      "Jumatatu|Jumanne|Jumatano|Murwa wa Kanne|Murwa wa Katano|Jumamosi|Jumapiri\r\nJ3|J4|J5|Al|Ij|J1|J2\r\nM|T|W|T|F|S|S\r\nJ3|J4|J5|Al|Ij|J1|J2\r"
 
   private const val luy_Format_Quarters: String =
       "Robo ya Kala|Robo ya Kaviri|Robo ya Kavaga|Robo ya Kanne\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -8503,7 +8503,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprili|Mei|Juni|Julai|Agosti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mar|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val luy_Standalone_Days: String =
-      "Jumatatu|Jumanne|Jumatano|Murwa wa Kanne|Murwa wa Katano|Jumamosi|Jumapiri\r\nJ3|J4|J5|Al|Ij|J1|J2\r\nM|T|W|T|F|S|S\r"
+      "Jumatatu|Jumanne|Jumatano|Murwa wa Kanne|Murwa wa Katano|Jumamosi|Jumapiri\r\nJ3|J4|J5|Al|Ij|J1|J2\r\nM|T|W|T|F|S|S\r\nJ3|J4|J5|Al|Ij|J1|J2\r"
 
   private const val luy_Standalone_Quarters: String =
       "Robo ya Kala|Robo ya Kaviri|Robo ya Kavaga|Robo ya Kanne\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -8515,7 +8515,7 @@ object AvailableDateTimeDisplayNames {
       "janvāris|februāris|marts|aprīlis|maijs|jūnijs|jūlijs|augusts|septembris|oktobris|novembris|decembris\r\njanv.|febr.|marts|apr.|maijs|jūn.|jūl.|aug.|sept.|okt.|nov.|dec.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val lv_Format_Days: String =
-      "pirmdiena|otrdiena|trešdiena|ceturtdiena|piektdiena|sestdiena|svētdiena\r\npirmd.|otrd.|trešd.|ceturtd.|piektd.|sestd.|svētd.\r\nP|O|T|C|P|S|S\r"
+      "pirmdiena|otrdiena|trešdiena|ceturtdiena|piektdiena|sestdiena|svētdiena\r\npirmd.|otrd.|trešd.|ceturtd.|piektd.|sestd.|svētd.\r\nP|O|T|C|P|S|S\r\nPr|Ot|Tr|Ce|Pk|Se|Sv\r"
 
   private const val lv_Format_Quarters: String =
       "1. ceturksnis|2. ceturksnis|3. ceturksnis|4. ceturksnis\r\n1. cet.|2. cet.|3. cet.|4. cet.\r\n1.|2.|3.|4.\r"
@@ -8527,7 +8527,7 @@ object AvailableDateTimeDisplayNames {
       "janvāris|februāris|marts|aprīlis|maijs|jūnijs|jūlijs|augusts|septembris|oktobris|novembris|decembris\r\njanv.|febr.|marts|apr.|maijs|jūn.|jūl.|aug.|sept.|okt.|nov.|dec.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val lv_Standalone_Days: String =
-      "Pirmdiena|Otrdiena|Trešdiena|Ceturtdiena|Piektdiena|Sestdiena|Svētdiena\r\nPirmd.|Otrd.|Trešd.|Ceturtd.|Piektd.|Sestd.|Svētd.\r\nP|O|T|C|P|S|S\r"
+      "Pirmdiena|Otrdiena|Trešdiena|Ceturtdiena|Piektdiena|Sestdiena|Svētdiena\r\nPirmd.|Otrd.|Trešd.|Ceturtd.|Piektd.|Sestd.|Svētd.\r\nP|O|T|C|P|S|S\r\nPr|Ot|Tr|Ce|Pk|Se|Sv\r"
 
   private const val lv_Standalone_Quarters: String =
       "1. ceturksnis|2. ceturksnis|3. ceturksnis|4. ceturksnis\r\n1. cet.|2. cet.|3. cet.|4. cet.\r\n1.|2.|3.|4.\r"
@@ -8539,7 +8539,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्तूबर|नवंबर|दिसंबर\r\nजन॰|फ़र॰|मार्च|अप्रैल|मई|जून|जुल॰|अग॰|सित॰|अक्तू॰|नव॰|दिस॰\r\nज|फ|मा|अ|म|जू|जु|अ|सि|अ|न|दि\r"
 
   private const val mai_Format_Days: String =
-      "सोम दिन|मंगल दिन|बुध दिन|बृहस्पति दिन|शुक्र दिन|शनि दिन|रवि दिन\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r"
+      "सोम दिन|मंगल दिन|बुध दिन|बृहस्पति दिन|शुक्र दिन|शनि दिन|रवि दिन\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r"
 
   private const val mai_Format_Quarters: String =
       "पहिल तिमाही|दोसर तिमाही|तेसर तिमाही|चारिम तिमाही\r\nति1|ति2|ति3|ति4\r\n1|2|3|4\r"
@@ -8550,7 +8550,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्टूबर|नवंबर|दिसंबर\r\nजन॰|फर॰|मार्च|अप्रैल|मई|जून|जुल॰|अग॰|सित॰|अक्तू॰|नव॰|दिस॰\r\nज|फ|मा|अ|म|जू|जु|अ|सि|अ|न|दि\r"
 
   private const val mai_Standalone_Days: String =
-      "सोम दिन|मंगल दिन|बुध दिन|बृहस्पति दिन|शुक्र दिन|शनि दिन|रवि दिन\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r"
+      "सोम दिन|मंगल दिन|बुध दिन|बृहस्पति दिन|शुक्र दिन|शनि दिन|रवि दिन\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r"
 
   private const val mai_Standalone_Quarters: String =
       "पहिल तिमाही|दोसर तिमाही|तेसर तिमाही|चारिम तिमाही\r\nति1|ति2|ति3|ति4\r\n1|2|3|4\r"
@@ -8562,7 +8562,7 @@ object AvailableDateTimeDisplayNames {
       "Oladalʉ́|Arát|Ɔɛnɨ́ɔɨŋɔk|Olodoyíóríê inkókúâ|Oloilépūnyīē inkókúâ|Kújúɔrɔk|Mórusásin|Ɔlɔ́ɨ́bɔ́rárɛ|Kúshîn|Olgísan|Pʉshʉ́ka|Ntʉ́ŋʉ́s\r\nDal|Ará|Ɔɛn|Doy|Lép|Rok|Sás|Bɔ́r|Kús|Gís|Shʉ́|Ntʉ́\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val mas_Format_Days: String =
-      "Jumatátu|Jumane|Jumatánɔ|Alaámisi|Jumáa|Jumamósi|Jumapílí\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\n3|4|5|6|7|1|2\r"
+      "Jumatátu|Jumane|Jumatánɔ|Alaámisi|Jumáa|Jumamósi|Jumapílí\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\n3|4|5|6|7|1|2\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r"
 
   private const val mas_Format_Quarters: String =
       "Erobo 1|Erobo 2|Erobo 3|Erobo 4\r\nE1|E2|E3|E4\r\n1|2|3|4\r"
@@ -8574,7 +8574,7 @@ object AvailableDateTimeDisplayNames {
       "Oladalʉ́|Arát|Ɔɛnɨ́ɔɨŋɔk|Olodoyíóríê inkókúâ|Oloilépūnyīē inkókúâ|Kújúɔrɔk|Mórusásin|Ɔlɔ́ɨ́bɔ́rárɛ|Kúshîn|Olgísan|Pʉshʉ́ka|Ntʉ́ŋʉ́s\r\nDal|Ará|Ɔɛn|Doy|Lép|Rok|Sás|Bɔ́r|Kús|Gís|Shʉ́|Ntʉ́\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val mas_Standalone_Days: String =
-      "Jumatátu|Jumane|Jumatánɔ|Alaámisi|Jumáa|Jumamósi|Jumapílí\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\n3|4|5|6|7|1|2\r"
+      "Jumatátu|Jumane|Jumatánɔ|Alaámisi|Jumáa|Jumamósi|Jumapílí\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\n3|4|5|6|7|1|2\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r"
 
   private const val mas_Standalone_Quarters: String =
       "Erobo 1|Erobo 2|Erobo 3|Erobo 4\r\nE1|E2|E3|E4\r\n1|2|3|4\r"
@@ -8618,7 +8618,7 @@ object AvailableDateTimeDisplayNames {
       "Januarĩ|Feburuarĩ|Machi|Ĩpurũ|Mĩĩ|Njuni|Njuraĩ|Agasti|Septemba|Oktũba|Novemba|Dicemba\r\nJAN|FEB|MAC|ĨPU|MĨĨ|NJU|NJR|AGA|SPT|OKT|NOV|DEC\r\nJ|F|M|Ĩ|M|N|N|A|S|O|N|D\r"
 
   private const val mer_Format_Days: String =
-      "Muramuko|Wairi|Wethatu|Wena|Wetano|Jumamosi|Kiumia\r\nMRA|WAI|WET|WEN|WTN|JUM|KIU\r\nM|W|W|W|W|J|K\r"
+      "Muramuko|Wairi|Wethatu|Wena|Wetano|Jumamosi|Kiumia\r\nMRA|WAI|WET|WEN|WTN|JUM|KIU\r\nM|W|W|W|W|J|K\r\nMRA|WAI|WET|WEN|WTN|JUM|KIU\r"
 
   private const val mer_Format_Quarters: String =
       "Ĩmwe kĩrĩ inya|Ijĩrĩ kĩrĩ inya|Ithatũ kĩrĩ inya|Inya kĩrĩ inya\r\nĨmwe kĩrĩ inya|Ijĩrĩ kĩrĩ inya|Ithatũ kĩrĩ inya|Inya kĩrĩ inya\r\n1|2|3|4\r"
@@ -8629,7 +8629,7 @@ object AvailableDateTimeDisplayNames {
       "Januarĩ|Feburuarĩ|Machi|Ĩpurũ|Mĩĩ|Njuni|Njuraĩ|Agasti|Septemba|Oktũba|Novemba|Dicemba\r\nJAN|FEB|MAC|ĨPU|MĨĨ|NJU|NJR|AGA|SPT|OKT|NOV|DEC\r\nJ|F|M|Ĩ|M|N|N|A|S|O|N|D\r"
 
   private const val mer_Standalone_Days: String =
-      "Muramuko|Wairi|Wethatu|Wena|Wetano|Jumamosi|Kiumia\r\nMRA|WAI|WET|WEN|WTN|JUM|KIU\r\nM|W|W|W|W|J|K\r"
+      "Muramuko|Wairi|Wethatu|Wena|Wetano|Jumamosi|Kiumia\r\nMRA|WAI|WET|WEN|WTN|JUM|KIU\r\nM|W|W|W|W|J|K\r\nMRA|WAI|WET|WEN|WTN|JUM|KIU\r"
 
   private const val mer_Standalone_Quarters: String =
       "Ĩmwe kĩrĩ inya|Ijĩrĩ kĩrĩ inya|Ithatũ kĩrĩ inya|Inya kĩrĩ inya\r\nĨmwe kĩrĩ inya|Ijĩrĩ kĩrĩ inya|Ithatũ kĩrĩ inya|Inya kĩrĩ inya\r\n1|2|3|4\r"
@@ -8640,7 +8640,7 @@ object AvailableDateTimeDisplayNames {
       "zanvie|fevriye|mars|avril|me|zin|zilye|out|septam|oktob|novam|desam\r\nzan|fev|mar|avr|me|zin|zil|out|sep|okt|nov|des\r\nz|f|m|a|m|z|z|o|s|o|n|d\r"
 
   private const val mfe_Format_Days: String =
-      "lindi|mardi|merkredi|zedi|vandredi|samdi|dimans\r\nlin|mar|mer|ze|van|sam|dim\r\nl|m|m|z|v|s|d\r"
+      "lindi|mardi|merkredi|zedi|vandredi|samdi|dimans\r\nlin|mar|mer|ze|van|sam|dim\r\nl|m|m|z|v|s|d\r\nlin|mar|mer|ze|van|sam|dim\r"
 
   private const val mfe_Format_Quarters: String =
       "1e trimes|2em trimes|3em trimes|4em trimes\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -8651,7 +8651,7 @@ object AvailableDateTimeDisplayNames {
       "zanvie|fevriye|mars|avril|me|zin|zilye|out|septam|oktob|novam|desam\r\nzan|fev|mar|avr|me|zin|zil|out|sep|okt|nov|des\r\nz|f|m|a|m|z|z|o|s|o|n|d\r"
 
   private const val mfe_Standalone_Days: String =
-      "lindi|mardi|merkredi|zedi|vandredi|samdi|dimans\r\nlin|mar|mer|ze|van|sam|dim\r\nl|m|m|z|v|s|d\r"
+      "lindi|mardi|merkredi|zedi|vandredi|samdi|dimans\r\nlin|mar|mer|ze|van|sam|dim\r\nl|m|m|z|v|s|d\r\nlin|mar|mer|ze|van|sam|dim\r"
 
   private const val mfe_Standalone_Quarters: String =
       "1e trimes|2em trimes|3em trimes|4em trimes\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -8662,7 +8662,7 @@ object AvailableDateTimeDisplayNames {
       "Janoary|Febroary|Martsa|Aprily|Mey|Jona|Jolay|Aogositra|Septambra|Oktobra|Novambra|Desambra\r\nJan|Feb|Mar|Apr|Mey|Jon|Jol|Aog|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val mg_Format_Days: String =
-      "Alatsinainy|Talata|Alarobia|Alakamisy|Zoma|Asabotsy|Alahady\r\nAlats|Tal|Alar|Alak|Zom|Asab|Alah\r\nA|T|A|A|Z|A|A\r"
+      "Alatsinainy|Talata|Alarobia|Alakamisy|Zoma|Asabotsy|Alahady\r\nAlats|Tal|Alar|Alak|Zom|Asab|Alah\r\nA|T|A|A|Z|A|A\r\nAlats|Tal|Alar|Alak|Zom|Asab|Alah\r"
 
   private const val mg_Format_Quarters: String =
       "Telovolana voalohany|Telovolana faharoa|Telovolana fahatelo|Telovolana fahefatra\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -8673,7 +8673,7 @@ object AvailableDateTimeDisplayNames {
       "Janoary|Febroary|Martsa|Aprily|Mey|Jona|Jolay|Aogositra|Septambra|Oktobra|Novambra|Desambra\r\nJan|Feb|Mar|Apr|Mey|Jon|Jol|Aog|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val mg_Standalone_Days: String =
-      "Alatsinainy|Talata|Alarobia|Alakamisy|Zoma|Asabotsy|Alahady\r\nAlats|Tal|Alar|Alak|Zom|Asab|Alah\r\nA|T|A|A|Z|A|A\r"
+      "Alatsinainy|Talata|Alarobia|Alakamisy|Zoma|Asabotsy|Alahady\r\nAlats|Tal|Alar|Alak|Zom|Asab|Alah\r\nA|T|A|A|Z|A|A\r\nAlats|Tal|Alar|Alak|Zom|Asab|Alah\r"
 
   private const val mg_Standalone_Quarters: String =
       "Telovolana voalohany|Telovolana faharoa|Telovolana fahatelo|Telovolana fahefatra\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -8684,7 +8684,7 @@ object AvailableDateTimeDisplayNames {
       "Mweri wo kwanza|Mweri wo unayeli|Mweri wo uneraru|Mweri wo unecheshe|Mweri wo unethanu|Mweri wo thanu na mocha|Mweri wo saba|Mweri wo nane|Mweri wo tisa|Mweri wo kumi|Mweri wo kumi na moja|Mweri wo kumi na yel’li\r\nKwa|Una|Rar|Che|Tha|Moc|Sab|Nan|Tis|Kum|Moj|Yel\r\nK|U|R|C|T|M|S|N|T|K|M|Y\r"
 
   private const val mgh_Format_Days: String =
-      "Jumatatu|Jumanne|Jumatano|Arahamisi|Ijumaa|Jumamosi|Sabato\r\nJtt|Jnn|Jtn|Ara|Iju|Jmo|Sab\r\nJ|J|J|A|I|J|S\r"
+      "Jumatatu|Jumanne|Jumatano|Arahamisi|Ijumaa|Jumamosi|Sabato\r\nJtt|Jnn|Jtn|Ara|Iju|Jmo|Sab\r\nJ|J|J|A|I|J|S\r\nJtt|Jnn|Jtn|Ara|Iju|Jmo|Sab\r"
 
   private val mgh_Format_Quarters: String? = null
 
@@ -8695,7 +8695,7 @@ object AvailableDateTimeDisplayNames {
       "Mweri wo kwanza|Mweri wo unayeli|Mweri wo uneraru|Mweri wo unecheshe|Mweri wo unethanu|Mweri wo thanu na mocha|Mweri wo saba|Mweri wo nane|Mweri wo tisa|Mweri wo kumi|Mweri wo kumi na moja|Mweri wo kumi na yel’li\r\nKwa|Una|Rar|Che|Tha|Moc|Sab|Nan|Tis|Kum|Moj|Yel\r\nK|U|R|C|T|M|S|N|T|K|M|Y\r"
 
   private const val mgh_Standalone_Days: String =
-      "Jumatatu|Jumanne|Jumatano|Arahamisi|Ijumaa|Jumamosi|Sabato\r\nJtt|Jnn|Jtn|Ara|Iju|Jmo|Sab\r\nJ|J|J|A|I|J|S\r"
+      "Jumatatu|Jumanne|Jumatano|Arahamisi|Ijumaa|Jumamosi|Sabato\r\nJtt|Jnn|Jtn|Ara|Iju|Jmo|Sab\r\nJ|J|J|A|I|J|S\r\nJtt|Jnn|Jtn|Ara|Iju|Jmo|Sab\r"
 
   private val mgh_Standalone_Quarters: String? = null
 
@@ -8706,7 +8706,7 @@ object AvailableDateTimeDisplayNames {
       "iməg mbegtug|imeg àbùbì|imeg mbəŋchubi|iməg ngwə̀t|iməg fog|iməg ichiibɔd|iməg àdùmbə̀ŋ|iməg ichika|iməg kud|iməg tèsiʼe|iməg zò|iməg krizmed\r\nmbegtug|imeg àbùbì|imeg mbəŋchubi|iməg ngwə̀t|iməg fog|iməg ichiibɔd|iməg àdùmbə̀ŋ|iməg ichika|iməg kud|iməg tèsiʼe|iməg zò|iməg krizmed\r\nM1|A2|M3|N4|F5|I6|A7|I8|K9|10|11|12\r"
 
   private const val mgo_Format_Days: String =
-      "Aneg 2|Aneg 3|Aneg 4|Aneg 5|Aneg 6|Aneg 7|Aneg 1\r\nAneg 2|Aneg 3|Aneg 4|Aneg 5|Aneg 6|Aneg 7|Aneg 1\r\n2|3|4|5|6|7|1\r"
+      "Aneg 2|Aneg 3|Aneg 4|Aneg 5|Aneg 6|Aneg 7|Aneg 1\r\nAneg 2|Aneg 3|Aneg 4|Aneg 5|Aneg 6|Aneg 7|Aneg 1\r\n2|3|4|5|6|7|1\r\nA2|A3|A4|A5|A6|A7|A1\r"
 
   private val mgo_Format_Quarters: String? = null
 
@@ -8716,7 +8716,7 @@ object AvailableDateTimeDisplayNames {
       "iməg mbegtug|imeg àbùbì|imeg mbəŋchubi|iməg ngwə̀t|iməg fog|iməg ichiibɔd|iməg àdùmbə̀ŋ|iməg ichika|iməg kud|iməg tèsiʼe|iməg zò|iməg krizmed\r\nmbegtug|imeg àbùbì|imeg mbəŋchubi|iməg ngwə̀t|iməg fog|iməg ichiibɔd|iməg àdùmbə̀ŋ|iməg ichika|iməg kud|iməg tèsiʼe|iməg zò|iməg krizmed\r\nM1|A2|M3|N4|F5|I6|A7|I8|K9|10|11|12\r"
 
   private const val mgo_Standalone_Days: String =
-      "Aneg 2|Aneg 3|Aneg 4|Aneg 5|Aneg 6|Aneg 7|Aneg 1\r\nAneg 2|Aneg 3|Aneg 4|Aneg 5|Aneg 6|Aneg 7|Aneg 1\r\n2|3|4|5|6|7|1\r"
+      "Aneg 2|Aneg 3|Aneg 4|Aneg 5|Aneg 6|Aneg 7|Aneg 1\r\nAneg 2|Aneg 3|Aneg 4|Aneg 5|Aneg 6|Aneg 7|Aneg 1\r\n2|3|4|5|6|7|1\r\nA2|A3|A4|A5|A6|A7|A1\r"
 
   private val mgo_Standalone_Quarters: String? = null
 
@@ -8742,7 +8742,7 @@ object AvailableDateTimeDisplayNames {
       "Hānuere|Pēpuere|Māehe|Āpereira|Mei|Hune|Hūrae|Ākuhata|Hepetema|Oketopa|Noema|Tīhema\r\nHān|Pēp|Māe|Āpe|Mei|Hun|Hūr|Āku|Hep|Oke|Noe|Tīh\r\nH|P|M|Ā|M|H|H|Ā|H|O|N|T\r"
 
   private const val mi_Format_Days: String =
-      "Mane|Tūrei|Wenerei|Tāite|Paraire|Rāhoroi|Rātapu\r\nMan|Tūr|Wen|Tāi|Par|Rāh|Rāt\r\nM|T|W|T|P|Rh|Rt\r"
+      "Mane|Tūrei|Wenerei|Tāite|Paraire|Rāhoroi|Rātapu\r\nMan|Tūr|Wen|Tāi|Par|Rāh|Rāt\r\nM|T|W|T|P|Rh|Rt\r\nMan|Tū|Wen|Tāi|Par|Rāh|Rāt\r"
 
   private const val mi_Format_Quarters: String =
       "Hauwhā tuatahi|Hauwhā tuarua|Hauwhā tuatoru|Hauwhā tuawhā\r\nHW1|HW2|HW3|HW4\r\n1|2|3|4\r"
@@ -8753,7 +8753,7 @@ object AvailableDateTimeDisplayNames {
       "Hānuere|Pēpuere|Māehe|Āperira|Mei|Hune|Hūrae|Ākuhata|Hepetema|Oketopa|Noema|Tīhema\r\nHān|Pēp|Māe|Āpe|Mei|Hun|Hūr|Āku|Hep|Oke|Noe|Tīh\r\nH|P|M|Ā|M|H|H|Ā|H|O|N|T\r"
 
   private const val mi_Standalone_Days: String =
-      "Mane|Tūrei|Wenerei|Tāite|Paraire|Rāhoroi|Rātapu\r\nMan|Tūr|Wen|Tāi|Par|Rāh|Rāt\r\nM|T|W|T|P|Rh|Rt\r"
+      "Mane|Tūrei|Wenerei|Tāite|Paraire|Rāhoroi|Rātapu\r\nMan|Tūr|Wen|Tāi|Par|Rāh|Rāt\r\nM|T|W|T|P|Rh|Rt\r\nMan|Tū|Wen|Tāi|Par|Rāh|Rāt\r"
 
   private const val mi_Standalone_Quarters: String =
       "Hauwhā tuatahi|Hauwhā tuarua|Hauwhā tuatoru|Hauwhā tuawhā\r\nHW1|HW2|HW3|HW4\r\n1|2|3|4\r"
@@ -8780,7 +8780,7 @@ object AvailableDateTimeDisplayNames {
       "јануари|февруари|март|април|мај|јуни|јули|август|септември|октомври|ноември|декември\r\nјан.|фев.|мар.|апр.|мај|јун.|јул.|авг.|сеп.|окт.|ное.|дек.\r\nј|ф|м|а|м|ј|ј|а|с|о|н|д\r"
 
   private const val mk_Format_Days: String =
-      "понеделник|вторник|среда|четврток|петок|сабота|недела\r\nпон.|вто.|сре.|чет.|пет.|саб.|нед.\r\nп|в|с|ч|п|с|н\r"
+      "понеделник|вторник|среда|четврток|петок|сабота|недела\r\nпон.|вто.|сре.|чет.|пет.|саб.|нед.\r\nп|в|с|ч|п|с|н\r\nпон.|вто.|сре.|чет.|пет.|саб.|нед.\r"
 
   private const val mk_Format_Quarters: String =
       "прво тримесечје|второ тримесечје|трето тримесечје|четврто тримесечје\r\nјан. – мар.|апр. – јун.|јул. – сеп.|окт. – дек.\r\n1|2|3|4\r"
@@ -8792,7 +8792,7 @@ object AvailableDateTimeDisplayNames {
       "јануари|февруари|март|април|мај|јуни|јули|август|септември|октомври|ноември|декември\r\nјан.|фев.|мар.|апр.|мај|јун.|јул.|авг.|сеп.|окт.|ное.|дек.\r\nј|ф|м|а|м|ј|ј|а|с|о|н|д\r"
 
   private const val mk_Standalone_Days: String =
-      "понеделник|вторник|среда|четврток|петок|сабота|недела\r\nпон.|вто.|сре.|чет.|пет.|саб.|нед.\r\nп|в|с|ч|п|с|н\r"
+      "понеделник|вторник|среда|четврток|петок|сабота|недела\r\nпон.|вто.|сре.|чет.|пет.|саб.|нед.\r\nп|в|с|ч|п|с|н\r\nпон.|вто.|сре.|чет.|пет.|саб.|нед.\r"
 
   private const val mk_Standalone_Quarters: String =
       "прво тримесечје|второ тримесечје|трето тримесечје|четврто тримесечје\r\nјан. – мар.|апр. – јун.|јул. – сеп.|окт. – дек.\r\n1|2|3|4\r"
@@ -8804,7 +8804,7 @@ object AvailableDateTimeDisplayNames {
       "ജനുവരി|ഫെബ്രുവരി|മാർച്ച്|ഏപ്രിൽ|മേയ്|ജൂൺ|ജൂലൈ|ഓഗസ്റ്റ്|സെപ്റ്റംബർ|ഒക്‌ടോബർ|നവംബർ|ഡിസംബർ\r\nജനു|ഫെബ്രു|മാർ|ഏപ്രി|മേയ്|ജൂൺ|ജൂലൈ|ഓഗ|സെപ്റ്റം|ഒക്ടോ|നവം|ഡിസം\r\nജ|ഫെ|മാ|ഏ|മെ|ജൂൺ|ജൂ|ഓ|സെ|ഒ|ന|ഡി\r"
 
   private const val ml_Format_Days: String =
-      "തിങ്കളാഴ്‌ച|ചൊവ്വാഴ്ച|ബുധനാഴ്‌ച|വ്യാഴാഴ്‌ച|വെള്ളിയാഴ്‌ച|ശനിയാഴ്‌ച|ഞായറാഴ്‌ച\r\nതിങ്കൾ|ചൊവ്വ|ബുധൻ|വ്യാഴം|വെള്ളി|ശനി|ഞായർ\r\nതി|ചൊ|ബു|വ്യാ|വെ|ശ|ഞ\r"
+      "തിങ്കളാഴ്‌ച|ചൊവ്വാഴ്ച|ബുധനാഴ്‌ച|വ്യാഴാഴ്‌ച|വെള്ളിയാഴ്‌ച|ശനിയാഴ്‌ച|ഞായറാഴ്‌ച\r\nതിങ്കൾ|ചൊവ്വ|ബുധൻ|വ്യാഴം|വെള്ളി|ശനി|ഞായർ\r\nതി|ചൊ|ബു|വ്യാ|വെ|ശ|ഞ\r\nതി|ചൊ|ബു|വ്യാ|വെ|ശ|ഞാ\r"
 
   private const val ml_Format_Quarters: String =
       "ഒന്നാം പാദം|രണ്ടാം പാദം|മൂന്നാം പാദം|നാലാം പാദം\r\nഒന്നാം പാദം|രണ്ടാം പാദം|മൂന്നാം പാദം|നാലാം പാദം\r\n1|2|3|4\r"
@@ -8816,7 +8816,7 @@ object AvailableDateTimeDisplayNames {
       "ജനുവരി|ഫെബ്രുവരി|മാർച്ച്|ഏപ്രിൽ|മേയ്|ജൂൺ|ജൂലൈ|ഓഗസ്റ്റ്|സെപ്റ്റംബർ|ഒക്‌ടോബർ|നവംബർ|ഡിസംബർ\r\nജനു|ഫെബ്രു|മാർ|ഏപ്രി|മേയ്|ജൂൺ|ജൂലൈ|ഓഗ|സെപ്റ്റം|ഒക്ടോ|നവം|ഡിസം\r\nജ|ഫെ|മാ|ഏ|മെ|ജൂൺ|ജൂ|ഓ|സെ|ഒ|ന|ഡി\r"
 
   private const val ml_Standalone_Days: String =
-      "തിങ്കളാഴ്‌ച|ചൊവ്വാഴ്‌ച|ബുധനാഴ്‌ച|വ്യാഴാഴ്‌ച|വെള്ളിയാഴ്‌ച|ശനിയാഴ്‌ച|ഞായറാഴ്‌ച\r\nതിങ്കൾ|ചൊവ്വ|ബുധൻ|വ്യാഴം|വെള്ളി|ശനി|ഞായർ\r\nതി|ചൊ|ബു|വ്യാ|വെ|ശ|ഞാ\r"
+      "തിങ്കളാഴ്‌ച|ചൊവ്വാഴ്‌ച|ബുധനാഴ്‌ച|വ്യാഴാഴ്‌ച|വെള്ളിയാഴ്‌ച|ശനിയാഴ്‌ച|ഞായറാഴ്‌ച\r\nതിങ്കൾ|ചൊവ്വ|ബുധൻ|വ്യാഴം|വെള്ളി|ശനി|ഞായർ\r\nതി|ചൊ|ബു|വ്യാ|വെ|ശ|ഞാ\r\nതി|ചൊ|ബു|വ്യാ|വെ|ശ|ഞാ\r"
 
   private const val ml_Standalone_Quarters: String =
       "ഒന്നാം പാദം|രണ്ടാം പാദം|മൂന്നാം പാദം|നാലാം പാദം\r\nഒന്നാം പാദം|രണ്ടാം പാദം|മൂന്നാം പാദം|നാലാം പാദം\r\n1|2|3|4\r"
@@ -8828,7 +8828,7 @@ object AvailableDateTimeDisplayNames {
       "нэгдүгээр сар|хоёрдугаар сар|гуравдугаар сар|дөрөвдүгээр сар|тавдугаар сар|зургаадугаар сар|долоодугаар сар|наймдугаар сар|есдүгээр сар|аравдугаар сар|арван нэгдүгээр сар|арван хоёрдугаар сар\r\n1-р сар|2-р сар|3-р сар|4-р сар|5-р сар|6-р сар|7-р сар|8-р сар|9-р сар|10-р сар|11-р сар|12-р сар\r\nI|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII\r"
 
   private const val mn_Format_Days: String =
-      "даваа|мягмар|лхагва|пүрэв|баасан|бямба|ням\r\nДа|Мя|Лх|Пү|Ба|Бя|Ня\r\nДа|Мя|Лх|Пү|Ба|Бя|Ня\r"
+      "даваа|мягмар|лхагва|пүрэв|баасан|бямба|ням\r\nДа|Мя|Лх|Пү|Ба|Бя|Ня\r\nДа|Мя|Лх|Пү|Ба|Бя|Ня\r\nДа|Мя|Лх|Пү|Ба|Бя|Ня\r"
 
   private const val mn_Format_Quarters: String =
       "1-р улирал|2-р улирал|3-р улирал|4-р улирал\r\nI улирал|II улирал|III улирал|IV улирал\r\nI|II|III|IV\r"
@@ -8840,7 +8840,7 @@ object AvailableDateTimeDisplayNames {
       "Нэгдүгээр сар|Хоёрдугаар сар|Гуравдугаар сар|Дөрөвдүгээр сар|Тавдугаар сар|Зургаадугаар сар|Долоодугаар сар|Наймдугаар сар|Есдүгээр сар|Аравдугаар сар|Арван нэгдүгээр сар|Арван хоёрдугаар сар\r\n1-р сар|2-р сар|3-р сар|4-р сар|5-р сар|6-р сар|7-р сар|8-р сар|9-р сар|10-р сар|11-р сар|12-р сар\r\nI|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII\r"
 
   private const val mn_Standalone_Days: String =
-      "Даваа|Мягмар|Лхагва|Пүрэв|Баасан|Бямба|Ням\r\nДа|Мя|Лх|Пү|Ба|Бя|Ня\r\nДа|Мя|Лх|Пү|Ба|Бя|Ня\r"
+      "Даваа|Мягмар|Лхагва|Пүрэв|Баасан|Бямба|Ням\r\nДа|Мя|Лх|Пү|Ба|Бя|Ня\r\nДа|Мя|Лх|Пү|Ба|Бя|Ня\r\nДа|Мя|Лх|Пү|Ба|Бя|Ня\r"
 
   private const val mn_Standalone_Quarters: String =
       "1-р улирал|2-р улирал|3-р улирал|4-р улирал\r\nI улирал|II улирал|III улирал|IV улирал\r\nI|II|III|IV\r"
@@ -8868,7 +8868,7 @@ object AvailableDateTimeDisplayNames {
       "ᠨᠢᠭᠡᠳᠥᠭᠡᠷ ᠰᠠᠷ᠎ᠠ|ᠬᠣᠶᠠᠳᠣᠭᠠᠷ ᠰᠠᠷ ᠠ|ᠭᠣᠷᠪᠡᠳᠣᠭᠠᠷ ᠰᠠᠷ ᠠ|ᠳᠥᠷᠪᠡᠳᠥᠭᠡᠷ ᠰᠠᠷ᠎ᠠ|ᠲᠠᠪᠣᠳᠣᠭᠠᠷ ᠰᠠᠷ ᠠ|ᠵᠢᠷᠭᠣᠭᠠᠳᠣᠭᠠᠷ ᠰᠠᠷ᠎ᠠ|ᠲᠣᠯᠣᠭᠠᠳᠣᠭᠠᠷ ᠰᠠᠷ᠎ᠠ|ᠨᠠᠢᠮᠠᠳᠥᠭᠠᠷ ᠰᠠᠷ᠎ᠠ|ᠶᠢᠰᠥᠳᠥᠭᠡᠷ ᠰᠠᠷ᠎ᠠ|ᠠᠷᠪᠠᠳᠣᠭᠠᠷ ᠰᠠᠷ᠎ᠠ|ᠠᠷᠪᠠᠨ ᠨᠢᠭᠡᠳᠥᠭᠡᠷ ᠰᠠᠷ᠎ᠠ|ᠠᠷᠪᠠᠨ ᠬᠣᠶᠠᠳᠣᠭᠠᠷ ᠰᠠᠷ᠎ᠠ\r\n1 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|2 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|3᠊ᠷ ᠰᠠᠷ᠎ᠠ|4 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|5 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|6 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|7 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|8᠊ᠷ ᠰᠠᠷ᠎ᠠ|9 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|10 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|11 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|12 ᠊ᠷ ᠰᠠᠷ᠎ᠠ\r\nI|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII\r"
 
   private const val mn_Mong_MN_Format_Days: String =
-      "ᠳᠠᠸᠠ|ᠮᠢᠠᠠᠮᠠᠷ|ᡀᠠᠭᠪᠠ|ᠫᠦᠷᠪᠦ|ᠪᠠᠰᠠᠩ|ᠪᠢᠮᠪᠠ|ᠨᠢᠮ᠎ᠠ\r\nᠲᠠ|ᠮᠢᠭ|ᡀᠠ|ᠫᠥᠷ|ᠪᠠ|ᠪᠢᠮ|ᠨᠢ\r\nᠳᠠ|ᠮᠢᠭ|ᡀᠠ|ᠫᠥᠷ|ᠪᠠ|ᠪᠢ|ᠨᠢ\r"
+      "ᠳᠠᠸᠠ|ᠮᠢᠠᠠᠮᠠᠷ|ᡀᠠᠭᠪᠠ|ᠫᠦᠷᠪᠦ|ᠪᠠᠰᠠᠩ|ᠪᠢᠮᠪᠠ|ᠨᠢᠮ᠎ᠠ\r\nᠲᠠ|ᠮᠢᠭ|ᡀᠠ|ᠫᠥᠷ|ᠪᠠ|ᠪᠢᠮ|ᠨᠢ\r\nᠳᠠ|ᠮᠢᠭ|ᡀᠠ|ᠫᠥᠷ|ᠪᠠ|ᠪᠢ|ᠨᠢ\r\nᠲᠠ|ᠮᠢᠭ|ᡀᠠ|ᠫᠥᠷ|ᠪᠠ|ᠪᠢᠮ|ᠨᠢ\r"
 
   private const val mn_Mong_MN_Format_Quarters: String =
       "1 ᠊ᠷ ᠣᠯᠠᠷᠢᠯ|2 ᠊ᠷ ᠣᠯᠠᠷᠢᠯ|3 ᠊ᠷ ᠣᠯᠠᠷᠢᠯ|4 ᠊ᠷ ᠣᠯᠠᠷᠢᠯ\r\n1 ᠣᠯᠠᠷᠢᠯ|2 ᠣᠯᠠᠷᠢᠯ|3 ᠣᠯᠠᠷᠢᠯ|4 ᠣᠯᠠᠷᠢᠯ\r\nI|II|III|IV\r"
@@ -8879,7 +8879,7 @@ object AvailableDateTimeDisplayNames {
       "ᠨᠢᠭᠡᠳᠥᠭᠡᠷ ᠰᠠᠷ᠎ᠠ|ᠬᠣᠶᠠᠳᠣᠭᠠᠷ ᠰᠠᠷ ᠠ|ᠭᠣᠷᠪᠡᠳᠣᠭᠠᠷ ᠰᠠᠷ ᠠ|ᠳᠥᠷᠪᠡᠳᠥᠭᠡᠷ ᠰᠠᠷ᠎ᠠ|ᠲᠠᠪᠣᠳᠣᠭᠠᠷ ᠰᠠᠷ ᠠ|ᠵᠢᠷᠭᠣᠭᠠᠳᠣᠭᠠᠷ ᠰᠠᠷ᠎ᠠ|ᠲᠣᠯᠣᠭᠠᠳᠣᠭᠠᠷ ᠰᠠᠷ᠎ᠠ|ᠨᠠᠢᠮᠠᠳᠥᠭᠠᠷ ᠰᠠᠷ᠎ᠠ|ᠶᠢᠰᠥᠳᠥᠭᠡᠷ ᠰᠠᠷ᠎ᠠ|ᠠᠷᠪᠠᠳᠣᠭᠠᠷ ᠰᠠᠷ᠎ᠠ|ᠠᠷᠪᠠᠨ ᠨᠢᠭᠡᠳᠥᠭᠡᠷ ᠰᠠᠷ᠎ᠠ|ᠠᠷᠪᠠᠨ ᠬᠣᠶᠠᠳᠣᠭᠠᠷ ᠰᠠᠷ᠎ᠠ\r\n1 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|2 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|3᠊ᠷ ᠰᠠᠷ᠎ᠠ|4 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|5 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|6 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|7 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|8 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|9 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|10 ᠊ᠷ ᠰᠠᠷ᠎ᠠ|11᠊ᠷ ᠰᠠᠷ᠎ᠠ|12᠊ᠷ ᠰᠠᠷ᠎ᠠ\r\nI|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII\r"
 
   private const val mn_Mong_MN_Standalone_Days: String =
-      "ᠳᠠᠸᠠ|ᠮᠢᠠᠠᠮᠠᠷ|ᡀᠠᠭᠪᠠ|ᠫᠦᠷᠪᠦ|ᠪᠠᠰᠠᠩ|ᠪᠢᠮᠪᠠ|ᠨᠢᠮ᠎ᠠ\r\nᠳᠠ|ᠮᠢᠭ|ᡀᠠ|ᠫᠦᠷ|ᠪᠠ|ᠪᠢᠮ|ᠨᠢ\r\nᠳᠠ|ᠮᠢᠭ|ᡀᠠ|ᠫᠥᠷ|ᠪᠠ|ᠪᠢᠮ|ᠨᠢ\r"
+      "ᠳᠠᠸᠠ|ᠮᠢᠠᠠᠮᠠᠷ|ᡀᠠᠭᠪᠠ|ᠫᠦᠷᠪᠦ|ᠪᠠᠰᠠᠩ|ᠪᠢᠮᠪᠠ|ᠨᠢᠮ᠎ᠠ\r\nᠳᠠ|ᠮᠢᠭ|ᡀᠠ|ᠫᠦᠷ|ᠪᠠ|ᠪᠢᠮ|ᠨᠢ\r\nᠳᠠ|ᠮᠢᠭ|ᡀᠠ|ᠫᠥᠷ|ᠪᠠ|ᠪᠢᠮ|ᠨᠢ\r\nᠲᠠ|ᠮᠢᠭ|ᡀᠠ|ᠫᠥᠷ|ᠪᠠ|ᠪᠢᠮ|ᠨᠢ\r"
 
   private const val mn_Mong_MN_Standalone_Quarters: String =
       "1 ᠊ᠷ ᠣᠯᠠᠷᠢᠯ|2 ᠊ᠷ ᠣᠯᠠᠷᠢᠯ|3 ᠊ᠷ ᠣᠯᠠᠷᠢᠯ|4 ᠊ᠷ ᠣᠯᠠᠷᠢᠯ\r\nI|II|III|IV\r\nI|II|III|IV\r"
@@ -8890,7 +8890,7 @@ object AvailableDateTimeDisplayNames {
       "জনুৱারী|ফেব্রুৱারি|মার্চ|এপ্রিল|মে|জুন|জুলাই|‌ওগষ্ট|সেপ্টেম্বর|ওক্টোবর|নভেম্বর|ডিসেম্বর\r\nজন|ফেব্রুৱারি|মার্চ|এপ্রিল|মে|জুন|জুলাই|ওগ|সেপ্টেম্বর|ওক্টোবর|নভেম্বর|ডিসেম্বর\r\nজা|ফে|মার|এপ|মে|জুন|জুল|আ|সে|ওক|নব|ডি\r"
 
   private const val mni_Format_Days: String =
-      "নিংথৌকাবা|লৈবাকপোকপা|য়ুমশকৈশা|শগোলশেন|ইরাই|থাংজ|নোংমাইজিং\r\nনিংথৌকাবা|লৈবাকপোকপা|য়ুমশকৈশা|শগোলশেন|ইরাই|থাংজ|নোংমাইজিং\r\nনিং|লৈবা|য়ুম|শগো|ইরা|থাং|নোং\r"
+      "নিংথৌকাবা|লৈবাকপোকপা|য়ুমশকৈশা|শগোলশেন|ইরাই|থাংজ|নোংমাইজিং\r\nনিংথৌকাবা|লৈবাকপোকপা|য়ুমশকৈশা|শগোলশেন|ইরাই|থাংজ|নোংমাইজিং\r\nনিং|লৈবা|য়ুম|শগো|ইরা|থাং|নোং\r\nনিংথৌকাবা|লৈবাকপোকপা|য়ুমশকৈশা|শগোলশেন|ইরাই|থাংজ|নোংমাইজিং\r"
 
   private const val mni_Format_Quarters: String =
       "অহানবা মসুং|অনীশুবা মসুং|অহুমশুবা মসুং|মরীশুবা মসুং\r\nঅহানবা মসুং|অনীশুবা মসুং|অহুমশুবা মসুং|মরীশুবা মসুং\r\n1|2|3|4\r"
@@ -8901,7 +8901,7 @@ object AvailableDateTimeDisplayNames {
       "জানুৱারি|ফেব্রুৱারি|মার্চ|এপ্রিল|মে|জুন|জুলাই|ওগষ্ট|সেপ্টেম্বর|ওক্টোবর|নবেম্বর|ডিসেম্বর\r\nজানু|ফেব্রু|মার|এপ্রি|মে|জুন|জুলা|আগ|সেপ্ট|ওক্টো|নভে|ডিসে\r\nজা|ফে|মার|এপ|মে|জুন|জুল|আ|সে|ও|নব|ডি\r"
 
   private const val mni_Standalone_Days: String =
-      "নিংথৌকাবা|লৈবাকপোকপা|য়ুমশকৈশা|শগোলশেন|ইরাই|থাংজ|নোংমাইজিং\r\nনিংথৌকাবা|লৈবাকপোকপা|য়ুমশকৈশা|শগোলশেন|ইরাই|থাংজ|নোংমাইজিং\r\nনিং|লৈ|য়ুম|শগ|ইরা|থাং|নো\r"
+      "নিংথৌকাবা|লৈবাকপোকপা|য়ুমশকৈশা|শগোলশেন|ইরাই|থাংজ|নোংমাইজিং\r\nনিংথৌকাবা|লৈবাকপোকপা|য়ুমশকৈশা|শগোলশেন|ইরাই|থাংজ|নোংমাইজিং\r\nনিং|লৈ|য়ুম|শগ|ইরা|থাং|নো\r\nনিংথৌকাবা|লৈবাকপোকপা|য়ুমশকৈশা|শগোলশেন|ইরাই|থাংজ|নোংমাইজিং\r"
 
   private const val mni_Standalone_Quarters: String =
       "অহানবা মসুং|অনীশুবা মসুং|অহুমশুবা মসুং|মরীশুবা মসুং\r\nঅহানবা মসুং|অনীশুবা মসুং|অহুমশুবা মসুং|মরীশুবা মসুং\r\n1|2|3|4\r"
@@ -8960,7 +8960,7 @@ object AvailableDateTimeDisplayNames {
       "जानेवारी|फेब्रुवारी|मार्च|एप्रिल|मे|जून|जुलै|ऑगस्ट|सप्टेंबर|ऑक्टोबर|नोव्हेंबर|डिसेंबर\r\nजाने|फेब्रु|मार्च|एप्रि|मे|जून|जुलै|ऑग|सप्टें|ऑक्टो|नोव्हें|डिसें\r\nजा|फे|मा|ए|मे|जू|जु|ऑ|स|ऑ|नो|डि\r"
 
   private const val mr_Format_Days: String =
-      "सोमवार|मंगळवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोम|मंगळ|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r"
+      "सोमवार|मंगळवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोम|मंगळ|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r\nसो|मं|बु|गु|शु|श|र\r"
 
   private const val mr_Format_Quarters: String =
       "प्रथम तिमाही|द्वितीय तिमाही|तृतीय तिमाही|चतुर्थ तिमाही\r\nति१|ति२|ति३|ति४\r\n१|२|३|४\r"
@@ -8972,7 +8972,7 @@ object AvailableDateTimeDisplayNames {
       "जानेवारी|फेब्रुवारी|मार्च|एप्रिल|मे|जून|जुलै|ऑगस्ट|सप्टेंबर|ऑक्टोबर|नोव्हेंबर|डिसेंबर\r\nजाने|फेब्रु|मार्च|एप्रि|मे|जून|जुलै|ऑग|सप्टें|ऑक्टो|नोव्हें|डिसें\r\nजा|फे|मा|ए|मे|जू|जु|ऑ|स|ऑ|नो|डि\r"
 
   private const val mr_Standalone_Days: String =
-      "सोमवार|मंगळवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोम|मंगळ|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r"
+      "सोमवार|मंगळवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोम|मंगळ|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r\nसो|मं|बु|गु|शु|श|र\r"
 
   private const val mr_Standalone_Quarters: String =
       "प्रथम तिमाही|द्वितीय तिमाही|तृतीय तिमाही|चतुर्थ तिमाही\r\nति१|ति२|ति३|ति४\r\n१|२|३|४\r"
@@ -8984,7 +8984,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Mac|April|Mei|Jun|Julai|Ogos|September|Oktober|November|Disember\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ogo|Sep|Okt|Nov|Dis\r\nJ|F|M|A|M|J|J|O|S|O|N|D\r"
 
   private const val ms_Format_Days: String =
-      "Isnin|Selasa|Rabu|Khamis|Jumaat|Sabtu|Ahad\r\nIsn|Sel|Rab|Kha|Jum|Sab|Ahd\r\nI|S|R|K|J|S|A\r"
+      "Isnin|Selasa|Rabu|Khamis|Jumaat|Sabtu|Ahad\r\nIsn|Sel|Rab|Kha|Jum|Sab|Ahd\r\nI|S|R|K|J|S|A\r\nIs|Se|Ra|Kh|Ju|Sa|Ah\r"
 
   private const val ms_Format_Quarters: String =
       "Suku pertama|Suku Ke-2|Suku Ke-3|Suku Ke-4\r\nS1|S2|S3|S4\r\n1|2|3|4\r"
@@ -8995,7 +8995,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Mac|April|Mei|Jun|Julai|Ogos|September|Oktober|November|Disember\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ogo|Sep|Okt|Nov|Dis\r\nJ|F|M|A|M|J|J|O|S|O|N|D\r"
 
   private const val ms_Standalone_Days: String =
-      "Isnin|Selasa|Rabu|Khamis|Jumaat|Sabtu|Ahad\r\nIsn|Sel|Rab|Kha|Jum|Sab|Ahd\r\nI|S|R|K|J|S|A\r"
+      "Isnin|Selasa|Rabu|Khamis|Jumaat|Sabtu|Ahad\r\nIsn|Sel|Rab|Kha|Jum|Sab|Ahd\r\nI|S|R|K|J|S|A\r\nIs|Se|Ra|Kh|Ju|Sa|Ah\r"
 
   private const val ms_Standalone_Quarters: String =
       "Suku pertama|Suku Ke-2|Suku Ke-3|Suku Ke-4\r\nS1|S2|S3|S4\r\n1|2|3|4\r"
@@ -9086,7 +9086,7 @@ object AvailableDateTimeDisplayNames {
       "Jannar|Frar|Marzu|April|Mejju|Ġunju|Lulju|Awwissu|Settembru|Ottubru|Novembru|Diċembru\r\nJan|Fra|Mar|Apr|Mej|Ġun|Lul|Aww|Set|Ott|Nov|Diċ\r\nJ|F|M|A|M|Ġ|L|A|S|O|N|D\r"
 
   private const val mt_Format_Days: String =
-      "It-Tnejn|It-Tlieta|L-Erbgħa|Il-Ħamis|Il-Ġimgħa|Is-Sibt|Il-Ħadd\r\nTne|Tli|Erb|Ħam|Ġim|Sib|Ħad\r\nT|Tl|Er|Ħm|Ġm|Sb|Ħd\r"
+      "It-Tnejn|It-Tlieta|L-Erbgħa|Il-Ħamis|Il-Ġimgħa|Is-Sibt|Il-Ħadd\r\nTne|Tli|Erb|Ħam|Ġim|Sib|Ħad\r\nT|Tl|Er|Ħm|Ġm|Sb|Ħd\r\nTne|Tli|Erb|Ħam|Ġim|Sib|Ħad\r"
 
   private const val mt_Format_Quarters: String =
       "1el kwart|2ni kwart|3et kwart|4ba’ kwart\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9097,7 +9097,7 @@ object AvailableDateTimeDisplayNames {
       "Jannar|Frar|Marzu|April|Mejju|Ġunju|Lulju|Awwissu|Settembru|Ottubru|Novembru|Diċembru\r\nJan|Fra|Mar|Apr|Mej|Ġun|Lul|Aww|Set|Ott|Nov|Diċ\r\nJn|Fr|Mz|Ap|Mj|Ġn|Lj|Aw|St|Ob|Nv|Dċ\r"
 
   private const val mt_Standalone_Days: String =
-      "It-Tnejn|It-Tlieta|L-Erbgħa|Il-Ħamis|Il-Ġimgħa|Is-Sibt|Il-Ħadd\r\nTne|Tli|Erb|Ħam|Ġim|Sib|Ħad\r\nTn|Tl|Er|Ħm|Ġm|Sb|Ħd\r"
+      "It-Tnejn|It-Tlieta|L-Erbgħa|Il-Ħamis|Il-Ġimgħa|Is-Sibt|Il-Ħadd\r\nTne|Tli|Erb|Ħam|Ġim|Sib|Ħad\r\nTn|Tl|Er|Ħm|Ġm|Sb|Ħd\r\nTne|Tli|Erb|Ħam|Ġim|Sib|Ħad\r"
 
   private const val mt_Standalone_Quarters: String =
       "1el kwart|2ni kwart|3et kwart|4ba’ kwart\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9108,7 +9108,7 @@ object AvailableDateTimeDisplayNames {
       "Fĩi Loo|Cokcwaklaŋne|Cokcwaklii|Fĩi Marfoo|Madǝǝuutǝbijaŋ|Mamǝŋgwãafahbii|Mamǝŋgwãalii|Madǝmbii|Fĩi Dǝɓlii|Fĩi Mundaŋ|Fĩi Gwahlle|Fĩi Yuru\r\nFLO|CLA|CKI|FMF|MAD|MBI|MLI|MAM|FDE|FMU|FGW|FYU\r\nO|A|I|F|D|B|L|M|E|U|W|Y\r"
 
   private const val mua_Format_Days: String =
-      "Comlaaɗii|Comzyiiɗii|Comkolle|Comkaldǝɓlii|Comgaisuu|Comzyeɓsuu|Com’yakke\r\nCla|Czi|Cko|Cka|Cga|Cze|Cya\r\nL|Z|O|A|G|E|Y\r"
+      "Comlaaɗii|Comzyiiɗii|Comkolle|Comkaldǝɓlii|Comgaisuu|Comzyeɓsuu|Com’yakke\r\nCla|Czi|Cko|Cka|Cga|Cze|Cya\r\nL|Z|O|A|G|E|Y\r\nCla|Czi|Cko|Cka|Cga|Cze|Cya\r"
 
   private const val mua_Format_Quarters: String =
       "Tai fĩi sai ma tǝn kee zah|Tai fĩi sai zah lǝn gwa ma kee|Tai fĩi sai zah lǝn sai ma kee|Tai fĩi sai ma coo kee zah ‘na\r\nF1|F2|F3|F4\r\n1|2|3|4\r"
@@ -9120,7 +9120,7 @@ object AvailableDateTimeDisplayNames {
       "Fĩi Loo|Cokcwaklaŋne|Cokcwaklii|Fĩi Marfoo|Madǝǝuutǝbijaŋ|Mamǝŋgwãafahbii|Mamǝŋgwãalii|Madǝmbii|Fĩi Dǝɓlii|Fĩi Mundaŋ|Fĩi Gwahlle|Fĩi Yuru\r\nFLO|CLA|CKI|FMF|MAD|MBI|MLI|MAM|FDE|FMU|FGW|FYU\r\nO|A|I|F|D|B|L|M|E|U|W|Y\r"
 
   private const val mua_Standalone_Days: String =
-      "Comlaaɗii|Comzyiiɗii|Comkolle|Comkaldǝɓlii|Comgaisuu|Comzyeɓsuu|Com’yakke\r\nCla|Czi|Cko|Cka|Cga|Cze|Cya\r\nL|Z|O|A|G|E|Y\r"
+      "Comlaaɗii|Comzyiiɗii|Comkolle|Comkaldǝɓlii|Comgaisuu|Comzyeɓsuu|Com’yakke\r\nCla|Czi|Cko|Cka|Cga|Cze|Cya\r\nL|Z|O|A|G|E|Y\r\nCla|Czi|Cko|Cka|Cga|Cze|Cya\r"
 
   private const val mua_Standalone_Quarters: String =
       "Tai fĩi sai ma tǝn kee zah|Tai fĩi sai zah lǝn gwa ma kee|Tai fĩi sai zah lǝn sai ma kee|Tai fĩi sai ma coo kee zah ‘na\r\nF1|F2|F3|F4\r\n1|2|3|4\r"
@@ -9132,7 +9132,7 @@ object AvailableDateTimeDisplayNames {
       "Rvfo Cuse|Hotvle Hvse|Tasahcuce|Tasahce Rakko|Ke Hvse|Kvco Hvse|Hiyuce|Hiyo Rakko|Otowoskuce|Otowoskv Rakko|Ehole|Rvfo Rakko\r\nRvfo Cuse|Hotvle Hvse|Tasahcuce|Tasahce Rakko|Ke Hvse|Kvco Hvse|Hiyuce|Hiyo Rakko|Otowoskuce|Otowoskv Rakko|Ehole|Rvfo Rakko\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val mus_Format_Days: String =
-      "Enhvteceskv|Enhvteceskv Enhvyvtke|Ennvrkvpv|Ennvrkvpv Enhvyvtke|Nak Okkoskv Nettv|Nettv Cakʼcuse|Nettvʼcako\r\nEnhvteceskv|Enhvteceskv Enhvyvtke|Ennvrkvpv|Ennvrkvpv Enhvyvtke|Nak Okkoskv Nettv|Nettv Cakʼcuse|Nettvʼcako\r\nM|T|W|T|F|S|S\r"
+      "Enhvteceskv|Enhvteceskv Enhvyvtke|Ennvrkvpv|Ennvrkvpv Enhvyvtke|Nak Okkoskv Nettv|Nettv Cakʼcuse|Nettvʼcako\r\nEnhvteceskv|Enhvteceskv Enhvyvtke|Ennvrkvpv|Ennvrkvpv Enhvyvtke|Nak Okkoskv Nettv|Nettv Cakʼcuse|Nettvʼcako\r\nM|T|W|T|F|S|S\r\nEnhvteceskv|Enhvteceskv Enhvyvtke|Ennvrkvpv|Ennvrkvpv Enhvyvtke|Nak Okkoskv Nettv|Nettv Cakʼcuse|Nettvʼcako\r"
 
   private val mus_Format_Quarters: String? = null
 
@@ -9142,7 +9142,7 @@ object AvailableDateTimeDisplayNames {
       "Rvfo Cuse|Hotvle Hvse|Tasahcuce|Tasahce Rakko|Ke Hvse|Kvco Hvse|Hiyuce|Hiyo Rakko|Otowoskuce|Otowoskv Rakko|Ehole|Rvfo Rakko\r\nRvfo Cuse|Hotvle Hvse|Tasahcuce|Tasahce Rakko|Ke Hvse|Kvco Hvse|Hiyuce|Hiyo Rakko|Otowoskuce|Otowoskv Rakko|Ehole|Rvfo Rakko\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val mus_Standalone_Days: String =
-      "Enhvteceskv|Enhvteceskv Enhvyvtke|Ennvrkvpv|Ennvrkvpv Enhvyvtke|Nak Okkoskv Nettv|Nettv Cakʼcuse|Nettvʼcako\r\nEnhvteceskv|Enhvteceskv Enhvyvtke|Ennvrkvpv|Ennvrkvpv Enhvyvtke|Nak Okkoskv Nettv|Nettv Cakʼcuse|Nettvʼcako\r\nM|T|W|T|F|S|S\r"
+      "Enhvteceskv|Enhvteceskv Enhvyvtke|Ennvrkvpv|Ennvrkvpv Enhvyvtke|Nak Okkoskv Nettv|Nettv Cakʼcuse|Nettvʼcako\r\nEnhvteceskv|Enhvteceskv Enhvyvtke|Ennvrkvpv|Ennvrkvpv Enhvyvtke|Nak Okkoskv Nettv|Nettv Cakʼcuse|Nettvʼcako\r\nM|T|W|T|F|S|S\r\nEnhvteceskv|Enhvteceskv Enhvyvtke|Ennvrkvpv|Ennvrkvpv Enhvyvtke|Nak Okkoskv Nettv|Nettv Cakʼcuse|Nettvʼcako\r"
 
   private val mus_Standalone_Quarters: String? = null
 
@@ -9152,7 +9152,7 @@ object AvailableDateTimeDisplayNames {
       "ဇန်နဝါရီ|ဖေဖော်ဝါရီ|မတ်|ဧပြီ|မေ|ဇွန်|ဇူလိုင်|ဩဂုတ်|စက်တင်ဘာ|အောက်တိုဘာ|နိုဝင်ဘာ|ဒီဇင်ဘာ\r\nဇန်|ဖေ|မတ်|ဧ|မေ|ဇွန်|ဇူ|ဩ|စက်|အောက်|နို|ဒီ\r\nဇ|ဖ|မ|ဧ|မ|ဇ|ဇ|ဩ|စ|အ|န|ဒ\r"
 
   private const val my_Format_Days: String =
-      "တနင်္လာ|အင်္ဂါ|ဗုဒ္ဓဟူး|ကြာသပတေး|သောကြာ|စနေ|တနင်္ဂနွေ\r\nတနင်္လာ|အင်္ဂါ|ဗုဒ္ဓဟူး|ကြာသပတေး|သောကြာ|စနေ|တနင်္ဂနွေ\r\nတ|အ|ဗ|က|သ|စ|တ\r"
+      "တနင်္လာ|အင်္ဂါ|ဗုဒ္ဓဟူး|ကြာသပတေး|သောကြာ|စနေ|တနင်္ဂနွေ\r\nတနင်္လာ|အင်္ဂါ|ဗုဒ္ဓဟူး|ကြာသပတေး|သောကြာ|စနေ|တနင်္ဂနွေ\r\nတ|အ|ဗ|က|သ|စ|တ\r\nလာ|ဂါ|ဟူး|တေး|ကြာ|နေ|နွေ\r"
 
   private const val my_Format_Quarters: String =
       "ပထမ သုံးလပတ်|ဒုတိယ သုံးလပတ်|တတိယ သုံးလပတ်|စတုတ္ထ သုံးလပတ်\r\nQ1|Q2|Q3|Q4\r\nပ|ဒု|တ|စ\r"
@@ -9164,7 +9164,7 @@ object AvailableDateTimeDisplayNames {
       "ဇန်နဝါရီ|ဖေဖော်ဝါရီ|မတ်|ဧပြီ|မေ|ဇွန်|ဇူလိုင်|ဩဂုတ်|စက်တင်ဘာ|အောက်တိုဘာ|နိုဝင်ဘာ|ဒီဇင်ဘာ\r\nဇန်|ဖေ|မတ်|ဧ|မေ|ဇွန်|ဇူ|ဩ|စက်|အောက်|နို|ဒီ\r\nဇ|ဖ|မ|ဧ|မ|ဇ|ဇ|ဩ|စ|အ|န|ဒ\r"
 
   private const val my_Standalone_Days: String =
-      "တနင်္လာ|အင်္ဂါ|ဗုဒ္ဓဟူး|ကြာသပတေး|သောကြာ|စနေ|တနင်္ဂနွေ\r\nတနင်္လာ|အင်္ဂါ|ဗုဒ္ဓဟူး|ကြာသပတေး|သောကြာ|စနေ|တနင်္ဂနွေ\r\nတ|အ|ဗ|က|သ|စ|တ\r"
+      "တနင်္လာ|အင်္ဂါ|ဗုဒ္ဓဟူး|ကြာသပတေး|သောကြာ|စနေ|တနင်္ဂနွေ\r\nတနင်္လာ|အင်္ဂါ|ဗုဒ္ဓဟူး|ကြာသပတေး|သောကြာ|စနေ|တနင်္ဂနွေ\r\nတ|အ|ဗ|က|သ|စ|တ\r\nလာ|ဂါ|ဟူး|တေး|ကြာ|နေ|နွေ\r"
 
   private const val my_Standalone_Quarters: String =
       "ပထမ သုံးလပတ်|ဒုတိယ သုံးလပတ်|တတိယ သုံးလပတ်|စတုတ္ထ သုံးလပတ်\r\nQ1|Q2|Q3|Q4\r\nပ|ဒု|တ|စ\r"
@@ -9210,7 +9210,7 @@ object AvailableDateTimeDisplayNames {
       "ǃKhanni|ǃKhanǀgôab|ǀKhuuǁkhâb|ǃHôaǂkhaib|ǃKhaitsâb|Gamaǀaeb|ǂKhoesaob|Aoǁkhuumûǁkhâb|Taraǀkhuumûǁkhâb|ǂNûǁnâiseb|ǀHooǂgaeb|Hôasoreǁkhâb\r\nJan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val naq_Format_Days: String =
-      "Mantaxtsees|Denstaxtsees|Wunstaxtsees|Dondertaxtsees|Fraitaxtsees|Satertaxtsees|Sontaxtsees\r\nMa|De|Wu|Do|Fr|Sat|Son\r\nM|E|W|D|F|A|S\r"
+      "Mantaxtsees|Denstaxtsees|Wunstaxtsees|Dondertaxtsees|Fraitaxtsees|Satertaxtsees|Sontaxtsees\r\nMa|De|Wu|Do|Fr|Sat|Son\r\nM|E|W|D|F|A|S\r\nMa|De|Wu|Do|Fr|Sat|Son\r"
 
   private const val naq_Format_Quarters: String =
       "1ro kwartals|2ǁî kwartals|3ǁî kwartals|4ǁî kwartals\r\nKW1|KW2|KW3|KW4\r\n1|2|3|4\r"
@@ -9222,7 +9222,7 @@ object AvailableDateTimeDisplayNames {
       "ǃKhanni|ǃKhanǀgôab|ǀKhuuǁkhâb|ǃHôaǂkhaib|ǃKhaitsâb|Gamaǀaeb|ǂKhoesaob|Aoǁkhuumûǁkhâb|Taraǀkhuumûǁkhâb|ǂNûǁnâiseb|ǀHooǂgaeb|Hôasoreǁkhâb\r\nJan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val naq_Standalone_Days: String =
-      "Mantaxtsees|Denstaxtsees|Wunstaxtsees|Dondertaxtsees|Fraitaxtsees|Satertaxtsees|Sontaxtsees\r\nMa|De|Wu|Do|Fr|Sat|Son\r\nM|E|W|D|F|A|S\r"
+      "Mantaxtsees|Denstaxtsees|Wunstaxtsees|Dondertaxtsees|Fraitaxtsees|Satertaxtsees|Sontaxtsees\r\nMa|De|Wu|Do|Fr|Sat|Son\r\nM|E|W|D|F|A|S\r\nMa|De|Wu|Do|Fr|Sat|Son\r"
 
   private const val naq_Standalone_Quarters: String =
       "1ro kwartals|2ǁî kwartals|3ǁî kwartals|4ǁî kwartals\r\nKW1|KW2|KW3|KW4\r\n1|2|3|4\r"
@@ -9266,7 +9266,7 @@ object AvailableDateTimeDisplayNames {
       "Zibandlela|Nhlolanja|Mbimbitho|Mabasa|Nkwenkwezi|Nhlangula|Ntulikazi|Ncwabakazi|Mpandula|Mfumfu|Lwezi|Mpalakazi\r\nZib|Nhlo|Mbi|Mab|Nkw|Nhla|Ntu|Ncw|Mpan|Mfu|Lwe|Mpal\r\nZ|N|M|M|N|N|N|N|M|M|L|M\r"
 
   private const val nd_Format_Days: String =
-      "Mvulo|Sibili|Sithathu|Sine|Sihlanu|Mgqibelo|Sonto\r\nMvu|Sib|Sit|Sin|Sih|Mgq|Son\r\nM|S|S|S|S|M|S\r"
+      "Mvulo|Sibili|Sithathu|Sine|Sihlanu|Mgqibelo|Sonto\r\nMvu|Sib|Sit|Sin|Sih|Mgq|Son\r\nM|S|S|S|S|M|S\r\nMvu|Sib|Sit|Sin|Sih|Mgq|Son\r"
 
   private const val nd_Format_Quarters: String =
       "Kota 1|Kota 2|Kota 3|Kota 4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9277,7 +9277,7 @@ object AvailableDateTimeDisplayNames {
       "Zibandlela|Nhlolanja|Mbimbitho|Mabasa|Nkwenkwezi|Nhlangula|Ntulikazi|Ncwabakazi|Mpandula|Mfumfu|Lwezi|Mpalakazi\r\nZib|Nhlo|Mbi|Mab|Nkw|Nhla|Ntu|Ncw|Mpan|Mfu|Lwe|Mpal\r\nZ|N|M|M|N|N|N|N|M|M|L|M\r"
 
   private const val nd_Standalone_Days: String =
-      "Mvulo|Sibili|Sithathu|Sine|Sihlanu|Mgqibelo|Sonto\r\nMvu|Sib|Sit|Sin|Sih|Mgq|Son\r\nM|S|S|S|S|M|S\r"
+      "Mvulo|Sibili|Sithathu|Sine|Sihlanu|Mgqibelo|Sonto\r\nMvu|Sib|Sit|Sin|Sih|Mgq|Son\r\nM|S|S|S|S|M|S\r\nMvu|Sib|Sit|Sin|Sih|Mgq|Son\r"
 
   private const val nd_Standalone_Quarters: String =
       "Kota 1|Kota 2|Kota 3|Kota 4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9288,7 +9288,7 @@ object AvailableDateTimeDisplayNames {
       "Januaar|Februaar|März|April|Mai|Juni|Juli|August|September|Oktover|November|Dezember\r\nJanuaar|Februaar|März|April|Mai|Juni|Juli|August|September|Oktover|November|Dezember\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val nds_Format_Days: String =
-      "Maandag|Dingsdag|Middeweken|Dunnersdag|Freedag|Sünnavend|Sünndag\r\nMaandag|Dingsdag|Middeweken|Dunnersdag|Freedag|Sünnavend|Sünndag\r\nM|T|W|T|F|S|S\r"
+      "Maandag|Dingsdag|Middeweken|Dunnersdag|Freedag|Sünnavend|Sünndag\r\nMaandag|Dingsdag|Middeweken|Dunnersdag|Freedag|Sünnavend|Sünndag\r\nM|T|W|T|F|S|S\r\nMaandag|Dingsdag|Middeweken|Dunnersdag|Freedag|Sünnavend|Sünndag\r"
 
   private val nds_Format_Quarters: String? = null
 
@@ -9298,7 +9298,7 @@ object AvailableDateTimeDisplayNames {
       "Januaar|Februaar|März|April|Mai|Juni|Juli|August|September|Oktover|November|Dezember\r\nJanuaar|Februaar|März|April|Mai|Juni|Juli|August|September|Oktover|November|Dezember\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val nds_Standalone_Days: String =
-      "Maandag|Dingsdag|Middeweken|Dunnersdag|Freedag|Sünnavend|Sünndag\r\nMaandag|Dingsdag|Middeweken|Dunnersdag|Freedag|Sünnavend|Sünndag\r\nM|T|W|T|F|S|S\r"
+      "Maandag|Dingsdag|Middeweken|Dunnersdag|Freedag|Sünnavend|Sünndag\r\nMaandag|Dingsdag|Middeweken|Dunnersdag|Freedag|Sünnavend|Sünndag\r\nM|T|W|T|F|S|S\r\nMaandag|Dingsdag|Middeweken|Dunnersdag|Freedag|Sünnavend|Sünndag\r"
 
   private val nds_Standalone_Quarters: String? = null
 
@@ -9324,7 +9324,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फेब्रुअरी|मार्च|अप्रिल|मे|जुन|जुलाई|अगस्ट|सेप्टेम्बर|अक्टोबर|नोभेम्बर|डिसेम्बर\r\nजनवरी|फेब्रुअरी|मार्च|अप्रिल|मे|जुन|जुलाई|अगस्ट|सेप्टेम्बर|अक्टोबर|नोभेम्बर|डिसेम्बर\r\nजन|फेब|मार्च|अप्र|मे|जुन|जुल|अग|सेप|अक्टो|नोभे|डिसे\r"
 
   private const val ne_Format_Days: String =
-      "सोमबार|मङ्गलबार|बुधबार|बिहिबार|शुक्रबार|शनिबार|आइतबार\r\nसोम|मङ्गल|बुध|बिहि|शुक्र|शनि|आइत\r\nसो|म|बु|बि|शु|श|आ\r"
+      "सोमबार|मङ्गलबार|बुधबार|बिहिबार|शुक्रबार|शनिबार|आइतबार\r\nसोम|मङ्गल|बुध|बिहि|शुक्र|शनि|आइत\r\nसो|म|बु|बि|शु|श|आ\r\nसोम|मङ्गल|बुध|बिहि|शुक्र|शनि|आइत\r"
 
   private const val ne_Format_Quarters: String =
       "पहिलो त्रैमासिक|दोस्रो त्रैमासिक|तेस्रो त्रैमासिक|चौथो त्रैमासिक\r\nपहिलो त्रैमासिक|दोस्रो त्रैमासिक|तेस्रो त्रैमासिक|चौथो त्रैमासिक\r\n१|२|३|४\r"
@@ -9336,7 +9336,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फेब्रुअरी|मार्च|अप्रिल|मे|जुन|जुलाई|अगस्ट|सेप्टेम्बर|अक्टोबर|नोभेम्बर|डिसेम्बर\r\nजनवरी|फेब्रुअरी|मार्च|अप्रिल|मे|जुन|जुलाई|अगस्ट|सेप्टेम्बर|अक्टोबर|नोभेम्बर|डिसेम्बर\r\nजन|फेेब|मार्च|अप्र|मे|जुन|जुल|अग|सेप|अक्टो|नोभे|डिसे\r"
 
   private const val ne_Standalone_Days: String =
-      "सोमबार|मङ्गलबार|बुधबार|बिहिबार|शुक्रबार|शनिबार|आइतबार\r\nसोम|मङ्गल|बुध|बिहि|शुक्र|शनि|आइत\r\nसो|म|बु|बि|शु|श|आ\r"
+      "सोमबार|मङ्गलबार|बुधबार|बिहिबार|शुक्रबार|शनिबार|आइतबार\r\nसोम|मङ्गल|बुध|बिहि|शुक्र|शनि|आइत\r\nसो|म|बु|बि|शु|श|आ\r\nसोम|मङ्गल|बुध|बिहि|शुक्र|शनि|आइत\r"
 
   private const val ne_Standalone_Quarters: String =
       "प्रथम त्रैमासिक|द्वितीय त्रैमासिक|तृतीय त्रैमासिक|चतुर्थ त्रैमासिक\r\nपहिलो त्रैमासिक|दोस्रो त्रैमासिक|तेस्रो त्रैमासिक|चौथो त्रैमासिक\r\n१|२|३|४\r"
@@ -9364,7 +9364,7 @@ object AvailableDateTimeDisplayNames {
       "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december\r\njan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val nl_Format_Days: String =
-      "maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag\r\nma|di|wo|do|vr|za|zo\r\nM|D|W|D|V|Z|Z\r"
+      "maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag\r\nma|di|wo|do|vr|za|zo\r\nM|D|W|D|V|Z|Z\r\nma|di|wo|do|vr|za|zo\r"
 
   private const val nl_Format_Quarters: String =
       "1e kwartaal|2e kwartaal|3e kwartaal|4e kwartaal\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9376,7 +9376,7 @@ object AvailableDateTimeDisplayNames {
       "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december\r\njan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val nl_Standalone_Days: String =
-      "maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag\r\nma|di|wo|do|vr|za|zo\r\nM|D|W|D|V|Z|Z\r"
+      "maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag\r\nma|di|wo|do|vr|za|zo\r\nM|D|W|D|V|Z|Z\r\nma|di|wo|do|vr|za|zo\r"
 
   private const val nl_Standalone_Quarters: String =
       "1e kwartaal|2e kwartaal|3e kwartaal|4e kwartaal\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9484,7 +9484,7 @@ object AvailableDateTimeDisplayNames {
       "ngwɛn matáhra|ngwɛn ńmba|ngwɛn ńlal|ngwɛn ńna|ngwɛn ńtan|ngwɛn ńtuó|ngwɛn hɛmbuɛrí|ngwɛn lɔmbi|ngwɛn rɛbvuâ|ngwɛn wum|ngwɛn wum navǔr|krísimin\r\nng1|ng2|ng3|ng4|ng5|ng6|ng7|ng8|ng9|ng10|ng11|kris\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val nmg_Format_Days: String =
-      "mɔ́ndɔ|sɔ́ndɔ mafú mába|sɔ́ndɔ mafú málal|sɔ́ndɔ mafú mána|mabágá má sukul|sásadi|sɔ́ndɔ\r\nmɔ́n|smb|sml|smn|mbs|sas|sɔ́n\r\nm|s|s|s|m|s|s\r"
+      "mɔ́ndɔ|sɔ́ndɔ mafú mába|sɔ́ndɔ mafú málal|sɔ́ndɔ mafú mána|mabágá má sukul|sásadi|sɔ́ndɔ\r\nmɔ́n|smb|sml|smn|mbs|sas|sɔ́n\r\nm|s|s|s|m|s|s\r\nmɔ́n|smb|sml|smn|mbs|sas|sɔ́n\r"
 
   private const val nmg_Format_Quarters: String =
       "Tindɛ nvúr|Tindɛ ńmba|Tindɛ ńlal|Tindɛ ńna\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -9495,7 +9495,7 @@ object AvailableDateTimeDisplayNames {
       "ngwɛn matáhra|ngwɛn ńmba|ngwɛn ńlal|ngwɛn ńna|ngwɛn ńtan|ngwɛn ńtuó|ngwɛn hɛmbuɛrí|ngwɛn lɔmbi|ngwɛn rɛbvuâ|ngwɛn wum|ngwɛn wum navǔr|krísimin\r\nng1|ng2|ng3|ng4|ng5|ng6|ng7|ng8|ng9|ng10|ng11|kris\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val nmg_Standalone_Days: String =
-      "mɔ́ndɔ|sɔ́ndɔ mafú mába|sɔ́ndɔ mafú málal|sɔ́ndɔ mafú mána|mabágá má sukul|sásadi|sɔ́ndɔ\r\nmɔ́n|smb|sml|smn|mbs|sas|sɔ́n\r\nm|s|s|s|m|s|s\r"
+      "mɔ́ndɔ|sɔ́ndɔ mafú mába|sɔ́ndɔ mafú málal|sɔ́ndɔ mafú mána|mabágá má sukul|sásadi|sɔ́ndɔ\r\nmɔ́n|smb|sml|smn|mbs|sas|sɔ́n\r\nm|s|s|s|m|s|s\r\nmɔ́n|smb|sml|smn|mbs|sas|sɔ́n\r"
 
   private const val nmg_Standalone_Quarters: String =
       "Tindɛ nvúr|Tindɛ ńmba|Tindɛ ńlal|Tindɛ ńna\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -9506,7 +9506,7 @@ object AvailableDateTimeDisplayNames {
   private val nn_Format_Months: String? = null
 
   private const val nn_Format_Days: String =
-      "måndag|tysdag|onsdag|torsdag|fredag|laurdag|søndag\r\nmå.|ty.|on.|to.|fr.|la.|sø.\r\nM|T|O|T|F|L|S\r"
+      "måndag|tysdag|onsdag|torsdag|fredag|laurdag|søndag\r\nmå.|ty.|on.|to.|fr.|la.|sø.\r\nM|T|O|T|F|L|S\r\nmå.|ty.|on.|to.|fr.|la.|sø.\r"
 
   private const val nn_Format_Quarters: String =
       "1. kvartal|2. kvartal|3. kvartal|4. kvartal\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9517,7 +9517,7 @@ object AvailableDateTimeDisplayNames {
   private val nn_Standalone_Months: String? = null
 
   private const val nn_Standalone_Days: String =
-      "måndag|tysdag|onsdag|torsdag|fredag|laurdag|søndag\r\nmån|tys|ons|tor|fre|lau|søn\r\nM|T|O|T|F|L|S\r"
+      "måndag|tysdag|onsdag|torsdag|fredag|laurdag|søndag\r\nmån|tys|ons|tor|fre|lau|søn\r\nM|T|O|T|F|L|S\r\nmå.|ty.|on.|to.|fr.|la.|sø.\r"
 
   private const val nn_Standalone_Quarters: String =
       "1. kvartal|2. kvartal|3. kvartal|4. kvartal\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9529,7 +9529,7 @@ object AvailableDateTimeDisplayNames {
       "saŋ tsetsɛ̀ɛ lùm|saŋ kàg ngwóŋ|saŋ lepyè shúm|saŋ cÿó|saŋ tsɛ̀ɛ cÿó|saŋ njÿoláʼ|saŋ tyɛ̀b tyɛ̀b mbʉ̀ŋ|saŋ mbʉ̀ŋ|saŋ ngwɔ̀ʼ mbÿɛ|saŋ tàŋa tsetsáʼ|saŋ mejwoŋó|saŋ lùm\r\nsaŋ tsetsɛ̀ɛ lùm|saŋ kàg ngwóŋ|saŋ lepyè shúm|saŋ cÿó|saŋ tsɛ̀ɛ cÿó|saŋ njÿoláʼ|saŋ tyɛ̀b tyɛ̀b mbʉ̀ŋ|saŋ mbʉ̀ŋ|saŋ ngwɔ̀ʼ mbÿɛ|saŋ tàŋa tsetsáʼ|saŋ mejwoŋó|saŋ lùm\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val nnh_Format_Days: String =
-      "mvfò lyɛ̌ʼ|mbɔ́ɔntè mvfò lyɛ̌ʼ|tsètsɛ̀ɛ lyɛ̌ʼ|mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ|mvfò màga lyɛ̌ʼ|màga lyɛ̌ʼ|lyɛʼɛ́ sẅíŋtè\r\nmvfò lyɛ̌ʼ|mbɔ́ɔntè mvfò lyɛ̌ʼ|tsètsɛ̀ɛ lyɛ̌ʼ|mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ|mvfò màga lyɛ̌ʼ|màga lyɛ̌ʼ|lyɛʼɛ́ sẅíŋtè\r\nM|T|W|T|F|S|S\r"
+      "mvfò lyɛ̌ʼ|mbɔ́ɔntè mvfò lyɛ̌ʼ|tsètsɛ̀ɛ lyɛ̌ʼ|mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ|mvfò màga lyɛ̌ʼ|màga lyɛ̌ʼ|lyɛʼɛ́ sẅíŋtè\r\nmvfò lyɛ̌ʼ|mbɔ́ɔntè mvfò lyɛ̌ʼ|tsètsɛ̀ɛ lyɛ̌ʼ|mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ|mvfò màga lyɛ̌ʼ|màga lyɛ̌ʼ|lyɛʼɛ́ sẅíŋtè\r\nM|T|W|T|F|S|S\r\nmvfò lyɛ̌ʼ|mbɔ́ɔntè mvfò lyɛ̌ʼ|tsètsɛ̀ɛ lyɛ̌ʼ|mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ|mvfò màga lyɛ̌ʼ|màga lyɛ̌ʼ|lyɛʼɛ́ sẅíŋtè\r"
 
   private val nnh_Format_Quarters: String? = null
 
@@ -9540,7 +9540,7 @@ object AvailableDateTimeDisplayNames {
       "saŋ tsetsɛ̀ɛ lùm|saŋ kàg ngwóŋ|saŋ lepyè shúm|saŋ cÿó|saŋ tsɛ̀ɛ cÿó|saŋ njÿoláʼ|saŋ tyɛ̀b tyɛ̀b mbʉ̀ŋ|saŋ mbʉ̀ŋ|saŋ ngwɔ̀ʼ mbÿɛ|saŋ tàŋa tsetsáʼ|saŋ mejwoŋó|saŋ lùm\r\nsaŋ tsetsɛ̀ɛ lùm|saŋ kàg ngwóŋ|saŋ lepyè shúm|saŋ cÿó|saŋ tsɛ̀ɛ cÿó|saŋ njÿoláʼ|saŋ tyɛ̀b tyɛ̀b mbʉ̀ŋ|saŋ mbʉ̀ŋ|saŋ ngwɔ̀ʼ mbÿɛ|saŋ tàŋa tsetsáʼ|saŋ mejwoŋó|saŋ lùm\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val nnh_Standalone_Days: String =
-      "mvfò lyɛ̌ʼ|mbɔ́ɔntè mvfò lyɛ̌ʼ|tsètsɛ̀ɛ lyɛ̌ʼ|mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ|mvfò màga lyɛ̌ʼ|màga lyɛ̌ʼ|lyɛʼɛ́ sẅíŋtè\r\nmvfò lyɛ̌ʼ|mbɔ́ɔntè mvfò lyɛ̌ʼ|tsètsɛ̀ɛ lyɛ̌ʼ|mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ|mvfò màga lyɛ̌ʼ|màga lyɛ̌ʼ|lyɛʼɛ́ sẅíŋtè\r\nM|T|W|T|F|S|S\r"
+      "mvfò lyɛ̌ʼ|mbɔ́ɔntè mvfò lyɛ̌ʼ|tsètsɛ̀ɛ lyɛ̌ʼ|mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ|mvfò màga lyɛ̌ʼ|màga lyɛ̌ʼ|lyɛʼɛ́ sẅíŋtè\r\nmvfò lyɛ̌ʼ|mbɔ́ɔntè mvfò lyɛ̌ʼ|tsètsɛ̀ɛ lyɛ̌ʼ|mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ|mvfò màga lyɛ̌ʼ|màga lyɛ̌ʼ|lyɛʼɛ́ sẅíŋtè\r\nM|T|W|T|F|S|S\r\nmvfò lyɛ̌ʼ|mbɔ́ɔntè mvfò lyɛ̌ʼ|tsètsɛ̀ɛ lyɛ̌ʼ|mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ|mvfò màga lyɛ̌ʼ|màga lyɛ̌ʼ|lyɛʼɛ́ sẅíŋtè\r"
 
   private val nnh_Standalone_Quarters: String? = null
 
@@ -9551,7 +9551,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|mars|april|mai|juni|juli|august|september|oktober|november|desember\r\njan.|feb.|mars|apr.|mai|juni|juli|aug.|sep.|okt.|nov.|des.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val no_Format_Days: String =
-      "mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag\r\nman.|tir.|ons.|tor.|fre.|lør.|søn.\r\nM|T|O|T|F|L|S\r"
+      "mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag\r\nman.|tir.|ons.|tor.|fre.|lør.|søn.\r\nM|T|O|T|F|L|S\r\nma.|ti.|on.|to.|fr.|lø.|sø.\r"
 
   private const val no_Format_Quarters: String =
       "1. kvartal|2. kvartal|3. kvartal|4. kvartal\r\nK1|K2|K3|K4\r\n1.|2.|3.|4.\r"
@@ -9563,7 +9563,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|mars|april|mai|juni|juli|august|september|oktober|november|desember\r\njan|feb|mar|apr|mai|jun|jul|aug|sep|okt|nov|des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val no_Standalone_Days: String =
-      "mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag\r\nman.|tir.|ons.|tor.|fre.|lør.|søn.\r\nM|T|O|T|F|L|S\r"
+      "mandag|tirsdag|onsdag|torsdag|fredag|lørdag|søndag\r\nman.|tir.|ons.|tor.|fre.|lør.|søn.\r\nM|T|O|T|F|L|S\r\nma.|ti.|on.|to.|fr.|lø.|sø.\r"
 
   private const val no_Standalone_Quarters: String =
       "1. kvartal|2. kvartal|3. kvartal|4. kvartal\r\nK1|K2|K3|K4\r\n1.|2.|3.|4.\r"
@@ -9575,7 +9575,7 @@ object AvailableDateTimeDisplayNames {
       "ߓߌ߲ߠߊߥߎߟߋ߲|ߞߏ߲ߞߏߜߍ|ߕߙߊߓߊ|ߞߏ߲ߞߏߘߌ߬ߓߌ|ߘߓߊ߬ߕߊ|ߥߊ߬ߛߌ߬ߥߙߊ|ߞߊ߬ߙߌߝߐ߭|ߘߓߊ߬ߓߌߟߊ|ߕߎߟߊߝߌ߲|ߞߏ߲ߓߌߕߌ߮|ߣߍߣߍߓߊ|ߞߏߟߌ߲ߞߏߟߌ߲\r\nߓߌ߲ߠ|ߞߏ߲ߞ|ߕߙߊ|ߞߏ߲ߘ|ߘߓߊ߬ߕ|ߥߊ߬ߛ|ߞߊ߬ߙ|ߘߓߊ߬ߓ|ߕߎߟߊߝߌ߲|ߞߏ߲ߓ|ߣߍߣ|ߞߏߟ\r\nߓ|ߞ|ߕ|ߞ|ߘ|ߥ|ߞ|ߘ|ߕ|ߞ|ߣ|ߞ\r"
 
   private const val nqo_Format_Days: String =
-      "ߞߐ߬ߓߊ߬ߟߏ߲|ߞߐ߬ߟߏ߲|ߞߎߣߎ߲ߟߏ߲|ߓߌߟߏ߲|ߛߌ߬ߣߌ߲߬ߟߏ߲|ߞߍ߲ߘߍߟߏ߲|ߞߊ߯ߙߌߟߏ߲\r\nߞߐ߬ߓ|ߞߐ߬ߟߏ߲|ߞߎߣ|ߓߌߟ|ߛߌ߬ߣ|ߞߍ߲ߘ|ߞߊ߯ߙ\r\nߞ|ߞ|ߞ|ߓ|ߛ|ߞ|ߞ\r"
+      "ߞߐ߬ߓߊ߬ߟߏ߲|ߞߐ߬ߟߏ߲|ߞߎߣߎ߲ߟߏ߲|ߓߌߟߏ߲|ߛߌ߬ߣߌ߲߬ߟߏ߲|ߞߍ߲ߘߍߟߏ߲|ߞߊ߯ߙߌߟߏ߲\r\nߞߐ߬ߓ|ߞߐ߬ߟߏ߲|ߞߎߣ|ߓߌߟ|ߛߌ߬ߣ|ߞߍ߲ߘ|ߞߊ߯ߙ\r\nߞ|ߞ|ߞ|ߓ|ߛ|ߞ|ߞ\r\nߞߐ߬|ߞߐ߬ߟߏ߲|ߞߎ|ߓߌ|ߛߌ߬|ߞߍ߲|ߞߊ߯\r"
 
   private const val nqo_Format_Quarters: String =
       "ߞߊߙߏߛߓߊ߫ ߁߭|ߞߊߙߏߛߓߊ߫ ߂߲|ߞߊߙߏߛߓߊ߫ ߃߲|ߞߊߙߏߛߓߊ߫ ߄߲\r\nߞߛ߁|ߞߛ߂|ߞߛ߃|ߞߛ߄\r\n߁|߂|߃|߄\r"
@@ -9586,7 +9586,7 @@ object AvailableDateTimeDisplayNames {
       "ߓߌ߲ߠߊߥߎߟߋ߲|ߞߏ߲ߞߏߜߍ|ߕߙߊߓߊ|ߞߏ߲ߞߏߘߌ߬ߓߌ|ߘߓߊ߬ߕߊ|ߥߊ߬ߛߌ߬ߥߙߊ|ߞߊ߬ߙߌߝߐ߭|ߘߓߊ߬ߓߌߟߊ|ߕߎߟߊߝߌ߲|ߞߏ߲ߓߌߕߌ߮|ߣߍߣߍߓߊ|ߞߏߟߌ߲ߞߏߟߌ߲\r\nߓߌ߲ߠ|ߞߏ߲ߞ|ߕߙߊ|ߞߏ߲ߘ|ߘߓߊ߬ߕ|ߥߊ߬ߛ|ߞߊ߬ߙ|ߘߓߊ߬ߓ|ߕߎߟߊߝߌ߲|ߞߏ߲ߓ|ߣߍߣ|ߞߏߟ\r\nߓ|ߞ|ߕ|ߞ|ߘ|ߥ|ߞ|ߘ|ߕ|ߞ|ߣ|ߞ\r"
 
   private const val nqo_Standalone_Days: String =
-      "ߞߐ߬ߓߊ߬ߟߏ߲|ߞߐ߬ߟߏ߲|ߞߎߣߎ߲ߟߏ߲|ߓߌߟߏ߲|ߛߌ߬ߣߌ߲߬ߟߏ߲|ߞߍ߲ߘߍߟߏ߲|ߞߊ߯ߙߌߟߏ߲\r\nߞߐ߬ߓ|ߞߐ߬ߟ|ߞߎߣ|ߓߌߟ|ߛߌ߬ߣ|ߞߍ߲ߘ|ߞߊ߯ߙ\r\nߞ|ߞ|ߞ|ߓ|ߛ|ߞ|ߞ\r"
+      "ߞߐ߬ߓߊ߬ߟߏ߲|ߞߐ߬ߟߏ߲|ߞߎߣߎ߲ߟߏ߲|ߓߌߟߏ߲|ߛߌ߬ߣߌ߲߬ߟߏ߲|ߞߍ߲ߘߍߟߏ߲|ߞߊ߯ߙߌߟߏ߲\r\nߞߐ߬ߓ|ߞߐ߬ߟ|ߞߎߣ|ߓߌߟ|ߛߌ߬ߣ|ߞߍ߲ߘ|ߞߊ߯ߙ\r\nߞ|ߞ|ߞ|ߓ|ߛ|ߞ|ߞ\r\nߞߐ߬ߓ|ߞߐ߬ߟ|ߞߎ|ߓߌ|ߛߌ߬|ߞߍ߲|ߞߊ߯\r"
 
   private const val nqo_Standalone_Quarters: String =
       "ߞߊߙߏߛߓߊ߫ ߁߭|ߞߊߙߏߛߓߊ߫ ߂߲|ߞߊߙߏߛߓߊ߫ ߃߲|ߞߊߙߏߛߓߊ߫ ߄߲\r\nߞߛ߁|ߞߛ߂|ߞߛ߃|ߞߛ߄\r\n߁|߂|߃|߄\r"
@@ -9613,7 +9613,7 @@ object AvailableDateTimeDisplayNames {
       "Janeware|Febereware|Matšhe|Aporele|Mei|June|Julae|Agosetose|Setemere|Oktobore|Nofemere|Disemere\r\nPhere|Dibo|Hlak|Mora|Mei|June|Mose|Agosetose|Lewe|Dipha|Diba|Manth\r\nP|D|H|M|M|P|M|P|L|D|D|M\r"
 
   private const val nso_Format_Days: String =
-      "Mošupologo|Labobedi|Laboraro|Labone|Labohlano|Mokibelo|Lamorena\r\nMos|Bed|Rar|Ne|Hla|Mok|Lam\r\nM|B|R|N|H|M|L\r"
+      "Mošupologo|Labobedi|Laboraro|Labone|Labohlano|Mokibelo|Lamorena\r\nMos|Bed|Rar|Ne|Hla|Mok|Lam\r\nM|B|R|N|H|M|L\r\nMos|Bed|Rar|Ne|Hla|Mok|Lam\r"
 
   private const val nso_Format_Quarters: String =
       "1st Kotara|2nd Kotara|3rd Kotara|4th Kotara\r\n1st Kotara|2nd Kotara|3rd Kotara|4th Kotara\r\n1|2|3|4\r"
@@ -9624,7 +9624,7 @@ object AvailableDateTimeDisplayNames {
       "Janeware|Febereware|Matšhe|Aporele|Mei|June|Julae|Agosetose|Setemere|Oktobore|Nofemere|Disemere\r\nPhere|Dibo|Hlak|Mora|Mei|June|Mose|Agosetose|Lewe|Dipha|Diba|Manth\r\nP|D|H|M|M|P|M|P|L|D|D|M\r"
 
   private const val nso_Standalone_Days: String =
-      "Mošupologo|Labobedi|Laboraro|Labone|Labohlano|Mokibelo|Lamorena\r\nMos|Bed|Rar|Ne|Hla|Mok|Lam\r\nM|B|R|N|H|M|L\r"
+      "Mošupologo|Labobedi|Laboraro|Labone|Labohlano|Mokibelo|Lamorena\r\nMos|Bed|Rar|Ne|Hla|Mok|Lam\r\nM|B|R|N|H|M|L\r\nMos|Bed|Rar|Ne|Hla|Mok|Lam\r"
 
   private const val nso_Standalone_Quarters: String =
       "1st Kotara|2nd Kotara|3rd Kotara|4th Kotara\r\n1st Kotara|2nd Kotara|3rd Kotara|4th Kotara\r\n1|2|3|4\r"
@@ -9635,7 +9635,7 @@ object AvailableDateTimeDisplayNames {
       "Tiop thar pɛt|Pɛt|Duɔ̱ɔ̱ŋ|Guak|Duät|Kornyoot|Pay yie̱tni|Tho̱o̱r|Tɛɛr|Laath|Kur|Tio̱p in di̱i̱t\r\nTiop|Pɛt|Duɔ̱ɔ̱|Guak|Duä|Kor|Pay|Thoo|Tɛɛ|Laa|Kur|Tid\r\nT|P|D|G|D|K|P|T|T|L|K|T\r"
 
   private const val nus_Format_Days: String =
-      "Jiec la̱t|Rɛw lätni|Diɔ̱k lätni|Ŋuaan lätni|Dhieec lätni|Bäkɛl lätni|Cäŋ kuɔth\r\nJiec|Rɛw|Diɔ̱k|Ŋuaan|Dhieec|Bäkɛl|Cäŋ\r\nJ|R|D|Ŋ|D|B|C\r"
+      "Jiec la̱t|Rɛw lätni|Diɔ̱k lätni|Ŋuaan lätni|Dhieec lätni|Bäkɛl lätni|Cäŋ kuɔth\r\nJiec|Rɛw|Diɔ̱k|Ŋuaan|Dhieec|Bäkɛl|Cäŋ\r\nJ|R|D|Ŋ|D|B|C\r\nJiec|Rɛw|Diɔ̱k|Ŋuaan|Dhieec|Bäkɛl|Cäŋ\r"
 
   private const val nus_Format_Quarters: String =
       "Päth diɔk tin nhiam|Päth diɔk tin guurɛ|Päth diɔk tin wä kɔɔriɛn|Päth diɔk tin jiɔakdiɛn\r\nP1|P2|P3|P4\r\n1|2|3|4\r"
@@ -9646,7 +9646,7 @@ object AvailableDateTimeDisplayNames {
       "Tiop thar pɛt|Pɛt|Duɔ̱ɔ̱ŋ|Guak|Duät|Kornyoot|Pay yie̱tni|Tho̱o̱r|Tɛɛr|Laath|Kur|Tio̱p in di̱i̱t\r\nTiop|Pɛt|Duɔ̱ɔ̱|Guak|Duä|Kor|Pay|Thoo|Tɛɛ|Laa|Kur|Tid\r\nT|P|D|G|D|K|P|T|T|L|K|T\r"
 
   private const val nus_Standalone_Days: String =
-      "Jiec la̱t|Rɛw lätni|Diɔ̱k lätni|Ŋuaan lätni|Dhieec lätni|Bäkɛl lätni|Cäŋ kuɔth\r\nJiec|Rɛw|Diɔ̱k|Ŋuaan|Dhieec|Bäkɛl|Cäŋ\r\nJ|R|D|Ŋ|D|B|C\r"
+      "Jiec la̱t|Rɛw lätni|Diɔ̱k lätni|Ŋuaan lätni|Dhieec lätni|Bäkɛl lätni|Cäŋ kuɔth\r\nJiec|Rɛw|Diɔ̱k|Ŋuaan|Dhieec|Bäkɛl|Cäŋ\r\nJ|R|D|Ŋ|D|B|C\r\nJiec|Rɛw|Diɔ̱k|Ŋuaan|Dhieec|Bäkɛl|Cäŋ\r"
 
   private const val nus_Standalone_Quarters: String =
       "Päth diɔk tin nhiam|Päth diɔk tin guurɛ|Päth diɔk tin wä kɔɔriɛn|Päth diɔk tin jiɔakdiɛn\r\nP1|P2|P3|P4\r\n1|2|3|4\r"
@@ -9689,7 +9689,7 @@ object AvailableDateTimeDisplayNames {
       "Okwokubanza|Okwakabiri|Okwakashatu|Okwakana|Okwakataana|Okwamukaaga|Okwamushanju|Okwamunaana|Okwamwenda|Okwaikumi|Okwaikumi na kumwe|Okwaikumi na ibiri\r\nKBZ|KBR|KST|KKN|KTN|KMK|KMS|KMN|KMW|KKM|KNK|KNB\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val nyn_Format_Days: String =
-      "Orwokubanza|Orwakabiri|Orwakashatu|Orwakana|Orwakataano|Orwamukaaga|Sande\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r\nK|R|S|N|T|M|S\r"
+      "Orwokubanza|Orwakabiri|Orwakashatu|Orwakana|Orwakataano|Orwamukaaga|Sande\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r\nK|R|S|N|T|M|S\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r"
 
   private const val nyn_Format_Quarters: String =
       "KWOTA 1|KWOTA 2|KWOTA 3|KWOTA 4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9700,7 +9700,7 @@ object AvailableDateTimeDisplayNames {
       "Okwokubanza|Okwakabiri|Okwakashatu|Okwakana|Okwakataana|Okwamukaaga|Okwamushanju|Okwamunaana|Okwamwenda|Okwaikumi|Okwaikumi na kumwe|Okwaikumi na ibiri\r\nKBZ|KBR|KST|KKN|KTN|KMK|KMS|KMN|KMW|KKM|KNK|KNB\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val nyn_Standalone_Days: String =
-      "Orwokubanza|Orwakabiri|Orwakashatu|Orwakana|Orwakataano|Orwamukaaga|Sande\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r\nK|R|S|N|T|M|S\r"
+      "Orwokubanza|Orwakabiri|Orwakashatu|Orwakana|Orwakataano|Orwamukaaga|Sande\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r\nK|R|S|N|T|M|S\r\nORK|OKB|OKS|OKN|OKT|OMK|SAN\r"
 
   private const val nyn_Standalone_Quarters: String =
       "KWOTA 1|KWOTA 2|KWOTA 3|KWOTA 4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9711,7 +9711,7 @@ object AvailableDateTimeDisplayNames {
       "de genièr|de febrièr|de març|d’abril|de mai|de junh|de julhet|d’agost|de setembre|d’octòbre|de novembre|de decembre\r\nde genièr|de febrièr|de març|d’abril|de mai|de junh|de julhet|d’agost|de setembre|d’octòbre|de novembre|de decembre\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val oc_Format_Days: String =
-      "diluns|dimars|dimècres|dijòus|divendres|dissabte|dimenge\r\ndiluns|dimars|dimècres|dijòus|divendres|dissabte|dimenge\r\nM|T|W|T|F|S|S\r"
+      "diluns|dimars|dimècres|dijòus|divendres|dissabte|dimenge\r\ndiluns|dimars|dimècres|dijòus|divendres|dissabte|dimenge\r\nM|T|W|T|F|S|S\r\ndiluns|dimars|dimècres|dijòus|divendres|dissabte|dimenge\r"
 
   private val oc_Format_Quarters: String? = null
 
@@ -9721,7 +9721,7 @@ object AvailableDateTimeDisplayNames {
       "de genièr|de febrièr|de març|d’abril|de mai|de junh|de julhet|d’agost|de setembre|d’octòbre|de novembre|de decembre\r\nde genièr|de febrièr|de març|d’abril|de mai|de junh|de julhet|d’agost|de setembre|d’octòbre|de novembre|de decembre\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val oc_Standalone_Days: String =
-      "diluns|dimars|dimècres|dijòus|divendres|dissabte|dimenge\r\ndiluns|dimars|dimècres|dijòus|divendres|dissabte|dimenge\r\nM|T|W|T|F|S|S\r"
+      "diluns|dimars|dimècres|dijòus|divendres|dissabte|dimenge\r\ndiluns|dimars|dimècres|dijòus|divendres|dissabte|dimenge\r\nM|T|W|T|F|S|S\r\ndiluns|dimars|dimècres|dijòus|divendres|dissabte|dimenge\r"
 
   private val oc_Standalone_Quarters: String? = null
 
@@ -9747,7 +9747,7 @@ object AvailableDateTimeDisplayNames {
       "Amajjii|Guraandhala|Bitootessa|Eebila|Caamsaa|Waxabajjii|Adoolessa|Hagayya|Fulbaana|Onkoloolessa|Sadaasa|Mudde\r\nAma|Gur|Bitootessa|Elb|Cam|Wax|Ado|Hag|Ful|Onk|Sadaasa|Mud\r\nA|G|B|E|C|W|A|H|F|O|S|M\r"
 
   private const val om_Format_Days: String =
-      "Wiixata|Kibxata|Roobii|Kamisa|Jimaata|Sanbata|Dilbata\r\nWix|Kib|Rob|Kam|Jim|San|Dil\r\nW|K|R|K|J|S|D\r"
+      "Wiixata|Kibxata|Roobii|Kamisa|Jimaata|Sanbata|Dilbata\r\nWix|Kib|Rob|Kam|Jim|San|Dil\r\nW|K|R|K|J|S|D\r\nWix|Kib|Rob|Kam|Jim|San|Dil\r"
 
   private const val om_Format_Quarters: String =
       "Kurmaana 1ffaa|Kurmaana 2ffaa|Kurmaana 3ffaa|Kurmaana 4ffaa\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9758,7 +9758,7 @@ object AvailableDateTimeDisplayNames {
       "Amajjii|Guraandhala|Bitootessa|Eebila|Caamsaa|Waxabajjii|Adoolessa|Hagayya|Fulbaana|Onkoloolessa|Sadaasa|Mudde\r\nAma|Gur|Bitootessa|Elb|Cam|Wax|Ado|Hag|Ful|Onk|Sadaasa|Mud\r\nA|G|B|E|C|W|A|H|F|O|S|M\r"
 
   private const val om_Standalone_Days: String =
-      "Wiixata|Kibxata|Roobii|Kamisa|Jimaata|Sanbata|Dilbata\r\nWix|Kib|Rob|Kam|Jim|San|Dil\r\nW|K|R|K|J|S|D\r"
+      "Wiixata|Kibxata|Roobii|Kamisa|Jimaata|Sanbata|Dilbata\r\nWix|Kib|Rob|Kam|Jim|San|Dil\r\nW|K|R|K|J|S|D\r\nWix|Kib|Rob|Kam|Jim|San|Dil\r"
 
   private const val om_Standalone_Quarters: String =
       "Kurmaana 1ffaa|Kurmaana 2ffaa|Kurmaana 3ffaa|Kurmaana 4ffaa\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9776,7 +9776,7 @@ object AvailableDateTimeDisplayNames {
   private val om_KE_Standalone_Months: String? = null
 
   private const val om_KE_Standalone_Days: String =
-      "Wiixata|Kibxata|Roobii|Kamisa|Jimaata|Sanbata|Dilbata\r\nWix|Kib|Rob|Kam|Jim|San|Dil\r\nW|Q|R|K|J|S|D\r"
+      "Wiixata|Kibxata|Roobii|Kamisa|Jimaata|Sanbata|Dilbata\r\nWix|Kib|Rob|Kam|Jim|San|Dil\r\nW|Q|R|K|J|S|D\r\nWix|Kib|Rob|Kam|Jim|San|Dil\r"
 
   private val om_KE_Standalone_Quarters: String? = null
 
@@ -9786,7 +9786,7 @@ object AvailableDateTimeDisplayNames {
       "ଜାନୁଆରୀ|ଫେବୃଆରୀ|ମାର୍ଚ୍ଚ|ଅପ୍ରେଲ|ମଇ|ଜୁନ|ଜୁଲାଇ|ଅଗଷ୍ଟ|ସେପ୍ଟେମ୍ବର|ଅକ୍ଟୋବର|ନଭେମ୍ବର|ଡିସେମ୍ବର\r\nଜାନୁଆରୀ|ଫେବୃଆରୀ|ମାର୍ଚ୍ଚ|ଅପ୍ରେଲ|ମଇ|ଜୁନ|ଜୁଲାଇ|ଅଗଷ୍ଟ|ସେପ୍ଟେମ୍ବର|ଅକ୍ଟୋବର|ନଭେମ୍ବର|ଡିସେମ୍ବର\r\nଜା|ଫେ|ମା|ଅ|ମଇ|ଜୁ|ଜୁ|ଅ|ସେ|ଅ|ନ|ଡି\r"
 
   private const val or_Format_Days: String =
-      "ସୋମବାର|ମଙ୍ଗଳବାର|ବୁଧବାର|ଗୁରୁବାର|ଶୁକ୍ରବାର|ଶନିବାର|ରବିବାର\r\nସୋମ|ମଙ୍ଗଳ|ବୁଧ|ଗୁରୁ|ଶୁକ୍ର|ଶନି|ରବି\r\nସୋ|ମ|ବୁ|ଗୁ|ଶୁ|ଶ|ର\r"
+      "ସୋମବାର|ମଙ୍ଗଳବାର|ବୁଧବାର|ଗୁରୁବାର|ଶୁକ୍ରବାର|ଶନିବାର|ରବିବାର\r\nସୋମ|ମଙ୍ଗଳ|ବୁଧ|ଗୁରୁ|ଶୁକ୍ର|ଶନି|ରବି\r\nସୋ|ମ|ବୁ|ଗୁ|ଶୁ|ଶ|ର\r\nସୋମ|ମଙ୍ଗଳ|ବୁଧ|ଗୁରୁ|ଶୁକ୍ର|ଶନି|ରବି\r"
 
   private const val or_Format_Quarters: String =
       "1ମ ତ୍ରୟମାସ|2ୟ ତ୍ରୟମାସ|3ୟ ତ୍ରୟମାସ|4ର୍ଥ ତ୍ରୟମାସ\r\nQ1|Q2|3ୟ ତ୍ରୟମାସ|4ର୍ଥ ତ୍ରୟମାସ\r\n1|2|3|4\r"
@@ -9797,7 +9797,7 @@ object AvailableDateTimeDisplayNames {
       "ଜାନୁଆରୀ|ଫେବୃଆରୀ|ମାର୍ଚ୍ଚ|ଅପ୍ରେଲ|ମଇ|ଜୁନ|ଜୁଲାଇ|ଅଗଷ୍ଟ|ସେପ୍ଟେମ୍ବର|ଅକ୍ଟୋବର|ନଭେମ୍ବର|ଡିସେମ୍ବର\r\nଜାନୁଆରୀ|ଫେବୃଆରୀ|ମାର୍ଚ୍ଚ|ଅପ୍ରେଲ|ମଇ|ଜୁନ|ଜୁଲାଇ|ଅଗଷ୍ଟ|ସେପ୍ଟେମ୍ବର|ଅକ୍ଟୋବର|ନଭେମ୍ବର|ଡିସେମ୍ବର\r\nଜା|ଫେ|ମା|ଅ|ମଇ|ଜୁ|ଜୁ|ଅ|ସେ|ଅ|ନ|ଡି\r"
 
   private const val or_Standalone_Days: String =
-      "ସୋମବାର|ମଙ୍ଗଳବାର|ବୁଧବାର|ଗୁରୁବାର|ଶୁକ୍ରବାର|ଶନିବାର|ରବିବାର\r\nସୋମ|ମଙ୍ଗଳ|ବୁଧ|ଗୁରୁ|ଶୁକ୍ର|ଶନି|ରବି\r\nସୋ|ମ|ବୁ|ଗୁ|ଶୁ|ଶ|ର\r"
+      "ସୋମବାର|ମଙ୍ଗଳବାର|ବୁଧବାର|ଗୁରୁବାର|ଶୁକ୍ରବାର|ଶନିବାର|ରବିବାର\r\nସୋମ|ମଙ୍ଗଳ|ବୁଧ|ଗୁରୁ|ଶୁକ୍ର|ଶନି|ରବି\r\nସୋ|ମ|ବୁ|ଗୁ|ଶୁ|ଶ|ର\r\nସୋମ|ମଙ୍ଗଳ|ବୁଧ|ଗୁରୁ|ଶୁକ୍ର|ଶନି|ରବି\r"
 
   private const val or_Standalone_Quarters: String =
       "1ମ ତ୍ରୟମାସ|2ୟ ତ୍ରୟମାସ|3ୟ ତ୍ରୟମାସ|4ର୍ଥ ତ୍ରୟମାସ\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -9809,7 +9809,7 @@ object AvailableDateTimeDisplayNames {
       "январы|февралы|мартъийы|апрелы|майы|июны|июлы|августы|сентябры|октябры|ноябры|декабры\r\nянв.|фев.|мар.|апр.|майы|июны|июлы|авг.|сен.|окт.|ноя.|дек.\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val os_Format_Days: String =
-      "къуырисӕр|дыццӕг|ӕртыццӕг|цыппӕрӕм|майрӕмбон|сабат|хуыцаубон\r\nкрс|дцг|ӕрт|цпр|мрб|сбт|хцб\r\nК|Д|Ӕ|Ц|М|С|Х\r"
+      "къуырисӕр|дыццӕг|ӕртыццӕг|цыппӕрӕм|майрӕмбон|сабат|хуыцаубон\r\nкрс|дцг|ӕрт|цпр|мрб|сбт|хцб\r\nК|Д|Ӕ|Ц|М|С|Х\r\nкрс|дцг|ӕрт|цпр|мрб|сбт|хцб\r"
 
   private const val os_Format_Quarters: String =
       "1-аг квартал|2-аг квартал|3-аг квартал|4-ӕм квартал\r\n1-аг кв.|2-аг кв.|3-аг кв.|4-ӕм кв.\r\n1|2|3|4\r"
@@ -9821,7 +9821,7 @@ object AvailableDateTimeDisplayNames {
       "Январь|Февраль|Мартъи|Апрель|Май|Июнь|Июль|Август|Сентябрь|Октябрь|Ноябрь|Декабрь\r\nЯнв.|Февр.|Март.|Апр.|Май|Июнь|Июль|Авг.|Сент.|Окт.|Нояб.|Дек.\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val os_Standalone_Days: String =
-      "Къуырисӕр|Дыццӕг|Ӕртыццӕг|Цыппӕрӕм|Майрӕмбон|Сабат|Хуыцаубон\r\nКрс|Дцг|Ӕрт|Цпр|Мрб|Сбт|Хцб\r\nК|Д|Ӕ|Ц|М|С|Х\r"
+      "Къуырисӕр|Дыццӕг|Ӕртыццӕг|Цыппӕрӕм|Майрӕмбон|Сабат|Хуыцаубон\r\nКрс|Дцг|Ӕрт|Цпр|Мрб|Сбт|Хцб\r\nК|Д|Ӕ|Ц|М|С|Х\r\nкрс|дцг|ӕрт|цпр|мрб|сбт|хцб\r"
 
   private const val os_Standalone_Quarters: String =
       "1-аг квартал|2-аг квартал|3-аг квартал|4-ӕм квартал\r\n1-аг кв.|2-аг кв.|3-аг кв.|4-ӕм кв.\r\n1|2|3|4\r"
@@ -9848,7 +9848,7 @@ object AvailableDateTimeDisplayNames {
       "𐓀𐓣͘𐓪͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓟|𐓀𐓣͘𐓪͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐓀𐓣͘𐓪͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐓀𐓣͘𐓪͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐓀𐓣͘𐓪͘𐓬𐓘 𐓏𐓟𐓮𐓘𐓰𐓘|𐓀𐓣͘𐓪͘𐓬𐓘 𐓏𐓟𐓯𐓘𐓬𐓟|𐓀𐓣͘𐓪͘𐓬𐓘 𐓄𐓟𐓵𐓪͘𐓬𐓘|𐓀𐓣͘𐓪͘𐓬𐓘 𐒼𐓣𐓟𐓰𐓪𐓬𐓘|𐓀𐓣͘𐓪͘𐓬𐓘 𐒿𐓟𐓜𐓛𐓲𐓟𐓷𐓣͘𐓤𐓟|𐓀𐓣͘𐓪͘𐓬𐓘 𐒿𐓟𐓜𐓛|𐓀𐓣͘𐓪͘𐓬𐓘 𐒰𐓧𐓣 𐓏𐓣͘𐓸𐓲𐓣|𐓀𐓣͘𐓪͘𐓬𐓘 𐒰𐓧𐓣 𐓍𐓪͘𐓬𐓘\r\n𐓄𐓘𐓡𐓛͘𐓧𐓟|𐓵𐓪͘𐓬𐓘|𐓵𐓘𐓜𐓣|𐓰𐓪𐓬𐓘|𐓮𐓘𐓰𐓘|𐓯𐓘𐓬𐓟|𐓄𐓟𐓵𐓪͘𐓬𐓘|𐒼𐓣𐓟𐓰𐓪𐓬𐓘|𐒿𐓟𐓜𐓛𐓲𐓟𐓷𐓣͘𐓤𐓟|𐒿𐓟𐓜𐓛|𐒰𐓧𐓣 𐓏𐓣͘𐓸𐓲𐓣|𐒰𐓧𐓣 𐓍𐓪͘𐓬𐓘\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val osa_Format_Days: String =
-      "𐒹𐓘͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓈𐓘 𐓵𐓘𐓲𐓘 𐓻𐓣͘|𐒹𐓘͘𐓬𐓘 𐓂𐓤𐓘𐓸𐓟 𐓣͘𐓤𐓟|𐒹𐓘͘𐓬𐓘 𐓏𐓘𐓤𐓘͘𐓰𐓘𐓤𐓣\r\n𐒹𐓘͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓈𐓘 𐓵𐓘𐓲𐓘 𐓻𐓣͘|𐒹𐓘͘𐓬𐓘 𐓂𐓤𐓘𐓸𐓟 𐓣͘𐓤𐓟|𐒹𐓘͘𐓬𐓘 𐓏𐓘𐓤𐓘͘𐓰𐓘𐓤𐓣\r\n𐓄|𐓍|𐒴|𐓈|𐓊|𐓸|𐓏\r"
+      "𐒹𐓘͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓈𐓘 𐓵𐓘𐓲𐓘 𐓻𐓣͘|𐒹𐓘͘𐓬𐓘 𐓂𐓤𐓘𐓸𐓟 𐓣͘𐓤𐓟|𐒹𐓘͘𐓬𐓘 𐓏𐓘𐓤𐓘͘𐓰𐓘𐓤𐓣\r\n𐒹𐓘͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓈𐓘 𐓵𐓘𐓲𐓘 𐓻𐓣͘|𐒹𐓘͘𐓬𐓘 𐓂𐓤𐓘𐓸𐓟 𐓣͘𐓤𐓟|𐒹𐓘͘𐓬𐓘 𐓏𐓘𐓤𐓘͘𐓰𐓘𐓤𐓣\r\n𐓄|𐓍|𐒴|𐓈|𐓊|𐓸|𐓏\r\n𐒹𐓘͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓈𐓘 𐓵𐓘𐓲𐓘 𐓻𐓣͘|𐒹𐓘͘𐓬𐓘 𐓂𐓤𐓘𐓸𐓟 𐓣͘𐓤𐓟|𐒹𐓘͘𐓬𐓘 𐓏𐓘𐓤𐓘͘𐓰𐓘𐓤𐓣\r"
 
   private val osa_Format_Quarters: String? = null
 
@@ -9858,7 +9858,7 @@ object AvailableDateTimeDisplayNames {
       "𐓀𐓣͘𐓪͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓟|𐓀𐓣͘𐓪͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐓀𐓣͘𐓪͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐓀𐓣͘𐓪͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐓀𐓣͘𐓪͘𐓬𐓘 𐓏𐓟𐓮𐓘𐓰𐓘|𐓀𐓣͘𐓪͘𐓬𐓘 𐓏𐓟𐓯𐓘𐓬𐓟|𐓀𐓣͘𐓪͘𐓬𐓘 𐓄𐓟𐓵𐓪͘𐓬𐓘|𐓀𐓣͘𐓪͘𐓬𐓘 𐒼𐓣𐓟𐓰𐓪𐓬𐓘|𐓀𐓣͘𐓪͘𐓬𐓘 𐒿𐓟𐓜𐓛𐓲𐓟𐓷𐓣͘𐓤𐓟|𐓀𐓣͘𐓪͘𐓬𐓘 𐒿𐓟𐓜𐓛|𐓀𐓣͘𐓪͘𐓬𐓘 𐒰𐓧𐓣 𐓏𐓣͘𐓸𐓲𐓣|𐓀𐓣͘𐓪͘𐓬𐓘 𐒰𐓧𐓣 𐓍𐓪͘𐓬𐓘\r\n𐓄𐓘𐓡𐓛͘𐓧𐓟|𐓵𐓪͘𐓬𐓘|𐓵𐓘𐓜𐓣|𐓰𐓪𐓬𐓘|𐓮𐓘𐓰𐓘|𐓯𐓘𐓬𐓟|𐓄𐓟𐓵𐓪͘𐓬𐓘|𐒼𐓣𐓟𐓰𐓪𐓬𐓘|𐒿𐓟𐓜𐓛𐓲𐓟𐓷𐓣͘𐓤𐓟|𐒿𐓟𐓜𐓛|𐒰𐓧𐓣 𐓏𐓣͘𐓸𐓲𐓣|𐒰𐓧𐓣 𐓍𐓪͘𐓬𐓘\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val osa_Standalone_Days: String =
-      "𐒹𐓘͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓈𐓘 𐓵𐓘𐓲𐓘 𐓻𐓣͘|𐒹𐓘͘𐓬𐓘 𐓂𐓤𐓘𐓸𐓟 𐓣͘𐓤𐓟|𐒹𐓘͘𐓬𐓘 𐓏𐓘𐓤𐓘͘𐓰𐓘𐓤𐓣\r\n𐒹𐓘͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓈𐓘 𐓵𐓘𐓲𐓘 𐓻𐓣͘|𐒹𐓘͘𐓬𐓘 𐓂𐓤𐓘𐓸𐓟 𐓣͘𐓤𐓟|𐒹𐓘͘𐓬𐓘 𐓏𐓘𐓤𐓘͘𐓰𐓘𐓤𐓣\r\nM|T|W|T|F|S|S\r"
+      "𐒹𐓘͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓈𐓘 𐓵𐓘𐓲𐓘 𐓻𐓣͘|𐒹𐓘͘𐓬𐓘 𐓂𐓤𐓘𐓸𐓟 𐓣͘𐓤𐓟|𐒹𐓘͘𐓬𐓘 𐓏𐓘𐓤𐓘͘𐓰𐓘𐓤𐓣\r\n𐒹𐓘͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓈𐓘 𐓵𐓘𐓲𐓘 𐓻𐓣͘|𐒹𐓘͘𐓬𐓘 𐓂𐓤𐓘𐓸𐓟 𐓣͘𐓤𐓟|𐒹𐓘͘𐓬𐓘 𐓏𐓘𐓤𐓘͘𐓰𐓘𐓤𐓣\r\nM|T|W|T|F|S|S\r\n𐒹𐓘͘𐓬𐓘 𐓄𐓘𐓡𐓛͘𐓧𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓪͘𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓵𐓘𐓜𐓣|𐒹𐓘͘𐓬𐓘 𐓏𐓟𐓰𐓪𐓬𐓘|𐒹𐓘͘𐓬𐓘 𐓈𐓘 𐓵𐓘𐓲𐓘 𐓻𐓣͘|𐒹𐓘͘𐓬𐓘 𐓂𐓤𐓘𐓸𐓟 𐓣͘𐓤𐓟|𐒹𐓘͘𐓬𐓘 𐓏𐓘𐓤𐓘͘𐓰𐓘𐓤𐓣\r"
 
   private val osa_Standalone_Quarters: String? = null
 
@@ -9868,7 +9868,7 @@ object AvailableDateTimeDisplayNames {
       "ਜਨਵਰੀ|ਫ਼ਰਵਰੀ|ਮਾਰਚ|ਅਪ੍ਰੈਲ|ਮਈ|ਜੂਨ|ਜੁਲਾਈ|ਅਗਸਤ|ਸਤੰਬਰ|ਅਕਤੂਬਰ|ਨਵੰਬਰ|ਦਸੰਬਰ\r\nਜਨ|ਫ਼ਰ|ਮਾਰਚ|ਅਪ੍ਰੈ|ਮਈ|ਜੂਨ|ਜੁਲਾ|ਅਗ|ਸਤੰ|ਅਕਤੂ|ਨਵੰ|ਦਸੰ\r\nਜ|ਫ਼|ਮਾ|ਅ|ਮ|ਜੂ|ਜੁ|ਅ|ਸ|ਅ|ਨ|ਦ\r"
 
   private const val pa_Format_Days: String =
-      "ਸੋਮਵਾਰ|ਮੰਗਲਵਾਰ|ਬੁੱਧਵਾਰ|ਵੀਰਵਾਰ|ਸ਼ੁੱਕਰਵਾਰ|ਸ਼ਨਿੱਚਰਵਾਰ|ਐਤਵਾਰ\r\nਸੋਮ|ਮੰਗਲ|ਬੁੱਧ|ਵੀਰ|ਸ਼ੁੱਕਰ|ਸ਼ਨਿੱਚਰ|ਐਤ\r\nਸੋ|ਮੰ|ਬੁੱ|ਵੀ|ਸ਼ੁੱ|ਸ਼|ਐ\r"
+      "ਸੋਮਵਾਰ|ਮੰਗਲਵਾਰ|ਬੁੱਧਵਾਰ|ਵੀਰਵਾਰ|ਸ਼ੁੱਕਰਵਾਰ|ਸ਼ਨਿੱਚਰਵਾਰ|ਐਤਵਾਰ\r\nਸੋਮ|ਮੰਗਲ|ਬੁੱਧ|ਵੀਰ|ਸ਼ੁੱਕਰ|ਸ਼ਨਿੱਚਰ|ਐਤ\r\nਸੋ|ਮੰ|ਬੁੱ|ਵੀ|ਸ਼ੁੱ|ਸ਼|ਐ\r\nਸੋਮ|ਮੰਗ|ਬੁੱਧ|ਵੀਰ|ਸ਼ੁੱਕ|ਸ਼ਨਿੱ|ਐਤ\r"
 
   private const val pa_Format_Quarters: String =
       "ਪਹਿਲੀ ਤਿਮਾਹੀ|ਦੂਜੀ ਤਿਮਾਹੀ|ਤੀਜੀ ਤਿਮਾਹੀ|ਚੌਥੀ ਤਿਮਾਹੀ\r\nਤਿਮਾਹੀ1|ਤਿਮਾਹੀ2|ਤਿਮਾਹੀ3|ਤਿਮਾਹੀ4\r\n1|2|3|4\r"
@@ -9880,7 +9880,7 @@ object AvailableDateTimeDisplayNames {
       "ਜਨਵਰੀ|ਫ਼ਰਵਰੀ|ਮਾਰਚ|ਅਪ੍ਰੈਲ|ਮਈ|ਜੂਨ|ਜੁਲਾਈ|ਅਗਸਤ|ਸਤੰਬਰ|ਅਕਤੂਬਰ|ਨਵੰਬਰ|ਦਸੰਬਰ\r\nਜਨ|ਫ਼ਰ|ਮਾਰਚ|ਅਪ੍ਰੈ|ਮਈ|ਜੂਨ|ਜੁਲਾ|ਅਗ|ਸਤੰ|ਅਕਤੂ|ਨਵੰ|ਦਸੰ\r\nਜ|ਫ਼|ਮਾ|ਅ|ਮ|ਜੂ|ਜੁ|ਅ|ਸ|ਅ|ਨ|ਦ\r"
 
   private const val pa_Standalone_Days: String =
-      "ਸੋਮਵਾਰ|ਮੰਗਲਵਾਰ|ਬੁੱਧਵਾਰ|ਵੀਰਵਾਰ|ਸ਼ੁੱਕਰਵਾਰ|ਸ਼ਨਿੱਚਰਵਾਰ|ਐਤਵਾਰ\r\nਸੋਮ|ਮੰਗਲ|ਬੁੱਧ|ਵੀਰ|ਸ਼ੁੱਕਰ|ਸ਼ਨਿੱਚਰ|ਐਤ\r\nਸੋ|ਮੰ|ਬੁੱ|ਵੀ|ਸ਼ੁੱ|ਸ਼|ਐ\r"
+      "ਸੋਮਵਾਰ|ਮੰਗਲਵਾਰ|ਬੁੱਧਵਾਰ|ਵੀਰਵਾਰ|ਸ਼ੁੱਕਰਵਾਰ|ਸ਼ਨਿੱਚਰਵਾਰ|ਐਤਵਾਰ\r\nਸੋਮ|ਮੰਗਲ|ਬੁੱਧ|ਵੀਰ|ਸ਼ੁੱਕਰ|ਸ਼ਨਿੱਚਰ|ਐਤ\r\nਸੋ|ਮੰ|ਬੁੱ|ਵੀ|ਸ਼ੁੱ|ਸ਼|ਐ\r\nਸੋਮ|ਮੰਗ|ਬੁੱਧ|ਵੀਰ|ਸ਼ੁੱਕ|ਸ਼ਨਿੱ|ਐਤ\r"
 
   private const val pa_Standalone_Quarters: String =
       "ਪਹਿਲੀ ਤਿਮਾਹੀ|ਦੂਜੀ ਤਿਮਾਹੀ|ਤੀਜੀ ਤਿਮਾਹੀ|ਚੌਥੀ ਤਿਮਾਹੀ\r\nਤਿਮਾਹੀ1|ਤਿਮਾਹੀ2|ਤਿਮਾਹੀ3|ਤਿਮਾਹੀ4\r\n1|2|3|4\r"
@@ -9892,7 +9892,7 @@ object AvailableDateTimeDisplayNames {
       "جنوری|فروری|مارچ|اپریل|مئ|جون|جولائی|اگست|ستمبر|اکتوبر|نومبر|دسمبر\r\nجنوری|فروری|مارچ|اپریل|مئ|جون|جولائی|اگست|ستمبر|اکتوبر|نومبر|دسمبر\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val pa_Arab_Format_Days: String =
-      "پیر|منگل|بُدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nپیر|منگل|بُدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nM|T|W|T|F|S|S\r"
+      "پیر|منگل|بُدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nپیر|منگل|بُدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nM|T|W|T|F|S|S\r\nپیر|منگل|بُدھ|جمعرات|جمعہ|ہفتہ|اتوار\r"
 
   private const val pa_Arab_Format_Quarters: String =
       "چوتھاي پہلاں|چوتھاي دوجا|چوتھاي تيجا|چوتھاي چوتھا\r\nچوتھاي پہلاں|چوتھاي دوجا|چوتھاي تيجا|چوتھاي چوتھا\r\n1|2|3|4\r"
@@ -9903,7 +9903,7 @@ object AvailableDateTimeDisplayNames {
       "جنوری|فروری|مارچ|اپریل|مئ|جون|جولائی|اگست|ستمبر|اکتوبر|نومبر|دسمبر\r\nجنوری|فروری|مارچ|اپریل|مئ|جون|جولائی|اگست|ستمبر|اکتوبر|نومبر|دسمبر\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val pa_Arab_Standalone_Days: String =
-      "پیر|منگل|بُدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nپیر|منگل|بُدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nM|T|W|T|F|S|S\r"
+      "پیر|منگل|بُدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nپیر|منگل|بُدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nM|T|W|T|F|S|S\r\nپیر|منگل|بُدھ|جمعرات|جمعہ|ہفتہ|اتوار\r"
 
   private const val pa_Arab_Standalone_Quarters: String =
       "چوتھاي پہلاں|چوتھاي دوجا|چوتھاي تيجا|چوتھاي چوتھا\r\nچوتھاي پہلاں|چوتھاي دوجا|چوتھاي تيجا|چوتھاي چوتھا\r\n1|2|3|4\r"
@@ -9930,7 +9930,7 @@ object AvailableDateTimeDisplayNames {
       "Yanüari|Febrüari|Mart|Aprel|Mei|Yüni|Yüli|Ougùstùs|Sèptèmber|Òktober|Novèmber|Desèmber\r\nYanüari|Febrüari|Mart|Aprel|Mei|Yüni|Yüli|Ougùstùs|Sèptèmber|Òktober|Novèmber|Desèmber\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val pap_Format_Days: String =
-      "djaluna|djamars|djarason|djaweps|djabièrnè|djasabra|djadumingu\r\ndjaluna|djamars|djarason|djaweps|djabièrnè|djasabra|djadumingu\r\nM|T|W|T|F|S|S\r"
+      "djaluna|djamars|djarason|djaweps|djabièrnè|djasabra|djadumingu\r\ndjaluna|djamars|djarason|djaweps|djabièrnè|djasabra|djadumingu\r\nM|T|W|T|F|S|S\r\ndjaluna|djamars|djarason|djaweps|djabièrnè|djasabra|djadumingu\r"
 
   private val pap_Format_Quarters: String? = null
 
@@ -9940,7 +9940,7 @@ object AvailableDateTimeDisplayNames {
       "Yanüari|Febrüari|Mart|Aprel|Mei|Yüni|Yüli|Ougùstùs|Sèptèmber|Òktober|Novèmber|Desèmber\r\nYanüari|Febrüari|Mart|Aprel|Mei|Yüni|Yüli|Ougùstùs|Sèptèmber|Òktober|Novèmber|Desèmber\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val pap_Standalone_Days: String =
-      "djaluna|djamars|djarason|djaweps|djabièrnè|djasabra|djadumingu\r\ndjaluna|djamars|djarason|djaweps|djabièrnè|djasabra|djadumingu\r\nM|T|W|T|F|S|S\r"
+      "djaluna|djamars|djarason|djaweps|djabièrnè|djasabra|djadumingu\r\ndjaluna|djamars|djarason|djaweps|djabièrnè|djasabra|djadumingu\r\nM|T|W|T|F|S|S\r\ndjaluna|djamars|djarason|djaweps|djabièrnè|djasabra|djadumingu\r"
 
   private val pap_Standalone_Quarters: String? = null
 
@@ -9966,7 +9966,7 @@ object AvailableDateTimeDisplayNames {
       "Jénúári|Fẹ́búári|Mach|Éprel|Mee|Jun|Julai|Ọgọst|Sẹptẹ́mba|Ọktóba|Nọvẹ́mba|Disẹ́mba\r\nJén|Fẹ́b|Mach|Épr|Mee|Jun|Jul|Ọgọ|Sẹp|Ọkt|Nọv|Dis\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val pcm_Format_Days: String =
-      "Mọ́ndè|Tiúzdè|Wẹ́nẹ́zdè|Tọ́zdè|Fraídè|Sátọdè|Sọ́ndè\r\nMọ́n|Tiú|Wẹ́n|Tọ́z|Fraí|Sát|Sọ́n\r\nM|T|W|T|F|S|S\r"
+      "Mọ́ndè|Tiúzdè|Wẹ́nẹ́zdè|Tọ́zdè|Fraídè|Sátọdè|Sọ́ndè\r\nMọ́n|Tiú|Wẹ́n|Tọ́z|Fraí|Sát|Sọ́n\r\nM|T|W|T|F|S|S\r\nMọ́n|Tiú|Wẹ́n|Tọ́z|Fraí|Sát|Sọ́n\r"
 
   private const val pcm_Format_Quarters: String =
       "Fẹ́st Kwọ́ta|Sẹ́kọ́n Kwọ́ta|Tọ́d Kwọ́ta|Fọ́t Kwọ́ta\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9977,7 +9977,7 @@ object AvailableDateTimeDisplayNames {
       "Jénúári|Fẹ́búári|Mach|Éprel|Mee|Jun|Julai|Ọgọst|Sẹptẹ́mba|Ọktóba|Nọvẹ́mba|Disẹ́mba\r\nJén|Fẹ́b|Mach|Épr|Mee|Jun|Jul|Ọ́gọ|Sẹp|Ọkt|Nọv|Dis\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val pcm_Standalone_Days: String =
-      "Mọ́ndè|Tiúzdè|Wẹ́nẹ́zdè|Tọ́zdè|Fraídè|Sátọdè|Sọ́ndè\r\nMọ́n|Tiú|Wẹ́n|Tọ́z|Fraí|Sát|Sọ́n\r\nM|T|W|T|F|S|S\r"
+      "Mọ́ndè|Tiúzdè|Wẹ́nẹ́zdè|Tọ́zdè|Fraídè|Sátọdè|Sọ́ndè\r\nMọ́n|Tiú|Wẹ́n|Tọ́z|Fraí|Sát|Sọ́n\r\nM|T|W|T|F|S|S\r\nMọ́n|Tiú|Wẹ́n|Tọ́z|Fraí|Sát|Sọ́n\r"
 
   private const val pcm_Standalone_Quarters: String =
       "Fẹ́st Kwọ́ta|Sẹ́kọ́n Kwọ́ta|Tọ́d Kwọ́ta|Fọ́t Kwọ́ta\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -9989,7 +9989,7 @@ object AvailableDateTimeDisplayNames {
       "Januare|Febuare|Mas|Eprel|Mei|Jun|Julae|Ogus|Septemba|Oktoba|Novemba|Disemba\r\nJanuare|Febuare|Mas|Eprel|Mei|Jun|Julae|Ogus|Septemba|Oktoba|Novemba|Disemba\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val pis_Format_Days: String =
-      "Mande|Tiusde|Wenesde|Tosde|Fraede|Satade|Sande\r\nMande|Tiusde|Wenesde|Tosde|Fraede|Satade|Sande\r\nM|T|W|T|F|S|S\r"
+      "Mande|Tiusde|Wenesde|Tosde|Fraede|Satade|Sande\r\nMande|Tiusde|Wenesde|Tosde|Fraede|Satade|Sande\r\nM|T|W|T|F|S|S\r\nMande|Tiusde|Wenesde|Tosde|Fraede|Satade|Sande\r"
 
   private val pis_Format_Quarters: String? = null
 
@@ -9999,7 +9999,7 @@ object AvailableDateTimeDisplayNames {
       "Januare|Febuare|Mas|Eprel|Mei|Jun|Julae|Ogus|Septemba|Oktoba|Novemba|Disemba\r\nJanuare|Febuare|Mas|Eprel|Mei|Jun|Julae|Ogus|Septemba|Oktoba|Novemba|Disemba\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val pis_Standalone_Days: String =
-      "Mande|Tiusde|Wenesde|Tosde|Fraede|Satade|Sande\r\nMande|Tiusde|Wenesde|Tosde|Fraede|Satade|Sande\r\nM|T|W|T|F|S|S\r"
+      "Mande|Tiusde|Wenesde|Tosde|Fraede|Satade|Sande\r\nMande|Tiusde|Wenesde|Tosde|Fraede|Satade|Sande\r\nM|T|W|T|F|S|S\r\nMande|Tiusde|Wenesde|Tosde|Fraede|Satade|Sande\r"
 
   private val pis_Standalone_Quarters: String? = null
 
@@ -10009,7 +10009,7 @@ object AvailableDateTimeDisplayNames {
       "stycznia|lutego|marca|kwietnia|maja|czerwca|lipca|sierpnia|września|października|listopada|grudnia\r\nsty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru\r\ns|l|m|k|m|c|l|s|w|p|l|g\r"
 
   private const val pl_Format_Days: String =
-      "poniedziałek|wtorek|środa|czwartek|piątek|sobota|niedziela\r\npon.|wt.|śr.|czw.|pt.|sob.|niedz.\r\np|w|ś|c|p|s|n\r"
+      "poniedziałek|wtorek|środa|czwartek|piątek|sobota|niedziela\r\npon.|wt.|śr.|czw.|pt.|sob.|niedz.\r\np|w|ś|c|p|s|n\r\npon|wto|śro|czw|pią|sob|nie\r"
 
   private const val pl_Format_Quarters: String =
       "I kwartał|II kwartał|III kwartał|IV kwartał\r\nI kw.|II kw.|III kw.|IV kw.\r\n1|2|3|4\r"
@@ -10021,7 +10021,7 @@ object AvailableDateTimeDisplayNames {
       "styczeń|luty|marzec|kwiecień|maj|czerwiec|lipiec|sierpień|wrzesień|październik|listopad|grudzień\r\nsty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru\r\nS|L|M|K|M|C|L|S|W|P|L|G\r"
 
   private const val pl_Standalone_Days: String =
-      "poniedziałek|wtorek|środa|czwartek|piątek|sobota|niedziela\r\npon.|wt.|śr.|czw.|pt.|sob.|niedz.\r\nP|W|Ś|C|P|S|N\r"
+      "poniedziałek|wtorek|środa|czwartek|piątek|sobota|niedziela\r\npon.|wt.|śr.|czw.|pt.|sob.|niedz.\r\nP|W|Ś|C|P|S|N\r\npon|wto|śro|czw|pią|sob|nie\r"
 
   private const val pl_Standalone_Quarters: String =
       "I kwartał|II kwartał|III kwartał|IV kwartał\r\nI kw.|II kw.|III kw.|IV kw.\r\n1|2|3|4\r"
@@ -10033,7 +10033,7 @@ object AvailableDateTimeDisplayNames {
       "rags|wassarins|pūlis|sakkis|zallaws|sīmenis|līpa|daggis|sillins|spallins|lapkrūtis|sallaws\r\nrags|wassarins|pūlis|sakkis|zallaws|sīmenis|līpa|daggis|sillins|spallins|lapkrūtis|sallaws\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val prg_Format_Days: String =
-      "panadīli|wisasīdis|pussisawaiti|ketwirtiks|pēntniks|sabattika|nadīli\r\npanadīli|wisasīdis|pussisawaiti|ketwirtiks|pēntniks|sabattika|nadīli\r\nM|T|W|T|F|S|S\r"
+      "panadīli|wisasīdis|pussisawaiti|ketwirtiks|pēntniks|sabattika|nadīli\r\npanadīli|wisasīdis|pussisawaiti|ketwirtiks|pēntniks|sabattika|nadīli\r\nM|T|W|T|F|S|S\r\npanadīli|wisasīdis|pussisawaiti|ketwirtiks|pēntniks|sabattika|nadīli\r"
 
   private val prg_Format_Quarters: String? = null
 
@@ -10044,7 +10044,7 @@ object AvailableDateTimeDisplayNames {
       "rags|wassarins|pūlis|sakkis|zallaws|sīmenis|līpa|daggis|sillins|spallins|lapkrūtis|sallaws\r\nrags|wassarins|pūlis|sakkis|zallaws|sīmenis|līpa|daggis|sillins|spallins|lapkrūtis|sallaws\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val prg_Standalone_Days: String =
-      "panadīli|wisasīdis|pussisawaiti|ketwirtiks|pēntniks|sabattika|nadīli\r\npanadīli|wisasīdis|pussisawaiti|ketwirtiks|pēntniks|sabattika|nadīli\r\nM|T|W|T|F|S|S\r"
+      "panadīli|wisasīdis|pussisawaiti|ketwirtiks|pēntniks|sabattika|nadīli\r\npanadīli|wisasīdis|pussisawaiti|ketwirtiks|pēntniks|sabattika|nadīli\r\nM|T|W|T|F|S|S\r\npanadīli|wisasīdis|pussisawaiti|ketwirtiks|pēntniks|sabattika|nadīli\r"
 
   private val prg_Standalone_Quarters: String? = null
 
@@ -10054,7 +10054,7 @@ object AvailableDateTimeDisplayNames {
       "جنوري|فبروري|مارچ|اپریل|مۍ|جون|جولای|اګست|سېپتمبر|اکتوبر|نومبر|دسمبر\r\nجنوري|فبروري|مارچ|اپریل|مۍ|جون|جولای|اګست|سېپتمبر|اکتوبر|نومبر|دسمبر\r\nج|ف|م|ا|م|ج|ج|ا|س|ا|ن|د\r"
 
   private const val ps_Format_Days: String =
-      "دونۍ|درېنۍ|څلرنۍ|پينځنۍ|جمعه|اونۍ|يونۍ\r\nدونۍ|درېنۍ|څلرنۍ|پينځنۍ|جمعه|اونۍ|يونۍ\r\nM|T|W|T|F|S|S\r"
+      "دونۍ|درېنۍ|څلرنۍ|پينځنۍ|جمعه|اونۍ|يونۍ\r\nدونۍ|درېنۍ|څلرنۍ|پينځنۍ|جمعه|اونۍ|يونۍ\r\nM|T|W|T|F|S|S\r\nدونۍ|درېنۍ|څلرنۍ|پينځنۍ|جمعه|اونۍ|يونۍ\r"
 
   private const val ps_Format_Quarters: String =
       "لومړۍ ربعه|۲مه ربعه|۳مه ربعه|۴مه ربعه\r\nلومړۍ ربعه|۲مه ربعه|۳مه ربعه|۴مه ربعه\r\n1|2|3|4\r"
@@ -10065,7 +10065,7 @@ object AvailableDateTimeDisplayNames {
       "جنوري|فېبروري|مارچ|اپریل|مۍ|جون|جولای|اګست|سپتمبر|اکتوبر|نومبر|دسمبر\r\nجنوري|فبروري|مارچ|اپریل|مۍ|جون|جولای|اګست|سپتمبر|اکتوبر|نومبر|دسمبر\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ps_Standalone_Days: String =
-      "دونۍ|درېنۍ|څلرنۍ|پينځنۍ|جمعه|اونۍ|يونۍ\r\nدونۍ|درېنۍ|څلرنۍ|پينځنۍ|جمعه|اونۍ|يونۍ\r\nM|T|W|T|F|S|S\r"
+      "دونۍ|درېنۍ|څلرنۍ|پينځنۍ|جمعه|اونۍ|يونۍ\r\nدونۍ|درېنۍ|څلرنۍ|پينځنۍ|جمعه|اونۍ|يونۍ\r\nM|T|W|T|F|S|S\r\nدونۍ|درېنۍ|څلرنۍ|پينځنۍ|جمعه|اونۍ|يونۍ\r"
 
   private const val ps_Standalone_Quarters: String =
       "لومړۍ ربعه|۲مه ربعه|۳مه ربعه|۴مه ربعه\r\nلومړۍ ربعه|۲مه ربعه|۳مه ربعه|۴مه ربعه\r\n1|2|3|4\r"
@@ -10092,7 +10092,7 @@ object AvailableDateTimeDisplayNames {
       "janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro\r\njan.|fev.|mar.|abr.|mai.|jun.|jul.|ago.|set.|out.|nov.|dez.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val pt_Format_Days: String =
-      "segunda-feira|terça-feira|quarta-feira|quinta-feira|sexta-feira|sábado|domingo\r\nseg.|ter.|qua.|qui.|sex.|sáb.|dom.\r\nS|T|Q|Q|S|S|D\r"
+      "segunda-feira|terça-feira|quarta-feira|quinta-feira|sexta-feira|sábado|domingo\r\nseg.|ter.|qua.|qui.|sex.|sáb.|dom.\r\nS|T|Q|Q|S|S|D\r\nseg.|ter.|qua.|qui.|sex.|sáb.|dom.\r"
 
   private const val pt_Format_Quarters: String =
       "1º trimestre|2º trimestre|3º trimestre|4º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -10104,7 +10104,7 @@ object AvailableDateTimeDisplayNames {
       "janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro\r\njan.|fev.|mar.|abr.|mai.|jun.|jul.|ago.|set.|out.|nov.|dez.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val pt_Standalone_Days: String =
-      "segunda-feira|terça-feira|quarta-feira|quinta-feira|sexta-feira|sábado|domingo\r\nseg.|ter.|qua.|qui.|sex.|sáb.|dom.\r\nS|T|Q|Q|S|S|D\r"
+      "segunda-feira|terça-feira|quarta-feira|quinta-feira|sexta-feira|sábado|domingo\r\nseg.|ter.|qua.|qui.|sex.|sáb.|dom.\r\nS|T|Q|Q|S|S|D\r\nseg.|ter.|qua.|qui.|sex.|sáb.|dom.\r"
 
   private const val pt_Standalone_Quarters: String =
       "1º trimestre|2º trimestre|3º trimestre|4º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -10243,7 +10243,7 @@ object AvailableDateTimeDisplayNames {
   private val pt_PT_Format_Months: String? = null
 
   private const val pt_PT_Format_Days: String =
-      "segunda-feira|terça-feira|quarta-feira|quinta-feira|sexta-feira|sábado|domingo\r\nsegunda|terça|quarta|quinta|sexta|sábado|domingo\r\nS|T|Q|Q|S|S|D\r"
+      "segunda-feira|terça-feira|quarta-feira|quinta-feira|sexta-feira|sábado|domingo\r\nsegunda|terça|quarta|quinta|sexta|sábado|domingo\r\nS|T|Q|Q|S|S|D\r\nseg.|ter.|qua.|qui.|sex.|sáb.|dom.\r"
 
   private const val pt_PT_Format_Quarters: String =
       "1.º trimestre|2.º trimestre|3.º trimestre|4.º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -10254,7 +10254,7 @@ object AvailableDateTimeDisplayNames {
   private val pt_PT_Standalone_Months: String? = null
 
   private const val pt_PT_Standalone_Days: String =
-      "segunda-feira|terça-feira|quarta-feira|quinta-feira|sexta-feira|sábado|domingo\r\nsegunda|terça|quarta|quinta|sexta|sábado|domingo\r\nS|T|Q|Q|S|S|D\r"
+      "segunda-feira|terça-feira|quarta-feira|quinta-feira|sexta-feira|sábado|domingo\r\nsegunda|terça|quarta|quinta|sexta|sábado|domingo\r\nS|T|Q|Q|S|S|D\r\nseg.|ter.|qua.|qui.|sex.|sáb.|dom.\r"
 
   private const val pt_PT_Standalone_Quarters: String =
       "1.º trimestre|2.º trimestre|3.º trimestre|4.º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -10298,7 +10298,7 @@ object AvailableDateTimeDisplayNames {
       "Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Setiembre|Octubre|Noviembre|Diciembre\r\nEne|Feb|Mar|Abr|May|Jun|Jul|Ago|Set|Oct|Nov|Dic\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val qu_Format_Days: String =
-      "Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo\r\nLun|Mar|Mié|Jue|Vie|Sab|Dom\r\nL|M|X|J|V|S|D\r"
+      "Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo\r\nLun|Mar|Mié|Jue|Vie|Sab|Dom\r\nL|M|X|J|V|S|D\r\nLun|Mar|Mié|Jue|Vie|Sab|Dom\r"
 
   private val qu_Format_Quarters: String? = null
 
@@ -10308,7 +10308,7 @@ object AvailableDateTimeDisplayNames {
       "Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Setiembre|Octubre|Noviembre|Diciembre\r\nEne|Feb|Mar|Abr|May|Jun|Jul|Ago|Set|Oct|Nov|Dic\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val qu_Standalone_Days: String =
-      "Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo\r\nLun|Mar|Mié|Jue|Vie|Sab|Dom\r\nL|M|X|J|V|S|D\r"
+      "Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo\r\nLun|Mar|Mié|Jue|Vie|Sab|Dom\r\nL|M|X|J|V|S|D\r\nLun|Mar|Mié|Jue|Vie|Sab|Dom\r"
 
   private val qu_Standalone_Quarters: String? = null
 
@@ -10366,7 +10366,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवंबर|दिसंबर\r\nजनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवंबर|दिसंबर\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val raj_Format_Days: String =
-      "सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nM|T|W|T|F|S|S\r"
+      "सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nM|T|W|T|F|S|S\r\nसोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r"
 
   private val raj_Format_Quarters: String? = null
 
@@ -10376,7 +10376,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवंबर|दिसंबर\r\nजनवरी|फरवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितम्बर|अक्टूबर|नवंबर|दिसंबर\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val raj_Standalone_Days: String =
-      "सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nM|T|W|T|F|S|S\r"
+      "सोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nसोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r\nM|T|W|T|F|S|S\r\nसोमवार|मंगलवार|बुधवार|गुरुवार|शुक्रवार|शनिवार|रविवार\r"
 
   private val raj_Standalone_Quarters: String? = null
 
@@ -10450,7 +10450,7 @@ object AvailableDateTimeDisplayNames {
       "da schaner|da favrer|da mars|d’avrigl|da matg|da zercladur|da fanadur|d’avust|da settember|d’october|da november|da december\r\nschan.|favr.|mars|avr.|matg|zercl.|fan.|avust|sett.|oct.|nov.|dec.\r\nS|F|M|A|M|Z|F|A|S|O|N|D\r"
 
   private const val rm_Format_Days: String =
-      "glindesdi|mardi|mesemna|gievgia|venderdi|sonda|dumengia\r\ngli|ma|me|gie|ve|so|du\r\nG|M|M|G|V|S|D\r"
+      "glindesdi|mardi|mesemna|gievgia|venderdi|sonda|dumengia\r\ngli|ma|me|gie|ve|so|du\r\nG|M|M|G|V|S|D\r\ngli|ma|me|gie|ve|so|du\r"
 
   private const val rm_Format_Quarters: String =
       "1. quartal|2. quartal|3. quartal|4. quartal\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -10461,7 +10461,7 @@ object AvailableDateTimeDisplayNames {
       "schaner|favrer|mars|avrigl|matg|zercladur|fanadur|avust|settember|october|november|december\r\nschan.|favr.|mars|avr.|matg|zercl.|fan.|avust|sett.|oct.|nov.|dec.\r\nS|F|M|A|M|Z|F|A|S|O|N|D\r"
 
   private const val rm_Standalone_Days: String =
-      "glindesdi|mardi|mesemna|gievgia|venderdi|sonda|dumengia\r\ngli|ma|me|gie|ve|so|du\r\nG|M|M|G|V|S|D\r"
+      "glindesdi|mardi|mesemna|gievgia|venderdi|sonda|dumengia\r\ngli|ma|me|gie|ve|so|du\r\nG|M|M|G|V|S|D\r\ngli|ma|me|gie|ve|so|du\r"
 
   private const val rm_Standalone_Quarters: String =
       "1. quartal|2. quartal|3. quartal|4. quartal\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -10472,7 +10472,7 @@ object AvailableDateTimeDisplayNames {
       "Nzero|Ruhuhuma|Ntwarante|Ndamukiza|Rusama|Ruheshi|Mukakaro|Nyandagaro|Nyakanga|Gitugutu|Munyonyo|Kigarama\r\nMut.|Gas.|Wer.|Mat.|Gic.|Kam.|Nya.|Kan.|Nze.|Ukw.|Ugu.|Uku.\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val rn_Format_Days: String =
-      "Ku wa mbere|Ku wa kabiri|Ku wa gatatu|Ku wa kane|Ku wa gatanu|Ku wa gatandatu|Ku w’indwi\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cu.\r\nM|T|W|T|F|S|S\r"
+      "Ku wa mbere|Ku wa kabiri|Ku wa gatatu|Ku wa kane|Ku wa gatanu|Ku wa gatandatu|Ku w’indwi\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cu.\r\nM|T|W|T|F|S|S\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cu.\r"
 
   private const val rn_Format_Quarters: String =
       "Igice ca mbere c’umwaka|Igice ca kabiri c’umwaka|Igice ca gatatu c’umwaka|Igice ca kane c’umwaka\r\nI1|I2|I3|I4\r\n1|2|3|4\r"
@@ -10484,7 +10484,7 @@ object AvailableDateTimeDisplayNames {
       "Nzero|Ruhuhuma|Ntwarante|Ndamukiza|Rusama|Ruheshi|Mukakaro|Nyandagaro|Nyakanga|Gitugutu|Munyonyo|Kigarama\r\nMut.|Gas.|Wer.|Mat.|Gic.|Kam.|Nya.|Kan.|Nze.|Ukw.|Ugu.|Uku.\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val rn_Standalone_Days: String =
-      "Ku wa mbere|Ku wa kabiri|Ku wa gatatu|Ku wa kane|Ku wa gatanu|Ku wa gatandatu|Ku w’indwi\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cu.\r\nM|T|W|T|F|S|S\r"
+      "Ku wa mbere|Ku wa kabiri|Ku wa gatatu|Ku wa kane|Ku wa gatanu|Ku wa gatandatu|Ku w’indwi\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cu.\r\nM|T|W|T|F|S|S\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cu.\r"
 
   private const val rn_Standalone_Quarters: String =
       "Igice ca mbere c’umwaka|Igice ca kabiri c’umwaka|Igice ca gatatu c’umwaka|Igice ca kane c’umwaka\r\nI1|I2|I3|I4\r\n1|2|3|4\r"
@@ -10496,7 +10496,7 @@ object AvailableDateTimeDisplayNames {
       "ianuarie|februarie|martie|aprilie|mai|iunie|iulie|august|septembrie|octombrie|noiembrie|decembrie\r\nian.|feb.|mar.|apr.|mai|iun.|iul.|aug.|sept.|oct.|nov.|dec.\r\nI|F|M|A|M|I|I|A|S|O|N|D\r"
 
   private const val ro_Format_Days: String =
-      "luni|marți|miercuri|joi|vineri|sâmbătă|duminică\r\nlun.|mar.|mie.|joi|vin.|sâm.|dum.\r\nL|M|M|J|V|S|D\r"
+      "luni|marți|miercuri|joi|vineri|sâmbătă|duminică\r\nlun.|mar.|mie.|joi|vin.|sâm.|dum.\r\nL|M|M|J|V|S|D\r\nlu.|ma.|mi.|joi|vi.|sâ.|du.\r"
 
   private const val ro_Format_Quarters: String =
       "trimestrul I|trimestrul al II-lea|trimestrul al III-lea|trimestrul al IV-lea\r\ntrim. I|trim. II|trim. III|trim. IV\r\nI|II|III|IV\r"
@@ -10508,7 +10508,7 @@ object AvailableDateTimeDisplayNames {
       "ianuarie|februarie|martie|aprilie|mai|iunie|iulie|august|septembrie|octombrie|noiembrie|decembrie\r\nian.|feb.|mar.|apr.|mai|iun.|iul.|aug.|sept.|oct.|nov.|dec.\r\nI|F|M|A|M|I|I|A|S|O|N|D\r"
 
   private const val ro_Standalone_Days: String =
-      "luni|marți|miercuri|joi|vineri|sâmbătă|duminică\r\nlun.|mar.|mie.|joi|vin.|sâm.|dum.\r\nL|M|M|J|V|S|D\r"
+      "luni|marți|miercuri|joi|vineri|sâmbătă|duminică\r\nlun.|mar.|mie.|joi|vin.|sâm.|dum.\r\nL|M|M|J|V|S|D\r\nlu.|ma.|mi.|joi|vi.|sâ.|du.\r"
 
   private const val ro_Standalone_Quarters: String =
       "trimestrul I|trimestrul al II-lea|trimestrul al III-lea|trimestrul al IV-lea\r\ntrim. I|trim. II|trim. III|trim. IV\r\nI|II|III|IV\r"
@@ -10519,7 +10519,7 @@ object AvailableDateTimeDisplayNames {
   private val ro_MD_Format_Months: String? = null
 
   private const val ro_MD_Format_Days: String =
-      "luni|marți|miercuri|joi|vineri|sâmbătă|duminică\r\nLun|Mar|Mie|Joi|Vin|Sâm|Dum\r\nL|Ma|Mi|J|V|S|D\r"
+      "luni|marți|miercuri|joi|vineri|sâmbătă|duminică\r\nLun|Mar|Mie|Joi|Vin|Sâm|Dum\r\nL|Ma|Mi|J|V|S|D\r\nLu|Ma|Mi|Jo|Vi|Sâ|Du\r"
 
   private const val ro_MD_Format_Quarters: String =
       "trimestrul 1|trimestrul 2|trimestrul 3|trimestrul 4\r\ntrim. 1|trim. 2|trim. 3|trim. 4\r\nI|II|III|IV\r"
@@ -10530,7 +10530,7 @@ object AvailableDateTimeDisplayNames {
   private val ro_MD_Standalone_Months: String? = null
 
   private const val ro_MD_Standalone_Days: String =
-      "luni|marți|miercuri|joi|vineri|sâmbătă|duminică\r\nLun|Mar|Mie|Joi|Vin|Sâm|Dum\r\nL|Ma|Mi|J|V|S|D\r"
+      "luni|marți|miercuri|joi|vineri|sâmbătă|duminică\r\nLun|Mar|Mie|Joi|Vin|Sâm|Dum\r\nL|Ma|Mi|J|V|S|D\r\nLu|Ma|Mi|Jo|Vi|Sâ|Du\r"
 
   private const val ro_MD_Standalone_Quarters: String =
       "Trimestrul 1|Trimestrul 2|Trimestrul 3|Trimestrul 4\r\nTrim. 1|Trim. 2|Trim. 3|Trim. 4\r\nI|II|III|IV\r"
@@ -10542,7 +10542,7 @@ object AvailableDateTimeDisplayNames {
       "Mweri wa kwanza|Mweri wa kaili|Mweri wa katatu|Mweri wa kaana|Mweri wa tanu|Mweri wa sita|Mweri wa saba|Mweri wa nane|Mweri wa tisa|Mweri wa ikumi|Mweri wa ikumi na moja|Mweri wa ikumi na mbili\r\nM1|M2|M3|M4|M5|M6|M7|M8|M9|M10|M11|M12\r\nK|K|K|K|T|S|S|N|T|I|I|I\r"
 
   private const val rof_Format_Days: String =
-      "Ijumatatu|Ijumanne|Ijumatano|Alhamisi|Ijumaa|Ijumamosi|Ijumapili\r\nIjt|Ijn|Ijtn|Alh|Iju|Ijm|Ijp\r\n3|4|5|6|7|1|2\r"
+      "Ijumatatu|Ijumanne|Ijumatano|Alhamisi|Ijumaa|Ijumamosi|Ijumapili\r\nIjt|Ijn|Ijtn|Alh|Iju|Ijm|Ijp\r\n3|4|5|6|7|1|2\r\nIjt|Ijn|Ijtn|Alh|Iju|Ijm|Ijp\r"
 
   private const val rof_Format_Quarters: String =
       "Robo ya kwanza|Robo ya kaili|Robo ya katatu|Robo ya kaana\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -10554,7 +10554,7 @@ object AvailableDateTimeDisplayNames {
       "Mweri wa kwanza|Mweri wa kaili|Mweri wa katatu|Mweri wa kaana|Mweri wa tanu|Mweri wa sita|Mweri wa saba|Mweri wa nane|Mweri wa tisa|Mweri wa ikumi|Mweri wa ikumi na moja|Mweri wa ikumi na mbili\r\nM1|M2|M3|M4|M5|M6|M7|M8|M9|M10|M11|M12\r\nK|K|K|K|T|S|S|N|T|I|I|I\r"
 
   private const val rof_Standalone_Days: String =
-      "Ijumatatu|Ijumanne|Ijumatano|Alhamisi|Ijumaa|Ijumamosi|Ijumapili\r\nIjt|Ijn|Ijtn|Alh|Iju|Ijm|Ijp\r\n3|4|5|6|7|1|2\r"
+      "Ijumatatu|Ijumanne|Ijumatano|Alhamisi|Ijumaa|Ijumamosi|Ijumapili\r\nIjt|Ijn|Ijtn|Alh|Iju|Ijm|Ijp\r\n3|4|5|6|7|1|2\r\nIjt|Ijn|Ijtn|Alh|Iju|Ijm|Ijp\r"
 
   private const val rof_Standalone_Quarters: String =
       "Robo ya kwanza|Robo ya kaili|Robo ya katatu|Robo ya kaana\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -10566,7 +10566,7 @@ object AvailableDateTimeDisplayNames {
       "января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря\r\nянв.|февр.|мар.|апр.|мая|июн.|июл.|авг.|сент.|окт.|нояб.|дек.\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val ru_Format_Days: String =
-      "понедельник|вторник|среда|четверг|пятница|суббота|воскресенье\r\nпн|вт|ср|чт|пт|сб|вс\r\nП|В|С|Ч|П|С|В\r"
+      "понедельник|вторник|среда|четверг|пятница|суббота|воскресенье\r\nпн|вт|ср|чт|пт|сб|вс\r\nП|В|С|Ч|П|С|В\r\nпн|вт|ср|чт|пт|сб|вс\r"
 
   private const val ru_Format_Quarters: String =
       "1-й квартал|2-й квартал|3-й квартал|4-й квартал\r\n1-й кв.|2-й кв.|3-й кв.|4-й кв.\r\n1|2|3|4\r"
@@ -10578,7 +10578,7 @@ object AvailableDateTimeDisplayNames {
       "январь|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь\r\nянв.|февр.|март|апр.|май|июнь|июль|авг.|сент.|окт.|нояб.|дек.\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val ru_Standalone_Days: String =
-      "понедельник|вторник|среда|четверг|пятница|суббота|воскресенье\r\nпн|вт|ср|чт|пт|сб|вс\r\nП|В|С|Ч|П|С|В\r"
+      "понедельник|вторник|среда|четверг|пятница|суббота|воскресенье\r\nпн|вт|ср|чт|пт|сб|вс\r\nП|В|С|Ч|П|С|В\r\nпн|вт|ср|чт|пт|сб|вс\r"
 
   private const val ru_Standalone_Quarters: String =
       "1-й квартал|2-й квартал|3-й квартал|4-й квартал\r\n1-й кв.|2-й кв.|3-й кв.|4-й кв.\r\n1|2|3|4\r"
@@ -10670,7 +10670,7 @@ object AvailableDateTimeDisplayNames {
       "Mutarama|Gashyantare|Werurwe|Mata|Gicurasi|Kamena|Nyakanga|Kanama|Nzeri|Ukwakira|Ugushyingo|Ukuboza\r\nmut.|gas.|wer.|mat.|gic.|kam.|nya.|kan.|nze.|ukw.|ugu.|uku.\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val rw_Format_Days: String =
-      "Kuwa mbere|Kuwa kabiri|Kuwa gatatu|Kuwa kane|Kuwa gatanu|Kuwa gatandatu|Ku cyumweru\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cyu.\r\nM|T|W|T|F|S|S\r"
+      "Kuwa mbere|Kuwa kabiri|Kuwa gatatu|Kuwa kane|Kuwa gatanu|Kuwa gatandatu|Ku cyumweru\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cyu.\r\nM|T|W|T|F|S|S\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cyu.\r"
 
   private const val rw_Format_Quarters: String =
       "igihembwe cya mbere|igihembwe cya kabiri|igihembwe cya gatatu|igihembwe cya kane\r\nI1|I2|I3|I4\r\n1|2|3|4\r"
@@ -10681,7 +10681,7 @@ object AvailableDateTimeDisplayNames {
       "Mutarama|Gashyantare|Werurwe|Mata|Gicurasi|Kamena|Nyakanga|Kanama|Nzeri|Ukwakira|Ugushyingo|Ukuboza\r\nmut.|gas.|wer.|mat.|gic.|kam.|nya.|kan.|nze.|ukw.|ugu.|uku.\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val rw_Standalone_Days: String =
-      "Kuwa mbere|Kuwa kabiri|Kuwa gatatu|Kuwa kane|Kuwa gatanu|Kuwa gatandatu|Ku cyumweru\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cyu.\r\nM|T|W|T|F|S|S\r"
+      "Kuwa mbere|Kuwa kabiri|Kuwa gatatu|Kuwa kane|Kuwa gatanu|Kuwa gatandatu|Ku cyumweru\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cyu.\r\nM|T|W|T|F|S|S\r\nmbe.|kab.|gtu.|kan.|gnu.|gnd.|cyu.\r"
 
   private const val rw_Standalone_Quarters: String =
       "igihembwe cya mbere|igihembwe cya kabiri|igihembwe cya gatatu|igihembwe cya kane\r\nI1|I2|I3|I4\r\n1|2|3|4\r"
@@ -10692,7 +10692,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprilyi|Mei|Junyi|Julyai|Agusti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val rwk_Format_Days: String =
-      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r"
+      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r"
 
   private const val rwk_Format_Quarters: String =
       "Robo 1|Robo 2|Robo 3|Robo 4\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -10704,7 +10704,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprilyi|Mei|Junyi|Julyai|Agusti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val rwk_Standalone_Days: String =
-      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r"
+      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r"
 
   private const val rwk_Standalone_Quarters: String =
       "Robo 1|Robo 2|Robo 3|Robo 4\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -10716,7 +10716,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरीमासः|फरवरीमासः|मार्चमासः|अप्रैलमासः|मईमासः|जूनमासः|जुलाईमासः|अगस्तमासः|सितंबरमासः|अक्तूबरमासः|नवंबरमासः|दिसंबरमासः\r\nजनवरी:|फरवरी:|मार्च:|अप्रैल:|मई|जून:|जुलाई:|अगस्त:|सितंबर:|अक्तूबर:|नवंबर:|दिसंबर:\r\nज|फ|मा|अ|म|जू|जु|अ|सि|अ|न|दि\r"
 
   private const val sa_Format_Days: String =
-      "सोमवासरः|मंगलवासरः|बुधवासरः|गुरुवासर:|शुक्रवासरः|शनिवासरः|रविवासरः\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r"
+      "सोमवासरः|मंगलवासरः|बुधवासरः|गुरुवासर:|शुक्रवासरः|शनिवासरः|रविवासरः\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r"
 
   private const val sa_Format_Quarters: String =
       "प्रथम त्रैमासिक|द्वितीय त्रैमासिक|तृतीय त्रैमासिक|चतुर्थ त्रैमासिक\r\nत्रैमासिक1|त्रैमासिक2|त्रैमासिक3|त्रैमासिक4\r\n1|2|3|4\r"
@@ -10727,7 +10727,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरीमासः|फरवरीमासः|मार्चमासः|अप्रैलमासः|मईमासः|जूनमासः|जुलाईमासः|अगस्तमासः|सितंबरमासः|अक्तूबरमासः|नवंबरमासः|दिसंबरमासः\r\nजनवरी:|फरवरी:|मार्च:|अप्रैल:|मई|जून:|जुलाई:|अगस्त:|सितंबर:|अक्तूबर:|नवंबर:|दिसंबर:\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val sa_Standalone_Days: String =
-      "सोमवासरः|मंगलवासरः|बुधवासरः|गुरुवासर:|शुक्रवासरः|शनिवासरः|रविवासरः\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r"
+      "सोमवासरः|मंगलवासरः|बुधवासरः|गुरुवासर:|शुक्रवासरः|शनिवासरः|रविवासरः\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r\nसो|मं|बु|गु|शु|श|र\r\nसोम|मंगल|बुध|गुरु|शुक्र|शनि|रवि\r"
 
   private const val sa_Standalone_Quarters: String =
       "प्रथम त्रैमासिक|द्वितीय त्रैमासिक|तृतीय त्रैमासिक|चतुर्थ त्रैमासिक\r\nत्रैमासिक1|त्रैमासिक2|त्रैमासिक3|त्रैमासिक4\r\n1|2|3|4\r"
@@ -10738,7 +10738,7 @@ object AvailableDateTimeDisplayNames {
       "Тохсунньу|Олунньу|Кулун тутар|Муус устар|Ыам ыйын|Бэс ыйын|От ыйын|Атырдьых ыйын|Балаҕан ыйын|Алтынньы|Сэтинньи|ахсынньы\r\nТохс|Олун|Клн|Мсу|Ыам|Бэс|Отй|Атр|Блҕ|Алт|Сэт|Ахс\r\nТ|О|К|М|Ы|Б|О|А|Б|А|С|А\r"
 
   private const val sah_Format_Days: String =
-      "бэнидиэнньик|оптуорунньук|сэрэдэ|чэппиэр|Бээтиҥсэ|субуота|баскыһыанньа\r\nбн|оп|сэ|чп|бэ|сб|бс\r\nБ|О|С|Ч|Б|С|Б\r"
+      "бэнидиэнньик|оптуорунньук|сэрэдэ|чэппиэр|Бээтиҥсэ|субуота|баскыһыанньа\r\nбн|оп|сэ|чп|бэ|сб|бс\r\nБ|О|С|Ч|Б|С|Б\r\nбн|оп|сэ|чп|бэ|сб|бс\r"
 
   private const val sah_Format_Quarters: String =
       "1-кы кыбаартал|2-с кыбаартал|3-с кыбаартал|4-с кыбаартал\r\n1-кы кб|2-с кб|3-с кб|4-с кб\r\n1|2|3|4\r"
@@ -10749,7 +10749,7 @@ object AvailableDateTimeDisplayNames {
       "тохсунньу|олунньу|кулун тутар|муус устар|ыам ыйа|бэс ыйа|от ыйа|атырдьых ыйа|балаҕан ыйа|алтынньы|сэтинньи|ахсынньы\r\nТохс|Олун|Клн|Мсу|Ыам|Бэс|Отй|Атр|Блҕ|Алт|Сэт|Ахс\r\nТ|О|К|М|Ы|Б|О|А|Б|А|С|А\r"
 
   private const val sah_Standalone_Days: String =
-      "бэнидиэнньик|оптуорунньук|сэрэдэ|чэппиэр|Бээтиҥсэ|субуота|баскыһыанньа\r\nбн|оп|сэ|чп|бэ|сб|бс\r\nБ|О|С|Ч|Б|С|Б\r"
+      "бэнидиэнньик|оптуорунньук|сэрэдэ|чэппиэр|Бээтиҥсэ|субуота|баскыһыанньа\r\nбн|оп|сэ|чп|бэ|сб|бс\r\nБ|О|С|Ч|Б|С|Б\r\nбн|оп|сэ|чп|бэ|сб|бс\r"
 
   private const val sah_Standalone_Quarters: String =
       "1-кы кыбаартал|2-с кыбаартал|3-с кыбаартал|4-с кыбаартал\r\n1-кы кб|2-с кб|3-с кб|4-с кб\r\n1|2|3|4\r"
@@ -10760,7 +10760,7 @@ object AvailableDateTimeDisplayNames {
       "Lapa le obo|Lapa le waare|Lapa le okuni|Lapa le ong’wan|Lapa le imet|Lapa le ile|Lapa le sapa|Lapa le isiet|Lapa le saal|Lapa le tomon|Lapa le tomon obo|Lapa le tomon waare\r\nObo|Waa|Oku|Ong|Ime|Ile|Sap|Isi|Saa|Tom|Tob|Tow\r\nO|W|O|O|I|I|S|I|S|T|T|T\r"
 
   private const val saq_Format_Days: String =
-      "Mderot ee kuni|Mderot ee ong’wan|Mderot ee inet|Mderot ee ile|Mderot ee sapa|Mderot ee kwe|Mderot ee are\r\nKun|Ong|Ine|Ile|Sap|Kwe|Are\r\nK|O|I|I|S|K|A\r"
+      "Mderot ee kuni|Mderot ee ong’wan|Mderot ee inet|Mderot ee ile|Mderot ee sapa|Mderot ee kwe|Mderot ee are\r\nKun|Ong|Ine|Ile|Sap|Kwe|Are\r\nK|O|I|I|S|K|A\r\nKun|Ong|Ine|Ile|Sap|Kwe|Are\r"
 
   private const val saq_Format_Quarters: String =
       "Robo 1|Robo 2|Robo 3|Robo 4\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -10772,7 +10772,7 @@ object AvailableDateTimeDisplayNames {
       "Lapa le obo|Lapa le waare|Lapa le okuni|Lapa le ong’wan|Lapa le imet|Lapa le ile|Lapa le sapa|Lapa le isiet|Lapa le saal|Lapa le tomon|Lapa le tomon obo|Lapa le tomon waare\r\nObo|Waa|Oku|Ong|Ime|Ile|Sap|Isi|Saa|Tom|Tob|Tow\r\nO|W|O|O|I|I|S|I|S|T|T|T\r"
 
   private const val saq_Standalone_Days: String =
-      "Mderot ee kuni|Mderot ee ong’wan|Mderot ee inet|Mderot ee ile|Mderot ee sapa|Mderot ee kwe|Mderot ee are\r\nKun|Ong|Ine|Ile|Sap|Kwe|Are\r\nK|O|I|I|S|K|A\r"
+      "Mderot ee kuni|Mderot ee ong’wan|Mderot ee inet|Mderot ee ile|Mderot ee sapa|Mderot ee kwe|Mderot ee are\r\nKun|Ong|Ine|Ile|Sap|Kwe|Are\r\nK|O|I|I|S|K|A\r\nKun|Ong|Ine|Ile|Sap|Kwe|Are\r"
 
   private const val saq_Standalone_Quarters: String =
       "Robo 1|Robo 2|Robo 3|Robo 4\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -10784,7 +10784,7 @@ object AvailableDateTimeDisplayNames {
       "ᱡᱟᱱᱣᱟᱨᱤ|ᱯᱷᱟᱨᱣᱟᱨᱤ|ᱢᱟᱨᱪ|ᱟᱯᱨᱮᱞ|ᱢᱮ|ᱡᱩᱱ|ᱡᱩᱞᱟᱭ|ᱟᱜᱟᱥᱛ|ᱥᱮᱯᱴᱮᱢᱵᱟᱨ|ᱚᱠᱴᱚᱵᱟᱨ|ᱱᱟᱣᱟᱢᱵᱟᱨ|ᱫᱤᱥᱟᱢᱵᱟᱨ\r\nᱡᱟᱱ|ᱯᱷᱟ|ᱢᱟᱨ|ᱟᱯᱨ|ᱢᱮ|ᱡᱩᱱ|ᱡᱩᱞ|ᱟᱜᱟ|ᱥᱮᱯ|ᱚᱠᱴ|ᱱᱟᱣ|ᱫᱤᱥ\r\nᱡ|ᱯ|ᱢ|ᱟ|ᱢ|ᱡ|ᱡ|ᱟ|ᱥ|ᱚ|ᱱ|ᱫ\r"
 
   private const val sat_Format_Days: String =
-      "ᱚᱛᱮ|ᱵᱟᱞᱮ|ᱥᱟᱹᱜᱩᱱ|ᱥᱟᱹᱨᱫᱤ|ᱡᱟᱹᱨᱩᱢ|ᱧᱩᱦᱩᱢ|ᱥᱤᱸᱜᱮ\r\nᱚᱛ|ᱵᱟ|ᱥᱟᱹ|ᱥᱟᱹᱨ|ᱡᱟᱹ|ᱧᱩ|ᱥᱤᱸ\r\nᱚ|ᱵ|ᱥ|ᱥ|ᱡ|ᱧ|ᱥ\r"
+      "ᱚᱛᱮ|ᱵᱟᱞᱮ|ᱥᱟᱹᱜᱩᱱ|ᱥᱟᱹᱨᱫᱤ|ᱡᱟᱹᱨᱩᱢ|ᱧᱩᱦᱩᱢ|ᱥᱤᱸᱜᱮ\r\nᱚᱛ|ᱵᱟ|ᱥᱟᱹ|ᱥᱟᱹᱨ|ᱡᱟᱹ|ᱧᱩ|ᱥᱤᱸ\r\nᱚ|ᱵ|ᱥ|ᱥ|ᱡ|ᱧ|ᱥ\r\nᱚᱛ|ᱵᱟ|ᱥᱟᱹ|ᱥᱟᱹᱨ|ᱡᱟᱹ|ᱧᱩ|ᱥᱤᱸ\r"
 
   private const val sat_Format_Quarters: String =
       "᱑ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱒ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱓ᱭᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱔ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ\r\n᱑ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱒ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱓ᱭᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱔ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ\r\n᱑|᱒|᱓|᱔\r"
@@ -10795,7 +10795,7 @@ object AvailableDateTimeDisplayNames {
       "ᱡᱟᱱᱣᱟᱨᱤ|ᱯᱷᱟᱨᱣᱟᱨᱤ|ᱢᱟᱨᱪ|ᱟᱯᱨᱮᱞ|ᱢᱮ|ᱡᱩᱱ|ᱡᱩᱞᱟᱭ|ᱟᱜᱟᱥᱛ|ᱥᱮᱯᱴᱮᱢᱵᱟᱨ|ᱚᱠᱴᱚᱵᱟᱨ|ᱱᱟᱣᱟᱢᱵᱟᱨ|ᱫᱤᱥᱟᱢᱵᱟᱨ\r\nᱡᱟᱱ|ᱯᱷᱟ|ᱢᱟᱨ|ᱟᱯᱨ|ᱢᱮ|ᱡᱩᱱ|ᱡᱩᱞ|ᱟᱜᱟ|ᱥᱮᱯ|ᱚᱠᱴ|ᱱᱟᱣ|ᱫᱤᱥ\r\nᱡ|ᱯ|ᱢ|ᱟ|ᱢ|ᱡ|ᱡ|ᱟ|ᱥ|ᱚ|ᱱ|ᱫ\r"
 
   private const val sat_Standalone_Days: String =
-      "ᱚᱛᱮ|ᱵᱟᱞᱮ|ᱥᱟᱹᱜᱩᱱ|ᱥᱟᱹᱨᱫᱤ|ᱡᱟᱹᱨᱩᱢ|ᱧᱩᱦᱩᱢ|ᱥᱤᱸᱜᱮ\r\nᱚᱛ|ᱵᱟ|ᱥᱟᱹ|ᱥᱟᱹᱨ|ᱡᱟᱹ|ᱧᱩ|ᱥᱤᱸ\r\nᱚ|ᱵ|ᱥ|ᱥ|ᱡ|ᱧ|ᱥ\r"
+      "ᱚᱛᱮ|ᱵᱟᱞᱮ|ᱥᱟᱹᱜᱩᱱ|ᱥᱟᱹᱨᱫᱤ|ᱡᱟᱹᱨᱩᱢ|ᱧᱩᱦᱩᱢ|ᱥᱤᱸᱜᱮ\r\nᱚᱛ|ᱵᱟ|ᱥᱟᱹ|ᱥᱟᱹᱨ|ᱡᱟᱹ|ᱧᱩ|ᱥᱤᱸ\r\nᱚ|ᱵ|ᱥ|ᱥ|ᱡ|ᱧ|ᱥ\r\nᱚᱛ|ᱵᱟ|ᱥᱟᱹ|ᱥᱟᱹᱨ|ᱡᱟᱹ|ᱧᱩ|ᱥᱤᱸ\r"
 
   private const val sat_Standalone_Quarters: String =
       "᱑ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱒ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱓ᱭᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱔ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ\r\n᱑ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱒ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱓ᱭᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ|᱔ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ\r\n᱑|᱒|᱓|᱔\r"
@@ -10838,7 +10838,7 @@ object AvailableDateTimeDisplayNames {
       "Mupalangulwa|Mwitope|Mushende|Munyi|Mushende Magali|Mujimbi|Mushipepo|Mupuguto|Munyense|Mokhu|Musongandembwe|Muhaano\r\nMup|Mwi|Msh|Mun|Mag|Muj|Msp|Mpg|Mye|Mok|Mus|Muh\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val sbp_Format_Days: String =
-      "Jumatatu|Jumanne|Jumatano|Alahamisi|Ijumaa|Jumamosi|Mulungu\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Mul\r\nJ|J|J|A|I|J|M\r"
+      "Jumatatu|Jumanne|Jumatano|Alahamisi|Ijumaa|Jumamosi|Mulungu\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Mul\r\nJ|J|J|A|I|J|M\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Mul\r"
 
   private const val sbp_Format_Quarters: String =
       "Lobo 1|Lobo 2|Lobo 3|Lobo 4\r\nL1|L2|L3|L4\r\n1|2|3|4\r"
@@ -10850,7 +10850,7 @@ object AvailableDateTimeDisplayNames {
       "Mupalangulwa|Mwitope|Mushende|Munyi|Mushende Magali|Mujimbi|Mushipepo|Mupuguto|Munyense|Mokhu|Musongandembwe|Muhaano\r\nMup|Mwi|Msh|Mun|Mag|Muj|Msp|Mpg|Mye|Mok|Mus|Muh\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val sbp_Standalone_Days: String =
-      "Jumatatu|Jumanne|Jumatano|Alahamisi|Ijumaa|Jumamosi|Mulungu\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Mul\r\nJ|J|J|A|I|J|M\r"
+      "Jumatatu|Jumanne|Jumatano|Alahamisi|Ijumaa|Jumamosi|Mulungu\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Mul\r\nJ|J|J|A|I|J|M\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Mul\r"
 
   private const val sbp_Standalone_Quarters: String =
       "Lobo 1|Lobo 2|Lobo 3|Lobo 4\r\nL1|L2|L3|L4\r\n1|2|3|4\r"
@@ -10862,7 +10862,7 @@ object AvailableDateTimeDisplayNames {
       "ghennàrgiu|freàrgiu|martzu|abrile|maju|làmpadas|trìulas|austu|cabudanni|santugaine|santandria|nadale\r\nghe|fre|mar|abr|maj|làm|trì|aus|cab|stG|stA|nad\r\nG|F|M|A|M|L|T|A|C|S|S|N\r"
 
   private const val sc_Format_Days: String =
-      "lunis|martis|mèrcuris|giòbia|chenàbura|sàbadu|domìniga\r\nlun|mar|mèr|giò|che|sàb|dom\r\nL|M|M|G|C|S|D\r"
+      "lunis|martis|mèrcuris|giòbia|chenàbura|sàbadu|domìniga\r\nlun|mar|mèr|giò|che|sàb|dom\r\nL|M|M|G|C|S|D\r\nlun|mar|mèr|giò|che|sàb|dom\r"
 
   private const val sc_Format_Quarters: String =
       "1u trimestre|2u trimestre|3u trimestre|4u trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -10873,7 +10873,7 @@ object AvailableDateTimeDisplayNames {
       "ghennàrgiu|freàrgiu|martzu|abrile|maju|làmpadas|trìulas|austu|cabudanni|santugaine|santandria|nadale\r\nghe|fre|mar|abr|maj|làm|trì|aus|cab|stG|stA|nad\r\nG|F|M|A|M|L|T|A|C|S|S|N\r"
 
   private const val sc_Standalone_Days: String =
-      "lunis|martis|mèrcuris|giòbia|chenàbura|sàbadu|domìniga\r\nlun|mar|mèr|giò|che|sàb|dom\r\nL|M|M|G|C|S|D\r"
+      "lunis|martis|mèrcuris|giòbia|chenàbura|sàbadu|domìniga\r\nlun|mar|mèr|giò|che|sàb|dom\r\nL|M|M|G|C|S|D\r\nlun|mar|mèr|giò|che|sàb|dom\r"
 
   private const val sc_Standalone_Quarters: String =
       "1u trimestre|2u trimestre|3u trimestre|4u trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -10900,7 +10900,7 @@ object AvailableDateTimeDisplayNames {
       "جنوري|فيبروري|مارچ|اپريل|مئي|جون|جولاءِ|آگسٽ|سيپٽمبر|آڪٽوبر|نومبر|ڊسمبر\r\nجنوري|فيبروري|مارچ|اپريل|مئي|جون|جولاءِ|آگسٽ|سيپٽمبر|آڪٽوبر|نومبر|ڊسمبر\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val sd_Format_Days: String =
-      "سومر|اڱارو|اربع|خميس|جمعو|ڇنڇر|آچر\r\nسومر|اڱارو|اربع|خميس|جمعو|ڇنڇر|آچر\r\nسو|اڱارو|اربع|خم|جمعو|ڇنڇر|آچر\r"
+      "سومر|اڱارو|اربع|خميس|جمعو|ڇنڇر|آچر\r\nسومر|اڱارو|اربع|خميس|جمعو|ڇنڇر|آچر\r\nسو|اڱارو|اربع|خم|جمعو|ڇنڇر|آچر\r\nسومر|اڱارو|اربع|خميس|جمعو|ڇنڇر|آچر\r"
 
   private const val sd_Format_Quarters: String =
       "پهرين ٽي ماهي|ٻين ٽي ماهي|ٽين ٽي ماهي|چوٿين ٽي ماهي\r\nQ1|Q2|Q3|Q5\r\n1|2|3|4\r"
@@ -10912,7 +10912,7 @@ object AvailableDateTimeDisplayNames {
       "جنوري|فيبروري|مارچ|اپريل|مئي|جون|جولاءِ|آگسٽ|سيپٽمبر|آڪٽوبر|نومبر|ڊسمبر\r\nجنوري|فيبروري|مارچ|اپريل|مئي|جون|جولاءِ|آگسٽ|سيپٽمبر|آڪٽوبر|نومبر|ڊسمبر\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val sd_Standalone_Days: String =
-      "سومر|اڱارو|اربع|خميس|جمعو|ڇنڇر|آچر\r\nسومر|اڱارو|اربع|خميس|جمعو|ڇنڇر|آچر\r\nسو|اڱارو|اربع|خم|جمعو|ڇنڇر|آچر\r"
+      "سومر|اڱارو|اربع|خميس|جمعو|ڇنڇر|آچر\r\nسومر|اڱارو|اربع|خميس|جمعو|ڇنڇر|آچر\r\nسو|اڱارو|اربع|خم|جمعو|ڇنڇر|آچر\r\nسومر|اڱارو|اربع|خميس|جمعو|ڇنڇر|آچر\r"
 
   private const val sd_Standalone_Quarters: String =
       "پهرين ٽي ماهي|ٻين ٽي ماهي|ٽين ٽي ماهي|چوٿين ٽي ماهي\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -10940,7 +10940,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फेबरवरी|मार्चु|अप्रेल|मई|जून|जुलाई|आगस्ट|सप्टेंबर|आक्टोबर|नवंबर|डिसंबर\r\nजन|फर|मार्च|अप्रै|मई|जून|जु|अग|सप्टे|ऑक्टो|नवं|डिसं\r\nज|फ़|मा|अ|मा|जू|जु|अग|स|ऑ|न|डि\r"
 
   private const val sd_Deva_Format_Days: String =
-      "सूमर|मंगलु|ॿुधर|विस्पत|जुमो|छंछर|आर्तवार\r\nसू|मंग|बु॒ध|विस|जुम|छंछ|आर्त\r\nसू|मं|बु॒|वि|जु|छं|आ\r"
+      "सूमर|मंगलु|ॿुधर|विस्पत|जुमो|छंछर|आर्तवार\r\nसू|मंग|बु॒ध|विस|जुम|छंछ|आर्त\r\nसू|मं|बु॒|वि|जु|छं|आ\r\nसू|मंग|बु॒ध|विस|जुम|छंछ|आर्त\r"
 
   private const val sd_Deva_Format_Quarters: String =
       "पहिंरी टिमाही|बीं॒ टिमाही|टीं टिमाही|चोथीं टिमाही\r\nपहिंरी टिमाही|बीं॒ टिमाही|टीं टिमाही|चोथीं टिमाही\r\n1|2|3|4\r"
@@ -10951,7 +10951,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फेबरवरी|मार्चु|अप्रेल|मई|जून|जुलाई|आगस्ट|सप्टेंबर|ऑक्टोबर|नवंबर|डिसंबर\r\nजन|फर|मार्च|अप्रै|मई|जून|जुला|अग|सप्टे|ऑक्टो|नवं|डिसं\r\nज|फ़|म|अ|मा|जू|जु|अग|स|ऑ|न|डि\r"
 
   private const val sd_Deva_Standalone_Days: String =
-      "सू|मं|बु॒ध|विस|जुम|छंछ|आर्त\r\nसू|मं|बुध|विस|जु|छंछ|आ\r\nसू|मं|बु॒|वि|जु|छं|आ\r"
+      "सू|मं|बु॒ध|विस|जुम|छंछ|आर्त\r\nसू|मं|बुध|विस|जु|छंछ|आ\r\nसू|मं|बु॒|वि|जु|छं|आ\r\nसू|मंग|बु॒ध|विस|जुम|छंछ|आर्त\r"
 
   private const val sd_Deva_Standalone_Quarters: String =
       "पहिंरी टिमाही|बीं॒ टिमाही|टीं टिमाही|चोथीं टिमाही\r\nपहिरीं टिमाही|बीं॒ टिमाही|टीं टिमाही|चोथीं टिमाही\r\n1|2|3|4\r"
@@ -10994,7 +10994,7 @@ object AvailableDateTimeDisplayNames {
       "ođđajagemánnu|guovvamánnu|njukčamánnu|cuoŋománnu|miessemánnu|geassemánnu|suoidnemánnu|borgemánnu|čakčamánnu|golggotmánnu|skábmamánnu|juovlamánnu\r\nođđj|guov|njuk|cuo|mies|geas|suoi|borg|čakč|golg|skáb|juov\r\nO|G|N|C|M|G|S|B|Č|G|S|J\r"
 
   private const val se_Format_Days: String =
-      "vuossárga|maŋŋebárga|gaskavahkku|duorasdat|bearjadat|lávvardat|sotnabeaivi\r\nvuos|maŋ|gask|duor|bear|láv|sotn\r\nV|M|G|D|B|L|S\r"
+      "vuossárga|maŋŋebárga|gaskavahkku|duorasdat|bearjadat|lávvardat|sotnabeaivi\r\nvuos|maŋ|gask|duor|bear|láv|sotn\r\nV|M|G|D|B|L|S\r\nvuos|maŋ|gask|duor|bear|láv|sotn\r"
 
   private val se_Format_Quarters: String? = null
 
@@ -11005,7 +11005,7 @@ object AvailableDateTimeDisplayNames {
       "ođđajagemánnu|guovvamánnu|njukčamánnu|cuoŋománnu|miessemánnu|geassemánnu|suoidnemánnu|borgemánnu|čakčamánnu|golggotmánnu|skábmamánnu|juovlamánnu\r\nođđj|guov|njuk|cuo|mies|geas|suoi|borg|čakč|golg|skáb|juov\r\nO|G|N|C|M|G|S|B|Č|G|S|J\r"
 
   private const val se_Standalone_Days: String =
-      "vuossárga|maŋŋebárga|gaskavahkku|duorasdat|bearjadat|lávvardat|sotnabeaivi\r\nvuos|maŋ|gask|duor|bear|láv|sotn\r\nV|M|G|D|B|L|S\r"
+      "vuossárga|maŋŋebárga|gaskavahkku|duorasdat|bearjadat|lávvardat|sotnabeaivi\r\nvuos|maŋ|gask|duor|bear|láv|sotn\r\nV|M|G|D|B|L|S\r\nvuos|maŋ|gask|duor|bear|láv|sotn\r"
 
   private val se_Standalone_Quarters: String? = null
 
@@ -11016,7 +11016,7 @@ object AvailableDateTimeDisplayNames {
       "ođđajagemánnu|guovvamánnu|njukčamánnu|cuoŋománnu|miessemánnu|geassemánnu|suoidnemánnu|borgemánnu|čakčamánnu|golggotmánnu|skábmamánnu|juovlamánnu\r\nođđj|guov|njuk|cuoŋ|mies|geas|suoi|borg|čakč|golg|skáb|juov\r\nO|G|N|C|M|G|S|B|Č|G|S|J\r"
 
   private const val se_FI_Format_Days: String =
-      "mánnodat|disdat|gaskavahkku|duorastat|bearjadat|lávvordat|sotnabeaivi\r\nmá|di|ga|du|be|lá|so\r\nM|D|G|D|B|L|S\r"
+      "mánnodat|disdat|gaskavahkku|duorastat|bearjadat|lávvordat|sotnabeaivi\r\nmá|di|ga|du|be|lá|so\r\nM|D|G|D|B|L|S\r\nmá|di|ga|du|be|lá|so\r"
 
   private const val se_FI_Format_Quarters: String =
       "1. njealjádas|2. njealjádas|3. njealjádas|4. njealjádas\r\n1Q|2Q|3Q|4Q\r\n1|2|3|4\r"
@@ -11027,7 +11027,7 @@ object AvailableDateTimeDisplayNames {
       "ođđajagemánnu|guovvamánnu|njukčamánnu|cuoŋománnu|miessemánnu|geassemánnu|suoidnemánnu|borgemánnu|čakčamánnu|golggotmánnu|skábmamánnu|juovlamánnu\r\nođđj|guov|njuk|cuoŋ|mies|geas|suoi|borg|čakč|golg|skáb|juov\r\nO|G|N|C|M|G|S|B|Č|G|S|J\r"
 
   private const val se_FI_Standalone_Days: String =
-      "mánnodat|disdat|gaskavahkku|duorastat|bearjadat|lávvordat|sotnabeaivi\r\nmá|di|ga|du|be|lá|so\r\nM|D|G|D|B|L|S\r"
+      "mánnodat|disdat|gaskavahkku|duorastat|bearjadat|lávvordat|sotnabeaivi\r\nmá|di|ga|du|be|lá|so\r\nM|D|G|D|B|L|S\r\nmá|di|ga|du|be|lá|so\r"
 
   private const val se_FI_Standalone_Quarters: String =
       "1. njealjádas|2. njealjádas|3. njealjádas|4. njealjádas\r\n1Q|2Q|3Q|4Q\r\n1|2|3|4\r"
@@ -11054,7 +11054,7 @@ object AvailableDateTimeDisplayNames {
       "Janeiro|Fevreiro|Marco|Abril|Maio|Junho|Julho|Augusto|Setembro|Otubro|Novembro|Decembro\r\nJan|Fev|Mar|Abr|Mai|Jun|Jul|Aug|Set|Otu|Nov|Dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val seh_Format_Days: String =
-      "Chiposi|Chipiri|Chitatu|Chinai|Chishanu|Sabudu|Dimingu\r\nPos|Pir|Tat|Nai|Sha|Sab|Dim\r\nP|C|T|N|S|S|D\r"
+      "Chiposi|Chipiri|Chitatu|Chinai|Chishanu|Sabudu|Dimingu\r\nPos|Pir|Tat|Nai|Sha|Sab|Dim\r\nP|C|T|N|S|S|D\r\nPos|Pir|Tat|Nai|Sha|Sab|Dim\r"
 
   private val seh_Format_Quarters: String? = null
 
@@ -11064,7 +11064,7 @@ object AvailableDateTimeDisplayNames {
       "Janeiro|Fevreiro|Marco|Abril|Maio|Junho|Julho|Augusto|Setembro|Otubro|Novembro|Decembro\r\nJan|Fev|Mar|Abr|Mai|Jun|Jul|Aug|Set|Otu|Nov|Dec\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val seh_Standalone_Days: String =
-      "Chiposi|Chipiri|Chitatu|Chinai|Chishanu|Sabudu|Dimingu\r\nPos|Pir|Tat|Nai|Sha|Sab|Dim\r\nP|C|T|N|S|S|D\r"
+      "Chiposi|Chipiri|Chitatu|Chinai|Chishanu|Sabudu|Dimingu\r\nPos|Pir|Tat|Nai|Sha|Sab|Dim\r\nP|C|T|N|S|S|D\r\nPos|Pir|Tat|Nai|Sha|Sab|Dim\r"
 
   private val seh_Standalone_Quarters: String? = null
 
@@ -11074,7 +11074,7 @@ object AvailableDateTimeDisplayNames {
       "Žanwiye|Feewiriye|Marsi|Awiril|Me|Žuweŋ|Žuyye|Ut|Sektanbur|Oktoobur|Noowanbur|Deesanbur\r\nŽan|Fee|Mar|Awi|Me|Žuw|Žuy|Ut|Sek|Okt|Noo|Dee\r\nŽ|F|M|A|M|Ž|Ž|U|S|O|N|D\r"
 
   private const val ses_Format_Days: String =
-      "Atinni|Atalaata|Alarba|Alhamiisa|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|L|L|S|H\r"
+      "Atinni|Atalaata|Alarba|Alhamiisa|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|L|L|S|H\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r"
 
   private const val ses_Format_Quarters: String =
       "Arrubu 1|Arrubu 2|Arrubu 3|Arrubu 4\r\nA1|A2|A3|A4\r\n1|2|3|4\r"
@@ -11086,7 +11086,7 @@ object AvailableDateTimeDisplayNames {
       "Žanwiye|Feewiriye|Marsi|Awiril|Me|Žuweŋ|Žuyye|Ut|Sektanbur|Oktoobur|Noowanbur|Deesanbur\r\nŽan|Fee|Mar|Awi|Me|Žuw|Žuy|Ut|Sek|Okt|Noo|Dee\r\nŽ|F|M|A|M|Ž|Ž|U|S|O|N|D\r"
 
   private const val ses_Standalone_Days: String =
-      "Atinni|Atalaata|Alarba|Alhamiisa|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|L|L|S|H\r"
+      "Atinni|Atalaata|Alarba|Alhamiisa|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|L|L|S|H\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r"
 
   private const val ses_Standalone_Quarters: String =
       "Arrubu 1|Arrubu 2|Arrubu 3|Arrubu 4\r\nA1|A2|A3|A4\r\n1|2|3|4\r"
@@ -11098,7 +11098,7 @@ object AvailableDateTimeDisplayNames {
       "Nyenye|Fulundïgi|Mbängü|Ngubùe|Bêläwü|Föndo|Lengua|Kükürü|Mvuka|Ngberere|Nabändüru|Kakauka\r\nNye|Ful|Mbä|Ngu|Bêl|Fön|Len|Kük|Mvu|Ngb|Nab|Kak\r\nN|F|M|N|B|F|L|K|M|N|N|K\r"
 
   private const val sg_Format_Days: String =
-      "Bïkua-ûse|Bïkua-ptâ|Bïkua-usïö|Bïkua-okü|Lâpôsö|Lâyenga|Bikua-ôko\r\nBk2|Bk3|Bk4|Bk5|Lâp|Lây|Bk1\r\nS|T|S|K|P|Y|K\r"
+      "Bïkua-ûse|Bïkua-ptâ|Bïkua-usïö|Bïkua-okü|Lâpôsö|Lâyenga|Bikua-ôko\r\nBk2|Bk3|Bk4|Bk5|Lâp|Lây|Bk1\r\nS|T|S|K|P|Y|K\r\nBk2|Bk3|Bk4|Bk5|Lâp|Lây|Bk1\r"
 
   private const val sg_Format_Quarters: String =
       "Fângbisïö ôko|Fângbisïö ûse|Fângbisïö otâ|Fângbisïö usïö\r\nF4–1|F4–2|F4–3|F4–4\r\n1|2|3|4\r"
@@ -11109,7 +11109,7 @@ object AvailableDateTimeDisplayNames {
       "Nyenye|Fulundïgi|Mbängü|Ngubùe|Bêläwü|Föndo|Lengua|Kükürü|Mvuka|Ngberere|Nabändüru|Kakauka\r\nNye|Ful|Mbä|Ngu|Bêl|Fön|Len|Kük|Mvu|Ngb|Nab|Kak\r\nN|F|M|N|B|F|L|K|M|N|N|K\r"
 
   private const val sg_Standalone_Days: String =
-      "Bïkua-ûse|Bïkua-ptâ|Bïkua-usïö|Bïkua-okü|Lâpôsö|Lâyenga|Bikua-ôko\r\nBk2|Bk3|Bk4|Bk5|Lâp|Lây|Bk1\r\nS|T|S|K|P|Y|K\r"
+      "Bïkua-ûse|Bïkua-ptâ|Bïkua-usïö|Bïkua-okü|Lâpôsö|Lâyenga|Bikua-ôko\r\nBk2|Bk3|Bk4|Bk5|Lâp|Lây|Bk1\r\nS|T|S|K|P|Y|K\r\nBk2|Bk3|Bk4|Bk5|Lâp|Lây|Bk1\r"
 
   private const val sg_Standalone_Quarters: String =
       "Fângbisïö ôko|Fângbisïö ûse|Fângbisïö otâ|Fângbisïö usïö\r\nF4–1|F4–2|F4–3|F4–4\r\n1|2|3|4\r"
@@ -11120,7 +11120,7 @@ object AvailableDateTimeDisplayNames {
       "ⵉⵏⵏⴰⵢⵔ|ⴱⵕⴰⵢⵕ|ⵎⴰⵕⵚ|ⵉⴱⵔⵉⵔ|ⵎⴰⵢⵢⵓ|ⵢⵓⵏⵢⵓ|ⵢⵓⵍⵢⵓⵣ|ⵖⵓⵛⵜ|ⵛⵓⵜⴰⵏⴱⵉⵔ|ⴽⵜⵓⴱⵔ|ⵏⵓⵡⴰⵏⴱⵉⵔ|ⴷⵓⵊⴰⵏⴱⵉⵔ\r\nⵉⵏⵏ|ⴱⵕⴰ|ⵎⴰⵕ|ⵉⴱⵔ|ⵎⴰⵢ|ⵢⵓⵏ|ⵢⵓⵍ|ⵖⵓⵛ|ⵛⵓⵜ|ⴽⵜⵓ|ⵏⵓⵡ|ⴷⵓⵊ\r\nⵉ|ⴱ|ⵎ|ⵉ|ⵎ|ⵢ|ⵢ|ⵖ|ⵛ|ⴽ|ⵏ|ⴷ\r"
 
   private const val shi_Format_Days: String =
-      "ⴰⵢⵏⴰⵙ|ⴰⵙⵉⵏⴰⵙ|ⴰⴽⵕⴰⵙ|ⴰⴽⵡⴰⵙ|ⵙⵉⵎⵡⴰⵙ|ⴰⵙⵉⴹⵢⴰⵙ|ⴰⵙⴰⵎⴰⵙ\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r\nM|T|W|T|F|S|S\r"
+      "ⴰⵢⵏⴰⵙ|ⴰⵙⵉⵏⴰⵙ|ⴰⴽⵕⴰⵙ|ⴰⴽⵡⴰⵙ|ⵙⵉⵎⵡⴰⵙ|ⴰⵙⵉⴹⵢⴰⵙ|ⴰⵙⴰⵎⴰⵙ\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r\nM|T|W|T|F|S|S\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r"
 
   private const val shi_Format_Quarters: String =
       "ⴰⴽⵕⴰⴹⵢⵓⵔ 1|ⴰⴽⵕⴰⴹⵢⵓⵔ 2|ⴰⴽⵕⴰⴹⵢⵓⵔ 3|ⴰⴽⵕⴰⴹⵢⵓⵔ 4\r\nⴰⴽ 1|ⴰⴽ 2|ⴰⴽ 3|ⴰⴽ 4\r\n1|2|3|4\r"
@@ -11132,7 +11132,7 @@ object AvailableDateTimeDisplayNames {
       "ⵉⵏⵏⴰⵢⵔ|ⴱⵕⴰⵢⵕ|ⵎⴰⵕⵚ|ⵉⴱⵔⵉⵔ|ⵎⴰⵢⵢⵓ|ⵢⵓⵏⵢⵓ|ⵢⵓⵍⵢⵓⵣ|ⵖⵓⵛⵜ|ⵛⵓⵜⴰⵏⴱⵉⵔ|ⴽⵜⵓⴱⵔ|ⵏⵓⵡⴰⵏⴱⵉⵔ|ⴷⵓⵊⴰⵏⴱⵉⵔ\r\nⵉⵏⵏ|ⴱⵕⴰ|ⵎⴰⵕ|ⵉⴱⵔ|ⵎⴰⵢ|ⵢⵓⵏ|ⵢⵓⵍ|ⵖⵓⵛ|ⵛⵓⵜ|ⴽⵜⵓ|ⵏⵓⵡ|ⴷⵓⵊ\r\nⵉ|ⴱ|ⵎ|ⵉ|ⵎ|ⵢ|ⵢ|ⵖ|ⵛ|ⴽ|ⵏ|ⴷ\r"
 
   private const val shi_Standalone_Days: String =
-      "ⴰⵢⵏⴰⵙ|ⴰⵙⵉⵏⴰⵙ|ⴰⴽⵕⴰⵙ|ⴰⴽⵡⴰⵙ|ⵙⵉⵎⵡⴰⵙ|ⴰⵙⵉⴹⵢⴰⵙ|ⴰⵙⴰⵎⴰⵙ\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r\nM|T|W|T|F|S|S\r"
+      "ⴰⵢⵏⴰⵙ|ⴰⵙⵉⵏⴰⵙ|ⴰⴽⵕⴰⵙ|ⴰⴽⵡⴰⵙ|ⵙⵉⵎⵡⴰⵙ|ⴰⵙⵉⴹⵢⴰⵙ|ⴰⵙⴰⵎⴰⵙ\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r\nM|T|W|T|F|S|S\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r"
 
   private const val shi_Standalone_Quarters: String =
       "ⴰⴽⵕⴰⴹⵢⵓⵔ 1|ⴰⴽⵕⴰⴹⵢⵓⵔ 2|ⴰⴽⵕⴰⴹⵢⵓⵔ 3|ⴰⴽⵕⴰⴹⵢⵓⵔ 4\r\nⴰⴽ 1|ⴰⴽ 2|ⴰⴽ 3|ⴰⴽ 4\r\n1|2|3|4\r"
@@ -11144,7 +11144,7 @@ object AvailableDateTimeDisplayNames {
       "innayr|bṛayṛ|maṛṣ|ibrir|mayyu|yunyu|yulyuz|ɣuct|cutanbir|ktubr|nuwanbir|dujanbir\r\ninn|bṛa|maṛ|ibr|may|yun|yul|ɣuc|cut|ktu|nuw|duj\r\ni|b|m|i|m|y|y|ɣ|c|k|n|d\r"
 
   private const val shi_Latn_Format_Days: String =
-      "aynas|asinas|akṛas|akwas|asimwas|asiḍyas|asamas\r\nayn|asi|akṛ|akw|asim|asiḍ|asa\r\nM|T|W|T|F|S|S\r"
+      "aynas|asinas|akṛas|akwas|asimwas|asiḍyas|asamas\r\nayn|asi|akṛ|akw|asim|asiḍ|asa\r\nM|T|W|T|F|S|S\r\nayn|asi|akṛ|akw|asim|asiḍ|asa\r"
 
   private const val shi_Latn_Format_Quarters: String =
       "akṛaḍyur 1|akṛaḍyur 2|akṛaḍyur 3|akṛaḍyur 4\r\nak 1|ak 2|ak 3|ak 4\r\n1|2|3|4\r"
@@ -11156,7 +11156,7 @@ object AvailableDateTimeDisplayNames {
       "innayr|bṛayṛ|maṛṣ|ibrir|mayyu|yunyu|yulyuz|ɣuct|cutanbir|ktubr|nuwanbir|dujanbir\r\ninn|bṛa|maṛ|ibr|may|yun|yul|ɣuc|cut|ktu|nuw|duj\r\ni|b|m|i|m|y|y|ɣ|c|k|n|d\r"
 
   private const val shi_Latn_Standalone_Days: String =
-      "aynas|asinas|akṛas|akwas|asimwas|asiḍyas|asamas\r\nayn|asi|akṛ|akw|asim|asiḍ|asa\r\nM|T|W|T|F|S|S\r"
+      "aynas|asinas|akṛas|akwas|asimwas|asiḍyas|asamas\r\nayn|asi|akṛ|akw|asim|asiḍ|asa\r\nM|T|W|T|F|S|S\r\nayn|asi|akṛ|akw|asim|asiḍ|asa\r"
 
   private const val shi_Latn_Standalone_Quarters: String =
       "akṛaḍyur 1|akṛaḍyur 2|akṛaḍyur 3|akṛaḍyur 4\r\nak 1|ak 2|ak 3|ak 4\r\n1|2|3|4\r"
@@ -11216,7 +11216,7 @@ object AvailableDateTimeDisplayNames {
       "ජනවාරි|පෙබරවාරි|මාර්තු|අප්‍රේල්|මැයි|ජූනි|ජූලි|අගෝස්තු|සැප්තැම්බර්|ඔක්තෝබර්|නොවැම්බර්|දෙසැම්බර්\r\nජන|පෙබ|මාර්තු|අප්‍රේල්|මැයි|ජූනි|ජූලි|අගෝ|සැප්|ඔක්|නොවැ|දෙසැ\r\nජ|පෙ|මා|අ|මැ|ජූ|ජූ|අ|සැ|ඔ|නෙ|දෙ\r"
 
   private const val si_Format_Days: String =
-      "සඳුදා|අඟහරුවාදා|බදාදා|බ්‍රහස්පතින්දා|සිකුරාදා|සෙනසුරාදා|ඉරිදා\r\nසඳුදා|අඟහ|බදාදා|බ්‍රහස්|සිකු|සෙන|ඉරිදා\r\nස|අ|බ|බ්‍ර|සි|සෙ|ඉ\r"
+      "සඳුදා|අඟහරුවාදා|බදාදා|බ්‍රහස්පතින්දා|සිකුරාදා|සෙනසුරාදා|ඉරිදා\r\nසඳුදා|අඟහ|බදාදා|බ්‍රහස්|සිකු|සෙන|ඉරිදා\r\nස|අ|බ|බ්‍ර|සි|සෙ|ඉ\r\nසඳු|අඟ|බදා|බ්‍රහ|සිකු|සෙන|ඉරි\r"
 
   private const val si_Format_Quarters: String =
       "1 වන කාර්තුව|2 වන කාර්තුව|3 වන කාර්තුව|4 වන කාර්තුව\r\nකාර්:1|කාර්:2|කාර්:3|කාර්:4\r\n1|2|3|4\r"
@@ -11228,7 +11228,7 @@ object AvailableDateTimeDisplayNames {
       "ජනවාරි|පෙබරවාරි|මාර්තු|අප්‍රේල්|මැයි|ජූනි|ජූලි|අගෝස්තු|සැප්තැම්බර්|ඔක්තෝබර්|නොවැම්බර්|දෙසැම්බර්\r\nජන|පෙබ|මාර්|අප්‍රේල්|මැයි|ජූනි|ජූලි|අගෝ|සැප්|ඔක්|නොවැ|දෙසැ\r\nජ|පෙ|මා|අ|මැ|ජූ|ජූ|අ|සැ|ඔ|නෙ|දෙ\r"
 
   private const val si_Standalone_Days: String =
-      "සඳුදා|අඟහරුවාදා|බදාදා|බ්‍රහස්පතින්දා|සිකුරාදා|සෙනසුරාදා|ඉරිදා\r\nසඳුදා|අඟහ|බදාදා|බ්‍රහස්|සිකු|සෙන|ඉරිදා\r\nස|අ|බ|බ්‍ර|සි|සෙ|ඉ\r"
+      "සඳුදා|අඟහරුවාදා|බදාදා|බ්‍රහස්පතින්දා|සිකුරාදා|සෙනසුරාදා|ඉරිදා\r\nසඳුදා|අඟහ|බදාදා|බ්‍රහස්|සිකු|සෙන|ඉරිදා\r\nස|අ|බ|බ්‍ර|සි|සෙ|ඉ\r\nසඳු|අඟ|බදා|බ්‍රහ|සිකු|සෙන|ඉරි\r"
 
   private const val si_Standalone_Quarters: String =
       "1 වන කාර්තුව|2 වන කාර්තුව|3 වන කාර්තුව|4 වන කාර්තුව\r\nකාර්:1|කාර්:2|කාර්:3|කාර්:4\r\n1|2|3|4\r"
@@ -11256,7 +11256,7 @@ object AvailableDateTimeDisplayNames {
       "januára|februára|marca|apríla|mája|júna|júla|augusta|septembra|októbra|novembra|decembra\r\njan|feb|mar|apr|máj|jún|júl|aug|sep|okt|nov|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val sk_Format_Days: String =
-      "pondelok|utorok|streda|štvrtok|piatok|sobota|nedeľa\r\npo|ut|st|št|pi|so|ne\r\np|u|s|š|p|s|n\r"
+      "pondelok|utorok|streda|štvrtok|piatok|sobota|nedeľa\r\npo|ut|st|št|pi|so|ne\r\np|u|s|š|p|s|n\r\npo|ut|st|št|pi|so|ne\r"
 
   private const val sk_Format_Quarters: String =
       "1. štvrťrok|2. štvrťrok|3. štvrťrok|4. štvrťrok\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -11268,7 +11268,7 @@ object AvailableDateTimeDisplayNames {
       "január|február|marec|apríl|máj|jún|júl|august|september|október|november|december\r\njan|feb|mar|apr|máj|jún|júl|aug|sep|okt|nov|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val sk_Standalone_Days: String =
-      "pondelok|utorok|streda|štvrtok|piatok|sobota|nedeľa\r\npo|ut|st|št|pi|so|ne\r\np|u|s|š|p|s|n\r"
+      "pondelok|utorok|streda|štvrtok|piatok|sobota|nedeľa\r\npo|ut|st|št|pi|so|ne\r\np|u|s|š|p|s|n\r\npo|ut|st|št|pi|so|ne\r"
 
   private const val sk_Standalone_Quarters: String =
       "1. štvrťrok|2. štvrťrok|3. štvrťrok|4. štvrťrok\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -11296,7 +11296,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|marec|april|maj|junij|julij|avgust|september|oktober|november|december\r\njan.|feb.|mar.|apr.|maj|jun.|jul.|avg.|sep.|okt.|nov.|dec.\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val sl_Format_Days: String =
-      "ponedeljek|torek|sreda|četrtek|petek|sobota|nedelja\r\npon.|tor.|sre.|čet.|pet.|sob.|ned.\r\np|t|s|č|p|s|n\r"
+      "ponedeljek|torek|sreda|četrtek|petek|sobota|nedelja\r\npon.|tor.|sre.|čet.|pet.|sob.|ned.\r\np|t|s|č|p|s|n\r\npon.|tor.|sre.|čet.|pet.|sob.|ned.\r"
 
   private const val sl_Format_Quarters: String =
       "1. četrtletje|2. četrtletje|3. četrtletje|4. četrtletje\r\n1. čet.|2. čet.|3. čet.|4. čet.\r\n1.|2.|3.|4.\r"
@@ -11308,7 +11308,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|marec|april|maj|junij|julij|avgust|september|oktober|november|december\r\njan.|feb.|mar.|apr.|maj|jun.|jul.|avg.|sep.|okt.|nov.|dec.\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val sl_Standalone_Days: String =
-      "ponedeljek|torek|sreda|četrtek|petek|sobota|nedelja\r\npon.|tor.|sre.|čet.|pet.|sob.|ned.\r\np|t|s|č|p|s|n\r"
+      "ponedeljek|torek|sreda|četrtek|petek|sobota|nedelja\r\npon.|tor.|sre.|čet.|pet.|sob.|ned.\r\np|t|s|č|p|s|n\r\npon.|tor.|sre.|čet.|pet.|sob.|ned.\r"
 
   private const val sl_Standalone_Quarters: String =
       "1. četrtletje|2. četrtletje|3. četrtletje|4. četrtletje\r\n1. čet.|2. čet.|3. čet.|4. čet.\r\n1.|2.|3.|4.\r"
@@ -11384,7 +11384,7 @@ object AvailableDateTimeDisplayNames {
       "uđđâivemáánu|kuovâmáánu|njuhčâmáánu|cuáŋuimáánu|vyesimáánu|kesimáánu|syeinimáánu|porgemáánu|čohčâmáánu|roovvâdmáánu|skammâmáánu|juovlâmáánu\r\nuđiv|kuovâ|njuhčâ|cuáŋui|vyesi|kesi|syeini|porge|čohčâ|roovvâd|skammâ|juovlâ\r\nU|K|NJ|C|V|K|S|P|Č|R|S|J\r"
 
   private const val smn_Format_Days: String =
-      "vuossaargâ|majebaargâ|koskoho|tuorâstuv|vástuppeeivi|lávurduv|pasepeeivi\r\nvuo|maj|kos|tuo|vás|láv|pas\r\nV|M|K|T|V|L|p\r"
+      "vuossaargâ|majebaargâ|koskoho|tuorâstuv|vástuppeeivi|lávurduv|pasepeeivi\r\nvuo|maj|kos|tuo|vás|láv|pas\r\nV|M|K|T|V|L|p\r\nvu|ma|ko|tu|vá|lá|pa\r"
 
   private const val smn_Format_Quarters: String =
       "1. niäljádâs|2. niäljádâs|3. niäljádâs|4. niäljádâs\r\n1. niälj.|2. niälj.|3. niälj.|4. niälj.\r\n1|2|3|4\r"
@@ -11395,7 +11395,7 @@ object AvailableDateTimeDisplayNames {
       "uđđâivemáánu|kuovâmáánu|njuhčâmáánu|cuáŋuimáánu|vyesimáánu|kesimáánu|syeinimáánu|porgemáánu|čohčâmáánu|roovvâdmáánu|skammâmáánu|juovlâmáánu\r\nuđiv|kuovâ|njuhčâ|cuáŋui|vyesi|kesi|syeini|porge|čohčâ|roovvâd|skammâ|juovlâ\r\nU|K|NJ|C|V|K|S|P|Č|R|S|J\r"
 
   private const val smn_Standalone_Days: String =
-      "vuossargâ|majebargâ|koskokko|tuorâstâh|vástuppeivi|lávurdâh|pasepeivi\r\nvuo|maj|kos|tuo|vás|láv|pas\r\nM|T|W|T|F|S|S\r"
+      "vuossargâ|majebargâ|koskokko|tuorâstâh|vástuppeivi|lávurdâh|pasepeivi\r\nvuo|maj|kos|tuo|vás|láv|pas\r\nM|T|W|T|F|S|S\r\nvu|ma|ko|tu|vá|lá|pa\r"
 
   private const val smn_Standalone_Quarters: String =
       "1. niäljádâs|2. niäljádâs|3. niäljádâs|4. niäljádâs\r\n1. niälj.|2. niälj.|3. niälj.|4. niälj.\r\n1|2|3|4\r"
@@ -11422,7 +11422,7 @@ object AvailableDateTimeDisplayNames {
       "Ndira|Kukadzi|Kurume|Kubvumbi|Chivabvu|Chikumi|Chikunguru|Nyamavhuvhu|Gunyana|Gumiguru|Mbudzi|Zvita\r\nNdi|Kuk|Kur|Kub|Chv|Chk|Chg|Nya|Gun|Gum|Mbu|Zvi\r\nN|K|K|K|C|C|C|N|G|G|M|Z\r"
 
   private const val sn_Format_Days: String =
-      "Muvhuro|Chipiri|Chitatu|China|Chishanu|Mugovera|Svondo\r\nMuv|Chp|Cht|Chn|Chs|Mug|Svo\r\nM|C|C|C|C|M|S\r"
+      "Muvhuro|Chipiri|Chitatu|China|Chishanu|Mugovera|Svondo\r\nMuv|Chp|Cht|Chn|Chs|Mug|Svo\r\nM|C|C|C|C|M|S\r\nMu|Cp|Ct|Cn|Cs|Mg|Sv\r"
 
   private const val sn_Format_Quarters: String =
       "Kota 1|Kota 2|Kota 3|Kota 4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -11433,7 +11433,7 @@ object AvailableDateTimeDisplayNames {
       "Ndira|Kukadzi|Kurume|Kubvumbi|Chivabvu|Chikumi|Chikunguru|Nyamavhuvhu|Gunyana|Gumiguru|Mbudzi|Zvita\r\nNdi|Kuk|Kur|Kub|Chv|Chk|Chg|Nya|Gun|Gum|Mbu|Zvi\r\nN|K|K|K|C|C|C|N|G|G|M|Z\r"
 
   private const val sn_Standalone_Days: String =
-      "Muvhuro|Chipiri|Chitatu|China|Chishanu|Mugovera|Svondo\r\nMuv|Chp|Cht|Chn|Chs|Mug|Svo\r\nM|C|C|C|C|M|S\r"
+      "Muvhuro|Chipiri|Chitatu|China|Chishanu|Mugovera|Svondo\r\nMuv|Chp|Cht|Chn|Chs|Mug|Svo\r\nM|C|C|C|C|M|S\r\nMu|Cp|Ct|Cn|Cs|Mg|Sv\r"
 
   private const val sn_Standalone_Quarters: String =
       "Kota 1|Kota 2|Kota 3|Kota 4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -11444,7 +11444,7 @@ object AvailableDateTimeDisplayNames {
       "Janaayo|Febraayo|Maarso|Abriil|Maayo|Juun|Luulyo|Agosto|Sebtembar|Oktoobar|Noofeembar|Diseembar\r\nJan|Feb|Mar|Abr|May|Jun|Lul|Ogs|Seb|Okt|Nof|Dis\r\nJ|F|M|A|M|J|L|O|S|O|N|D\r"
 
   private const val so_Format_Days: String =
-      "Isniin|Talaado|Arbaco|Khamiis|Jimco|Sabti|Axad\r\nIsn|Tldo|Arbc|Khms|Jmc|Sbti|Axd\r\nI|T|A|Kh|J|S|A\r"
+      "Isniin|Talaado|Arbaco|Khamiis|Jimco|Sabti|Axad\r\nIsn|Tldo|Arbc|Khms|Jmc|Sbti|Axd\r\nI|T|A|Kh|J|S|A\r\nIsn|Tldo|Arbc|Khms|Jmc|Sbti|Axd\r"
 
   private const val so_Format_Quarters: String =
       "Rubaca 1aad|Rubaca 2aad|Rubaca 3aad|Rubaca 4aad\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -11455,7 +11455,7 @@ object AvailableDateTimeDisplayNames {
       "Jannaayo|Febraayo|Maarso|Abriil|Maayo|Juun|Luulyo|Ogosto|Sebteembar|Oktoobar|Noofeembar|Diseembar\r\nJan|Feb|Mar|Abr|May|Jun|Lul|Ogs|Seb|Okt|Nof|Dis\r\nJ|F|M|A|M|J|L|O|S|O|N|D\r"
 
   private const val so_Standalone_Days: String =
-      "Isniin|Talaado|Arbaco|Khamiis|Jimco|Sabti|Axad\r\nIsn|Tldo|Arbc|Khms|Jmc|Sbti|Axd\r\nI|T|A|Kh|J|S|A\r"
+      "Isniin|Talaado|Arbaco|Khamiis|Jimco|Sabti|Axad\r\nIsn|Tldo|Arbc|Khms|Jmc|Sbti|Axd\r\nI|T|A|Kh|J|S|A\r\nIsn|Tldo|Arbc|Khms|Jmc|Sbti|Axd\r"
 
   private const val so_Standalone_Quarters: String =
       "Rubaca 1aad|Rubaca 2aad|Rubaca 3aad|Rubaca 4aad\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -11514,7 +11514,7 @@ object AvailableDateTimeDisplayNames {
       "janar|shkurt|mars|prill|maj|qershor|korrik|gusht|shtator|tetor|nëntor|dhjetor\r\njan|shk|mar|pri|maj|qer|korr|gush|sht|tet|nën|dhj\r\nj|sh|m|p|m|q|k|g|sh|t|n|dh\r"
 
   private const val sq_Format_Days: String =
-      "e hënë|e martë|e mërkurë|e enjte|e premte|e shtunë|e diel\r\nhën|mar|mër|enj|pre|sht|die\r\nh|m|m|e|p|sh|d\r"
+      "e hënë|e martë|e mërkurë|e enjte|e premte|e shtunë|e diel\r\nhën|mar|mër|enj|pre|sht|die\r\nh|m|m|e|p|sh|d\r\nhën|mar|mër|enj|pre|sht|die\r"
 
   private const val sq_Format_Quarters: String =
       "tremujori i parë|tremujori i dytë|tremujori i tretë|tremujori i katërt\r\ntremujori I|tremujori II|tremujori III|tremujori IV\r\n1|2|3|4\r"
@@ -11526,7 +11526,7 @@ object AvailableDateTimeDisplayNames {
       "janar|shkurt|mars|prill|maj|qershor|korrik|gusht|shtator|tetor|nëntor|dhjetor\r\njan|shk|mar|pri|maj|qer|korr|gush|sht|tet|nën|dhj\r\nj|sh|m|p|m|q|k|g|sh|t|n|dh\r"
 
   private const val sq_Standalone_Days: String =
-      "e hënë|e martë|e mërkurë|e enjte|e premte|e shtunë|e diel\r\nhën|mar|mër|enj|pre|sht|die\r\nh|m|m|e|p|sh|d\r"
+      "e hënë|e martë|e mërkurë|e enjte|e premte|e shtunë|e diel\r\nhën|mar|mër|enj|pre|sht|die\r\nh|m|m|e|p|sh|d\r\nhën|mar|mër|enj|pre|sht|die\r"
 
   private const val sq_Standalone_Quarters: String =
       "Tremujori i 1-rë|Tremujori i 2-të|Tremujori i 3-të|Tremujori i 4-t\r\nTremujori I|Tremujori II|Tremujori III|Tremujori IV\r\n1|2|3|4\r"
@@ -11570,7 +11570,7 @@ object AvailableDateTimeDisplayNames {
       "јануар|фебруар|март|април|мај|јун|јул|август|септембар|октобар|новембар|децембар\r\nјан|феб|мар|апр|мај|јун|јул|авг|сеп|окт|нов|дец\r\nј|ф|м|а|м|ј|ј|а|с|о|н|д\r"
 
   private const val sr_Format_Days: String =
-      "понедељак|уторак|среда|четвртак|петак|субота|недеља\r\nпон|уто|сре|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r"
+      "понедељак|уторак|среда|четвртак|петак|субота|недеља\r\nпон|уто|сре|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r\nпо|ут|ср|че|пе|су|не\r"
 
   private const val sr_Format_Quarters: String =
       "први квартал|други квартал|трећи квартал|четврти квартал\r\n1. кв.|2. кв.|3. кв.|4. кв.\r\n1.|2.|3.|4.\r"
@@ -11582,7 +11582,7 @@ object AvailableDateTimeDisplayNames {
       "јануар|фебруар|март|април|мај|јун|јул|август|септембар|октобар|новембар|децембар\r\nјан|феб|мар|апр|мај|јун|јул|авг|сеп|окт|нов|дец\r\nј|ф|м|а|м|ј|ј|а|с|о|н|д\r"
 
   private const val sr_Standalone_Days: String =
-      "понедељак|уторак|среда|четвртак|петак|субота|недеља\r\nпон|уто|сре|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r"
+      "понедељак|уторак|среда|четвртак|петак|субота|недеља\r\nпон|уто|сре|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r\nпо|ут|ср|че|пе|су|не\r"
 
   private const val sr_Standalone_Quarters: String =
       "први квартал|други квартал|трећи квартал|четврти квартал\r\n1. кв.|2. кв.|3. кв.|4. кв.\r\n1.|2.|3.|4.\r"
@@ -11609,7 +11609,7 @@ object AvailableDateTimeDisplayNames {
   private val sr_Cyrl_BA_Format_Months: String? = null
 
   private const val sr_Cyrl_BA_Format_Days: String =
-      "понедјељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сри|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r"
+      "понедјељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сри|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r\nпо|ут|ср|че|пе|су|не\r"
 
   private val sr_Cyrl_BA_Format_Quarters: String? = null
 
@@ -11619,7 +11619,7 @@ object AvailableDateTimeDisplayNames {
   private val sr_Cyrl_BA_Standalone_Months: String? = null
 
   private const val sr_Cyrl_BA_Standalone_Days: String =
-      "понедјељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сри|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r"
+      "понедјељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сри|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r\nпо|ут|ср|че|пе|су|не\r"
 
   private val sr_Cyrl_BA_Standalone_Quarters: String? = null
 
@@ -11630,7 +11630,7 @@ object AvailableDateTimeDisplayNames {
       "јануар|фебруар|март|април|мај|јун|јул|август|септембар|октобар|новембар|децембар\r\nјан|феб|март|апр|мај|јун|јул|авг|септ|окт|нов|дец\r\nј|ф|м|а|м|ј|ј|а|с|о|н|д\r"
 
   private const val sr_Cyrl_ME_Format_Days: String =
-      "понедељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сре|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r"
+      "понедељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сре|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r\nпо|ут|ср|че|пе|су|не\r"
 
   private val sr_Cyrl_ME_Format_Quarters: String? = null
 
@@ -11641,7 +11641,7 @@ object AvailableDateTimeDisplayNames {
       "јануар|фебруар|март|април|мај|јун|јул|август|септембар|октобар|новембар|децембар\r\nјан|феб|март|апр|мај|јун|јул|авг|септ|окт|нов|дец\r\nј|ф|м|а|м|ј|ј|а|с|о|н|д\r"
 
   private const val sr_Cyrl_ME_Standalone_Days: String =
-      "понедељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сре|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r"
+      "понедељак|уторак|сриједа|четвртак|петак|субота|недјеља\r\nпон|уто|сре|чет|пет|суб|нед\r\nп|у|с|ч|п|с|н\r\nпо|ут|ср|че|пе|су|не\r"
 
   private val sr_Cyrl_ME_Standalone_Quarters: String? = null
 
@@ -11671,7 +11671,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|mart|april|maj|jun|jul|avgust|septembar|oktobar|novembar|decembar\r\njan|feb|mar|apr|maj|jun|jul|avg|sep|okt|nov|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val sr_Latn_Format_Days: String =
-      "ponedeljak|utorak|sreda|četvrtak|petak|subota|nedelja\r\npon|uto|sre|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r"
+      "ponedeljak|utorak|sreda|četvrtak|petak|subota|nedelja\r\npon|uto|sre|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r\npo|ut|sr|če|pe|su|ne\r"
 
   private const val sr_Latn_Format_Quarters: String =
       "prvi kvartal|drugi kvartal|treći kvartal|četvrti kvartal\r\n1. kv.|2. kv.|3. kv.|4. kv.\r\n1.|2.|3.|4.\r"
@@ -11683,7 +11683,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|mart|april|maj|jun|jul|avgust|septembar|oktobar|novembar|decembar\r\njan|feb|mar|apr|maj|jun|jul|avg|sep|okt|nov|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val sr_Latn_Standalone_Days: String =
-      "ponedeljak|utorak|sreda|četvrtak|petak|subota|nedelja\r\npon|uto|sre|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r"
+      "ponedeljak|utorak|sreda|četvrtak|petak|subota|nedelja\r\npon|uto|sre|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r\npo|ut|sr|če|pe|su|ne\r"
 
   private const val sr_Latn_Standalone_Quarters: String =
       "prvi kvartal|drugi kvartal|treći kvartal|četvrti kvartal\r\n1. kv.|2. kv.|3. kv.|4. kv.\r\n1.|2.|3.|4.\r"
@@ -11694,7 +11694,7 @@ object AvailableDateTimeDisplayNames {
   private val sr_Latn_BA_Format_Months: String? = null
 
   private const val sr_Latn_BA_Format_Days: String =
-      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r"
+      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r\npo|ut|sr|če|pe|su|ne\r"
 
   private val sr_Latn_BA_Format_Quarters: String? = null
 
@@ -11704,7 +11704,7 @@ object AvailableDateTimeDisplayNames {
   private val sr_Latn_BA_Standalone_Months: String? = null
 
   private const val sr_Latn_BA_Standalone_Days: String =
-      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r"
+      "ponedjeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sri|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r\npo|ut|sr|če|pe|su|ne\r"
 
   private val sr_Latn_BA_Standalone_Quarters: String? = null
 
@@ -11715,7 +11715,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|mart|april|maj|jun|jul|avgust|septembar|oktobar|novembar|decembar\r\njan|feb|mart|apr|maj|jun|jul|avg|sept|okt|nov|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val sr_Latn_ME_Format_Days: String =
-      "ponedeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sre|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r"
+      "ponedeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sre|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r\npo|ut|sr|če|pe|su|ne\r"
 
   private val sr_Latn_ME_Format_Quarters: String? = null
 
@@ -11726,7 +11726,7 @@ object AvailableDateTimeDisplayNames {
       "januar|februar|mart|april|maj|jun|jul|avgust|septembar|oktobar|novembar|decembar\r\njan|feb|mart|apr|maj|jun|jul|avg|sept|okt|nov|dec\r\nj|f|m|a|m|j|j|a|s|o|n|d\r"
 
   private const val sr_Latn_ME_Standalone_Days: String =
-      "ponedeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sre|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r"
+      "ponedeljak|utorak|srijeda|četvrtak|petak|subota|nedjelja\r\npon|uto|sre|čet|pet|sub|ned\r\np|u|s|č|p|s|n\r\npo|ut|sr|če|pe|su|ne\r"
 
   private val sr_Latn_ME_Standalone_Quarters: String? = null
 
@@ -11804,7 +11804,7 @@ object AvailableDateTimeDisplayNames {
       "Pherekgong|Hlakola|Hlakubele|Mmesa|Motsheanong|Phupjane|Phupu|Phato|Lwetse|Mphalane|Pudungwana|Tshitwe\r\nPhe|Kol|Ube|Mme|Mot|Jan|Upu|Pha|Leo|Mph|Pun|Tsh\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val st_Format_Days: String =
-      "Mantaha|Labobedi|Laboraro|Labone|Labohlano|Moqebelo|Sontaha\r\nMma|Bed|Rar|Ne|Hla|Moq|Son\r\nM|T|W|T|F|S|S\r"
+      "Mantaha|Labobedi|Laboraro|Labone|Labohlano|Moqebelo|Sontaha\r\nMma|Bed|Rar|Ne|Hla|Moq|Son\r\nM|T|W|T|F|S|S\r\nMma|Bed|Rar|Ne|Hla|Moq|Son\r"
 
   private val st_Format_Quarters: String? = null
 
@@ -11814,7 +11814,7 @@ object AvailableDateTimeDisplayNames {
       "Pherekgong|Hlakola|Hlakubele|Mmesa|Motsheanong|Phupjane|Phupu|Phato|Lwetse|Mphalane|Pudungwana|Tshitwe\r\nPhe|Kol|Ube|Mme|Mot|Jan|Upu|Pha|Leo|Mph|Pun|Tsh\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val st_Standalone_Days: String =
-      "Mantaha|Labobedi|Laboraro|Labone|Labohlano|Moqebelo|Sontaha\r\nMma|Bed|Rar|Ne|Hla|Moq|Son\r\nM|T|W|T|F|S|S\r"
+      "Mantaha|Labobedi|Laboraro|Labone|Labohlano|Moqebelo|Sontaha\r\nMma|Bed|Rar|Ne|Hla|Moq|Son\r\nM|T|W|T|F|S|S\r\nMma|Bed|Rar|Ne|Hla|Moq|Son\r"
 
   private val st_Standalone_Quarters: String? = null
 
@@ -11840,7 +11840,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Pébruari|Maret|April|Méi|Juni|Juli|Agustus|Séptémber|Oktober|Nopémber|Désémber\r\nJan|Péb|Mar|Apr|Méi|Jun|Jul|Ags|Sép|Okt|Nop|Dés\r\nJ|P|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val su_Format_Days: String =
-      "Senén|Salasa|Rebo|Kemis|Jumaah|Saptu|Minggu\r\nSen|Sal|Reb|Kem|Jum|Sap|Mng\r\nS|S|R|K|J|S|M\r"
+      "Senén|Salasa|Rebo|Kemis|Jumaah|Saptu|Minggu\r\nSen|Sal|Reb|Kem|Jum|Sap|Mng\r\nS|S|R|K|J|S|M\r\nSen|Sal|Reb|Kem|Jum|Sap|Mng\r"
 
   private const val su_Format_Quarters: String =
       "kuartal ka-1|kuartal ka-2|kuartal ka-3|kuartal ka-4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -11851,7 +11851,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Pébruari|Maret|April|Méi|Juni|Juli|Agustus|Séptémber|Oktober|Nopémber|Désémber\r\nJan|Péb|Mar|Apr|Méi|Jun|Jul|Ags|Sép|Okt|Nop|Dés\r\nJ|P|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val su_Standalone_Days: String =
-      "Senén|Salasa|Rebo|Kemis|Jumaah|Saptu|Minggu\r\nSen|Sal|Reb|Kem|Jum|Sap|Mng\r\nS|S|R|K|J|S|M\r"
+      "Senén|Salasa|Rebo|Kemis|Jumaah|Saptu|Minggu\r\nSen|Sal|Reb|Kem|Jum|Sap|Mng\r\nS|S|R|K|J|S|M\r\nSen|Sal|Reb|Kem|Jum|Sap|Mng\r"
 
   private const val su_Standalone_Quarters: String =
       "kuartal ka-1|kuartal ka-2|kuartal ka-3|kuartal-ka 4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -11878,7 +11878,7 @@ object AvailableDateTimeDisplayNames {
       "januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december\r\njan.|feb.|mars|apr.|maj|juni|juli|aug.|sep.|okt.|nov.|dec.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val sv_Format_Days: String =
-      "måndag|tisdag|onsdag|torsdag|fredag|lördag|söndag\r\nmån|tis|ons|tors|fre|lör|sön\r\nM|T|O|T|F|L|S\r"
+      "måndag|tisdag|onsdag|torsdag|fredag|lördag|söndag\r\nmån|tis|ons|tors|fre|lör|sön\r\nM|T|O|T|F|L|S\r\nmå|ti|on|to|fr|lö|sö\r"
 
   private const val sv_Format_Quarters: String =
       "1:a kvartalet|2:a kvartalet|3:e kvartalet|4:e kvartalet\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -11890,7 +11890,7 @@ object AvailableDateTimeDisplayNames {
       "januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december\r\njan.|feb.|mars|apr.|maj|juni|juli|aug.|sep.|okt.|nov.|dec.\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val sv_Standalone_Days: String =
-      "måndag|tisdag|onsdag|torsdag|fredag|lördag|söndag\r\nmån|tis|ons|tors|fre|lör|sön\r\nM|T|O|T|F|L|S\r"
+      "måndag|tisdag|onsdag|torsdag|fredag|lördag|söndag\r\nmån|tis|ons|tors|fre|lör|sön\r\nM|T|O|T|F|L|S\r\nmå|ti|on|to|fr|lö|sö\r"
 
   private const val sv_Standalone_Quarters: String =
       "1:a kvartalet|2:a kvartalet|3:e kvartalet|4:e kvartalet\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -11936,7 +11936,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprili|Mei|Juni|Julai|Agosti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val sw_Format_Days: String =
-      "Jumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nJumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nM|T|W|T|F|S|S\r"
+      "Jumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nJumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nM|T|W|T|F|S|S\r\nJumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r"
 
   private const val sw_Format_Quarters: String =
       "Robo ya 1|Robo ya 2|Robo ya 3|Robo ya 4\r\nRobo ya 1|Robo ya 2|Robo ya 3|Robo ya 4\r\n1|2|3|4\r"
@@ -11948,7 +11948,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprili|Mei|Juni|Julai|Agosti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val sw_Standalone_Days: String =
-      "Jumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nJumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nM|T|W|T|F|S|S\r"
+      "Jumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nJumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r\nM|T|W|T|F|S|S\r\nJumatatu|Jumanne|Jumatano|Alhamisi|Ijumaa|Jumamosi|Jumapili\r"
 
   private const val sw_Standalone_Quarters: String =
       "Robo ya 1|Robo ya 2|Robo ya 3|Robo ya 4\r\nRobo ya 1|Robo ya 2|Robo ya 3|Robo ya 4\r\n1|2|3|4\r"
@@ -12008,7 +12008,7 @@ object AvailableDateTimeDisplayNames {
       "ܟܢܘܢ ܐܚܪܝܐ|ܫܒܛ|ܐܕܪ|ܢܝܣܢ|ܐܝܪ|ܚܙܝܪܢ|ܬܡܘܙ|ܐܒ|ܐܝܠܘܠ|ܬܫܪܝܢ ܩܕܡܝܐ|ܬܫܪܝܢ ܐܚܪܝܐ|ܟܢܘܢ ܩܕܡܝܐ\r\nܟܢܘܢ ܒ|ܫܒܛ|ܐܕܪ|ܢܝܣܢ|ܐܝܪ|ܚܙܝܪܢ|ܬܡܘܙ|ܐܒ|ܐܝܠܘܠ|ܬܫܪܝܢ ܐ|ܬܫܪܝܢ ܒ|ܟܢܘܢ ܐ\r\nܟ|ܫ|ܐ|ܢ|ܐ|ܚ|ܬ|ܐ|ܐ|ܬ|ܬ|ܟ\r"
 
   private const val syr_Format_Days: String =
-      "ܬܪܝܢܒܫܒܐ|ܬܠܬܒܫܒܐ|ܐܪܒܥܒܫܒܐ|ܚܡܫܒܫܒܐ|ܥܪܘܒܬܐ|ܫܒܬܐ|ܚܕܒܫܒܐ\r\nܬܪܝܢ|ܬܠܬ|ܐܪܒܥ|ܚܡܫ|ܥܪܘ|ܫܒܬܐ|ܚܕ\r\nܬ|ܬ|ܐ|ܚ|ܥ|ܫ|ܚ\r"
+      "ܬܪܝܢܒܫܒܐ|ܬܠܬܒܫܒܐ|ܐܪܒܥܒܫܒܐ|ܚܡܫܒܫܒܐ|ܥܪܘܒܬܐ|ܫܒܬܐ|ܚܕܒܫܒܐ\r\nܬܪܝܢ|ܬܠܬ|ܐܪܒܥ|ܚܡܫ|ܥܪܘ|ܫܒܬܐ|ܚܕ\r\nܬ|ܬ|ܐ|ܚ|ܥ|ܫ|ܚ\r\nܬܪܝܢ|ܬܠܬ|ܐܪܒܥ|ܚܡܫ|ܥܪܘ|ܫܒܬܐ|ܚܕ\r"
 
   private const val syr_Format_Quarters: String =
       "ܪܘܒܥܐ ܩܕܡܝܐ|ܪܘܒܥܐ ܬܪܝܢܐ|ܪܘܒܥܐ ܬܠܝܬܝܐ|ܪܘܒܥܐ ܪܒܝܥܝܐ\r\nܪܘܒܥܐ ܩܕܡܝܐ|ܪܘܒܥܐ ܬܪܝܢܐ|ܪܘܒܥܐ ܬܠܝܬܝܐ|ܪܘܒܥܐ ܪܒܝܥܝܐ\r\n1|2|3|4\r"
@@ -12019,7 +12019,7 @@ object AvailableDateTimeDisplayNames {
       "ܟܢܘܢ ܐܚܪܝܐ|ܫܒܛ|ܐܕܪ|ܢܝܣܢ|ܐܝܪ|ܚܙܝܪܢ|ܬܡܘܙ|ܐܒ|ܐܝܠܘܠ|ܬܫܪܝܢ ܩܕܡܝܐ|ܬܫܪܝܢ ܐܚܪܝܐ|ܟܢܘܢ ܩܕܡܝܐ\r\nܟܢܘܢ ܒ|ܫܒܛ|ܐܕܪ|ܢܝܣܢ|ܐܝܪ|ܚܙܝܪܢ|ܬܡܘܙ|ܐܒ|ܐܝܠܘܠ|ܬܫܪܝܢ ܐ|ܬܫܪܝܢ ܒ|ܟܢܘܢ ܐ\r\nܟ|ܫ|ܐ|ܢ|ܐ|ܬ|ܚ|ܐ|ܐ|ܬ|ܬ|ܟ\r"
 
   private const val syr_Standalone_Days: String =
-      "ܬܪܝܢܒܫܒܐ|ܬܠܬܒܫܒܐ|ܐܪܒܥܒܫܒܐ|ܚܡܫܒܫܒܐ|ܥܪܘܒܬܐ|ܫܒܬܐ|ܚܕܒܫܒܐ\r\nܬܪܝܢ|ܬܠܬ|ܐܪܒܥ|ܚܡܫ|ܥܪܘ|ܫܒܬܐ|ܚܕ\r\nܬ|ܬ|ܐ|ܚ|ܥ|ܫ|ܚ\r"
+      "ܬܪܝܢܒܫܒܐ|ܬܠܬܒܫܒܐ|ܐܪܒܥܒܫܒܐ|ܚܡܫܒܫܒܐ|ܥܪܘܒܬܐ|ܫܒܬܐ|ܚܕܒܫܒܐ\r\nܬܪܝܢ|ܬܠܬ|ܐܪܒܥ|ܚܡܫ|ܥܪܘ|ܫܒܬܐ|ܚܕ\r\nܬ|ܬ|ܐ|ܚ|ܥ|ܫ|ܚ\r\nܬܪܝܢ|ܬܠܬ|ܐܪܒܥ|ܚܡܫ|ܥܪܘ|ܫܒܬܐ|ܚܕ\r"
 
   private const val syr_Standalone_Quarters: String =
       "ܪܘܒܥܐ ܩܕܡܝܐ|ܪܘܒܥܐ ܬܪܝܢܐ|ܪܘܒܥܐ ܬܠܝܬܝܐ|ܪܘܒܥܐ ܪܒܝܥܝܐ\r\nܪܘܒܥܐ ܩܕܡܝܐ|ܪܘܒܥܐ ܬܪܝܢܐ|ܪܘܒܥܐ ܬܠܝܬܝܐ|ܪܘܒܥܐ ܪܒܝܥܝܐ\r\n1|2|3|4\r"
@@ -12047,7 +12047,7 @@ object AvailableDateTimeDisplayNames {
       "stycznia|lutego|marca|kwietnia|moja|czyrwca|lipca|siyrpnia|września|października|listopada|grudnia\r\nstycznia|lutego|marca|kwietnia|moja|czyrwca|lipca|siyrpnia|września|października|listopada|grudnia\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val szl_Format_Days: String =
-      "pyńdziałek|wtorek|strzoda|sztwortek|piōntek|sobota|niydziela\r\npyńdziałek|wtorek|strzoda|sztwortek|piōntek|sobota|niydziela\r\nM|T|W|T|F|S|S\r"
+      "pyńdziałek|wtorek|strzoda|sztwortek|piōntek|sobota|niydziela\r\npyńdziałek|wtorek|strzoda|sztwortek|piōntek|sobota|niydziela\r\nM|T|W|T|F|S|S\r\npyńdziałek|wtorek|strzoda|sztwortek|piōntek|sobota|niydziela\r"
 
   private val szl_Format_Quarters: String? = null
 
@@ -12058,7 +12058,7 @@ object AvailableDateTimeDisplayNames {
       "stycznia|lutego|marca|kwietnia|moja|czyrwca|lipca|siyrpnia|września|października|listopada|grudnia\r\nstycznia|lutego|marca|kwietnia|moja|czyrwca|lipca|siyrpnia|września|października|listopada|grudnia\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val szl_Standalone_Days: String =
-      "pyńdziałek|wtorek|strzoda|sztwortek|piōntek|sobota|niydziela\r\npyńdziałek|wtorek|strzoda|sztwortek|piōntek|sobota|niydziela\r\nM|T|W|T|F|S|S\r"
+      "pyńdziałek|wtorek|strzoda|sztwortek|piōntek|sobota|niydziela\r\npyńdziałek|wtorek|strzoda|sztwortek|piōntek|sobota|niydziela\r\nM|T|W|T|F|S|S\r\npyńdziałek|wtorek|strzoda|sztwortek|piōntek|sobota|niydziela\r"
 
   private val szl_Standalone_Quarters: String? = null
 
@@ -12069,7 +12069,7 @@ object AvailableDateTimeDisplayNames {
       "ஜனவரி|பிப்ரவரி|மார்ச்|ஏப்ரல்|மே|ஜூன்|ஜூலை|ஆகஸ்ட்|செப்டம்பர்|அக்டோபர்|நவம்பர்|டிசம்பர்\r\nஜன.|பிப்.|மார்.|ஏப்.|மே|ஜூன்|ஜூலை|ஆக.|செப்.|அக்.|நவ.|டிச.\r\nஜ|பி|மா|ஏ|மே|ஜூ|ஜூ|ஆ|செ|அ|ந|டி\r"
 
   private const val ta_Format_Days: String =
-      "திங்கள்|செவ்வாய்|புதன்|வியாழன்|வெள்ளி|சனி|ஞாயிறு\r\nதிங்.|செவ்.|புத.|வியா.|வெள்.|சனி|ஞாயி.\r\nதி|செ|பு|வி|வெ|ச|ஞா\r"
+      "திங்கள்|செவ்வாய்|புதன்|வியாழன்|வெள்ளி|சனி|ஞாயிறு\r\nதிங்.|செவ்.|புத.|வியா.|வெள்.|சனி|ஞாயி.\r\nதி|செ|பு|வி|வெ|ச|ஞா\r\nதி|செ|பு|வி|வெ|ச|ஞா\r"
 
   private const val ta_Format_Quarters: String =
       "முதல் காலாண்டு|இரண்டாம் காலாண்டு|மூன்றாம் காலாண்டு|நான்காம் காலாண்டு\r\nகா.1|கா.2|கா.3|கா.4\r\n1|2|3|4\r"
@@ -12081,7 +12081,7 @@ object AvailableDateTimeDisplayNames {
       "ஜனவரி|பிப்ரவரி|மார்ச்|ஏப்ரல்|மே|ஜூன்|ஜூலை|ஆகஸ்ட்|செப்டம்பர்|அக்டோபர்|நவம்பர்|டிசம்பர்\r\nஜன.|பிப்.|மார்.|ஏப்.|மே|ஜூன்|ஜூலை|ஆக.|செப்.|அக்.|நவ.|டிச.\r\nஜ|பி|மா|ஏ|மே|ஜூ|ஜூ|ஆ|செ|அ|ந|டி\r"
 
   private const val ta_Standalone_Days: String =
-      "திங்கள்|செவ்வாய்|புதன்|வியாழன்|வெள்ளி|சனி|ஞாயிறு\r\nதிங்.|செவ்.|புத.|வியா.|வெள்.|சனி|ஞாயி.\r\nதி|செ|பு|வி|வெ|ச|ஞா\r"
+      "திங்கள்|செவ்வாய்|புதன்|வியாழன்|வெள்ளி|சனி|ஞாயிறு\r\nதிங்.|செவ்.|புத.|வியா.|வெள்.|சனி|ஞாயி.\r\nதி|செ|பு|வி|வெ|ச|ஞா\r\nதி|செ|பு|வி|வெ|ச|ஞா\r"
 
   private const val ta_Standalone_Quarters: String =
       "முதல் காலாண்டு|இரண்டாம் காலாண்டு|மூன்றாம் காலாண்டு|நான்காம் காலாண்டு\r\nகா.1|கா.2|கா.3|கா.4\r\n1|2|3|4\r"
@@ -12141,7 +12141,7 @@ object AvailableDateTimeDisplayNames {
       "జనవరి|ఫిబ్రవరి|మార్చి|ఏప్రిల్|మే|జూన్|జులై|ఆగస్టు|సెప్టెంబర్|అక్టోబర్|నవంబర్|డిసెంబర్\r\nజన|ఫిబ్ర|మార్చి|ఏప్రి|మే|జూన్|జులై|ఆగ|సెప్టెం|అక్టో|నవం|డిసెం\r\nజ|ఫి|మా|ఏ|మే|జూ|జు|ఆ|సె|అ|న|డి\r"
 
   private const val te_Format_Days: String =
-      "సోమవారం|మంగళవారం|బుధవారం|గురువారం|శుక్రవారం|శనివారం|ఆదివారం\r\nసోమ|మంగళ|బుధ|గురు|శుక్ర|శని|ఆది\r\nసో|మ|బు|గు|శు|శ|ఆ\r"
+      "సోమవారం|మంగళవారం|బుధవారం|గురువారం|శుక్రవారం|శనివారం|ఆదివారం\r\nసోమ|మంగళ|బుధ|గురు|శుక్ర|శని|ఆది\r\nసో|మ|బు|గు|శు|శ|ఆ\r\nసోమ|మం|బుధ|గురు|శుక్ర|శని|ఆది\r"
 
   private const val te_Format_Quarters: String =
       "1వ త్రైమాసికం|2వ త్రైమాసికం|3వ త్రైమాసికం|4వ త్రైమాసికం\r\nత్రై1|త్రై2|త్రై3|త్రై4\r\n1|2|3|4\r"
@@ -12153,7 +12153,7 @@ object AvailableDateTimeDisplayNames {
       "జనవరి|ఫిబ్రవరి|మార్చి|ఏప్రిల్|మే|జూన్|జులై|ఆగస్టు|సెప్టెంబర్|అక్టోబర్|నవంబర్|డిసెంబర్\r\nజన|ఫిబ్ర|మార్చి|ఏప్రి|మే|జూన్|జులై|ఆగ|సెప్టెం|అక్టో|నవం|డిసెం\r\nజ|ఫి|మా|ఏ|మే|జూ|జు|ఆ|సె|అ|న|డి\r"
 
   private const val te_Standalone_Days: String =
-      "సోమవారం|మంగళవారం|బుధవారం|గురువారం|శుక్రవారం|శనివారం|ఆదివారం\r\nసోమ|మంగళ|బుధ|గురు|శుక్ర|శని|ఆది\r\nసో|మ|బు|గు|శు|శ|ఆ\r"
+      "సోమవారం|మంగళవారం|బుధవారం|గురువారం|శుక్రవారం|శనివారం|ఆదివారం\r\nసోమ|మంగళ|బుధ|గురు|శుక్ర|శని|ఆది\r\nసో|మ|బు|గు|శు|శ|ఆ\r\nసోమ|మం|బుధ|గురు|శుక్ర|శని|ఆది\r"
 
   private const val te_Standalone_Quarters: String =
       "1వ త్రైమాసికం|2వ త్రైమాసికం|3వ త్రైమాసికం|4వ త్రైమాసికం\r\nత్రై1|త్రై2|త్రై3|త్రై4\r\n1|2|3|4\r"
@@ -12165,7 +12165,7 @@ object AvailableDateTimeDisplayNames {
       "Orara|Omuk|Okwamg’|Odung’el|Omaruk|Omodok’king’ol|Ojola|Opedel|Osokosokoma|Otibar|Olabor|Opoo\r\nRar|Muk|Kwa|Dun|Mar|Mod|Jol|Ped|Sok|Tib|Lab|Poo\r\nR|M|K|D|M|M|J|P|S|T|L|P\r"
 
   private const val teo_Format_Days: String =
-      "Nakaebarasa|Nakaare|Nakauni|Nakaung’on|Nakakany|Nakasabiti|Nakaejuma\r\nBar|Aar|Uni|Ung|Kan|Sab|Jum\r\nB|A|U|U|K|S|J\r"
+      "Nakaebarasa|Nakaare|Nakauni|Nakaung’on|Nakakany|Nakasabiti|Nakaejuma\r\nBar|Aar|Uni|Ung|Kan|Sab|Jum\r\nB|A|U|U|K|S|J\r\nBar|Aar|Uni|Ung|Kan|Sab|Jum\r"
 
   private const val teo_Format_Quarters: String =
       "Akwota abe|Akwota Aane|Akwota auni|Akwota Aung’on\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -12177,7 +12177,7 @@ object AvailableDateTimeDisplayNames {
       "Orara|Omuk|Okwamg’|Odung’el|Omaruk|Omodok’king’ol|Ojola|Opedel|Osokosokoma|Otibar|Olabor|Opoo\r\nRar|Muk|Kwa|Dun|Mar|Mod|Jol|Ped|Sok|Tib|Lab|Poo\r\nR|M|K|D|M|M|J|P|S|T|L|P\r"
 
   private const val teo_Standalone_Days: String =
-      "Nakaebarasa|Nakaare|Nakauni|Nakaung’on|Nakakany|Nakasabiti|Nakaejuma\r\nBar|Aar|Uni|Ung|Kan|Sab|Jum\r\nB|A|U|U|K|S|J\r"
+      "Nakaebarasa|Nakaare|Nakauni|Nakaung’on|Nakakany|Nakasabiti|Nakaejuma\r\nBar|Aar|Uni|Ung|Kan|Sab|Jum\r\nB|A|U|U|K|S|J\r\nBar|Aar|Uni|Ung|Kan|Sab|Jum\r"
 
   private const val teo_Standalone_Quarters: String =
       "Akwota abe|Akwota Aane|Akwota auni|Akwota Aung’on\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -12205,7 +12205,7 @@ object AvailableDateTimeDisplayNames {
       "Январ|Феврал|Март|Апрел|Май|Июн|Июл|Август|Сентябр|Октябр|Ноябр|Декабр\r\nЯнв|Фев|Мар|Апр|Май|Июн|Июл|Авг|Сен|Окт|Ноя|Дек\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val tg_Format_Days: String =
-      "Душанбе|Сешанбе|Чоршанбе|Панҷшанбе|Ҷумъа|Шанбе|Якшанбе\r\nДшб|Сшб|Чшб|Пшб|Ҷмъ|Шнб|Яшб\r\nД|С|Ч|П|Ҷ|Ш|Я\r"
+      "Душанбе|Сешанбе|Чоршанбе|Панҷшанбе|Ҷумъа|Шанбе|Якшанбе\r\nДшб|Сшб|Чшб|Пшб|Ҷмъ|Шнб|Яшб\r\nД|С|Ч|П|Ҷ|Ш|Я\r\nДшб|Сшб|Чшб|Пшб|Ҷмъ|Шнб|Яшб\r"
 
   private const val tg_Format_Quarters: String = "Ч1|Ч2|Ч3|Ч4\r\nЧ1|Ч2|Ч3|Ч4\r\n1|2|3|4\r"
 
@@ -12215,7 +12215,7 @@ object AvailableDateTimeDisplayNames {
       "Январ|Феврал|Март|Апрел|Май|Июн|Июл|Август|Сентябр|Октябр|Ноябр|Декабр\r\nЯнв|Фев|Мар|Апр|Май|Июн|Июл|Авг|Сен|Окт|Ноя|Дек\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val tg_Standalone_Days: String =
-      "Душанбе|Сешанбе|Чоршанбе|Панҷшанбе|Ҷумъа|Шанбе|Якшанбе\r\nДшб|Сшб|Чшб|Пшб|Ҷмъ|Шнб|Яшб\r\nД|С|Ч|П|Ҷ|Ш|Я\r"
+      "Душанбе|Сешанбе|Чоршанбе|Панҷшанбе|Ҷумъа|Шанбе|Якшанбе\r\nДшб|Сшб|Чшб|Пшб|Ҷмъ|Шнб|Яшб\r\nД|С|Ч|П|Ҷ|Ш|Я\r\nДшб|Сшб|Чшб|Пшб|Ҷмъ|Шнб|Яшб\r"
 
   private const val tg_Standalone_Quarters: String = "Ч1|Ч2|Ч3|Ч4\r\nЧ1|Ч2|Ч3|Ч4\r\n1|2|3|4\r"
 
@@ -12225,7 +12225,7 @@ object AvailableDateTimeDisplayNames {
       "มกราคม|กุมภาพันธ์|มีนาคม|เมษายน|พฤษภาคม|มิถุนายน|กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม\r\nม.ค.|ก.พ.|มี.ค.|เม.ย.|พ.ค.|มิ.ย.|ก.ค.|ส.ค.|ก.ย.|ต.ค.|พ.ย.|ธ.ค.\r\nม.ค.|ก.พ.|มี.ค.|เม.ย.|พ.ค.|มิ.ย.|ก.ค.|ส.ค.|ก.ย.|ต.ค.|พ.ย.|ธ.ค.\r"
 
   private const val th_Format_Days: String =
-      "วันจันทร์|วันอังคาร|วันพุธ|วันพฤหัสบดี|วันศุกร์|วันเสาร์|วันอาทิตย์\r\nจ.|อ.|พ.|พฤ.|ศ.|ส.|อา.\r\nจ|อ|พ|พฤ|ศ|ส|อา\r"
+      "วันจันทร์|วันอังคาร|วันพุธ|วันพฤหัสบดี|วันศุกร์|วันเสาร์|วันอาทิตย์\r\nจ.|อ.|พ.|พฤ.|ศ.|ส.|อา.\r\nจ|อ|พ|พฤ|ศ|ส|อา\r\nจ.|อ.|พ.|พฤ.|ศ.|ส.|อา.\r"
 
   private const val th_Format_Quarters: String =
       "ไตรมาส 1|ไตรมาส 2|ไตรมาส 3|ไตรมาส 4\r\nไตรมาส 1|ไตรมาส 2|ไตรมาส 3|ไตรมาส 4\r\n1|2|3|4\r"
@@ -12237,7 +12237,7 @@ object AvailableDateTimeDisplayNames {
       "มกราคม|กุมภาพันธ์|มีนาคม|เมษายน|พฤษภาคม|มิถุนายน|กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม\r\nม.ค.|ก.พ.|มี.ค.|เม.ย.|พ.ค.|มิ.ย.|ก.ค.|ส.ค.|ก.ย.|ต.ค.|พ.ย.|ธ.ค.\r\nม.ค.|ก.พ.|มี.ค.|เม.ย.|พ.ค.|มิ.ย.|ก.ค.|ส.ค.|ก.ย.|ต.ค.|พ.ย.|ธ.ค.\r"
 
   private const val th_Standalone_Days: String =
-      "วันจันทร์|วันอังคาร|วันพุธ|วันพฤหัสบดี|วันศุกร์|วันเสาร์|วันอาทิตย์\r\nจ.|อ.|พ.|พฤ.|ศ.|ส.|อา.\r\nจ|อ|พ|พฤ|ศ|ส|อา\r"
+      "วันจันทร์|วันอังคาร|วันพุธ|วันพฤหัสบดี|วันศุกร์|วันเสาร์|วันอาทิตย์\r\nจ.|อ.|พ.|พฤ.|ศ.|ส.|อา.\r\nจ|อ|พ|พฤ|ศ|ส|อา\r\nจ.|อ.|พ.|พฤ.|ศ.|ส.|อา.\r"
 
   private const val th_Standalone_Quarters: String =
       "ไตรมาส 1|ไตรมาส 2|ไตรมาส 3|ไตรมาส 4\r\nไตรมาส 1|ไตรมาส 2|ไตรมาส 3|ไตรมาส 4\r\n1|2|3|4\r"
@@ -12249,7 +12249,7 @@ object AvailableDateTimeDisplayNames {
       "ጥሪ|ለካቲት|መጋቢት|ሚያዝያ|ጉንበት|ሰነ|ሓምለ|ነሓሰ|መስከረም|ጥቅምቲ|ሕዳር|ታሕሳስ\r\nጥሪ|ለካ|መጋ|ሚያ|ግን|ሰነ|ሓም|ነሓ|መስ|ጥቅ|ሕዳ|ታሕ\r\nጥ|ለ|መ|ሚ|ግ|ሰ|ሓ|ነ|መ|ጥ|ሕ|ታ\r"
 
   private const val ti_Format_Days: String =
-      "ሰኑይ|ሰሉስ|ረቡዕ|ሓሙስ|ዓርቢ|ቀዳም|ሰንበት\r\nሰኑ|ሰሉ|ረቡ|ሓሙ|ዓር|ቀዳ|ሰን\r\nሰ|ሰ|ረ|ሓ|ዓ|ቀ|ሰ\r"
+      "ሰኑይ|ሰሉስ|ረቡዕ|ሓሙስ|ዓርቢ|ቀዳም|ሰንበት\r\nሰኑ|ሰሉ|ረቡ|ሓሙ|ዓር|ቀዳ|ሰን\r\nሰ|ሰ|ረ|ሓ|ዓ|ቀ|ሰ\r\nሰኑ|ሰሉ|ረቡ|ሓሙ|ዓር|ቀዳ|ሰን\r"
 
   private const val ti_Format_Quarters: String =
       "1ይ ርብዒ|2ይ ርብዒ|3ይ ርብዒ|4ይ ርብዒ\r\nር1|ር2|ር3|ር4\r\n1|2|3|4\r"
@@ -12260,7 +12260,7 @@ object AvailableDateTimeDisplayNames {
       "ጥሪ|ለካቲት|መጋቢት|ሚያዝያ|ጉንበት|ሰነ|ሓምለ|ነሓሰ|መስከረም|ጥቅምቲ|ሕዳር|ታሕሳስ\r\nጥሪ|ለካ|መጋ|ሚያ|ግን|ሰነ|ሓም|ነሓ|መስ|ጥቅ|ሕዳ|ታሕ\r\nጥ|ለ|መ|ሚ|ግ|ሰ|ሓ|ነ|መ|ጥ|ሕ|ታ\r"
 
   private const val ti_Standalone_Days: String =
-      "ሰኑይ|ሰሉስ|ረቡዕ|ሓሙስ|ዓርቢ|ቀዳም|ሰንበት\r\nሰኑ|ሰሉ|ረቡ|ሓሙ|ዓር|ቀዳ|ሰን\r\nሰ|ሰ|ረ|ሓ|ዓ|ቀ|ሰ\r"
+      "ሰኑይ|ሰሉስ|ረቡዕ|ሓሙስ|ዓርቢ|ቀዳም|ሰንበት\r\nሰኑ|ሰሉ|ረቡ|ሓሙ|ዓር|ቀዳ|ሰን\r\nሰ|ሰ|ረ|ሓ|ዓ|ቀ|ሰ\r\nሰኑ|ሰሉ|ረቡ|ሓሙ|ዓር|ቀዳ|ሰን\r"
 
   private const val ti_Standalone_Quarters: String =
       "1ይ ርብዒ|2ይ ርብዒ|3ይ ርብዒ|4ይ ርብዒ\r\nር1|ር2|ር3|ር4\r\n1|2|3|4\r"
@@ -12303,7 +12303,7 @@ object AvailableDateTimeDisplayNames {
       "ýanwar|fewral|mart|aprel|maý|iýun|iýul|awgust|sentýabr|oktýabr|noýabr|dekabr\r\nýan|few|mart|apr|maý|iýun|iýul|awg|sen|okt|noý|dek\r\nÝ|F|M|A|M|I|I|A|S|O|N|D\r"
 
   private const val tk_Format_Days: String =
-      "duşenbe|sişenbe|çarşenbe|penşenbe|anna|şenbe|ýekşenbe\r\nduş|siş|çar|pen|ann|şen|ýek\r\nD|S|Ç|P|A|Ş|Ý\r"
+      "duşenbe|sişenbe|çarşenbe|penşenbe|anna|şenbe|ýekşenbe\r\nduş|siş|çar|pen|ann|şen|ýek\r\nD|S|Ç|P|A|Ş|Ý\r\ndb|sb|çb|pb|an|şb|ýb\r"
 
   private const val tk_Format_Quarters: String =
       "1-nji çärýek|2-nji çärýek|3-nji çärýek|4-nji çärýek\r\n1Ç|2Ç|3Ç|4Ç\r\n1|2|3|4\r"
@@ -12315,7 +12315,7 @@ object AvailableDateTimeDisplayNames {
       "Ýanwar|Fewral|Mart|Aprel|Maý|Iýun|Iýul|Awgust|Sentýabr|Oktýabr|Noýabr|Dekabr\r\nÝan|Few|Mar|Apr|Maý|Iýun|Iýul|Awg|Sen|Okt|Noý|Dek\r\nÝ|F|M|A|M|I|I|A|S|O|N|D\r"
 
   private const val tk_Standalone_Days: String =
-      "Duşenbe|Sişenbe|Çarşenbe|Penşenbe|Anna|Şenbe|Ýekşenbe\r\nDuş|Siş|Çar|Pen|Ann|Şen|Ýek\r\nD|S|Ç|P|A|Ş|Ý\r"
+      "Duşenbe|Sişenbe|Çarşenbe|Penşenbe|Anna|Şenbe|Ýekşenbe\r\nDuş|Siş|Çar|Pen|Ann|Şen|Ýek\r\nD|S|Ç|P|A|Ş|Ý\r\nDb|Sb|Çb|Pb|An|Şb|Ýb\r"
 
   private const val tk_Standalone_Quarters: String =
       "1-nji çärýek|2-nji çärýek|3-nji çärýek|4-nji çärýek\r\n1Ç|2Ç|3Ç|4Ç\r\n1|2|3|4\r"
@@ -12327,7 +12327,7 @@ object AvailableDateTimeDisplayNames {
       "Ferikgong|Tlhakole|Mopitlo|Moranang|Motsheganang|Seetebosigo|Phukwi|Phatwe|Lwetse|Diphalane|Ngwanatsele|Sedimonthole\r\nFer|Tlh|Mop|Mor|Mot|See|Phu|Pha|Lwe|Dip|Ngw|Sed\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val tn_Format_Days: String =
-      "Mosupologo|Labobedi|Laboraro|Labone|Labotlhano|Matlhatso|Tshipi\r\nMos|Labb|Labr|Labn|Labt|Mat|Tsh\r\nM|T|W|T|F|S|S\r"
+      "Mosupologo|Labobedi|Laboraro|Labone|Labotlhano|Matlhatso|Tshipi\r\nMos|Labb|Labr|Labn|Labt|Mat|Tsh\r\nM|T|W|T|F|S|S\r\nMos|Labb|Labr|Labn|Labt|Mat|Tsh\r"
 
   private const val tn_Format_Quarters: String =
       "Sephatlho sa ntlha sa ngwaga|Sephatlho sa bobedi|Sephatlho sa boraro|Sephatlho sa bone\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -12338,7 +12338,7 @@ object AvailableDateTimeDisplayNames {
       "Ferikgong|Tlhakole|Mopitlo|Moranang|Motsheganang|Seetebosigo|Phukwi|Phatwe|Lwetse|Diphalane|Ngwanatsele|Sedimonthole\r\nFer|Tlh|Mop|Mor|Mot|See|Phu|Pha|Lwe|Dip|Ngw|Sed\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val tn_Standalone_Days: String =
-      "Mosupologo|Labobedi|Laboraro|Labone|Labotlhano|Matlhatso|Tshipi\r\nMos|Labb|Labr|Labn|Labt|Mat|Tsh\r\nM|T|W|T|F|S|S\r"
+      "Mosupologo|Labobedi|Laboraro|Labone|Labotlhano|Matlhatso|Tshipi\r\nMos|Labb|Labr|Labn|Labt|Mat|Tsh\r\nM|T|W|T|F|S|S\r\nMos|Labb|Labr|Labn|Labt|Mat|Tsh\r"
 
   private const val tn_Standalone_Quarters: String =
       "Sephatlho sa ntlha sa ngwaga|Sephatlho sa bobedi|Sephatlho sa boraro|Sephatlho sa bone\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -12365,7 +12365,7 @@ object AvailableDateTimeDisplayNames {
       "Sānuali|Fēpueli|Maʻasi|ʻEpeleli|Mē|Sune|Siulai|ʻAokosi|Sēpitema|ʻOkatopa|Nōvema|Tīsema\r\nSān|Fēp|Maʻa|ʻEpe|Mē|Sun|Siu|ʻAok|Sēp|ʻOka|Nōv|Tīs\r\nS|F|M|ʻE|M|S|S|ʻA|S|ʻO|N|T\r"
 
   private const val to_Format_Days: String =
-      "Mōnite|Tūsite|Pulelulu|Tuʻapulelulu|Falaite|Tokonaki|Sāpate\r\nMōn|Tūs|Pul|Tuʻa|Fal|Tok|Sāp\r\nM|T|P|T|F|T|S\r"
+      "Mōnite|Tūsite|Pulelulu|Tuʻapulelulu|Falaite|Tokonaki|Sāpate\r\nMōn|Tūs|Pul|Tuʻa|Fal|Tok|Sāp\r\nM|T|P|T|F|T|S\r\nMōn|Tūs|Pul|Tuʻa|Fal|Tok|Sāp\r"
 
   private const val to_Format_Quarters: String =
       "kuata ʻuluaki|kuata ua|kuata tolu|kuata fā\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -12376,7 +12376,7 @@ object AvailableDateTimeDisplayNames {
       "Sānuali|Fēpueli|Maʻasi|ʻEpeleli|Mē|Sune|Siulai|ʻAokosi|Sepitema|ʻOkatopa|Nōvema|Tīsema\r\nSān|Fēp|Maʻa|ʻEpe|Mē|Sun|Siu|ʻAok|Sēp|ʻOka|Nōv|Tīs\r\nS|F|M|ʻE|M|S|S|ʻA|S|ʻO|N|T\r"
 
   private const val to_Standalone_Days: String =
-      "Mōnite|Tūsite|Pulelulu|Tuʻapulelulu|Falaite|Tokonaki|Sāpate\r\nMōn|Tūs|Pul|Tuʻa|Fal|Tok|Sāp\r\nM|T|P|T|F|T|S\r"
+      "Mōnite|Tūsite|Pulelulu|Tuʻapulelulu|Falaite|Tokonaki|Sāpate\r\nMōn|Tūs|Pul|Tuʻa|Fal|Tok|Sāp\r\nM|T|P|T|F|T|S\r\nMōn|Tūs|Pul|Tuʻa|Fal|Tok|Sāp\r"
 
   private const val to_Standalone_Quarters: String =
       "kuata 1|kuata 2|kuata 3|kuata 4\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -12387,7 +12387,7 @@ object AvailableDateTimeDisplayNames {
       "mun #1|mun #2|mun #3|mun #4|mun #5|mun #6|mun #7|mun #8|mun #9|mun #10|mun #11|mun #12\r\nmun #1|mun #2|mun #3|mun #4|mun #5|mun #6|mun #7|mun #8|mun #9|mun #10|mun #11|mun #12\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val tok_Format_Days: String =
-      "suno esun #1|suno esun #2|suno esun #3|suno esun #4|suno esun #5|suno esun #6|suno esun #7\r\nsuno esun #1|suno esun #2|suno esun #3|suno esun #4|suno esun #5|suno esun #6|suno esun #7\r\nM|T|W|T|F|S|S\r"
+      "suno esun #1|suno esun #2|suno esun #3|suno esun #4|suno esun #5|suno esun #6|suno esun #7\r\nsuno esun #1|suno esun #2|suno esun #3|suno esun #4|suno esun #5|suno esun #6|suno esun #7\r\nM|T|W|T|F|S|S\r\nsuno esun #1|suno esun #2|suno esun #3|suno esun #4|suno esun #5|suno esun #6|suno esun #7\r"
 
   private val tok_Format_Quarters: String? = null
 
@@ -12398,7 +12398,7 @@ object AvailableDateTimeDisplayNames {
       "mun #1|mun #2|mun #3|mun #4|mun #5|mun #6|mun #7|mun #8|mun #9|mun #10|mun #11|mun #12\r\nmun #1|mun #2|mun #3|mun #4|mun #5|mun #6|mun #7|mun #8|mun #9|mun #10|mun #11|mun #12\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val tok_Standalone_Days: String =
-      "suno esun #1|suno esun #2|suno esun #3|suno esun #4|suno esun #5|suno esun #6|suno esun #7\r\nsuno esun #1|suno esun #2|suno esun #3|suno esun #4|suno esun #5|suno esun #6|suno esun #7\r\nM|T|W|T|F|S|S\r"
+      "suno esun #1|suno esun #2|suno esun #3|suno esun #4|suno esun #5|suno esun #6|suno esun #7\r\nsuno esun #1|suno esun #2|suno esun #3|suno esun #4|suno esun #5|suno esun #6|suno esun #7\r\nM|T|W|T|F|S|S\r\nsuno esun #1|suno esun #2|suno esun #3|suno esun #4|suno esun #5|suno esun #6|suno esun #7\r"
 
   private val tok_Standalone_Quarters: String? = null
 
@@ -12408,7 +12408,7 @@ object AvailableDateTimeDisplayNames {
       "Janueri|Februeri|Mas|Epril|Me|Jun|Julai|Ogas|Septemba|Oktoba|Novemba|Desemba\r\nJanueri|Februeri|Mas|Epril|Me|Jun|Julai|Ogas|Septemba|Oktoba|Novemba|Desemba\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val tpi_Format_Days: String =
-      "Mande|Tunde|Trinde|Fonde|Fraide|Sarere|Sande\r\nMande|Tunde|Trinde|Fonde|Fraide|Sarere|Sande\r\nM|T|W|T|F|S|S\r"
+      "Mande|Tunde|Trinde|Fonde|Fraide|Sarere|Sande\r\nMande|Tunde|Trinde|Fonde|Fraide|Sarere|Sande\r\nM|T|W|T|F|S|S\r\nMande|Tunde|Trinde|Fonde|Fraide|Sarere|Sande\r"
 
   private val tpi_Format_Quarters: String? = null
 
@@ -12418,7 +12418,7 @@ object AvailableDateTimeDisplayNames {
       "Janueri|Februeri|Mas|Epril|Me|Jun|Julai|Ogas|Septemba|Oktoba|Novemba|Desemba\r\nJanueri|Februeri|Mas|Epril|Me|Jun|Julai|Ogas|Septemba|Oktoba|Novemba|Desemba\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val tpi_Standalone_Days: String =
-      "Mande|Tunde|Trinde|Fonde|Fraide|Sarere|Sande\r\nMande|Tunde|Trinde|Fonde|Fraide|Sarere|Sande\r\nM|T|W|T|F|S|S\r"
+      "Mande|Tunde|Trinde|Fonde|Fraide|Sarere|Sande\r\nMande|Tunde|Trinde|Fonde|Fraide|Sarere|Sande\r\nM|T|W|T|F|S|S\r\nMande|Tunde|Trinde|Fonde|Fraide|Sarere|Sande\r"
 
   private val tpi_Standalone_Quarters: String? = null
 
@@ -12428,7 +12428,7 @@ object AvailableDateTimeDisplayNames {
       "Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık\r\nOca|Şub|Mar|Nis|May|Haz|Tem|Ağu|Eyl|Eki|Kas|Ara\r\nO|Ş|M|N|M|H|T|A|E|E|K|A\r"
 
   private const val tr_Format_Days: String =
-      "Pazartesi|Salı|Çarşamba|Perşembe|Cuma|Cumartesi|Pazar\r\nPzt|Sal|Çar|Per|Cum|Cmt|Paz\r\nP|S|Ç|P|C|C|P\r"
+      "Pazartesi|Salı|Çarşamba|Perşembe|Cuma|Cumartesi|Pazar\r\nPzt|Sal|Çar|Per|Cum|Cmt|Paz\r\nP|S|Ç|P|C|C|P\r\nPt|Sa|Ça|Pe|Cu|Ct|Pa\r"
 
   private const val tr_Format_Quarters: String =
       "1. çeyrek|2. çeyrek|3. çeyrek|4. çeyrek\r\nÇ1|Ç2|Ç3|Ç4\r\n1.|2.|3.|4.\r"
@@ -12440,7 +12440,7 @@ object AvailableDateTimeDisplayNames {
       "Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık\r\nOca|Şub|Mar|Nis|May|Haz|Tem|Ağu|Eyl|Eki|Kas|Ara\r\nO|Ş|M|N|M|H|T|A|E|E|K|A\r"
 
   private const val tr_Standalone_Days: String =
-      "Pazartesi|Salı|Çarşamba|Perşembe|Cuma|Cumartesi|Pazar\r\nPzt|Sal|Çar|Per|Cum|Cmt|Paz\r\nP|S|Ç|P|C|C|P\r"
+      "Pazartesi|Salı|Çarşamba|Perşembe|Cuma|Cumartesi|Pazar\r\nPzt|Sal|Çar|Per|Cum|Cmt|Paz\r\nP|S|Ç|P|C|C|P\r\nPt|Sa|Ça|Pe|Cu|Ct|Pa\r"
 
   private const val tr_Standalone_Quarters: String =
       "1. çeyrek|2. çeyrek|3. çeyrek|4. çeyrek\r\nÇ1|Ç2|Ç3|Ç4\r\n1.|2.|3.|4.\r"
@@ -12500,7 +12500,7 @@ object AvailableDateTimeDisplayNames {
       "Sunguti|Nyenyenyani|Nyenyankulu|Dzivamisoko|Mudyaxihi|Khotavuxika|Mawuwani|Mhawuri|Ndzhati|Nhlangula|Hukuri|N’wendzamhala\r\nSun|Yan|Kul|Dzi|Mud|Kho|Maw|Mha|Ndz|Nhl|Huk|N’w\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ts_Format_Days: String =
-      "Musumbhunuku|Ravumbirhi|Ravunharhu|Ravumune|Ravuntlhanu|Mugqivela|Sonta\r\nMus|Bir|Har|Ne|Tlh|Mug|Son\r\nM|T|W|T|F|S|S\r"
+      "Musumbhunuku|Ravumbirhi|Ravunharhu|Ravumune|Ravuntlhanu|Mugqivela|Sonta\r\nMus|Bir|Har|Ne|Tlh|Mug|Son\r\nM|T|W|T|F|S|S\r\nMus|Bir|Har|Ne|Tlh|Mug|Son\r"
 
   private const val ts_Format_Quarters: String =
       "Kotara yo sungula|Kotara ya vumbirhi|Kotara ya vunharhu|Kotara ya vumune\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -12511,7 +12511,7 @@ object AvailableDateTimeDisplayNames {
       "Sunguti|Nyenyenyani|Nyenyankulu|Dzivamisoko|Mudyaxihi|Khotavuxika|Mawuwani|Mhawuri|Ndzhati|Nhlangula|Hukuri|N’wendzamhala\r\nSun|Yan|Kul|Dzi|Mud|Kho|Maw|Mha|Ndz|Nhl|Huk|N’w\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ts_Standalone_Days: String =
-      "Musumbhunuku|Ravumbirhi|Ravunharhu|Ravumune|Ravuntlhanu|Mugqivela|Sonta\r\nMus|Bir|Har|Ne|Tlh|Mug|Son\r\nM|T|W|T|F|S|S\r"
+      "Musumbhunuku|Ravumbirhi|Ravunharhu|Ravumune|Ravuntlhanu|Mugqivela|Sonta\r\nMus|Bir|Har|Ne|Tlh|Mug|Son\r\nM|T|W|T|F|S|S\r\nMus|Bir|Har|Ne|Tlh|Mug|Son\r"
 
   private const val ts_Standalone_Quarters: String =
       "Kotara yo sungula|Kotara ya vumbirhi|Kotara ya vunharhu|Kotara ya vumune\r\nK1|K2|K3|K4\r\n1|2|3|4\r"
@@ -12522,7 +12522,7 @@ object AvailableDateTimeDisplayNames {
       "гыйнвар|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь\r\nгыйн.|фев.|мар.|апр.|май|июнь|июль|авг.|сент.|окт.|нояб.|дек.\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val tt_Format_Days: String =
-      "дүшәмбе|сишәмбе|чәршәмбе|пәнҗешәмбе|җомга|шимбә|якшәмбе\r\nдүш.|сиш.|чәр.|пәнҗ.|җом.|шим.|якш.\r\nД|С|Ч|П|Җ|Ш|Я\r"
+      "дүшәмбе|сишәмбе|чәршәмбе|пәнҗешәмбе|җомга|шимбә|якшәмбе\r\nдүш.|сиш.|чәр.|пәнҗ.|җом.|шим.|якш.\r\nД|С|Ч|П|Җ|Ш|Я\r\nдүш.|сиш.|чәр.|пәнҗ.|җом.|шим.|якш.\r"
 
   private const val tt_Format_Quarters: String =
       "1 нче квартал|2 нче квартал|3 нче квартал|4 нче квартал\r\n1 нче кв.|2 нче кв.|3 нче кв.|4 нче кв.\r\n1|2|3|4\r"
@@ -12533,7 +12533,7 @@ object AvailableDateTimeDisplayNames {
       "гыйнвар|февраль|март|апрель|май|июнь|июль|август|сентябрь|октябрь|ноябрь|декабрь\r\nгыйн.|фев.|мар.|апр.|май|июнь|июль|авг.|сент.|окт.|нояб.|дек.\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val tt_Standalone_Days: String =
-      "дүшәмбе|сишәмбе|чәршәмбе|пәнҗешәмбе|җомга|шимбә|якшәмбе\r\nдүш.|сиш.|чәр.|пәнҗ.|җом.|шим.|якш.\r\nД|С|Ч|П|Җ|Ш|Я\r"
+      "дүшәмбе|сишәмбе|чәршәмбе|пәнҗешәмбе|җомга|шимбә|якшәмбе\r\nдүш.|сиш.|чәр.|пәнҗ.|җом.|шим.|якш.\r\nД|С|Ч|П|Җ|Ш|Я\r\nдүш.|сиш.|чәр.|пәнҗ.|җом.|шим.|якш.\r"
 
   private const val tt_Standalone_Quarters: String =
       "1 нче квартал|2 нче квартал|3 нче квартал|4 нче квартал\r\n1 нче кв.|2 нче кв.|3 нче кв.|4 нче кв.\r\n1|2|3|4\r"
@@ -12544,7 +12544,7 @@ object AvailableDateTimeDisplayNames {
       "Žanwiye|Feewiriye|Marsi|Awiril|Me|Žuweŋ|Žuyye|Ut|Sektanbur|Oktoobur|Noowanbur|Deesanbur\r\nŽan|Fee|Mar|Awi|Me|Žuw|Žuy|Ut|Sek|Okt|Noo|Dee\r\nŽ|F|M|A|M|Ž|Ž|U|S|O|N|D\r"
 
   private const val twq_Format_Days: String =
-      "Atinni|Atalaata|Alarba|Alhamiisa|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|L|L|S|H\r"
+      "Atinni|Atalaata|Alarba|Alhamiisa|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|L|L|S|H\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r"
 
   private const val twq_Format_Quarters: String =
       "Arrubu 1|Arrubu 2|Arrubu 3|Arrubu 4\r\nA1|A2|A3|A4\r\n1|2|3|4\r"
@@ -12556,7 +12556,7 @@ object AvailableDateTimeDisplayNames {
       "Žanwiye|Feewiriye|Marsi|Awiril|Me|Žuweŋ|Žuyye|Ut|Sektanbur|Oktoobur|Noowanbur|Deesanbur\r\nŽan|Fee|Mar|Awi|Me|Žuw|Žuy|Ut|Sek|Okt|Noo|Dee\r\nŽ|F|M|A|M|Ž|Ž|U|S|O|N|D\r"
 
   private const val twq_Standalone_Days: String =
-      "Atinni|Atalaata|Alarba|Alhamiisa|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|L|L|S|H\r"
+      "Atinni|Atalaata|Alarba|Alhamiisa|Alzuma|Asibti|Alhadi\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r\nT|T|L|L|L|S|H\r\nAti|Ata|Ala|Alm|Alz|Asi|Alh\r"
 
   private const val twq_Standalone_Quarters: String =
       "Arrubu 1|Arrubu 2|Arrubu 3|Arrubu 4\r\nA1|A2|A3|A4\r\n1|2|3|4\r"
@@ -12584,7 +12584,7 @@ object AvailableDateTimeDisplayNames {
       "Yennayer|Yebrayer|Mars|Ibrir|Mayyu|Yunyu|Yulyuz|Ɣuct|Cutanbir|Kṭuber|Nwanbir|Dujanbir\r\nYen|Yeb|Mar|Ibr|May|Yun|Yul|Ɣuc|Cut|Kṭu|Nwa|Duj\r\nY|Y|M|I|M|Y|Y|Ɣ|C|K|N|D\r"
 
   private const val tzm_Format_Days: String =
-      "Aynas|Asinas|Akras|Akwas|Asimwas|Asiḍyas|Asamas\r\nAyn|Asn|Akr|Akw|Asm|Asḍ|Asa\r\nA|A|A|A|A|A|A\r"
+      "Aynas|Asinas|Akras|Akwas|Asimwas|Asiḍyas|Asamas\r\nAyn|Asn|Akr|Akw|Asm|Asḍ|Asa\r\nA|A|A|A|A|A|A\r\nAyn|Asn|Akr|Akw|Asm|Asḍ|Asa\r"
 
   private const val tzm_Format_Quarters: String =
       "Imir adamsan 1|Imir adamsan 2|Imir adamsan 3|Imir adamsan 4\r\nIA1|IA2|IA3|IA4\r\n1|2|3|4\r"
@@ -12596,7 +12596,7 @@ object AvailableDateTimeDisplayNames {
       "Yennayer|Yebrayer|Mars|Ibrir|Mayyu|Yunyu|Yulyuz|Ɣuct|Cutanbir|Kṭuber|Nwanbir|Dujanbir\r\nYen|Yeb|Mar|Ibr|May|Yun|Yul|Ɣuc|Cut|Kṭu|Nwa|Duj\r\nY|Y|M|I|M|Y|Y|Ɣ|C|K|N|D\r"
 
   private const val tzm_Standalone_Days: String =
-      "Aynas|Asinas|Akras|Akwas|Asimwas|Asiḍyas|Asamas\r\nAyn|Asn|Akr|Akw|Asm|Asḍ|Asa\r\nA|A|A|A|A|A|A\r"
+      "Aynas|Asinas|Akras|Akwas|Asimwas|Asiḍyas|Asamas\r\nAyn|Asn|Akr|Akw|Asm|Asḍ|Asa\r\nA|A|A|A|A|A|A\r\nAyn|Asn|Akr|Akw|Asm|Asḍ|Asa\r"
 
   private const val tzm_Standalone_Quarters: String =
       "Imir adamsan 1|Imir adamsan 2|Imir adamsan 3|Imir adamsan 4\r\nIA1|IA2|IA3|IA4\r\n1|2|3|4\r"
@@ -12608,7 +12608,7 @@ object AvailableDateTimeDisplayNames {
       "يانۋار|فېۋرال|مارت|ئاپرېل|ماي|ئىيۇن|ئىيۇل|ئاۋغۇست|سېنتەبىر|ئۆكتەبىر|نويابىر|دېكابىر\r\nيانۋار|فېۋرال|مارت|ئاپرېل|ماي|ئىيۇن|ئىيۇل|ئاۋغۇست|سېنتەبىر|ئۆكتەبىر|نويابىر|دېكابىر\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ug_Format_Days: String =
-      "دۈشەنبە|سەيشەنبە|چارشەنبە|پەيشەنبە|جۈمە|شەنبە|يەكشەنبە\r\nدۈ|سە|چا|پە|جۈ|شە|يە\r\nد|س|چ|پ|ج|ش|ي\r"
+      "دۈشەنبە|سەيشەنبە|چارشەنبە|پەيشەنبە|جۈمە|شەنبە|يەكشەنبە\r\nدۈ|سە|چا|پە|جۈ|شە|يە\r\nد|س|چ|پ|ج|ش|ي\r\nد|س|چ|پ|ج|ش|ي\r"
 
   private const val ug_Format_Quarters: String =
       "بىرىنچى پەسىل|ئىككىنچى پەسىل|ئۈچىنچى پەسىل|تۆتىنچى پەسىل\r\n1-پەسىل|2-پەسىل|3-پەسىل|4-پەسىل\r\n1|2|3|4\r"
@@ -12620,7 +12620,7 @@ object AvailableDateTimeDisplayNames {
       "يانۋار|فېۋرال|مارت|ئاپرېل|ماي|ئىيۇن|ئىيۇل|ئاۋغۇست|سېنتەبىر|ئۆكتەبىر|نويابىر|دېكابىر\r\nيانۋار|فېۋرال|مارت|ئاپرېل|ماي|ئىيۇن|ئىيۇل|ئاۋغۇست|سېنتەبىر|ئۆكتەبىر|نويابىر|دېكابىر\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val ug_Standalone_Days: String =
-      "دۈشەنبە|سەيشەنبە|چارشەنبە|پەيشەنبە|جۈمە|شەنبە|يەكشەنبە\r\nدۈ|سە|چا|پە|جۈ|شە|يە\r\nد|س|چ|پ|ج|ش|ي\r"
+      "دۈشەنبە|سەيشەنبە|چارشەنبە|پەيشەنبە|جۈمە|شەنبە|يەكشەنبە\r\nدۈ|سە|چا|پە|جۈ|شە|يە\r\nد|س|چ|پ|ج|ش|ي\r\nد|س|چ|پ|ج|ش|ي\r"
 
   private const val ug_Standalone_Quarters: String =
       "بىرىنچى پەسىل|ئىككىنچى پەسىل|ئۈچىنچى پەسىل|تۆتىنچى پەسىل\r\n1-پەسىل|2-پەسىل|3-پەسىل|4-پەسىل\r\n1|2|3|4\r"
@@ -12631,7 +12631,7 @@ object AvailableDateTimeDisplayNames {
       "січня|лютого|березня|квітня|травня|червня|липня|серпня|вересня|жовтня|листопада|грудня\r\nсіч.|лют.|бер.|квіт.|трав.|черв.|лип.|серп.|вер.|жовт.|лист.|груд.\r\nс|л|б|к|т|ч|л|с|в|ж|л|г\r"
 
   private const val uk_Format_Days: String =
-      "понеділок|вівторок|середа|четвер|пʼятниця|субота|неділя\r\nпн|вт|ср|чт|пт|сб|нд\r\nП|В|С|Ч|П|С|Н\r"
+      "понеділок|вівторок|середа|четвер|пʼятниця|субота|неділя\r\nпн|вт|ср|чт|пт|сб|нд\r\nП|В|С|Ч|П|С|Н\r\nпн|вт|ср|чт|пт|сб|нд\r"
 
   private const val uk_Format_Quarters: String =
       "1-й квартал|2-й квартал|3-й квартал|4-й квартал\r\n1-й кв.|2-й кв.|3-й кв.|4-й кв.\r\n1|2|3|4\r"
@@ -12643,7 +12643,7 @@ object AvailableDateTimeDisplayNames {
       "січень|лютий|березень|квітень|травень|червень|липень|серпень|вересень|жовтень|листопад|грудень\r\nсіч.|лют.|бер.|квіт.|трав.|черв.|лип.|серп.|вер.|жовт.|лист.|груд.\r\nС|Л|Б|К|Т|Ч|Л|С|В|Ж|Л|Г\r"
 
   private const val uk_Standalone_Days: String =
-      "понеділок|вівторок|середа|четвер|пʼятниця|субота|неділя\r\nпн|вт|ср|чт|пт|сб|нд\r\nП|В|С|Ч|П|С|Н\r"
+      "понеділок|вівторок|середа|четвер|пʼятниця|субота|неділя\r\nпн|вт|ср|чт|пт|сб|нд\r\nП|В|С|Ч|П|С|Н\r\nпн|вт|ср|чт|пт|сб|нд\r"
 
   private const val uk_Standalone_Quarters: String =
       "1-й квартал|2-й квартал|3-й квартал|4-й квартал\r\n1-й кв.|2-й кв.|3-й кв.|4-й кв.\r\n1|2|3|4\r"
@@ -12655,7 +12655,7 @@ object AvailableDateTimeDisplayNames {
       "M01|M02|M03|M04|M05|M06|M07|M08|M09|M10|M11|M12\r\nM01|M02|M03|M04|M05|M06|M07|M08|M09|M10|M11|M12\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val und_Format_Days: String =
-      "Mon|Tue|Wed|Thu|Fri|Sat|Sun\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM|T|W|T|F|S|S\r"
+      "Mon|Tue|Wed|Thu|Fri|Sat|Sun\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM|T|W|T|F|S|S\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r"
 
   private const val und_Format_Quarters: String = "Q1|Q2|Q3|Q4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
 
@@ -12665,7 +12665,7 @@ object AvailableDateTimeDisplayNames {
       "M01|M02|M03|M04|M05|M06|M07|M08|M09|M10|M11|M12\r\nM01|M02|M03|M04|M05|M06|M07|M08|M09|M10|M11|M12\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val und_Standalone_Days: String =
-      "Mon|Tue|Wed|Thu|Fri|Sat|Sun\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM|T|W|T|F|S|S\r"
+      "Mon|Tue|Wed|Thu|Fri|Sat|Sun\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r\nM|T|W|T|F|S|S\r\nMon|Tue|Wed|Thu|Fri|Sat|Sun\r"
 
   private const val und_Standalone_Quarters: String = "Q1|Q2|Q3|Q4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
 
@@ -12675,7 +12675,7 @@ object AvailableDateTimeDisplayNames {
       "جنوری|فروری|مارچ|اپریل|مئی|جون|جولائی|اگست|ستمبر|اکتوبر|نومبر|دسمبر\r\nجنوری|فروری|مارچ|اپریل|مئی|جون|جولائی|اگست|ستمبر|اکتوبر|نومبر|دسمبر\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val ur_Format_Days: String =
-      "پیر|منگل|بدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nپیر|منگل|بدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nM|T|W|T|F|S|S\r"
+      "پیر|منگل|بدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nپیر|منگل|بدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nM|T|W|T|F|S|S\r\nپیر|منگل|بدھ|جمعرات|جمعہ|ہفتہ|اتوار\r"
 
   private const val ur_Format_Quarters: String =
       "پہلی سہ ماہی|دوسری سہ ماہی|تیسری سہ ماہی|چوتهی سہ ماہی\r\nپہلی سہ ماہی|دوسری سہ ماہی|تیسری سہ ماہی|چوتهی سہ ماہی\r\n1|2|3|4\r"
@@ -12687,7 +12687,7 @@ object AvailableDateTimeDisplayNames {
       "جنوری|فروری|مارچ|اپریل|مئی|جون|جولائی|اگست|ستمبر|اکتوبر|نومبر|دسمبر\r\nجنوری|فروری|مارچ|اپریل|مئی|جون|جولائی|اگست|ستمبر|اکتوبر|نومبر|دسمبر\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val ur_Standalone_Days: String =
-      "پیر|منگل|بدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nپیر|منگل|بدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nM|T|W|T|F|S|S\r"
+      "پیر|منگل|بدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nپیر|منگل|بدھ|جمعرات|جمعہ|ہفتہ|اتوار\r\nM|T|W|T|F|S|S\r\nپیر|منگل|بدھ|جمعرات|جمعہ|ہفتہ|اتوار\r"
 
   private const val ur_Standalone_Quarters: String =
       "پہلی سہ ماہی|دوسری سہ ماہی|تیسری سہ ماہی|چوتهی سہ ماہی\r\nپہلی سہ ماہی|دوسری سہ ماہی|تیسری سہ ماہی|چوتهی سہ ماہی\r\n1|2|3|4\r"
@@ -12715,7 +12715,7 @@ object AvailableDateTimeDisplayNames {
       "yanvar|fevral|mart|aprel|may|iyun|iyul|avgust|sentabr|oktabr|noyabr|dekabr\r\nyan|fev|mar|apr|may|iyn|iyl|avg|sen|okt|noy|dek\r\nY|F|M|A|M|I|I|A|S|O|N|D\r"
 
   private const val uz_Format_Days: String =
-      "dushanba|seshanba|chorshanba|payshanba|juma|shanba|yakshanba\r\nDush|Sesh|Chor|Pay|Jum|Shan|Yak\r\nD|S|C|P|J|S|Y\r"
+      "dushanba|seshanba|chorshanba|payshanba|juma|shanba|yakshanba\r\nDush|Sesh|Chor|Pay|Jum|Shan|Yak\r\nD|S|C|P|J|S|Y\r\nDu|Se|Ch|Pa|Ju|Sh|Ya\r"
 
   private const val uz_Format_Quarters: String =
       "1-chorak|2-chorak|3-chorak|4-chorak\r\n1-ch|2-ch|3-ch|4-ch\r\n1|2|3|4\r"
@@ -12727,7 +12727,7 @@ object AvailableDateTimeDisplayNames {
       "Yanvar|Fevral|Mart|Aprel|May|Iyun|Iyul|Avgust|Sentabr|Oktabr|Noyabr|Dekabr\r\nYan|Fev|Mar|Apr|May|Iyn|Iyl|Avg|Sen|Okt|Noy|Dek\r\nY|F|M|A|M|I|I|A|S|O|N|D\r"
 
   private const val uz_Standalone_Days: String =
-      "dushanba|seshanba|chorshanba|payshanba|juma|shanba|yakshanba\r\nDush|Sesh|Chor|Pay|Jum|Shan|Yak\r\nD|S|C|P|J|S|Y\r"
+      "dushanba|seshanba|chorshanba|payshanba|juma|shanba|yakshanba\r\nDush|Sesh|Chor|Pay|Jum|Shan|Yak\r\nD|S|C|P|J|S|Y\r\nDu|Se|Ch|Pa|Ju|Sh|Ya\r"
 
   private const val uz_Standalone_Quarters: String =
       "1-chorak|2-chorak|3-chorak|4-chorak\r\n1-ch|2-ch|3-ch|4-ch\r\n1|2|3|4\r"
@@ -12739,7 +12739,7 @@ object AvailableDateTimeDisplayNames {
       "جنوری|فبروری|مارچ|اپریل|می|جون|جولای|اگست|سپتمبر|اکتوبر|نومبر|دسمبر\r\nجنو|فبر|مار|اپر|می|جون|جول|اگس|سپت|اکت|نوم|دسم\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val uz_Arab_Format_Days: String =
-      "دوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nد.|س.|چ.|پ.|ج.|ش.|ی.\r\nM|T|W|T|F|S|S\r"
+      "دوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nد.|س.|چ.|پ.|ج.|ش.|ی.\r\nM|T|W|T|F|S|S\r\nد.|س.|چ.|پ.|ج.|ش.|ی.\r"
 
   private val uz_Arab_Format_Quarters: String? = null
 
@@ -12749,7 +12749,7 @@ object AvailableDateTimeDisplayNames {
       "جنوری|فبروری|مارچ|اپریل|می|جون|جولای|اگست|سپتمبر|اکتوبر|نومبر|دسمبر\r\nجنو|فبر|مار|اپر|می|جون|جول|اگس|سپت|اکت|نوم|دسم\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val uz_Arab_Standalone_Days: String =
-      "دوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nد.|س.|چ.|پ.|ج.|ش.|ی.\r\nM|T|W|T|F|S|S\r"
+      "دوشنبه|سه‌شنبه|چهارشنبه|پنجشنبه|جمعه|شنبه|یکشنبه\r\nد.|س.|چ.|پ.|ج.|ش.|ی.\r\nM|T|W|T|F|S|S\r\nد.|س.|چ.|پ.|ج.|ش.|ی.\r"
 
   private val uz_Arab_Standalone_Quarters: String? = null
 
@@ -12759,7 +12759,7 @@ object AvailableDateTimeDisplayNames {
       "январ|феврал|март|апрел|май|июн|июл|август|сентябр|октябр|ноябр|декабр\r\nянв|фев|мар|апр|май|июн|июл|авг|сен|окт|ноя|дек\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val uz_Cyrl_Format_Days: String =
-      "душанба|сешанба|чоршанба|пайшанба|жума|шанба|якшанба\r\nдуш|сеш|чор|пай|жум|шан|якш\r\nД|С|Ч|П|Ж|Ш|Я\r"
+      "душанба|сешанба|чоршанба|пайшанба|жума|шанба|якшанба\r\nдуш|сеш|чор|пай|жум|шан|якш\r\nД|С|Ч|П|Ж|Ш|Я\r\nду|се|чо|па|жу|ша|як\r"
 
   private const val uz_Cyrl_Format_Quarters: String =
       "1-чорак|2-чорак|3-чорак|4-чорак\r\n1-ч|2-ч|3-ч|4-ч\r\n1|2|3|4\r"
@@ -12771,7 +12771,7 @@ object AvailableDateTimeDisplayNames {
       "январ|феврал|март|апрел|май|июн|июл|август|сентябр|октябр|ноябр|декабр\r\nянв|фев|мар|апр|май|июн|июл|авг|сен|окт|ноя|дек\r\nЯ|Ф|М|А|М|И|И|А|С|О|Н|Д\r"
 
   private const val uz_Cyrl_Standalone_Days: String =
-      "душанба|сешанба|чоршанба|пайшанба|жума|шанба|якшанба\r\nдуш|сеш|чор|пай|жум|шан|якш\r\nД|С|Ч|П|Ж|Ш|Я\r"
+      "душанба|сешанба|чоршанба|пайшанба|жума|шанба|якшанба\r\nдуш|сеш|чор|пай|жум|шан|якш\r\nД|С|Ч|П|Ж|Ш|Я\r\nду|се|чо|па|жу|ша|як\r"
 
   private const val uz_Cyrl_Standalone_Quarters: String =
       "1-чорак|2-чорак|3-чорак|4-чорак\r\n1-ч|2-ч|3-ч|4-ч\r\n1|2|3|4\r"
@@ -12799,7 +12799,7 @@ object AvailableDateTimeDisplayNames {
       "ꖨꖕ ꕪꕴ ꔞꔀꕮꕊ|ꕒꕡꖝꖕ|ꕾꖺ|ꖢꖕ|ꖑꕱ|ꖱꘋ|ꖱꕞꔤ|ꗛꔕ|ꕢꕌ|ꕭꖃ|ꔞꘋꕔꕿ ꕸꖃꗏ|ꖨꖕ ꕪꕴ ꗏꖺꕮꕊ\r\nꖨꖕꔞ|ꕒꕡ|ꕾꖺ|ꖢꖕ|ꖑꕱ|ꖱꘋ|ꖱꕞ|ꗛꔕ|ꕢꕌ|ꕭꖃ|ꔞꘋ|ꖨꖕꗏ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val vai_Format_Days: String =
-      "ꗳꗡꘉ|ꕚꕞꕚ|ꕉꕞꕒ|ꕉꔤꕆꕢ|ꕉꔤꕀꕮ|ꔻꔬꔳ|ꕞꕌꔵ\r\nꗳꗡꘉ|ꕚꕞꕚ|ꕉꕞꕒ|ꕉꔤꕆꕢ|ꕉꔤꕀꕮ|ꔻꔬꔳ|ꕞꕌꔵ\r\nM|T|W|T|F|S|S\r"
+      "ꗳꗡꘉ|ꕚꕞꕚ|ꕉꕞꕒ|ꕉꔤꕆꕢ|ꕉꔤꕀꕮ|ꔻꔬꔳ|ꕞꕌꔵ\r\nꗳꗡꘉ|ꕚꕞꕚ|ꕉꕞꕒ|ꕉꔤꕆꕢ|ꕉꔤꕀꕮ|ꔻꔬꔳ|ꕞꕌꔵ\r\nM|T|W|T|F|S|S\r\nꗳꗡꘉ|ꕚꕞꕚ|ꕉꕞꕒ|ꕉꔤꕆꕢ|ꕉꔤꕀꕮ|ꔻꔬꔳ|ꕞꕌꔵ\r"
 
   private val vai_Format_Quarters: String? = null
 
@@ -12809,7 +12809,7 @@ object AvailableDateTimeDisplayNames {
       "ꖨꖕ ꕪꕴ ꔞꔀꕮꕊ|ꕒꕡꖝꖕ|ꕾꖺ|ꖢꖕ|ꖑꕱ|ꖱꘋ|ꖱꕞꔤ|ꗛꔕ|ꕢꕌ|ꕭꖃ|ꔞꘋꕔꕿ ꕸꖃꗏ|ꖨꖕ ꕪꕴ ꗏꖺꕮꕊ\r\nꖨꖕꔞ|ꕒꕡ|ꕾꖺ|ꖢꖕ|ꖑꕱ|ꖱꘋ|ꖱꕞ|ꗛꔕ|ꕢꕌ|ꕭꖃ|ꔞꘋ|ꖨꖕꗏ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val vai_Standalone_Days: String =
-      "ꗳꗡꘉ|ꕚꕞꕚ|ꕉꕞꕒ|ꕉꔤꕆꕢ|ꕉꔤꕀꕮ|ꔻꔬꔳ|ꕞꕌꔵ\r\nꗳꗡꘉ|ꕚꕞꕚ|ꕉꕞꕒ|ꕉꔤꕆꕢ|ꕉꔤꕀꕮ|ꔻꔬꔳ|ꕞꕌꔵ\r\nM|T|W|T|F|S|S\r"
+      "ꗳꗡꘉ|ꕚꕞꕚ|ꕉꕞꕒ|ꕉꔤꕆꕢ|ꕉꔤꕀꕮ|ꔻꔬꔳ|ꕞꕌꔵ\r\nꗳꗡꘉ|ꕚꕞꕚ|ꕉꕞꕒ|ꕉꔤꕆꕢ|ꕉꔤꕀꕮ|ꔻꔬꔳ|ꕞꕌꔵ\r\nM|T|W|T|F|S|S\r\nꗳꗡꘉ|ꕚꕞꕚ|ꕉꕞꕒ|ꕉꔤꕆꕢ|ꕉꔤꕀꕮ|ꔻꔬꔳ|ꕞꕌꔵ\r"
 
   private val vai_Standalone_Quarters: String? = null
 
@@ -12818,7 +12818,7 @@ object AvailableDateTimeDisplayNames {
   private val vai_Latn_Format_Months: String? = null
 
   private const val vai_Latn_Format_Days: String =
-      "tɛɛnɛɛ|talata|alaba|aimisa|aijima|siɓiti|lahadi\r\ntɛɛnɛɛ|talata|alaba|aimisa|aijima|siɓiti|lahadi\r\nM|T|W|T|F|S|S\r"
+      "tɛɛnɛɛ|talata|alaba|aimisa|aijima|siɓiti|lahadi\r\ntɛɛnɛɛ|talata|alaba|aimisa|aijima|siɓiti|lahadi\r\nM|T|W|T|F|S|S\r\ntɛɛnɛɛ|talata|alaba|aimisa|aijima|siɓiti|lahadi\r"
 
   private val vai_Latn_Format_Quarters: String? = null
 
@@ -12827,7 +12827,7 @@ object AvailableDateTimeDisplayNames {
   private val vai_Latn_Standalone_Months: String? = null
 
   private const val vai_Latn_Standalone_Days: String =
-      "tɛɛnɛɛ|talata|alaba|aimisa|aijima|siɓiti|lahadi\r\ntɛɛnɛɛ|talata|alaba|aimisa|aijima|siɓiti|lahadi\r\nM|T|W|T|F|S|S\r"
+      "tɛɛnɛɛ|talata|alaba|aimisa|aijima|siɓiti|lahadi\r\ntɛɛnɛɛ|talata|alaba|aimisa|aijima|siɓiti|lahadi\r\nM|T|W|T|F|S|S\r\ntɛɛnɛɛ|talata|alaba|aimisa|aijima|siɓiti|lahadi\r"
 
   private val vai_Latn_Standalone_Quarters: String? = null
 
@@ -12869,7 +12869,7 @@ object AvailableDateTimeDisplayNames {
       "jenaro|febraro|marso|aprile|majo|jugno|lujo|agosto|setenbre|otobre|novenbre|dezenbre\r\njen|feb|mar|apr|maj|jug|luj|ago|set|oto|nov|dez\r\nJ|F|M|A|M|J|L|A|S|O|N|D\r"
 
   private const val vec_Format_Days: String =
-      "luni|marti|mèrcore|zoba|vènare|sabo|doménega\r\nlun|mar|mer|zob|vèn|sab|dom\r\nL|M|M|Z|V|S|D\r"
+      "luni|marti|mèrcore|zoba|vènare|sabo|doménega\r\nlun|mar|mer|zob|vèn|sab|dom\r\nL|M|M|Z|V|S|D\r\nlun|mar|mer|zob|vèn|sab|dom\r"
 
   private const val vec_Format_Quarters: String =
       "1º trimestre|2º trimestre|3º trimestre|4º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -12880,7 +12880,7 @@ object AvailableDateTimeDisplayNames {
       "jenaro|febraro|marso|aprile|majo|jugno|lujo|agosto|setenbre|otobre|novenbre|dezenbre\r\njen|feb|mar|apr|maj|jug|luj|ago|set|oto|nov|dez\r\nJ|F|M|A|M|J|L|A|S|O|N|D\r"
 
   private const val vec_Standalone_Days: String =
-      "luni|marti|mèrcore|zoba|vènare|sabo|doménega\r\nlun|mar|mer|zob|vèn|sab|dom\r\nL|M|M|Z|V|S|D\r"
+      "luni|marti|mèrcore|zoba|vènare|sabo|doménega\r\nlun|mar|mer|zob|vèn|sab|dom\r\nL|M|M|Z|V|S|D\r\nlun|mar|mer|zob|vèn|sab|dom\r"
 
   private const val vec_Standalone_Quarters: String =
       "1º trimestre|2º trimestre|3º trimestre|4º trimestre\r\nT1|T2|T3|T4\r\n1|2|3|4\r"
@@ -12891,7 +12891,7 @@ object AvailableDateTimeDisplayNames {
       "tháng 1|tháng 2|tháng 3|tháng 4|tháng 5|tháng 6|tháng 7|tháng 8|tháng 9|tháng 10|tháng 11|tháng 12\r\nthg 1|thg 2|thg 3|thg 4|thg 5|thg 6|thg 7|thg 8|thg 9|thg 10|thg 11|thg 12\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val vi_Format_Days: String =
-      "Thứ Hai|Thứ Ba|Thứ Tư|Thứ Năm|Thứ Sáu|Thứ Bảy|Chủ Nhật\r\nTh 2|Th 3|Th 4|Th 5|Th 6|Th 7|CN\r\nT2|T3|T4|T5|T6|T7|CN\r"
+      "Thứ Hai|Thứ Ba|Thứ Tư|Thứ Năm|Thứ Sáu|Thứ Bảy|Chủ Nhật\r\nTh 2|Th 3|Th 4|Th 5|Th 6|Th 7|CN\r\nT2|T3|T4|T5|T6|T7|CN\r\nT2|T3|T4|T5|T6|T7|CN\r"
 
   private const val vi_Format_Quarters: String =
       "Quý 1|Quý 2|Quý 3|Quý 4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -12903,7 +12903,7 @@ object AvailableDateTimeDisplayNames {
       "Tháng 1|Tháng 2|Tháng 3|Tháng 4|Tháng 5|Tháng 6|Tháng 7|Tháng 8|Tháng 9|Tháng 10|Tháng 11|Tháng 12\r\nTháng 1|Tháng 2|Tháng 3|Tháng 4|Tháng 5|Tháng 6|Tháng 7|Tháng 8|Tháng 9|Tháng 10|Tháng 11|Tháng 12\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val vi_Standalone_Days: String =
-      "Thứ Hai|Thứ Ba|Thứ Tư|Thứ Năm|Thứ Sáu|Thứ Bảy|Chủ Nhật\r\nTh 2|Th 3|Th 4|Th 5|Th 6|Th 7|CN\r\nT2|T3|T4|T5|T6|T7|CN\r"
+      "Thứ Hai|Thứ Ba|Thứ Tư|Thứ Năm|Thứ Sáu|Thứ Bảy|Chủ Nhật\r\nTh 2|Th 3|Th 4|Th 5|Th 6|Th 7|CN\r\nT2|T3|T4|T5|T6|T7|CN\r\nT2|T3|T4|T5|T6|T7|CN\r"
 
   private const val vi_Standalone_Quarters: String =
       "quý 1|quý 2|quý 3|quý 4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -12915,7 +12915,7 @@ object AvailableDateTimeDisplayNames {
       "janeiru|fevereiru|marsu|abril|maiu|junyu|julyu|agostu|setembru|outubru|novembru|dezembru\r\njaneiru|fevereiru|marsu|abril|maiu|junyu|julyu|agostu|setembru|outubru|novembru|dezembru\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val vmw_Format_Days: String =
-      "nihiku noolempwa|namaanli|namararu|namaxexe|namathanu|esaabadu|ettiminku\r\nnihiku noolempwa|namaanli|namararu|namaxexe|namathanu|esaabadu|ettiminku\r\nM|T|W|T|F|S|S\r"
+      "nihiku noolempwa|namaanli|namararu|namaxexe|namathanu|esaabadu|ettiminku\r\nnihiku noolempwa|namaanli|namararu|namaxexe|namathanu|esaabadu|ettiminku\r\nM|T|W|T|F|S|S\r\nnihiku noolempwa|namaanli|namararu|namaxexe|namathanu|esaabadu|ettiminku\r"
 
   private val vmw_Format_Quarters: String? = null
 
@@ -12925,7 +12925,7 @@ object AvailableDateTimeDisplayNames {
       "janeiru|fevereiru|marsu|abril|maiu|junyu|julyu|agostu|setembru|outubru|novembru|dezembru\r\njaneiru|fevereiru|marsu|abril|maiu|junyu|julyu|agostu|setembru|outubru|novembru|dezembru\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val vmw_Standalone_Days: String =
-      "nihiku noolempwa|namaanli|namararu|namaxexe|namathanu|esaabadu|ettiminku\r\nnihiku noolempwa|namaanli|namararu|namaxexe|namathanu|esaabadu|ettiminku\r\nM|T|W|T|F|S|S\r"
+      "nihiku noolempwa|namaanli|namararu|namaxexe|namathanu|esaabadu|ettiminku\r\nnihiku noolempwa|namaanli|namararu|namaxexe|namathanu|esaabadu|ettiminku\r\nM|T|W|T|F|S|S\r\nnihiku noolempwa|namaanli|namararu|namaxexe|namathanu|esaabadu|ettiminku\r"
 
   private val vmw_Standalone_Quarters: String? = null
 
@@ -12951,7 +12951,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprilyi|Mei|Junyi|Julyai|Agusti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val vun_Format_Days: String =
-      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r"
+      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r"
 
   private const val vun_Format_Quarters: String =
       "Robo 1|Robo 2|Robo 3|Robo 4\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -12963,7 +12963,7 @@ object AvailableDateTimeDisplayNames {
       "Januari|Februari|Machi|Aprilyi|Mei|Junyi|Julyai|Agusti|Septemba|Oktoba|Novemba|Desemba\r\nJan|Feb|Mac|Apr|Mei|Jun|Jul|Ago|Sep|Okt|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val vun_Standalone_Days: String =
-      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r"
+      "Jumatatuu|Jumanne|Jumatanu|Alhamisi|Ijumaa|Jumamosi|Jumapilyi\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r\nJ|J|J|A|I|J|J\r\nJtt|Jnn|Jtn|Alh|Iju|Jmo|Jpi\r"
 
   private const val vun_Standalone_Quarters: String =
       "Robo 1|Robo 2|Robo 3|Robo 4\r\nR1|R2|R3|R4\r\n1|2|3|4\r"
@@ -12991,7 +12991,7 @@ object AvailableDateTimeDisplayNames {
       "Jenner|Hornig|Märze|Abrille|Meije|Bráčet|Heiwet|Öigšte|Herbštmánet|Wímánet|Wintermánet|Chrištmánet\r\nJen|Hor|Mär|Abr|Mei|Brá|Hei|Öig|Her|Wím|Win|Chr\r\nJ|H|M|A|M|B|H|Ö|H|W|W|C\r"
 
   private const val wae_Format_Days: String =
-      "Mäntag|Zištag|Mittwuč|Fróntag|Fritag|Samštag|Sunntag\r\nMän|Ziš|Mit|Fró|Fri|Sam|Sun\r\nM|Z|M|F|F|S|S\r"
+      "Mäntag|Zištag|Mittwuč|Fróntag|Fritag|Samštag|Sunntag\r\nMän|Ziš|Mit|Fró|Fri|Sam|Sun\r\nM|Z|M|F|F|S|S\r\nMän|Ziš|Mit|Fró|Fri|Sam|Sun\r"
 
   private const val wae_Format_Quarters: String =
       "1. quartal|2. quartal|3. quartal|4. quartal\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -13002,7 +13002,7 @@ object AvailableDateTimeDisplayNames {
       "Jenner|Hornig|Märze|Abrille|Meije|Bráčet|Heiwet|Öigšte|Herbštmánet|Wímánet|Wintermánet|Chrištmánet\r\nJen|Hor|Mär|Abr|Mei|Brá|Hei|Öig|Her|Wím|Win|Chr\r\nJ|H|M|A|M|B|H|Ö|H|W|W|C\r"
 
   private const val wae_Standalone_Days: String =
-      "Mäntag|Zištag|Mittwuč|Fróntag|Fritag|Samštag|Sunntag\r\nMän|Ziš|Mit|Fró|Fri|Sam|Sun\r\nM|Z|M|F|F|S|S\r"
+      "Mäntag|Zištag|Mittwuč|Fróntag|Fritag|Samštag|Sunntag\r\nMän|Ziš|Mit|Fró|Fri|Sam|Sun\r\nM|Z|M|F|F|S|S\r\nMän|Ziš|Mit|Fró|Fri|Sam|Sun\r"
 
   private const val wae_Standalone_Quarters: String =
       "1. quartal|2. quartal|3. quartal|4. quartal\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -13045,7 +13045,7 @@ object AvailableDateTimeDisplayNames {
       "Samwiyee|Fewriyee|Mars|Awril|Mee|Suwe|Sulet|Ut|Sàttumbar|Oktoobar|Nowàmbar|Desàmbar\r\nSam|Few|Mar|Awr|Mee|Suw|Sul|Ut|Sàt|Okt|Now|Des\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val wo_Format_Days: String =
-      "Altine|Talaata|Àlarba|Alxamis|Àjjuma|Aseer|Dibéer\r\nAlt|Tal|Àla|Alx|Àjj|Ase|Dib\r\nAlt|Tal|Àla|Alx|Àjj|Ase|Dib\r"
+      "Altine|Talaata|Àlarba|Alxamis|Àjjuma|Aseer|Dibéer\r\nAlt|Tal|Àla|Alx|Àjj|Ase|Dib\r\nAlt|Tal|Àla|Alx|Àjj|Ase|Dib\r\nAlt|Tal|Àla|Alx|Àjj|Ase|Dib\r"
 
   private const val wo_Format_Quarters: String =
       "1er Trimestar|2e Trimestar|3e Trimestar|4e Trimestar\r\n1er Tri|2e Tri|3e Tri|4e Tri\r\n1|2|3|4\r"
@@ -13056,7 +13056,7 @@ object AvailableDateTimeDisplayNames {
       "Samwiyee|Fewriyee|Mars|Awril|Mee|Suwe|Sulet|Ut|Sàttumbar|Oktoobar|Nowàmbar|Desàmbar\r\nSam|Few|Mar|Awr|Mee|Suw|Sul|Ut|Sàt|Okt|Now|Des\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val wo_Standalone_Days: String =
-      "Altine|Talaata|Àlarba|Alxamis|Àjjuma|Aseer|Dibéer\r\nAlt|Tal|Àla|Alx|Àjj|Ase|Dib\r\nAlt|Tal|Àla|Alx|Àjj|Ase|Dib\r"
+      "Altine|Talaata|Àlarba|Alxamis|Àjjuma|Aseer|Dibéer\r\nAlt|Tal|Àla|Alx|Àjj|Ase|Dib\r\nAlt|Tal|Àla|Alx|Àjj|Ase|Dib\r\nAlt|Tal|Àla|Alx|Àjj|Ase|Dib\r"
 
   private const val wo_Standalone_Quarters: String =
       "1er Trimestar|2e Trimestar|3e Trimestar|4e Trimestar\r\n1er Tri|2e Tri|3e Tri|4e Tri\r\n1|2|3|4\r"
@@ -13067,7 +13067,7 @@ object AvailableDateTimeDisplayNames {
       "Janyuwari|Februwari|Matshi|Epreli|Meyi|Juni|Julayi|Agasti|Septemba|Okthobha|Novemba|Disemba\r\nJan|Feb|Mat|Epr|Mey|Jun|Jul|Aga|Sept|Okt|Nov|Dis\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val xh_Format_Days: String =
-      "Mvulo|Lwesibini|Lwesithathu|Lwesine|Lwesihlanu|Mgqibelo|Cawe\r\nMvu|Lwesb|Tha|Sin|Hla|Mgq|Caw\r\nM|Sb|Tht|Sin|Hl|Mg|C\r"
+      "Mvulo|Lwesibini|Lwesithathu|Lwesine|Lwesihlanu|Mgqibelo|Cawe\r\nMvu|Lwesb|Tha|Sin|Hla|Mgq|Caw\r\nM|Sb|Tht|Sin|Hl|Mg|C\r\nMvu|Lwesb|Tha|Sin|Hla|Mgq|Caw\r"
 
   private const val xh_Format_Quarters: String =
       "ikota yoku-1|ikota yesi-2|ikota yesi-3|ikota yesi-4\r\nKota 1|Kota 2|Kota 3|Kota 4\r\n1|2|3|4\r"
@@ -13078,7 +13078,7 @@ object AvailableDateTimeDisplayNames {
       "Janyuwari|Februwari|Matshi|Epreli|Meyi|Juni|Julayi|Agasti|Septemba|Okthoba|Novemba|Disemba\r\nJan|Feb|Mat|Epr|Mey|Jun|Jul|Aga|Sep|Okt|Nov|Dis\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val xh_Standalone_Days: String =
-      "Mvulo|Lwesibini|Lwesithathu|Lwesine|Lwesihlanu|Mgqibelo|Cawe\r\nMvu|Bin|Tha|Sin|Hla|Mgq|Caw\r\nM|Sb|St|Sin|Hl|Mg|C\r"
+      "Mvulo|Lwesibini|Lwesithathu|Lwesine|Lwesihlanu|Mgqibelo|Cawe\r\nMvu|Bin|Tha|Sin|Hla|Mgq|Caw\r\nM|Sb|St|Sin|Hl|Mg|C\r\nMvu|Lwesb|Tha|Sin|Hla|Mgq|Caw\r"
 
   private const val xh_Standalone_Quarters: String =
       "ikota yoku-1|ikota yesi-2|ikota yesi-3|ikota yesi-4\r\nKota 1|Kota 2|Kota 3|Kota 4\r\n1|2|3|4\r"
@@ -13089,7 +13089,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्तूबर|नवंबर|दिसंबर\r\nजन॰|फ़र॰|मार्च|अप्रैल|मई|जून|जुल॰|अग॰|सित॰|अक्तू॰|नव॰|दिस॰\r\nज|फ़|मा|अ|म|जू|जु|अ|सि|अ|न|दि\r"
 
   private const val xnr_Format_Days: String =
-      "सोआर|मंगलवार|बुधवार|वीरवार|शुक्करवार|शनिच्चरवार|तोआर\r\nसोआर|मंगल|बुध|वीर|शुक्कर|शनि|तोआर\r\nसो|मं|बु|वी|शु|श|त\r"
+      "सोआर|मंगलवार|बुधवार|वीरवार|शुक्करवार|शनिच्चरवार|तोआर\r\nसोआर|मंगल|बुध|वीर|शुक्कर|शनि|तोआर\r\nसो|मं|बु|वी|शु|श|त\r\nसो|मं|बु|वी|शु|श|त\r"
 
   private const val xnr_Format_Quarters: String =
       "पैले तिन मीन्ने|दूजे तिन मीन्ने|तीजे तिन मीन्ने|चौथे तिन मीन्ने\r\nति1|ति2|ति3|ति4\r\n1|2|3|4\r"
@@ -13101,7 +13101,7 @@ object AvailableDateTimeDisplayNames {
       "जनवरी|फ़रवरी|मार्च|अप्रैल|मई|जून|जुलाई|अगस्त|सितंबर|अक्तूबर|नवंबर|दिसंबर\r\nजन॰|फ़र॰|मार्च|अप्रैल|मई|जून|जुल॰|अग॰|सित॰|अक्तू॰|नव॰|दिस॰\r\nज|फ़|मा|अ|म|जू|जु|अ|सि|अ|न|दि\r"
 
   private const val xnr_Standalone_Days: String =
-      "सोआर|मंगलवार|बुधवार|वीरवार|शुक्करवार|शनिच्चरवार|तोआर\r\nसोआर|मंगल|बुध|वीर|शुक्कर|शनि|तोआर\r\nसो|मं|बु|वी|शु|श|त\r"
+      "सोआर|मंगलवार|बुधवार|वीरवार|शुक्करवार|शनिच्चरवार|तोआर\r\nसोआर|मंगल|बुध|वीर|शुक्कर|शनि|तोआर\r\nसो|मं|बु|वी|शु|श|त\r\nसो|मं|बु|वी|शु|श|त\r"
 
   private const val xnr_Standalone_Quarters: String =
       "पैले तिन मीन्ने|दूजे तिन मीन्ने|तीजे तिन मीन्ने|चौथे तिन मीन्ने\r\nति1|ति2|ति3|ति4\r\n1|2|3|4\r"
@@ -13113,7 +13113,7 @@ object AvailableDateTimeDisplayNames {
       "Janwaliyo|Febwaliyo|Marisi|Apuli|Maayi|Juuni|Julaayi|Agusito|Sebuttemba|Okitobba|Novemba|Desemba\r\nJan|Feb|Mar|Apu|Maa|Juu|Jul|Agu|Seb|Oki|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val xog_Format_Days: String =
-      "Balaza|Owokubili|Owokusatu|Olokuna|Olokutaanu|Olomukaaga|Sabiiti\r\nBala|Kubi|Kusa|Kuna|Kuta|Muka|Sabi\r\nB|B|S|K|K|M|S\r"
+      "Balaza|Owokubili|Owokusatu|Olokuna|Olokutaanu|Olomukaaga|Sabiiti\r\nBala|Kubi|Kusa|Kuna|Kuta|Muka|Sabi\r\nB|B|S|K|K|M|S\r\nBala|Kubi|Kusa|Kuna|Kuta|Muka|Sabi\r"
 
   private const val xog_Format_Quarters: String =
       "Ebisera ebyomwaka ebisoka|Ebisera ebyomwaka ebyokubiri|Ebisera ebyomwaka ebyokusatu|Ebisera ebyomwaka ebyokuna\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -13125,7 +13125,7 @@ object AvailableDateTimeDisplayNames {
       "Janwaliyo|Febwaliyo|Marisi|Apuli|Maayi|Juuni|Julaayi|Agusito|Sebuttemba|Okitobba|Novemba|Desemba\r\nJan|Feb|Mar|Apu|Maa|Juu|Jul|Agu|Seb|Oki|Nov|Des\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val xog_Standalone_Days: String =
-      "Balaza|Owokubili|Owokusatu|Olokuna|Olokutaanu|Olomukaaga|Sabiiti\r\nBala|Kubi|Kusa|Kuna|Kuta|Muka|Sabi\r\nB|B|S|K|K|M|S\r"
+      "Balaza|Owokubili|Owokusatu|Olokuna|Olokutaanu|Olomukaaga|Sabiiti\r\nBala|Kubi|Kusa|Kuna|Kuta|Muka|Sabi\r\nB|B|S|K|K|M|S\r\nBala|Kubi|Kusa|Kuna|Kuta|Muka|Sabi\r"
 
   private const val xog_Standalone_Quarters: String =
       "Ebisera ebyomwaka ebisoka|Ebisera ebyomwaka ebyokubiri|Ebisera ebyomwaka ebyokusatu|Ebisera ebyomwaka ebyokuna\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -13137,7 +13137,7 @@ object AvailableDateTimeDisplayNames {
       "pikítíkítie, oólí ú kutúan|siɛyɛ́, oóli ú kándíɛ|ɔnsúmbɔl, oóli ú kátátúɛ|mesiŋ, oóli ú kénie|ensil, oóli ú kátánuɛ|ɔsɔn|efute|pisuyú|imɛŋ i puɔs|imɛŋ i putúk,oóli ú kátíɛ|makandikɛ|pilɔndɔ́\r\no.1|o.2|o.3|o.4|o.5|o.6|o.7|o.8|o.9|o.10|o.11|o.12\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val yav_Format_Days: String =
-      "móndie|muányáŋmóndie|metúkpíápɛ|kúpélimetúkpiapɛ|feléte|séselé|sɔ́ndiɛ\r\nmd|mw|et|kl|fl|ss|sd\r\nm|m|e|k|f|s|s\r"
+      "móndie|muányáŋmóndie|metúkpíápɛ|kúpélimetúkpiapɛ|feléte|séselé|sɔ́ndiɛ\r\nmd|mw|et|kl|fl|ss|sd\r\nm|m|e|k|f|s|s\r\nmd|mw|et|kl|fl|ss|sd\r"
 
   private const val yav_Format_Quarters: String =
       "ndátúɛ 1|ndátúɛ 2|ndátúɛ 3|ndátúɛ 4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -13149,7 +13149,7 @@ object AvailableDateTimeDisplayNames {
       "pikítíkítie, oólí ú kutúan|siɛyɛ́, oóli ú kándíɛ|ɔnsúmbɔl, oóli ú kátátúɛ|mesiŋ, oóli ú kénie|ensil, oóli ú kátánuɛ|ɔsɔn|efute|pisuyú|imɛŋ i puɔs|imɛŋ i putúk,oóli ú kátíɛ|makandikɛ|pilɔndɔ́\r\no.1|o.2|o.3|o.4|o.5|o.6|o.7|o.8|o.9|o.10|o.11|o.12\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val yav_Standalone_Days: String =
-      "móndie|muányáŋmóndie|metúkpíápɛ|kúpélimetúkpiapɛ|feléte|séselé|sɔ́ndiɛ\r\nmd|mw|et|kl|fl|ss|sd\r\nm|m|e|k|f|s|s\r"
+      "móndie|muányáŋmóndie|metúkpíápɛ|kúpélimetúkpiapɛ|feléte|séselé|sɔ́ndiɛ\r\nmd|mw|et|kl|fl|ss|sd\r\nm|m|e|k|f|s|s\r\nmd|mw|et|kl|fl|ss|sd\r"
 
   private const val yav_Standalone_Quarters: String =
       "ndátúɛ 1|ndátúɛ 2|ndátúɛ 3|ndátúɛ 4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -13161,7 +13161,7 @@ object AvailableDateTimeDisplayNames {
       "יאַנואַר|פֿעברואַר|מערץ|אַפּריל|מיי|יוני|יולי|אויגוסט|סעפּטעמבער|אקטאבער|נאוועמבער|דעצעמבער\r\nיאַנואַר|פֿעברואַר|מערץ|אַפּריל|מיי|יוני|יולי|אויגוסט|סעפּטעמבער|אקטאבער|נאוועמבער|דעצעמבער\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val yi_Format_Days: String =
-      "מאָנטיק|דינסטיק|מיטוואך|דאנערשטיק|פֿרײַטיק|שבת|זונטיק\r\nמאָנטיק|דינסטיק|מיטוואך|דאנערשטיק|פֿרײַטיק|שבת|זונטיק\r\nM|T|W|T|F|S|S\r"
+      "מאָנטיק|דינסטיק|מיטוואך|דאנערשטיק|פֿרײַטיק|שבת|זונטיק\r\nמאָנטיק|דינסטיק|מיטוואך|דאנערשטיק|פֿרײַטיק|שבת|זונטיק\r\nM|T|W|T|F|S|S\r\nמאָנטיק|דינסטיק|מיטוואך|דאנערשטיק|פֿרײַטיק|שבת|זונטיק\r"
 
   private val yi_Format_Quarters: String? = null
 
@@ -13172,7 +13172,7 @@ object AvailableDateTimeDisplayNames {
       "יאַנואַר|פֿעברואַר|מערץ|אַפּריל|מיי|יוני|יולי|אויגוסט|סעפּטעמבער|אקטאבער|נאוועמבער|דעצעמבער\r\nיאַנ|פֿעב|מערץ|אַפּר|מיי|יוני|יולי|אויג|סעפּ|אקט|נאוו|דעצ\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val yi_Standalone_Days: String =
-      "מאָנטיק|דינסטיק|מיטוואך|דאנערשטיק|פֿרײַטיק|שבת|זונטיק\r\nמאָנטיק|דינסטיק|מיטוואך|דאנערשטיק|פֿרײַטיק|שבת|זונטיק\r\nM|T|W|T|F|S|S\r"
+      "מאָנטיק|דינסטיק|מיטוואך|דאנערשטיק|פֿרײַטיק|שבת|זונטיק\r\nמאָנטיק|דינסטיק|מיטוואך|דאנערשטיק|פֿרײַטיק|שבת|זונטיק\r\nM|T|W|T|F|S|S\r\nמאָנטיק|דינסטיק|מיטוואך|דאנערשטיק|פֿרײַטיק|שבת|זונטיק\r"
 
   private val yi_Standalone_Quarters: String? = null
 
@@ -13183,7 +13183,7 @@ object AvailableDateTimeDisplayNames {
       "Oṣù Ṣẹ́rẹ́|Oṣù Èrèlè|Oṣù Ẹrẹ̀nà|Oṣù Ìgbé|Oṣù Ẹ̀bibi|Oṣù Òkúdu|Oṣù Agẹmọ|Oṣù Ògún|Oṣù Owewe|Oṣù Ọ̀wàrà|Oṣù Bélú|Oṣù Ọ̀pẹ̀\r\nOṣù Ṣẹ́rẹ́|Oṣù Èrèlè|Oṣù Ẹrẹ̀nà|Oṣù Ìgbé|Oṣù Ẹ̀bibi|Oṣù Òkúdu|Oṣù Agẹmọ|Oṣù Ògún|Oṣù Owewe|Oṣù Ọ̀wàrà|Oṣù Bélú|Oṣù Ọ̀pẹ̀\r\nS|È|Ẹ|Ì|Ẹ̀|Ò|A|Ò|O|Ọ̀|B|Ọ̀\r"
 
   private const val yo_Format_Days: String =
-      "Ọjọ́ Ajé|Ọjọ́ Ìsẹ́gun|Ọjọ́rú|Ọjọ́bọ|Ọjọ́ Ẹtì|Ọjọ́ Àbámẹ́ta|Ọjọ́ Àìkú\r\nAjé|Ìsẹ́gun|Ọjọ́rú|Ọjọ́bọ|Ẹtì|Àbámẹ́ta|Àìkú\r\nA|Ì|Ọ|Ọ|Ẹ|À|À\r"
+      "Ọjọ́ Ajé|Ọjọ́ Ìsẹ́gun|Ọjọ́rú|Ọjọ́bọ|Ọjọ́ Ẹtì|Ọjọ́ Àbámẹ́ta|Ọjọ́ Àìkú\r\nAjé|Ìsẹ́gun|Ọjọ́rú|Ọjọ́bọ|Ẹtì|Àbámẹ́ta|Àìkú\r\nA|Ì|Ọ|Ọ|Ẹ|À|À\r\nAjé|Ìsẹ́gun|Ọjọ́rú|Ọjọ́bọ|Ẹtì|Àbámẹ́ta|Àìkú\r"
 
   private const val yo_Format_Quarters: String =
       "Ìdámẹ́rin kíní|Ìdámẹ́rin Kejì|Ìdámẹ́rin Kẹta|Ìdámẹ́rin Kẹrin\r\nÌdámẹ́rin kíní|Ìdámẹ́rin Kejì|Ìdámẹ́rin Kẹta|Ìdámẹ́rin Kẹrin\r\nkíní|Kejì|Kẹta|Kẹin\r"
@@ -13195,7 +13195,7 @@ object AvailableDateTimeDisplayNames {
       "Oṣù Ṣẹ́rẹ́|Oṣù Èrèlè|Oṣù Ẹrẹ̀nà|Oṣù Ìgbé|Oṣù Ẹ̀bibi|Oṣù Òkúdu|Oṣù Agẹmọ|Oṣù Ògún|Oṣù Owewe|Oṣù Ọ̀wàrà|Oṣù Bélú|Oṣù Ọ̀pẹ̀\r\nOṣù Ṣẹ́rẹ́|Oṣù Èrèlè|Oṣù Ẹrẹ̀nà|Oṣù Ìgbé|Oṣù Ẹ̀bibi|Oṣù Òkúdu|Oṣù Agẹmọ|Oṣù Ògún|Oṣù Owewe|Oṣù Ọ̀wàrà|Oṣù Bélú|Oṣù Ọ̀pẹ̀\r\nS|È|Ẹ|Ì|Ẹ̀|Ò|A|Ò|O|Ọ̀|B|Ọ̀\r"
 
   private const val yo_Standalone_Days: String =
-      "Ajé|Ìsẹ́gun|Ọjọ́rú|Ọjọ́bọ|Ẹtì|Àbámẹ́ta|Àìkú\r\nAjé|Ìsẹ́gun|Ọjọ́rú|Ọjọ́bọ|Ẹtì|Àbámẹ́ta|Àìkú\r\nA|Ì|Ọ|Ọ|Ẹ|À|À\r"
+      "Ajé|Ìsẹ́gun|Ọjọ́rú|Ọjọ́bọ|Ẹtì|Àbámẹ́ta|Àìkú\r\nAjé|Ìsẹ́gun|Ọjọ́rú|Ọjọ́bọ|Ẹtì|Àbámẹ́ta|Àìkú\r\nA|Ì|Ọ|Ọ|Ẹ|À|À\r\nAjé|Ìsẹ́gun|Ọjọ́rú|Ọjọ́bọ|Ẹtì|Àbámẹ́ta|Àìkú\r"
 
   private const val yo_Standalone_Quarters: String =
       "Ìdámẹ́rin kíní|Ìdámẹ́rin Kejì|Ìdámẹ́rin Kẹta|Ìdámẹ́rin Kẹrin\r\nÌdámẹ́rin kíní|Ìdámẹ́rin Kejì|Ìdámẹ́rin Kẹta|Ìdámẹ́rin Kẹrin\r\n1|2|3|4\r"
@@ -13207,7 +13207,7 @@ object AvailableDateTimeDisplayNames {
       "Oshù Shɛ́rɛ́|Oshù Èrèlè|Oshù Ɛrɛ̀nà|Oshù Ìgbé|Oshù Ɛ̀bibi|Oshù Òkúdu|Oshù Agɛmɔ|Oshù Ògún|Oshù Owewe|Oshù Ɔ̀wàrà|Oshù Bélú|Oshù Ɔ̀pɛ̀\r\nOshù Shɛ́rɛ́|Oshù Èrèlè|Oshù Ɛrɛ̀nà|Oshù Ìgbé|Oshù Ɛ̀bibi|Oshù Òkúdu|Oshù Agɛmɔ|Oshù Ògún|Oshù Owewe|Oshù Ɔ̀wàrà|Oshù Bélú|Oshù Ɔ̀pɛ̀\r\nS|È|Ɛ|Ì|Ɛ̀|Ò|A|Ò|O|Ɔ̀|B|Ɔ̀\r"
 
   private const val yo_BJ_Format_Days: String =
-      "Ɔjɔ́ Ajé|Ɔjɔ́ Ìsɛ́gun|Ɔjɔ́rú|Ɔjɔ́bɔ|Ɔjɔ́ Ɛtì|Ɔjɔ́ Àbámɛ́ta|Ɔjɔ́ Àìkú\r\nAjé|Ìsɛ́gun|Ɔjɔ́rú|Ɔjɔ́bɔ|Ɛtì|Àbámɛ́ta|Àìkú\r\nA|Ì|Ɔ|Ɔ|Ɛ|À|À\r"
+      "Ɔjɔ́ Ajé|Ɔjɔ́ Ìsɛ́gun|Ɔjɔ́rú|Ɔjɔ́bɔ|Ɔjɔ́ Ɛtì|Ɔjɔ́ Àbámɛ́ta|Ɔjɔ́ Àìkú\r\nAjé|Ìsɛ́gun|Ɔjɔ́rú|Ɔjɔ́bɔ|Ɛtì|Àbámɛ́ta|Àìkú\r\nA|Ì|Ɔ|Ɔ|Ɛ|À|À\r\nAjé|Ìsɛ́gun|Ɔjɔ́rú|Ɔjɔ́bɔ|Ɛtì|Àbámɛ́ta|Àìkú\r"
 
   private const val yo_BJ_Format_Quarters: String =
       "Ìdámɛ́rin kíní|Ìdámɛ́rin Kejì|Ìdámɛ́rin Kɛta|Ìdámɛ́rin Kɛrin\r\nÌdámɛ́rin kíní|Ìdámɛ́rin Kejì|Ìdámɛ́rin Kɛta|Ìdámɛ́rin Kɛrin\r\nkíní|Kejì|Kɛta|Kɛin\r"
@@ -13219,7 +13219,7 @@ object AvailableDateTimeDisplayNames {
       "Oshù Shɛ́rɛ́|Oshù Èrèlè|Oshù Ɛrɛ̀nà|Oshù Ìgbé|Oshù Ɛ̀bibi|Oshù Òkúdu|Oshù Agɛmɔ|Oshù Ògún|Oshù Owewe|Oshù Ɔ̀wàrà|Oshù Bélú|Oshù Ɔ̀pɛ̀\r\nOshù Shɛ́rɛ́|Oshù Èrèlè|Oshù Ɛrɛ̀nà|Oshù Ìgbé|Oshù Ɛ̀bibi|Oshù Òkúdu|Oshù Agɛmɔ|Oshù Ògún|Oshù Owewe|Oshù Ɔ̀wàrà|Oshù Bélú|Oshù Ɔ̀pɛ̀\r\nS|È|Ɛ|Ì|Ɛ̀|Ò|A|Ò|O|Ɔ̀|B|Ɔ̀\r"
 
   private const val yo_BJ_Standalone_Days: String =
-      "Ajé|Ìsɛ́gun|Ɔjɔ́rú|Ɔjɔ́bɔ|Ɛtì|Àbámɛ́ta|Àìkú\r\nAjé|Ìsɛ́gun|Ɔjɔ́rú|Ɔjɔ́bɔ|Ɛtì|Àbámɛ́ta|Àìkú\r\nA|Ì|Ɔ|Ɔ|Ɛ|À|À\r"
+      "Ajé|Ìsɛ́gun|Ɔjɔ́rú|Ɔjɔ́bɔ|Ɛtì|Àbámɛ́ta|Àìkú\r\nAjé|Ìsɛ́gun|Ɔjɔ́rú|Ɔjɔ́bɔ|Ɛtì|Àbámɛ́ta|Àìkú\r\nA|Ì|Ɔ|Ɔ|Ɛ|À|À\r\nAjé|Ìsɛ́gun|Ɔjɔ́rú|Ɔjɔ́bɔ|Ɛtì|Àbámɛ́ta|Àìkú\r"
 
   private const val yo_BJ_Standalone_Quarters: String =
       "Ìdámɛ́rin kíní|Ìdámɛ́rin Kejì|Ìdámɛ́rin Kɛta|Ìdámɛ́rin Kɛrin\r\nÌdámɛ́rin kíní|Ìdámɛ́rin Kejì|Ìdámɛ́rin Kɛta|Ìdámɛ́rin Kɛrin\r\n1|2|3|4\r"
@@ -13231,7 +13231,7 @@ object AvailableDateTimeDisplayNames {
       "yepé|mukũi|musapíri|irũdí|pú|pú-yepé|pú-mukũi|pú-musapíri|pú-irũdí|yepé-putimaã|yepé-yepé|yepé-mukũi\r\nye|mk|ms|id|pu|py|pm|ps|pi|yp|yy|ym\r\nY|M|M|I|P|P|P|P|P|Y|Y|Y\r"
 
   private const val yrl_Format_Days: String =
-      "murakipí|murakí-mukũi|murakí-musapíri|supapá|yukuakú|saurú|mituú\r\nmur|mmk|mms|sup|yuk|sau|mit\r\nM|M|M|S|Y|S|M\r"
+      "murakipí|murakí-mukũi|murakí-musapíri|supapá|yukuakú|saurú|mituú\r\nmur|mmk|mms|sup|yuk|sau|mit\r\nM|M|M|S|Y|S|M\r\nmur|mmk|mms|sup|yuk|sau|mit\r"
 
   private const val yrl_Format_Quarters: String =
       "yepésáwa musapíri-yasí|mukũisawa musapíri-yasí|musapírisawa musapíri-yasí|irũdisawa musapíri-yasí\r\nM1|M2|M3|M4\r\n1|2|3|4\r"
@@ -13243,7 +13243,7 @@ object AvailableDateTimeDisplayNames {
       "yepé|mukũi|musapíri|irũdí|pú|pú-yepé|pú-mukũi|pú-musapíri|pú-irũdí|yepé-putimaã|yepé-yepé|yepé-mukũi\r\nye|mk|ms|id|pu|py|pm|ps|pi|yp|yy|ym\r\nY|M|M|I|P|P|P|P|P|Y|Y|Y\r"
 
   private const val yrl_Standalone_Days: String =
-      "murakipí|murakí-mukũi|murakí-musapíri|supapá|yukuakú|saurú|mituú\r\nmur|mmk|mms|sup|yuk|sau|mit\r\nM|M|M|S|Y|S|M\r"
+      "murakipí|murakí-mukũi|murakí-musapíri|supapá|yukuakú|saurú|mituú\r\nmur|mmk|mms|sup|yuk|sau|mit\r\nM|M|M|S|Y|S|M\r\nmur|mmk|mms|sup|yuk|sau|mit\r"
 
   private const val yrl_Standalone_Quarters: String =
       "yepésáwa musapíri-yasí|mukũisawa musapíri-yasí|musapírisawa musapíri-yasí|irũdisawa musapíri-yasí\r\nM1|M2|M3|M4\r\n1|2|3|4\r"
@@ -13291,7 +13291,7 @@ object AvailableDateTimeDisplayNames {
       "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val yue_Format_Days: String =
-      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n一|二|三|四|五|六|日\r"
+      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n一|二|三|四|五|六|日\r\n一|二|三|四|五|六|日\r"
 
   private const val yue_Format_Quarters: String = "第1季|第2季|第3季|第4季\r\n第1季|第2季|第3季|第4季\r\n1|2|3|4\r"
 
@@ -13301,7 +13301,7 @@ object AvailableDateTimeDisplayNames {
       "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val yue_Standalone_Days: String =
-      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n一|二|三|四|五|六|日\r"
+      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n一|二|三|四|五|六|日\r\n一|二|三|四|五|六|日\r"
 
   private const val yue_Standalone_Quarters: String =
       "第1季|第2季|第3季|第4季\r\n第1季|第2季|第3季|第4季\r\n1|2|3|4\r"
@@ -13312,7 +13312,7 @@ object AvailableDateTimeDisplayNames {
       "一月|二月|三月|四月|五月|六月|七月|八月|九月|十月|十一月|十二月\r\n1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val yue_Hans_Format_Days: String =
-      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n周一|周二|周三|周四|周五|周六|周日\r\n一|二|三|四|五|六|日\r"
+      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n周一|周二|周三|周四|周五|周六|周日\r\n一|二|三|四|五|六|日\r\n周一|周二|周三|周四|周五|周六|周日\r"
 
   private const val yue_Hans_Format_Quarters: String =
       "第1季|第2季|第3季|第4季\r\n第1季|第2季|第3季|第4季\r\n1|2|3|4\r"
@@ -13323,7 +13323,7 @@ object AvailableDateTimeDisplayNames {
       "一月|二月|三月|四月|五月|六月|七月|八月|九月|十月|十一月|十二月\r\n1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val yue_Hans_Standalone_Days: String =
-      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n周一|周二|周三|周四|周五|周六|周日\r\n一|二|三|四|五|六|日\r"
+      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n周一|周二|周三|周四|周五|周六|周日\r\n一|二|三|四|五|六|日\r\n周一|周二|周三|周四|周五|周六|周日\r"
 
   private const val yue_Hans_Standalone_Quarters: String =
       "第1季|第2季|第3季|第4季\r\n第1季|第2季|第3季|第4季\r\n1|2|3|4\r"
@@ -13366,7 +13366,7 @@ object AvailableDateTimeDisplayNames {
       "ndwenit|ndwenngeih|ndwensam|ndwenseiq|ndwenngux|ndwenloeg|ndwencaet|ndwenbet|ndwengouj|ndwencib|ndwencib’it|ndwencibngeih\r\nndwenit|ndwenngeih|ndwensam|ndwenseiq|ndwenngux|ndwenloeg|ndwencaet|ndwenbet|ndwengouj|ndwencib|ndwencib’it|ndwencibngeih\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val za_Format_Days: String =
-      "singhgizit|singhgizngeih|singhgizsam|singhgizseiq|singhgizhaj|singhgizroek|ngoenzsinghgiz\r\nsinghgizit|singhgizngeih|singhgizsam|singhgizseiq|singhgizhaj|singhgizroek|ngoenzsinghgiz\r\nM|T|W|T|F|S|S\r"
+      "singhgizit|singhgizngeih|singhgizsam|singhgizseiq|singhgizhaj|singhgizroek|ngoenzsinghgiz\r\nsinghgizit|singhgizngeih|singhgizsam|singhgizseiq|singhgizhaj|singhgizroek|ngoenzsinghgiz\r\nM|T|W|T|F|S|S\r\nsinghgizit|singhgizngeih|singhgizsam|singhgizseiq|singhgizhaj|singhgizroek|ngoenzsinghgiz\r"
 
   private val za_Format_Quarters: String? = null
 
@@ -13376,7 +13376,7 @@ object AvailableDateTimeDisplayNames {
       "ndwenit|ndwenngeih|ndwensam|ndwenseiq|ndwenngux|ndwenloeg|ndwencaet|ndwenbet|ndwengouj|ndwencib|ndwencib’it|ndwencibngeih\r\nndwenit|ndwenngeih|ndwensam|ndwenseiq|ndwenngux|ndwenloeg|ndwencaet|ndwenbet|ndwengouj|ndwencib|ndwencib’it|ndwencibngeih\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val za_Standalone_Days: String =
-      "singhgizit|singhgizngeih|singhgizsam|singhgizseiq|singhgizhaj|singhgizroek|ngoenzsinghgiz\r\nsinghgizit|singhgizngeih|singhgizsam|singhgizseiq|singhgizhaj|singhgizroek|ngoenzsinghgiz\r\nM|T|W|T|F|S|S\r"
+      "singhgizit|singhgizngeih|singhgizsam|singhgizseiq|singhgizhaj|singhgizroek|ngoenzsinghgiz\r\nsinghgizit|singhgizngeih|singhgizsam|singhgizseiq|singhgizhaj|singhgizroek|ngoenzsinghgiz\r\nM|T|W|T|F|S|S\r\nsinghgizit|singhgizngeih|singhgizsam|singhgizseiq|singhgizhaj|singhgizroek|ngoenzsinghgiz\r"
 
   private val za_Standalone_Quarters: String? = null
 
@@ -13386,7 +13386,7 @@ object AvailableDateTimeDisplayNames {
       "ⵉⵏⵏⴰⵢⵔ|ⴱⵕⴰⵢⵕ|ⵎⴰⵕⵚ|ⵉⴱⵔⵉⵔ|ⵎⴰⵢⵢⵓ|ⵢⵓⵏⵢⵓ|ⵢⵓⵍⵢⵓⵣ|ⵖⵓⵛⵜ|ⵛⵓⵜⴰⵏⴱⵉⵔ|ⴽⵜⵓⴱⵔ|ⵏⵓⵡⴰⵏⴱⵉⵔ|ⴷⵓⵊⴰⵏⴱⵉⵔ\r\nⵉⵏⵏ|ⴱⵕⴰ|ⵎⴰⵕ|ⵉⴱⵔ|ⵎⴰⵢ|ⵢⵓⵏ|ⵢⵓⵍ|ⵖⵓⵛ|ⵛⵓⵜ|ⴽⵜⵓ|ⵏⵓⵡ|ⴷⵓⵊ\r\nⵉ|ⴱ|ⵎ|ⵉ|ⵎ|ⵢ|ⵢ|ⵖ|ⵛ|ⴽ|ⵏ|ⴷ\r"
 
   private const val zgh_Format_Days: String =
-      "ⴰⵢⵏⴰⵙ|ⴰⵙⵉⵏⴰⵙ|ⴰⴽⵕⴰⵙ|ⴰⴽⵡⴰⵙ|ⴰⵙⵉⵎⵡⴰⵙ|ⴰⵙⵉⴹⵢⴰⵙ|ⴰⵙⴰⵎⴰⵙ\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r\nM|T|W|T|F|S|S\r"
+      "ⴰⵢⵏⴰⵙ|ⴰⵙⵉⵏⴰⵙ|ⴰⴽⵕⴰⵙ|ⴰⴽⵡⴰⵙ|ⴰⵙⵉⵎⵡⴰⵙ|ⴰⵙⵉⴹⵢⴰⵙ|ⴰⵙⴰⵎⴰⵙ\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r\nM|T|W|T|F|S|S\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r"
 
   private const val zgh_Format_Quarters: String =
       "ⴰⴽⵕⴰⴹⵢⵓⵔ 1|ⴰⴽⵕⴰⴹⵢⵓⵔ 2|ⴰⴽⵕⴰⴹⵢⵓⵔ 3|ⴰⴽⵕⴰⴹⵢⵓⵔ 4\r\nⴰⴽ 1|ⴰⴽ 2|ⴰⴽ 3|ⴰⴽ 4\r\n1|2|3|4\r"
@@ -13398,7 +13398,7 @@ object AvailableDateTimeDisplayNames {
       "ⵉⵏⵏⴰⵢⵔ|ⴱⵕⴰⵢⵕ|ⵎⴰⵕⵚ|ⵉⴱⵔⵉⵔ|ⵎⴰⵢⵢⵓ|ⵢⵓⵏⵢⵓ|ⵢⵓⵍⵢⵓⵣ|ⵖⵓⵛⵜ|ⵛⵓⵜⴰⵏⴱⵉⵔ|ⴽⵜⵓⴱⵔ|ⵏⵓⵡⴰⵏⴱⵉⵔ|ⴷⵓⵊⴰⵏⴱⵉⵔ\r\nⵉⵏⵏ|ⴱⵕⴰ|ⵎⴰⵕ|ⵉⴱⵔ|ⵎⴰⵢ|ⵢⵓⵏ|ⵢⵓⵍ|ⵖⵓⵛ|ⵛⵓⵜ|ⴽⵜⵓ|ⵏⵓⵡ|ⴷⵓⵊ\r\nⵉ|ⴱ|ⵎ|ⵉ|ⵎ|ⵢ|ⵢ|ⵖ|ⵛ|ⴽ|ⵏ|ⴷ\r"
 
   private const val zgh_Standalone_Days: String =
-      "ⴰⵢⵏⴰⵙ|ⴰⵙⵉⵏⴰⵙ|ⴰⴽⵕⴰⵙ|ⴰⴽⵡⴰⵙ|ⴰⵙⵉⵎⵡⴰⵙ|ⴰⵙⵉⴹⵢⴰⵙ|ⴰⵙⴰⵎⴰⵙ\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r\nM|T|W|T|F|S|S\r"
+      "ⴰⵢⵏⴰⵙ|ⴰⵙⵉⵏⴰⵙ|ⴰⴽⵕⴰⵙ|ⴰⴽⵡⴰⵙ|ⴰⵙⵉⵎⵡⴰⵙ|ⴰⵙⵉⴹⵢⴰⵙ|ⴰⵙⴰⵎⴰⵙ\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r\nM|T|W|T|F|S|S\r\nⴰⵢⵏ|ⴰⵙⵉ|ⴰⴽⵕ|ⴰⴽⵡ|ⴰⵙⵉⵎ|ⴰⵙⵉⴹ|ⴰⵙⴰ\r"
 
   private const val zgh_Standalone_Quarters: String =
       "ⴰⴽⵕⴰⴹⵢⵓⵔ 1|ⴰⴽⵕⴰⴹⵢⵓⵔ 2|ⴰⴽⵕⴰⴹⵢⵓⵔ 3|ⴰⴽⵕⴰⴹⵢⵓⵔ 4\r\nⴰⴽ 1|ⴰⴽ 2|ⴰⴽ 3|ⴰⴽ 4\r\n1|2|3|4\r"
@@ -13410,7 +13410,7 @@ object AvailableDateTimeDisplayNames {
       "一月|二月|三月|四月|五月|六月|七月|八月|九月|十月|十一月|十二月\r\n1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val zh_Format_Days: String =
-      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n周一|周二|周三|周四|周五|周六|周日\r\n一|二|三|四|五|六|日\r"
+      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n周一|周二|周三|周四|周五|周六|周日\r\n一|二|三|四|五|六|日\r\n周一|周二|周三|周四|周五|周六|周日\r"
 
   private const val zh_Format_Quarters: String =
       "第一季度|第二季度|第三季度|第四季度\r\n1季度|2季度|3季度|4季度\r\n1|2|3|4\r"
@@ -13421,7 +13421,7 @@ object AvailableDateTimeDisplayNames {
       "一月|二月|三月|四月|五月|六月|七月|八月|九月|十月|十一月|十二月\r\n1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val zh_Standalone_Days: String =
-      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n周一|周二|周三|周四|周五|周六|周日\r\n一|二|三|四|五|六|日\r"
+      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n周一|周二|周三|周四|周五|周六|周日\r\n一|二|三|四|五|六|日\r\n周一|周二|周三|周四|周五|周六|周日\r"
 
   private const val zh_Standalone_Quarters: String =
       "第一季度|第二季度|第三季度|第四季度\r\n1季度|2季度|3季度|4季度\r\n1|2|3|4\r"
@@ -13512,7 +13512,7 @@ object AvailableDateTimeDisplayNames {
       "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val zh_Hant_Format_Days: String =
-      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n週一|週二|週三|週四|週五|週六|週日\r\n一|二|三|四|五|六|日\r"
+      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n週一|週二|週三|週四|週五|週六|週日\r\n一|二|三|四|五|六|日\r\n一|二|三|四|五|六|日\r"
 
   private const val zh_Hant_Format_Quarters: String =
       "第1季|第2季|第3季|第4季\r\n第1季|第2季|第3季|第4季\r\n1|2|3|4\r"
@@ -13523,7 +13523,7 @@ object AvailableDateTimeDisplayNames {
       "1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1月|2月|3月|4月|5月|6月|7月|8月|9月|10月|11月|12月\r\n1|2|3|4|5|6|7|8|9|10|11|12\r"
 
   private const val zh_Hant_Standalone_Days: String =
-      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n週一|週二|週三|週四|週五|週六|週日\r\n一|二|三|四|五|六|日\r"
+      "星期一|星期二|星期三|星期四|星期五|星期六|星期日\r\n週一|週二|週三|週四|週五|週六|週日\r\n一|二|三|四|五|六|日\r\n一|二|三|四|五|六|日\r"
 
   private const val zh_Hant_Standalone_Quarters: String =
       "第1季|第2季|第3季|第4季\r\n第1季|第2季|第3季|第4季\r\n1|2|3|4\r"
@@ -13600,7 +13600,7 @@ object AvailableDateTimeDisplayNames {
       "Januwari|Februwari|Mashi|Ephreli|Meyi|Juni|Julayi|Agasti|Septhemba|Okthoba|Novemba|Disemba\r\nJan|Feb|Mas|Eph|Mey|Jun|Jul|Aga|Sep|Okt|Nov|Dis\r\nJ|F|M|E|M|J|J|A|S|O|N|D\r"
 
   private const val zu_Format_Days: String =
-      "UMsombuluko|ULwesibili|ULwesithathu|ULwesine|ULwesihlanu|UMgqibelo|ISonto\r\nMso|Bil|Tha|Sin|Hla|Mgq|Son\r\nM|B|T|S|H|M|S\r"
+      "UMsombuluko|ULwesibili|ULwesithathu|ULwesine|ULwesihlanu|UMgqibelo|ISonto\r\nMso|Bil|Tha|Sin|Hla|Mgq|Son\r\nM|B|T|S|H|M|S\r\nMso|Bil|Tha|Sin|Hla|Mgq|Son\r"
 
   private const val zu_Format_Quarters: String =
       "ikota yesi-1|ikota yesi-2|ikota yesi-3|ikota yesi-4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"
@@ -13611,7 +13611,7 @@ object AvailableDateTimeDisplayNames {
       "Januwari|Februwari|Mashi|Ephreli|Meyi|Juni|Julayi|Agasti|Septhemba|Okthoba|Novemba|Disemba\r\nJan|Feb|Mas|Eph|Mey|Jun|Jul|Aga|Sep|Okt|Nov|Dis\r\nJ|F|M|A|M|J|J|A|S|O|N|D\r"
 
   private const val zu_Standalone_Days: String =
-      "UMsombuluko|ULwesibili|ULwesithathu|ULwesine|ULwesihlanu|UMgqibelo|ISonto\r\nMso|Bil|Tha|Sin|Hla|Mgq|Son\r\nM|B|T|S|H|M|S\r"
+      "UMsombuluko|ULwesibili|ULwesithathu|ULwesine|ULwesihlanu|UMgqibelo|ISonto\r\nMso|Bil|Tha|Sin|Hla|Mgq|Son\r\nM|B|T|S|H|M|S\r\nMso|Bil|Tha|Sin|Hla|Mgq|Son\r"
 
   private const val zu_Standalone_Quarters: String =
       "ikota yesi-1|ikota yesi-2|ikota yesi-3|ikota yesi-4\r\nQ1|Q2|Q3|Q4\r\n1|2|3|4\r"

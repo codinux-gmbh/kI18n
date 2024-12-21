@@ -124,10 +124,18 @@ class AvailableDateTimeDisplayNamesClassGenerator(
                     appendRow(csvWriter, displayNames.standAloneWide, getCsvRow)
                     appendRow(csvWriter, displayNames.standAloneAbbreviated, getCsvRow)
                     appendRow(csvWriter, displayNames.standAloneNarrow, getCsvRow)
+
+                    if (displayNames.standAloneShort != null) {
+                        appendRow(csvWriter, displayNames.standAloneShort, getCsvRow)
+                    }
                 } else {
                     appendRow(csvWriter, displayNames.formatWide, getCsvRow)
                     appendRow(csvWriter, displayNames.formatAbbreviated, getCsvRow)
                     appendRow(csvWriter, displayNames.formatNarrow, getCsvRow)
+
+                    if (displayNames.formatShort != null) {
+                        appendRow(csvWriter, displayNames.formatShort, getCsvRow)
+                    }
                 }
             }
 

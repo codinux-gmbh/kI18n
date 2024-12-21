@@ -59,8 +59,6 @@ data class MonthDisplayNames(
 
 data class DayDisplayNames(
     // this name mappings are only valid for gregorian calendar. Other calendars may also have more or less days
-    @JsonProperty("sun")
-    val sunday: String,
     @JsonProperty("mon")
     val monday: String,
     @JsonProperty("tue")
@@ -72,7 +70,9 @@ data class DayDisplayNames(
     @JsonProperty("fri")
     val friday: String,
     @JsonProperty("sat")
-    val saturday: String
+    val saturday: String,
+    @JsonProperty("sun")
+    val sunday: String
 )
 
 data class QuarterDisplayNames(
