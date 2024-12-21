@@ -2,6 +2,7 @@ package net.codinux.i18n.datetime
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
+import net.codinux.i18n.LanguageTag
 import kotlin.test.Test
 
 class DateTimeFormatterTest {
@@ -39,6 +40,28 @@ class DateTimeFormatterTest {
         val result = underTest.formatDate(Date1DigitMonthAndDay, "yy-M-d")
 
         assertThat(result).isEqualTo("17-8-6")
+    }
+
+
+    @Test
+    fun date_MonthName_Abbreviated() {
+        val result = underTest.formatDate(Date, "MMM")
+
+        assertThat(result).isEqualTo("Oct")
+    }
+
+    @Test
+    fun date_MonthName_Wide() {
+        val result = underTest.formatDate(Date, "MMMM")
+
+        assertThat(result).isEqualTo("October")
+    }
+
+    @Test
+    fun date_MonthName_Narrow() {
+        val result = underTest.formatDate(Date, "MMMMM")
+
+        assertThat(result).isEqualTo("O")
     }
 
 
@@ -124,6 +147,91 @@ class DateTimeFormatterTest {
         val result = underTest.formatTime(EndOfDay, "k")
 
         assertThat(result).isEqualTo("23")
+    }
+
+
+    @Test
+    fun time_dayPeriod_midnight_abbreviated() {
+        val result = underTest.formatTime(StartOfDay, "hh:mm bbb", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 midnight")
+    }
+
+    @Test
+    fun time_dayPeriod_midnight_wide() {
+        val result = underTest.formatTime(StartOfDay, "hh:mm bbbb", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 midnight")
+    }
+
+    @Test
+    fun time_dayPeriod_midnight_narrow() {
+        val result = underTest.formatTime(StartOfDay, "hh:mm bbbbb", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 mi")
+    }
+
+    @Test
+    fun time_dayPeriod_ante_meridiem_abbreviated() {
+        val result = underTest.formatTime(StartOfDay, "hh:mm aaa", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 AM")
+    }
+
+    @Test
+    fun time_dayPeriod_ante_meridiem_wide() {
+        val result = underTest.formatTime(StartOfDay, "hh:mm aaaa", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 AM")
+    }
+
+    @Test
+    fun time_dayPeriod_ante_meridiem_narrow() {
+        val result = underTest.formatTime(StartOfDay, "hh:mm aaaaa", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 a")
+    }
+
+    @Test
+    fun time_dayPeriod_noon_abbreviated() {
+        val result = underTest.formatTime(Noon, "hh:mm bbb", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 noon")
+    }
+
+    @Test
+    fun time_dayPeriod_noon_wide() {
+        val result = underTest.formatTime(Noon, "hh:mm bbbb", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 noon")
+    }
+
+    @Test
+    fun time_dayPeriod_noon_narrow() {
+        val result = underTest.formatTime(Noon, "hh:mm bbbbb", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 n")
+    }
+
+    @Test
+    fun time_dayPeriod_post_meridiem_abbreviated() {
+        val result = underTest.formatTime(Noon, "hh:mm aaa", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 PM")
+    }
+
+    @Test
+    fun time_dayPeriod_post_meridiem_wide() {
+        val result = underTest.formatTime(Noon, "hh:mm aaaa", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 PM")
+    }
+
+    @Test
+    fun time_dayPeriod_post_meridiem_narrow() {
+        val result = underTest.formatTime(Noon, "hh:mm aaaaa", LanguageTag.English)
+
+        assertThat(result).isEqualTo("12:00 p")
     }
 
 

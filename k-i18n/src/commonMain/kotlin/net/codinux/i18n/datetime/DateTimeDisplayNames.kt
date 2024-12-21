@@ -21,7 +21,23 @@ data class MonthDisplayNames(
     val october: String,
     val november: String,
     val december: String
-)
+) {
+    fun getMonth(date: LocalDate): String = when (date.month) {
+        1 -> january
+        2 -> february
+        3 -> march
+        4 -> april
+        5 -> may
+        6 -> june
+        7 -> july
+        8 -> august
+        9 -> september
+        10 -> october
+        11 -> november
+        12 -> december
+        else -> throw IllegalArgumentException("Month is not within its valid bounds 1-12: ${date.month} (of $date)")
+    }
+}
 
 data class DayDisplayNames(
     // this name mappings are only valid for gregorian calendar. Other calendars may also have more or less days
@@ -46,7 +62,24 @@ data class DayPeriodDisplayNames(
     val pm: String,
     val midnight: String? = null,
     val noon: String? = null,
-)
+) {
+    fun getDayPeriod(time: LocalTime, alsoFormatNoonAndMidnight: Boolean): String {
+        if (alsoFormatNoonAndMidnight) {
+            if (time.hour == 0 && midnight != null) {
+                return midnight
+            }
+            if (time.hour == 12 && noon != null) {
+                return noon
+            }
+        }
+
+        return if (time.hour < 12) {
+            am
+        } else {
+            pm
+        }
+    }
+}
 
 data class DisplayNameSet<T>(
     val wide: T,

@@ -7,8 +7,16 @@ data class DateTimeFormatPattern(
     val yearMaxLength: Int? = null,
 
     val monthStyle: MonthStyle? = null,
+    val monthFormatFieldsLength: Int = 0,
+
+    val weekDayStyle: WeekDayStyle? = null,
+    val weekDayFormatFieldsLength: Int = 0,
 
     val dayMinLength: Int? = null,
+
+    val dayPeriodStyle: DateFieldWidth? = null,
+    val dayPeriodFormatFieldsLength: Int = 0,
+    val alsoFormatNoonAndMidnight: Boolean = false,
 
     val hourStyle: HourStyle? = null,
     /**
@@ -49,6 +57,24 @@ enum class MonthStyle {
      * Example: S
      */
     Narrow
+}
+
+enum class DateFieldWidth {
+    Abbreviated,
+
+    Wide,
+
+    Narrow
+}
+
+enum class WeekDayStyle {
+    Abbreviated,
+
+    Wide,
+
+    Narrow,
+
+    Short
 }
 
 enum class HourStyle(val fieldSymbol: String) {

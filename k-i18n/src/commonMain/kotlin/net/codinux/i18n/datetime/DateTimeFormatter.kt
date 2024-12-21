@@ -2,17 +2,25 @@ package net.codinux.i18n.datetime
 
 import net.codinux.i18n.LanguageTag
 
-class DateTimeFormatter {
+class DateTimeFormatter(
+    private val displayNamesResolver: DateTimeDisplayNamesResolver = DateTimeDisplayNamesResolver()
+) {
 
     fun formatDate(date: LocalDate, locale: LanguageTag = LanguageTag.current): String {
         // TODO: get DateTimeFormat from locale
         throw NotImplementedError("Retrieved DateTimeFormat from locale is not implemented yet.")
     }
 
-    fun formatDate(date: LocalDate, format: DateTimeFormat) =
-        formatDate(date, format.dateFormat)
+    /**
+     * Locale is only needed for localized month and day names
+     */
+    fun formatDate(date: LocalDate, format: DateTimeFormat, locale: LanguageTag = LanguageTag.current) =
+        formatDate(date, format.dateFormat, locale)
 
-    fun formatDate(date: LocalDate, formatPattern: String): String {
+    /**
+     * Locale is only needed for localized month and day names
+     */
+    fun formatDate(date: LocalDate, formatPattern: String, locale: LanguageTag = LanguageTag.current): String {
         val pattern = parsePattern(formatPattern)
 
         var formatted = pattern.pattern
@@ -27,14 +35,28 @@ class DateTimeFormatter {
         }
 
         if (pattern.monthStyle != null) {
-            val (month, count) = when (pattern.monthStyle) {
-                MonthStyle.NumericMinDigits -> date.month.toString() to 1
-                MonthStyle.Numeric2Digits -> date.month.toString().padStart(2, '0') to 2
-                else -> "" to 0 // TODO: localized month name are not supported yet
+            val month = when (pattern.monthStyle) {
+                MonthStyle.NumericMinDigits -> date.month.toString()
+                MonthStyle.Numeric2Digits -> date.month.toString().padStart(2, '0')
+                MonthStyle.Abbreviated -> getMonthNames(locale).abbreviated.getMonth(date)
+                MonthStyle.Wide -> getMonthNames(locale).wide.getMonth(date)
+                MonthStyle.Narrow -> getMonthNames(locale).narrow.getMonth(date)
             }
 
-            formatted = formatted.replace("M".repeat(count), month)
+            formatted = formatted.replace("M".repeat(pattern.monthFormatFieldsLength), month)
         }
+
+        // cannot support this yet as don't know how to get the week day from date
+//        if (pattern.weekDayStyle != null) {
+//            val weekDay = when (pattern.weekDayStyle) {
+//                WeekDayStyle.Abbreviated -> getDayNames(locale).abbreviated.getDay(date)
+//                WeekDayStyle.Wide -> getDayNames(locale).wide.getDay(date)
+//                WeekDayStyle.Narrow -> getDayNames(locale).narrow.getDay(date)
+//                WeekDayStyle.Short -> getDayNames(locale).short?.getDay(date)
+//            }
+//
+//            formatted = formatted.replace("E".repeat(pattern.weekDayFormatFieldsLength), weekDay)
+//        }
 
         if (pattern.dayMinLength != null) {
             val day = date.dayOfMonth.toString().padStart(pattern.dayMinLength, '0')
@@ -51,10 +73,16 @@ class DateTimeFormatter {
         throw NotImplementedError("Retrieved DateTimeFormat from locale is not implemented yet.")
     }
 
-    fun formatTime(time: LocalTime, format: DateTimeFormat) =
-        formatTime(time, format.dateFormat)
+    /**
+     * Locale is only needed for localized period names (AM, PM, Midnight, Noon).
+     */
+    fun formatTime(time: LocalTime, format: DateTimeFormat, locale: LanguageTag = LanguageTag.current) =
+        formatTime(time, format.dateFormat, locale)
 
-    fun formatTime(time: LocalTime, formatPattern: String): String {
+    /**
+     * Locale is only needed for localized period (AM, PM, Midnight, Noon) and time zone names.
+     */
+    fun formatTime(time: LocalTime, formatPattern: String, locale: LanguageTag = LanguageTag.current): String {
         val pattern = parsePattern(formatPattern)
 
         var formatted = pattern.pattern
@@ -91,7 +119,39 @@ class DateTimeFormatter {
             formatted = formatted.replace("S".repeat(pattern.fractionalSecondLength), fractionalSecond)
         }
 
+        if (pattern.dayPeriodStyle != null) {
+            val dayPeriod = when (pattern.dayPeriodStyle) {
+                DateFieldWidth.Abbreviated -> getDayPeriodNames(locale).abbreviated.getDayPeriod(time, pattern.alsoFormatNoonAndMidnight)
+                DateFieldWidth.Wide -> getDayPeriodNames(locale).wide.getDayPeriod(time, pattern.alsoFormatNoonAndMidnight)
+                DateFieldWidth.Narrow -> getDayPeriodNames(locale).narrow.getDayPeriod(time, pattern.alsoFormatNoonAndMidnight)
+            }
+
+            formatted = formatted.replace((if (pattern.alsoFormatNoonAndMidnight) "b" else "a").repeat(pattern.dayPeriodFormatFieldsLength), dayPeriod)
+        }
+
         return formatted
+    }
+
+
+    private fun getMonthNames(locale: LanguageTag) =
+        getDisplayNames(locale).months
+
+    private fun getDayNames(locale: LanguageTag) =
+        getDisplayNames(locale).days
+
+    private fun getQuarterNames(locale: LanguageTag) =
+        getDisplayNames(locale).quarters
+
+    private fun getDayPeriodNames(locale: LanguageTag) =
+        getDisplayNames(locale).dayPeriods
+
+    private fun getDisplayNames(locale: LanguageTag): DateTimeDisplayNames {
+        val displayNames = displayNamesResolver.getLocalizedFormatDisplayNames(locale)
+        if (displayNames == null) {
+            throw IllegalArgumentException("Localized date time names not found for locale '$locale' or its parents. Are you sure this locale exists?")
+        }
+
+        return displayNames
     }
 
 
@@ -120,11 +180,32 @@ class DateTimeFormatter {
             else -> null // TODO: that's not full correct, only valid for 0 (the only remaining valid value); not specified for count 'M' > 5
         }
 
+        // TODO: also handle e and c
+        val weekDayLength = formatPattern.count { it == 'E' }
+        val weekDayStyle = when (weekDayLength) {
+            1, 2, 3 -> WeekDayStyle.Abbreviated
+            4 -> WeekDayStyle.Wide
+            5 -> WeekDayStyle.Narrow
+            6 -> WeekDayStyle.Short
+            else -> null // TODO: that's not full correct, only valid for 0 (the only remaining valid value); not specified for count 'E' > 6
+        }
+
         // TODO: also handle D, F and g
         val dayLength = formatPattern.count { it == 'd' }
         val dayMinLength = dayLength.takeIf { it in 1..2 }
 
-        // TODO: also handle quarter (Q, q) and week (w, W), and week day (E, e, c)
+        // there's also B, but it's optional and i decided not to support it
+        val dayPeriodNoonMidnightLength = formatPattern.count { it == 'b' } // period including 'Noon' and 'Midnight'
+        val dayPeriodLength = dayPeriodNoonMidnightLength.takeUnless { it == 0 } ?: formatPattern.count { it == 'a' } // default period: AM and PM
+        val alsoFormatNoonAndMidnight = dayPeriodNoonMidnightLength > 0
+        val dayPeriodStyle = when (dayPeriodLength) {
+            1, 2, 3 -> DateFieldWidth.Abbreviated
+            4 -> DateFieldWidth.Wide
+            5 -> DateFieldWidth.Narrow
+            else -> null // TODO: that's not full correct, only valid for 0 (the only remaining valid value); not specified for count 'a' and 'b > 5
+        }
+
+        // TODO: also handle quarter (Q, q) and week (w, W)
 
         // TODO: also handle period (a, b, B)
 
@@ -155,7 +236,8 @@ class DateTimeFormatter {
 
         return DateTimeFormatPattern(
             formatPattern,
-            yearMinLength, yearMaxLength, monthStyle, dayMinLength,
+            yearMinLength, yearMaxLength, monthStyle, monthLength, weekDayStyle, weekDayLength, dayMinLength,
+            dayPeriodStyle, dayPeriodLength, alsoFormatNoonAndMidnight,
             hourStyle, hourMinLength, minuteMinLength, secondMinLength, fractionalSecondLength
         )
     }
