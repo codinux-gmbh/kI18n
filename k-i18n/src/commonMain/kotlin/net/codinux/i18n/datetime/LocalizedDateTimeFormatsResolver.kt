@@ -37,7 +37,7 @@ class LocalizedDateTimeFormatsResolver {
 
     private fun mapFormats(lookup: LocalizedDateTimeFormatsLookup): LocalizedDateTimeFormats? {
         if (lookup.date == null || lookup.time == null || lookup.dateTime == null) {
-            return null
+            return null // should only happen for custom language tags, not for language tags defined in CLDR
         }
 
         return LocalizedDateTimeFormats(mapFormat(lookup.date!!), mapFormat(lookup.time!!), mapFormat(lookup.dateTime!!))

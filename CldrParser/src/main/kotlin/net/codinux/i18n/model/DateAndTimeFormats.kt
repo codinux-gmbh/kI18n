@@ -2,6 +2,7 @@ package net.codinux.i18n.model
 
 import com.fasterxml.jackson.annotation.JsonAnySetter
 import com.fasterxml.jackson.annotation.JsonProperty
+import net.codinux.i18n.datetime.DisplayNameSet
 
 data class DateAndTimeFormats(
     val months: AllDisplayNames<MonthDisplayNames>,
@@ -105,17 +106,27 @@ data class DayPeriodDisplayNames(
 )
 
 data class AllDisplayNames<T>(
+    /**
+     * The context is either format (the default), the form used within a complete date format string (such as
+     * "Saturday, November 12"), or ...
+     */
     val format: DisplayNameSet<T>,
+
+    /**
+     * ... stand-alone, the form for date elements used independently, such as in calendar headers. The stand-alone form
+     * may be used in any other date format that shares the same form of the name. For month names, this is typically
+     * the nominative grammatical form, and might also be used in patterns such as "LLLL y" (month name + year). The
+     * format form is an additional form that can be used in contexts where it is different than the stand-alone form.
+     * For example, in many languages, patterns that combine month name with day-of-month (and possibly other elements)
+     * may require the month name to be in a grammatical form such as genitive or partitive.
+     *
+     * he distinctions between stand-alone (e.g. LLLL) and format (e.g. MMMM) forms are only relevant for how date
+     * elements are used within a date format. They are not intended to reflect how a date format is used within a
+     * sentence. For example, they are not intended to be used to generate the dative form of a date format when that
+     * format is used after a preposition that takes dative form.
+     */
     @JsonProperty("stand-alone")
     val standAlone: DisplayNameSet<T>
-)
-
-data class DisplayNameSet<T>(
-    val wide: T,
-    val abbreviated: T,
-    val narrow: T,
-
-    val short: T? = null, // only set for days
 )
 
 data class AllEraDisplayNames(

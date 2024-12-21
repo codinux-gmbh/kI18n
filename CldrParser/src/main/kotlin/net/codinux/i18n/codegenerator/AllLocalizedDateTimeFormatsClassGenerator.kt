@@ -36,7 +36,7 @@ class AllLocalizedDateTimeFormatsClassGenerator(
         }
 
 
-        // method to find all region display names of a LanguageTag
+        // method to find all date time formats of a LanguageTag
         val getFormatsForLocaleMethod = FunSpec.builder("getDateTimeFormatsForLocale")
             .addParameter("language", String::class)
             .returns(LocalizedDateTimeFormatsLookup::class)
