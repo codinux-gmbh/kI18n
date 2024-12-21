@@ -12,7 +12,11 @@ class LocalizedDateTimeFormatsResolver {
     private val csvReader = CsvReader(CsvFormatsSeparator)
 
 
-    fun getDateTimeFormatsForLocale(locale: LanguageTag): LocalizedDateTimeFormats? {
+    fun getDateTimeFormatsForLocale(locale: LanguageTag): LocalizedDateTimeFormats =
+        getDateTimeFormatsForLocaleOrNull(locale)
+            ?: throw IllegalArgumentException("Localized date time formats not found for locale '$locale' or its parents. Are you sure this locale exists?")
+
+    fun getDateTimeFormatsForLocaleOrNull(locale: LanguageTag): LocalizedDateTimeFormats? {
         val lookup = AllLocalizedDateTimeFormats.getDateTimeFormatsForLocale(locale.tag)
         var parent: LanguageTag? = locale.parent ?: LanguageTag.Root
 

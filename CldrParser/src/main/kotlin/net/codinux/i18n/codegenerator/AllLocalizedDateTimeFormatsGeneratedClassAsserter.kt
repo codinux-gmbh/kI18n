@@ -38,11 +38,7 @@ class AllLocalizedDateTimeFormatsGeneratedClassAsserter(
         }
     }
 
-    private fun assertFormatsEqual(locale: LanguageTag, expectedFormats: DateAndTimeFormats, resolvedFormats: LocalizedDateTimeFormats?) {
-        requireNotNull(resolvedFormats) {
-            "Could not resolve DateTimeFormats for locale $locale"
-        }
-
+    private fun assertFormatsEqual(locale: LanguageTag, expectedFormats: DateAndTimeFormats, resolvedFormats: LocalizedDateTimeFormats) {
         assertFormatsEqual(locale, "date", expectedFormats.dateFormats, resolvedFormats.dateFormats)
 
         assertFormatsEqual(locale, "time", expectedFormats.timeFormats, resolvedFormats.timeFormats)
