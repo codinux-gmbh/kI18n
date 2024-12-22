@@ -161,6 +161,32 @@ class DateTimeFormatter(
     }
 
 
+    fun format(month: Month, style: DateFieldWidth, locale: LanguageTag = LanguageTag.current): String {
+        val displayNameSet = getMonthNames(locale)
+
+        val displayNames = when (style) {
+            DateFieldWidth.Wide -> displayNameSet.wide
+            DateFieldWidth.Abbreviated -> displayNameSet.abbreviated
+            DateFieldWidth.Narrow -> displayNameSet.narrow
+        }
+
+        return displayNames.getMonth(month)
+    }
+
+    fun format(day: DayOfWeek, style: WeekDayStyle, locale: LanguageTag = LanguageTag.current): String {
+        val displayNamesSet = getDayNames(locale)
+
+        val displayNames = when (style) {
+            WeekDayStyle.Wide -> displayNamesSet.wide
+            WeekDayStyle.Abbreviated -> displayNamesSet.abbreviated
+            WeekDayStyle.Narrow -> displayNamesSet.narrow
+            WeekDayStyle.Short -> displayNamesSet.short ?: displayNamesSet.narrow // TODO: what is the correct behaviour, fallback to narrow or throw an exception?
+        }
+
+        return displayNames.getDay(day)
+    }
+
+
     private fun getMonthNames(locale: LanguageTag) =
         getDisplayNames(locale).months
 

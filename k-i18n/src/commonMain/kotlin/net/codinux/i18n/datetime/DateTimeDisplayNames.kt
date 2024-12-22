@@ -22,7 +22,11 @@ data class MonthDisplayNames(
     val november: String,
     val december: String
 ) {
-    fun getMonth(date: LocalDate): String = when (date.month) {
+    fun getMonth(date: LocalDate): String = getMonth(date.month)
+
+    fun getMonth(month: Month): String = getMonth(month.monthNumber)
+
+    fun getMonth(monthInt: Int): String = when (monthInt) {
         1 -> january
         2 -> february
         3 -> march
@@ -35,7 +39,7 @@ data class MonthDisplayNames(
         10 -> october
         11 -> november
         12 -> december
-        else -> throw IllegalArgumentException("Month is not within its valid bounds 1-12: ${date.month} (of $date)")
+        else -> throw IllegalArgumentException("Month is not within its valid bounds 1-12: $monthInt")
     }
 }
 
@@ -48,7 +52,17 @@ data class DayDisplayNames(
     val friday: String,
     val saturday: String,
     val sunday: String,
-)
+) {
+    fun getDay(day: DayOfWeek): String = when (day) {
+        DayOfWeek.Monday -> monday
+        DayOfWeek.Tuesday -> tuesday
+        DayOfWeek.Wednesday -> wednesday
+        DayOfWeek.Thursday -> thursday
+        DayOfWeek.Friday -> friday
+        DayOfWeek.Saturday -> saturday
+        DayOfWeek.Sunday -> sunday
+    }
+}
 
 data class QuarterDisplayNames(
     val first: String,
