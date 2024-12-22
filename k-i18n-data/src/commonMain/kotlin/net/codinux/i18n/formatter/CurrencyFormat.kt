@@ -11,6 +11,7 @@ data class CurrencyFormat(
 
     val currencyPatternAppendISO: String? = null,
 
+    // the following properties are also available in CLDR data, but currently not written to AvailableNumberFormats or used in code
     val currencySpacing: CurrencySpacing? = null,
 
     val unitPatternCountZero: String? = null,

@@ -217,9 +217,17 @@ open class NumberFormatter {
             stringBeforeIntegerPart, stringAfterIntegerPart, stringBeforeFractionPart, stringAfterFractionPart)
     }
 
-    protected open fun getNumberFormat(locale: LanguageTag): NumberFormat = when (locale) { // TODO: implement
-        LanguageTag.German -> NumberFormats.Germany
-        else -> NumberFormats.USA
+    protected open fun getNumberFormat(locale: LanguageTag): NumberFormat {
+        val numberFormat = AvailableNumberFormats.getNumberFormat(locale.tag)
+        if (numberFormat != null) {
+            return numberFormat
+        }
+
+        locale.parent?.let { parent ->
+            return getNumberFormat(parent)
+        }
+
+        throw IllegalArgumentException("Number format not found for locale '$locale' or its parents. Are you sure this locale exists?")
     }
 
 }

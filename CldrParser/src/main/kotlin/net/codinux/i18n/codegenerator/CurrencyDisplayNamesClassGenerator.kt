@@ -19,15 +19,14 @@ class CurrencyDisplayNamesClassGenerator(
         // don't add display names redundantly, if they have the same display name as in parent locale, don't add them to file but look them up in parent locale
         val uniqueDisplayNamesByLanguageTag = removeRedundantValuesFromSubLocales(displayNamesByLanguageTag)
 
-        val parameterizedType = ImmutableMap::class.parameterizedBy(String::class, String::class)
-        val immutableMapOfReference = MemberName("net.codinux.collections", "immutableMapOf")
+        val parameterizedType = ClassGeneratorUtil.immutableMapParameterizedType
 
         // all LanguageTags as lazy property returning a Map with all available display names
         val currencyDisplayNamesProperties = uniqueDisplayNamesByLanguageTag
             .map { (languageTag, currencyDisplayNames) ->
                 PropertySpec.builder(languageTag.tag.replace('-', '_'), parameterizedType)
                     .delegate(CodeBlock.builder().apply {
-                        addStatement("lazy { %M(", immutableMapOfReference)
+                        addStatement("lazy { %M(", ClassGeneratorUtil.immutableMapOfReference)
 
                         currencyDisplayNames.forEach { currency ->
                             val displayName = currency.displayName ?: currency.displayNameCountOther ?: currency.displayNameCountOne

@@ -15,10 +15,8 @@ class ParentLocalesClassGenerator(
     fun generate() {
         val parentLocales = cldrJsonParser.parseParentLocales()
 
-        val immutableMapOfReference = MemberName("net.codinux.collections", "immutableMapOf")
-
         val parentLocalesCodeBlock = CodeBlock.builder().apply {
-            addStatement("%M(", immutableMapOfReference)
+            addStatement("%M(", ClassGeneratorUtil.immutableMapOfReference)
 
             parentLocales.forEach { (parent, child) ->
                 addStatement("  %S to %T.parse(%S),", parent, LanguageTag::class, LanguageTag.parse(child))

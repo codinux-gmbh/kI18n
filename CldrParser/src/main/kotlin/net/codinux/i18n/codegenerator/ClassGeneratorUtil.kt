@@ -1,11 +1,20 @@
 package net.codinux.i18n.codegenerator
 
 import com.squareup.kotlinpoet.*
+import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
+import net.codinux.collections.ImmutableMap
 import net.codinux.i18n.service.FileSystemUtil
 import java.nio.file.Path
 import java.text.Normalizer
 
 open class ClassGeneratorUtil {
+
+    companion object {
+        val immutableMapParameterizedType = ImmutableMap::class.parameterizedBy(String::class, String::class)
+
+        val immutableMapOfReference = MemberName("net.codinux.collections", "immutableMapOf")
+    }
+
 
     open fun createConstant(constantName: String, value: String) =
         PropertySpec.builder(getKotlinFriendlyVariableName(constantName), String::class, KModifier.CONST)
