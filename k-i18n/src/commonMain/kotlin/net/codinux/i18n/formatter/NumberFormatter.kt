@@ -84,13 +84,15 @@ open class NumberFormatter {
         // ¤¤¤¤¤	Narrow currency symbol. The same symbols may be used for multiple currencies. Thus the symbol may be ambiguous, and should only be where the context is clear.
         // $12.00
         // others	Invalid in current CLDR. Reserved for future specification
-        return if (formattedNumber.contains("¤¤¤¤¤") && currency.symbolVariant != null) {
-            formattedNumber.replace("¤¤¤¤¤", currency.symbolVariant!!)
+
+        // If data is unavailable for a given sequence in a given locale, the display may fall back to ¤ or ¤¤.
+        return if (formattedNumber.contains("¤¤¤¤¤")) {
+            formattedNumber.replace("¤¤¤¤¤", currency.symbolVariant ?: currency.symbol ?: currency.alpha3Code)
         }
         // TODO: ¤¤¤	Appropriate currency display name for the currency, based on the plural rules in effect for the locale
         else if (formattedNumber.contains("¤¤")) {
             formattedNumber.replace("¤¤", currency.alpha3Code)
-        } else { // TODO: fallback to symbolVariant is for sure ok. But is fallback to alpha3Code also ok if explicitly symbol has been requested?
+        } else {
             formattedNumber.replaceFirst("¤", currency.symbol ?: currency.symbolVariant ?: currency.alpha3Code).replace("¤", "")
         }
     }
