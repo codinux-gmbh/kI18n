@@ -39,4 +39,20 @@ class NumberFormatterTest {
         assertThat(result).isEqualTo("5 kr")
     }
 
+    @Test
+    fun currency_DecimalSeparatorDiffersForCurrency() {
+        // decimal separator for currencies ('.') differs from default locale's decimal separator (',')
+        val result = underTest.formatCurrency(12_345.67, Currency.SwissFranc, LanguageTag.parse("fr-CH"))
+
+        assertThat(result).isEqualTo("12 345.67 CHF")
+    }
+
+    @Test
+    fun currency_GroupSeparatorDiffersForCurrency() {
+        // group separator for currencies ('.') differs from default locale's decimal separator (' ')
+        val result = underTest.formatCurrency(12_345.67, Currency.Euro, LanguageTag.parse("de-AT"))
+
+        assertThat(result).isEqualTo("€ 12.345,67")
+    }
+
 }

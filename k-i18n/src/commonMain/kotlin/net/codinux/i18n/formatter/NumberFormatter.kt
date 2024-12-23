@@ -50,7 +50,7 @@ open class NumberFormatter {
         formatPercent(number, format.percentFormats[format.defaultNumberingSystem]!!, format.symbols[format.defaultNumberingSystem]!!)
 
     open fun formatPercent(number: Number, format: DecimalFormat, symbols: Symbols): String =
-        format(number, format.standard, symbols, null, 100)
+        format(number, format.standard, symbols, multiplyNumberWith = 100)
 
 
     open fun formatCurrency(number: Number, currency: Currency, locale: LanguageTag = LanguageTag.current) =
@@ -71,8 +71,10 @@ open class NumberFormatter {
         // - The currency symbol being used is the narrow symbol (¤¤¤¤¤) or has the same value as the narrow symbol, and
         // - The currency symbol does not have the same value as the ISO 4217 3-letter code. Most locales will not need to override the pattern provided in root, shown in the xml sample above.
 
-        // In currency formats, the number of digits after the decimal also does not matter, since the information in the supplemental data (see Supplemental Currency Data) is used to override the number of decimal places — and the rounding — according to the currency that is being formatted.
-        val formattedNumber = format(number, format.standard, symbols, currency.defaultFractionDigits) // TODO: or use format.accounting ?
+        // In currency formats, the number of digits after the decimal also does not matter, since the information in
+        // the supplemental data (see Supplemental Currency Data) is used to override the number of decimal places —
+        // and the rounding — according to the currency that is being formatted.
+        val formattedNumber = format(number, format.standard, symbols, currency.defaultFractionDigits, isCurrency = true) // TODO: or use format.accounting ?
 
         // No.	Replacement / Example
         // ¤	Standard currency symbol
@@ -104,7 +106,7 @@ open class NumberFormatter {
      * ‰: "Multiply by 1000 and show as per mille (aka “basis points”)"
      */
     // @VisibleForTesting
-    internal open fun format(number: Number, formatPattern: String, symbols: Symbols, countFractionalDigits: Int? = null, multiplyNumberWith: Int? = null): String {
+    internal open fun format(number: Number, formatPattern: String, symbols: Symbols, countFractionalDigits: Int? = null, isCurrency: Boolean = false, multiplyNumberWith: Int? = null): String {
         if (number is Double) {
             if (number.isNaN()) return symbols.nan
             if (number.isInfinite()) {
@@ -123,7 +125,7 @@ open class NumberFormatter {
 
         val numberAsString = roundAndConvertToString(number, pattern, multiplyNumberWith)
 
-        val integerPart = formatIntegerPart(number, numberAsString, pattern, symbols)
+        val integerPart = formatIntegerPart(number, numberAsString, pattern, symbols, isCurrency)
         val fractionPart = formatFractionPart(numberAsString, pattern, symbols)
 
         return if (fractionPart.isBlank()) {
@@ -131,11 +133,12 @@ open class NumberFormatter {
         } else if (fractionPart.none { it.isDigit() }) { // e.g. only contains currency symbol or percent sign but no digits
             "$integerPart$fractionPart"
         } else {
-            "$integerPart${symbols.decimal}$fractionPart"
+            val decimalSeparator = if (isCurrency && symbols.currencyDecimal != null) symbols.currencyDecimal else symbols.decimal
+            "$integerPart${decimalSeparator}$fractionPart"
         }
     }
 
-    protected open fun formatIntegerPart(number: Number, numberAsString: String, pattern: NumberFormatPattern, symbols: Symbols): String {
+    protected open fun formatIntegerPart(number: Number, numberAsString: String, pattern: NumberFormatPattern, symbols: Symbols, isCurrency: Boolean): String {
         var integerPart = numberAsString.substringBefore('.')
 
         if (pattern.minimumIntegerDigits > 0) {
@@ -143,8 +146,9 @@ open class NumberFormatter {
         }
 
         if (pattern.groupSize > 0) {
+            val groupSeparator = if (isCurrency && symbols.currencyGroup != null) symbols.currencyGroup!! else symbols.group
             // TODO: this is not very efficient
-            integerPart = integerPart.reversed().chunked(pattern.groupSize).reversed().joinToString(symbols.group) { it.reversed() }
+            integerPart = integerPart.reversed().chunked(pattern.groupSize).reversed().joinToString(groupSeparator) { it.reversed() }
         }
 
         // TODO: this is not fully correct, there may be a negative pattern in pattern.pattern
