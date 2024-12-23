@@ -1,8 +1,6 @@
 package net.codinux.i18n.formatter
 
-import net.codinux.i18n.Currency
-import net.codinux.i18n.LanguageTag
-import net.codinux.i18n.lastIndexOfOrNull
+import net.codinux.i18n.*
 import kotlin.math.abs
 import kotlin.math.pow
 import kotlin.math.round
@@ -53,13 +51,23 @@ open class NumberFormatter {
         format(number, format.standard, symbols, multiplyNumberWith = 100)
 
 
-    open fun formatCurrency(number: Number, currency: Currency, locale: LanguageTag = LanguageTag.current) =
-        formatCurrency(number, currency, getNumberFormat(locale))
+    /**
+     * From CLDR: "APIs supporting this format should provide control over the number of significant or fraction digits."
+     * So the count fractional digits can be set with [countFractionalDigits]
+     */
+    open fun formatCurrency(number: Number, currency: Currency, locale: LanguageTag = LanguageTag.current, countFractionalDigits: Int? = null) =
+        formatCurrency(number, currency, getNumberFormat(locale), locale, countFractionalDigits)
 
-    open fun formatCurrency(number: Number, currency: Currency, format: NumberFormat) =
-        formatCurrency(number, currency, format.currencyFormats[format.defaultNumberingSystem]!!, format.symbols[format.defaultNumberingSystem]!!)
+    /**
+     * Locale is only needed for localized currency symbol.
+     */
+    open fun formatCurrency(number: Number, currency: Currency, format: NumberFormat, locale: LanguageTag = LanguageTag.current, countFractionalDigits: Int? = null) =
+        formatCurrency(number, currency, format.currencyFormats[format.defaultNumberingSystem]!!, format.symbols[format.defaultNumberingSystem]!!, locale, countFractionalDigits)
 
-    open fun formatCurrency(number: Number, currency: Currency, format: CurrencyFormat, symbols: Symbols): String {
+    /**
+     * Locale is only needed for localized currency symbol.
+     */
+    open fun formatCurrency(number: Number, currency: Currency, format: CurrencyFormat, symbols: Symbols, locale: LanguageTag = LanguageTag.current, countFractionalDigits: Int? = null): String {
         // The following additional elements were intended to allow proper placement of the currency symbol relative to the numeric quantity. These are specified in the root locale and typically not overridden in any other locale. However, as of CLDR 42, the preferred approach to controlling placement of the currency symbol is use of the alt="alphaNextToNumber" variant for currencyFormat patterns. See below and - Currencies for additional information on the use of these options.
 
         // The alt="alphaNextToNumber" pattern, if available, should be used instead of the standard pattern when the currency symbol character closest to the numeric value has Unicode General Category L (letter). The alt="alphaNextToNumber" pattern is typically provided when the standard currency pattern does not have a space between currency symbol and numeric value; the alphaNextToNumber variant adds a non-breaking space if appropriate for the locale.
@@ -74,7 +82,7 @@ open class NumberFormatter {
         // In currency formats, the number of digits after the decimal also does not matter, since the information in
         // the supplemental data (see Supplemental Currency Data) is used to override the number of decimal places —
         // and the rounding — according to the currency that is being formatted.
-        val formattedNumber = format(number, format.standard, symbols, currency.defaultFractionDigits, isCurrency = true) // TODO: or use format.accounting ?
+        val formattedNumber = format(number, format.standard, symbols, countFractionalDigits ?: currency.defaultFractionDigits, isCurrency = true) // TODO: or use format.accounting ?
 
         // No.	Replacement / Example
         // ¤	Standard currency symbol
@@ -89,6 +97,7 @@ open class NumberFormatter {
 
         // If data is unavailable for a given sequence in a given locale, the display may fall back to ¤ or ¤¤.
         return if (formattedNumber.contains("¤¤¤¤¤")) {
+            // TODO: get the localized symbolVariant
             formattedNumber.replace("¤¤¤¤¤", currency.symbolVariant ?: currency.symbol ?: currency.alpha3Code)
         }
         // TODO: ¤¤¤	Appropriate currency display name for the currency, based on the plural rules in effect for the locale

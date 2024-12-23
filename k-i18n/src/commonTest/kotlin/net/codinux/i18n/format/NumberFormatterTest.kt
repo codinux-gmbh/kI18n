@@ -55,4 +55,11 @@ class NumberFormatterTest {
         assertThat(result).isEqualTo("€ 12.345,67")
     }
 
+    @Test
+    fun currency_OverrideCountFractionalDigits() {
+        val result = underTest.formatCurrency(9_345.67, Currency.Euro, LanguageTag.German, 0)
+
+        assertThat(result).isEqualTo("9.346 €")
+    }
+
 }
