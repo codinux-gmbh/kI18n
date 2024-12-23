@@ -90,8 +90,8 @@ open class NumberFormatter {
         // TODO: ¤¤¤	Appropriate currency display name for the currency, based on the plural rules in effect for the locale
         else if (formattedNumber.contains("¤¤")) {
             formattedNumber.replace("¤¤", currency.alpha3Code)
-        } else {
-            formattedNumber.replaceFirst("¤", currency.symbol ?: "").replace("¤", "")
+        } else { // TODO: fallback to symbolVariant is for sure ok. But is fallback to alpha3Code also ok if explicitly symbol has been requested?
+            formattedNumber.replaceFirst("¤", currency.symbol ?: currency.symbolVariant ?: currency.alpha3Code).replace("¤", "")
         }
     }
 
