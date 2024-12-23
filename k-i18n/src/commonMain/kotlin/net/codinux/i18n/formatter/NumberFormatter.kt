@@ -126,6 +126,8 @@ open class NumberFormatter {
 
         return if (fractionPart.isBlank()) {
             integerPart
+        } else if (fractionPart.none { it.isDigit() }) { // e.g. only contains currency symbol or percent sign but no digits
+            "$integerPart$fractionPart"
         } else {
             "$integerPart${symbols.decimal}$fractionPart"
         }
