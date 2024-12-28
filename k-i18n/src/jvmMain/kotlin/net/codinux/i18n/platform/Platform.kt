@@ -2,6 +2,7 @@ package net.codinux.i18n.platform
 
 import net.codinux.collections.toImmutableList
 import net.codinux.i18n.LanguageTag
+import java.util.*
 
 internal actual object Platform {
 
@@ -26,5 +27,9 @@ internal actual object Platform {
         jvmLocale.script.takeIf { it.isNotBlank() },
         jvmLocale.variant.takeIf { it.isNotBlank() }
     )
+
+    fun setSystemLocale(language: LanguageTag) {
+        Locale.setDefault(Locale.forLanguageTag(language.tag))
+    }
 
 }

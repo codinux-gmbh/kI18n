@@ -10,4 +10,11 @@ internal actual object Platform {
     actual fun getSystemLocale(): LanguageTag =
         AppleLocale.getDeviceLocale()
 
+    fun setSystemLocale(language: LanguageTag) {
+        val locale = NSLocale(identifier: language.tag)
+        UserDefaults.standard.set([languageCode], forKey: "AppleLanguages")
+        UserDefaults.standard.synchronize()
+        // Re-load your UI elements after changing the locale.
+    }
+
 }
