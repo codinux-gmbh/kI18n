@@ -43,7 +43,20 @@ kotlin {
         }
     }
 
-    // removed WASM because i don't know how to get system locale in wasmJS
+    wasmJs {
+//        compilerOptions {
+//            freeCompilerArgs.add("-Xwasm-attach-js-exception")
+//        }
+
+        browser {
+            testTask {
+                useKarma {
+                    useChromeHeadless()
+                    useFirefoxHeadless()
+                }
+            }
+        }
+    }
 
 
     linuxX64()
