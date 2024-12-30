@@ -13,6 +13,16 @@ class LanguageTagServiceTest {
 
 
     @Test
+    fun parse_SubTagsSeparatedWithUnderscore() {
+        val result = LanguageTag.parse("en_DE") // Apple system use '_' as separator
+
+        assertThat(result.tag).isEqualTo("en-DE")
+        assertThat(result.language).isEqualTo(Language.English)
+        assertThat(result.region).isEqualTo(Region.Germany)
+    }
+
+
+    @Test
     fun languageTagsWithoutParent() {
         val withoutParent = LanguageTag.availableLanguageTags.filter { underTest.tryFindParent(it) == null }
             // language only, for these it's obvious that there's no parent (or to be more precise: the root would be their parent)

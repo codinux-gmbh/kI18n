@@ -3,7 +3,9 @@ package net.codinux.i18n
 class LanguageTagService {
 
     fun parseOrNull(languageTag: String): LanguageTag? {
-        val parts = languageTag.split('-')
+        val tag = languageTag.replace('_', '-') // Apple system use '_' as separator
+
+        val parts = tag.split('-')
         val languageCode = parts[0]
         if (languageCode.length !in 2..3 || languageCode.any { it.isLetter() && it.isLowerCase() == false }) {
             return null
@@ -29,7 +31,7 @@ class LanguageTagService {
             return null
         }
 
-        return LanguageTag(languageTag, languageCode, regionCode, scriptCode, variant)
+        return LanguageTag(tag, languageCode, regionCode, scriptCode, variant)
     }
 
     fun parse(languageTag: String): LanguageTag =
