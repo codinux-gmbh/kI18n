@@ -48,11 +48,13 @@ class UnitEnumGenerator(
     }
 
     private fun createEnumConstant(code: String, unitsWithThisCode: List<UnEceUnitCodesRecommendation>): Pair<String, TypeSpec> {
+        val name = if (code.equals("NIL", true)) code + "_" else code // cannot use "NIL" as it's a key word on apple systems
+
         // there are 190 codes which's entries have different names and 143 with different descriptions. It's really hard to judge which one to pick
         val unit = unitsWithThisCode.firstOrNull { it.status != UnEceUnitCodesRecommendationStatus.Deprecated && it.status != UnEceUnitCodesRecommendationStatus.MarkedAsDeleted }
             ?: unitsWithThisCode.first()
 
-        return code to TypeSpec.anonymousClassBuilder()
+        return name to TypeSpec.anonymousClassBuilder()
             .addSuperclassConstructorParameter("%S", unit.code)
             .addSuperclassConstructorParameter("%S", unit.name)
             .addNullableSuperclassConstructorParameter(unit.symbol)
