@@ -1678,7 +1678,6 @@ enum class UnitAll(
   NEW("NEW", "newton", "N", "03"),
   NF("NF", "message", null, "3.9"),
   NG("NG", "Unpacked or unpackaged, multiple units", null, null),
-  NIL_("NIL", "nil", "()", "3.8"),
   NIU("NIU", "number of international units", null, "3.7"),
   NL("NL", "load", null, "3.4"),
   NM3("NM3", "Normalised cubic metre", null, "01"),

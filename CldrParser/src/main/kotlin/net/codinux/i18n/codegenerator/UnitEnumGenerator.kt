@@ -40,14 +40,18 @@ class UnitEnumGenerator(
             .build()
 
 
-        val enumConstants = grouped.toSortedMap().map { (code, unitsWithThisCode) ->
+        val enumConstants = grouped.toSortedMap().mapNotNull { (code, unitsWithThisCode) ->
             createEnumConstant(code, unitsWithThisCode)
         }
 
         util.writeEnumClass("UnitAll", enumConstants, constructor)
     }
 
-    private fun createEnumConstant(code: String, unitsWithThisCode: List<UnEceUnitCodesRecommendation>): Pair<String, TypeSpec> {
+    private fun createEnumConstant(code: String, unitsWithThisCode: List<UnEceUnitCodesRecommendation>): Pair<String, TypeSpec>? {
+        if (code.equals("NIL", true)) {
+            return null// cannot use "NIL" as it's a key word on apple systems
+        }
+
         val name = if (code.equals("NIL", true)) code + "_" else code // cannot use "NIL" as it's a key word on apple systems
 
         // there are 190 codes which's entries have different names and 143 with different descriptions. It's really hard to judge which one to pick
