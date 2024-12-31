@@ -43,6 +43,21 @@ open class DisplayNamesResolver {
         getDisplayNamesHierarchically(language) { RegionDisplayNames.getDisplayNamesForLocale(it.tag) }
 
 
+    @JvmOverloads
+    open fun getCurrencyDisplayName(currency: Currency, language: LanguageTag = LanguageTag.current): String? =
+        getCurrencyDisplayName(currency, language)
+
+    @JvmOverloads
+    open fun getCurrencyDisplayName(currencyIsoCode: String, language: LanguageTag = LanguageTag.current): String? =
+        getDisplayNameHierarchically(currencyIsoCode, language) {
+            getAllCurrencyDisplayNamesForLanguage(it)
+        }
+
+    @JvmOverloads
+    open fun getAllCurrencyDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? =
+        getDisplayNamesHierarchically(language) { CurrencyDisplayNames.getDisplayNamesForLocale(it.tag) }
+
+
     protected open fun getDisplayNamesHierarchically(language: LanguageTag, getForTag: (LanguageTag) -> String?): Map<String, String>? {
         val displayNamesCsv = getForTag(language)
 

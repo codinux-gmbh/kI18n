@@ -34,7 +34,7 @@ open class DisplayNames(
 
     @JvmOverloads
     open fun getAllCurrencyDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? =
-        getDisplayNameHierarchically(language) { CurrencyDisplayNames.getDisplayNamesForLocale(it) }
+        resolver.getAllCurrencyDisplayNamesForLanguage(language)
 
     @JvmOverloads
     open fun getCurrencyDisplayName(currency: Currency, language: LanguageTag = LanguageTag.current): String? =
@@ -42,22 +42,6 @@ open class DisplayNames(
 
     @JvmOverloads
     open fun getCurrencyDisplayName(currencyIsoCode: String, language: LanguageTag = LanguageTag.current): String? =
-        getDisplayNameHierarchically(language) { CurrencyDisplayNames.getDisplayName(currencyIsoCode, it) }
-
-
-    protected open fun <T> getDisplayNameHierarchically(language: LanguageTag, getForTag: (LanguageTag) -> T?): T? {
-        val displayName = getForTag(language)
-
-        return if (displayName != null && (displayName !is Map<*, *> || displayName.isNotEmpty())) {
-            displayName
-        } else {
-            val parent = language.parent
-            if (parent != null) {
-                getDisplayNameHierarchically(parent, getForTag)
-            } else {
-                null
-            }
-        }
-    }
+        resolver.getCurrencyDisplayName(currencyIsoCode, language)
 
 }
