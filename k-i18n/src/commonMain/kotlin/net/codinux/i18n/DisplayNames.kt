@@ -2,19 +2,21 @@ package net.codinux.i18n
 
 import kotlin.jvm.JvmOverloads
 
-open class DisplayNames {
+open class DisplayNames(
+    protected open val resolver: DisplayNamesResolver = DisplayNamesResolver()
+) {
 
     @JvmOverloads
     open fun getAllLanguageDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? =
-        getDisplayNameHierarchically(language) { LanguageDisplayNames.getDisplayNamesForLocale(it) }
+        resolver.getAllLanguageDisplayNamesForLanguage(language)
 
     @JvmOverloads
     open fun getLanguageDisplayName(language: Language, displayLanguage: LanguageTag = LanguageTag.current): String? =
         getLanguageDisplayName(language.isoCode, displayLanguage)
 
     @JvmOverloads
-    open fun getLanguageDisplayName(languageIsoCode: String, language: LanguageTag = LanguageTag.current): String? =
-        getDisplayNameHierarchically(language) { LanguageDisplayNames.getDisplayName(languageIsoCode, it) }
+    open fun getLanguageDisplayName(languageIsoCode: String, displayLanguage: LanguageTag = LanguageTag.current): String? =
+        resolver.getLanguageDisplayName(languageIsoCode, displayLanguage)
 
 
     @JvmOverloads

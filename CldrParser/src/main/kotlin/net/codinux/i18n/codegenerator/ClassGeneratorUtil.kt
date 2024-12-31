@@ -40,14 +40,18 @@ open class ClassGeneratorUtil {
 //        .joinToString(" ") { it.lowercase().replaceFirstChar { char -> char.uppercase() } }
 
 
-    open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), subPackage: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
-        writeClass(className, companionObjectProperties.toList(), companionObjectMethods, modifiers, subPackage, projectFolder)
+    open fun writeClass(className: String, vararg companionObjectProperties: PropertySpec, companionObjectMethods: List<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), kdoc: String? = null, subPackage: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
+        writeClass(className, companionObjectProperties.toList(), companionObjectMethods, modifiers, kdoc, subPackage, projectFolder)
 
-    open fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec> = emptyList(), companionObjectMethods: Collection<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), subPackage: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
+    open fun writeClass(className: String, companionObjectProperties: Collection<PropertySpec> = emptyList(), companionObjectMethods: Collection<FunSpec> = emptyList(), modifiers: Collection<KModifier> = emptyList(), kdoc: String? = null, subPackage: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
         val type = TypeSpec.objectBuilder(className).apply {
             addModifiers(*modifiers.toTypedArray())
             addFunctions(companionObjectMethods)
             addProperties(companionObjectProperties)
+
+            if (kdoc != null) {
+                addKdoc(kdoc)
+            }
         }.build()
 
         writeToFile(className, type, projectFolder, subPackage)
