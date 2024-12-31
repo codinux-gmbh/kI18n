@@ -1,8 +1,9 @@
 package net.codinux.i18n.codegenerator
 
 import com.squareup.kotlinpoet.*
-import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
-import net.codinux.collections.ImmutableMap
+import net.codinux.csv.use
+import net.codinux.csv.writer.CsvWriter
+import net.codinux.i18n.DisplayNamesResolver
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.model.TerritoryDisplayNames
 import net.codinux.i18n.parser.CldrJsonParser
@@ -12,6 +13,14 @@ class RegionDisplayNamesClassGenerator(
     private val util: ClassGeneratorUtil = ClassGeneratorUtil()
 ) {
 
+    companion object {
+        private val ClassKdoc = "Had to switch from Map<String, String> to CSV as compiler complained about too many parameters in function, wasmJs didn't even start in release build"
+    }
+
+
+    private val csvWriter = CsvWriter.builder(DisplayNamesResolver.CsvFormatsSeparator)
+
+
     fun generate() {
         val locales = cldrJsonParser.getLocalesWithLocalizedRegionNames().map { LanguageTag.ofAvailable(it) }
 
@@ -19,29 +28,30 @@ class RegionDisplayNamesClassGenerator(
         // don't add display names redundantly, if they have the same display name as in parent locale, don't add them to file but look them up in parent locale
         val uniqueDisplayNamesByLanguageTag = removeRedundantValuesFromSubLocales(displayNamesByLanguageTag)
 
-        val parameterizedType = ClassGeneratorUtil.immutableMapParameterizedType
+        val nullableString = String::class.asTypeName().copy(nullable = true)
 
         // all LanguageTags as lazy property returning a Map with all available display names
         val regionDisplayNamesProperties = uniqueDisplayNamesByLanguageTag
             .map { (languageTag, regionDisplayNames) ->
-                PropertySpec.builder(languageTag.tag.replace('-', '_'), parameterizedType)
-                    .delegate(CodeBlock.builder().apply {
-                        addStatement("lazy { %M(", ClassGeneratorUtil.immutableMapOfReference)
-
-                        regionDisplayNames.forEach { displayName ->
-                            addStatement("  %S to %S,", displayName.territoryCode, displayName.displayName)
+                PropertySpec.builder(languageTag.tag.replace('-', '_'), nullableString.copy(nullable = regionDisplayNames.isEmpty())).apply {
+                    if (regionDisplayNames.isEmpty()) {
+                        this.initializer("%L", "null")
+                    } else {
+                        val csv = StringBuilder()
+                        csvWriter.writer(csv).use { csvWriter ->
+                            regionDisplayNames.forEach { displayName ->
+                                csvWriter.writeRow(displayName.territoryCode, displayName.displayName.replace("\"", "\'"))
+                            }
                         }
-
-                        add(") }")
-                    }.build()
-                    )
-                    .build()
+                        this.delegate("lazy { \"\"\"\n%L\"\"\".trimIndent() }", csv.toString())
+                    }
+                }.build()
             }
 
         // method to find all region display names of a LanguageTag
         val getDisplayNamesForLocaleMethod = FunSpec.builder("getDisplayNamesForLocale")
             .addParameter("language", String::class)
-            .returns(parameterizedType.copy(nullable = true))
+            .returns(nullableString)
             .apply {
                 beginControlFlow("return when(language) {")
                 uniqueDisplayNamesByLanguageTag.forEach { (languageTag, _) ->
@@ -51,15 +61,7 @@ class RegionDisplayNamesClassGenerator(
                 endControlFlow()
             }.build()
 
-        // method to find region display name by LanguageTag and regionCode
-        val getDisplayNameMethod = FunSpec.builder("getDisplayName")
-            .addParameter("regionCode", String::class)
-            .addParameter("language", String::class)
-            .returns(String::class.asTypeName().copy(nullable = true))
-            .addStatement("return %N(language)?.get(regionCode)", getDisplayNamesForLocaleMethod)
-            .build()
-
-        util.writeClass("RegionDisplayNames", regionDisplayNamesProperties, companionObjectMethods = listOf(getDisplayNamesForLocaleMethod, getDisplayNameMethod))
+        util.writeClass("RegionDisplayNames", regionDisplayNamesProperties, listOf(getDisplayNamesForLocaleMethod), kdoc = ClassKdoc)
     }
 
     private fun removeRedundantValuesFromSubLocales(displayNamesByLanguageTag: Map<LanguageTag, List<TerritoryDisplayNames>>): Map<LanguageTag, List<TerritoryDisplayNames>> {

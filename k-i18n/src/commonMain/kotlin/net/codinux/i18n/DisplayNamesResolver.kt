@@ -28,6 +28,21 @@ open class DisplayNamesResolver {
         getDisplayNamesHierarchically(language) { LanguageDisplayNames.getDisplayNamesForLocale(it.tag) }
 
 
+    @JvmOverloads
+    open fun getRegionDisplayName(region: Region, language: LanguageTag = LanguageTag.current): String? =
+        getRegionDisplayName(region.code, language)
+
+    @JvmOverloads
+    open fun getRegionDisplayName(regionCode: String, language: LanguageTag = LanguageTag.current): String? =
+        getDisplayNameHierarchically(regionCode, language) {
+            getAllRegionDisplayNamesForLanguage(it)
+        }
+
+    @JvmOverloads
+    open fun getAllRegionDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? =
+        getDisplayNamesHierarchically(language) { RegionDisplayNames.getDisplayNamesForLocale(it.tag) }
+
+
     protected open fun getDisplayNamesHierarchically(language: LanguageTag, getForTag: (LanguageTag) -> String?): Map<String, String>? {
         val displayNamesCsv = getForTag(language)
 

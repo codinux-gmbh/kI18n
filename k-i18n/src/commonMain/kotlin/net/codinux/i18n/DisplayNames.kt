@@ -21,7 +21,7 @@ open class DisplayNames(
 
     @JvmOverloads
     open fun getAllRegionDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? =
-        getDisplayNameHierarchically(language) { RegionDisplayNames.getDisplayNamesForLocale(it) }
+        resolver.getAllRegionDisplayNamesForLanguage(language)
 
     @JvmOverloads
     open fun getRegionDisplayName(region: Region, language: LanguageTag = LanguageTag.current): String? =
@@ -29,7 +29,7 @@ open class DisplayNames(
 
     @JvmOverloads
     open fun getRegionDisplayName(regionCode: String, language: LanguageTag = LanguageTag.current): String? =
-        getDisplayNameHierarchically(language) { RegionDisplayNames.getDisplayName(regionCode, it) }
+        resolver.getRegionDisplayName(regionCode, language)
 
 
     @JvmOverloads
