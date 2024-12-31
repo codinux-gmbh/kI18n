@@ -1,5 +1,9 @@
 package net.codinux.i18n.model
 
+import net.codinux.i18n.UnitAnnex
+import net.codinux.i18n.UnitCategory
+import net.codinux.i18n.UnitLevel
+
 class UnEceUnitCodesRecommendation(
     val code: String,
     val name: String,
@@ -8,6 +12,10 @@ class UnEceUnitCodesRecommendation(
     val levelOrCategory: String? = null,
     val symbol: String? = null,
     val conversionFactor: String? = null,
+
+    val annex: UnitAnnex,
+    val level: UnitLevel? = null,
+    val category: UnitCategory? = null,
 
     // only for Annex I units
     val quantity: String? = null,

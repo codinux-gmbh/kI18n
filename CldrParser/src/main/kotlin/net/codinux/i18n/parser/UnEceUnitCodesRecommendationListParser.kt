@@ -1,5 +1,8 @@
 package net.codinux.i18n.parser
 
+import net.codinux.i18n.UnitAnnex
+import net.codinux.i18n.UnitCategory
+import net.codinux.i18n.UnitLevel
 import net.codinux.i18n.model.UnEceUnitCodesRecommendation
 import net.codinux.i18n.model.UnEceUnitCodesRecommendationStatus
 import org.apache.poi.hssf.usermodel.HSSFSheet
@@ -29,10 +32,10 @@ class UnEceUnitCodesRecommendationListParser {
         val annex1Sheet = sheets.first { it.sheetName == "Annex I" } // or: workbook.getSheetAt(1)
         val annex2And3Sheet = sheets.first { it.sheetName == "Annex II & Annex III" } // or: workbook.getSheetAt(2)
 
-        return parseRecommendation20Sheet(annex1Sheet) + parseRecommendation20Sheet(annex2And3Sheet)
+        return parseRecommendation20Sheet(annex1Sheet, UnitAnnex.Annex1) + parseRecommendation20Sheet(annex2And3Sheet, UnitAnnex.Annex2or3)
     }
 
-    private fun parseRecommendation20Sheet(sheet: XSSFSheet): List<UnEceUnitCodesRecommendation> {
+    private fun parseRecommendation20Sheet(sheet: XSSFSheet, annex: UnitAnnex): List<UnEceUnitCodesRecommendation> {
         val headerRow = sheet.getRow(0)
         val headerCells = headerRow.cellIterator().asSequence().toList().associateBy { it.stringCellValue.replace('\n', ' ').replace("\r", "") }
 
@@ -50,15 +53,58 @@ class UnEceUnitCodesRecommendationListParser {
         val sectorColumnIndex = headerCells["Sector"]?.columnIndex
 
         return sheet.rowIterator().asSequence().toList().drop(1).map { row ->
+            val levelOrCategory = getValueOrNull(row, levelOrCategoryColumnIndex)
+
             UnEceUnitCodesRecommendation(
                 getValue(row, codeColumnIndex), getValue(row, nameColumnIndex), getValueOrNull(row, descriptionColumnIndex),
-                mapStatus(getValueOrNull(row, statusColumnIndex)), getValueOrNull(row, levelOrCategoryColumnIndex),
+                mapStatus(getValueOrNull(row, statusColumnIndex)), levelOrCategory,
                 getValueOrNull(row, symbolColumnIndex), getValueOrNull(row, conversionFactorColumnIndex),
+
+                annex, mapLevel(levelOrCategory), mapCategory(levelOrCategory),
 
                 getValueOrNull(row, quantityColumnIndex), getValueOrNull(row, groupNumberColumnIndex),
                 getIntOrNull(row, groupIdColumnIndex), getValueOrNull(row, sectorColumnIndex),
             )
         }
+    }
+
+    private fun mapLevel(levelOrCategory: String?): UnitLevel? = when (levelOrCategory?.first()) {
+        '1' -> UnitLevel.Normative
+        '2' -> UnitLevel.NormativeEquivalent
+        '3' -> UnitLevel.Informative
+        else -> null
+    }
+
+    private fun mapCategory(levelOrCategory: String?): UnitCategory? {
+        if (levelOrCategory?.startsWith("3.") == true && levelOrCategory.length > 2) {
+            val categoryCode = levelOrCategory[2].digitToIntOrNull()
+            if (categoryCode != null) {
+                return mapCategory(categoryCode)
+            }
+        }
+
+        val parts = levelOrCategory?.split('\n').orEmpty()
+        if (parts.size > 1 && parts[1].startsWith("3.") && parts[1].length > 2) {
+            val categoryCode = parts[1][2].digitToIntOrNull()
+            if (categoryCode != null) {
+                return mapCategory(categoryCode)
+            }
+        }
+
+        return null
+    }
+
+    private fun mapCategory(categoryCode: Int): UnitCategory? = when (categoryCode) {
+        1 -> UnitCategory.QualifiedBaseUnitsFromLevels1And2
+        2 -> UnitCategory.SalesUnits
+        3 -> UnitCategory.PackingUnits
+        4 -> UnitCategory.ShippingAndTransportationUnits
+        5 -> UnitCategory.IndustrySpecificUnits
+        6 -> UnitCategory.InformationTechnologyUnits
+        7 -> UnitCategory.IntegersNumbersRatios
+        8 -> UnitCategory.MultiplesFractionsDecimals
+        9 -> UnitCategory.Miscellaneous
+        else -> null
     }
 
 
@@ -85,6 +131,7 @@ class UnEceUnitCodesRecommendationListParser {
                 getValue(row, codeColumnIndex), getValue(row, nameColumnIndex), getValueOrNull(row, descriptionColumnIndex),
                 mapStatus(getValueOrNull(row, statusColumnIndex)),
 
+                annex = UnitAnnex.Annex5or6,
                 cargoOrPackageNumericCode = getValueOrNull(row, numericCodeColumnIndex)
             )
         }.filter { it.code.isNotEmpty() } // there's one entry with an empty code and name, remove it

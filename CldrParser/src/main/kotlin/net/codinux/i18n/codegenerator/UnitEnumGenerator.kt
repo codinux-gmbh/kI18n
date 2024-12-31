@@ -2,6 +2,7 @@ package net.codinux.i18n.codegenerator
 
 import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.TypeSpec
+import net.codinux.i18n.UnitAnnex
 import net.codinux.i18n.model.UnEceUnitCodesRecommendation
 import net.codinux.i18n.model.UnEceUnitCodesRecommendationStatus
 import net.codinux.i18n.parser.CldrJsonParser
@@ -34,6 +35,7 @@ class UnitEnumGenerator(
             .addParameter("englishName", String::class, false, "English name of this unit.")
             .addParameter("symbol", String::class, true, "The symbol used to represent the unit of measure as in ISO 31 / 80000.")
 //            .addParameter("conversionFactor", String::class, true, "The value used to convert units to the equivalent SI unit when applicable.")
+            .addParameter("annex", UnitAnnex::class, true)
             .addParameter("groupOrCategory", String::class, true)
 //            .addParameter("status", String::class, true, "Status of this unit, e.g. 'Deprecated' or 'MarkedAsDeleted' (in most cases null otherwise).")
 //            .addParameter("description", String::class, true, "English description of this unit.")
@@ -63,6 +65,7 @@ class UnitEnumGenerator(
             .addSuperclassConstructorParameter("%S", unit.name)
             .addNullableSuperclassConstructorParameter(unit.symbol)
 //            .addNullableSuperclassConstructorParameter(unit.conversionFactor)
+            .addNullableSuperclassConstructorParameter(unit.annex)
             .addNullableSuperclassConstructorParameter(unit.groupNumber ?: unit.levelOrCategory ?: unit.quantity ?: unit.sector)
 //            .addNullableSuperclassConstructorParameter(unit.status)
 //            .addNullableSuperclassConstructorParame./ter(unit.description)

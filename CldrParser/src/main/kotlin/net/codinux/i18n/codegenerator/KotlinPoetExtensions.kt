@@ -1,10 +1,7 @@
 package net.codinux.i18n.codegenerator
 
 import com.squareup.kotlinpoet.*
-import net.codinux.i18n.Language
-import net.codinux.i18n.NumberingSystemType
-import net.codinux.i18n.Region
-import net.codinux.i18n.Script
+import net.codinux.i18n.*
 import java.nio.file.Path
 import kotlin.io.path.createDirectories
 import kotlin.io.path.writeText
@@ -44,10 +41,7 @@ internal fun FunSpec.Builder.addParameter(parameterName: String, type: TypeName,
 internal fun TypeSpec.Builder.addNullableSuperclassConstructorParameter(value: Any?) =
     if (value is String) this.addSuperclassConstructorParameter("%S", value)
     else if (value is Number) this.addSuperclassConstructorParameter("%L", value)
-    else if (value is Language) this.addSuperclassConstructorParameter("Language.%L", value)
-    else if (value is Region) this.addSuperclassConstructorParameter("Region.%L", value)
-    else if (value is Script) this.addSuperclassConstructorParameter("Script.%L", value)
-    else if (value is NumberingSystemType) this.addSuperclassConstructorParameter("NumberingSystemType.%L", value)
+    else if (value is Enum<*>) this.addSuperclassConstructorParameter("${value::class.simpleName}.%L", value)
     else if (value is List<*>) this.addSuperclassConstructorParameter("%L", "listOf(${value.joinToString(", ") { "\"$it\"" } })")
     else this.addSuperclassConstructorParameter("%L", "null")
 
