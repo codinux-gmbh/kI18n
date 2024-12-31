@@ -4,6 +4,7 @@ import assertk.assertThat
 import assertk.assertions.hasSize
 import assertk.assertions.isEqualTo
 import assertk.assertions.isNotNull
+import assertk.assertions.isSameInstanceAs
 import kotlin.test.Test
 
 class DisplayNamesTest {
@@ -56,6 +57,15 @@ class DisplayNamesTest {
         assertThat(result!!).hasSize(399)
     }
 
+    @Test
+    fun getAllLanguageDisplayNamesForLanguage_SecondCallGetsServedFromCache() {
+        val firstCall = underTest.getAllLanguageDisplayNamesForLanguage(LanguageTag.Chinese)
+
+        val secondCall = underTest.getAllLanguageDisplayNamesForLanguage(LanguageTag.Chinese)
+
+        assertThat(secondCall).isSameInstanceAs(firstCall)
+    }
+
 
     @Test
     fun getRegionDisplayName_ar_BH_ResolvesFromParent() {
@@ -94,6 +104,15 @@ class DisplayNamesTest {
         assertThat(result!!).hasSize(294)
     }
 
+    @Test
+    fun getAllRegionDisplayNamesForLanguage_SecondCallGetsServedFromCache() {
+        val firstCall = underTest.getAllRegionDisplayNamesForLanguage(LanguageTag.Russian)
+
+        val secondCall = underTest.getAllRegionDisplayNamesForLanguage(LanguageTag.Russian)
+
+        assertThat(secondCall).isSameInstanceAs(firstCall)
+    }
+
 
     @Test
     fun getCurrencyDisplayName_ms() {
@@ -116,6 +135,15 @@ class DisplayNamesTest {
 
         assertThat(result).isNotNull()
         assertThat(result!!).hasSize(165)
+    }
+
+    @Test
+    fun getAllCurrencyDisplayNamesForLanguage_SecondCallGetsServedFromCache() {
+        val firstCall = underTest.getAllCurrencyDisplayNamesForLanguage(LanguageTag.Korean)
+
+        val secondCall = underTest.getAllCurrencyDisplayNamesForLanguage(LanguageTag.Korean)
+
+        assertThat(secondCall).isSameInstanceAs(firstCall)
     }
 
 }

@@ -12,6 +12,13 @@ open class DisplayNamesResolver {
 
     protected open val csvReader = CsvReader(CsvFormatsSeparator)
 
+    // TODO: use thread safe Map / Cache (but should actually also work without as display names should only be resolved from UI thread)
+    protected open val languageDisplayNamesCache = mutableMapOf<String, Map<String, String>>()
+
+    protected open val regionDisplayNamesCache = mutableMapOf<String, Map<String, String>>()
+
+    protected open val currencyDisplayNamesCache = mutableMapOf<String, Map<String, String>>()
+
 
     @JvmOverloads
     open fun getLanguageDisplayName(language: Language, displayLanguage: LanguageTag = LanguageTag.current): String? =
@@ -25,7 +32,9 @@ open class DisplayNamesResolver {
 
     @JvmOverloads
     open fun getAllLanguageDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? =
-        getDisplayNamesHierarchically(language) { LanguageDisplayNames.getDisplayNamesForLocale(it.tag) }
+        getDisplayNamesHierarchically(language, languageDisplayNamesCache) {
+            LanguageDisplayNames.getDisplayNamesForLocale(it.tag)
+        }
 
 
     @JvmOverloads
@@ -40,7 +49,7 @@ open class DisplayNamesResolver {
 
     @JvmOverloads
     open fun getAllRegionDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? =
-        getDisplayNamesHierarchically(language) { RegionDisplayNames.getDisplayNamesForLocale(it.tag) }
+        getDisplayNamesHierarchically(language, regionDisplayNamesCache) { RegionDisplayNames.getDisplayNamesForLocale(it.tag) }
 
 
     @JvmOverloads
@@ -55,18 +64,24 @@ open class DisplayNamesResolver {
 
     @JvmOverloads
     open fun getAllCurrencyDisplayNamesForLanguage(language: LanguageTag = LanguageTag.current): Map<String, String>? =
-        getDisplayNamesHierarchically(language) { CurrencyDisplayNames.getDisplayNamesForLocale(it.tag) }
+        getDisplayNamesHierarchically(language, currencyDisplayNamesCache) { CurrencyDisplayNames.getDisplayNamesForLocale(it.tag) }
 
 
-    protected open fun getDisplayNamesHierarchically(language: LanguageTag, getForTag: (LanguageTag) -> String?): Map<String, String>? {
+    protected open fun getDisplayNamesHierarchically(language: LanguageTag, cache: MutableMap<String, Map<String, String>>? = null, getForTag: (LanguageTag) -> String?): Map<String, String>? {
+        cache?.get(language.tag)?.let {
+            return it
+        }
+
         val displayNamesCsv = getForTag(language)
 
         return if (displayNamesCsv != null) {
-            csvReader.read(displayNamesCsv).associate { it.getString(0) to it.getString(1) }
+            csvReader.read(displayNamesCsv).associate { it.getString(0) to it.getString(1) }.also {
+                cache?.put(language.tag, it)
+            }
         } else {
             val parent = language.parent
             if (parent != null) {
-                getDisplayNamesHierarchically(parent, getForTag)
+                getDisplayNamesHierarchically(parent, cache, getForTag)
             } else {
                 null
             }
