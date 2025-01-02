@@ -307,9 +307,10 @@ open class CldrJsonParser(
         }
 
 
-    fun parseUnitsMetadata(): Units =
+    fun parseUnitsMetadata(): UnitsMetadata =
         objectMapper.readValue<UnitsFile>(resolveSupplementalPath("units.json")).supplemental.let { units ->
-            Units(
+            UnitsMetadata(
+                // keys (Namen) werden zwischen Type und Unit namen gehaengt, z. B. length-meter & centi -> length-centimeter
                 units.unitPrefixes.map { UnitPrefix(it.key, it.value.symbol, it.value.power10, it.value.power2) },
                 units.unitConstants.map { UnitConstant(it.key, it.value.value, it.value.description, it.value.status == "approximate") },
                 units.unitQuantities.map { UnitQuantity(it.key, it.value.quantity, it.value.status == "simple") },

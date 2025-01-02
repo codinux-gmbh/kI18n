@@ -58,10 +58,7 @@ open class ClassGeneratorUtil {
     }
 
 
-    open fun writeEnumClass(enumName: String, enumConstants: List<String>, kdoc: String? = null, companionObjectMethods: Collection<FunSpec> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) =
-        writeEnumClass(enumName, enumConstants.map { Pair(it, TypeSpec.Companion.anonymousClassBuilder().build()) }, null, kdoc, companionObjectMethods, projectFolder)
-
-    open fun writeEnumClass(enumName: String, enumConstants: List<Pair<String, TypeSpec>>, constructor: FunSpec? = null, kdoc: String? = null, companionObjectMethods: Collection<FunSpec> = emptyList(), projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
+    open fun writeEnumClass(enumName: String, enumConstants: List<Pair<String, TypeSpec>>, constructor: FunSpec? = null, kdoc: String? = null, companionObjectMethods: Collection<FunSpec> = emptyList(), properties: Collection<PropertySpec> = emptyList(), subPackage: String? = null, projectFolder: Path = FileSystemUtil.determineKI18nDataProjectPath()) {
         val type = TypeSpec.enumBuilder(enumName).apply {
             if (kdoc != null) {
                 addKdoc(kdoc)
@@ -75,12 +72,14 @@ open class ClassGeneratorUtil {
                 addEnumConstant(getKotlinFriendlyVariableName(constant.first), constant.second)
             }
 
+            addProperties(properties)
+
             if (companionObjectMethods.isNotEmpty()) {
                 addType(TypeSpec.companionObjectBuilder().addFunctions(companionObjectMethods).build())
             }
         }.build()
 
-        writeToFile(enumName, type, projectFolder) { code ->
+        writeToFile(enumName, type, projectFolder, subPackage) { code ->
             var result = code
 
             if (constructor != null) {

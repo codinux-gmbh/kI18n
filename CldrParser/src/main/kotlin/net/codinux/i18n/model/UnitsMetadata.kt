@@ -1,6 +1,6 @@
 package net.codinux.i18n.model
 
-data class Units(
+data class UnitsMetadata(
     val unitPrefixes: List<UnitPrefix>,
     val unitConstants: List<UnitConstant>,
     val unitQuantities: List<UnitQuantity>,
@@ -23,7 +23,7 @@ data class UnitConstant(
 
 data class UnitQuantity(
     val name: String,
-    val quantity: String,
+    val unitType: String,
     val isSimple: Boolean
 )
 
