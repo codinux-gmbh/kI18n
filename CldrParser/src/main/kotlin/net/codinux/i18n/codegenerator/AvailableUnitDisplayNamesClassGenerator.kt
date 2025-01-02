@@ -3,6 +3,8 @@ package net.codinux.i18n.codegenerator
 import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
 import com.squareup.kotlinpoet.TypeSpec
+import net.codinux.i18n.LanguageTag
+import net.codinux.i18n.model.UnitsDisplayNamesForLocale
 import net.codinux.i18n.model.UnitsMetadata
 import net.codinux.i18n.parser.CldrJsonParser
 
@@ -12,10 +14,16 @@ class AvailableUnitDisplayNamesClassGenerator(
 ) {
 
     fun generate() {
+        val locales = cldrJsonParser.getLocalesWithLocalizedUnits().map { LanguageTag.ofAvailable(it) }
+
+        val allByLocale = locales.associateWith { cldrJsonParser.parseUnitNamesForLocale(it) }
+
         val metadata = cldrJsonParser.parseUnitsMetadata()
         // TODO: also parse unitPrefixes (atto, centi, kilo, ...)?
         // TODO: also parse unitConstants (some contain conversion factors e.g. from feet to meter)?
         generateUnitTypesEnum(metadata)
+
+        generateAvailableUnitDisplayNameKeysEnum(allByLocale)
     }
 
 
@@ -45,4 +53,29 @@ class AvailableUnitDisplayNamesClassGenerator(
         util.writeEnumClass("UnitType", enumConstants, constructor, subPackage = "units")
     }
 
+
+    private fun generateAvailableUnitDisplayNameKeysEnum(allByLocale: Map<LanguageTag, UnitsDisplayNamesForLocale>) {
+        val englishNames = allByLocale[LanguageTag.English]!!.long.units.associateBy({ it.unit }, { it.displayName })
+        val all = allByLocale.values
+        val allUnitNames = all.flatMap { it.long.units.map { it.unit } + it.short.units.map { it.unit } + it.narrow.units.map { it.unit } }
+            .toSet().sorted()
+
+
+        val constructor = FunSpec.constructorBuilder()
+            .addParameter("key", String::class, false)
+            .addParameter("englishName", String::class, true)
+            .build()
+
+        val enumConstants = allUnitNames.map { unitName ->
+            val enumName = unitName.replace("concentr-", "concentration-")
+
+            enumName to TypeSpec.anonymousClassBuilder()
+                .addSuperclassConstructorParameter("%S", unitName)
+                .addNullableSuperclassConstructorParameter(englishNames[unitName])
+                .build()
+        }
+
+
+        util.writeEnumClass("UnitDisplayNameKey", enumConstants, constructor, subPackage = "units")
+    }
 }
