@@ -19,9 +19,10 @@ class AvailableUnitDisplayNamesClassGenerator(
         val allByLocale = locales.associateWith { cldrJsonParser.parseUnitNamesForLocale(it) }
 
         val metadata = cldrJsonParser.parseUnitsMetadata()
-        // TODO: also parse unitPrefixes (atto, centi, kilo, ...)?
         // TODO: also parse unitConstants (some contain conversion factors e.g. from feet to meter)?
         generateUnitTypesEnum(metadata)
+
+        generateUnitPrefixesEnum(metadata)
 
         generateAvailableUnitDisplayNameKeysEnum(allByLocale)
     }
@@ -51,6 +52,31 @@ class AvailableUnitDisplayNamesClassGenerator(
 
 
         util.writeEnumClass("UnitType", enumConstants, constructor, subPackage = "units")
+    }
+
+    private fun generateUnitPrefixesEnum(metadata: UnitsMetadata) {
+        val prefixes = metadata.unitPrefixes
+        val prefixesMapped = prefixes.associateBy({ it.name }, { it.symbol to (it.power2?.let { "2p$it" } ?: it.power10!!.let { "10p$it" })})
+            .toMutableMap().apply { putAll(listOf(
+                "Square" to ("²" to "1p2"),
+                "Cubic" to ("³" to "1p3"),
+            ))}
+
+
+        val constructor = FunSpec.constructorBuilder()
+            .addParameter("symbol", String::class, false)
+            .addParameter("conversionFactor", String::class, false)
+            .build()
+
+        val enumConstants = prefixesMapped.toSortedMap().mapNotNull { (name, symbolAndPower) ->
+            name to TypeSpec.anonymousClassBuilder()
+                .addSuperclassConstructorParameter("%S", symbolAndPower.first)
+                .addSuperclassConstructorParameter("%S", symbolAndPower.second)
+                .build()
+        }
+
+
+        util.writeEnumClass("UnitPrefix", enumConstants, constructor, subPackage = "units")
     }
 
 
