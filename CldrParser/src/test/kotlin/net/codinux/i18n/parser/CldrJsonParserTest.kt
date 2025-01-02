@@ -353,8 +353,8 @@ class CldrJsonParserTest {
 
 
     @Test
-    fun parseUnits() {
-        val result = underTest.parseUnits()
+    fun parseUnitsMetadata() {
+        val result = underTest.parseUnitsMetadata()
 
         assertThat(result.unitPrefixes).hasSize(32)
         assertThat(result.unitConstants).hasSize(19)

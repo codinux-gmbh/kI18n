@@ -307,7 +307,7 @@ open class CldrJsonParser(
         }
 
 
-    fun parseUnits(): Units =
+    fun parseUnitsMetadata(): Units =
         objectMapper.readValue<UnitsFile>(resolveSupplementalPath("units.json")).supplemental.let { units ->
             Units(
                 units.unitPrefixes.map { UnitPrefix(it.key, it.value.symbol, it.value.power10, it.value.power2) },
