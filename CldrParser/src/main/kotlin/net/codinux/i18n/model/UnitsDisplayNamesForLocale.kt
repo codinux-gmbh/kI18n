@@ -14,8 +14,8 @@ class UnitsLocaleDisplayNames(
     val units: List<UnitDisplayNames>,
 
     val prefixPatterns: List<UnitPattern>,
-    val powerPatterns: List<CompoundUnitPattern>,
-    val compoundPatterns: List<UnitPattern>,
+    val powerPatterns: List<UnitPattern>,
+    val compoundPatterns: List<CompoundUnitPattern>,
 
     val coordinates: CoordinatesDisplayNames? = null
 )
@@ -29,19 +29,18 @@ data class UnitDisplayNames(
     val unitPatternCountOther: String? = null,
 )
 
-data class UnitPattern(
+open class UnitPattern(
     val unit: String,
     val unitPattern: String
 )
 
-data class CompoundUnitPattern(
-    val unit: String,
-    val unitPattern: String,
+class CompoundUnitPattern(
+    unit: String,
+    unitPattern: String,
     // TODO: there are 160 more compoundUnitPattern1-count-xyz and compoundUnitPattern1-gender-xyz properties
-    // only for ff- locales compoundUnitPattern1CountOther differs from compoundUnitPattern1. compoundUnitPattern1CountOne is always null
 //    val unitPatternCountOne: String? = null,
 //    val unitPatternCountOther: String? = null
-)
+) : UnitPattern(unit, unitPattern)
 
 data class CoordinatesDisplayNames(
     val west: String,

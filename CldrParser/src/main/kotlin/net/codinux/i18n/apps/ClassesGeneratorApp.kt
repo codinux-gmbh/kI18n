@@ -41,6 +41,8 @@ class ClassesGeneratorApp {
         AllLocalizedDateTimeFormatsClassGenerator().generate()
 
         AvailableDateTimeDisplayNamesClassGenerator().generate()
+
+        AvailableUnitDisplayNamesClassGenerator().generate()
     }
 
 }

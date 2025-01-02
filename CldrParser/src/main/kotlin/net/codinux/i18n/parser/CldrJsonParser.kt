@@ -13,6 +13,8 @@ import net.codinux.i18n.datetime.PreferredWeekData
 import net.codinux.i18n.model.*
 import net.codinux.i18n.model.UnitDisplayNames
 import net.codinux.i18n.service.FileSystemUtil
+import net.codinux.i18n.units.UnitType
+import net.codinux.log.logger
 import java.io.File
 import java.nio.file.Path
 
@@ -44,6 +46,9 @@ open class CldrJsonParser(
         disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
     }
 ) {
+
+    private val log by logger()
+
 
     fun parseAvailableLocales(): List<LanguageTag> =
         parseAvailableLocalesAsString().map { LanguageTag.parse(it) }
@@ -340,14 +345,45 @@ open class CldrJsonParser(
         val compoundPatterns = displayNames.unitPattern.filter { it.value.compoundUnitPattern != null }
 
         return UnitsLocaleDisplayNames(
-            unitPatterns.map { UnitDisplayNames(it.key, it.value.displayName!!, it.value.perUnitPattern, it.value.unitPatternCountOne, it.value.unitPatternCountOther) },
+            // sort unitPatterns as after displayNames.unitPattern.filter { } they are unsorted and here they still have the unit category as name prefix
+            unitPatterns.toSortedMap().map { UnitDisplayNames(unitName(it.key), it.value.displayName!!, it.value.perUnitPattern, it.value.unitPatternCountOne, it.value.unitPatternCountOther) },
             prefixPatterns.map { UnitPattern(it.key, it.value.unitPrefixPattern!!) },
             // only for ff- locales compoundUnitPattern1CountOther differs from compoundUnitPattern1. compoundUnitPattern1CountOne is always null
-            powerPatterns.map { CompoundUnitPattern(it.key, it.value.compoundUnitPattern1CountOther ?: it.value.compoundUnitPattern1!!) },
-            compoundPatterns.map { UnitPattern(it.key, it.value.compoundUnitPattern!!) },
+            powerPatterns.map { UnitPattern(it.key, it.value.compoundUnitPattern1CountOther ?: it.value.compoundUnitPattern1!!) },
+            compoundPatterns.map { CompoundUnitPattern(it.key, it.value.compoundUnitPattern!!) },
             displayNames.unitPattern["coordinateUnit"]?.let { CoordinatesDisplayNames(it.west!!, it.north!!, it.east!!, it.south!!) }
         )
     }
+
+    // remove unit category from category-name (e.g. "length-meter" -> "meter") so that we are able to resolve unit name later
+    protected open fun unitName(categoryAndName: String): String {
+        val result = UnitType.entries.firstNotNullOfOrNull { type ->
+            val typeName = type.type.replace("concentration", "concentr")
+
+            type.units.firstOrNull { categoryAndName == "${typeName}-${it}" }
+                ?: run {
+                    if (categoryAndName.startsWith(typeName + "-")) {
+                        categoryAndName.substring(typeName.length + 1)
+                    } else if (categoryAndName.startsWith("electric-")) {
+                        categoryAndName.substring(9)
+                    } else if (categoryAndName.startsWith("light-")) {
+                        categoryAndName.substring(6)
+                    } else if (categoryAndName.startsWith("torque-")) {
+                        categoryAndName.substring(7)
+                    } else {
+                        null
+                    }
+                }
+        }
+
+        if (result == null) {
+            log.warn { "Could not resolve unit name for '$categoryAndName'" }
+            return categoryAndName
+        }
+
+        return result
+    }
+
 
     fun getLocalesWithLocalizedDateTimeFormats(): List<String> =
         getLocales(resolvePath("cldr-dates-full/main"), "ca-gregorian.json")
