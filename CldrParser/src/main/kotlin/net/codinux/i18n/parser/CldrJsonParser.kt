@@ -333,16 +333,17 @@ open class CldrJsonParser(
         }
 
     protected open fun map(displayNames: UnitsLocaleDisplayNamesSerialModel): UnitsLocaleDisplayNames {
-        val units = displayNames.unitPattern.filter { it.value.displayName != null && it.value.south == null }
+        val unitPatterns = displayNames.unitPattern.filter { it.value.displayName != null && it.value.south == null }
 
         val prefixPatterns = displayNames.unitPattern.filter { it.value.unitPrefixPattern != null }
         val powerPatterns = displayNames.unitPattern.filter { it.value.compoundUnitPattern1 != null }
         val compoundPatterns = displayNames.unitPattern.filter { it.value.compoundUnitPattern != null }
 
         return UnitsLocaleDisplayNames(
-            units.map { UnitDisplayNames(it.key, it.value.displayName!!, it.value.unitPatternCountOne, it.value.unitPatternCountOther, it.value.perUnitPattern) },
-            powerPatterns.map { UnitPattern(it.key, it.value.compoundUnitPattern1!!, it.value.compoundUnitPattern1CountOne, it.value.compoundUnitPattern1CountOther) },
+            unitPatterns.map { UnitDisplayNames(it.key, it.value.displayName!!, it.value.perUnitPattern, it.value.unitPatternCountOne, it.value.unitPatternCountOther) },
             prefixPatterns.map { UnitPattern(it.key, it.value.unitPrefixPattern!!) },
+            // only for ff- locales compoundUnitPattern1CountOther differs from compoundUnitPattern1. compoundUnitPattern1CountOne is always null
+            powerPatterns.map { CompoundUnitPattern(it.key, it.value.compoundUnitPattern1CountOther ?: it.value.compoundUnitPattern1!!) },
             compoundPatterns.map { UnitPattern(it.key, it.value.compoundUnitPattern!!) },
             displayNames.unitPattern["coordinateUnit"]?.let { CoordinatesDisplayNames(it.west!!, it.north!!, it.east!!, it.south!!) }
         )
