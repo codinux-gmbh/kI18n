@@ -3,7 +3,11 @@ package net.codinux.i18n.formatter
 import assertk.assertThat
 import assertk.assertions.isEqualTo
 import net.codinux.i18n.Currency
+import net.codinux.i18n.LanguageTag
 import java.text.DecimalFormat
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 import java.util.Locale
 import kotlin.random.Random
 import kotlin.test.Test
@@ -15,100 +19,92 @@ class CompareNumberFormatterWithJvmNumberFormatterTest {
 
     @Test
     fun integer() {
-        val numberFormat = NumberFormats.Germany
         val jvmNumberFormat = DecimalFormat.getIntegerInstance(Locale.GERMANY)
 
         repeat((0..1_000_000).count()) {
             val number = Random.nextInt(1_000_000_000)
 
-            assertThat(underTest.formatNumber(number, numberFormat)).isEqualTo(jvmNumberFormat.format(number))
+            assertThat(underTest.formatNumber(number, LanguageTag.Germany)).isEqualTo(jvmNumberFormat.format(number))
         }
     }
 
     @Test
     fun negativeInteger() {
-        val numberFormat = NumberFormats.Germany
         val jvmNumberFormat = DecimalFormat.getIntegerInstance(Locale.GERMANY)
 
         repeat((0..1_000_000).count()) {
             val number = Random.nextInt(1_000_000_000)
 
-            assertThat(underTest.formatNumber(number, numberFormat)).isEqualTo(jvmNumberFormat.format(number))
+            assertThat(underTest.formatNumber(number, LanguageTag.Germany)).isEqualTo(jvmNumberFormat.format(number))
         }
     }
 
 
     @Test
     fun double() {
-        val numberFormat = NumberFormats.Germany
         val jvmNumberFormat = DecimalFormat.getNumberInstance(Locale.GERMANY)
 
         repeat((0..1_000_000).count()) {
             val number = Random.nextDouble(10_000_000.9999)
 
-            assertThat(underTest.formatNumber(number, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
+            assertThat(underTest.formatNumber(number, LanguageTag.Germany), "$number").isEqualTo(jvmNumberFormat.format(number))
         }
     }
 
     @Test
     fun negativeDouble() {
-        val numberFormat = NumberFormats.Germany
         val jvmNumberFormat = DecimalFormat.getNumberInstance(Locale.GERMANY)
 
         repeat((0..1_000_000).count()) {
             val number = Random.nextDouble(-10_000_000.9999, 0.0)
 
-            assertThat(underTest.formatNumber(number, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
+            assertThat(underTest.formatNumber(number, LanguageTag.Germany), "$number").isEqualTo(jvmNumberFormat.format(number))
         }
     }
 
 
     @Test
     fun percent() {
-        val numberFormat = NumberFormats.Germany
         val jvmNumberFormat = DecimalFormat.getPercentInstance(Locale.GERMANY)
 
         repeat((0..1_000_000).count()) {
             val number = Random.nextDouble(0.9999)
 
-            assertThat(underTest.formatPercent(number, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
+            assertThat(underTest.formatPercent(number, LanguageTag.Germany), "$number").isEqualTo(jvmNumberFormat.format(number))
         }
     }
 
     @Test
     fun negativePercent() {
-        val numberFormat = NumberFormats.Germany
         val jvmNumberFormat = DecimalFormat.getPercentInstance(Locale.GERMANY)
 
         repeat((0..1_000_000).count()) {
             val number = Random.nextDouble(0.0, 0.9999)
 
-            assertThat(underTest.formatPercent(number, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
+            assertThat(underTest.formatPercent(number, LanguageTag.Germany), "$number").isEqualTo(jvmNumberFormat.format(number))
         }
     }
 
 
     @Test
     fun currency() {
-        val numberFormat = NumberFormats.Germany
         val jvmNumberFormat = DecimalFormat.getCurrencyInstance(Locale.GERMANY)
 
         repeat((0..1_000_000).count()) {
             val number = Random.nextDouble(0.9999)
 
-            assertThat(underTest.formatCurrency(number, Currency.Euro, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
+            assertThat(underTest.formatCurrency(number, Currency.Euro, LanguageTag.Germany), "$number").isEqualTo(jvmNumberFormat.format(number))
         }
     }
 
     @Test
     fun negativeCurrency() {
-        val numberFormat = NumberFormats.Germany
         val jvmNumberFormat = DecimalFormat.getCurrencyInstance(Locale.GERMANY)
 
         repeat((0..1_000_000).count()) {
             val number = Random.nextDouble(0.9999)
 
-            assertThat(underTest.formatCurrency(number, Currency.Euro, numberFormat), "$number").isEqualTo(jvmNumberFormat.format(number))
+            assertThat(underTest.formatCurrency(number, Currency.Euro, LanguageTag.Germany), "$number").isEqualTo(jvmNumberFormat.format(number))
         }
     }
 

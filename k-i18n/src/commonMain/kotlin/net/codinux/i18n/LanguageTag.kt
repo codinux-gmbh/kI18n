@@ -143,9 +143,11 @@ class LanguageTag(
 
         val French: LanguageTag by lazy { ofAvailable("fr") }
 
-        val German: LanguageTag by lazy { ofAvailable("de") }
+        val Spanish: LanguageTag by lazy { ofAvailable("es") }
 
         val Italian: LanguageTag by lazy { ofAvailable("it") }
+
+        val German: LanguageTag by lazy { ofAvailable("de") }
 
         val Japanese: LanguageTag by lazy { ofAvailable("ja") }
 
@@ -156,6 +158,11 @@ class LanguageTag(
         val Arabic: LanguageTag by lazy { ofAvailable("ar") }
 
         val Russian: LanguageTag by lazy { ofAvailable("ru") }
+
+
+        val USA: LanguageTag by lazy { LanguageTag.English }
+
+        val Germany: LanguageTag by lazy { LanguageTag.German }
 
 
         fun of(language: Language, region: Region? = null, script: Script? = null, variant: Variant? = null) = LanguageTag(

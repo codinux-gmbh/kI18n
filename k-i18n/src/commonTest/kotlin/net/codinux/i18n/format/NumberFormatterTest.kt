@@ -5,7 +5,6 @@ import assertk.assertions.isEqualTo
 import net.codinux.i18n.Currency
 import net.codinux.i18n.Language
 import net.codinux.i18n.LanguageTag
-import net.codinux.i18n.formatter.NumberFormats
 import net.codinux.i18n.formatter.NumberFormatter
 import kotlin.test.Ignore
 import kotlin.test.Test
@@ -18,7 +17,7 @@ class NumberFormatterTest {
     @Ignore // fails currently, we have to fix it
     @Test
     fun roundCorrectlyUp() {
-        val result = underTest.formatNumber(8856.7365, NumberFormats.USA)
+        val result = underTest.formatNumber(8856.7365, LanguageTag.USA)
 
         assertThat(result).isEqualTo("8,856.737")
     }
