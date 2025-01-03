@@ -54,6 +54,10 @@ class UnitDisplayNamesResolver {
                 squarePattern != null && cubicPattern != null && timesPattern != null && perPattern != null
     }
 
+
+    // TODO: use thread safe Map / Cache (but should actually also work without as display names should only be resolved from UI thread)
+    private val displayNamesCache = mutableMapOf<String, UnitDisplayNames?>()
+
     private val csvReader = CsvReader(CsvFormatsSeparator)
 
 
@@ -62,6 +66,10 @@ class UnitDisplayNamesResolver {
             ?: throw IllegalArgumentException("Localized unit display names not found for locale '$locale' or its parents. Are you sure this locale exists?")
 
     fun getDisplayNamesForLocaleOrNull(locale: LanguageTag): UnitDisplayNames? {
+        displayNamesCache[locale.tag]?.let {
+            return it
+        }
+
         val lookup = mapDisplayNamesForLocale(locale)
         var parent: LanguageTag? = locale.parent ?: LanguageTag.Root
 
@@ -73,7 +81,9 @@ class UnitDisplayNamesResolver {
             parent = if (parent == LanguageTag.Root) null else parent.parent ?: LanguageTag.Root
         }
 
-        return mapDisplayNames(lookup)
+        return mapDisplayNames(lookup).also {
+            displayNamesCache[locale.tag] = it
+        }
     }
 
 
