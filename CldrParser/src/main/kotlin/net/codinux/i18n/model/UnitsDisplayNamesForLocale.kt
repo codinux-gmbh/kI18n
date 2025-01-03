@@ -11,7 +11,7 @@ class UnitsDisplayNamesForLocale(
 )
 
 class UnitsLocaleDisplayNames(
-    val units: List<UnitDisplayNames>,
+    val units: List<UnitDisplayName>,
 
     val prefixPatterns: List<UnitPattern>,
     val powerPatterns: List<UnitPattern>,
@@ -20,7 +20,7 @@ class UnitsLocaleDisplayNames(
     val coordinates: CoordinatesDisplayNames? = null
 )
 
-data class UnitDisplayNames(
+data class UnitDisplayName(
     val unit: String,
     val displayName: String,
     val perUnitPattern: String? = null,
@@ -32,7 +32,9 @@ data class UnitDisplayNames(
 open class UnitPattern(
     val unit: String,
     val unitPattern: String
-)
+) {
+    override fun toString() = "$unit = $unitPattern"
+}
 
 class CompoundUnitPattern(
     unit: String,

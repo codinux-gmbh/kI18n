@@ -1,4 +1,4 @@
-package net.codinux.i18n.units
+package net.codinux.i18n.unit
 
 import kotlin.String
 import kotlin.collections.List

@@ -11,9 +11,9 @@ import net.codinux.i18n.datetime.DayOfWeek
 import net.codinux.i18n.datetime.HourStyle
 import net.codinux.i18n.datetime.PreferredWeekData
 import net.codinux.i18n.model.*
-import net.codinux.i18n.model.UnitDisplayNames
+import net.codinux.i18n.model.UnitDisplayName
 import net.codinux.i18n.service.FileSystemUtil
-import net.codinux.i18n.units.UnitType
+import net.codinux.i18n.unit.UnitType
 import net.codinux.log.logger
 import java.io.File
 import java.nio.file.Path
@@ -346,7 +346,7 @@ open class CldrJsonParser(
 
         return UnitsLocaleDisplayNames(
             // sort unitPatterns as after displayNames.unitPattern.filter { } they are unsorted and here they still have the unit category as name prefix
-            unitPatterns.toSortedMap().map { UnitDisplayNames(unitName(it.key), it.value.displayName!!, it.value.perUnitPattern, it.value.unitPatternCountOne, it.value.unitPatternCountOther) },
+            unitPatterns.toSortedMap().map { UnitDisplayName(unitName(it.key), it.value.displayName!!, it.value.perUnitPattern, it.value.unitPatternCountOne, it.value.unitPatternCountOther) },
             prefixPatterns.map { UnitPattern(it.key, it.value.unitPrefixPattern!!) },
             // only for ff- locales compoundUnitPattern1CountOther differs from compoundUnitPattern1. compoundUnitPattern1CountOne is always null
             powerPatterns.map { UnitPattern(it.key, it.value.compoundUnitPattern1CountOther ?: it.value.compoundUnitPattern1!!) },

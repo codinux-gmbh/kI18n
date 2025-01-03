@@ -1,8 +1,5 @@
 package net.codinux.i18n.unit
 
-import net.codinux.i18n.units.UnitDisplayNameKey
-import net.codinux.i18n.units.UnitPrefix
-
 data class UnitDisplayNames(
     val long: UnitDisplayFormatNames,
     val short: UnitDisplayFormatNames,
@@ -12,8 +9,17 @@ data class UnitDisplayNames(
 }
 
 data class UnitDisplayFormatNames(
-    val units: Map<UnitDisplayNameKey, Any>,
-    val prefixPatterns: Map<UnitPrefix, Any>,
-    val powerPatterns: Any,
-    val compoundPatterns: Any
+    val units: Map<UnitDisplayNameKey, UnitDisplayName>,
+    val prefixPatterns: Map<UnitPrefix, String>,
+    val squarePattern: String?,
+    val cubicPattern: String?,
+    val timesPattern: String?,
+    val perPattern: String?,
+)
+
+data class UnitDisplayName(
+    val displayName: String,
+    val perUnitPattern: String? = null,
+    val unitPatternCountOne: String? = null,
+    val unitPatternCountOther: String? = null,
 )

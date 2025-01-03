@@ -8,6 +8,7 @@ import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.model.*
 import net.codinux.i18n.unit.UnitDisplayNamesResolver
 import net.codinux.i18n.parser.CldrJsonParser
+import net.codinux.i18n.unit.UnitDisplayNameKey
 import net.codinux.i18n.unit.UnitDisplayNamesResolver.Companion.CubicKey
 import net.codinux.i18n.unit.UnitDisplayNamesResolver.Companion.PerKey
 import net.codinux.i18n.unit.UnitDisplayNamesResolver.Companion.SquareKey
@@ -28,7 +29,7 @@ class AvailableUnitDisplayNamesClassGenerator(
     }
 
     private data class UniqueValues(
-        val units: List<UnitDisplayNames>?,
+        val units: List<UnitDisplayName>?,
 
         val prefixPatterns: List<UnitPattern>?,
         val powerPatterns: List<UnitPattern>?,
@@ -64,7 +65,22 @@ class AvailableUnitDisplayNamesClassGenerator(
                 generatePrefixDisplayNamesProperty(locale, displayNames))
         }
 
-        util.writeClass("AvailableUnitDisplayNames", unitPatternsProperties, subPackage = "unit", companionObjectMethods = listOf())
+        // method to find all display names of a LanguageTag
+        val getDisplayNamesForLocale = FunSpec.builder("getDisplayNamesForLocale")
+            .addParameter("language", String::class)
+            .returns(Pair::class.parameterizedBy(String::class, String::class))
+            .apply {
+                beginControlFlow("return when(language) {")
+                allByLocale.forEach { (languageTag, _) ->
+                    val baseName = languageTag.tag.replace('-', '_') + "_"
+                    addStatement("%S -> %T(%N ?: \"\", %N ?: \"\")", languageTag.tag, Pair::class, baseName + "Units", baseName + "Prefixes")
+                }
+                addStatement("else -> %T(%S, %S)", Pair::class, "", "")
+                endControlFlow()
+            }.build()
+
+
+        util.writeClass("AvailableUnitDisplayNames", unitPatternsProperties, subPackage = "unit", companionObjectMethods = listOf(getDisplayNamesForLocale))
     }
 
 
@@ -203,11 +219,7 @@ class AvailableUnitDisplayNamesClassGenerator(
 
     private fun generateUnitPrefixesEnum(metadata: UnitsMetadata) {
         val prefixes = metadata.unitPrefixes
-        val prefixesMapped = prefixes.associateBy({ it.name }, { it.symbol to (it.power2?.let { "2p$it" } ?: it.power10!!.let { "10p$it" })})
-            .toMutableMap().apply { putAll(listOf(
-                "Square" to ("²" to "1p2"),
-                "Cubic" to ("³" to "1p3"),
-            ))}
+        val prefixesMapped = prefixes.associateBy({ it.name }, { it.symbol to (it.power2?.let { "1024p${it / 10}" } ?: it.power10!!.let { "10p$it" })})
 
 
         val constructor = FunSpec.constructorBuilder()
@@ -223,7 +235,15 @@ class AvailableUnitDisplayNamesClassGenerator(
         }
 
 
-        util.writeEnumClass("UnitPrefix", enumConstants, constructor, subPackage = "units")
+        // method to get a UnitPrefix enum value by conversionFactor
+        val getUnitPrefixForConversionFactor = FunSpec.builder("forConversionFactor")
+            .addParameter("conversionFactor", String::class)
+            .returns(UnitPrefix::class)
+            .addStatement("return %T.entries.first { it.conversionFactor == conversionFactor }", UnitPrefix::class)
+            .build()
+
+
+        util.writeEnumClass("UnitPrefix", enumConstants, constructor, null, listOf(getUnitPrefixForConversionFactor), subPackage = "units")
     }
 
 
@@ -249,7 +269,15 @@ class AvailableUnitDisplayNamesClassGenerator(
         }
 
 
-        util.writeEnumClass("UnitDisplayNameKey", enumConstants, constructor, subPackage = "units")
+        // method to get a UnitDisplayNameKey enum value by key
+        val getUnitDisplayNameKeyForKey = FunSpec.builder("forKey")
+            .addParameter("key", String::class)
+            .returns(UnitDisplayNameKey::class)
+            .addStatement("return %T.entries.first { it.key == key }", UnitDisplayNameKey::class)
+            .build()
+
+
+        util.writeEnumClass("UnitDisplayNameKey", enumConstants, constructor, null, listOf(getUnitDisplayNameKeyForKey), subPackage = "units")
     }
 
 
