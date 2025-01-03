@@ -45,4 +45,19 @@ class UnitFormatterTest {
         }
     }
 
+
+    @Test
+    fun getUnitDisplayName_ByUnitEnglishName() {
+        val englishNames = UnitDisplayNamesResolver().getDisplayNamesForLocale(LanguageTag.English).long.units
+        val supportedFormats = englishNames.values.filterNot { it.displayName.contains(" per ") || it.displayName.contains("square ")
+                || it.displayName.contains("cubic ") }
+
+        supportedFormats.forEach { englishName ->
+            val result = underTest.getUnitDisplayName(englishName.displayName)
+
+            assertThat(result, "Display name of '${englishName.displayName}' should not be null or empty")
+                .isNotNull().isNotEmpty()
+        }
+    }
+
 }
