@@ -211,7 +211,7 @@ enum class UnitDisplayNameKey(
   Watt("watt", "watts"),
   Week("week", "weeks"),
   Yard("yard", "yards"),
-  Year("year", "years")
+  Year("year", "years"),
   ;
 
   companion object {

@@ -13,6 +13,7 @@ import net.codinux.i18n.unit.UnitDisplayNamesResolver.Companion.CubicKey
 import net.codinux.i18n.unit.UnitDisplayNamesResolver.Companion.PerKey
 import net.codinux.i18n.unit.UnitDisplayNamesResolver.Companion.SquareKey
 import net.codinux.i18n.unit.UnitDisplayNamesResolver.Companion.TimesKey
+import net.codinux.i18n.unit.UnitPrefix
 
 class AvailableUnitDisplayNamesClassGenerator(
     private val cldrJsonParser: CldrJsonParser = CldrJsonParser(),
@@ -47,6 +48,7 @@ class AvailableUnitDisplayNamesClassGenerator(
         val locales = cldrJsonParser.getLocalesWithLocalizedUnits().map { LanguageTag.ofAvailable(it) }
 
         val allByLocale = locales.associateWith { cldrJsonParser.parseUnitNamesForLocale(it) }
+        val englishDisplayNames = allByLocale[LanguageTag.English]!!
 
         val metadata = cldrJsonParser.parseUnitsMetadata()
         // TODO: also parse unitConstants (some contain conversion factors e.g. from feet to meter)?
@@ -54,7 +56,7 @@ class AvailableUnitDisplayNamesClassGenerator(
 
         generateUnitPrefixesEnum(metadata)
 
-        generateAvailableUnitDisplayNameKeysEnum(allByLocale)
+        generateAvailableUnitDisplayNameKeysEnum(allByLocale, englishDisplayNames)
 
 
         // don't add display names redundantly, if they have the same values as in parent locale, don't add them to file but look them up in parent locale
@@ -214,23 +216,29 @@ class AvailableUnitDisplayNamesClassGenerator(
         }
 
 
-        util.writeEnumClass("UnitType", enumConstants, constructor, subPackage = "units")
+        util.writeEnumClass("UnitType", enumConstants, constructor, subPackage = "unit")
     }
 
     private fun generateUnitPrefixesEnum(metadata: UnitsMetadata) {
         val prefixes = metadata.unitPrefixes
         val prefixesMapped = prefixes.associateBy({ it.name }, { it.symbol to (it.power2?.let { "1024p${it / 10}" } ?: it.power10!!.let { "10p$it" })})
+            .toMutableMap().apply { putAll(listOf(
+                "Square" to ("²" to "1p2"),
+                "Cubic" to ("³" to "1p3"),
+            ))}
 
 
         val constructor = FunSpec.constructorBuilder()
             .addParameter("symbol", String::class, false)
             .addParameter("conversionFactor", String::class, false)
+            .addParameter("englishName", String::class, false)
             .build()
 
         val enumConstants = prefixesMapped.toSortedMap().mapNotNull { (name, symbolAndPower) ->
             name to TypeSpec.anonymousClassBuilder()
                 .addSuperclassConstructorParameter("%S", symbolAndPower.first)
                 .addSuperclassConstructorParameter("%S", symbolAndPower.second)
+                .addSuperclassConstructorParameter("%S", (if (name == "Square") "square " else if (name == "Cubic") "cubic " else name))
                 .build()
         }
 
@@ -243,12 +251,12 @@ class AvailableUnitDisplayNamesClassGenerator(
             .build()
 
 
-        util.writeEnumClass("UnitPrefix", enumConstants, constructor, null, listOf(getUnitPrefixForConversionFactor), subPackage = "units")
+        util.writeEnumClass("UnitPrefix", enumConstants, constructor, null, listOf(getUnitPrefixForConversionFactor), subPackage = "unit")
     }
 
 
-    private fun generateAvailableUnitDisplayNameKeysEnum(allByLocale: Map<LanguageTag, UnitsDisplayNamesForLocale>) {
-        val englishNames = allByLocale[LanguageTag.English]!!.long.units.associateBy({ it.unit }, { it.displayName })
+    private fun generateAvailableUnitDisplayNameKeysEnum(allByLocale: Map<LanguageTag, UnitsDisplayNamesForLocale>, englishDisplayNames: UnitsDisplayNamesForLocale) {
+        val englishNames = englishDisplayNames.long.units.associateBy({ it.unit }, { it.displayName })
         val all = allByLocale.values
         val allUnitNames = all.flatMap { it.long.units.map { it.unit } + it.short.units.map { it.unit } + it.narrow.units.map { it.unit } }
             .toSet().sorted()
@@ -277,7 +285,7 @@ class AvailableUnitDisplayNamesClassGenerator(
             .build()
 
 
-        util.writeEnumClass("UnitDisplayNameKey", enumConstants, constructor, null, listOf(getUnitDisplayNameKeyForKey), subPackage = "units")
+        util.writeEnumClass("UnitDisplayNameKey", enumConstants, constructor, null, listOf(getUnitDisplayNameKeyForKey), subPackage = "unit")
     }
 
 

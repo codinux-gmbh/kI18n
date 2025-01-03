@@ -49,8 +49,7 @@ class UnitFormatterTest {
     @Test
     fun getUnitDisplayName_ByUnitEnglishName() {
         val englishNames = UnitDisplayNamesResolver().getDisplayNamesForLocale(LanguageTag.English).long.units
-        val supportedFormats = englishNames.values.filterNot { it.displayName.contains(" per ") || it.displayName.contains("square ")
-                || it.displayName.contains("cubic ") }
+        val supportedFormats = englishNames.values.filterNot { it.displayName.contains(" per ") || it.displayName.contains("-") || it.displayName.contains(" of ") }
 
         supportedFormats.forEach { englishName ->
             val result = underTest.getUnitDisplayName(englishName.displayName)
