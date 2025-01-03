@@ -10,39 +10,63 @@ open class UnitFormatter(
     private val log by logger()
 
 
+    open fun getUnitDisplayName(unit: UnitDisplayNameKey, style: UnitFormatStyle = UnitFormatStyle.Long, language: LanguageTag = LanguageTag.current): String? =
+        getStyleDisplayNames(style, language).units[unit]?.displayName
+
     open fun getUnitDisplayName(unit: String, style: UnitFormatStyle = UnitFormatStyle.Long, language: LanguageTag = LanguageTag.current): String? {
+        val unitKey = findKey(unit)
+        if (unitKey != null) {
+            val unitDisplayName = getUnitDisplayName(unitKey, style, language)
+            if (unitDisplayName != null) {
+                return unitDisplayName
+            }
+        }
+
+        val perParts = unit.split(" per ")
+        if (perParts.size == 1) {
+            return formatPart(perParts.first(), style, language)
+        } else if (perParts.size == 2) {
+            return formatPerUnit(perParts.first(), perParts[1]!!, style, language)
+        }
+
+        return null
+    }
+
+
+    protected open fun formatPart(unit: String, style: UnitFormatStyle, language: LanguageTag): String? {
         val (remainingString, prefixes) = extractPrefixes(unit)
         val unitKey = findKey(remainingString)
         if (unitKey != null) {
             val unitDisplayName = getUnitDisplayName(unitKey, style, language)
             if (unitDisplayName != null) {
-                var formatted: String = unitDisplayName
-
-                if (prefixes.isNotEmpty()) {
-                    val displayNames = getStyleDisplayNames(style, language)
-                    prefixes.reversed().forEach { prefix ->
-                        val displayName = when (prefix) {
-                            UnitPrefix.Square -> displayNames.squarePattern
-                            UnitPrefix.Cubic -> displayNames.cubicPattern
-                            else -> displayNames.prefixPatterns[prefix]
-                        }
-                        if (displayName != null) {
-                            formatted = displayName.replace("{0}", formatted)
-                        } else {
-                            log.warn { "Could not format prefix $prefix for locale $language in unit string '$unit'" }
-                        }
-                    }
-                }
-
-                return formatted
+                return formatPrefixes(unit, unitDisplayName, prefixes, style, language)
             }
         }
 
         return null
     }
 
-    open fun getUnitDisplayName(unit: UnitDisplayNameKey, style: UnitFormatStyle = UnitFormatStyle.Long, language: LanguageTag = LanguageTag.current): String? =
-        getStyleDisplayNames(style, language).units[unit]?.displayName
+    protected open fun formatPrefixes(unit: String, unitDisplayName: String, prefixes: List<UnitPrefix>, style: UnitFormatStyle, language: LanguageTag): String {
+        var formatted = unitDisplayName
+
+        if (prefixes.isNotEmpty()) {
+            val displayNames = getStyleDisplayNames(style, language)
+            prefixes.reversed().forEach { prefix ->
+                val displayName = when (prefix) {
+                    UnitPrefix.Square -> displayNames.squarePattern
+                    UnitPrefix.Cubic -> displayNames.cubicPattern
+                    else -> displayNames.prefixPatterns[prefix]
+                }
+                if (displayName != null) {
+                    formatted = displayName.replace("{0}", formatted)
+                } else {
+                    log.warn { "Could not format prefix $prefix for locale $language in unit string '$unit'" }
+                }
+            }
+        }
+
+        return formatted
+    }
 
 
     protected open fun findKey(unit: String): UnitDisplayNameKey? {
@@ -80,6 +104,27 @@ open class UnitFormatter(
 
         return Pair(remainingString.trim(), prefixes)
     }
+
+    protected open fun formatPerUnit(numerator: String, denominator: String, style: UnitFormatStyle, language: LanguageTag): String? {
+        val numeratorFormatted = formatPart(numerator, style, language)
+        if (numeratorFormatted != null) {
+            val (remainingString, prefixes) = extractPrefixes(denominator)
+            val unitKey = findKey(remainingString)
+
+            if (unitKey != null) {
+                val perUnitPattern = getStyleDisplayNames(style, language).units[unitKey]?.perUnitPattern
+                if (perUnitPattern != null) {
+                    val denominatorFormatted = formatPrefixes(denominator, perUnitPattern, prefixes, style, language)
+                    return denominatorFormatted.replace("{0}", numeratorFormatted)
+                }
+            } else {
+                log.warn { "Could not find UnitKey for '$remainingString' of denominator '$denominator'" }
+            }
+        }
+
+        return null
+    }
+
 
     protected open fun getStyleDisplayNames(style: UnitFormatStyle, language: LanguageTag): UnitDisplayFormatNames {
         val displayNames = resolver.getDisplayNamesForLocale(language)

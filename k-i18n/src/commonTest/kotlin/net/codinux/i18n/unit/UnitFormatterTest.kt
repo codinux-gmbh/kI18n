@@ -47,9 +47,16 @@ class UnitFormatterTest {
 
 
     @Test
+    fun getUnitDisplayName_ByUnitEnglishName_JoulePerSquareMeter() {
+        val result = underTest.getUnitDisplayName("Joule per square meters", UnitFormatStyle.Narrow, LanguageTag.German)
+
+        assertThat(result).isEqualTo("J/m²")
+    }
+
+    @Test
     fun getUnitDisplayName_ByUnitEnglishName() {
         val englishNames = UnitDisplayNamesResolver().getDisplayNamesForLocale(LanguageTag.English).long.units
-        val supportedFormats = englishNames.values.filterNot { it.displayName.contains(" per ") || it.displayName.contains("-") || it.displayName.contains(" of ") }
+        val supportedFormats = englishNames.values.filterNot { it.displayName.contains("-") || it.displayName.contains(" of ") }
 
         supportedFormats.forEach { englishName ->
             val result = underTest.getUnitDisplayName(englishName.displayName)
