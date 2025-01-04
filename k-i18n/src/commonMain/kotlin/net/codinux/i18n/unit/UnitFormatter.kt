@@ -14,7 +14,10 @@ open class UnitFormatter(
         getStyleDisplayNames(style, language).units[unit]?.displayName
 
     open fun getUnitDisplayName(unit: String, style: UnitFormatStyle = UnitFormatStyle.Long, language: LanguageTag = LanguageTag.current): String? {
-        val unitKey = findKey(unit)
+        // CLDR uses us-american names (https://www.unicode.org/reports/tr35/tr35-general.html#nomenclature)
+        val normalized = unit.replace("metre", "meter").replace("litre", "liter").replace("deca", "deka")
+
+        val unitKey = findKey(normalized)
         if (unitKey != null) {
             val unitDisplayName = getUnitDisplayName(unitKey, style, language)
             if (unitDisplayName != null) {
@@ -22,7 +25,7 @@ open class UnitFormatter(
             }
         }
 
-        val perParts = unit.split(" per ")
+        val perParts = normalized.split(" per ")
         if (perParts.size == 1) {
             return formatPart(perParts.first(), style, language)
         } else if (perParts.size == 2) {
