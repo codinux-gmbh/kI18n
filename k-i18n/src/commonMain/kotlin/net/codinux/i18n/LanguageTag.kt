@@ -184,6 +184,7 @@ class LanguageTag(
          */
         fun ofAvailable(languageTag: String): LanguageTag =
             ofAvailableOrNull(languageTag)
+                ?: service.removeLikelySubTag(languageTag)?.let { ofAvailableOrNull(it.tag) }
                 ?: throw IllegalArgumentException("A LanguageTag with tag '$languageTag' is not found in LanguageTag.availableLanguageTags (even though it may is formally correct).")
 
 

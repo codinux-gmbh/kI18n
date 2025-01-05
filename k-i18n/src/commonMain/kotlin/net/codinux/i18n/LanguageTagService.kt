@@ -139,6 +139,30 @@ class LanguageTagService {
     }
 
 
+    /**
+     * Determines if [languageTag] is a likely sub tag, that is its script and region are language's default script
+     * and region, e.g.
+     * - "en-US" -> "en"
+     * - "de-DE-Latn" -> "de"
+     */
+    fun removeLikelySubTag(languageTag: String): LanguageTag? {
+        val tag = parseOrNull(languageTag)
+        if (tag != null && tag.hasOnlyLanguageCode == false) {
+            tag.language?.let { language ->
+                if (tag.script != null && language.defaultScript == tag.script) {
+                    if (tag.region == null || language.defaultRegion == tag.region) {
+                        return LanguageTag.of(language)
+                    }
+                } else if (tag.region != null && language.defaultRegion == tag.region) {
+                    return LanguageTag.of(language)
+                }
+            }
+        }
+
+        return null
+    }
+
+
     fun findLanguageOrNull(language: String): Language? =
         Language.entries.firstOrNull { it.isoCode.equals(language, true) }
 

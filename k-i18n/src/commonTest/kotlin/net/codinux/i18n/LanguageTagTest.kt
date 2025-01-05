@@ -298,4 +298,22 @@ class LanguageTagTest {
         assertThat(result.region).isEqualTo(Region.Namibia)
     }
 
+
+    @Test
+    fun ofAvailable_isLikelySubtag_en_US() {
+        val result = LanguageTag.ofAvailable("en-US")
+
+        assertThat(result.tag).isEqualTo("en")
+        assertThat(result.region).isNull()
+    }
+
+    @Test
+    fun ofAvailable_isLikelySubtag_de_DE_Latn() {
+        val result = LanguageTag.ofAvailable("de-DE-Latn")
+
+        assertThat(result.tag).isEqualTo("de")
+        assertThat(result.region).isNull()
+        assertThat(result.script).isNull()
+    }
+
 }
