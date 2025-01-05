@@ -1,6 +1,7 @@
 package net.codinux.i18n.unit
 
 import net.codinux.i18n.LanguageTag
+import net.codinux.i18n.indexOfOrNull
 import net.codinux.log.logger
 
 open class UnitFormatter(
@@ -33,6 +34,28 @@ open class UnitFormatter(
         }
 
         return null
+    }
+
+    /**
+     * Removes information in round and square brackets to make them formattable and then calls [getUnitDisplayName],
+     * e.g. for "micrometre (micron)", "minute [unit of time]" or "tonne (metric ton)".
+     *
+     * Be aware that two different units then may have the same display name afterwards like "Barrel (US)" and "Barrel (UK)".
+     */
+    open fun cleanAndGetUnitDisplayName(unit: String, style: UnitFormatStyle = UnitFormatStyle.Long, language: LanguageTag = LanguageTag.current): String? {
+        var cleaned = unit
+
+        val (startIndex, endIndex) = cleaned.indexOfOrNull('(') to cleaned.indexOfOrNull(')')
+        if (startIndex != null && endIndex != null && startIndex < endIndex) {
+            cleaned = cleaned.replace(cleaned.substring(startIndex, endIndex + 1), "")
+        }
+
+        val (squareBracketStartIndex, squareBracketEndIndex) = cleaned.indexOfOrNull('[') to cleaned.indexOfOrNull(']')
+        if (squareBracketStartIndex != null && squareBracketEndIndex != null && squareBracketStartIndex < squareBracketEndIndex) {
+            cleaned = cleaned.replace(cleaned.substring(squareBracketStartIndex, squareBracketEndIndex + 1), "")
+        }
+
+        return getUnitDisplayName(cleaned.trim(), style, language)
     }
 
 

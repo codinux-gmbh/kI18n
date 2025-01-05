@@ -69,6 +69,28 @@ class UnitFormatterTest {
 
 
     @Test
+    fun cleanAndGetUnitDisplayName_MicrometerMicron() {
+        val result = underTest.cleanAndGetUnitDisplayName("micrometre (micron)", UnitFormatStyle.Narrow, LanguageTag.English)
+
+        assertThat(result).isEqualTo("μm")
+    }
+
+    @Test
+    fun cleanAndGetUnitDisplayName_MinuteUnitOfTime() {
+        val result = underTest.cleanAndGetUnitDisplayName("minute [unit of time]", UnitFormatStyle.Narrow, LanguageTag.English)
+
+        assertThat(result).isEqualTo("min")
+    }
+
+    @Test
+    fun cleanAndGetUnitDisplayName_OfUnit_Tonne() {
+        val result = underTest.cleanAndGetUnitDisplayName(UnitAll.TNE.englishName, UnitFormatStyle.Narrow, LanguageTag.English)
+
+        assertThat(result).isEqualTo("t")
+    }
+
+
+    @Test
     fun getUnitDisplayName_ByUnitEnglishName() {
         val englishNames = UnitDisplayNamesResolver().getDisplayNamesForLocale(LanguageTag.English).long.units
         val supportedFormats = englishNames.values.filterNot { it.displayName.contains("-") || it.displayName.contains(" of ") }
