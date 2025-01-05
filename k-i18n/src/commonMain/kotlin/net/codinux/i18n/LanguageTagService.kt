@@ -10,7 +10,7 @@ class LanguageTagService {
                     "region code and a four-letter script code in title case follow.")
 
     fun parseOrNull(languageTag: String): LanguageTag? {
-        val tag = languageTag.replace('_', '-') // Apple system use '_' as separator
+        val tag = normalizeAndCleanTag(languageTag)
 
         val parts = tag.split('-')
         val languageCode = parts[0]
@@ -39,6 +39,30 @@ class LanguageTagService {
         }
 
         return LanguageTag(tag, languageCode, regionCode, scriptCode, variant)
+    }
+
+    private fun normalizeAndCleanTag(languageTag: String): String {
+        var tag = languageTag.replace('_', '-') // Apple system use '_' as separator
+
+        if (tag.contains("utf8", true)) { // e.g. POSIX language tags contain charset, e.g. "en-utf8" or "de_CH@UTF-8
+            var index = tag.lowercase().indexOf("utf8")
+            val endIndex = index + "utf8".length
+            if (index > 1 && tag[index - 1].let { it == '-' || it == '@' }) {
+                index = index - 1
+            }
+            tag = tag.replace(tag.substring(index, endIndex), "")
+        }
+
+        if (tag.contains("utf-8", true)) { // e.g. POSIX language tags contain charset, e.g. "en-utf8" or "de_CH@UTF-8
+            var index = tag.lowercase().indexOf("utf-8")
+            val endIndex = index + "utf-8".length
+            if (index > 1 && tag[index - 1].let { it == '-' || it == '@' }) {
+                index = index - 1
+            }
+            tag = tag.replace(tag.substring(index, endIndex), "")
+        }
+
+        return tag
     }
 
 

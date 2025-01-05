@@ -65,6 +65,25 @@ class LanguageTagTest {
 
 
     @Test
+    fun parse_RemoveCharsetAppendedByDash() {
+        val result = LanguageTag.parse("en-utf8")
+
+        assertThat(result.tag).isEqualTo("en")
+        assertThat(result.language).isEqualTo(Language.English)
+        assertThat(result.region).isNull()
+    }
+
+    @Test
+    fun parse_RemoveCharsetAppendedByAtSign() {
+        val result = LanguageTag.parse("de_CH@UTF-8")
+
+        assertThat(result.tag).isEqualTo("de-CH")
+        assertThat(result.language).isEqualTo(Language.German)
+        assertThat(result.region).isEqualTo(Region.Switzerland)
+    }
+
+
+    @Test
     fun parse_LanguageAndVariant() {
         val result = LanguageTag.parse("be-tarask")
 
