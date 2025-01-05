@@ -29,7 +29,7 @@ open class UnitFormatter(
         if (perParts.size == 1) {
             return formatPart(perParts.first(), style, language)
         } else if (perParts.size == 2) {
-            return formatPerUnit(perParts.first(), perParts[1]!!, style, language)
+            return formatPerUnit(perParts.first(), perParts[1], style, language)
         }
 
         return null
@@ -43,6 +43,21 @@ open class UnitFormatter(
             val unitDisplayName = getUnitDisplayName(unitKey, style, language)
             if (unitDisplayName != null) {
                 return formatPrefixes(unit, unitDisplayName, prefixes, style, language)
+            }
+        }
+
+        val parts = unit.split(' ')
+        if (parts.size > 1) {
+            val partsFormatted = parts.map { formatPart(it, style, language) }
+            if (partsFormatted.all { it != null }) {
+                val timesPattern = getStyleDisplayNames(style, language).timesPattern
+
+                return if (timesPattern == null) {
+                    partsFormatted.joinToString(timesPattern ?: " ")
+                } else {
+                    partsFormatted.reduce { acc, part ->
+                        timesPattern.replace("{0}", acc ?: "").replace("{1}", part!!) }
+                }
             }
         }
 

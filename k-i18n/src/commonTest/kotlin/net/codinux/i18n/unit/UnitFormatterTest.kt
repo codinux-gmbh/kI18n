@@ -54,6 +54,21 @@ class UnitFormatterTest {
     }
 
     @Test
+    fun getUnitDisplayName_ByUnitEnglishName_WattHour() {
+        val result = underTest.getUnitDisplayName("watt hour", UnitFormatStyle.Narrow, LanguageTag.German)
+
+        assertThat(result).isEqualTo("W⋅Std.") // not that nice
+    }
+
+    @Test
+    fun getUnitDisplayName_ByUnitEnglishName_GigawattHour() {
+        val result = underTest.getUnitDisplayName("gigawatt hour", UnitFormatStyle.Narrow, LanguageTag.German)
+
+        assertThat(result).isEqualTo("GW⋅Std.")
+    }
+
+
+    @Test
     fun getUnitDisplayName_ByUnitEnglishName() {
         val englishNames = UnitDisplayNamesResolver().getDisplayNamesForLocale(LanguageTag.English).long.units
         val supportedFormats = englishNames.values.filterNot { it.displayName.contains("-") || it.displayName.contains(" of ") }
