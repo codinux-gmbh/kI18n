@@ -1,7 +1,7 @@
 
 allprojects {
     group = "net.codinux.i18n"
-    version = "0.6.3-SNAPSHOT"
+    version = "0.7.0"
 
     ext["sourceCodeRepositoryBaseUrl"] = "github.com/codinux-gmbh/kI18n"
 
