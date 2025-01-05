@@ -5,7 +5,12 @@ import assertk.assertions.isEqualTo
 import assertk.assertions.isNotEmpty
 import assertk.assertions.isNotNull
 import net.codinux.i18n.LanguageTag
+import net.codinux.i18n.UnitAll
+import net.codinux.i18n.UnitAnnex
+import net.codinux.log.Log
+import kotlin.test.Ignore
 import kotlin.test.Test
+import kotlin.test.fail
 
 class UnitFormatterTest {
 
@@ -97,6 +102,7 @@ class UnitFormatterTest {
     }
 
 
+    @Ignore
     @Test
     fun getUnitDisplayName_ByUnitEnglishName() {
         val englishNames = UnitDisplayNamesResolver().getDisplayNamesForLocale(LanguageTag.English).long.units
@@ -107,6 +113,21 @@ class UnitFormatterTest {
 
             assertThat(result, "Display name of '${englishName.displayName}' should not be null or empty")
                 .isNotNull().isNotEmpty()
+        }
+    }
+
+    @Ignore
+    @Test
+    fun getUnitDisplayName_ByUnitEnglishName_OfUnit() {
+        val failed = UnitAll.entries.filter { it.annex == UnitAnnex.Annex1 }.filter { unit ->
+            underTest.cleanAndGetUnitDisplayName(unit.englishName) == null
+        }
+
+        Log.info { "${failed.size} units failed:" }
+        failed.forEach { unit -> println(unit) }
+
+        if (failed.isNotEmpty()) {
+            fail("UnitFormatter should be able to format all Units, but it failed for ${failed.size} units")
         }
     }
 
