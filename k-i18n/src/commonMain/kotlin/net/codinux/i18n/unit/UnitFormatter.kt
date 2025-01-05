@@ -73,7 +73,8 @@ open class UnitFormatter(
         if (parts.size > 1) {
             val partsFormatted = parts.map { formatPart(it, style, language) }
             if (partsFormatted.all { it != null }) {
-                val timesPattern = getStyleDisplayNames(style, language).timesPattern
+                // for long formats keep " " as separator, e.g. "GigaWatt⋅Stunden" looks a bit strange
+                val timesPattern = if (style == UnitFormatStyle.Long) null else getStyleDisplayNames(style, language).timesPattern
 
                 return if (timesPattern == null) {
                     partsFormatted.joinToString(timesPattern ?: " ")

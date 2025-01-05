@@ -67,6 +67,13 @@ class UnitFormatterTest {
         assertThat(result).isEqualTo("GW⋅Std.")
     }
 
+    @Test
+    fun getUnitDisplayName_ByUnitEnglishName_GigawattHour_KeepSpaceSeparatorForFormatStyleLong() {
+        val result = underTest.getUnitDisplayName("gigawatt hour", UnitFormatStyle.Long, LanguageTag.German)
+
+        assertThat(result).isEqualTo("GigaWatt Stunden")
+    }
+
 
     @Test
     fun cleanAndGetUnitDisplayName_MicrometerMicron() {
