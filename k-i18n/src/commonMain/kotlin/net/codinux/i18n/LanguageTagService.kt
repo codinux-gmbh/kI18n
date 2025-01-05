@@ -2,6 +2,13 @@ package net.codinux.i18n
 
 class LanguageTagService {
 
+    fun parse(languageTag: String): LanguageTag =
+        parseOrNull(languageTag)
+            ?: throw IllegalArgumentException("Cannot create a LanguageTag from string '$languageTag'. A valid " +
+                    "LanguageTag starts with two- or three lower case characters for the language, see [Language] class " +
+                    "for available values. Optionally, all separated by hyphens, a two-letter upper case or three-digit " +
+                    "region code and a four-letter script code in title case follow.")
+
     fun parseOrNull(languageTag: String): LanguageTag? {
         val tag = languageTag.replace('_', '-') // Apple system use '_' as separator
 
@@ -33,10 +40,6 @@ class LanguageTagService {
 
         return LanguageTag(tag, languageCode, regionCode, scriptCode, variant)
     }
-
-    fun parse(languageTag: String): LanguageTag =
-        parseOrNull(languageTag)
-            ?: throw IllegalArgumentException("Cannot create a LanguageTag from string '$languageTag'. A valid LanguageTag starts with two- or three lower case characters for the language, see [Language] class for available values. Optionally, all separated by hyphens, a two-letter upper case or three-digit region code and a four-letter script code in title case follow.")
 
 
     fun createTag(language: Language, region: Region?, script: Script?, variant: Variant?): String {
