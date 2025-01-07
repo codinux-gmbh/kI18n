@@ -4,7 +4,7 @@ import assertk.assertThat
 import assertk.assertions.isEqualTo
 import kotlin.test.Test
 
-class PlatformTestWasmJs {
+class JsCommonPlatformTest {
 
     @Test
     fun acceptLanguageAndLocaleLanguageDiffer() {
