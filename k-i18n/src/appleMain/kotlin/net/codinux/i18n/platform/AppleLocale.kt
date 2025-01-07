@@ -14,12 +14,14 @@ object AppleLocale {
 
     val AvailableLocales: List<LanguageTag> by lazy {
         AvailableNSLocales
-            .map { mapToUtilLocale(it) }
+            .map { mapToLanguageTag(it) }
             .toImmutableList()
     }
 
     fun getDeviceLocale(): LanguageTag =
-        mapToUtilLocale(NSLocale.currentLocale) // this returns the Device language
+        mapToLanguageTag(NSLocale.currentLocale,  // NSLocale.currentLocale returns the Device locale with device default language, currency, ...
+            // NSLocale.preferredLanguages() returns the languages the user has configured in Settings app -> apps should use this for display texts
+            NSLocale.preferredLanguages().firstOrNull() as? String)
 
     fun getAppLanguage(): String? =
         NSLocale.preferredLanguages().firstOrNull() as? String
@@ -32,7 +34,11 @@ object AppleLocale {
     fun nsLocaleForLanguageTag(languageTag: String): NSLocale? =
         AvailableNSLocales.firstOrNull { it.localeIdentifier == languageTag }
 
-    private fun mapToUtilLocale(locale: NSLocale) =
-        LanguageTag(locale.localeIdentifier, locale.languageCode, locale.countryCode ?: "", locale.scriptCode, locale.variantCode)
+    private fun mapToLanguageTag(locale: NSLocale, preferredLanguage: String? = null) =
+        if (preferredLanguage != null) {
+            LanguageTag(locale.localeIdentifier.replace(locale.languageCode, preferredLanguage), preferredLanguage, locale.countryCode ?: "", locale.scriptCode, locale.variantCode)
+        } else {
+            LanguageTag(locale.localeIdentifier, locale.languageCode, locale.countryCode ?: "", locale.scriptCode, locale.variantCode)
+        }
 
 }
