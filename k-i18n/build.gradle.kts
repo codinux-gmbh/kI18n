@@ -1,6 +1,7 @@
 @file:OptIn(ExperimentalKotlinGradlePluginApi::class)
 
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 
 plugins {
     kotlin("multiplatform")
@@ -43,6 +44,7 @@ kotlin {
         }
     }
 
+    @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
 //        compilerOptions {
 //            freeCompilerArgs.add("-Xwasm-attach-js-exception")
@@ -103,6 +105,26 @@ kotlin {
 
         jvmTest.dependencies {
             implementation("ch.qos.logback:logback-classic:$logbackVersion")
+        }
+
+
+        val jsCommonMain by creating {
+            dependsOn(commonMain.get())
+        }
+        val jsCommonTest by creating {
+            dependsOn(commonTest.get())
+        }
+        jsMain {
+            dependsOn(jsCommonMain)
+        }
+        jsTest {
+            dependsOn(jsCommonTest)
+        }
+        val wasmJsMain by getting {
+            dependsOn(jsCommonMain)
+        }
+        val wasmJsTest by getting {
+            dependsOn(jsCommonTest)
         }
 
 
