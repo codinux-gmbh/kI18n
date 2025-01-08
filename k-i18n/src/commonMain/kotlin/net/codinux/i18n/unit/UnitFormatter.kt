@@ -102,7 +102,7 @@ open class UnitFormatter(
                 if (displayName != null) {
                     formatted = displayName.replace("{0}", formatted)
                 } else {
-                    log.warn { "Could not format prefix $prefix for locale $language in unit string '$unit'" }
+                    log.debug { "Could not format prefix $prefix for locale $language in unit string '$unit'" }
                 }
             }
         }
@@ -160,7 +160,7 @@ open class UnitFormatter(
                     return denominatorFormatted.replace("{0}", numeratorFormatted)
                 }
             } else {
-                log.warn { "Could not find UnitKey for '$remainingString' of denominator '$denominator'" }
+                log.debug { "Could not find UnitKey for '$remainingString' of denominator '$denominator'" }
             }
         }
 
