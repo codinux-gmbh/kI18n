@@ -9,7 +9,7 @@ It supports localizing Languages, Countries, Currencies, Units and Dates and has
 ### Gradle
 
 ```
-implementation("net.codinux.i18n:k-i18n:0.7.0")
+implementation("net.codinux.i18n:k-i18n:0.7.1")
 ```
 
 ### LanguageTag
