@@ -7,7 +7,6 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import com.fasterxml.jackson.module.kotlin.treeToValue
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.NumberingSystemType
-import net.codinux.i18n.datetime.DayOfWeek
 import net.codinux.i18n.datetime.HourStyle
 import net.codinux.i18n.datetime.PreferredWeekData
 import net.codinux.i18n.model.*
@@ -15,6 +14,7 @@ import net.codinux.i18n.model.UnitDisplayName
 import net.codinux.i18n.service.FileSystemUtil
 import net.codinux.i18n.unit.UnitType
 import net.codinux.log.logger
+import net.dankito.datetime.DayOfWeek
 import java.io.File
 import java.nio.file.Path
 

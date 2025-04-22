@@ -2,6 +2,7 @@ package net.codinux.i18n.datetime
 
 import net.codinux.i18n.LanguageTag
 import net.codinux.i18n.Region
+import net.dankito.datetime.DayOfWeek
 
 data class PreferredWeekData(
     val minDays: Map<Region, Int>,
