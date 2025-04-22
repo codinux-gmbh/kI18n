@@ -5,6 +5,7 @@ import assertk.assertions.isEqualTo
 import assertk.assertions.isEqualToWithGivenProperties
 import net.codinux.i18n.LanguageTag
 import net.dankito.datetime.LocalDate
+import net.dankito.datetime.LocalTime
 import kotlin.test.Test
 
 class DateTimeFormatterTest {

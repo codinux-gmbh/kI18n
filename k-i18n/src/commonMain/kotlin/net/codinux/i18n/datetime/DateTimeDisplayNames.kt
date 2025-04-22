@@ -1,6 +1,7 @@
 package net.codinux.i18n.datetime
 
 import net.dankito.datetime.LocalDate
+import net.dankito.datetime.LocalTime
 import net.dankito.datetime.Month
 
 data class DateTimeDisplayNames(

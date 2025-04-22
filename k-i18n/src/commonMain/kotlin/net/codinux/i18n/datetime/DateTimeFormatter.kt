@@ -2,6 +2,7 @@ package net.codinux.i18n.datetime
 
 import net.codinux.i18n.LanguageTag
 import net.dankito.datetime.LocalDate
+import net.dankito.datetime.LocalTime
 import net.dankito.datetime.Month
 
 /**
