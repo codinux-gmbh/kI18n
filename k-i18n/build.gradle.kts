@@ -78,6 +78,7 @@ kotlin {
     applyDefaultHierarchyTemplate()
 
 
+    val kmpDateTimeVersion: String by project
     val kcsvVersion: String by project
 
     val immutableCollectionsVersion: String by project
@@ -90,6 +91,8 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             api(project(":k-i18n-data"))
+
+            api("net.dankito.datetime:kmp-datetime:$kmpDateTimeVersion")
 
             implementation("net.codinux.csv:kcsv:$kcsvVersion")
 

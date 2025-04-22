@@ -1,6 +1,8 @@
 package net.codinux.i18n.datetime
 
 import net.codinux.i18n.LanguageTag
+import net.dankito.datetime.LocalDate
+import net.dankito.datetime.Month
 
 /**
  * An evaluation of all gregorian default date time formats in CLDR (not regarding dateTimeFormats.availableFormats and .intervalFormats):
@@ -63,8 +65,8 @@ class DateTimeFormatter(
 
         if (pattern.monthStyle != null) {
             val month = when (pattern.monthStyle) {
-                MonthStyle.NumericMinDigits -> date.month.toString()
-                MonthStyle.Numeric2Digits -> date.month.toString().padStart(2, '0')
+                MonthStyle.NumericMinDigits -> date.monthNumber.toString()
+                MonthStyle.Numeric2Digits -> date.monthNumber.toString().padStart(2, '0')
                 MonthStyle.Abbreviated -> getMonthNames(locale).abbreviated.getMonth(date)
                 MonthStyle.Wide -> getMonthNames(locale).wide.getMonth(date)
                 MonthStyle.Narrow -> getMonthNames(locale).narrow.getMonth(date)
@@ -86,7 +88,7 @@ class DateTimeFormatter(
 //        }
 
         if (pattern.dayMinLength != null) {
-            val day = date.dayOfMonth.toString().padStart(pattern.dayMinLength, '0')
+            val day = date.day.toString().padStart(pattern.dayMinLength, '0')
 
             formatted = formatted.replace("d".repeat(pattern.dayMinLength), day)
         }

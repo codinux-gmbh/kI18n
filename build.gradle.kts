@@ -9,5 +9,6 @@ allprojects {
 
     repositories {
         mavenCentral()
+        mavenLocal() // remove again as soon as kmp-datetime has been released
     }
 }

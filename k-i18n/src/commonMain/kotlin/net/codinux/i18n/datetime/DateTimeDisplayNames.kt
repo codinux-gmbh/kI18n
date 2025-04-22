@@ -1,5 +1,8 @@
 package net.codinux.i18n.datetime
 
+import net.dankito.datetime.LocalDate
+import net.dankito.datetime.Month
+
 data class DateTimeDisplayNames(
     val months: DisplayNameSet<MonthDisplayNames>,
     val days: DisplayNameSet<DayDisplayNames>,
@@ -24,7 +27,7 @@ data class MonthDisplayNames(
 ) {
     fun getMonth(date: LocalDate): String = getMonth(date.month)
 
-    fun getMonth(month: Month): String = getMonth(month.monthNumber)
+    fun getMonth(month: Month): String = getMonth(month.number)
 
     fun getMonth(monthInt: Int): String = when (monthInt) {
         1 -> january
